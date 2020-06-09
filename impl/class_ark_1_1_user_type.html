@@ -108,21 +108,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a87c6db74d14c81f6a0b73d6c7b0f811d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#a87c6db74d14c81f6a0b73d6c7b0f811d">setOStream</a> (FuncStream_t &amp;&amp;f)</td></tr>
 <tr class="memdesc:a87c6db74d14c81f6a0b73d6c7b0f811d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the ostream function.  <a href="#a87c6db74d14c81f6a0b73d6c7b0f811d">More...</a><br /></td></tr>
 <tr class="separator:a87c6db74d14c81f6a0b73d6c7b0f811d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1de9a9b17897d34a79d1bb17491d1e56"><td class="memItemLeft" align="right" valign="top">const std::type_index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#a1de9a9b17897d34a79d1bb17491d1e56">type_id</a> () const </td></tr>
-<tr class="memdesc:a1de9a9b17897d34a79d1bb17491d1e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type id of the value held by the object.  <a href="#a1de9a9b17897d34a79d1bb17491d1e56">More...</a><br /></td></tr>
-<tr class="separator:a1de9a9b17897d34a79d1bb17491d1e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf9aed77a14dc998c29d49cd01737fb7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#adf9aed77a14dc998c29d49cd01737fb7">data</a> () const </td></tr>
 <tr class="memdesc:adf9aed77a14dc998c29d49cd01737fb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the pointer to the object.  <a href="#adf9aed77a14dc998c29d49cd01737fb7">More...</a><br /></td></tr>
 <tr class="separator:adf9aed77a14dc998c29d49cd01737fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23bf4ec6c04a8558232dc08334ba3cc3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#a23bf4ec6c04a8558232dc08334ba3cc3">not_</a> () const </td></tr>
 <tr class="memdesc:a23bf4ec6c04a8558232dc08334ba3cc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">User implemented <code>not</code> operator.  <a href="#a23bf4ec6c04a8558232dc08334ba3cc3">More...</a><br /></td></tr>
 <tr class="separator:a23bf4ec6c04a8558232dc08334ba3cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af79f7ec88ddb09f6e3da83275d625f5f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af79f7ec88ddb09f6e3da83275d625f5f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#af79f7ec88ddb09f6e3da83275d625f5f">is</a> () const </td></tr>
+<tr class="memdesc:af79f7ec88ddb09f6e3da83275d625f5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the object held is of a given type.  <a href="#af79f7ec88ddb09f6e3da83275d625f5f">More...</a><br /></td></tr>
+<tr class="separator:af79f7ec88ddb09f6e3da83275d625f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class to be use C++ objects in ArkScript. </p>
 <p>A pointer to the value you want to store must be sent, thus the value must not be destroyed while the <a class="el" href="class_ark_1_1_user_type.html" title="A class to be use C++ objects in ArkScript. ">UserType</a> lives, otherwise it would result in an UB when trying to use the object </p>
 
-<p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00019">19</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00018">18</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a6088d8459dffb5d2be29ad2d49cdfff6"></a>
 <div class="memitem">
@@ -162,7 +163,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00031">31</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00030">30</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
 
 </div>
 </div>
@@ -201,34 +202,6 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a1de9a9b17897d34a79d1bb17491d1e56"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::type_index Ark::UserType::type_id </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the type id of the value held by the object. </p>
-<dl class="section return"><dt>Returns</dt><dd>const std::type_index </dd></dl>
-
-<p>Definition at line <a class="el" href="_user_type_8inl_source.html#l00006">6</a> of file <a class="el" href="_user_type_8inl_source.html">UserType.inl</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="adf9aed77a14dc998c29d49cd01737fb7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -253,7 +226,7 @@ template&lt;typename T &gt; </div>
 <p>Get the pointer to the object. </p>
 <dl class="section return"><dt>Returns</dt><dd>void* </dd></dl>
 
-<p>Definition at line <a class="el" href="_user_type_8inl_source.html#l00011">11</a> of file <a class="el" href="_user_type_8inl_source.html">UserType.inl</a>.</p>
+<p>Definition at line <a class="el" href="_user_type_8inl_source.html#l00006">6</a> of file <a class="el" href="_user_type_8inl_source.html">UserType.inl</a>.</p>
 
 </div>
 </div>
@@ -283,7 +256,51 @@ template&lt;typename T &gt; </div>
 <dd>
 false </dd></dl>
 
-<p>Definition at line <a class="el" href="_user_type_8inl_source.html#l00017">17</a> of file <a class="el" href="_user_type_8inl_source.html">UserType.inl</a>.</p>
+<p>Definition at line <a class="el" href="_user_type_8inl_source.html#l00012">12</a> of file <a class="el" href="_user_type_8inl_source.html">UserType.inl</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af79f7ec88ddb09f6e3da83275d625f5f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ark::UserType::is </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the object held is of a given type. </p>
+<p>Usage example: </p><div class="fragment"><div class="line">MyType object;</div>
+<div class="line"><a class="code" href="class_ark_1_1_user_type.html#a6088d8459dffb5d2be29ad2d49cdfff6">UserType</a> a(&amp;<span class="keywordtype">object</span>);</div>
+<div class="line"><span class="keywordflow">if</span> (a.is&lt;MyType&gt;())</div>
+<div class="line">    <span class="comment">// then ...</span></div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">    <span class="comment">// otherwise...</span></div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+<p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00075">75</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
 
 </div>
 </div>
@@ -294,7 +311,7 @@ false </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 4 2020 11:24:45 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 9 2020 19:11:05 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

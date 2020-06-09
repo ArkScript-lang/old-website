@@ -123,6 +123,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae8750c507e871fd62eb435e3e72bda63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#ae8750c507e871fd62eb435e3e72bda63">setDebug</a> (unsigned level)</td></tr>
 <tr class="memdesc:ae8750c507e871fd62eb435e3e72bda63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the debug level.  <a href="#ae8750c507e871fd62eb435e3e72bda63">More...</a><br /></td></tr>
 <tr class="separator:ae8750c507e871fd62eb435e3e72bda63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ad30e1eda51c0ac402f59bdc8636ee4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#a5ad30e1eda51c0ac402f59bdc8636ee4">setLibDir</a> (const std::string &amp;libDir)</td></tr>
+<tr class="memdesc:a5ad30e1eda51c0ac402f59bdc8636ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Lib Dir path.  <a href="#a5ad30e1eda51c0ac402f59bdc8636ee4">More...</a><br /></td></tr>
+<tr class="separator:a5ad30e1eda51c0ac402f59bdc8636ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -169,7 +172,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00010">10</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00013">13</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 
 </div>
 </div>
@@ -199,7 +202,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <dd>
 false on failure </dd></dl>
 
-<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00023">23</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00026">26</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 
 </div>
 </div>
@@ -228,7 +231,7 @@ false on failure </dd></dl>
 <dd>
 false on failure </dd></dl>
 
-<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00044">44</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00047">47</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 
 </div>
 </div>
@@ -257,7 +260,7 @@ false on failure </dd></dl>
 <dd>
 false on failure </dd></dl>
 
-<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00089">89</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00092">92</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 
 </div>
 </div>
@@ -286,7 +289,7 @@ false on failure </dd></dl>
 <dd>
 false on failure </dd></dl>
 
-<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00156">156</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00159">159</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 
 </div>
 </div>
@@ -323,7 +326,7 @@ false on failure </dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00181">181</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00184">184</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 
 </div>
 </div>
@@ -349,7 +352,33 @@ false on failure </dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00186">186</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00189">189</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5ad30e1eda51c0ac402f59bdc8636ee4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ark::State::setLibDir </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>libDir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the Lib Dir path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">libDir</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00194">194</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 
 </div>
 </div>
@@ -360,7 +389,7 @@ false on failure </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 4 2020 11:24:45 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 9 2020 19:11:05 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

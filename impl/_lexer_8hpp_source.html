@@ -151,8 +151,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="stringliteral">        { TokenType::Number,     std::wregex(utf8_to_ws(R</span><span class="stringliteral">&quot;*(^((\+|-)?[[:digit:]]+)(\.(([[:digit:]]+)?))?)*&quot;)) },</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="stringliteral">        { TokenType::Operator,   std::wregex(utf8_to_ws(R</span><span class="stringliteral">&quot;*(^(\+|\-|\*|/|&lt;=|&gt;=|!=|&lt;|&gt;|@=|@|=|\^))*&quot;)) },</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="stringliteral">        { TokenType::Identifier, std::wregex(utf8_to_ws(R</span><span class="stringliteral">&quot;*(^[a-zA-Z_\u0080-\uDB7F][a-zA-Z0-9_\u0080-\uDB7F\-?&#39;]*)*&quot;)) },</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="stringliteral">        { TokenType::Capture,    std::wregex(utf8_to_ws(R</span><span class="stringliteral">&quot;*(^&amp;[a-zA-Z_][a-zA-Z0-9_\-?&#39;]*)*&quot;)) },</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="stringliteral">        { TokenType::GetField,   std::wregex(utf8_to_ws(R</span><span class="stringliteral">&quot;*(^\.[a-zA-Z_][a-zA-Z0-9_\-?&#39;]*)*&quot;)) },</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="stringliteral">        { TokenType::Capture,    std::wregex(utf8_to_ws(R</span><span class="stringliteral">&quot;*(^&amp;[a-zA-Z_\u0080-\uDB7F][a-zA-Z0-9_\u0080-\uDB7F\-?&#39;]*)*&quot;)) },</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="stringliteral">        { TokenType::GetField,   std::wregex(utf8_to_ws(R</span><span class="stringliteral">&quot;*(^\.[a-zA-Z_\u0080-\uDB7F][a-zA-Z0-9_\u0080-\uDB7F\-?&#39;]*)*&quot;)) },</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="stringliteral">        { TokenType::Skip,       std::wregex(utf8_to_ws(R</span><span class="stringliteral">&quot;*(^[\s]+)*&quot;)) },</span></div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="stringliteral">        { TokenType::Comment,    std::wregex(utf8_to_ws(</span><span class="stringliteral">&quot;^#.*&quot;</span>)) },</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        { TokenType::Shorthand,  std::wregex(utf8_to_ws(<span class="stringliteral">&quot;^[&#39;]&quot;</span>)) },</div>
@@ -182,11 +182,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#endif  // ark_lexer</span></div>
-<div class="ttc" id="namespace_ark_1_1internal_html"><div class="ttname"><a href="namespace_ark_1_1internal.html">Ark::internal</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_value_8hpp_source.html#l00009">CValue.hpp:9</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html"><div class="ttname"><a href="namespace_ark_1_1internal.html">Ark::internal</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 4 2020 11:24:44 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 9 2020 19:11:03 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

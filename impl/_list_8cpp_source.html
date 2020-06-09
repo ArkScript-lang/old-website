@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>ArkScript: src/FFI/List.cpp Source File</title>
+<title>ArkScript: src/Builtins/List.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_43d33b82e4122a9885beaefe50562a33.html">FFI</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7871fbf1f99f422398f59cd3e9e8a548.html">Builtins</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -88,17 +88,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">List.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;Ark/FFI/FFI.hpp&gt;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;Ark/Builtins/Builtins.hpp&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iterator&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;Ark/FFI/FFIErrors.inl&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define FFI_Function(name) Value name(std::vector&lt;Value&gt;&amp; n)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;Ark/Builtins/BuiltinsErrors.inl&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;Ark/VM/VM.hpp&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark_1_1internal_1_1_f_f_i_1_1_list.html">Ark::internal::FFI::List</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark_1_1internal_1_1_builtins_1_1_list.html">Ark::internal::Builtins::List</a></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    FFI_Function(append)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    Value append(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordflow">if</span> (n.size() &lt; 2)</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="keywordflow">throw</span> std::runtime_error(LIST_APPEND_ARITY);</div>
@@ -110,7 +110,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">return</span> n[0];</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    FFI_Function(concat)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    Value concat(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">if</span> (n[0].valueType() != ValueType::List)</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_ark_1_1_type_error.html">Ark::TypeError</a>(LIST_CONCAT_ARITY);</div>
@@ -120,13 +120,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">if</span> (it-&gt;valueType() != ValueType::List)</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordflow">throw</span> <a class="code" href="class_ark_1_1_type_error.html">Ark::TypeError</a>(LIST_CONCAT_TE);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">for</span> (Value::Iterator it2=it-&gt;const_list().begin(), it2_end=it-&gt;const_list().end(); it2 != it2_end; ++it2)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">for</span> (Value::ConstIterator it2=it-&gt;const_list().begin(), it2_end=it-&gt;const_list().end(); it2 != it2_end; ++it2)</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                n[0].push_back(*it2);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> n[0];</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    FFI_Function(list)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    Value list(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        Value r(ValueType::List);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">for</span> (Value::Iterator it=n.begin(), it_end=n.end(); it != it_end; ++it)</div>
@@ -134,7 +134,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> r;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    FFI_Function(reverseList)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    Value reverseList(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">if</span> (n[0].valueType() != ValueType::List)</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_ark_1_1_type_error.html">Ark::TypeError</a>(LIST_REVERSE_ARITY);</div>
@@ -146,7 +146,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> n[0];</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    FFI_Function(findInList)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    Value findInList(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">if</span> (n.size() != 2)</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">throw</span> std::runtime_error(LIST_FIND_ARITY);</div>
@@ -160,10 +160,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">return</span> Value(static_cast&lt;int&gt;(std::distance&lt;Value::Iterator&gt;(l.begin(), it)));</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> FFI::nil;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> Builtins::nil;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    FFI_Function(removeAtList)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    Value removeAtList(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span> (n.size() != 2)</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">throw</span> std::runtime_error(LIST_RMAT_ARITY);</div>
@@ -180,7 +180,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> n[0];</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    FFI_Function(sliceList)</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    Value sliceList(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">if</span> (n.size () != 4)</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">throw</span> std::runtime_error(LIST_SLICE_ARITY);</div>
@@ -213,7 +213,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span> ret;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    FFI_Function(sort_)</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    Value sort_(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    {</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">if</span> (n.size() != 1)</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="keywordflow">throw</span> std::runtime_error(LIST_SORT_ARITY);</div>
@@ -224,7 +224,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">return</span> n[0];</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    FFI_Function(fill)</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    Value fill(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    {</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">if</span> (n.size() != 2)</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keywordflow">throw</span> std::runtime_error(LIST_FILL_ARITY);</div>
@@ -239,7 +239,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">return</span> Value(std::move(l));</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    FFI_Function(setListAt)</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    Value setListAt(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    {</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">if</span> (n.size() != 3)</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordflow">throw</span> std::runtime_error(LIST_SETAT_ARITY);</div>
@@ -252,12 +252,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">return</span> n[0];</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}</div>
-<div class="ttc" id="namespace_ark_1_1internal_1_1_f_f_i_1_1_list_html"><div class="ttname"><a href="namespace_ark_1_1internal_1_1_f_f_i_1_1_list.html">Ark::internal::FFI::List</a></div><div class="ttdef"><b>Definition:</b> <a href="_f_f_i_8hpp_source.html#l00026">FFI.hpp:26</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_1_1_builtins_1_1_list_html"><div class="ttname"><a href="namespace_ark_1_1internal_1_1_builtins_1_1_list.html">Ark::internal::Builtins::List</a></div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8hpp_source.html#l00029">Builtins.hpp:29</a></div></div>
 <div class="ttc" id="class_ark_1_1_type_error_html"><div class="ttname"><a href="class_ark_1_1_type_error.html">Ark::TypeError</a></div><div class="ttdoc">A type error triggered when types don&#39;t match. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00013">Exceptions.hpp:13</a></div></div>
+<div class="ttc" id="class_ark_1_1_v_m_html"><div class="ttname"><a href="class_ark_1_1_v_m.html">Ark::VM</a></div><div class="ttdoc">The ArkScript virtual machine, executing ArkScript bytecode. </div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00031">VM.hpp:31</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 4 2020 11:24:45 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 9 2020 19:11:04 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;Ark/Compiler/BytecodeReader.hpp&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;Ark/Compiler/Instructions.hpp&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;Ark/FFI/FFI.hpp&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;Ark/Builtins/Builtins.hpp&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;Ark/Log.hpp&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#undef abs</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;Ark/Utils.hpp&gt;</span></div>
@@ -342,7 +342,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                    }</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (inst == Instruction::BUILTIN)</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                    {</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                        os &lt;&lt; <span class="stringliteral">&quot;BUILTIN &quot;</span> &lt;&lt; termcolor::reset &lt;&lt; FFI::builtins[readNumber(i)].first &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                        os &lt;&lt; <span class="stringliteral">&quot;BUILTIN &quot;</span> &lt;&lt; termcolor::reset &lt;&lt; Builtins::builtins[readNumber(i)].first &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                        i++;</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                    }</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (inst == Instruction::MUT)</div>
@@ -440,13 +440,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_ark_1_1_bytecode_reader_html_aac566e75099459ad4ec1212a20a4e9d7"><div class="ttname"><a href="class_ark_1_1_bytecode_reader.html#aac566e75099459ad4ec1212a20a4e9d7">Ark::BytecodeReader::bytecode</a></div><div class="ttdeci">const bytecode_t &amp; bytecode()</div><div class="ttdoc">Return the bytecode object constructed. </div><div class="ttdef"><b>Definition:</b> <a href="_bytecode_reader_8cpp_source.html#l00030">BytecodeReader.cpp:30</a></div></div>
 <div class="ttc" id="class_ark_1_1_bytecode_reader_html_a37cde505cab84043af9803660b5ca691"><div class="ttname"><a href="class_ark_1_1_bytecode_reader.html#a37cde505cab84043af9803660b5ca691">Ark::BytecodeReader::timestamp</a></div><div class="ttdeci">unsigned long long timestamp()</div><div class="ttdoc">Return the read timestamp from the bytecode file. </div><div class="ttdef"><b>Definition:</b> <a href="_bytecode_reader_8cpp_source.html#l00035">BytecodeReader.cpp:35</a></div></div>
 <div class="ttc" id="class_ark_1_1_bytecode_reader_html_afa24b92283b27f5e67e32ee80669027a"><div class="ttname"><a href="class_ark_1_1_bytecode_reader.html#afa24b92283b27f5e67e32ee80669027a">Ark::BytecodeReader::feed</a></div><div class="ttdeci">void feed(const std::string &amp;file)</div><div class="ttdoc">Construct needed data before displaying information about a given file. </div><div class="ttdef"><b>Definition:</b> <a href="_bytecode_reader_8cpp_source.html#l00013">BytecodeReader.cpp:13</a></div></div>
-<div class="ttc" id="namespace_ark_1_1internal_html"><div class="ttname"><a href="namespace_ark_1_1internal.html">Ark::internal</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_value_8hpp_source.html#l00009">CValue.hpp:9</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html"><div class="ttname"><a href="namespace_ark_1_1internal.html">Ark::internal</a></div></div>
 <div class="ttc" id="class_ark_1_1_bytecode_reader_html_aac0783d207bd07625c1beb997b1997d1"><div class="ttname"><a href="class_ark_1_1_bytecode_reader.html#aac0783d207bd07625c1beb997b1997d1">Ark::BytecodeReader::display</a></div><div class="ttdeci">void display()</div><div class="ttdoc">Display the bytecode opcode in a human friendly way. </div><div class="ttdef"><b>Definition:</b> <a href="_bytecode_reader_8cpp_source.html#l00065">BytecodeReader.cpp:65</a></div></div>
-<div class="ttc" id="namespace_ark_html"><div class="ttname"><a href="namespace_ark.html">Ark</a></div><div class="ttdef"><b>Definition:</b> <a href="_bytecode_reader_8hpp_source.html#l00010">BytecodeReader.hpp:10</a></div></div>
+<div class="ttc" id="namespace_ark_html"><div class="ttname"><a href="namespace_ark.html">Ark</a></div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8hpp_source.html#l00012">Builtins.hpp:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 4 2020 11:24:45 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 9 2020 19:11:04 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

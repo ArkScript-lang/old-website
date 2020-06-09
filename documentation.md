@@ -1,8 +1,8 @@
 ## Tutorials
 
-* [Learning ArkScript: the basics](tutorial/basics.md)
-* [Building and installing ArkScript](tutorial/building.md)
-* [Embedding ArkScript in a C++ project](tutorial/embedding.md)
+* [Learning ArkScript: the basics](tutorials/basics.html)
+* [Building and installing ArkScript](tutorials/building.html)
+* [Embedding ArkScript in a C++ project](tutorials/embedding.html)
 * d
 
 ## Standard library documentation
@@ -15,4 +15,4 @@ If you are looking for a complete documentation of the implementation, it can be
 
 ## Bytecode documentation
 
-*[for advanced developers only](tutorials/bytecode.md)*
+*[for advanced developers only](tutorials/bytecode.html)*

@@ -93,36 +93,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define ARK_VERSION_MAJOR 3</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define ARK_VERSION_MINOR 0</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define ARK_VERSION_PATCH 10</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define ARK_VERSION_PATCH 11</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define ARK_VERSION (ARK_VERSION_MAJOR &lt;&lt; 16) + (ARK_VERSION_MINOR &lt;&lt; 8) + ARK_VERSION_PATCH</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define ARK_COMPILATION_OPTIONS &quot;&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define ARK_COMPILER &quot;GNU&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define ARK_MAX_STACK_SIZE 8</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define ARK_CACHE_DIRNAME &quot;__arkscript_cache__&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ARK_ENABLE_SYSTEM 1</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;cinttypes&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark.html">Ark</a></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">// VM options</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    constexpr uint16_t FeaturePersist            = 1 &lt;&lt; 0;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    constexpr uint16_t FeatureFunctionArityCheck = 1 &lt;&lt; 1;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// Parser options</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    constexpr uint16_t FeatureDisallowInvalidTokenAfterParen = 1 &lt;&lt; 8;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">// Default features for the VM x Compiler x Parser</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    constexpr uint16_t DefaultFeatures =</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        FeatureFunctionArityCheck</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        | FeatureDisallowInvalidTokenAfterParen;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif  // ark_constants</span></div>
-<div class="ttc" id="namespace_ark_html"><div class="ttname"><a href="namespace_ark.html">Ark</a></div><div class="ttdef"><b>Definition:</b> <a href="_bytecode_reader_8hpp_source.html#l00010">BytecodeReader.hpp:10</a></div></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define ARK_COMPILATION_OPTIONS &quot;/DWIN32 /D_WINDOWS /W3 /GR /EHsc&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define ARK_COMPILER &quot;MSVC&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define ARK_CACHE_DIRNAME &quot;__arkscript_cache__&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define ARK_ENABLE_SYSTEM 1</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;cinttypes&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark.html">Ark</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// VM options</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    constexpr uint16_t FeaturePersist            = 1 &lt;&lt; 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    constexpr uint16_t FeatureFunctionArityCheck = 1 &lt;&lt; 1;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">// Parser options</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    constexpr uint16_t FeatureDisallowInvalidTokenAfterParen = 1 &lt;&lt; 8;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">// Default features for the VM x Compiler x Parser</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    constexpr uint16_t DefaultFeatures =</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        FeatureFunctionArityCheck</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        | FeatureDisallowInvalidTokenAfterParen;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif  // ark_constants</span></div>
+<div class="ttc" id="namespace_ark_html"><div class="ttname"><a href="namespace_ark.html">Ark</a></div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8hpp_source.html#l00012">Builtins.hpp:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 4 2020 11:24:44 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 9 2020 19:11:03 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

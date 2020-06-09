@@ -93,48 +93,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    m_ostream_func = std::move(f);</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;}</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_ark_1_1_user_type.html#a1de9a9b17897d34a79d1bb17491d1e56">    6</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> std::type_index UserType::type_id()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_ark_1_1_user_type.html#adf9aed77a14dc998c29d49cd01737fb7">    6</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span>* UserType::data()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">return</span> m_type_id;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">return</span> m_data;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_ark_1_1_user_type.html#adf9aed77a14dc998c29d49cd01737fb7">   11</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span>* UserType::data()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">return</span> m_data;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// custom operators</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_ark_1_1_user_type.html#a23bf4ec6c04a8558232dc08334ba3cc3">   17</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> UserType::not_()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">// TODO let the user implement his/her own</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// friends</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// custom operators</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_ark_1_1_user_type.html#a23bf4ec6c04a8558232dc08334ba3cc3">   12</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> UserType::not_()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">// TODO let the user implement his/her own</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// friends</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="class_ark_1_1_user_type.html">UserType</a>&amp; A, <span class="keyword">const</span> <a class="code" href="class_ark_1_1_user_type.html">UserType</a>&amp; B)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> (A.m_type_id == B.m_type_id) &amp;&amp; (A.m_data == B.m_data);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="class_ark_1_1_user_type.html">UserType</a>&amp; A, <span class="keyword">const</span> <a class="code" href="class_ark_1_1_user_type.html">UserType</a>&amp; B)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> operator&lt;(<span class="keyword">const</span> UserType&amp; A, <span class="keyword">const</span> UserType&amp; B)</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> (A.m_type_id == B.m_type_id) &amp;&amp; (A.m_data == B.m_data);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> operator&lt;(<span class="keyword">const</span> UserType&amp; A, <span class="keyword">const</span> UserType&amp; B)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">inline</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; os, <span class="keyword">const</span> UserType&amp; A)</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">if</span> (A.m_ostream_func != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> A.m_ostream_func(os, A);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">inline</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; os, <span class="keyword">const</span> UserType&amp; A)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">if</span> (A.m_ostream_func != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">return</span> A.m_ostream_func(os, A);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    os &lt;&lt; <span class="stringliteral">&quot;UserType&lt;&quot;</span> &lt;&lt; A.m_type_id.hash_code() &lt;&lt; <span class="stringliteral">&quot;, 0x&quot;</span> &lt;&lt; A.m_data &lt;&lt; <span class="stringliteral">&quot;&gt;&quot;</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> os;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
-<div class="ttc" id="class_ark_1_1_user_type_html"><div class="ttname"><a href="class_ark_1_1_user_type.html">Ark::UserType</a></div><div class="ttdoc">A class to be use C++ objects in ArkScript. </div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00019">UserType.hpp:19</a></div></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    os &lt;&lt; <span class="stringliteral">&quot;UserType&lt;&quot;</span> &lt;&lt; A.m_type_id &lt;&lt; <span class="stringliteral">&quot;, 0x&quot;</span> &lt;&lt; A.m_data &lt;&lt; <span class="stringliteral">&quot;&gt;&quot;</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> os;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="ttc" id="class_ark_1_1_user_type_html"><div class="ttname"><a href="class_ark_1_1_user_type.html">Ark::UserType</a></div><div class="ttdoc">A class to be use C++ objects in ArkScript. </div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00018">UserType.hpp:18</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 4 2020 11:24:44 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 9 2020 19:11:04 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
