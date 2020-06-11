@@ -1,3 +1,5 @@
+# Embedding
+
 ArkScript was designed to be easily embedded into C++ applications, so here you go!
 
 ## Adding Ark to your project

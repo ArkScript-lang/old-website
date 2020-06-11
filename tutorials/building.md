@@ -1,6 +1,10 @@
+# Building and installing
+
+You can choose to build the project from source (which requires some knowledge like git, cmake and using shell commands) or get a build from a ZIP file.
+
 ## Setup
 
-You will need to setup an environment variable named `ARKSCRIPT_PATH`, with the path to the installation directory of ArkScript, so that the standard library can be located without using `--lib <path>`.
+You can setup an environment variable named `ARKSCRIPT_PATH`, with the path to the installation directory of ArkScript, so that the standard library can be located without using `--lib <path>`. *This step is optional*.
 
 ## From source
 
@@ -49,14 +53,12 @@ Commands:
 
 ## From a release
 
-*Nota bene*: the parts about where the Ark standard library should be installed is required only if you plan to use Ark as an independant language, not as a scripting language for your projects. Also, note that it's not mandatory, since you can tell the ArkVM where your Ark standard library is installed using `-L <path>` or `--lib <path>`.
-
 ### Windows
 
-Download the `win64.zip` from the release, and unpack it under `C:/Program Files (x86)/Ark`.
+Download the `win64.zip` from the [releases](https://github.com/ArkScript-lang/Ark/releases/latest), and unpack it wherever you want, as long as you remember where (or add the location to an environment variable as specified in the setup section, to avoid using `--lib <path>`).
 
-The files from the `win64.zip` archive should be put in a `bin/` folder, the lib should be in a `lib/` folder. Just add `C:/Program Files (x86)/Ark/bin` to your path and you're good to go!
+To use the command `Ark` from everywhere, you will need to [add it to your PATH](https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ee537574(v=office.14)) environment variable.
 
 ### Linux
 
-Download the `linux64.zip`. You can put the binaries and the lib anywhere you want, as long as you add it to your path to execute ArkScript without giving the complete path (in your BASHRC for example). You can also create an environment variable as stated in the setup above.
+Download the `linux64.zip` from the [releases](https://github.com/ArkScript-lang/Ark/releases/latest). You can put the binaries and the lib anywhere you want, as long as you add it to your path to execute ArkScript without giving the complete path (in your BASHRC for example). You can also create an environment variable as stated in the setup above.

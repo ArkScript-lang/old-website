@@ -1,4 +1,4 @@
-## ArkScript bytecode
+# ArkScript bytecode
 
 A basic file is composed of those headers:
 - magic number, 6386283 ('ark'), then a zero padding
