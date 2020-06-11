@@ -2,21 +2,20 @@
 
 ArkScript was designed to be easily embedded into C++ applications, so here you go!
 
-## Adding Ark to your project
+## Adding ArkScript to your project
 
 If you are building the project with CMake:
 * setting the compilation options:
-    * if you don't want a Ark.exe: `set(ARK_BUILD_EXE 0)`
-    * if you don't want to build the benchmarks: `set(ARK_BUILD_BENCHMARK 0)`
-    * if you don't want to build the modules: `set(ARK_BUILD_MODULES 0)`
+    * if you don't want Ark.exe: `set(ARK_BUILD_EXE Off)`
+    * if you don't want to build the modules: `set(ARK_BUILD_MODULES Off)`
     * if you want to disable the use of `(system "command that can break your pc here")`: `set(ARK_ENABLE_SYSTEM 0)`
 * add this line to your main CMakeLists.txt: `add_subdirectory(ark-directory)` (put the path to the ArkScript directory, where a CMakeLists.txt is) ; the include directories should come without having to do anything on your side
-* link your project to the lib produced by Ark: `target_link_library(${PROJECT_NAME} PUBLIC ArkReactor)` (modify the privacy according to what you chosed in your project)
-* you're good to go! Everything you need while be available through `#include <Ark/Ark.hpp>`
+* link your project to the lib produced by ArkScript: `target_link_library(${PROJECT_NAME} PUBLIC ArkReactor)` (modify the privacy according to what you chosed in your project)
+* you're good to go! Everything you need will be available through `#include <Ark/Ark.hpp>`
 
 If you are **not** building the project with CMake: download CMake, create a CMakeLists.txt for your project, and go back to step 1.
 
-## Using Ark
+## Using ArkScript
 
 An example is often worth a thousand words:
 
@@ -25,18 +24,17 @@ An example is often worth a thousand words:
 
 int main()
 {
-    // A state can be shared by multiple virtual machines (but they will never modify it)
-    Ark::State state;  // leave constructor empty to select the default standard library
+    // A state can be shared by multiple virtual machines (note that they will NEVER modify it)
+    // leave constructor empty to select the default standard library (loaded from an environment variable $ARKSCRIPT_PATH/lib)
+    // persistance is needed to use vm.call(function_name, args...)
+    Ark::State state(/* options */ Ark::FeaturePersist);
 
     // Will automatically compile the file if needed (if not, will take it from the ark cache)
     state.doFile("myfile.ark");
 
-    // Virtual machine with debug mode turned off, use Ark::VM_debug if you need the debug mode
-    // Basically, Ark::VM = Ark::VM_t</* debug */ false> and Ark::VM_debug = Arm::VM_t<true>
-    Ark::VM vm(&state, /* options */ Ark::FeaturePersist);  // persistance is needed to use vm.call(function_name, args...)
-
+    Ark::VM vm(&state);
     vm.run();
-    
+
     /*
         If you just want to run a precompiled bytecode file:
 
@@ -47,12 +45,7 @@ int main()
     */
 
     /*
-        Both doFile and run invoke the private method safeRun, so if the virtual machine is to crash,
-        it will stop, and display the errors in the shell, with a bit of context
-    */
-
-    /*
-        To run an Ark function from C++ code and retrieve the result:
+        To run an ArkScript function from C++ code and retrieve the result:
         we will say the code is (let foo (fun (x y) (+ x y 2)))
     */
     auto value = vm.call("foo", 5, 6.0);
@@ -62,7 +55,7 @@ int main()
 }
 ```
 
-### Adding your own functions in Ark
+### Adding your own functions in ArkScript
 
 ```cpp
 #include <Ark/Ark.hpp>
@@ -72,12 +65,12 @@ Ark::Value my_function(std::vector<Ark::Value>& args)
     // checking argument number
     if (args.size() != 4)
         throw std::runtime_error("my_function needs 4 arguments!");
-    
+
     auto a = args[0],
         b = args[1],
         c = args[2],
         d = args[3];
-    
+
     // checking arguments type
     if (a.valueType() != Ark::ValueType::Number ||
         b.valueType() != Ark::ValueType::Number ||
@@ -91,7 +84,7 @@ Ark::Value my_function(std::vector<Ark::Value>& args)
 
 int main()
 {
-    Ark::State state;
+    Ark::State state(/* options */ Ark::FeaturePersist);
     state.doFile("myfile.ark");  // we can call state.doFile() before or after state.loadFunction()
 
     state.loadFunction("my_function", my_function);
@@ -103,7 +96,7 @@ int main()
         return Ark::Value(static_cast<int>(args.size()));
     });
 
-    Ark::VM vm(&state, /* options */ Ark::FeaturePersist);
+    Ark::VM vm(&state);
     vm.run();
 
     return 0;
@@ -116,10 +109,10 @@ Types available in `Ark::ValueType` are:
 * `List`
 * `Number`
 * `String`
-* `PageAddr` (reprensents the address of an Ark function in the bytecode)
+* `PageAddr` (reprensents the address of an ArkScript function in the bytecode)
 * `NFT` (the triad Nil, False, True)
 * `CProc` (C or C++ functions)
-* `Closure` (represents a closure in Ark)
+* `Closure` (represents a closure in ArkScript)
 * `User` (represents a type defined by the user)
 
 `Value` objects have this interface:
@@ -138,26 +131,29 @@ Types available in `Ark::ValueType` are:
 * `std::ostream& operator<<(std::ostream& os, const Value& V)` to display the object with `std::cout << value;`
 * `bool operator==(const Value& A, const Value& B)`, useful to check if the value is nil, true or false: `a == Ark::Nil` (the two others are `Ark::True` and `Ark::False`)
 
-## Adding your own types in Ark
+## Adding your own types in ArkScript
 
-The idea behind this is to be able to use values which can't be held by standard Ark values, for example a `sf::Image` if you are using the SFML.
+The idea behind this is to be able to use values which can't be held by standard ArkScript values, for example a `sf::Image` if you are using the SFML.
 
-The idea is to have a unique identifier per type (that's only for you as a programmer to know which type you are receiving, Ark doesn't care about it), and a value casted as a `void*` pointer, thus the object **needs to continue to exist somewhere**.
+The idea is to have a unique identifier per type (that's only for you as a programmer to know which type you are receiving, ArkScript doesn't care about it), and a value casted as a `void*` pointer, thus the object **needs to continue to exist somewhere**.
 
 ```cpp
+enum class Breakfast { Eggs, Bacon, Pizza };
+
+Breakfast& getBreakfast()
+{
+    static Breakfast bf = Breakfast::Pizza;
+    return bf;
+}
+
 int main()
 {
     Ark::State state;
-    
-    enum class Breakfast { Eggs, Bacon, Pizza };
-    unsigned typeid_breakfast = 0;
 
-    Breakfast the_best = Breakfast::Pizza;
-
-    state.loadFunction("getBreakfast", [&typeid_breakfast, &the_best](std::vector<Ark::Value>& n) -> Ark::Value {
+    state.loadFunction("getBreakfast", [](std::vector<Ark::Value>& n) -> Ark::Value {
         // we need to send the address of the object, which will be casted
         // to void* internally
-        Ark::Value v = Ark::Value(Ark::UserType(typeid_breakfast, &the_best));
+        Ark::Value v = Ark::Value(Ark::UserType(&getBreakfast()));
 
         // adding a custom ostream operator
         v.usertype_ref().setOStream([](std::ostream& os, const Ark::UserType& A) -> std::ostream& {
@@ -167,15 +163,15 @@ int main()
                 case Breakfast::Eggs:
                     os << "Eggs";
                     break;
-                
+
                 case Breakfast::Bacon:
                     os << "Bacon";
                     break;
-                
+
                 case Breakfast::Pizza:
                     os << "Pizza";
                     break;
-                
+
                 default:
                     break;
             }
@@ -185,8 +181,8 @@ int main()
         return v;
     });
 
-    state.loadFunction("useBreakfast", [&typeid_breakfast](std::vector<Ark::Value>& n) -> Ark::Value {
-        if (n[0].valueType() == Ark::ValueType::User && n[0].usertype().type_id() == typeid_breakfast)
+    state.loadFunction("useBreakfast", [](std::vector<Ark::Value>& n) -> Ark::Value {
+        if (n[0].valueType() == Ark::ValueType::User && n[0].usertype().is<Breakfast>())
         {
             std::cout << "UserType detected as an enum class Breakfast" << std::endl;
             Breakfast* ptr = static_cast<Breakfast*>(n[0].usertype().data());
@@ -217,7 +213,7 @@ int main()
 
 ## Creating plugins
 
-Plugins must use the exact same configuration and compiler as the original Ark executable, otherwise they won't be loaded properly, thus it's highly encouraged to compile your module(s) using Ark CMakeLists, by putting your module(s) under the folder `arkscript/module`, and adding it in the CMakeLists of the same folder (you can start by copying the CMakeLists of a module for your own).
+Plugins must use the exact same configuration and compiler as the original ArkScript executable, otherwise they won't be loaded properly, thus it's highly encouraged to compile your module(s) using ArkScript CMakeLists, by putting your module(s) under the folder `arkscript/modules`, and adding it in the CMakeLists of the same folder (you can start by copying the CMakeLists of a module for your own).
 
 The compilers supported are:
 * for Linux: g++-8 (Ubuntu 8.3.0-6ubuntu1~18.04.1) 8.3.0
@@ -244,7 +240,7 @@ namespace MyModule
 ARK_API_EXPORT Mapping_t getFunctionsMapping()
 {
     Mapping_t map;
-    // map[name in Ark] = C++ function
+    // map[name in ArkScript] = C++ function
     map["foo"] = MyModule::foo;
     map["test"] = [](std::vector<Value>& args) {
         // lambdas work too!
