@@ -1,3 +1,7 @@
+---
+permalink: /tutorials/embedding.html
+---
+
 # Embedding
 
 ArkScript was designed to be easily embedded into C++ applications, so here you go!

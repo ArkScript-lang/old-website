@@ -1,3 +1,7 @@
+---
+permalink: /tutorials/building.html
+---
+
 # Building and installing
 
 You can choose to build the project from source (which requires some knowledge like git, cmake and using shell commands) or get a build from a ZIP file.
@@ -28,6 +32,7 @@ If you want a specific revision or tag, you can do this right before initializin
 Requirements:
 - Windows 10 x64
 - Visual Studio 15 2017
+- cmake >= 3.8
 
 Commands:
 ```bash
@@ -42,6 +47,7 @@ PS> cmake --install build --config Release  # might need administrator rights
 Requirements:
 - g++ 9
 - 64 bits computer
+- cmake >= 3.8
 
 Commands:
 ```bash
@@ -49,6 +55,25 @@ Commands:
 ~/ark$ cmake . -Bbuild -DARK_BUILD_EXE=On -DARK_BUILD_MODULES=On
 ~/ark$ cmake --build build --config Release
 ~/ark$ sudo cmake --install build --config Release  # needs administrator rights to install under /usr/bin
+```
+
+### MacOS
+
+Requirements:
+- g++ 9
+- cmake >= 3.8
+
+On MacOS versions prior to 10.15, `libc++` lacks `filesystem` in the standard library.
+
+You will need to :
+* install a newer compiler using [Homebrew](https://docs.brew.sh/): `brew install gcc && brew link gcc`
+* pass compiler path to `cmake` in the build step: `-DCMAKE_CXX_COMPILER=/usr/local/bin/g++-9`
+
+Commands:
+```bash
+~/ark$ cmake . -Bbuild -DARK_BUILD_EXE=On -DARK_BUILD_MODULES=On -DCMAKE_CXX_COMPILER=/usr/local/bin/g++-9
+~/ark$ cmake --build build --config Release
+~/ark$ cmake --install build --config Release  # might need administrator rights
 ```
 
 ## From a release

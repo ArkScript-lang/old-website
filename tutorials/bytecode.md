@@ -1,3 +1,7 @@
+---
+permalink: /tutorials/bytecode.html
+---
+
 # ArkScript bytecode
 
 A basic file is composed of those headers:
@@ -20,9 +24,6 @@ A basic file is composed of those headers:
             - number: represented in hexadecimal format (stored as a null terminated string), big endian
             - string: all the characters, plus a \0 at the end (aka null terminated string)
             - function: page number (two bytes, big endian)
-- plugins table
-    - number of elements (two bytes, big endian)
-    - strings (names of the plugins), null terminated
 - code segments (can have multiple code segments)
     - number of elements (two bytes, big endian), can be equal to 0
     - instructions
@@ -60,6 +61,7 @@ The other builtins are listed in [Builtins.cpp](https://github.com/ArkScript-lan
 | `DEL` (0x0e) | symbol id (two bytes, big endian) | Remove a variable/constant named following the given symbol id (cf symbols table) |
 | `SAVE_ENV` (0x0f) | | Save the current environment, useful for quoted code |
 | `GET_FIELD` (0x10) | symbol id (two bytes, big endian) | Used to read the field named following the given symbol id (cf symbols table) of a `Closure` stored in TS. Pop TS and push the value of field read on the stack |
+| `PLUGIN` (0x11) | constant id (two bytes, big endian) | Used to load a plugin dynamically, plugin name is stored as a string in the constants table |
 | `ADD` (0x20) |  | Push `TS1 + TS` |
 | `SUB` (0x21) |  | Push `TS1 - TS` |
 | `MUL` (0x22) |  | Push `TS1 * TS` |
@@ -108,10 +110,9 @@ The other builtins are listed in [Builtins.cpp](https://github.com/ArkScript-lan
     0x01  # number
         0x31 0x2e 0x34 0x32 0x00  # string version of '1.42'
 
-0x03  # plugins table
 0x00 0x00  # no elements for this example
 
-0x04  # code segment start
+0x03  # code segment start
     0x00 0x10  # number of elements
         0x02  # load const
             0x00 0x01  # constant number 1, a function
