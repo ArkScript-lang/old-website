@@ -8,6 +8,8 @@ Hi there, fellow coder!
 
 If you are here, it means that you are interested in contributing to this project, and we are happy about it! You will find a collections of useful ressources to get started, whatever you would like to contribute.
 
+Don't know what to work on? No worries, we have a [list of things to do](https://github.com/ArkScript-lang/Ark/projects) :wink:
+
 ## The project organization
 
 The project is organized in multiple repositories for us to be able to work on a project (eg the standard library) and update it multiple times without having to roll x different updates for the main repository, the language itself.
