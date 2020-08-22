@@ -1,0 +1,42 @@
+// Spectre.css overrides to fit in with the theme
+$btn-link-color: rgb(0, 191, 255)
+
+.btn.btn-link
+    color: $btn-link-color
+
+.btn.btn-link:hover
+    color: lighten($btn-link-color, 10%)
+
+
+// Body
+$body-bg-color: rgb(37, 37, 37)
+$body-color: #e0e0e0
+
+body
+    background-color: $body-bg-color
+    color: $body-color
+
+
+// Navbar header
+$header-height: 10vh
+$header-sections-font-size: 0.8rem
+header.navbar
+    padding: 0 4vw
+    width: 100vw
+    height: $header-height
+    background-color: darken($body-bg-color, 5%)
+
+    .navbar-section
+        line-height: $header-height
+        a
+            font-size: $header-sections-font-size
+        .navbar-brand
+            font-size: $header-sections-font-size * 1.3
+
+    .navbar-brand
+        color: darken($btn-link-color, 5%)
+        text-transform: uppercase
+        font-weight: bold
+
+    img
+        height: 10vh

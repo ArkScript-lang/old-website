@@ -1,0 +1,38 @@
+.btn.btn-link {
+  color: deepskyblue;
+}
+
+.btn.btn-link:hover {
+  color: #33ccff;
+}
+
+body {
+  background-color: #252525;
+  color: #e0e0e0;
+}
+
+header.navbar {
+  padding: 0 4vw;
+  width: 100vw;
+  height: 10vh;
+  background-color: #181818;
+}
+header.navbar .navbar-section {
+  line-height: 10vh;
+}
+header.navbar .navbar-section a {
+  font-size: 0.8rem;
+}
+header.navbar .navbar-section .navbar-brand {
+  font-size: 1.04rem;
+}
+header.navbar .navbar-brand {
+  color: #00ace6;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+header.navbar img {
+  height: 10vh;
+}
+
+/*# sourceMappingURL=main.css.map */
