@@ -1,0 +1,37 @@
+// Navbar header
+$banner-height: 60vh
+$header-height: 10vh
+$header-sections-font-size: 0.8rem
+
+header.navbar, #banner
+    padding: 0 4vw
+    width: 100vw
+    height: $header-height / 4
+    background-color: darken($body-bg-color, 5%)
+
+    *
+        margin: 0 10px
+    line-height: $header-height
+    a
+        font-size: $header-sections-font-size      
+
+    .navbar-brand
+        font-size: $header-sections-font-size * 1.4
+        color: darken($btn-link-color, 5%)
+        text-transform: uppercase
+        font-weight: bold
+
+    img
+        height: $header-height
+
+#banner
+    height: $banner-height
+    margin-bottom: 25px
+
+    .banner-center
+        display: flex
+        flex-flow: column
+        text-align: center
+
+    img
+        height: $banner-height / 5

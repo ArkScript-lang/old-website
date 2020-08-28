@@ -1,0 +1,37 @@
+// Dimensions
+$big-dim-px: 25px
+$small-dim-px: 10px
+    
+    
+// Body
+$body-bg-color: rgb(35, 35, 35)
+$body-color: #e0e0e0
+
+body
+    background-color: $body-bg-color
+    color: $body-color
+
+    
+// Spectre.css overrides to fit in with the theme
+$btn-link-color: rgb(0, 191, 255)
+$btn-primary-bg-color: #0870f8
+
+.btn:not(.btn-link)
+    border-color: $btn-primary-bg-color !important
+.btn:not(.btn-link):hover
+    border-color: darken($btn-primary-bg-color, 2%) !important
+
+.btn.btn-link
+    color: $btn-link-color
+.btn.btn-link:hover
+    color: lighten($btn-link-color, 10%)
+
+.btn:hover
+    border-radius: 5px
+    transition: border-radius 0.1s ease-in-out
+
+.btn.btn-primary
+    color: $body-color
+    background: $btn-primary-bg-color
+.btn.btn-primary:hover
+    background-color: darken($btn-primary-bg-color, 5%)

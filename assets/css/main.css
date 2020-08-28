@@ -1,3 +1,16 @@
+body {
+  background-color: #232323;
+  color: #e0e0e0;
+}
+
+.btn:not(.btn-link) {
+  border-color: #0870f8 !important;
+}
+
+.btn:not(.btn-link):hover {
+  border-color: #076bef !important;
+}
+
 .btn.btn-link {
   color: deepskyblue;
 }
@@ -6,33 +19,58 @@
   color: #33ccff;
 }
 
-body {
-  background-color: #252525;
-  color: #e0e0e0;
+.btn:hover {
+  border-radius: 5px;
+  transition: border-radius 0.1s ease-in-out;
 }
 
-header.navbar {
+.btn.btn-primary {
+  color: #e0e0e0;
+  background: #0870f8;
+}
+
+.btn.btn-primary:hover {
+  background-color: #0665e0;
+}
+
+header.navbar, #banner {
   padding: 0 4vw;
   width: 100vw;
-  height: 10vh;
-  background-color: #181818;
-}
-header.navbar .navbar-section {
+  height: 2.5vh;
+  background-color: #161616;
   line-height: 10vh;
 }
-header.navbar .navbar-section a {
+header.navbar *, #banner * {
+  margin: 0 10px;
+}
+header.navbar a, #banner a {
   font-size: 0.8rem;
 }
-header.navbar .navbar-section .navbar-brand {
-  font-size: 1.04rem;
-}
-header.navbar .navbar-brand {
+header.navbar .navbar-brand, #banner .navbar-brand {
+  font-size: 1.12rem;
   color: #00ace6;
   text-transform: uppercase;
   font-weight: bold;
 }
-header.navbar img {
+header.navbar img, #banner img {
   height: 10vh;
+}
+
+#banner {
+  height: 60vh;
+  margin-bottom: 25px;
+}
+#banner .banner-center {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+}
+#banner img {
+  height: 12vh;
+}
+
+#nota-bene {
+  margin: 25px 0;
 }
 
 /*# sourceMappingURL=main.css.map */
