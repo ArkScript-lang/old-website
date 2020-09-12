@@ -105,7 +105,7 @@ ul.no-dot {
   padding-left: 25px;
 }
 
-#content section {
+#content > section, .inner-section > section {
   margin-bottom: 3.5%;
 }
 
