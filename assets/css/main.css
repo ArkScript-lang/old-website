@@ -3,6 +3,28 @@ body {
   color: #e0e0e0;
 }
 
+code:not(.rainbowjs), div.codeblock {
+  background-color: #1b1b1b;
+  color: #d8d8d8;
+}
+
+code:not(.rainbowjs).error, div.codeblock.error {
+  color: default;
+}
+
+code.rainbowjs {
+  color: #e0e0e0;
+  background-color: inherit;
+}
+
+div.codeblock, pre {
+  padding: 0 10px !important;
+  font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace;
+  font-size: 110% !important;
+  line-height: 0.5;
+  border-radius: 0.1rem;
+}
+
 .btn:not(.btn-link) {
   border-color: #0870f8 !important;
 }
@@ -11,11 +33,11 @@ body {
   border-color: #076bef !important;
 }
 
-.btn.btn-link {
+.btn.btn-link, .btn-link {
   color: deepskyblue;
 }
 
-.btn.btn-link:hover {
+.btn.btn-link:hover, .btn-link:hover {
   color: #33ccff;
 }
 
@@ -36,9 +58,9 @@ body {
 header.navbar, #banner {
   padding: 0 4vw;
   width: 100vw;
-  height: 2.5vh;
+  height: 5vh;
   background-color: #161616;
-  line-height: 10vh;
+  line-height: 5vh;
 }
 header.navbar *, #banner * {
   margin: 0 10px;
@@ -53,7 +75,7 @@ header.navbar .navbar-brand, #banner .navbar-brand {
   font-weight: bold;
 }
 header.navbar img, #banner img {
-  height: 10vh;
+  height: 5vh;
 }
 
 #banner {
@@ -71,6 +93,20 @@ header.navbar img, #banner img {
 
 #nota-bene {
   margin: 25px 0;
+}
+
+.inner-section {
+  padding-left: 25px;
+  border-left: 1px solid #373737;
+}
+
+ul.no-dot {
+  list-style: none;
+  padding-left: 25px;
+}
+
+#content section {
+  margin-bottom: 3.5%;
 }
 
 /*# sourceMappingURL=main.css.map */

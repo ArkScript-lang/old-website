@@ -11,6 +11,23 @@ body
     background-color: $body-bg-color
     color: $body-color
 
+
+// Code and codeblocks
+code:not(.rainbowjs), div.codeblock
+    background-color: darken($body-bg-color, 3%)
+    color: darken($body-color, 3%)
+code:not(.rainbowjs).error, div.codeblock.error
+    color: default
+code.rainbowjs
+    color: $body-color
+    background-color: inherit
+div.codeblock, pre
+    padding: 0 10px !important
+    font-family: "SF Mono","Segoe UI Mono","Roboto Mono",Menlo,Courier,monospace
+    font-size: 110% !important
+    line-height: 0.5
+    border-radius: .1rem
+
     
 // Spectre.css overrides to fit in with the theme
 $btn-link-color: rgb(0, 191, 255)
@@ -21,9 +38,9 @@ $btn-primary-bg-color: #0870f8
 .btn:not(.btn-link):hover
     border-color: darken($btn-primary-bg-color, 2%) !important
 
-.btn.btn-link
+.btn.btn-link, .btn-link
     color: $btn-link-color
-.btn.btn-link:hover
+.btn.btn-link:hover, .btn-link:hover
     color: lighten($btn-link-color, 10%)
 
 .btn:hover
