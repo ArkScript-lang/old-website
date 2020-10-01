@@ -1,28 +1,33 @@
 // Navbar header
 $banner-height: 60vh
-$header-height: 5vh
 $header-sections-font-size: 0.8rem
 
 header.navbar, #banner
     padding: 0 4vw
     width: 100vw
     height: $header-height
-    background-color: darken($body-bg-color, 5%)
+    background-color: $menus-bg-color
+    line-height: $header-height
 
     *
         margin: 0 10px
-    line-height: $header-height
     a
-        font-size: $header-sections-font-size      
+        font-size: $header-sections-font-size
+
+    img
+        height: $header-height
 
     .navbar-brand
         font-size: $header-sections-font-size * 1.4
         color: darken($btn-link-color, 5%)
         text-transform: uppercase
         font-weight: bold
+        line-height: $header-height
 
-    img
-        height: $header-height
+header.navbar:not(.has-banner)
+    height: $header-height * 1.5
+    img, .navbar-center, .navbar-center a
+        height: $header-height * 1.5
 
 #banner
     height: $banner-height
@@ -38,9 +43,10 @@ header.navbar, #banner
 
 // footer
 footer#page-footer
+    bottom: 0
     width: 100vw
-    height: $header-height + 4vh
-    background-color: darken($body-bg-color, 5%)
+    height: $footer-height
+    background-color: $menus-bg-color
     padding: 2vh
 
     p

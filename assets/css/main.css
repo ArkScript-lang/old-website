@@ -1,8 +1,9 @@
 body {
-  background-color: #232323;
-  color: #e0e0e0;
+  background-color: #161616;
+  color: #d8d8d8;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
 }
 
 img.fit {
@@ -14,7 +15,7 @@ img.three-quarters {
 }
 
 code:not(.rainbowjs), div.codeblock {
-  background-color: #1b1b1b;
+  background-color: #161616;
   color: #d8d8d8;
 }
 
@@ -78,14 +79,22 @@ header.navbar *, #banner * {
 header.navbar a, #banner a {
   font-size: 0.8rem;
 }
+header.navbar img, #banner img {
+  height: 5vh;
+}
 header.navbar .navbar-brand, #banner .navbar-brand {
   font-size: 1.12rem;
   color: #00ace6;
   text-transform: uppercase;
   font-weight: bold;
+  line-height: 5vh;
 }
-header.navbar img, #banner img {
-  height: 5vh;
+
+header.navbar:not(.has-banner) {
+  height: 7.5vh;
+}
+header.navbar:not(.has-banner) img, header.navbar:not(.has-banner) .navbar-center, header.navbar:not(.has-banner) .navbar-center a {
+  height: 7.5vh;
 }
 
 #banner {
@@ -102,6 +111,7 @@ header.navbar img, #banner img {
 }
 
 footer#page-footer {
+  bottom: 0;
   width: 100vw;
   height: 9vh;
   background-color: #161616;
@@ -124,6 +134,15 @@ footer#page-footer p {
 ul.no-dot {
   list-style: none;
   padding-left: 25px;
+}
+
+#main {
+  background-color: #232323;
+  min-height: 83.5vh;
+}
+
+#content {
+  padding: 5vh 0;
 }
 
 #content > section, .inner-section > section {

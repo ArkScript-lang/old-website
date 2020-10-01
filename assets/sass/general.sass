@@ -1,17 +1,22 @@
 // Dimensions
 $big-dim-px: 25px
 $small-dim-px: 10px
+$header-height: 5vh
+$footer-height: $header-height + 4vh
     
     
 // Body
 $body-bg-color: rgb(35, 35, 35)
+$menus-bg-color: darken($body-bg-color, 5%)
 $body-color: #e0e0e0
+$menus-color: darken($body-color, 3%)
 
 body
-    background-color: $body-bg-color
-    color: $body-color
+    background-color: $menus-bg-color
+    color: $menus-color
     margin: 0
     padding: 0
+    min-height: 100vh
 
 
 // Images
@@ -22,8 +27,8 @@ img.three-quarters
 
 // Code and codeblocks
 code:not(.rainbowjs), div.codeblock
-    background-color: darken($body-bg-color, 3%)
-    color: darken($body-color, 3%)
+    background-color: $menus-bg-color
+    color: $menus-color
 code:not(.rainbowjs).error, div.codeblock.error
     color: initial
 code.rainbowjs
