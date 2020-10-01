@@ -1,6 +1,16 @@
 body {
   background-color: #232323;
   color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+}
+
+img.fit {
+  width: 100%;
+}
+
+img.three-quarters {
+  width: 75%;
 }
 
 code:not(.rainbowjs), div.codeblock {
@@ -9,7 +19,7 @@ code:not(.rainbowjs), div.codeblock {
 }
 
 code:not(.rainbowjs).error, div.codeblock.error {
-  color: default;
+  color: initial;
 }
 
 code.rainbowjs {
@@ -89,6 +99,17 @@ header.navbar img, #banner img {
 }
 #banner img {
   height: 12vh;
+}
+
+footer#page-footer {
+  width: 100vw;
+  height: 9vh;
+  background-color: #161616;
+  padding: 2vh;
+}
+footer#page-footer p {
+  margin: 0;
+  padding: 0;
 }
 
 #nota-bene {

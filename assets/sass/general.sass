@@ -10,14 +10,22 @@ $body-color: #e0e0e0
 body
     background-color: $body-bg-color
     color: $body-color
+    margin: 0
+    padding: 0
 
+
+// Images
+img.fit
+    width: 100%
+img.three-quarters
+    width: 75%
 
 // Code and codeblocks
 code:not(.rainbowjs), div.codeblock
     background-color: darken($body-bg-color, 3%)
     color: darken($body-color, 3%)
 code:not(.rainbowjs).error, div.codeblock.error
-    color: default
+    color: initial
 code.rainbowjs
     color: $body-color
     background-color: inherit
