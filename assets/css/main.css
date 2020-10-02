@@ -163,6 +163,18 @@ ul.no-dot {
   padding: 5vh 0;
 }
 
+table.table.dark {
+  background-color: #161616;
+}
+
+.table.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #0f0f0f;
+}
+
+.table.table-hover tbody tr:hover {
+  background-color: #070707;
+}
+
 #content > section, .inner-section > section {
   margin-bottom: 3.5%;
 }
