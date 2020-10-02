@@ -24,11 +24,15 @@ header.navbar, #banner
         font-weight: bold
         line-height: $header-height
 
+    .dropdown
+        margin: 0
+
 header.navbar:not(.has-banner)
     height: $header-height * 1.5
-    img, .navbar-center, .navbar-center a
+    img, .navbar-center, .navbar-center a, div.dropdown-link
         height: $header-height * 1.5
 
+// Banner
 #banner
     height: $banner-height
     margin-bottom: 25px
@@ -52,3 +56,9 @@ footer#page-footer
     p
         margin: 0
         padding: 0
+
+// dropdown menu
+.btn.btn-link.dropdown-toggle:focus
+    box-shadow: none
+.menu
+    background-color: $menus-bg-color

@@ -30,7 +30,7 @@ code:not(.rainbowjs), div.codeblock
     background-color: $menus-bg-color
     color: $menus-color
 code:not(.rainbowjs).error, div.codeblock.error
-    color: initial
+    color: #d73e48
 code.rainbowjs
     color: $body-color
     background-color: inherit
@@ -51,7 +51,7 @@ $btn-primary-bg-color: #0870f8
 .btn:not(.btn-link):hover
     border-color: darken($btn-primary-bg-color, 2%) !important
 
-.btn.btn-link, .btn-link
+.btn.btn-link, .btn-link, .btn.btn-link:focus
     color: $btn-link-color
 .btn.btn-link:hover, .btn-link:hover
     color: lighten($btn-link-color, 10%)

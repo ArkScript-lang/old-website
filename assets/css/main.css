@@ -20,7 +20,7 @@ code:not(.rainbowjs), div.codeblock {
 }
 
 code:not(.rainbowjs).error, div.codeblock.error {
-  color: initial;
+  color: #d73e48;
 }
 
 code.rainbowjs {
@@ -44,7 +44,7 @@ div.codeblock, pre {
   border-color: #076bef !important;
 }
 
-.btn.btn-link, .btn-link {
+.btn.btn-link, .btn-link, .btn.btn-link:focus {
   color: deepskyblue;
 }
 
@@ -89,11 +89,14 @@ header.navbar .navbar-brand, #banner .navbar-brand {
   font-weight: bold;
   line-height: 5vh;
 }
+header.navbar .dropdown, #banner .dropdown {
+  margin: 0;
+}
 
 header.navbar:not(.has-banner) {
   height: 7.5vh;
 }
-header.navbar:not(.has-banner) img, header.navbar:not(.has-banner) .navbar-center, header.navbar:not(.has-banner) .navbar-center a {
+header.navbar:not(.has-banner) img, header.navbar:not(.has-banner) .navbar-center, header.navbar:not(.has-banner) .navbar-center a, header.navbar:not(.has-banner) div.dropdown-link {
   height: 7.5vh;
 }
 
@@ -122,6 +125,14 @@ footer#page-footer p {
   padding: 0;
 }
 
+.btn.btn-link.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.menu {
+  background-color: #161616;
+}
+
 #nota-bene {
   margin: 25px 0;
 }
@@ -129,6 +140,9 @@ footer#page-footer p {
 .inner-section {
   padding-left: 25px;
   border-left: 1px solid #373737;
+}
+.inner-section h3, .inner-section h4, .inner-section h5, .inner-section h6 {
+  margin-top: 3vh;
 }
 
 ul.no-dot {
