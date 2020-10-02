@@ -36,6 +36,10 @@ div.codeblock, pre {
   border-radius: 0.1rem;
 }
 
+pre code.rainbowjs span.label {
+  background: initial;
+}
+
 .btn:not(.btn-link) {
   border-color: #0870f8 !important;
 }

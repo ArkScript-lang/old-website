@@ -217,7 +217,9 @@ int main()
 
 ## Creating plugins
 
-Plugins must use the exact same configuration and compiler as the original ArkScript executable, otherwise they won't be loaded properly, thus it's highly encouraged to compile your module(s) using ArkScript CMakeLists, by putting your module(s) under the folder `arkscript/modules`, and adding it in the CMakeLists of the same folder (you can start by copying the CMakeLists of a module for your own).
+Plugins must use the exact same configuration and compiler as the original ArkScript executable, otherwise they won't be loaded properly, 
+thus it's highly encouraged to compile your module(s) using ArkScript CMakeLists, by putting your module(s) under the folder `arkscript/modules`, 
+and adding it in the CMakeLists of the same folder (you can start by copying the CMakeLists of a module for your own).
 
 The compilers supported are:
 * for Linux: g++-8 (Ubuntu 8.3.0-6ubuntu1~18.04.1) 8.3.0
