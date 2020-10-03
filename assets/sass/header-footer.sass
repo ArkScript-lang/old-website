@@ -1,0 +1,64 @@
+// Navbar header
+$banner-height: 60vh
+$header-sections-font-size: 0.8rem
+
+header.navbar, #banner
+    padding: 0 4vw
+    width: 100vw
+    height: $header-height
+    background-color: $menus-bg-color
+    line-height: $header-height
+
+    *
+        margin: 0 10px
+    a
+        font-size: $header-sections-font-size
+
+    img
+        height: $header-height
+
+    .navbar-brand
+        font-size: $header-sections-font-size * 1.4
+        color: darken($btn-link-color, 5%)
+        text-transform: uppercase
+        font-weight: bold
+        line-height: $header-height
+
+    .dropdown
+        margin: 0
+
+header.navbar:not(.has-banner)
+    height: $header-height * 1.5
+    img, .navbar-center, .navbar-center a, div.dropdown-link
+        height: $header-height * 1.5
+
+// Banner
+#banner
+    height: $banner-height
+    margin-bottom: 25px
+
+    .banner-center
+        display: flex
+        flex-flow: column
+        text-align: center
+
+    img
+        height: $banner-height / 5
+
+// footer
+footer#page-footer
+    bottom: 0
+    width: 100vw
+    height: $footer-height
+    background-color: $menus-bg-color
+    padding: 2vh
+
+    p
+        margin: 0
+        padding: 0
+
+// dropdown menu
+.btn.btn-link.dropdown-toggle:focus
+    box-shadow: none
+.menu
+    background-color: $menus-bg-color

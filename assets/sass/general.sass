@@ -1,0 +1,70 @@
+// Dimensions
+$big-dim-px: 25px
+$small-dim-px: 10px
+$header-height: 5vh
+$footer-height: $header-height + 4vh
+    
+    
+// Body
+$body-bg-color: rgb(35, 35, 35)
+$menus-bg-color: darken($body-bg-color, 5%)
+$body-color: #e0e0e0
+$menus-color: darken($body-color, 3%)
+
+body
+    background-color: $menus-bg-color
+    color: $menus-color
+    margin: 0
+    padding: 0
+    min-height: 100vh
+
+
+// Images
+img.fit
+    width: 100%
+img.three-quarters
+    width: 75%
+
+// Code and codeblocks
+code:not(.rainbowjs), div.codeblock
+    background-color: $menus-bg-color
+    color: $menus-color
+code:not(.rainbowjs).error, div.codeblock.error
+    color: #d73e48
+code.rainbowjs
+    color: $body-color
+    background-color: inherit
+div.codeblock, pre
+    padding: 0 10px !important
+    font-family: "SF Mono","Segoe UI Mono","Roboto Mono",Menlo,Courier,monospace
+    font-size: 110% !important
+    line-height: 0.5
+    border-radius: .1rem
+
+    
+// Spectre.css overrides to fit in with the theme
+pre code.rainbowjs span.label
+    background: initial
+
+$btn-link-color: rgb(0, 191, 255)
+$btn-primary-bg-color: #0870f8
+
+.btn:not(.btn-link)
+    border-color: $btn-primary-bg-color !important
+.btn:not(.btn-link):hover
+    border-color: darken($btn-primary-bg-color, 2%) !important
+
+.btn.btn-link, .btn-link, .btn.btn-link:focus
+    color: $btn-link-color
+.btn.btn-link:hover, .btn-link:hover
+    color: lighten($btn-link-color, 10%)
+
+.btn:hover
+    border-radius: 5px
+    transition: border-radius 0.1s ease-in-out
+
+.btn.btn-primary
+    color: $body-color
+    background: $btn-primary-bg-color
+.btn.btn-primary:hover
+    background-color: darken($btn-primary-bg-color, 5%)

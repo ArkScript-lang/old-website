@@ -1,0 +1,30 @@
+#nota-bene
+    margin: $big-dim-px 0
+
+.inner-section
+    padding-left: $big-dim-px
+    border-left: 1px solid lighten($body-bg-color, 8%)
+
+    h3, h4, h5, h6
+        margin-top: 3vh
+
+ul.no-dot
+    list-style: none
+    padding-left: $big-dim-px
+
+#main
+    background-color: $body-bg-color
+    min-height: 100vh - $header-height * 1.5 - $footer-height
+
+#content
+    padding: 5vh 0
+
+table.table.dark
+    background-color: $menus-bg-color
+.table.table-striped tbody tr:nth-of-type(odd)
+    background-color: darken($menus-bg-color, 3%)
+.table.table-hover tbody tr:hover
+    background-color: darken($menus-bg-color, 6%)
+
+#content > section, .inner-section > section
+        margin-bottom: 3.5%

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arkscript | Tutorials - Basics</title>
+    <link rel="stylesheet" href="/assets/css/spectre.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/rainbowjs-theme.css" type="text/css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="navbar">
+    <section class="navbar-section">
+        <a href="/" class="navbar-brand mr-2">ArkScript</a>
+        <a href="/" class="btn btn-link">Home</a>
+        <a href="/documentation.html" class="btn btn-link">Documentation</a>
+        <a href="/contributing.html" class="btn btn-link">Contributing</a>
+        <div class="dropdown">
+            <a href="#" class="btn btn-link dropdown-toggle" tabindex="0">Tutorials</a>
+            <ul class="menu">
+                <li><a href="/tutorials/basics.html" class="btn btn-link">Basics</a></li>
+                <li><a href="/tutorials/building.html" class="btn btn-link">Building</a></li>
+                <li><a href="/tutorials/embedding.html" class="btn btn-link">Embedding</a></li>
+                <li><a href="/tutorials/bytecode.html" class="btn btn-link">Bytecode</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="navbar-center">
+        <a href=""><img src="/assets/images/Ark-slim.png" alt="ArkScript"></a>
+    </section>
+    <section class="navbar-section">
+        <a href="https://github.com/ArkScript-lang/Ark" class="btn btn-link">Github</a>
+        <a href="https://discord.gg/YT5yDwn" class="btn btn-link">Discord</a>
+    </section>
+</header>
+
+<!-- CONTENT -->
+<div class="container" id="main">
+    <div class="columns">
+        <!-- The col-2 divs are an easy way to put some margin around the main content -->
+        <div class="col-2"></div>
+
+        <!-- Actual content of the page-->
+        <div class="col-8" id="content">
+            <h1 class="text-center">Tutorials - Basics</h1>
+
+            <section id="learning-arkscript">
+                <h2>Learning ArkScript: the basics</h2>
+
+                <div class="inner-section">
+                    In ArkScript, there are two main rules:
+                    <ul>
+                        <li>The first rule is that <code>(a b c ...)</code> is a function call, <code>a</code> is the function and <code>b c ...</code> being the arguments.</li>
+                        <li>
+                            The second rule is the <em class="text-bold">only</em> exception to the first rule: when declaring functions like <code>(fun (arg1 arg2 ...) body)</code>,
+                            the definition of the argument block <em class="text-bold">isn't</em> considered as a function call.
+                        </li>
+                    </ul>
+                    To sum it up: everything is a function call, except the definition of the arguments block of a function.
+                </div>
+            </section>
+
+            <section id="creating-variables">
+                <h2>Creating variables</h2>
+
+                <div class="inner-section">
+                    In ArkScript, there are 2 types of <em>variables</em>: <code class="error">mutables</code> and <code class="error">immutables</code>.
+                    The <em>immutable</em> variables can't be modified or redefined, while <em>mutable</em> variables can.
+                    <br>
+                    The following three keywords are important when talking about variables:
+                    <ul>
+                        <li><code>let</code> <em>defines</em> an <code class="error">immutable</code> variable</li>
+                        <li><code>mut</code> <em>defines</em> a <code class="error">mutable</code> variable</li>
+                        <li><code>set</code> changes the value of a given mutable variable (trying on an immutable variable will throw an error)</li>
+                    </ul>
+                    <br><br>
+                    Example:
+
+                    <pre>
+<code class="rainbowjs" data-language="kafe">
+(let a 12)  # immutable variable
+(let a "hello")  # cannot redefine constant
+(set a "world")  # cannot modify constant, will throw an error
+
+(mut b [12 42 64])  # mutable variable
+(mut b "hello")  # no problem, the operation is allowed
+(set b "ArkScript is cool!")  # no problem, operation is allowed on mutables
+</code>
+                    </pre>
+                </div>
+            </section>
+
+            <section id="comments">
+                <h2>Comments</h2>
+
+                <div class="inner-section">
+                    As you have seen in the example above, we can write code that won't be executed, using <code># text</code>.
+                    This is a comment, only for the developer, and will be totally ignored when compiling and executing.
+                </div>
+            </section>
+        </div>
+
+        <div class="col-2"></div>
+    </div>
+</div>
+<!-- END OF CONTENT -->
+
+<!-- FOOTER -->
+<footer id="page-footer">
+    <p class="text-center">
+        Copyright &copy; 2020 Alexandre Plateau & Fabien Zoccola.<br>
+        Tous droits réservés
+    </p>
+</footer>
+
+<!-- Rainbow.js for syntax coloring -->
+<script src="/assets/js/rainbow.min.js"></script>
+<script src="/assets/js/languages/kafe.js"></script>
+
+</body>
+</html>
