@@ -37,6 +37,16 @@ div.codeblock, pre {
   border-radius: 0.1rem;
 }
 
+.divider {
+  border-top: none;
+  border-left: 1px solid #373737;
+  height: 5vh;
+}
+
+.divider.half {
+  height: 2.5vh;
+}
+
 pre code.rainbowjs span.label {
   background: initial;
 }
@@ -202,30 +212,33 @@ footer#page-footer p {
     width: 100vw;
   }
 }
-#nota-bene {
-  margin: 25px 0;
-}
-
-.inner-section {
-  padding-left: 25px;
-  border-left: 1px solid #373737;
-}
-.inner-section h3, .inner-section h4, .inner-section h5, .inner-section h6 {
-  margin-top: 3vh;
-}
-
 ul.no-dot {
   list-style: none;
   padding-left: 25px;
 }
 
 #main {
+  width: 100vw;
   background-color: #232323;
   min-height: 83.5vh;
 }
 
 #content {
   padding: 5vh 0;
+}
+#content #nota-bene {
+  margin: 25px 0;
+}
+#content .inner-section {
+  padding-left: 25px;
+  border-left: 1px solid #373737;
+}
+#content h3, #content h4, #content h5, #content h6 {
+  margin-top: 3vh;
+}
+
+#content > section, .inner-section > section {
+  margin-bottom: 3.5%;
 }
 
 table.table.dark {
@@ -243,10 +256,6 @@ table.table.dark {
 code.rainbowjs {
   display: block;
   overflow-x: auto;
-}
-
-#content > section, .inner-section > section {
-  margin-bottom: 3.5%;
 }
 
 pre.rainbow-show {
