@@ -16,4 +16,11 @@ Rainbow.extend("cpp", [
     { matches: { 2: "entity.name.function" }, pattern: /(\w|\*) +((\w+)(?= ?\())/g },
     { name: "storage.modifier", pattern: /\b(static|extern|auto|register|volatile|inline|constexpr|explicit|export|mutable|private|protected|public|virtual|final|override)\b/g },
     { name: "support.type", pattern: /\b(struct|union|enum|class)\b/g },
-]);
+    { name: "support.namespace", pattern: /([A-Za-z_]+::)+[A-Za-z_]+/g, },
+    {
+        matches: {
+            1: "function.method.call",
+        },
+        pattern: /([A-Za-z_]+\.)[A-Za-z_]+(?=\))/g,
+    },
+], 'generic');
