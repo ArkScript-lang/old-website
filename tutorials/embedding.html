@@ -164,7 +164,7 @@ int main()
     // we can also load C++ lambdas
     // we could have done this after creating the VM, it would still works
     // we just need to do that BEFORE we call vm.run()
-    state.loadFunction("foo", [](std::vector&lt;Ark::Value&gt;& args) {
+    state.loadFunction("foo", [](std::vector&lt;Ark::Value&gt;& args, Ark::VM* vm) {
         return Ark::Value(static_cast&lt;int&gt;(args.size()));
     });
 
@@ -188,7 +188,6 @@ int main()
                         <li><code>Number</code></li>
                         <li><code>String</code></li>
                         <li><code>PageAddr</code> (reprensents the address of an ArkScript function in the bytecode)</li>
-                        <li><code>NFT</code> (the triad Nil, False, True)</li>
                         <li><code>CProc</code> (C or C++ functions)</li>
                         <li><code>Closure</code> (represents a closure in ArkScript)</li>
                         <li><code>User</code> (represents a type defined by the user)</li>
@@ -202,8 +201,8 @@ int main()
                             but if the type doesn't match, it's an undefined behavior:
                             <ul>
                                 <li><code>double number() const</code> for numbers</li>
-                                <li><code>const std::string& string() const</code> for strings</li>
-                                <li><code>std::string& string_ref()</code> for strings (use this one if you need to directly modify the object and avoid a copy)</li>
+                                <li><code>const String& string() const</code> for strings</li>
+                                <li><code>String& string_ref()</code> for strings (use this one if you need to directly modify the object and avoid a copy)</li>
                                 <li><code>const std::vector&lt;Value&gt;& const_list() const</code> for lists</li>
                                 <li><code>std::vector&lt;Value&gt;& list()</code> for lists (use this one if you need to directly modify the object and avoid a copy)</li>
                                 <li><code>const UserType& usertype() const</code> for usertypes</li>
@@ -249,6 +248,25 @@ Breakfast& getBreakfast()
     return bf;
 }
 
+UserType::ControlFuncs* get_cfs()
+{
+    static UserType::ControlFuncs cfs;
+
+    cfs.ostream_func = [](std::ostream& os, const UserType& a) -> std::ostream& {
+        os << "Breakfast::";
+        switch (a.as&lt;Breakfast&gt;())
+        {
+            case Breakfast::Eggs:  os << "Eggs";    break;
+            case Breakfast::Bacon: os << "Bacon";   break;
+            case Breakfast::Pizza: os << "Pizza";   break;
+            default:               os << "Unknown"; break;
+        }
+        return os;
+    };
+
+    return &cfs;
+}
+
 int main()
 {
     Ark::State state;
@@ -258,28 +276,9 @@ int main()
         // to void* internally
         Ark::Value v = Ark::Value(Ark::UserType(&getBreakfast()));
 
-        // adding a custom ostream operator
-        v.usertype_ref().setOStream([](std::ostream& os, const Ark::UserType& A) -> std::ostream& {
-            os << "Breakfast::";
-            switch (*static_cast&lt;Breakfast*&gt;(A.data()))
-            {
-                case Breakfast::Eggs:
-                    os << "Eggs";
-                    break;
-
-                case Breakfast::Bacon:
-                    os << "Bacon";
-                    break;
-
-                case Breakfast::Pizza:
-                    os << "Pizza";
-                    break;
-
-                default:
-                    break;
-            }
-            return os;
-        });
+        // register the unique control functions block for this usertype
+        // this cfs block can be shared between multiple usertype to reduce memory usage
+        v.usertype_ref().setControlFuncs(get_cfs());
 
         return v;
     });
@@ -288,9 +287,9 @@ int main()
         if (n[0].valueType() == Ark::ValueType::User && n[0].usertype().is&lt;Breakfast&gt;())
         {
             std::cout << "UserType detected as an enum class Breakfast" << std::endl;
-            Breakfast* ptr = static_cast&lt;Breakfast*&gt;(n[0].usertype().data());
+            Breakfast& bf = n[0].usertype().as&lt;Breakfast&gt;();
             std::cout << "Got " << n[0].usertype() << "\n";
-            if (*ptr == Breakfast::Pizza)
+            if (bf == Breakfast::Pizza)
                 std::cout << "Good choice! Have a nice breakfast ;)" << std::endl;
         }
 
@@ -327,7 +326,7 @@ int main()
 
                     The supported compilers are:
                     <ul>
-                        <li>for Linux: g++-8 (Ubuntu 8.3.0-6ubuntu1~18.04.1) 8.3.0</li>
+                        <li>for Linux: g++-8 (Ubuntu 8.4.0-1ubuntu1~18.04) 8.4.0</li>
                         <li>for Windows: MSVC version 19.16.27031.1 for x86 (*nota bene*: even if minor and patch are be different, it should work)</li>
                     </ul>
 
@@ -339,7 +338,7 @@ int main()
 
 namespace MyModule
 {
-    Value foo(std::vector&lt;Value&gt;& args)
+    Value foo(std::vector&lt;Value&gt;& args, Ark::VM* vm)
     {
         // do stuff
         // ...
@@ -354,7 +353,7 @@ ARK_API_EXPORT Mapping_t getFunctionsMapping()
     Mapping_t map;
     // map[name in ArkScript] = C++ function
     map["foo"] = MyModule::foo;
-    map["test"] = [](std::vector&lt;Value&gt;& args) {
+    map["test"] = [](std::vector&lt;Value&gt;& args, Ark::VM* vm) {
         // lambdas work too!
         return True;
     };
