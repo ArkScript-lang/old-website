@@ -7,7 +7,6 @@ header.navbar, #banner
     width: 100vw
     height: $header-height
     background-color: $menus-bg-color
-    line-height: $header-height
 
     *
         margin: 0 10px
@@ -69,14 +68,14 @@ footer#page-footer
 
 // Responsive
 @media screen and (max-width: $break-width)
-    header.navbar, header.navbar
+    header.navbar
         padding: 0
         position: fixed
         .dropdown
             display: flex
             align-items: center
             flex-direction: column
-            .menu
+            .menu, .menu:hover
                 animation: none
                 display: flex
                 align-items: inherit
@@ -84,24 +83,39 @@ footer#page-footer
                 position: relative
                 margin-bottom: 20px
         #menu-show
+            position: fixed
+            top: 0
             margin-left: 0
             z-index: 500
+        .logo
+            align-items: initial
+            position: fixed
+            right: 0
 
-    header.navbar.has-banner:focus-within .navbar-center
-        display: flex !important
-        background-color: $menus-bg-color
-        position: fixed
-        top: $header-height
-        left: 0
-        flex-direction: column
-        margin: 0
-        width: 100vw
-
-    #banner
-        padding: 0
-        .navbar-center
+    // No banner
+    header.navbar:not(.has-banner):focus-within
+        .navbar-section.show-on-focus
+            padding-top: $header-height
+            background-color: $menus-bg-color
+            left: 0
             margin: 0
             width: 100vw
-            img
-                margin: 0
-                width: max-content
+            display: flex !important
+            align-items: center
+            flex-direction: column
+        .menu
+            position: initial
+
+    // Banner
+    header.navbar.has-banner:focus-within
+        .logo, .logo *
+            display: block !important
+        .navbar-center
+            display: flex !important
+            background-color: $menus-bg-color
+            position: fixed
+            top: $header-height
+            left: 0
+            flex-direction: column
+            margin: 0
+            width: 100vw

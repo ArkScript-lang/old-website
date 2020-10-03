@@ -76,7 +76,6 @@ header.navbar, #banner {
   width: 100vw;
   height: 5vh;
   background-color: #161616;
-  line-height: 5vh;
 }
 header.navbar *, #banner * {
   margin: 0 10px;
@@ -145,17 +144,17 @@ footer#page-footer p {
   display: block !important;
 }
 
-@media screen and (max-width: 840px) {
-  header.navbar, header.navbar {
+@media screen and (max-width: 1120px) {
+  header.navbar {
     padding: 0;
     position: fixed;
   }
-  header.navbar .dropdown, header.navbar .dropdown {
+  header.navbar .dropdown {
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-  header.navbar .dropdown .menu, header.navbar .dropdown .menu {
+  header.navbar .dropdown .menu, header.navbar .dropdown .menu:hover {
     animation: none;
     display: flex;
     align-items: inherit;
@@ -163,11 +162,35 @@ footer#page-footer p {
     position: relative;
     margin-bottom: 20px;
   }
-  header.navbar #menu-show, header.navbar #menu-show {
+  header.navbar #menu-show {
+    position: fixed;
+    top: 0;
     margin-left: 0;
     z-index: 500;
   }
+  header.navbar .logo {
+    align-items: initial;
+    position: fixed;
+    right: 0;
+  }
 
+  header.navbar:not(.has-banner):focus-within .navbar-section.show-on-focus {
+    padding-top: 5vh;
+    background-color: #161616;
+    left: 0;
+    margin: 0;
+    width: 100vw;
+    display: flex !important;
+    align-items: center;
+    flex-direction: column;
+  }
+  header.navbar:not(.has-banner):focus-within .menu {
+    position: initial;
+  }
+
+  header.navbar.has-banner:focus-within .logo, header.navbar.has-banner:focus-within .logo * {
+    display: block !important;
+  }
   header.navbar.has-banner:focus-within .navbar-center {
     display: flex !important;
     background-color: #161616;
@@ -177,18 +200,6 @@ footer#page-footer p {
     flex-direction: column;
     margin: 0;
     width: 100vw;
-  }
-
-  #banner {
-    padding: 0;
-  }
-  #banner .navbar-center {
-    margin: 0;
-    width: 100vw;
-  }
-  #banner .navbar-center img {
-    margin: 0;
-    width: max-content;
   }
 }
 #nota-bene {
@@ -238,8 +249,13 @@ code.rainbowjs {
   margin-bottom: 3.5%;
 }
 
-@media screen and (max-width: 840px) {
+pre.rainbow-show {
+  position: initial;
+}
+
+@media screen and (max-width: 1120px) {
   #content {
+    margin-top: 7.5vh;
     padding: 0 10px;
   }
   #content h2 {
