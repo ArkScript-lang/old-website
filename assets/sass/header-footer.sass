@@ -26,6 +26,8 @@ header.navbar, #banner
 
     .dropdown
         margin: 0
+        a
+            border: none
 
 header.navbar:not(.has-banner)
     height: $header-height * 1.5
@@ -49,7 +51,7 @@ header.navbar:not(.has-banner)
 footer#page-footer
     bottom: 0
     width: 100vw
-    height: $footer-height
+    min-height: $footer-height
     background-color: $menus-bg-color
     padding: 2vh
 
@@ -62,3 +64,44 @@ footer#page-footer
     box-shadow: none
 .menu
     background-color: $menus-bg-color
+.dropdown .dropdown-toggle:focus+.menu, .dropdown .menu:hover, .dropdown.active .menu
+    display: block !important
+
+// Responsive
+@media screen and (max-width: $break-width)
+    header.navbar, header.navbar
+        padding: 0
+        position: fixed
+        .dropdown
+            display: flex
+            align-items: center
+            flex-direction: column
+            .menu
+                animation: none
+                display: flex
+                align-items: inherit
+                flex-direction: inherit
+                position: relative
+                margin-bottom: 20px
+        #menu-show
+            margin-left: 0
+            z-index: 500
+
+    header.navbar.has-banner:focus-within .navbar-center
+        display: flex !important
+        background-color: $menus-bg-color
+        position: fixed
+        top: $header-height
+        left: 0
+        flex-direction: column
+        margin: 0
+        width: 100vw
+
+    #banner
+        padding: 0
+        .navbar-center
+            margin: 0
+            width: 100vw
+            img
+                margin: 0
+                width: max-content

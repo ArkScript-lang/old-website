@@ -3,7 +3,8 @@ $big-dim-px: 25px
 $small-dim-px: 10px
 $header-height: 5vh
 $footer-height: $header-height + 4vh
-    
+// responsive break (difference between mobile/desktop) dimension
+$break-width: 840px
     
 // Body
 $body-bg-color: rgb(35, 35, 35)
@@ -29,6 +30,7 @@ img.three-quarters
 code:not(.rainbowjs), div.codeblock
     background-color: $menus-bg-color
     color: $menus-color
+    word-break: break-all
 code:not(.rainbowjs).error, div.codeblock.error
     color: #d73e48
 code.rainbowjs

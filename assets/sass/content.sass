@@ -26,5 +26,19 @@ table.table.dark
 .table.table-hover tbody tr:hover
     background-color: darken($menus-bg-color, 6%)
 
+code.rainbowjs
+    overflow-x: scroll
+    display: block
+
 #content > section, .inner-section > section
         margin-bottom: 3.5%
+
+// Responsive
+@media screen and (max-width: $break-width)
+    #content
+        padding: 0 10px
+        h2
+            text-align: center
+        section .inner-section
+            padding: 0
+            border: none
