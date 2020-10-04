@@ -37,6 +37,10 @@ div.codeblock, pre {
   border-radius: 0.1rem;
 }
 
+pre.preloader, div.preloader {
+  position: initial;
+}
+
 .divider {
   border-top: none;
   border-left: 1px solid #373737;
@@ -54,7 +58,6 @@ pre code.rainbowjs span.label {
 .btn:not(.btn-link) {
   border-color: #0870f8 !important;
 }
-
 .btn:not(.btn-link):hover {
   border-color: #076bef !important;
 }
@@ -62,8 +65,7 @@ pre code.rainbowjs span.label {
 .btn.btn-link, .btn-link, .btn.btn-link:focus {
   color: deepskyblue;
 }
-
-.btn.btn-link:hover, .btn-link:hover {
+.btn.btn-link:hover, .btn-link:hover, .btn.btn-link:focus:hover {
   color: #33ccff;
 }
 
@@ -76,11 +78,20 @@ pre code.rainbowjs span.label {
   color: #e0e0e0;
   background: #0870f8;
 }
-
 .btn.btn-primary:hover {
   background-color: #0665e0;
 }
 
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(1.6rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 header.navbar, #banner {
   padding: 0 4vw;
   width: 100vw;
@@ -154,10 +165,25 @@ footer#page-footer p {
   display: block !important;
 }
 
+.hide {
+  display: none;
+}
+
+.dropdown-toggle .icon.icon-caret {
+  margin-right: 0;
+}
+
 @media screen and (max-width: 1120px) {
+  .dropdown-toggle .icon.icon-caret {
+    display: none;
+  }
+
   header.navbar {
     padding: 0;
     position: fixed;
+  }
+  header.navbar.has-banner #menu-show, header.navbar.has-banner #menu-show i {
+    height: 5vh;
   }
   header.navbar .dropdown {
     display: flex;
@@ -173,18 +199,32 @@ footer#page-footer p {
     margin-bottom: 20px;
   }
   header.navbar #menu-show {
+    padding-top: 0;
+    padding-bottom: 0;
+    border: 0;
+    height: 7.5vh;
     position: fixed;
     top: 0;
     margin-left: 0;
     z-index: 500;
+  }
+  header.navbar #menu-show i {
+    height: 7.5vh;
   }
   header.navbar .logo {
     align-items: initial;
     position: fixed;
     right: 0;
   }
+  header.navbar .divider {
+    width: 25vh;
+    height: 1px;
+    border-left: none;
+    border-top: 1px solid #373737;
+  }
 
   header.navbar:not(.has-banner):focus-within .navbar-section.show-on-focus {
+    animation: slide-down ease 0.15s 1;
     padding-top: 5vh;
     background-color: #161616;
     left: 0;
@@ -199,9 +239,11 @@ footer#page-footer p {
   }
 
   header.navbar.has-banner:focus-within .logo, header.navbar.has-banner:focus-within .logo * {
+    animation: slide-left ease 0.15s 1;
     display: block !important;
   }
   header.navbar.has-banner:focus-within .navbar-center {
+    animation: slide-down ease 0.15s 1;
     display: flex !important;
     background-color: #161616;
     position: fixed;

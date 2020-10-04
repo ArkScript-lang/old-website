@@ -43,6 +43,10 @@ div.codeblock, pre
     line-height: 0.5
     border-radius: .1rem
 
+// Rainbowjs fucking up with the positions
+pre.preloader, div.preloader
+    position: initial
+
     
 // Spectre.css overrides to fit in with the theme
 .divider
@@ -60,13 +64,13 @@ $btn-primary-bg-color: #0870f8
 
 .btn:not(.btn-link)
     border-color: $btn-primary-bg-color !important
-.btn:not(.btn-link):hover
-    border-color: darken($btn-primary-bg-color, 2%) !important
+    &:hover
+        border-color: darken($btn-primary-bg-color, 2%) !important
 
 .btn.btn-link, .btn-link, .btn.btn-link:focus
     color: $btn-link-color
-.btn.btn-link:hover, .btn-link:hover
-    color: lighten($btn-link-color, 10%)
+    &:hover
+        color: lighten($btn-link-color, 10%)
 
 .btn:hover
     border-radius: 5px
@@ -75,5 +79,14 @@ $btn-primary-bg-color: #0870f8
 .btn.btn-primary
     color: $body-color
     background: $btn-primary-bg-color
-.btn.btn-primary:hover
-    background-color: darken($btn-primary-bg-color, 5%)
+    &:hover
+        background-color: darken($btn-primary-bg-color, 5%)
+
+// Adding another animation from a Spectre.css keyframes
+@keyframes slide-left
+    0%
+        opacity: 0
+        transform: translateX(1.6rem)
+    100%
+        opacity: 1
+        transform: translateX(0)
