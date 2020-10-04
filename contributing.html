@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <title>Arkscript | Contributing</title>
     <link rel="stylesheet" href="/assets/css/spectre.min.css" type="text/css">
-    <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/spectre-icons.min.css" type="text/css">
     <link rel="stylesheet" href="/assets/css/rainbowjs-theme.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
 <!-- HEADER -->
 <header class="navbar">
-    <section class="navbar-section">
-        <a href="/" class="navbar-brand mr-2">ArkScript</a>
+    <a href="#" class="btn btn-link show-xl" tabindex="0" id="menu-show"><i class="icon icon-menu"></i></a>
+    <section class="navbar-section show-on-focus hide-xl">
+        <a href="/" class="navbar-brand mr-2 hide-xl">ArkScript</a>
         <a href="/" class="btn btn-link">Home</a>
         <a href="/documentation.html" class="btn btn-link">Documentation</a>
         <a href="/contributing.html" class="btn btn-link">Contributing</a>
         <div class="dropdown">
-            <a href="#" class="btn btn-link dropdown-toggle" tabindex="0">Tutorials</a>
+            <a href="#" class="btn btn-link dropdown-toggle" tabindex="0">Tutorials <i class="icon icon-caret"></i></a>
             <ul class="menu">
                 <li><a href="/tutorials/basics.html" class="btn btn-link">Basics</a></li>
                 <li><a href="/tutorials/building.html" class="btn btn-link">Building</a></li>
@@ -25,13 +30,12 @@
                 <li><a href="/tutorials/bytecode.html" class="btn btn-link">Bytecode</a></li>
             </ul>
         </div>
-    </section>
-    <section class="navbar-center">
-        <a href=""><img src="/assets/images/Ark-slim.png" alt="ArkScript"></a>
-    </section>
-    <section class="navbar-section">
+        <div class="divider"></div>
         <a href="https://github.com/ArkScript-lang/Ark" class="btn btn-link">Github</a>
         <a href="https://discord.gg/YT5yDwn" class="btn btn-link">Discord</a>
+    </section>
+    <section class="navbar-section logo">
+        <a href="/"><img src="/assets/images/Ark-slim.png" alt="ArkScript"></a>
     </section>
 </header>
 
@@ -39,10 +43,10 @@
 <div class="container" id="main">
     <div class="columns">
         <!-- The col-2 divs are an easy way to put some margin around the main content -->
-        <div class="col-2"></div>
+        <div class="col-2 hide-md"></div>
 
         <!-- Actual content of the page-->
-        <div class="col-8" id="content">
+        <div class="col-8 col-md-12" id="content">
             <h1 class="text-center">Contributing</h1>
 
             <p>
@@ -112,7 +116,7 @@
             </section>
         </div>
 
-        <div class="col-2"></div>
+        <div class="col-2 hide-md"></div>
     </div>
 </div>
 <!-- END OF CONTENT -->
@@ -121,7 +125,7 @@
 <footer id="page-footer">
     <p class="text-center">
         Copyright &copy; 2020 Alexandre Plateau & Fabien Zoccola.<br>
-        Tous droits réservés
+        All rights reserved.
     </p>
 </footer>
 

@@ -7,7 +7,6 @@ header.navbar, #banner
     width: 100vw
     height: $header-height
     background-color: $menus-bg-color
-    line-height: $header-height
 
     *
         margin: 0 10px
@@ -26,6 +25,8 @@ header.navbar, #banner
 
     .dropdown
         margin: 0
+        a
+            border: none
 
 header.navbar:not(.has-banner)
     height: $header-height * 1.5
@@ -49,7 +50,7 @@ header.navbar:not(.has-banner)
 footer#page-footer
     bottom: 0
     width: 100vw
-    height: $footer-height
+    min-height: $footer-height
     background-color: $menus-bg-color
     padding: 2vh
 
@@ -62,3 +63,88 @@ footer#page-footer
     box-shadow: none
 .menu
     background-color: $menus-bg-color
+.dropdown .dropdown-toggle:focus+.menu, .dropdown .menu:hover, .dropdown.active .menu
+    display: block !important
+
+// Hiding the logo on the index page by default (will show only on click on the menu toggler!)
+.hide
+    display: none
+
+// caret icon modifications
+.dropdown-toggle .icon.icon-caret
+    margin-right: 0
+
+
+// Responsive
+@media screen and (max-width: $break-width)
+    .dropdown-toggle .icon.icon-caret
+        display: none
+
+    header.navbar
+        &.has-banner
+            #menu-show, #menu-show i
+                height: $header-height
+        padding: 0
+        position: fixed
+        .dropdown
+            display: flex
+            align-items: center
+            flex-direction: column
+            .menu, .menu:hover
+                animation: none
+                display: flex
+                align-items: inherit
+                flex-direction: inherit
+                position: relative
+                margin-bottom: 20px
+        #menu-show
+            i
+                height: $header-height * 1.5
+            padding-top: 0
+            padding-bottom: 0
+            border: 0
+            height: $header-height * 1.5
+            position: fixed
+            top: 0
+            margin-left: 0
+            z-index: 500
+        .logo
+            align-items: initial
+            position: fixed
+            right: 0
+        .divider
+            width: 25vh
+            height: 1px
+            border-left: none
+            border-top: 1px solid lighten($body-bg-color, 8%)
+
+    // No banner
+    header.navbar:not(.has-banner):focus-within
+        .navbar-section.show-on-focus
+            animation: slide-down ease 0.15s 1
+            padding-top: $header-height
+            background-color: $menus-bg-color
+            left: 0
+            margin: 0
+            width: 100vw
+            display: flex !important
+            align-items: center
+            flex-direction: column
+        .menu
+            position: initial
+
+    // Banner
+    header.navbar.has-banner:focus-within
+        .logo, .logo *
+            animation: slide-left ease 0.15s 1
+            display: block !important
+        .navbar-center
+            animation: slide-down ease 0.15s 1
+            display: flex !important
+            background-color: $menus-bg-color
+            position: fixed
+            top: $header-height
+            left: 0
+            flex-direction: column
+            margin: 0
+            width: 100vw
