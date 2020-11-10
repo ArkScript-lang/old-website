@@ -1,16 +1,4 @@
-// Dimensions
-$big-dim-px: 25px
-$small-dim-px: 10px
-$header-height: 5vh
-$footer-height: $header-height + 4vh
-// responsive break (difference between mobile/desktop) dimension
-$break-width: 1120px
-    
-// Body
-$body-bg-color: rgb(35, 35, 35)
-$menus-bg-color: darken($body-bg-color, 5%)
-$body-color: #e0e0e0
-$menus-color: darken($body-color, 3%)
+@import "_vars.sass"
 
 body
     background-color: $menus-bg-color
@@ -58,9 +46,6 @@ pre.preloader, div.preloader
 
 pre code.rainbowjs span.label
     background: initial
-
-$btn-link-color: rgb(0, 191, 255)
-$btn-primary-bg-color: #0870f8
 
 .btn:not(.btn-link)
     border-color: $btn-primary-bg-color !important

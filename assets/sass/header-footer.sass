@@ -1,3 +1,5 @@
+@import "_vars.sass"
+
 // Navbar header
 $banner-height: 60vh
 $header-sections-font-size: 0.8rem
@@ -81,23 +83,29 @@ footer#page-footer
         display: none
 
     header.navbar
+        min-height: 55px
         &.has-banner
-            #menu-show, #menu-show i
+            #menu-show
                 height: $header-height
+                i
+                    height: $header-height * 1.5
         padding: 0
         position: fixed
         .dropdown
-            display: flex
+            display: flex !important
             align-items: center
             flex-direction: column
             .menu, .menu:hover
                 animation: none
-                display: flex
+                display: flex !important
                 align-items: inherit
                 flex-direction: inherit
                 position: relative
                 margin-bottom: 20px
+            .dropdown-toggle:focus + .menu
+                display: flex !important
         #menu-show
+            min-height: 55px
             i
                 height: $header-height * 1.5
             padding-top: 0
@@ -112,8 +120,10 @@ footer#page-footer
             align-items: initial
             position: fixed
             right: 0
+            img
+                min-height: 50px
         .divider
-            width: 25vh
+            width: 190px
             height: 1px
             border-left: none
             border-top: 1px solid lighten($body-bg-color, 8%)

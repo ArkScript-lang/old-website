@@ -173,32 +173,40 @@ footer#page-footer p {
   margin-right: 0;
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1280px) {
   .dropdown-toggle .icon.icon-caret {
     display: none;
   }
 
   header.navbar {
+    min-height: 55px;
     padding: 0;
     position: fixed;
   }
-  header.navbar.has-banner #menu-show, header.navbar.has-banner #menu-show i {
+  header.navbar.has-banner #menu-show {
     height: 5vh;
   }
+  header.navbar.has-banner #menu-show i {
+    height: 7.5vh;
+  }
   header.navbar .dropdown {
-    display: flex;
+    display: flex !important;
     align-items: center;
     flex-direction: column;
   }
   header.navbar .dropdown .menu, header.navbar .dropdown .menu:hover {
     animation: none;
-    display: flex;
+    display: flex !important;
     align-items: inherit;
     flex-direction: inherit;
     position: relative;
     margin-bottom: 20px;
   }
+  header.navbar .dropdown .dropdown-toggle:focus + .menu {
+    display: flex !important;
+  }
   header.navbar #menu-show {
+    min-height: 55px;
     padding-top: 0;
     padding-bottom: 0;
     border: 0;
@@ -216,8 +224,11 @@ footer#page-footer p {
     position: fixed;
     right: 0;
   }
+  header.navbar .logo img {
+    min-height: 50px;
+  }
   header.navbar .divider {
-    width: 25vh;
+    width: 190px;
     height: 1px;
     border-left: none;
     border-top: 1px solid #373737;
@@ -304,10 +315,10 @@ pre.rainbow-show {
   position: initial;
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1280px) {
   #content {
     margin-top: 7.5vh;
-    padding: 0 10px;
+    padding: 5vh 10px;
   }
   #content h2 {
     text-align: center;
