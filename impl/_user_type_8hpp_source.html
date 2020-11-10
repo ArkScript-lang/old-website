@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_a8b6c64285bf9ac60f50770eb2fc48b5.html">Ark</a></li><li class="navelem"><a class="el" href="dir_222307dbf92126e8e24c7a501f533901.html">VM</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8c4318cdc491a9c73c11e1888ff7ee66.html">include</a></li><li class="navelem"><a class="el" href="dir_5604a9ac40877a8858fc922df7b05ef9.html">Ark</a></li><li class="navelem"><a class="el" href="dir_963bbff9854be41acc27d31f1af08b7d.html">VM</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -88,65 +89,89 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">UserType.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ark_vm_usertype</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define ark_vm_usertype</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;typeindex&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark.html">Ark</a></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_ark_1_1_user_type.html">   18</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_ark_1_1_user_type.html">UserType</a></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">using</span> FuncStream_t = std::ostream&amp; (*) (std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="class_ark_1_1_user_type.html">UserType</a>&amp; A);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_ark_1_1_user_type.html#a6088d8459dffb5d2be29ad2d49cdfff6">   30</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="class_ark_1_1_user_type.html#a6088d8459dffb5d2be29ad2d49cdfff6">UserType</a>(T* <a class="code" href="class_ark_1_1_user_type.html#adf9aed77a14dc998c29d49cd01737fb7">data</a>=<span class="keyword">nullptr</span>) :</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            m_data(static_cast&lt;void*&gt;(<a class="code" href="class_ark_1_1_user_type.html#adf9aed77a14dc998c29d49cd01737fb7">data</a>)),</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            m_ostream_func(nullptr),</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            m_type_id(typeid(T).hash_code() &amp; static_cast&lt;uint16_t&gt;(~0))</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {}</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_ark_1_1_user_type.html#a87c6db74d14c81f6a0b73d6c7b0f811d">setOStream</a>(FuncStream_t&amp;&amp; f);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span>* <a class="code" href="class_ark_1_1_user_type.html#adf9aed77a14dc998c29d49cd01737fb7">data</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_ark_1_1_user_type.html#a23bf4ec6c04a8558232dc08334ba3cc3">not_</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_ark_1_1_user_type.html#af79f7ec88ddb09f6e3da83275d625f5f">   75</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_ark_1_1_user_type.html#af79f7ec88ddb09f6e3da83275d625f5f">is</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">return</span> (<span class="keyword">typeid</span>(T).hash_code() &amp; static_cast&lt;uint16_t&gt;(~0)) == m_type_id;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keyword">friend</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="class_ark_1_1_user_type.html">UserType</a>&amp; A, <span class="keyword">const</span> <a class="code" href="class_ark_1_1_user_type.html">UserType</a>&amp; B);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keyword">friend</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator&lt;(<span class="keyword">const</span> <a class="code" href="class_ark_1_1_user_type.html">UserType</a>&amp; A, <span class="keyword">const</span> <a class="code" href="class_ark_1_1_user_type.html">UserType</a>&amp; B);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">friend</span> <span class="keyword">inline</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="class_ark_1_1_user_type.html">UserType</a>&amp; A);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        uint16_t m_type_id;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">void</span>* m_data;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        FuncStream_t m_ostream_func;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    };</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">    #include &quot;inline/UserType.inl&quot;</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_ark_1_1_user_type_html_adf9aed77a14dc998c29d49cd01737fb7"><div class="ttname"><a href="class_ark_1_1_user_type.html#adf9aed77a14dc998c29d49cd01737fb7">Ark::UserType::data</a></div><div class="ttdeci">void * data() const </div><div class="ttdoc">Get the pointer to the object. </div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8inl_source.html#l00006">UserType.inl:6</a></div></div>
-<div class="ttc" id="class_ark_1_1_user_type_html_a87c6db74d14c81f6a0b73d6c7b0f811d"><div class="ttname"><a href="class_ark_1_1_user_type.html#a87c6db74d14c81f6a0b73d6c7b0f811d">Ark::UserType::setOStream</a></div><div class="ttdeci">void setOStream(FuncStream_t &amp;&amp;f)</div><div class="ttdoc">Set the ostream function. </div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8inl_source.html#l00001">UserType.inl:1</a></div></div>
-<div class="ttc" id="class_ark_1_1_user_type_html"><div class="ttname"><a href="class_ark_1_1_user_type.html">Ark::UserType</a></div><div class="ttdoc">A class to be use C++ objects in ArkScript. </div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00018">UserType.hpp:18</a></div></div>
-<div class="ttc" id="class_ark_1_1_user_type_html_a23bf4ec6c04a8558232dc08334ba3cc3"><div class="ttname"><a href="class_ark_1_1_user_type.html#a23bf4ec6c04a8558232dc08334ba3cc3">Ark::UserType::not_</a></div><div class="ttdeci">bool not_() const </div><div class="ttdoc">User implemented not operator. </div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8inl_source.html#l00012">UserType.inl:12</a></div></div>
-<div class="ttc" id="class_ark_1_1_user_type_html_af79f7ec88ddb09f6e3da83275d625f5f"><div class="ttname"><a href="class_ark_1_1_user_type.html#af79f7ec88ddb09f6e3da83275d625f5f">Ark::UserType::is</a></div><div class="ttdeci">bool is() const </div><div class="ttdoc">Check if the object held is of a given type. </div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00075">UserType.hpp:75</a></div></div>
-<div class="ttc" id="class_ark_1_1_user_type_html_a6088d8459dffb5d2be29ad2d49cdfff6"><div class="ttname"><a href="class_ark_1_1_user_type.html#a6088d8459dffb5d2be29ad2d49cdfff6">Ark::UserType::UserType</a></div><div class="ttdeci">UserType(T *data=nullptr)</div><div class="ttdoc">Construct a new User Type object. </div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00030">UserType.hpp:30</a></div></div>
-<div class="ttc" id="namespace_ark_html"><div class="ttname"><a href="namespace_ark.html">Ark</a></div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8hpp_source.html#l00012">Builtins.hpp:12</a></div></div>
+<a href="_user_type_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef ark_vm_usertype</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define ark_vm_usertype</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;typeindex&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark.html">Ark</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_ark_1_1_user_type.html">   29</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_ark_1_1_user_type.html">UserType</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="struct_ark_1_1_user_type_1_1_control_funcs.html">   36</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="struct_ark_1_1_user_type_1_1_control_funcs.html">ControlFuncs</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            std::ostream&amp; (*ostream_func) (std::ostream&amp;, <span class="keyword">const</span> <a class="code" href="class_ark_1_1_user_type.html">UserType</a>&amp;) = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            void          (*deleter) (<span class="keywordtype">void</span>*)                               = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        };</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_ark_1_1_user_type.html#afb19a67a68908277c17e3d277230db96">   49</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="class_ark_1_1_user_type.html#afb19a67a68908277c17e3d277230db96">UserType</a>(T* <a class="code" href="class_ark_1_1_user_type.html#ad909e4cff48d4c3f9b29f14cede9e866">data</a>=<span class="keyword">nullptr</span>) noexcept :</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            m_data(static_cast&lt;<span class="keywordtype">void</span>*&gt;(<a class="code" href="class_ark_1_1_user_type.html#ad909e4cff48d4c3f9b29f14cede9e866">data</a>)),</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            m_funcs(<span class="keywordtype">nullptr</span>),</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            m_type_id(typeid(T).hash_code() &amp; static_cast&lt;uint16_t&gt;(~0))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_ark_1_1_user_type.html#a4bc29ae76bff2c31ff420a0ef8b65f04">   60</a></span>&#160;        <a class="code" href="class_ark_1_1_user_type.html#a4bc29ae76bff2c31ff420a0ef8b65f04">~UserType</a>() noexcept</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="comment">// call a custom deleter on the data held by the usertype</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">if</span> (m_funcs != <span class="keyword">nullptr</span> &amp;&amp; m_funcs-&gt;deleter != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;               m_funcs-&gt;deleter(m_data);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_ark_1_1_user_type.html#aa6a3625b32722af12de75b7f0a669f31">setControlFuncs</a>(ControlFuncs* block) noexcept;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span>* <a class="code" href="class_ark_1_1_user_type.html#ad909e4cff48d4c3f9b29f14cede9e866">data</a>() const noexcept;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        template &lt;typename T&gt;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="class_ark_1_1_user_type.html#ae7511b67702032d9c8255754faf09c4c">   98</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_ark_1_1_user_type.html#ae7511b67702032d9c8255754faf09c4c">is</a>() const noexcept</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">return</span> (<span class="keyword">typeid</span>(T).hash_code() &amp; static_cast&lt;uint16_t&gt;(~0)) == m_type_id;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_ark_1_1_user_type.html#a89d580d8347deb8159d19b0465118165">  110</a></span>&#160;        T&amp; <a class="code" href="class_ark_1_1_user_type.html#a89d580d8347deb8159d19b0465118165">as</a>() noexcept</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">static_cast&lt;</span>T*<span class="keyword">&gt;</span>(m_data);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keyword">const</span> T&amp; <a class="code" href="class_ark_1_1_user_type.html#a89d580d8347deb8159d19b0465118165">as</a>() const noexcept</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">static_cast&lt;</span>T*<span class="keyword">&gt;</span>(m_data);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keyword">friend</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="class_ark_1_1_user_type.html#afb19a67a68908277c17e3d277230db96">UserType</a>&amp; A, <span class="keyword">const</span> <a class="code" href="class_ark_1_1_user_type.html#afb19a67a68908277c17e3d277230db96">UserType</a>&amp; B) noexcept;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keyword">friend</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator&lt;(<span class="keyword">const</span> <a class="code" href="class_ark_1_1_user_type.html#afb19a67a68908277c17e3d277230db96">UserType</a>&amp; A, <span class="keyword">const</span> <a class="code" href="class_ark_1_1_user_type.html#afb19a67a68908277c17e3d277230db96">UserType</a>&amp; B) noexcept;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keyword">friend</span> <span class="keyword">inline</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="class_ark_1_1_user_type.html#afb19a67a68908277c17e3d277230db96">UserType</a>&amp; A) noexcept;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        uint16_t m_type_id;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordtype">void</span>* m_data;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        ControlFuncs* m_funcs;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    };</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">    #include &quot;inline/UserType.inl&quot;</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_ark_1_1_user_type_html_a4bc29ae76bff2c31ff420a0ef8b65f04"><div class="ttname"><a href="class_ark_1_1_user_type.html#a4bc29ae76bff2c31ff420a0ef8b65f04">Ark::UserType::~UserType</a></div><div class="ttdeci">~UserType() noexcept</div><div class="ttdoc">Destroy the User Type object. </div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00060">UserType.hpp:60</a></div></div>
+<div class="ttc" id="class_ark_1_1_user_type_html"><div class="ttname"><a href="class_ark_1_1_user_type.html">Ark::UserType</a></div><div class="ttdoc">A class to be use C++ objects in ArkScript. </div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00029">UserType.hpp:29</a></div></div>
+<div class="ttc" id="class_ark_1_1_user_type_html_aa6a3625b32722af12de75b7f0a669f31"><div class="ttname"><a href="class_ark_1_1_user_type.html#aa6a3625b32722af12de75b7f0a669f31">Ark::UserType::setControlFuncs</a></div><div class="ttdeci">void setControlFuncs(ControlFuncs *block) noexcept</div><div class="ttdoc">Set the control functions structure. </div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8inl_source.html#l00001">UserType.inl:1</a></div></div>
+<div class="ttc" id="class_ark_1_1_user_type_html_ad909e4cff48d4c3f9b29f14cede9e866"><div class="ttname"><a href="class_ark_1_1_user_type.html#ad909e4cff48d4c3f9b29f14cede9e866">Ark::UserType::data</a></div><div class="ttdeci">void * data() const noexcept</div><div class="ttdoc">Get the pointer to the object. </div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8inl_source.html#l00006">UserType.inl:6</a></div></div>
+<div class="ttc" id="class_ark_1_1_user_type_html_a89d580d8347deb8159d19b0465118165"><div class="ttname"><a href="class_ark_1_1_user_type.html#a89d580d8347deb8159d19b0465118165">Ark::UserType::as</a></div><div class="ttdeci">T &amp; as() noexcept</div><div class="ttdoc">Return the underlying object as a given type. </div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00110">UserType.hpp:110</a></div></div>
+<div class="ttc" id="struct_ark_1_1_user_type_1_1_control_funcs_html"><div class="ttname"><a href="struct_ark_1_1_user_type_1_1_control_funcs.html">Ark::UserType::ControlFuncs</a></div><div class="ttdoc">A structure holding a bunch of pointers to different useful functions related to this usertype...</div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00036">UserType.hpp:36</a></div></div>
+<div class="ttc" id="class_ark_1_1_user_type_html_ae7511b67702032d9c8255754faf09c4c"><div class="ttname"><a href="class_ark_1_1_user_type.html#ae7511b67702032d9c8255754faf09c4c">Ark::UserType::is</a></div><div class="ttdeci">bool is() const noexcept</div><div class="ttdoc">Check if the object held is of a given type. </div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00098">UserType.hpp:98</a></div></div>
+<div class="ttc" id="class_ark_1_1_user_type_html_afb19a67a68908277c17e3d277230db96"><div class="ttname"><a href="class_ark_1_1_user_type.html#afb19a67a68908277c17e3d277230db96">Ark::UserType::UserType</a></div><div class="ttdeci">UserType(T *data=nullptr) noexcept</div><div class="ttdoc">Construct a new User Type object. </div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00049">UserType.hpp:49</a></div></div>
+<div class="ttc" id="namespace_ark_html"><div class="ttname"><a href="namespace_ark.html">Ark</a></div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8hpp_source.html#l00023">Builtins.hpp:23</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2020 19:11:04 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 09:14:02 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

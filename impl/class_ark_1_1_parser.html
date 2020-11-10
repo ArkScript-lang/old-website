@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -71,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -102,24 +103,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a47e5401ad4e09ba36b994a4724ccfe8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_parser.html#a47e5401ad4e09ba36b994a4724ccfe8c">Parser</a> (unsigned debug, const std::string &amp;lib_dir, uint16_t options)</td></tr>
-<tr class="memdesc:a47e5401ad4e09ba36b994a4724ccfe8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_ark_1_1_parser.html" title="The parser is responsible of constructing the Abstract Syntax Tree from a token list. ">Parser</a> object.  <a href="#a47e5401ad4e09ba36b994a4724ccfe8c">More...</a><br /></td></tr>
-<tr class="separator:a47e5401ad4e09ba36b994a4724ccfe8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a581ba6dd8e4fb3c10a00bc0ff211c24f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_parser.html#a581ba6dd8e4fb3c10a00bc0ff211c24f">feed</a> (const std::string &amp;code, const std::string &amp;filename=&quot;FILE&quot;)</td></tr>
-<tr class="memdesc:a581ba6dd8e4fb3c10a00bc0ff211c24f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Give the code to parse.  <a href="#a581ba6dd8e4fb3c10a00bc0ff211c24f">More...</a><br /></td></tr>
-<tr class="separator:a581ba6dd8e4fb3c10a00bc0ff211c24f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a89813946322ed8f10bae19236f30de"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_ark_1_1internal_1_1_node.html">internal::Node</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_parser.html#a9a89813946322ed8f10bae19236f30de">ast</a> () const </td></tr>
-<tr class="memdesc:a9a89813946322ed8f10bae19236f30de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the generated AST.  <a href="#a9a89813946322ed8f10bae19236f30de">More...</a><br /></td></tr>
-<tr class="separator:a9a89813946322ed8f10bae19236f30de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0902376f31dfed99d15df830d6538d49"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_parser.html#a0902376f31dfed99d15df830d6538d49">getImports</a> ()</td></tr>
-<tr class="memdesc:a0902376f31dfed99d15df830d6538d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the list of files imported by the code given to the parser.  <a href="#a0902376f31dfed99d15df830d6538d49">More...</a><br /></td></tr>
-<tr class="separator:a0902376f31dfed99d15df830d6538d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa5af9b392c010b8c21786a1be773d46"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_parser.html#aaa5af9b392c010b8c21786a1be773d46">Parser</a> (unsigned debug, const std::string &amp;lib_dir, uint16_t options) noexcept</td></tr>
+<tr class="memdesc:aaa5af9b392c010b8c21786a1be773d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_ark_1_1_parser.html" title="The parser is responsible of constructing the Abstract Syntax Tree from a token list. ">Parser</a> object.  <a href="#aaa5af9b392c010b8c21786a1be773d46">More...</a><br /></td></tr>
+<tr class="separator:aaa5af9b392c010b8c21786a1be773d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe0a993565227bf89936a224876be61b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_parser.html#abe0a993565227bf89936a224876be61b">feed</a> (const std::string &amp;code, const std::string &amp;filename=ARK_NO_NAME_FILE)</td></tr>
+<tr class="memdesc:abe0a993565227bf89936a224876be61b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Give the code to parse.  <a href="#abe0a993565227bf89936a224876be61b">More...</a><br /></td></tr>
+<tr class="separator:abe0a993565227bf89936a224876be61b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed4ed1a46b2d109585787a568066457e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_ark_1_1internal_1_1_node.html">internal::Node</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_parser.html#aed4ed1a46b2d109585787a568066457e">ast</a> () const noexcept</td></tr>
+<tr class="memdesc:aed4ed1a46b2d109585787a568066457e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the generated AST.  <a href="#aed4ed1a46b2d109585787a568066457e">More...</a><br /></td></tr>
+<tr class="separator:aed4ed1a46b2d109585787a568066457e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eb830af92e17ad678867723aaa2f79e"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_parser.html#a3eb830af92e17ad678867723aaa2f79e">getImports</a> () const noexcept</td></tr>
+<tr class="memdesc:a3eb830af92e17ad678867723aaa2f79e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the list of files imported by the code given to the parser.  <a href="#a3eb830af92e17ad678867723aaa2f79e">More...</a><br /></td></tr>
+<tr class="separator:a3eb830af92e17ad678867723aaa2f79e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:ac3581362a1e80098d9c81eecc7b3bac0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_parser.html#ac3581362a1e80098d9c81eecc7b3bac0">sugar</a> (std::vector&lt; internal::Token &gt; &amp;tokens)</td></tr>
-<tr class="memdesc:ac3581362a1e80098d9c81eecc7b3bac0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applying syntactic sugar: {...} =&gt; (begin...), [...] =&gt; (list ...)  <a href="#ac3581362a1e80098d9c81eecc7b3bac0">More...</a><br /></td></tr>
-<tr class="separator:ac3581362a1e80098d9c81eecc7b3bac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f6e282dcbcb45f0f3b83c74693a9a07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_parser.html#a1f6e282dcbcb45f0f3b83c74693a9a07">sugar</a> (std::vector&lt; internal::Token &gt; &amp;tokens) noexcept</td></tr>
+<tr class="memdesc:a1f6e282dcbcb45f0f3b83c74693a9a07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applying syntactic sugar: {...} =&gt; (begin...), [...] =&gt; (list ...)  <a href="#a1f6e282dcbcb45f0f3b83c74693a9a07">More...</a><br /></td></tr>
+<tr class="separator:a1f6e282dcbcb45f0f3b83c74693a9a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed900a5c73e5079ebf9b22a24cf47bcc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ark_1_1internal_1_1_node.html">internal::Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_parser.html#aed900a5c73e5079ebf9b22a24cf47bcc">parse</a> (std::list&lt; internal::Token &gt; &amp;tokens, bool authorize_capture=false, bool authorize_field_read=false)</td></tr>
+<tr class="memdesc:aed900a5c73e5079ebf9b22a24cf47bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a list of tokens recursively.  <a href="#aed900a5c73e5079ebf9b22a24cf47bcc">More...</a><br /></td></tr>
+<tr class="separator:aed900a5c73e5079ebf9b22a24cf47bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42d2c3fad3fda69fc28e27d0deb8fca5"><td class="memItemLeft" align="right" valign="top">internal::Token&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_parser.html#a42d2c3fad3fda69fc28e27d0deb8fca5">nextToken</a> (std::list&lt; internal::Token &gt; &amp;tokens)</td></tr>
 <tr class="memdesc:a42d2c3fad3fda69fc28e27d0deb8fca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the next token if possible, from a list of tokens.  <a href="#a42d2c3fad3fda69fc28e27d0deb8fca5">More...</a><br /></td></tr>
 <tr class="separator:a42d2c3fad3fda69fc28e27d0deb8fca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,11 +137,14 @@ Private Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The parser is responsible of constructing the Abstract Syntax Tree from a token list. </p>
 
-<p>Definition at line <a class="el" href="_parser_8hpp_source.html#l00020">20</a> of file <a class="el" href="_parser_8hpp_source.html">Parser.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_parser_8hpp_source.html#l00033">33</a> of file <a class="el" href="_parser_8hpp_source.html">Parser.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a47e5401ad4e09ba36b994a4724ccfe8c"></a>
+<a class="anchor" id="aaa5af9b392c010b8c21786a1be773d46"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Ark::Parser::Parser </td>
@@ -163,6 +170,11 @@ Private Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Construct a new <a class="el" href="class_ark_1_1_parser.html" title="The parser is responsible of constructing the Abstract Syntax Tree from a token list. ">Parser</a> object. </p>
@@ -180,7 +192,7 @@ Private Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a581ba6dd8e4fb3c10a00bc0ff211c24f"></a>
+<a class="anchor" id="abe0a993565227bf89936a224876be61b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -194,7 +206,7 @@ Private Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>filename</em> = <code>&quot;FILE&quot;</code>&#160;</td>
+          <td class="paramname"><em>filename</em> = <code>ARK_NO_NAME_FILE</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -217,9 +229,12 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9a89813946322ed8f10bae19236f30de"></a>
+<a class="anchor" id="aed4ed1a46b2d109585787a568066457e"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">const <a class="el" href="class_ark_1_1internal_1_1_node.html">Node</a> &amp; Ark::Parser::ast </td>
@@ -228,37 +243,50 @@ Private Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Return the generated AST. </p>
 <dl class="section return"><dt>Returns</dt><dd>const <a class="el" href="class_ark_1_1internal_1_1_node.html" title="A node of an Abstract Syntax Tree for ArkScript. ">internal::Node</a>&amp; </dd></dl>
 
-<p>Definition at line <a class="el" href="_parser_8cpp_source.html#l00055">55</a> of file <a class="el" href="_parser_8cpp_source.html">Parser.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_parser_8cpp_source.html#l00060">60</a> of file <a class="el" href="_parser_8cpp_source.html">Parser.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0902376f31dfed99d15df830d6538d49"></a>
+<a class="anchor" id="a3eb830af92e17ad678867723aaa2f79e"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">const std::vector&lt; std::string &gt; &amp; Ark::Parser::getImports </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Return the list of files imported by the code given to the parser. </p>
 <p>Each path of each imported file is relative to the filename given when feeding the parser.</p>
 <dl class="section return"><dt>Returns</dt><dd>const std::vector&lt;std::string&gt;&amp; </dd></dl>
 
-<p>Definition at line <a class="el" href="_parser_8cpp_source.html#l00060">60</a> of file <a class="el" href="_parser_8cpp_source.html">Parser.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_parser_8cpp_source.html#l00065">65</a> of file <a class="el" href="_parser_8cpp_source.html">Parser.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac3581362a1e80098d9c81eecc7b3bac0"></a>
+<a class="anchor" id="a1f6e282dcbcb45f0f3b83c74693a9a07"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -275,7 +303,7 @@ Private Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -288,7 +316,60 @@ Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_parser_8cpp_source.html#l00065">65</a> of file <a class="el" href="_parser_8cpp_source.html">Parser.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_parser_8cpp_source.html#l00070">70</a> of file <a class="el" href="_parser_8cpp_source.html">Parser.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aed900a5c73e5079ebf9b22a24cf47bcc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_ark_1_1internal_1_1_node.html">Node</a> Ark::Parser::parse </td>
+          <td>(</td>
+          <td class="paramtype">std::list&lt; internal::Token &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tokens</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>authorize_capture</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>authorize_field_read</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a list of tokens recursively. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tokens</td><td></td></tr>
+    <tr><td class="paramname">authorize_capture</td><td>if we are authorized to consume TokenType::Capture tokens </td></tr>
+    <tr><td class="paramname">authorize_field_read</td><td>if we are authorized to consume TokenType::GetField tokens </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_ark_1_1internal_1_1_node.html" title="A node of an Abstract Syntax Tree for ArkScript. ">internal::Node</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="_parser_8cpp_source.html#l00099">99</a> of file <a class="el" href="_parser_8cpp_source.html">Parser.cpp</a>.</p>
 
 </div>
 </div>
@@ -324,7 +405,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>internal::Token </dd></dl>
 
-<p>Definition at line <a class="el" href="_parser_8cpp_source.html#l00292">292</a> of file <a class="el" href="_parser_8cpp_source.html">Parser.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_parser_8cpp_source.html#l00293">293</a> of file <a class="el" href="_parser_8cpp_source.html">Parser.cpp</a>.</p>
 
 </div>
 </div>
@@ -359,7 +440,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_ark_1_1internal_1_1_node.html" title="A node of an Abstract Syntax Tree for ArkScript. ">internal::Node</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_parser_8cpp_source.html#l00302">302</a> of file <a class="el" href="_parser_8cpp_source.html">Parser.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_parser_8cpp_source.html#l00303">303</a> of file <a class="el" href="_parser_8cpp_source.html">Parser.cpp</a>.</p>
 
 </div>
 </div>
@@ -396,19 +477,19 @@ Private Member Functions</h2></td></tr>
 <dd>
 false returned on failure </dd></dl>
 
-<p>Definition at line <a class="el" href="_parser_8cpp_source.html#l00370">370</a> of file <a class="el" href="_parser_8cpp_source.html">Parser.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_parser_8cpp_source.html#l00366">366</a> of file <a class="el" href="_parser_8cpp_source.html">Parser.cpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/Ark/Parser/<a class="el" href="_parser_8hpp_source.html">Parser.hpp</a></li>
-<li>include/Ark/Parser/<a class="el" href="_parser_8inl_source.html">Parser.inl</a></li>
-<li>src/Parser/<a class="el" href="_parser_8cpp_source.html">Parser.cpp</a></li>
+<li>include/Ark/Compiler/<a class="el" href="_parser_8hpp_source.html">Parser.hpp</a></li>
+<li>include/Ark/Compiler/<a class="el" href="_parser_8inl_source.html">Parser.inl</a></li>
+<li>src/Compiler/<a class="el" href="_parser_8cpp_source.html">Parser.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2020 19:11:05 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 09:14:04 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

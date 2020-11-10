@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -71,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -101,22 +102,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac271eff02b3bb33f4dbee3e214a535cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac271eff02b3bb33f4dbee3e214a535cc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_closure.html#ac271eff02b3bb33f4dbee3e214a535cc">Closure</a> ()</td></tr>
-<tr class="memdesc:ac271eff02b3bb33f4dbee3e214a535cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_ark_1_1internal_1_1_closure.html" title="Closure management. ">Closure</a> object. <br /></td></tr>
-<tr class="separator:ac271eff02b3bb33f4dbee3e214a535cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b443fb6c9a1411d2e3118592b3b90a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_closure.html#a8b443fb6c9a1411d2e3118592b3b90a7">Closure</a> (Scope_t &amp;&amp;scope_ptr, PageAddr_t pa)</td></tr>
-<tr class="memdesc:a8b443fb6c9a1411d2e3118592b3b90a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_ark_1_1internal_1_1_closure.html" title="Closure management. ">Closure</a> object.  <a href="#a8b443fb6c9a1411d2e3118592b3b90a7">More...</a><br /></td></tr>
-<tr class="separator:a8b443fb6c9a1411d2e3118592b3b90a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8b184d3001e8317b99c3ca3488f6997"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_closure.html#aa8b184d3001e8317b99c3ca3488f6997">Closure</a> (const Scope_t &amp;scope_ptr, PageAddr_t pa)</td></tr>
-<tr class="memdesc:aa8b184d3001e8317b99c3ca3488f6997"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_ark_1_1internal_1_1_closure.html" title="Closure management. ">Closure</a> object.  <a href="#aa8b184d3001e8317b99c3ca3488f6997">More...</a><br /></td></tr>
-<tr class="separator:aa8b184d3001e8317b99c3ca3488f6997"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a982b40845b2c812032937a446e522cbf"><td class="memItemLeft" align="right" valign="top">const Scope_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_closure.html#a982b40845b2c812032937a446e522cbf">scope</a> () const </td></tr>
-<tr class="memdesc:a982b40845b2c812032937a446e522cbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the scope held by the object.  <a href="#a982b40845b2c812032937a446e522cbf">More...</a><br /></td></tr>
-<tr class="separator:a982b40845b2c812032937a446e522cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17c4a3832a5fa2f77685b5f92c38060a"><td class="memItemLeft" align="right" valign="top">Scope_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_closure.html#a17c4a3832a5fa2f77685b5f92c38060a">scope_ref</a> ()</td></tr>
-<tr class="memdesc:a17c4a3832a5fa2f77685b5f92c38060a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a reference to the scpoe held by the object.  <a href="#a17c4a3832a5fa2f77685b5f92c38060a">More...</a><br /></td></tr>
-<tr class="separator:a17c4a3832a5fa2f77685b5f92c38060a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada3fa64db63900c3f8236b6cf3a424ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada3fa64db63900c3f8236b6cf3a424ce"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_closure.html#ada3fa64db63900c3f8236b6cf3a424ce">Closure</a> () noexcept</td></tr>
+<tr class="memdesc:ada3fa64db63900c3f8236b6cf3a424ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_ark_1_1internal_1_1_closure.html" title="Closure management. ">Closure</a> object. <br /></td></tr>
+<tr class="separator:ada3fa64db63900c3f8236b6cf3a424ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c5985ae75ba56ff141defa9d860016"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_closure.html#a45c5985ae75ba56ff141defa9d860016">Closure</a> (Scope_t &amp;&amp;scope_ptr, PageAddr_t pa) noexcept</td></tr>
+<tr class="memdesc:a45c5985ae75ba56ff141defa9d860016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_ark_1_1internal_1_1_closure.html" title="Closure management. ">Closure</a> object.  <a href="#a45c5985ae75ba56ff141defa9d860016">More...</a><br /></td></tr>
+<tr class="separator:a45c5985ae75ba56ff141defa9d860016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fa30de2d1ca542f8d406a8a355fb4c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_closure.html#a5fa30de2d1ca542f8d406a8a355fb4c2">Closure</a> (const Scope_t &amp;scope_ptr, PageAddr_t pa) noexcept</td></tr>
+<tr class="memdesc:a5fa30de2d1ca542f8d406a8a355fb4c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_ark_1_1internal_1_1_closure.html" title="Closure management. ">Closure</a> object.  <a href="#a5fa30de2d1ca542f8d406a8a355fb4c2">More...</a><br /></td></tr>
+<tr class="separator:a5fa30de2d1ca542f8d406a8a355fb4c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ded29994e12ed7135572bd5433d6a3e"><td class="memItemLeft" align="right" valign="top">const Scope_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_closure.html#a5ded29994e12ed7135572bd5433d6a3e">scope</a> () const noexcept</td></tr>
+<tr class="memdesc:a5ded29994e12ed7135572bd5433d6a3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the scope held by the object.  <a href="#a5ded29994e12ed7135572bd5433d6a3e">More...</a><br /></td></tr>
+<tr class="separator:a5ded29994e12ed7135572bd5433d6a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f73825daf4555a2281a874de3510fe2"><td class="memItemLeft" align="right" valign="top">Scope_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_closure.html#a8f73825daf4555a2281a874de3510fe2">scope_ref</a> () noexcept</td></tr>
+<tr class="memdesc:a8f73825daf4555a2281a874de3510fe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a reference to the scpoe held by the object.  <a href="#a8f73825daf4555a2281a874de3510fe2">More...</a><br /></td></tr>
+<tr class="separator:a8f73825daf4555a2281a874de3510fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46b5619c1045b50879865e1868dc780b"><td class="memItemLeft" align="right" valign="top">PageAddr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_closure.html#a46b5619c1045b50879865e1868dc780b">pageAddr</a> () const </td></tr>
 <tr class="memdesc:a46b5619c1045b50879865e1868dc780b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the page address of the object.  <a href="#a46b5619c1045b50879865e1868dc780b">More...</a><br /></td></tr>
 <tr class="separator:a46b5619c1045b50879865e1868dc780b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,11 +125,14 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_ark_1_1internal_1_1_closure.html" title="Closure management. ">Closure</a> management. </p>
 
-<p>Definition at line <a class="el" href="_closure_8hpp_source.html#l00027">27</a> of file <a class="el" href="_closure_8hpp_source.html">Closure.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_closure_8hpp_source.html#l00038">38</a> of file <a class="el" href="_closure_8hpp_source.html">Closure.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a8b443fb6c9a1411d2e3118592b3b90a7"></a>
+<a class="anchor" id="a45c5985ae75ba56ff141defa9d860016"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Ark::internal::Closure::Closure </td>
@@ -148,6 +152,11 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Construct a new <a class="el" href="class_ark_1_1internal_1_1_closure.html" title="Closure management. ">Closure</a> object. </p>
@@ -163,9 +172,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa8b184d3001e8317b99c3ca3488f6997"></a>
+<a class="anchor" id="a5fa30de2d1ca542f8d406a8a355fb4c2"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Ark::internal::Closure::Closure </td>
@@ -185,6 +197,11 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Construct a new <a class="el" href="class_ark_1_1internal_1_1_closure.html" title="Closure management. ">Closure</a> object. </p>
@@ -201,9 +218,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a982b40845b2c812032937a446e522cbf"></a>
+<a class="anchor" id="a5ded29994e12ed7135572bd5433d6a3e"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">const Scope_t &amp; Ark::internal::Closure::scope </td>
@@ -212,6 +232,11 @@ Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Return the scope held by the object. </p>
@@ -221,9 +246,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a17c4a3832a5fa2f77685b5f92c38060a"></a>
+<a class="anchor" id="a8f73825daf4555a2281a874de3510fe2"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Scope_t &amp; Ark::internal::Closure::scope_ref </td>
@@ -232,6 +260,11 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Return a reference to the scpoe held by the object. </p>
@@ -265,7 +298,7 @@ Public Member Functions</h2></td></tr>
 <p>Return the page address of the object. </p>
 <dl class="section return"><dt>Returns</dt><dd>PageAddr_t </dd></dl>
 
-<p>Definition at line <a class="el" href="_closure_8hpp_source.html#l00071">71</a> of file <a class="el" href="_closure_8hpp_source.html">Closure.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_closure_8hpp_source.html#l00082">82</a> of file <a class="el" href="_closure_8hpp_source.html">Closure.hpp</a>.</p>
 
 </div>
 </div>
@@ -276,7 +309,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2020 19:11:05 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 09:14:04 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -71,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -93,19 +94,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="class_ark_1_1_state.html">Ark::State</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#a0062ced9c5580ca5552e95bd777f721e">configure</a>()</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#ad647def207227837eb23338fc6bed7f8">doFile</a>(const std::string &amp;filename)</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#ae3fda5c7fbf90319871e4057b28f84c8">doString</a>(const std::string &amp;code)</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#a6088b8198a0ad3494ba110e8589e8e31">feed</a>(const std::string &amp;bytecode_filename)</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#a02076aa4cbeacde9fdc7cb294a543871">feed</a>(const bytecode_t &amp;bytecode)</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#a82937f8746cf671687b76be0afbd0614">loadFunction</a>(const std::string &amp;name, internal::Value::ProcType function)</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#ae8750c507e871fd62eb435e3e72bda63">setDebug</a>(unsigned level)</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#a5ad30e1eda51c0ac402f59bdc8636ee4">setLibDir</a>(const std::string &amp;libDir)</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#a2e0244024ab4728870cf1c8dc4abff97">State</a>(const std::string &amp;libdir=&quot;?&quot;, uint16_t options=DefaultFeatures)</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#acbef6ec0665874fba13f5e5fad11095b">compile</a>(unsigned debug, const std::string &amp;file, const std::string &amp;output, const std::string &amp;lib_dir, uint16_t options)</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#a0062ced9c5580ca5552e95bd777f721e">configure</a>()</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#ad647def207227837eb23338fc6bed7f8">doFile</a>(const std::string &amp;filename)</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#ae3fda5c7fbf90319871e4057b28f84c8">doString</a>(const std::string &amp;code)</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#a6088b8198a0ad3494ba110e8589e8e31">feed</a>(const std::string &amp;bytecode_filename)</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#a02076aa4cbeacde9fdc7cb294a543871">feed</a>(const bytecode_t &amp;bytecode)</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#a31505924979cc54dd107681f37f1a1dd">loadFunction</a>(const std::string &amp;name, internal::Value::ProcType function) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#a877e05afb005b6b1cf580bd026892899">reset</a>() noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#ad1dbcc1d68374da8d09433aadb3a7b05">setDebug</a>(unsigned level) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#a91a6395162c1ee277731c100a7513ddf">setLibDir</a>(const std::string &amp;libDir) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#a4ce60250b6ece57bea02fff82994ce0e">State</a>(uint16_t options=DefaultFeatures, const std::string &amp;libdir=&quot;?&quot;) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2020 19:11:05 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 09:14:04 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
