@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['line',['line',['../class_ark_1_1internal_1_1_node.html#a73b7cf1485211e23418be3677cd7fba0',1,'Ark::internal::Node']]],
-  ['list',['list',['../class_ark_1_1internal_1_1_node.html#afb2d1fcdd5279aaf86b22d6bab6e400a',1,'Ark::internal::Node']]],
-  ['load',['load',['../class_ark_1_1internal_1_1_shared_library.html#aa63c8c4f71c3fd2f56ce5e039a68aa7d',1,'Ark::internal::SharedLibrary']]],
-  ['loadfunction',['loadFunction',['../class_ark_1_1_state.html#a82937f8746cf671687b76be0afbd0614',1,'Ark::State']]],
-  ['logger',['Logger',['../class_ark_1_1_logger.html',1,'Ark']]]
+  ['idfromvalue',['idFromValue',['../class_ark_1_1internal_1_1_scope.html#a39349a331b69333504f1c489ecee2d00',1,'Ark::internal::Scope']]],
+  ['incscopecounttodelete',['incScopeCountToDelete',['../class_ark_1_1internal_1_1_frame.html#a9cb2ae23ca2ee1bfceec280b38d01ed2',1,'Ark::internal::Frame']]],
+  ['init',['init',['../class_ark_1_1_v_m.html#ae0749e81e975e0d1a92c2d89995e50f0',1,'Ark::VM']]],
+  ['instructions_2ehpp',['Instructions.hpp',['../_instructions_8hpp.html',1,'']]],
+  ['is',['is',['../class_ark_1_1_user_type.html#ae7511b67702032d9c8255754faf09c4c',1,'Ark::UserType']]],
+  ['isbuiltin',['isBuiltin',['../class_ark_1_1_compiler.html#ab11ac7b75c9cb8ceebca66a3a31c66ce',1,'Ark::Compiler']]],
+  ['iskeyword',['isKeyword',['../class_ark_1_1internal_1_1_lexer.html#a372a39308f4d2d353f8ae29934e04c82',1,'Ark::internal::Lexer']]],
+  ['isoperator',['isOperator',['../class_ark_1_1_compiler.html#ac92e41c58dc2bf550d5076b5ac223f9e',1,'Ark::Compiler::isOperator()'],['../class_ark_1_1internal_1_1_lexer.html#a760e1ecc5f793ecb7c41f2ee2cbc7b5d',1,'Ark::internal::Lexer::isOperator()']]]
 ];

@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -71,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -102,9 +103,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2e0244024ab4728870cf1c8dc4abff97"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#a2e0244024ab4728870cf1c8dc4abff97">State</a> (const std::string &amp;libdir=&quot;?&quot;, uint16_t options=DefaultFeatures)</td></tr>
-<tr class="memdesc:a2e0244024ab4728870cf1c8dc4abff97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_ark_1_1_state.html" title="Ark state to handle the dirty job of loading and compiling ArkScript code. ">State</a> object.  <a href="#a2e0244024ab4728870cf1c8dc4abff97">More...</a><br /></td></tr>
-<tr class="separator:a2e0244024ab4728870cf1c8dc4abff97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ce60250b6ece57bea02fff82994ce0e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#a4ce60250b6ece57bea02fff82994ce0e">State</a> (uint16_t options=DefaultFeatures, const std::string &amp;libdir=&quot;?&quot;) noexcept</td></tr>
+<tr class="memdesc:a4ce60250b6ece57bea02fff82994ce0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_ark_1_1_state.html" title="Ark state to handle the dirty job of loading and compiling ArkScript code. ">State</a> object.  <a href="#a4ce60250b6ece57bea02fff82994ce0e">More...</a><br /></td></tr>
+<tr class="separator:a4ce60250b6ece57bea02fff82994ce0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6088b8198a0ad3494ba110e8589e8e31"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#a6088b8198a0ad3494ba110e8589e8e31">feed</a> (const std::string &amp;bytecode_filename)</td></tr>
 <tr class="memdesc:a6088b8198a0ad3494ba110e8589e8e31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Feed the state by giving it the path to an existing bytecode file.  <a href="#a6088b8198a0ad3494ba110e8589e8e31">More...</a><br /></td></tr>
 <tr class="separator:a6088b8198a0ad3494ba110e8589e8e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,15 +118,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae3fda5c7fbf90319871e4057b28f84c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#ae3fda5c7fbf90319871e4057b28f84c8">doString</a> (const std::string &amp;code)</td></tr>
 <tr class="memdesc:ae3fda5c7fbf90319871e4057b28f84c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a string (representing ArkScript code) and store resulting bytecode in m_bytecode.  <a href="#ae3fda5c7fbf90319871e4057b28f84c8">More...</a><br /></td></tr>
 <tr class="separator:ae3fda5c7fbf90319871e4057b28f84c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82937f8746cf671687b76be0afbd0614"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#a82937f8746cf671687b76be0afbd0614">loadFunction</a> (const std::string &amp;name, internal::Value::ProcType function)</td></tr>
-<tr class="memdesc:a82937f8746cf671687b76be0afbd0614"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a function in the virtual machine.  <a href="#a82937f8746cf671687b76be0afbd0614">More...</a><br /></td></tr>
-<tr class="separator:a82937f8746cf671687b76be0afbd0614"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8750c507e871fd62eb435e3e72bda63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#ae8750c507e871fd62eb435e3e72bda63">setDebug</a> (unsigned level)</td></tr>
-<tr class="memdesc:ae8750c507e871fd62eb435e3e72bda63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the debug level.  <a href="#ae8750c507e871fd62eb435e3e72bda63">More...</a><br /></td></tr>
-<tr class="separator:ae8750c507e871fd62eb435e3e72bda63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ad30e1eda51c0ac402f59bdc8636ee4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#a5ad30e1eda51c0ac402f59bdc8636ee4">setLibDir</a> (const std::string &amp;libDir)</td></tr>
-<tr class="memdesc:a5ad30e1eda51c0ac402f59bdc8636ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Lib Dir path.  <a href="#a5ad30e1eda51c0ac402f59bdc8636ee4">More...</a><br /></td></tr>
-<tr class="separator:a5ad30e1eda51c0ac402f59bdc8636ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31505924979cc54dd107681f37f1a1dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#a31505924979cc54dd107681f37f1a1dd">loadFunction</a> (const std::string &amp;name, internal::Value::ProcType function) noexcept</td></tr>
+<tr class="memdesc:a31505924979cc54dd107681f37f1a1dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a function in the virtual machine.  <a href="#a31505924979cc54dd107681f37f1a1dd">More...</a><br /></td></tr>
+<tr class="separator:a31505924979cc54dd107681f37f1a1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1dbcc1d68374da8d09433aadb3a7b05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#ad1dbcc1d68374da8d09433aadb3a7b05">setDebug</a> (unsigned level) noexcept</td></tr>
+<tr class="memdesc:ad1dbcc1d68374da8d09433aadb3a7b05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the debug level.  <a href="#ad1dbcc1d68374da8d09433aadb3a7b05">More...</a><br /></td></tr>
+<tr class="separator:ad1dbcc1d68374da8d09433aadb3a7b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91a6395162c1ee277731c100a7513ddf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#a91a6395162c1ee277731c100a7513ddf">setLibDir</a> (const std::string &amp;libDir) noexcept</td></tr>
+<tr class="memdesc:a91a6395162c1ee277731c100a7513ddf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Lib Dir path.  <a href="#a91a6395162c1ee277731c100a7513ddf">More...</a><br /></td></tr>
+<tr class="separator:a91a6395162c1ee277731c100a7513ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a877e05afb005b6b1cf580bd026892899"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a877e05afb005b6b1cf580bd026892899"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#a877e05afb005b6b1cf580bd026892899">reset</a> () noexcept</td></tr>
+<tr class="memdesc:a877e05afb005b6b1cf580bd026892899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset <a class="el" href="class_ark_1_1_state.html" title="Ark state to handle the dirty job of loading and compiling ArkScript code. ">State</a> (all member variables related to execution) <br /></td></tr>
+<tr class="separator:a877e05afb005b6b1cf580bd026892899"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -133,27 +138,33 @@ Private Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#a0062ced9c5580ca5552e95bd777f721e">configure</a> ()</td></tr>
 <tr class="memdesc:a0062ced9c5580ca5552e95bd777f721e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called to configure the state (set the bytecode, debug level, call the compiler...) <br /></td></tr>
 <tr class="separator:a0062ced9c5580ca5552e95bd777f721e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbef6ec0665874fba13f5e5fad11095b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#acbef6ec0665874fba13f5e5fad11095b">compile</a> (unsigned debug, const std::string &amp;file, const std::string &amp;output, const std::string &amp;lib_dir, uint16_t options)</td></tr>
+<tr class="memdesc:acbef6ec0665874fba13f5e5fad11095b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads and compiles code of file.  <a href="#acbef6ec0665874fba13f5e5fad11095b">More...</a><br /></td></tr>
+<tr class="separator:acbef6ec0665874fba13f5e5fad11095b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Ark state to handle the dirty job of loading and compiling ArkScript code. </p>
 
-<p>Definition at line <a class="el" href="_state_8hpp_source.html#l00021">21</a> of file <a class="el" href="_state_8hpp_source.html">State.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8hpp_source.html#l00031">31</a> of file <a class="el" href="_state_8hpp_source.html">State.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a2e0244024ab4728870cf1c8dc4abff97"></a>
+<a class="anchor" id="a4ce60250b6ece57bea02fff82994ce0e"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Ark::State::State </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>libdir</em> = <code>&quot;?&quot;</code>, </td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>options</em> = <code>DefaultFeatures</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>options</em> = <code>DefaultFeatures</code>&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>libdir</em> = <code>&quot;?&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -161,13 +172,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Construct a new <a class="el" href="class_ark_1_1_state.html" title="Ark state to handle the dirty job of loading and compiling ArkScript code. ">State</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">libdir</td><td>the path to the standard library, defaults to "?" which means: search in environment variables </td></tr>
     <tr><td class="paramname">options</td><td>the options for the virtual machine, compiler, and parser </td></tr>
+    <tr><td class="paramname">libdir</td><td>the path to the standard library, defaults to "?" which means: search in environment variables </td></tr>
   </table>
   </dd>
 </dl>
@@ -293,9 +309,12 @@ false on failure </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a82937f8746cf671687b76be0afbd0614"></a>
+<a class="anchor" id="a31505924979cc54dd107681f37f1a1dd"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Ark::State::loadFunction </td>
@@ -315,6 +334,11 @@ false on failure </dd></dl>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Register a function in the virtual machine. </p>
@@ -330,9 +354,12 @@ false on failure </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ae8750c507e871fd62eb435e3e72bda63"></a>
+<a class="anchor" id="ad1dbcc1d68374da8d09433aadb3a7b05"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Ark::State::setDebug </td>
@@ -342,6 +369,11 @@ false on failure </dd></dl>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Set the debug level. </p>
@@ -356,9 +388,12 @@ false on failure </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a5ad30e1eda51c0ac402f59bdc8636ee4"></a>
+<a class="anchor" id="a91a6395162c1ee277731c100a7513ddf"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Ark::State::setLibDir </td>
@@ -368,6 +403,11 @@ false on failure </dd></dl>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Set the Lib Dir path. </p>
@@ -382,6 +422,75 @@ false on failure </dd></dl>
 
 </div>
 </div>
+<a class="anchor" id="acbef6ec0665874fba13f5e5fad11095b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ark::State::compile </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>debug</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>lib_dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads and compiles code of file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">debug</td><td>set the debug level </td></tr>
+    <tr><td class="paramname">file</td><td>the path of file code to compile </td></tr>
+    <tr><td class="paramname">output</td><td>set path of .arkc file </td></tr>
+    <tr><td class="paramname">lib_dir</td><td>the Lib Dir </td></tr>
+    <tr><td class="paramname">options</td><td>set vm options </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true on success </dd>
+<dd>
+false on failure and raise an exception </dd></dl>
+
+<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00064">64</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/Ark/VM/<a class="el" href="_state_8hpp_source.html">State.hpp</a></li>
 <li>src/VM/<a class="el" href="_state_8cpp_source.html">State.cpp</a></li>
@@ -389,7 +498,7 @@ false on failure </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2020 19:11:05 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 09:14:04 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

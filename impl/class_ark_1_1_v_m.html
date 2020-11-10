@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -71,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -102,15 +103,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8a20e57af75dcfb62d6ef651adf9344e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#a8a20e57af75dcfb62d6ef651adf9344e">VM</a> (<a class="el" href="class_ark_1_1_state.html">State</a> *state)</td></tr>
-<tr class="memdesc:a8a20e57af75dcfb62d6ef651adf9344e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new vm t object.  <a href="#a8a20e57af75dcfb62d6ef651adf9344e">More...</a><br /></td></tr>
-<tr class="separator:a8a20e57af75dcfb62d6ef651adf9344e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc22034f8d441c9473cd7d89b9008e93"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#acc22034f8d441c9473cd7d89b9008e93">run</a> ()</td></tr>
-<tr class="memdesc:acc22034f8d441c9473cd7d89b9008e93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the bytecode held in the state.  <a href="#acc22034f8d441c9473cd7d89b9008e93">More...</a><br /></td></tr>
-<tr class="separator:acc22034f8d441c9473cd7d89b9008e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88cb0dbef88f266c62f13a52cadf4145"><td class="memItemLeft" align="right" valign="top">internal::Value &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#a88cb0dbef88f266c62f13a52cadf4145">operator[]</a> (const std::string &amp;name)</td></tr>
-<tr class="memdesc:a88cb0dbef88f266c62f13a52cadf4145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a value from the virtual machine, given its symbol name.  <a href="#a88cb0dbef88f266c62f13a52cadf4145">More...</a><br /></td></tr>
-<tr class="separator:a88cb0dbef88f266c62f13a52cadf4145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa21a2be0d0166e38d89c9be9f703fbc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#afa21a2be0d0166e38d89c9be9f703fbc">VM</a> (<a class="el" href="class_ark_1_1_state.html">State</a> *state) noexcept</td></tr>
+<tr class="memdesc:afa21a2be0d0166e38d89c9be9f703fbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new vm t object.  <a href="#afa21a2be0d0166e38d89c9be9f703fbc">More...</a><br /></td></tr>
+<tr class="separator:afa21a2be0d0166e38d89c9be9f703fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00ace4106ec9b646e0d85dc531dcf1f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#a00ace4106ec9b646e0d85dc531dcf1f8">run</a> () noexcept</td></tr>
+<tr class="memdesc:a00ace4106ec9b646e0d85dc531dcf1f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the bytecode held in the state.  <a href="#a00ace4106ec9b646e0d85dc531dcf1f8">More...</a><br /></td></tr>
+<tr class="separator:a00ace4106ec9b646e0d85dc531dcf1f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41d4b331c764c74f1553cb94fccb6145"><td class="memItemLeft" align="right" valign="top">internal::Value &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#a41d4b331c764c74f1553cb94fccb6145">operator[]</a> (const std::string &amp;name) noexcept</td></tr>
+<tr class="memdesc:a41d4b331c764c74f1553cb94fccb6145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a value from the virtual machine, given its symbol name.  <a href="#a41d4b331c764c74f1553cb94fccb6145">More...</a><br /></td></tr>
+<tr class="separator:a41d4b331c764c74f1553cb94fccb6145"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afccfb7996d2d3e9b8663056ce2de5d41"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:afccfb7996d2d3e9b8663056ce2de5d41"><td class="memTemplItemLeft" align="right" valign="top">internal::Value&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#afccfb7996d2d3e9b8663056ce2de5d41">call</a> (const std::string &amp;name, Args &amp;&amp;...args)</td></tr>
 <tr class="memdesc:afccfb7996d2d3e9b8663056ce2de5d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call a function from ArkScript, by giving it arguments.  <a href="#afccfb7996d2d3e9b8663056ce2de5d41">More...</a><br /></td></tr>
@@ -119,32 +120,41 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a810b761ab6cbfb005fc86c870b7557e7"><td class="memTemplItemLeft" align="right" valign="top">internal::Value&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#a810b761ab6cbfb005fc86c870b7557e7">resolve</a> (const internal::Value *val, Args &amp;&amp;...args)</td></tr>
 <tr class="memdesc:a810b761ab6cbfb005fc86c870b7557e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolving a function call (called by plugins)  <a href="#a810b761ab6cbfb005fc86c870b7557e7">More...</a><br /></td></tr>
 <tr class="separator:a810b761ab6cbfb005fc86c870b7557e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e8b56e0a675cbc1b300ad7be84cdcd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#a5e8b56e0a675cbc1b300ad7be84cdcd4">setUserPointer</a> (void *ptr) noexcept</td></tr>
+<tr class="memdesc:a5e8b56e0a675cbc1b300ad7be84cdcd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the User Pointer object.  <a href="#a5e8b56e0a675cbc1b300ad7be84cdcd4">More...</a><br /></td></tr>
+<tr class="separator:a5e8b56e0a675cbc1b300ad7be84cdcd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae48a909dab89f04e474080c51d6f510c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#ae48a909dab89f04e474080c51d6f510c">getUserPointer</a> () noexcept</td></tr>
+<tr class="memdesc:ae48a909dab89f04e474080c51d6f510c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the stored pointer.  <a href="#ae48a909dab89f04e474080c51d6f510c">More...</a><br /></td></tr>
+<tr class="separator:ae48a909dab89f04e474080c51d6f510c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a8c19cbd581697a9d7e4c7088fa35138c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#a8c19cbd581697a9d7e4c7088fa35138c">safeRun</a> (std::size_t untilFrameCount=0)</td></tr>
 <tr class="memdesc:a8c19cbd581697a9d7e4c7088fa35138c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run ArkScript bytecode inside a try catch to retrieve all the exceptions and display a stack trace if needed.  <a href="#a8c19cbd581697a9d7e4c7088fa35138c">More...</a><br /></td></tr>
 <tr class="separator:a8c19cbd581697a9d7e4c7088fa35138c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc983e5824f909132bcf1745f76a64e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc983e5824f909132bcf1745f76a64e8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#afc983e5824f909132bcf1745f76a64e8">init</a> ()</td></tr>
-<tr class="memdesc:afc983e5824f909132bcf1745f76a64e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="class_ark_1_1_v_m.html" title="The ArkScript virtual machine, executing ArkScript bytecode. ">VM</a> according to the parameters. <br /></td></tr>
-<tr class="separator:afc983e5824f909132bcf1745f76a64e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82b32c6ccf217fa700bcb7b05b3abb35"><td class="memItemLeft" align="right" valign="top">internal::Value *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#a82b32c6ccf217fa700bcb7b05b3abb35">findNearestVariable</a> (uint16_t id)</td></tr>
-<tr class="memdesc:a82b32c6ccf217fa700bcb7b05b3abb35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the nearest variable of a given id.  <a href="#a82b32c6ccf217fa700bcb7b05b3abb35">More...</a><br /></td></tr>
-<tr class="separator:a82b32c6ccf217fa700bcb7b05b3abb35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0749e81e975e0d1a92c2d89995e50f0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0749e81e975e0d1a92c2d89995e50f0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#ae0749e81e975e0d1a92c2d89995e50f0">init</a> () noexcept</td></tr>
+<tr class="memdesc:ae0749e81e975e0d1a92c2d89995e50f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="class_ark_1_1_v_m.html" title="The ArkScript virtual machine, executing ArkScript bytecode. ">VM</a> according to the parameters. <br /></td></tr>
+<tr class="separator:ae0749e81e975e0d1a92c2d89995e50f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af774dab7e41606bf8f44ae0f465d56fe"><td class="memItemLeft" align="right" valign="top">internal::Value *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#af774dab7e41606bf8f44ae0f465d56fe">findNearestVariable</a> (uint16_t id) noexcept</td></tr>
+<tr class="memdesc:af774dab7e41606bf8f44ae0f465d56fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the nearest variable of a given id.  <a href="#af774dab7e41606bf8f44ae0f465d56fe">More...</a><br /></td></tr>
+<tr class="separator:af774dab7e41606bf8f44ae0f465d56fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb9fe439f44179ebeafa78cd38a29b91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#afb9fe439f44179ebeafa78cd38a29b91">returnFromFuncCall</a> ()</td></tr>
 <tr class="memdesc:afb9fe439f44179ebeafa78cd38a29b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the current frame and get back to the previous one, resuming execution.  <a href="#afb9fe439f44179ebeafa78cd38a29b91">More...</a><br /></td></tr>
 <tr class="separator:afb9fe439f44179ebeafa78cd38a29b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36be079c3b4c384d643bbcbf454262c0"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#a36be079c3b4c384d643bbcbf454262c0">findNearestVariableIdWithValue</a> (internal::Value &amp;&amp;value)</td></tr>
-<tr class="memdesc:a36be079c3b4c384d643bbcbf454262c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the nearest variable id with a given value.  <a href="#a36be079c3b4c384d643bbcbf454262c0">More...</a><br /></td></tr>
-<tr class="separator:a36be079c3b4c384d643bbcbf454262c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab777aabd06e8825d5c0251eea6f52017"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#ab777aabd06e8825d5c0251eea6f52017">loadPlugin</a> (uint16_t id)</td></tr>
+<tr class="memdesc:ab777aabd06e8825d5c0251eea6f52017"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a plugin from a constant id.  <a href="#ab777aabd06e8825d5c0251eea6f52017">More...</a><br /></td></tr>
+<tr class="separator:ab777aabd06e8825d5c0251eea6f52017"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5154d80dc5bb62e7f7b8d2f024b5202"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#ae5154d80dc5bb62e7f7b8d2f024b5202">findNearestVariableIdWithValue</a> (internal::Value &amp;&amp;value) noexcept</td></tr>
+<tr class="memdesc:ae5154d80dc5bb62e7f7b8d2f024b5202"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the nearest variable id with a given value.  <a href="#ae5154d80dc5bb62e7f7b8d2f024b5202">More...</a><br /></td></tr>
+<tr class="separator:ae5154d80dc5bb62e7f7b8d2f024b5202"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a906ff10a6c5a5e0b3425d81cf8691f9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#a906ff10a6c5a5e0b3425d81cf8691f9b">throwVMError</a> (const std::string &amp;message)</td></tr>
 <tr class="memdesc:a906ff10a6c5a5e0b3425d81cf8691f9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throw a <a class="el" href="class_ark_1_1_v_m.html" title="The ArkScript virtual machine, executing ArkScript bytecode. ">VM</a> error message.  <a href="#a906ff10a6c5a5e0b3425d81cf8691f9b">More...</a><br /></td></tr>
 <tr class="separator:a906ff10a6c5a5e0b3425d81cf8691f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a281be790bc5644904429d823e634eca2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a281be790bc5644904429d823e634eca2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#a281be790bc5644904429d823e634eca2">backtrace</a> ()</td></tr>
-<tr class="memdesc:a281be790bc5644904429d823e634eca2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display a backtrace when the <a class="el" href="class_ark_1_1_v_m.html" title="The ArkScript virtual machine, executing ArkScript bytecode. ">VM</a> encounter an exception. <br /></td></tr>
-<tr class="separator:a281be790bc5644904429d823e634eca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9128d6b7ba084b47f0e1daf337155a8c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9128d6b7ba084b47f0e1daf337155a8c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#a9128d6b7ba084b47f0e1daf337155a8c">backtrace</a> () noexcept</td></tr>
+<tr class="memdesc:a9128d6b7ba084b47f0e1daf337155a8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display a backtrace when the <a class="el" href="class_ark_1_1_v_m.html" title="The ArkScript virtual machine, executing ArkScript bytecode. ">VM</a> encounter an exception. <br /></td></tr>
+<tr class="separator:a9128d6b7ba084b47f0e1daf337155a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bee4b74523e3fe43c54944aae3831d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html#a4bee4b74523e3fe43c54944aae3831d7">call</a> (int16_t argc_=-1)</td></tr>
 <tr class="memdesc:a4bee4b74523e3fe43c54944aae3831d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called when the CALL instruction is met in the bytecode.  <a href="#a4bee4b74523e3fe43c54944aae3831d7">More...</a><br /></td></tr>
 <tr class="separator:a4bee4b74523e3fe43c54944aae3831d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,11 +162,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The ArkScript virtual machine, executing ArkScript bytecode. </p>
 
-<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00031">31</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00045">45</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a8a20e57af75dcfb62d6ef651adf9344e"></a>
+<a class="anchor" id="afa21a2be0d0166e38d89c9be9f703fbc"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Ark::VM::VM </td>
@@ -166,6 +179,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Construct a new vm t object. </p>
@@ -181,9 +199,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="acc22034f8d441c9473cd7d89b9008e93"></a>
+<a class="anchor" id="a00ace4106ec9b646e0d85dc531dcf1f8"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int Ark::VM::run </td>
@@ -192,18 +213,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Run the bytecode held in the state. </p>
 <dl class="section return"><dt>Returns</dt><dd>int the exit code (default to 0 if no error) </dd></dl>
 
-<p>Definition at line <a class="el" href="_v_m_8cpp_source.html#l00116">116</a> of file <a class="el" href="_v_m_8cpp_source.html">VM.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_v_m_8cpp_source.html#l00159">159</a> of file <a class="el" href="_v_m_8cpp_source.html">VM.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a88cb0dbef88f266c62f13a52cadf4145"></a>
+<a class="anchor" id="a41d4b331c764c74f1553cb94fccb6145"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">internal::Value &amp; Ark::VM::operator[] </td>
@@ -213,6 +242,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Retrieve a value from the virtual machine, given its symbol name. </p>
@@ -224,7 +258,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>internal::Value&amp; </dd></dl>
 
-<p>Definition at line <a class="el" href="_v_m_8cpp_source.html#l00089">89</a> of file <a class="el" href="_v_m_8cpp_source.html">VM.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_v_m_8cpp_source.html#l00075">75</a> of file <a class="el" href="_v_m_8cpp_source.html">VM.cpp</a>.</p>
 
 </div>
 </div>
@@ -316,7 +350,69 @@ template&lt;typename... Args&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>internal::Value </dd></dl>
 
-<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00195">195</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00198">198</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5e8b56e0a675cbc1b300ad7be84cdcd4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ark::VM::setUserPointer </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the User Pointer object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>Pointer to data NOT owned by the <a class="el" href="class_ark_1_1_v_m.html" title="The ArkScript virtual machine, executing ArkScript bytecode. ">VM</a>, to be used later </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_v_m_8cpp_source.html#l00145">145</a> of file <a class="el" href="_v_m_8cpp_source.html">VM.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae48a909dab89f04e474080c51d6f510c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * Ark::VM::getUserPointer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the stored pointer. </p>
+<dl class="section return"><dt>Returns</dt><dd>void* </dd></dl>
+
+<p>Definition at line <a class="el" href="_v_m_8cpp_source.html#l00150">150</a> of file <a class="el" href="_v_m_8cpp_source.html">VM.cpp</a>.</p>
 
 </div>
 </div>
@@ -351,11 +447,11 @@ template&lt;typename... Args&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int the exit code </dd></dl>
 
-<p>Definition at line <a class="el" href="_v_m_8cpp_source.html#l00130">130</a> of file <a class="el" href="_v_m_8cpp_source.html">VM.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_v_m_8cpp_source.html#l00173">173</a> of file <a class="el" href="_v_m_8cpp_source.html">VM.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a82b32c6ccf217fa700bcb7b05b3abb35"></a>
+<a class="anchor" id="af774dab7e41606bf8f44ae0f465d56fe"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -372,7 +468,7 @@ template&lt;typename... Args&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -386,7 +482,7 @@ template&lt;typename... Args&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>internal::Value* </dd></dl>
 
-<p>Definition at line <a class="el" href="_v_m_8inl_source.html#l00058">58</a> of file <a class="el" href="_v_m_8inl_source.html">VM.inl</a>.</p>
+<p>Definition at line <a class="el" href="_v_m_8inl_source.html#l00060">60</a> of file <a class="el" href="_v_m_8inl_source.html">VM.inl</a>.</p>
 
 </div>
 </div>
@@ -414,11 +510,45 @@ template&lt;typename... Args&gt; </div>
 <p>Destroy the current frame and get back to the previous one, resuming execution. </p>
 <p>Doing the job nobody wants to do: cleaning after everyone has finished to play. This is a sort of primitive garbage collector </p>
 
-<p>Definition at line <a class="el" href="_v_m_8inl_source.html#l00068">68</a> of file <a class="el" href="_v_m_8inl_source.html">VM.inl</a>.</p>
+<p>Definition at line <a class="el" href="_v_m_8inl_source.html#l00070">70</a> of file <a class="el" href="_v_m_8inl_source.html">VM.inl</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a36be079c3b4c384d643bbcbf454262c0"></a>
+<a class="anchor" id="ab777aabd06e8825d5c0251eea6f52017"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ark::VM::loadPlugin </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load a plugin from a constant id. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Id of the constant </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_v_m_8cpp_source.html#l00097">97</a> of file <a class="el" href="_v_m_8cpp_source.html">VM.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae5154d80dc5bb62e7f7b8d2f024b5202"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -435,7 +565,7 @@ template&lt;typename... Args&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -450,7 +580,7 @@ template&lt;typename... Args&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>uint16_t </dd></dl>
 
-<p>Definition at line <a class="el" href="_v_m_8cpp_source.html#l00808">808</a> of file <a class="el" href="_v_m_8cpp_source.html">VM.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_v_m_8cpp_source.html#l00877">877</a> of file <a class="el" href="_v_m_8cpp_source.html">VM.cpp</a>.</p>
 
 </div>
 </div>
@@ -484,7 +614,7 @@ template&lt;typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_v_m_8cpp_source.html#l00822">822</a> of file <a class="el" href="_v_m_8cpp_source.html">VM.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_v_m_8cpp_source.html#l00887">887</a> of file <a class="el" href="_v_m_8cpp_source.html">VM.cpp</a>.</p>
 
 </div>
 </div>
@@ -518,7 +648,7 @@ template&lt;typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00091">91</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00093">93</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
 
 </div>
 </div>
@@ -530,7 +660,7 @@ template&lt;typename... Args&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2020 19:11:05 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 09:14:04 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

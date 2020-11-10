@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -71,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -93,23 +94,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#a281be790bc5644904429d823e634eca2">backtrace</a>()</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#a9128d6b7ba084b47f0e1daf337155a8c">backtrace</a>() noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#afccfb7996d2d3e9b8663056ce2de5d41">call</a>(const std::string &amp;name, Args &amp;&amp;...args)</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#a4bee4b74523e3fe43c54944aae3831d7">call</a>(int16_t argc_=-1)</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#a82b32c6ccf217fa700bcb7b05b3abb35">findNearestVariable</a>(uint16_t id)</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#a36be079c3b4c384d643bbcbf454262c0">findNearestVariableIdWithValue</a>(internal::Value &amp;&amp;value)</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#afc983e5824f909132bcf1745f76a64e8">init</a>()</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#a88cb0dbef88f266c62f13a52cadf4145">operator[]</a>(const std::string &amp;name)</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#af774dab7e41606bf8f44ae0f465d56fe">findNearestVariable</a>(uint16_t id) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#ae5154d80dc5bb62e7f7b8d2f024b5202">findNearestVariableIdWithValue</a>(internal::Value &amp;&amp;value) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#ae48a909dab89f04e474080c51d6f510c">getUserPointer</a>() noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#ae0749e81e975e0d1a92c2d89995e50f0">init</a>() noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#ab777aabd06e8825d5c0251eea6f52017">loadPlugin</a>(uint16_t id)</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#a41d4b331c764c74f1553cb94fccb6145">operator[]</a>(const std::string &amp;name) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#a810b761ab6cbfb005fc86c870b7557e7">resolve</a>(const internal::Value *val, Args &amp;&amp;...args)</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#afb9fe439f44179ebeafa78cd38a29b91">returnFromFuncCall</a>()</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#acc22034f8d441c9473cd7d89b9008e93">run</a>()</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#a00ace4106ec9b646e0d85dc531dcf1f8">run</a>() noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#a8c19cbd581697a9d7e4c7088fa35138c">safeRun</a>(std::size_t untilFrameCount=0)</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#a906ff10a6c5a5e0b3425d81cf8691f9b">throwVMError</a>(const std::string &amp;message)</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#a8a20e57af75dcfb62d6ef651adf9344e">VM</a>(State *state)</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#a5e8b56e0a675cbc1b300ad7be84cdcd4">setUserPointer</a>(void *ptr) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#a906ff10a6c5a5e0b3425d81cf8691f9b">throwVMError</a>(const std::string &amp;message)</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_v_m.html#afa21a2be0d0166e38d89c9be9f703fbc">VM</a>(State *state) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2020 19:11:05 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 09:14:04 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

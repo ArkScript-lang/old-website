@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -71,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,6 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_ark_1_1_user_type-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -99,33 +101,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p><code>#include &lt;<a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_ark_1_1_user_type_1_1_control_funcs.html">ControlFuncs</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A structure holding a bunch of pointers to different useful functions related to this usertype.  <a href="struct_ark_1_1_user_type_1_1_control_funcs.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6088d8459dffb5d2be29ad2d49cdfff6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a6088d8459dffb5d2be29ad2d49cdfff6"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#a6088d8459dffb5d2be29ad2d49cdfff6">UserType</a> (T *<a class="el" href="class_ark_1_1_user_type.html#adf9aed77a14dc998c29d49cd01737fb7">data</a>=nullptr)</td></tr>
-<tr class="memdesc:a6088d8459dffb5d2be29ad2d49cdfff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new User Type object.  <a href="#a6088d8459dffb5d2be29ad2d49cdfff6">More...</a><br /></td></tr>
-<tr class="separator:a6088d8459dffb5d2be29ad2d49cdfff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87c6db74d14c81f6a0b73d6c7b0f811d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#a87c6db74d14c81f6a0b73d6c7b0f811d">setOStream</a> (FuncStream_t &amp;&amp;f)</td></tr>
-<tr class="memdesc:a87c6db74d14c81f6a0b73d6c7b0f811d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the ostream function.  <a href="#a87c6db74d14c81f6a0b73d6c7b0f811d">More...</a><br /></td></tr>
-<tr class="separator:a87c6db74d14c81f6a0b73d6c7b0f811d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf9aed77a14dc998c29d49cd01737fb7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#adf9aed77a14dc998c29d49cd01737fb7">data</a> () const </td></tr>
-<tr class="memdesc:adf9aed77a14dc998c29d49cd01737fb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the pointer to the object.  <a href="#adf9aed77a14dc998c29d49cd01737fb7">More...</a><br /></td></tr>
-<tr class="separator:adf9aed77a14dc998c29d49cd01737fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23bf4ec6c04a8558232dc08334ba3cc3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#a23bf4ec6c04a8558232dc08334ba3cc3">not_</a> () const </td></tr>
-<tr class="memdesc:a23bf4ec6c04a8558232dc08334ba3cc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">User implemented <code>not</code> operator.  <a href="#a23bf4ec6c04a8558232dc08334ba3cc3">More...</a><br /></td></tr>
-<tr class="separator:a23bf4ec6c04a8558232dc08334ba3cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af79f7ec88ddb09f6e3da83275d625f5f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:af79f7ec88ddb09f6e3da83275d625f5f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#af79f7ec88ddb09f6e3da83275d625f5f">is</a> () const </td></tr>
-<tr class="memdesc:af79f7ec88ddb09f6e3da83275d625f5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the object held is of a given type.  <a href="#af79f7ec88ddb09f6e3da83275d625f5f">More...</a><br /></td></tr>
-<tr class="separator:af79f7ec88ddb09f6e3da83275d625f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb19a67a68908277c17e3d277230db96"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:afb19a67a68908277c17e3d277230db96"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#afb19a67a68908277c17e3d277230db96">UserType</a> (T *<a class="el" href="class_ark_1_1_user_type.html#ad909e4cff48d4c3f9b29f14cede9e866">data</a>=nullptr) noexcept</td></tr>
+<tr class="memdesc:afb19a67a68908277c17e3d277230db96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new User Type object.  <a href="#afb19a67a68908277c17e3d277230db96">More...</a><br /></td></tr>
+<tr class="separator:afb19a67a68908277c17e3d277230db96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc29ae76bff2c31ff420a0ef8b65f04"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#a4bc29ae76bff2c31ff420a0ef8b65f04">~UserType</a> () noexcept</td></tr>
+<tr class="memdesc:a4bc29ae76bff2c31ff420a0ef8b65f04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the User Type object.  <a href="#a4bc29ae76bff2c31ff420a0ef8b65f04">More...</a><br /></td></tr>
+<tr class="separator:a4bc29ae76bff2c31ff420a0ef8b65f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6a3625b32722af12de75b7f0a669f31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#aa6a3625b32722af12de75b7f0a669f31">setControlFuncs</a> (<a class="el" href="struct_ark_1_1_user_type_1_1_control_funcs.html">ControlFuncs</a> *block) noexcept</td></tr>
+<tr class="memdesc:aa6a3625b32722af12de75b7f0a669f31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the control functions structure.  <a href="#aa6a3625b32722af12de75b7f0a669f31">More...</a><br /></td></tr>
+<tr class="separator:aa6a3625b32722af12de75b7f0a669f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad909e4cff48d4c3f9b29f14cede9e866"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#ad909e4cff48d4c3f9b29f14cede9e866">data</a> () const noexcept</td></tr>
+<tr class="memdesc:ad909e4cff48d4c3f9b29f14cede9e866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the pointer to the object.  <a href="#ad909e4cff48d4c3f9b29f14cede9e866">More...</a><br /></td></tr>
+<tr class="separator:ad909e4cff48d4c3f9b29f14cede9e866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7511b67702032d9c8255754faf09c4c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ae7511b67702032d9c8255754faf09c4c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#ae7511b67702032d9c8255754faf09c4c">is</a> () const noexcept</td></tr>
+<tr class="memdesc:ae7511b67702032d9c8255754faf09c4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the object held is of a given type.  <a href="#ae7511b67702032d9c8255754faf09c4c">More...</a><br /></td></tr>
+<tr class="separator:ae7511b67702032d9c8255754faf09c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89d580d8347deb8159d19b0465118165"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a89d580d8347deb8159d19b0465118165"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#a89d580d8347deb8159d19b0465118165">as</a> () noexcept</td></tr>
+<tr class="memdesc:a89d580d8347deb8159d19b0465118165"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the underlying object as a given type.  <a href="#a89d580d8347deb8159d19b0465118165">More...</a><br /></td></tr>
+<tr class="separator:a89d580d8347deb8159d19b0465118165"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class to be use C++ objects in ArkScript. </p>
 <p>A pointer to the value you want to store must be sent, thus the value must not be destroyed while the <a class="el" href="class_ark_1_1_user_type.html" title="A class to be use C++ objects in ArkScript. ">UserType</a> lives, otherwise it would result in an UB when trying to use the object </p>
 
-<p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00018">18</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00029">29</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a6088d8459dffb5d2be29ad2d49cdfff6"></a>
+<a class="anchor" id="afb19a67a68908277c17e3d277230db96"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -144,7 +156,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -163,12 +175,11 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00030">30</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00049">49</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a87c6db74d14c81f6a0b73d6c7b0f811d"></a>
+<a class="anchor" id="a4bc29ae76bff2c31ff420a0ef8b65f04"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -176,24 +187,53 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Ark::UserType::setOStream </td>
+          <td class="memname">Ark::UserType::~UserType </td>
           <td>(</td>
-          <td class="paramtype">FuncStream_t &amp;&amp;&#160;</td>
-          <td class="paramname"><em>f</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the ostream function. </p>
+<p>Destroy the User Type object. </p>
+<p>Called by the <a class="el" href="class_ark_1_1_v_m.html" title="The ArkScript virtual machine, executing ArkScript bytecode. ">VM</a> when <code>(del obj)</code> is found or when the object goes out of scope. </p>
+
+<p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00060">60</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aa6a3625b32722af12de75b7f0a669f31"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ark::UserType::setControlFuncs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_ark_1_1_user_type_1_1_control_funcs.html">ControlFuncs</a> *&#160;</td>
+          <td class="paramname"><em>block</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the control functions structure. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">f</td><td>the function </td></tr>
+    <tr><td class="paramname">block</td><td>A pointer to an instance of this block </td></tr>
   </table>
   </dd>
 </dl>
@@ -202,7 +242,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="adf9aed77a14dc998c29d49cd01737fb7"></a>
+<a class="anchor" id="ad909e4cff48d4c3f9b29f14cede9e866"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -218,7 +258,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -230,37 +270,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a23bf4ec6c04a8558232dc08334ba3cc3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Ark::UserType::not_ </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>User implemented <code>not</code> operator. </p>
-<dl class="section return"><dt>Returns</dt><dd>true </dd>
-<dd>
-false </dd></dl>
-
-<p>Definition at line <a class="el" href="_user_type_8inl_source.html#l00012">12</a> of file <a class="el" href="_user_type_8inl_source.html">UserType.inl</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af79f7ec88ddb09f6e3da83275d625f5f"></a>
+<a class="anchor" id="ae7511b67702032d9c8255754faf09c4c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -278,21 +288,21 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Check if the object held is of a given type. </p>
 <p>Usage example: </p><div class="fragment"><div class="line">MyType object;</div>
-<div class="line"><a class="code" href="class_ark_1_1_user_type.html#a6088d8459dffb5d2be29ad2d49cdfff6">UserType</a> a(&amp;<span class="keywordtype">object</span>);</div>
+<div class="line"><a class="code" href="class_ark_1_1_user_type.html#afb19a67a68908277c17e3d277230db96">UserType</a> a(&amp;<span class="keywordtype">object</span>);</div>
 <div class="line"><span class="keywordflow">if</span> (a.is&lt;MyType&gt;())</div>
 <div class="line">    <span class="comment">// then ...</span></div>
 <div class="line"><span class="keywordflow">else</span></div>
 <div class="line">    <span class="comment">// otherwise...</span></div>
 </div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td></td></tr>
+    <tr><td class="paramname">T</td><td>the type to use for the test </td></tr>
   </table>
   </dd>
 </dl>
@@ -300,7 +310,43 @@ template&lt;typename T &gt; </div>
 <dd>
 false </dd></dl>
 
-<p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00075">75</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00098">98</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a89d580d8347deb8159d19b0465118165"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T&amp; Ark::UserType::as </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the underlying object as a given type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the type in which the underlying data pointer should be converted to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>T&amp; </dd></dl>
+
+<p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00110">110</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
 
 </div>
 </div>
@@ -311,7 +357,7 @@ false </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2020 19:11:05 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 09:14:04 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
