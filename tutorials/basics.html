@@ -108,7 +108,9 @@
                 <h2>Program structure</h2>
 
                 <div class="inner-section">
-                    An ArkScript program is a collection of blocks. A block <code>(function arguments...)</code>, thus, those are valid programs:
+                    <p>
+                        An ArkScript program is a collection of blocks. A block <code>(function arguments...)</code>, thus, those are valid programs:
+                    </p>
                     <pre>
 <code class="rainbowjs" data-language="arkscript">
 (print "hello world")
@@ -118,12 +120,13 @@
 <code class="rainbowjs" data-language="arkscript">
 (let a 12)
 (let foo (fun (a b)
-(+ a b)))
+    (+ a b)))
 (print (foo a a))
 </code>
                     </pre>
-
-                    Multiple blocks can be put into one by using the <strong>begin construction</strong>:
+                    <p>
+                        Multiple blocks can be put into one by using the <strong>begin construction</strong>:
+                    </p>
                     <pre>
 <code class="rainbowjs" data-language="arkscript">
 (begin
@@ -137,7 +140,9 @@
 </code>
                     </pre>
 
-                    <code>(begin)</code> and <code>{}</code> are synonyms.
+                    <p>
+                        <code>(begin)</code> and <code>{}</code> are synonyms.
+                    </p>
                 </div>
             </section>
 
@@ -145,14 +150,16 @@
                 <h2>Basic Input/Output</h2>
 
                 <div class="inner-section">
-                    User interactions are a must have in a programming language. To achieve such interaction in a shell (the big black windows where our code is running), we have what we call <i>IO</i> or <i>input/output</i>, through <code>print</code> and <code>input</code>. One can write text to the shell, the other can prompt the user and retrieve what they wrote.
-                </div>
-                <div class="inner-section">
-                    Example: <code>(print "hello" " world")</code>, will print <code>hello world</code>.
-                </div>
-                <div class="inner-section">
-                    The print function won't put spaces between each element printed, thus we have
-                    to do it ourselves.
+                    <p>
+                        User interactions are a must have in a programming language. To achieve such interaction in a shell (the big black windows where our code is running), we have what we call <i>IO</i> or <i>input/output</i>, through <code>print</code> and <code>input</code>. One can write text to the shell, the other can prompt the user and retrieve what they wrote.
+                    </p>
+                    <p>
+                        <strong>Example:</strong> <code>(print "hello" " world")</code>, will print <code>hello world</code>.
+                    </p>
+                    <p>
+                        The print function won't put spaces between each element printed, thus we have
+                        to do it ourselves.
+                    </p>
 
                     <pre>
 <code class="rainbowjs" data-language="arkscript">
@@ -169,7 +176,106 @@
                 <h2>Conditions</h2>
 
                 <div class="inner-section">
-                    bla
+                    <p>
+                        In any programming language, it's useful to control the program flow, to be able to give the user multiple choices (attacking an ennemy, befriending it, spying on it...) and those things are achieved through conditions.
+                    </p>
+                    <p>
+                        Constructing a condition is done like so:
+                    </p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(if condition then else)
+</code>
+                    </pre>
+                    <p>The else bloc is optionnal.</p>
+                    <p><strong>Examples:</strong></p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(if (= a 12)
+    # then
+    (print "a is 12")
+    # else
+    (print "a is not 12"))
+
+(if (and (< a 12) (> b 14))
+    (print "a is < 12 AND b is > 14"))
+</code>
+                    </pre>
+                    <p>
+                        The then and the else parts can be composed of multiple functions by using the begin construction.
+                    </p>
+                </div>
+            </section>
+
+            <section id="loops">
+                <h2>Loops</h2>
+
+                <div class="inner-section">
+                    <p>
+                        Giving the user a choice is a thing, but repeating an action is another that is very useful in a program as well. For example, if we need to compute the sum of values in a list, we would need to loop over the values of the list. In video games, we would need loops to generate waves of ennemies.
+                    </p>
+                    <p>
+                        Loops in ArkScript are created by using the keyword while.
+                    </p>
+                    <p><strong>Example:</strong></p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+# continue must be a mutable for us the be able to modify it
+(mut continue true)
+(while continue {
+    (print "hello")
+
+    # 10% chance of stopping the loop
+    (if (< (random) 0.1)
+        (set continue false))
+})
+
+# another example using conditions
+(mut i 0)
+(while (< i 10)
+    (puts i " ")  # won't put a 
+    at the end of the content
+    (set i (+ 1 i)))
+</code>
+                    </pre>
+                </div>
+            </section>
+
+            <section id="functions">
+                <h2>Functions</h2>
+
+                <div class="inner-section">
+                    <p>
+                        Functions are a tool to factorize code, to follow the DRY (don't repeat yourself) principle. Who would want to write 10 times the same 100 lines when they can use a function and call it 10 times inside a loop?
+                    </p>
+                    <p>
+                        Note: ArkScript was particularly optimized to deal with function using few arguments, thus encouraging code reuse and code split into functions.
+                    </p>
+                    <p>
+                        A function is composed of 2 parts: the argument lists and the body:
+                    </p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(fun (a b c) (print a b c))
+</code>
+                    </pre>
+                    <p>
+                        <code>(a b c)</code> is the argument list, the print bloc is the body.
+                    </p>
+                    <p>
+                        The value returned by a function is the last evaluated value in the body, if none, nil is returned.
+                    </p>
+                    <p><strong>Example:</strong></p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(let foo (fun (a b) (begin
+    (print "function got: " a " " b)
+    # return value:
+    (+ a b))))
+
+(print (foo 12 14))  # 26
+</code>
+                    </pre>
                 </div>
             </section>
         </div>
