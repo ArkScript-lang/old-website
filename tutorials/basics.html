@@ -103,6 +103,75 @@
                     This is a comment, only for the developer, and will be totally ignored when compiling and executing.
                 </div>
             </section>
+
+            <section id="program-structure">
+                <h2>Program structure</h2>
+
+                <div class="inner-section">
+                    An ArkScript program is a collection of blocks. A block <code>(function arguments...)</code>, thus, those are valid programs:
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(print "hello world")
+</code>
+                    </pre>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(let a 12)
+(let foo (fun (a b)
+(+ a b)))
+(print (foo a a))
+</code>
+                    </pre>
+
+                    Multiple blocks can be put into one by using the <strong>begin construction</strong>:
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(begin
+    (let a 12)
+    (print a)
+    (let b (* a 2))
+    (print b))
+
+# and can be accessed from outside, begin doesn't create a scope
+(print a " " b)
+</code>
+                    </pre>
+
+                    <code>(begin)</code> and <code>{}</code> are synonyms.
+                </div>
+            </section>
+
+            <section id="io">
+                <h2>Basic Input/Output</h2>
+
+                <div class="inner-section">
+                    User interactions are a must have in a programming language. To achieve such interaction in a shell (the big black windows where our code is running), we have what we call <i>IO</i> or <i>input/output</i>, through <code>print</code> and <code>input</code>. One can write text to the shell, the other can prompt the user and retrieve what they wrote.
+                </div>
+                <div class="inner-section">
+                    Example: <code>(print "hello" " world")</code>, will print <code>hello world</code>.
+                </div>
+                <div class="inner-section">
+                    The print function won't put spaces between each element printed, thus we have
+                    to do it ourselves.
+
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(let a (input "what is your name?"))  # will print what the user wrote,
+(print a)                             # after having validated by pressing Enter
+                                      # The prompt is optionnal, (input) will
+                                      # also work on its own.
+</code>
+                    </pre>
+                </div>
+            </section>
+
+            <section id="conditions">
+                <h2>Conditions</h2>
+
+                <div class="inner-section">
+                    bla
+                </div>
+            </section>
         </div>
 
         <div class="col-2"></div>
