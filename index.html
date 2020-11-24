@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Google site verification -->
     <meta name="google-site-verification" content="gXbITmlhbvLO1TWvX5IR9EjjZliC0eV7QFGNx0UmPfo" />
@@ -67,8 +68,7 @@
 
             <!-- Actual content of the page-->
             <div class="col-8 col-md-12" id="content">
-                <div class="text-center" id="nota-bene"><em>Nota bene:</em> the project is referred as "Ark" and as "ArkScript".
-                    The official public name is "ArkScript" since "Ark" is already being used by
+                <div class="text-center" id="nota-bene"><em>Nota bene:</em> the project is referred as "Ark" and as "ArkScript". The official public name is "ArkScript" since "Ark" is already being used by
                     <a class="btn-link" href="https://github.com/ark-lang/ark">another project</a>
                 </div>
 
@@ -80,52 +80,40 @@
                         Arkscript is:
                         <ul>
                             <li>
-                                small: the compiler, and the virtual machines fit under 5000 lines,
-                                but also small in term of keywords (it has only 10)!
+                                small: the compiler, and the virtual machines fit under 5000 lines, but also small in term of keywords (it has only 10)!
                             </li>
                             <li>
-                                a scripting language: it's very easy to embed it in your application.
-                                The builtin construction is quite easy to understand, so adding your own functions
-                                to the virtual machine is effortless
+                                a scripting language: it's very easy to embed it in your application. The builtin construction is quite easy to understand, so adding your own functions to the virtual machine is effortless
                             </li>
                             <li>
-                                portable: it produces a bytecode which is run by its virtual machine,
-                                like Java but without the <code>OutOfMemoryException</code>
+                                portable: it produces a bytecode which is run by its virtual machine, like Java but without the <code>OutOfMemoryException</code>
                             </li>
                             <li>
-                                a functional language: every parameter is passed by value, everything is immutable
-                                unless you use <code>mut</code> to define a mutable variable
+                                a functional language: every parameter is passed by value, everything is immutable unless you use <code>mut</code> to define a mutable variable
                             </li>
                             <li>
-                                powerful: it can handle object oriented programming in a very elegant way with its
-                                closures and explicit captures (see examples/church-encoding)
+                                powerful: it can handle object oriented programming in a very elegant way with its closures and explicit captures (see examples/church-encoding)
                             </li>
                             <li>
-                                promoting functionalities before performances: expressiveness often brings more productivity,
-                                but performances aren't bad at all
+                                promoting functionalities before performances: expressiveness often brings more productivity, but performances aren't bad at all
                             </li>
                             <li>
-                                easy to compile: it takes less than 200ms to compile and check a complex code with
-                                a lot of branches and sub-branches of 200 lines.
+                                easy to compile: it takes less than 200ms to compile and check a complex code with a lot of branches and sub-branches of 200 lines.
                             </li>
                             <li>
                                 a Lisp-like, but with less parentheses:
-                                <code>[...]</code> is expanded to <code>(list ...)</code>
-                                and <code>{}</code> to <code>(begin ...)</code>.
-                                More shorthands will come in the future.
+                                <code>[...]</code> is expanded to <code>(list ...)</code> and <code>{}</code> to <code>(begin ...)</code>. More shorthands will come in the future.
                             </li>
                             <li>
                                 extensible: it is very easy to create a C++ module to use in the language
                             </li>
                         </ul>
 
-                        <br>
-                        It also has:
+                        <br> It also has:
                         <ul>
                             <li>a REPL with autocompletion and coloration</li>
                             <li>
-                                a growing standard library, composed of ArkScript (under <code>lib/std/</code>)
-                                and C++ (under <code>lib/ext/</code>)
+                                a growing standard library, composed of ArkScript (under <code>lib/std/</code>) and C++ (under <code>lib/ext/</code>)
                             </li>
                             <li>a lot of unit tests, which are ran before every release to ensure everything works as intended</li>
                             <li>
@@ -198,8 +186,7 @@
                     <h2>Performances</h2>
 
                     <div>
-                        We run <a class="btn-link" href="https://github.com/ArkScript-lang/benchmarks/blob/master/README.md">benchmarks</a>
-                        periodically, check them out!
+                        We run <a class="btn-link" href="https://github.com/ArkScript-lang/benchmarks/blob/master/README.md">benchmarks</a> periodically, check them out!
                     </div>
                 </section>
 
@@ -296,10 +283,8 @@
                             <h5>Contributing to the ArkScript standard library</h5>
 
                             <p>
-                                See <a class="btn-link" href="https://github.com/ArkScript-lang/Ark/wiki/Coding-guidelines#coding-in-ark">Coding guidelines</a>
-                                if you want to write ArkScript for the library (see folder `lib/std/`).
-                                <br>
-                                For performance reasons, some functions might be written in C++, in
+                                See <a class="btn-link" href="https://github.com/ArkScript-lang/Ark/wiki/Coding-guidelines#coding-in-ark">Coding guidelines</a> if you want to write ArkScript for the library (see folder `lib/std/`).
+                                <br> For performance reasons, some functions might be written in C++, in
                                 <code>include/Ark/Builtins/Builtins.hpp</code> and <code>src/Builtins/</code>.
                             </p>
                         </section>
@@ -307,8 +292,7 @@
                         <section id="code-structure">
                             <h5>Code structure</h5>
 
-                            <img src="/assets/images/arkscript-code-structure-transparent.png" alt="Code structure"
-                            class="three-quarters">
+                            <img src="/assets/images/arkscript-code-structure-transparent.png" alt="Code structure" class="three-quarters">
                         </section>
                     </div>
 
@@ -323,8 +307,7 @@
                             <li>CMake >= 3.12</li>
                             <li>On Windows: Visual Studio >= 11</li>
                             <li>
-                                On macOS versions prior to 10.15, <code>libc++</code> lacks <code>filesystem</code>
-                                in the standard library.
+                                On macOS versions prior to 10.15, <code>libc++</code> lacks <code>filesystem</code> in the standard library.
                                 <ul>
                                     <li>
                                         Install a newer compiler using <a class="btn-link" href="https://docs.brew.sh/">Homebrew</a>:
@@ -364,29 +347,31 @@
 # running
 ~/Ark$ Ark --help
 DESCRIPTION
-    ArkScript programming language
+        ArkScript programming language
 
 SYNOPSIS
-    Ark -h
-    Ark --version
-    Ark --dev-info
-    Ark -r
-    Ark &lt;file&gt; [-c] [[-d]|-bcr] [-L &lt;lib_dir&gt;] [-f(fac|no-fac)] [-f(aitap|no-aitap)]
+        ark -h
+        ark -v
+        ark --dev-info
+        ark -e <expression>
+        ark -c <file> [-d]
+        ark -bcr <file>
+        ark <file> [-d] [-L <lib_dir>] [-f(fac|no-fac)] [-f(ruv|no-ruv)]
 
 OPTIONS
-    -h, --help                  Display this message
-    --version                   Display ArkScript version and exit
-    --dev-info                  Display development information and exit
-    -r, --repl                  Run the ArkScript REPL
-    -c, --compile               Compile the given program to bytecode, but do not run
-    -d, --debug...              Increase debug level (default: 0)
-    -bcr, --bytecode-reader     Launch the bytecode reader
-    -L, --lib                   Set the location of the ArkScript standard library
-    -f(fac|no-fac)              Toggle function arity checks (default: ON)
-    -f(aitap|no-aitap)          Authorize invalid token after `(' (default: OFF). When ON, only display a warning
+        -h, --help                  Display this message
+        -v, --version               Display ArkScript version and exit
+        --dev-info                  Display development information and exit
+        -e, --eval                  Evaluate ArkScript expression
+        -c, --compile               Compile the given program to bytecode, but do not run
+        -d, --debug...              Increase debug level (default: 0)
+        -bcr, --bytecode-reader     Launch the bytecode reader
+        -L, --lib                   Set the location of the ArkScript standard library   
+        -f(fac|no-fac)              Toggle function arity checks (default: ON)
+        -f(ruv|no-ruv)              Remove unused variables (default: ON)
 
 LICENSE
-    Mozilla Public License 2.0
+        Mozilla Public License 2.0
 ~/Ark$
 </code>
                         </pre>
@@ -398,17 +383,13 @@ LICENSE
 
                     <div class="inner-section">
                         <p>
-                            You can find a snake created in ArkScript in the folder examples/games/snake
-                            (run it from there, otherwise it won't find the font and the sprites ;
-                            you won't need to install the SFML).
+                            You can find a snake created in ArkScript in the folder examples/games/snake (run it from there, otherwise it won't find the font and the sprites ; you won't need to install the SFML).
                         </p>
 
-                        <img class="three-quarters" src="/assets/images/ArkSnake.png"
-                             alt="The snake game in Arkscript">
+                        <img class="three-quarters" src="/assets/images/ArkSnake.png" alt="The snake game in Arkscript">
 
                         <p>
-                            Controls are the arrows (left, right, up and down),
-                            the game closes itself when you successfully collect the 3 apples.
+                            Controls are the arrows (left, right, up and down), the game closes itself when you successfully collect the 3 apples.
                         </p>
                     </div>
                 </section>
@@ -432,8 +413,7 @@ LICENSE
                     <h2>Credits</h2>
 
                     <p>
-                        This project was inspired by <a class="btn-link" href="http://gameprogrammingpatterns.com/bytecode.html">gameprogramingpatterns</a>
-                        and <a class="btn-link" href="https://gist.github.com/ofan/721464">ofan lisp.cpp</a>
+                        This project was inspired by <a class="btn-link" href="http://gameprogrammingpatterns.com/bytecode.html">gameprogramingpatterns</a> and <a class="btn-link" href="https://gist.github.com/ofan/721464">ofan lisp.cpp</a>
                     </p>
                 </section>
 
@@ -442,8 +422,7 @@ LICENSE
 
                     <div class="inner-section">
                         Copyright &copy 2019-2020 Alexandre Plateau. All rights reserved.
-                        <br><br>
-                        This ArkScript distribution contains no GNU GPL code, which means it can be used in proprietary projects.
+                        <br><br> This ArkScript distribution contains no GNU GPL code, which means it can be used in proprietary projects.
                     </div>
                 </section>
             </div>
@@ -456,8 +435,7 @@ LICENSE
 
     <footer id="page-footer">
         <p class="text-center">
-            Copyright &copy; 2020 Alexandre Plateau & Fabien Zoccola.<br>
-            All rights reserved.
+            Copyright &copy; 2020 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.
         </p>
     </footer>
 
@@ -465,4 +443,5 @@ LICENSE
     <script src="/assets/js/rainbow.min.js"></script>
     <script src="/assets/js/languages/arkscript.js"></script>
 </body>
+
 </html>
