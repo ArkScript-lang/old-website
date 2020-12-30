@@ -1,0 +1,101 @@
+.TH "Ark::internal::SharedLibrary" 3 "Wed Dec 30 2020" "ArkScript" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Ark::internal::SharedLibrary \- Handling a shared library as an ArkScript plugin\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Plugin\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSharedLibrary\fP ()"
+.br
+.RI "\fIConstruct a new Shared Library object\&. \fP"
+.ti -1c
+.RI "\fBSharedLibrary\fP (const std::string &path)"
+.br
+.RI "\fIConstruct a new Shared Library object\&. \fP"
+.ti -1c
+.RI "\fB~SharedLibrary\fP ()"
+.br
+.RI "\fIDestroy the Shared Library object\&. \fP"
+.ti -1c
+.RI "void \fBload\fP (const std::string &path)"
+.br
+.RI "\fILoad a shared library\&. \fP"
+.ti -1c
+.RI "void \fBunload\fP ()"
+.br
+.RI "\fIUnload the shared library\&. \fP"
+.ti -1c
+.RI "template<typename T > T \fBget\fP (const std::string &procname)"
+.br
+.RI "\fIReturn a function from the shared library\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Handling a shared library as an ArkScript plugin\&. 
+.PP
+Definition at line 35 of file Plugin\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Ark::internal::SharedLibrary::SharedLibrary (const std::string & path)\fC [explicit]\fP"
+
+.PP
+Construct a new Shared Library object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpath\fP path to the shared library 
+.RE
+.PP
+
+.PP
+Definition at line 15 of file Plugin\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Ark::internal::SharedLibrary::load (const std::string & path)"
+
+.PP
+Load a shared library\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpath\fP path to the shared library 
+.RE
+.PP
+
+.PP
+Definition at line 28 of file Plugin\&.cpp\&.
+.SS "template<typename T > T Ark::internal::SharedLibrary::get (const std::string & procname)\fC [inline]\fP"
+
+.PP
+Return a function from the shared library\&. 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIT\fP the type of the function to retrieve 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIprocname\fP the name of the function to retrieve 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+T the function from the shared library, if it was found 
+.RE
+.PP
+
+.PP
+Definition at line 80 of file Plugin\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ArkScript from the source code\&.

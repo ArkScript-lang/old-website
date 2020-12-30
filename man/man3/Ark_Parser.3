@@ -1,0 +1,239 @@
+.TH "Ark::Parser" 3 "Wed Dec 30 2020" "ArkScript" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Ark::Parser \- The parser is responsible of constructing the Abstract Syntax Tree from a token list\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Parser\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBParser\fP (unsigned debug, const std::string &lib_dir, uint16_t options) noexcept"
+.br
+.RI "\fIConstruct a new \fBParser\fP object\&. \fP"
+.ti -1c
+.RI "void \fBfeed\fP (const std::string &code, const std::string &filename=ARK_NO_NAME_FILE)"
+.br
+.RI "\fIGive the code to parse\&. \fP"
+.ti -1c
+.RI "const \fBinternal::Node\fP & \fBast\fP () const noexcept"
+.br
+.RI "\fIReturn the generated AST\&. \fP"
+.ti -1c
+.RI "const std::vector< std::string > & \fBgetImports\fP () const noexcept"
+.br
+.RI "\fIReturn the list of files imported by the code given to the parser\&. \fP"
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsugar\fP (std::vector< internal::Token > &tokens) noexcept"
+.br
+.RI "\fIApplying syntactic sugar: {\&.\&.\&.} => (begin\&.\&.\&.), [\&.\&.\&.] => (list \&.\&.\&.) \fP"
+.ti -1c
+.RI "\fBinternal::Node\fP \fBparse\fP (std::list< internal::Token > &tokens, bool authorize_capture=false, bool authorize_field_read=false)"
+.br
+.RI "\fIParse a list of tokens recursively\&. \fP"
+.ti -1c
+.RI "internal::Token \fBnextToken\fP (std::list< internal::Token > &tokens)"
+.br
+.RI "\fIGet the next token if possible, from a list of tokens\&. \fP"
+.ti -1c
+.RI "\fBinternal::Node\fP \fBatom\fP (const internal::Token &token)"
+.br
+.RI "\fIConvert a token to a node\&. \fP"
+.ti -1c
+.RI "bool \fBcheckForInclude\fP (\fBinternal::Node\fP &n)"
+.br
+.RI "\fISearch for all the includes in a given node, in its sub-nodes and replace them by the code of the included file\&. \fP"
+.ti -1c
+.RI "std::string \fBseekFile\fP (const std::string &file)"
+.br
+.RI "\fISeek a file in the lib folder and everywhere\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+The parser is responsible of constructing the Abstract Syntax Tree from a token list\&. 
+.PP
+Definition at line 33 of file Parser\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Ark::Parser::Parser (unsigned debug, const std::string & lib_dir, uint16_t options)\fC [noexcept]\fP"
+
+.PP
+Construct a new \fBParser\fP object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdebug\fP the debug level 
+.br
+\fIlib_dir\fP the path to the standard library 
+.br
+\fIoptions\fP the parsing options 
+.RE
+.PP
+
+.PP
+Definition at line 14 of file Parser\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Ark::Parser::feed (const std::string & code, const std::string & filename = \fCARK_NO_NAME_FILE\fP)"
+
+.PP
+Give the code to parse\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcode\fP the ArkScript code 
+.br
+\fIfilename\fP the name of the file 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file Parser\&.cpp\&.
+.SS "const \fBNode\fP & Ark::Parser::ast () const\fC [noexcept]\fP"
+
+.PP
+Return the generated AST\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+const \fBinternal::Node\fP& 
+.RE
+.PP
+
+.PP
+Definition at line 62 of file Parser\&.cpp\&.
+.SS "const std::vector< std::string > & Ark::Parser::getImports () const\fC [noexcept]\fP"
+
+.PP
+Return the list of files imported by the code given to the parser\&. Each path of each imported file is relative to the filename given when feeding the parser\&.
+.PP
+\fBReturns:\fP
+.RS 4
+const std::vector<std::string>& 
+.RE
+.PP
+
+.PP
+Definition at line 67 of file Parser\&.cpp\&.
+.SS "void Ark::Parser::sugar (std::vector< internal::Token > & tokens)\fC [private]\fP, \fC [noexcept]\fP"
+
+.PP
+Applying syntactic sugar: {\&.\&.\&.} => (begin\&.\&.\&.), [\&.\&.\&.] => (list \&.\&.\&.) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItokens\fP a list of tokens 
+.RE
+.PP
+
+.PP
+Definition at line 72 of file Parser\&.cpp\&.
+.SS "\fBNode\fP Ark::Parser::parse (std::list< internal::Token > & tokens, bool authorize_capture = \fCfalse\fP, bool authorize_field_read = \fCfalse\fP)\fC [private]\fP"
+
+.PP
+Parse a list of tokens recursively\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItokens\fP 
+.br
+\fIauthorize_capture\fP if we are authorized to consume TokenType::Capture tokens 
+.br
+\fIauthorize_field_read\fP if we are authorized to consume TokenType::GetField tokens 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBinternal::Node\fP 
+.RE
+.PP
+
+.PP
+Definition at line 101 of file Parser\&.cpp\&.
+.SS "Token Ark::Parser::nextToken (std::list< internal::Token > & tokens)\fC [private]\fP"
+
+.PP
+Get the next token if possible, from a list of tokens\&. The list of tokens is modified\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItokens\fP list of tokens to get the next token from 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+internal::Token 
+.RE
+.PP
+
+.PP
+Definition at line 337 of file Parser\&.cpp\&.
+.SS "\fBNode\fP Ark::Parser::atom (const internal::Token & token)\fC [private]\fP"
+
+.PP
+Convert a token to a node\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItoken\fP the token to converts 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBinternal::Node\fP 
+.RE
+.PP
+
+.PP
+Definition at line 347 of file Parser\&.cpp\&.
+.SS "bool Ark::Parser::checkForInclude (\fBinternal::Node\fP & n)\fC [private]\fP"
+
+.PP
+Search for all the includes in a given node, in its sub-nodes and replace them by the code of the included file\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true returned on success 
+.PP
+false returned on failure 
+.RE
+.PP
+
+.PP
+Definition at line 416 of file Parser\&.cpp\&.
+.SS "std::string Ark::Parser::seekFile (const std::string & file)\fC [private]\fP"
+
+.PP
+Seek a file in the lib folder and everywhere\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfile\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+std::string 
+.RE
+.PP
+
+.PP
+Definition at line 477 of file Parser\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ArkScript from the source code\&.

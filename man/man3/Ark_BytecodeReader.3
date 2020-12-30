@@ -1,0 +1,93 @@
+.TH "Ark::BytecodeReader" 3 "Wed Dec 30 2020" "ArkScript" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Ark::BytecodeReader \- This class is just a helper to\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <BytecodeReader\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBytecodeReader\fP ()=default"
+.br
+.RI "\fIConstruct a new Bytecode Reader object\&. \fP"
+.ti -1c
+.RI "void \fBfeed\fP (const std::string &file)"
+.br
+.RI "\fIConstruct needed data before displaying information about a given file\&. \fP"
+.ti -1c
+.RI "const bytecode_t & \fBbytecode\fP () noexcept"
+.br
+.RI "\fIReturn the bytecode object constructed\&. \fP"
+.ti -1c
+.RI "unsigned long long \fBtimestamp\fP ()"
+.br
+.RI "\fIReturn the read timestamp from the bytecode file\&. \fP"
+.ti -1c
+.RI "void \fBdisplay\fP ()"
+.br
+.RI "\fIDisplay the bytecode opcode in a human friendly way\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is just a helper to\&. 
+
+
+.IP "\(bu" 2
+check if a bytecode is valid
+.IP "\(bu" 2
+display it in a human readable way by using the opcode names 
+.PP
+
+.PP
+Definition at line 33 of file BytecodeReader\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Ark::BytecodeReader::feed (const std::string & file)"
+
+.PP
+Construct needed data before displaying information about a given file\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfile\fP filename of the bytecode file 
+.RE
+.PP
+
+.PP
+Definition at line 15 of file BytecodeReader\&.cpp\&.
+.SS "const bytecode_t & Ark::BytecodeReader::bytecode ()\fC [noexcept]\fP"
+
+.PP
+Return the bytecode object constructed\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+const bytecode_t& 
+.RE
+.PP
+
+.PP
+Definition at line 32 of file BytecodeReader\&.cpp\&.
+.SS "unsigned long long Ark::BytecodeReader::timestamp ()"
+
+.PP
+Return the read timestamp from the bytecode file\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+unsigned long long 
+.RE
+.PP
+
+.PP
+Definition at line 37 of file BytecodeReader\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ArkScript from the source code\&.

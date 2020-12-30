@@ -1,0 +1,82 @@
+.TH "include/Ark/Exceptions.hpp" 3 "Wed Dec 30 2020" "ArkScript" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/Ark/Exceptions.hpp \- ArkScript homemade exceptions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <exception>\fP
+.br
+\fC#include <string>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBArk::TypeError\fP"
+.br
+.RI "\fIA type error triggered when types don't match\&. \fP"
+.ti -1c
+.RI "class \fBArk::ZeroDivisionError\fP"
+.br
+.RI "\fIA special zero division error triggered when a number is divided by 0\&. \fP"
+.ti -1c
+.RI "class \fBArk::PowError\fP"
+.br
+.RI "\fIA pow error triggered when we can't do a pow b\&. \fP"
+.ti -1c
+.RI "class \fBArk::AssertionFailed\fP"
+.br
+.RI "\fIAn assertion error, only triggered from ArkScript code through (assert expr error-message) \fP"
+.ti -1c
+.RI "class \fBArk::SyntaxError\fP"
+.br
+.RI "\fI\fBSyntaxError\fP thrown by the lexer\&. \fP"
+.ti -1c
+.RI "class \fBArk::ParseError\fP"
+.br
+.RI "\fI\fBParseError\fP thrown by the parser\&. \fP"
+.ti -1c
+.RI "class \fBArk::OptimizerError\fP"
+.br
+.RI "\fI\fBOptimizerError\fP thrown by the AST optimizer\&. \fP"
+.ti -1c
+.RI "class \fBArk::CompilationError\fP"
+.br
+.RI "\fI\fBCompilationError\fP thrown by the compiler\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+ArkScript homemade exceptions\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Alexandre Plateau (lexplt.dev@gmail.com) 
+.RE
+.PP
+\fBVersion:\fP
+.RS 4
+0\&.1 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+2020-10-27
+.RE
+.PP
+\fBCopyright:\fP
+.RS 4
+Copyright (c) 2020 
+.RE
+.PP
+
+.PP
+Definition in file \fBExceptions\&.hpp\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ArkScript from the source code\&.

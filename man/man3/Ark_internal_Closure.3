@@ -1,0 +1,121 @@
+.TH "Ark::internal::Closure" 3 "Wed Dec 30 2020" "ArkScript" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Ark::internal::Closure \- \fBClosure\fP management\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Closure\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBClosure\fP () noexcept"
+.br
+.RI "\fIConstruct a new \fBClosure\fP object\&. \fP"
+.ti -1c
+.RI "\fBClosure\fP (Scope_t &&scope_ptr, PageAddr_t pa) noexcept"
+.br
+.RI "\fIConstruct a new \fBClosure\fP object\&. \fP"
+.ti -1c
+.RI "\fBClosure\fP (const Scope_t &scope_ptr, PageAddr_t pa) noexcept"
+.br
+.RI "\fIConstruct a new \fBClosure\fP object\&. \fP"
+.ti -1c
+.RI "const Scope_t & \fBscope\fP () const noexcept"
+.br
+.RI "\fIReturn the scope held by the object\&. \fP"
+.ti -1c
+.RI "Scope_t & \fBscope_ref\fP () noexcept"
+.br
+.RI "\fIReturn a reference to the scpoe held by the object\&. \fP"
+.ti -1c
+.RI "PageAddr_t \fBpageAddr\fP () const "
+.br
+.RI "\fIReturn the page address of the object\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBClosure\fP management\&. 
+.PP
+Definition at line 38 of file Closure\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Ark::internal::Closure::Closure (Scope_t && scope_ptr, PageAddr_t pa)\fC [noexcept]\fP"
+
+.PP
+Construct a new \fBClosure\fP object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIscope_ptr\fP the scope of the function turned into a closure 
+.br
+\fIpa\fP the current page address of the function turned into a closure 
+.RE
+.PP
+
+.PP
+Definition at line 12 of file Closure\&.cpp\&.
+.SS "Ark::internal::Closure::Closure (const Scope_t & scope_ptr, PageAddr_t pa)\fC [noexcept]\fP"
+
+.PP
+Construct a new \fBClosure\fP object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIscope_ptr\fP the scope of the function turned into a closure 
+.br
+\fIpa\fP the current page address of the function turned into a closure 
+.RE
+.PP
+
+.PP
+Definition at line 17 of file Closure\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "const Scope_t & Ark::internal::Closure::scope () const\fC [noexcept]\fP"
+
+.PP
+Return the scope held by the object\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+const Scope_t& 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file Closure\&.cpp\&.
+.SS "Scope_t & Ark::internal::Closure::scope_ref ()\fC [noexcept]\fP"
+
+.PP
+Return a reference to the scpoe held by the object\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Scope_t& 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file Closure\&.cpp\&.
+.SS "PageAddr_t Ark::internal::Closure::pageAddr () const\fC [inline]\fP"
+
+.PP
+Return the page address of the object\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+PageAddr_t 
+.RE
+.PP
+
+.PP
+Definition at line 82 of file Closure\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ArkScript from the source code\&.

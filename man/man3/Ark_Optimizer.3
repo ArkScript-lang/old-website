@@ -1,0 +1,85 @@
+.TH "Ark::Optimizer" 3 "Wed Dec 30 2020" "ArkScript" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Ark::Optimizer \- The ArkScript AST optimizer\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Optimizer\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBOptimizer\fP (uint16_t options) noexcept"
+.br
+.RI "\fIConstruct a new \fBOptimizer\fP\&. \fP"
+.ti -1c
+.RI "void \fBfeed\fP (const \fBinternal::Node\fP &\fBast\fP)"
+.br
+.RI "\fISend the AST to the optimizer, then run the different optimization strategies on it\&. \fP"
+.ti -1c
+.RI "const \fBinternal::Node\fP & \fBast\fP () const noexcept"
+.br
+.RI "\fIReturns the modified AST\&. \fP"
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBthrowOptimizerError\fP (const std::string &message, const \fBinternal::Node\fP &node)"
+.br
+.RI "\fIGenerate a fancy error message\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+The ArkScript AST optimizer\&. 
+.PP
+Definition at line 30 of file Optimizer\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Ark::Optimizer::feed (const \fBinternal::Node\fP & ast)"
+
+.PP
+Send the AST to the optimizer, then run the different optimization strategies on it\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIast\fP 
+.RE
+.PP
+
+.PP
+Definition at line 11 of file Optimizer\&.cpp\&.
+.SS "const \fBNode\fP & Ark::Optimizer::ast () const\fC [noexcept]\fP"
+
+.PP
+Returns the modified AST\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+const \fBinternal::Node\fP& 
+.RE
+.PP
+
+.PP
+Definition at line 19 of file Optimizer\&.cpp\&.
+.SS "void Ark::Optimizer::throwOptimizerError (const std::string & message, const \fBinternal::Node\fP & node)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Generate a fancy error message\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP 
+.br
+\fInode\fP 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ArkScript from the source code\&.

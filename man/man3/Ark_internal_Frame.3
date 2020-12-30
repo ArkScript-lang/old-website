@@ -1,0 +1,165 @@
+.TH "Ark::internal::Frame" 3 "Wed Dec 30 2020" "ArkScript" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Ark::internal::Frame \- \fBFrame\fP management\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Frame\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFrame\fP () noexcept"
+.br
+.RI "\fIConstruct a new \fBFrame\fP object\&. \fP"
+.ti -1c
+.RI "\fBFrame\fP (const \fBFrame\fP &)=default"
+.br
+.RI "\fIConstruct a new \fBFrame\fP object from another one\&. \fP"
+.ti -1c
+.RI "\fBFrame\fP (uint16_t caller_addr, uint16_t caller_page_addr) noexcept"
+.br
+.RI "\fIConstruct a new \fBFrame\fP object\&. \fP"
+.ti -1c
+.RI "Value * \fBpop\fP ()"
+.br
+.RI "\fIPop a value from the stack of the frame\&. \fP"
+.ti -1c
+.RI "void \fBpush\fP (const Value &value) noexcept"
+.br
+.RI "\fIPush a value on the stack of the frame\&. \fP"
+.ti -1c
+.RI "void \fBpush\fP (Value &&value) noexcept"
+.br
+.RI "\fIPush a value on the stack of the frame\&. \fP"
+.ti -1c
+.RI "std::size_t \fBstackSize\fP () const noexcept"
+.br
+.RI "\fIGet the stack size\&. \fP"
+.ti -1c
+.RI "uint16_t \fBcallerAddr\fP () const noexcept"
+.br
+.RI "\fIGet the caller address\&. \fP"
+.ti -1c
+.RI "uint16_t \fBcallerPageAddr\fP () const noexcept"
+.br
+.RI "\fIGet the caller page address\&. \fP"
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint16_t \fBm_addr\fP"
+.br
+.RI "\fIInstruction pointer\&. \fP"
+.ti -1c
+.RI "uint16_t \fBm_page_addr\fP"
+.br
+.RI "\fIPage pointer\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBFrame\fP management\&. 
+
+A frame should hold:
+.IP "\(bu" 2
+its own stack
+.IP "\(bu" 2
+a return address to a possible caller (if it's a function's frame) 
+.PP
+
+.PP
+Definition at line 32 of file Frame\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Ark::internal::Frame::Frame (uint16_t caller_addr, uint16_t caller_page_addr)\fC [noexcept]\fP"
+
+.PP
+Construct a new \fBFrame\fP object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcaller_addr\fP the address of the caller, to return to it afterward 
+.br
+\fIcaller_page_addr\fP the page address of the caller 
+.RE
+.PP
+
+.PP
+Definition at line 12 of file Frame\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Value* Ark::internal::Frame::pop ()\fC [inline]\fP"
+
+.PP
+Pop a value from the stack of the frame\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Value* the value popped 
+.RE
+.PP
+
+.SS "void Ark::internal::Frame::push (const Value & value)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Push a value on the stack of the frame\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP the value to put on the stack 
+.RE
+.PP
+
+.SS "void Ark::internal::Frame::push (Value && value)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Push a value on the stack of the frame\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP the value to put on the stack 
+.RE
+.PP
+
+.SS "std::size_t Ark::internal::Frame::stackSize () const\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Get the stack size\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+std::size_t 
+.RE
+.PP
+
+.SS "uint16_t Ark::internal::Frame::callerAddr () const\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Get the caller address\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+uint16_t 
+.RE
+.PP
+
+.SS "uint16_t Ark::internal::Frame::callerPageAddr () const\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Get the caller page address\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+uint16_t 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ArkScript from the source code\&.

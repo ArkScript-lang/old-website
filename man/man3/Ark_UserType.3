@@ -1,0 +1,157 @@
+.TH "Ark::UserType" 3 "Wed Dec 30 2020" "ArkScript" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Ark::UserType \- A class to be use C++ objects in ArkScript\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <UserType\&.hpp>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBControlFuncs\fP"
+.br
+.RI "\fIA structure holding a bunch of pointers to different useful functions related to this usertype\&. \fP"
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > \fBUserType\fP (T *\fBdata\fP=nullptr) noexcept"
+.br
+.RI "\fIConstruct a new User Type object\&. \fP"
+.ti -1c
+.RI "\fB~UserType\fP () noexcept"
+.br
+.RI "\fIDestroy the User Type object\&. \fP"
+.ti -1c
+.RI "void \fBsetControlFuncs\fP (\fBControlFuncs\fP *block) noexcept"
+.br
+.RI "\fISet the control functions structure\&. \fP"
+.ti -1c
+.RI "void * \fBdata\fP () const noexcept"
+.br
+.RI "\fIGet the pointer to the object\&. \fP"
+.ti -1c
+.RI "template<typename T > bool \fBis\fP () const noexcept"
+.br
+.RI "\fICheck if the object held is of a given type\&. \fP"
+.ti -1c
+.RI "template<typename T > T & \fBas\fP () noexcept"
+.br
+.RI "\fIReturn the underlying object as a given type\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+A class to be use C++ objects in ArkScript\&. 
+
+A pointer to the value you want to store must be sent, thus the value must not be destroyed while the \fBUserType\fP lives, otherwise it would result in an UB when trying to use the object 
+.PP
+Definition at line 29 of file UserType\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename T > Ark::UserType::UserType (T * data = \fCnullptr\fP)\fC [inline]\fP, \fC [explicit]\fP, \fC [noexcept]\fP"
+
+.PP
+Construct a new User Type object\&. 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIT\fP the type of the pointer 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP a pointer to the data to store in the object 
+.RE
+.PP
+
+.PP
+Definition at line 49 of file UserType\&.hpp\&.
+.SS "Ark::UserType::~UserType ()\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Destroy the User Type object\&. Called by the \fBVM\fP when \fC(del obj)\fP is found or when the object goes out of scope\&. 
+.PP
+Definition at line 60 of file UserType\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Ark::UserType::setControlFuncs (\fBControlFuncs\fP * block)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Set the control functions structure\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIblock\fP A pointer to an instance of this block 
+.RE
+.PP
+
+.SS "void* Ark::UserType::data () const\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Get the pointer to the object\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+void* 
+.RE
+.PP
+
+.SS "template<typename T > bool Ark::UserType::is () const\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Check if the object held is of a given type\&. Usage example: 
+.PP
+.nf
+MyType object;
+UserType a(&object);
+if (a\&.is<MyType>())
+    // then \&.\&.\&.
+else
+    // otherwise\&.\&.\&.
+
+.fi
+.PP
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIT\fP the type to use for the test 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true 
+.PP
+false 
+.RE
+.PP
+
+.PP
+Definition at line 98 of file UserType\&.hpp\&.
+.SS "template<typename T > T& Ark::UserType::as ()\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Return the underlying object as a given type\&. 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIT\fP the type in which the underlying data pointer should be converted to 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+T& 
+.RE
+.PP
+
+.PP
+Definition at line 110 of file UserType\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ArkScript from the source code\&.

@@ -1,0 +1,404 @@
+.TH "Ark::internal::Node" 3 "Wed Dec 30 2020" "ArkScript" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Ark::internal::Node \- A node of an Abstract Syntax Tree for ArkScript\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Node\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNode\fP (int value) noexcept"
+.br
+.RI "\fIConstruct a new \fBNode\fP object\&. \fP"
+.ti -1c
+.RI "\fBNode\fP (double value) noexcept"
+.br
+.RI "\fIConstruct a new \fBNode\fP object\&. \fP"
+.ti -1c
+.RI "\fBNode\fP (const std::string &value) noexcept"
+.br
+.RI "\fIConstruct a new \fBNode\fP object\&. \fP"
+.ti -1c
+.RI "\fBNode\fP (Keyword value) noexcept"
+.br
+.RI "\fIConstruct a new \fBNode\fP object\&. \fP"
+.ti -1c
+.RI "\fBNode\fP (NodeType type=NodeType::Symbol) noexcept"
+.br
+.RI "\fIConstruct a new \fBNode\fP object, does not set the value\&. \fP"
+.ti -1c
+.RI "\fBNode\fP (const \fBNode\fP &other) noexcept"
+.br
+.RI "\fIConstruct a new \fBNode\fP object\&. \fP"
+.ti -1c
+.RI "const std::string & \fBstring\fP () const noexcept"
+.br
+.RI "\fIReturn the string held by the value (if the node type allows it) \fP"
+.ti -1c
+.RI "double \fBnumber\fP () const noexcept"
+.br
+.RI "\fIReturn the number held by the value (if the node type allows it) \fP"
+.ti -1c
+.RI "Keyword \fBkeyword\fP () const noexcept"
+.br
+.RI "\fIReturn the keyword held by the value (if the node type allows it) \fP"
+.ti -1c
+.RI "void \fBpush_back\fP (const \fBNode\fP &node) noexcept"
+.br
+.RI "\fIEvery node has a list as well as a value so we can push_back on all node no matter their type\&. \fP"
+.ti -1c
+.RI "std::vector< \fBNode\fP > & \fBlist\fP () noexcept"
+.br
+.RI "\fIReturn the list of sub-nodes held by the node\&. \fP"
+.ti -1c
+.RI "const std::vector< \fBNode\fP > & \fBconst_list\fP () const noexcept"
+.br
+.RI "\fIReturn the list of sub-nodes held by the node\&. \fP"
+.ti -1c
+.RI "NodeType \fBnodeType\fP () const noexcept"
+.br
+.RI "\fIReturn the node type\&. \fP"
+.ti -1c
+.RI "void \fBsetNodeType\fP (NodeType type) noexcept"
+.br
+.RI "\fISet the \fBNode\fP Type object\&. \fP"
+.ti -1c
+.RI "void \fBsetString\fP (const std::string &value) noexcept"
+.br
+.RI "\fISet the String object\&. \fP"
+.ti -1c
+.RI "void \fBsetNumber\fP (double value) noexcept"
+.br
+.RI "\fISet the Number object\&. \fP"
+.ti -1c
+.RI "void \fBsetKeyword\fP (Keyword kw) noexcept"
+.br
+.RI "\fISet the Keyword object\&. \fP"
+.ti -1c
+.RI "void \fBsetPos\fP (std::size_t \fBline\fP, std::size_t \fBcol\fP) noexcept"
+.br
+.RI "\fISet the Position of the node in the text\&. \fP"
+.ti -1c
+.RI "void \fBsetFilename\fP (const std::string &\fBfilename\fP) noexcept"
+.br
+.RI "\fISet the original Filename where the node was\&. \fP"
+.ti -1c
+.RI "std::size_t \fBline\fP () const noexcept"
+.br
+.RI "\fIGet the line at which this node was created\&. \fP"
+.ti -1c
+.RI "std::size_t \fBcol\fP () const noexcept"
+.br
+.RI "\fIGet the column at which this node was created\&. \fP"
+.ti -1c
+.RI "const std::string & \fBfilename\fP () const noexcept"
+.br
+.RI "\fIReturn the filename in which this node was created\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+A node of an Abstract Syntax Tree for ArkScript\&. 
+.PP
+Definition at line 57 of file Node\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Ark::internal::Node::Node (int value)\fC [explicit]\fP, \fC [noexcept]\fP"
+
+.PP
+Construct a new \fBNode\fP object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP 
+.RE
+.PP
+
+.PP
+Definition at line 7 of file Node\&.cpp\&.
+.SS "Ark::internal::Node::Node (double value)\fC [explicit]\fP, \fC [noexcept]\fP"
+
+.PP
+Construct a new \fBNode\fP object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP 
+.RE
+.PP
+
+.PP
+Definition at line 12 of file Node\&.cpp\&.
+.SS "Ark::internal::Node::Node (const std::string & value)\fC [explicit]\fP, \fC [noexcept]\fP"
+
+.PP
+Construct a new \fBNode\fP object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP 
+.RE
+.PP
+
+.PP
+Definition at line 17 of file Node\&.cpp\&.
+.SS "Ark::internal::Node::Node (Keyword value)\fC [explicit]\fP, \fC [noexcept]\fP"
+
+.PP
+Construct a new \fBNode\fP object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file Node\&.cpp\&.
+.SS "Ark::internal::Node::Node (NodeType type = \fCNodeType::Symbol\fP)\fC [explicit]\fP, \fC [noexcept]\fP"
+
+.PP
+Construct a new \fBNode\fP object, does not set the value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItype\fP 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file Node\&.cpp\&.
+.SS "Ark::internal::Node::Node (const \fBNode\fP & other)\fC [noexcept]\fP"
+
+.PP
+Construct a new \fBNode\fP object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIother\fP 
+.RE
+.PP
+
+.PP
+Definition at line 31 of file Node\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "const std::string & Ark::internal::Node::string () const\fC [noexcept]\fP"
+
+.PP
+Return the string held by the value (if the node type allows it) 
+.PP
+\fBReturns:\fP
+.RS 4
+const std::string& 
+.RE
+.PP
+
+.PP
+Definition at line 42 of file Node\&.cpp\&.
+.SS "double Ark::internal::Node::number () const\fC [noexcept]\fP"
+
+.PP
+Return the number held by the value (if the node type allows it) 
+.PP
+\fBReturns:\fP
+.RS 4
+double 
+.RE
+.PP
+
+.PP
+Definition at line 47 of file Node\&.cpp\&.
+.SS "Keyword Ark::internal::Node::keyword () const\fC [noexcept]\fP"
+
+.PP
+Return the keyword held by the value (if the node type allows it) 
+.PP
+\fBReturns:\fP
+.RS 4
+Keyword 
+.RE
+.PP
+
+.PP
+Definition at line 52 of file Node\&.cpp\&.
+.SS "void Ark::internal::Node::push_back (const \fBNode\fP & node)\fC [noexcept]\fP"
+
+.PP
+Every node has a list as well as a value so we can push_back on all node no matter their type\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInode\fP a sub-node to push on the list held by the current node 
+.RE
+.PP
+
+.PP
+Definition at line 59 of file Node\&.cpp\&.
+.SS "std::vector< \fBNode\fP > & Ark::internal::Node::list ()\fC [noexcept]\fP"
+
+.PP
+Return the list of sub-nodes held by the node\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+std::vector<Node>& 
+.RE
+.PP
+
+.PP
+Definition at line 64 of file Node\&.cpp\&.
+.SS "const std::vector< \fBNode\fP > & Ark::internal::Node::const_list () const\fC [noexcept]\fP"
+
+.PP
+Return the list of sub-nodes held by the node\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+const std::vector<Node>& 
+.RE
+.PP
+
+.PP
+Definition at line 69 of file Node\&.cpp\&.
+.SS "NodeType Ark::internal::Node::nodeType () const\fC [noexcept]\fP"
+
+.PP
+Return the node type\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+NodeType 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file Node\&.cpp\&.
+.SS "void Ark::internal::Node::setNodeType (NodeType type)\fC [noexcept]\fP"
+
+.PP
+Set the \fBNode\fP Type object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItype\fP 
+.RE
+.PP
+
+.PP
+Definition at line 81 of file Node\&.cpp\&.
+.SS "void Ark::internal::Node::setString (const std::string & value)\fC [noexcept]\fP"
+
+.PP
+Set the String object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP 
+.RE
+.PP
+
+.PP
+Definition at line 86 of file Node\&.cpp\&.
+.SS "void Ark::internal::Node::setNumber (double value)\fC [noexcept]\fP"
+
+.PP
+Set the Number object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP 
+.RE
+.PP
+
+.PP
+Definition at line 91 of file Node\&.cpp\&.
+.SS "void Ark::internal::Node::setKeyword (Keyword kw)\fC [noexcept]\fP"
+
+.PP
+Set the Keyword object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIkw\fP 
+.RE
+.PP
+
+.PP
+Definition at line 96 of file Node\&.cpp\&.
+.SS "void Ark::internal::Node::setPos (std::size_t line, std::size_t col)\fC [noexcept]\fP"
+
+.PP
+Set the Position of the node in the text\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIline\fP 
+.br
+\fIcol\fP 
+.RE
+.PP
+
+.PP
+Definition at line 103 of file Node\&.cpp\&.
+.SS "void Ark::internal::Node::setFilename (const std::string & filename)\fC [noexcept]\fP"
+
+.PP
+Set the original Filename where the node was\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfilename\fP 
+.RE
+.PP
+
+.PP
+Definition at line 109 of file Node\&.cpp\&.
+.SS "std::size_t Ark::internal::Node::line () const\fC [noexcept]\fP"
+
+.PP
+Get the line at which this node was created\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+std::size_t 
+.RE
+.PP
+
+.PP
+Definition at line 114 of file Node\&.cpp\&.
+.SS "std::size_t Ark::internal::Node::col () const\fC [noexcept]\fP"
+
+.PP
+Get the column at which this node was created\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+std::size_t 
+.RE
+.PP
+
+.PP
+Definition at line 119 of file Node\&.cpp\&.
+.SS "const std::string & Ark::internal::Node::filename () const\fC [noexcept]\fP"
+
+.PP
+Return the filename in which this node was created\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+const std::string& 
+.RE
+.PP
+
+.PP
+Definition at line 124 of file Node\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ArkScript from the source code\&.

@@ -1,0 +1,46 @@
+.TH "include/Ark/VM Directory Reference" 3 "Wed Dec 30 2020" "ArkScript" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/Ark/VM Directory Reference \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Files"
+
+.in +1c
+.ti -1c
+.RI "file \fBClosure\&.hpp\fP"
+.br
+.RI "\fISubtype of the value type, handling closures\&. \fP"
+.ti -1c
+.RI "file \fBFrame\&.hpp\fP"
+.br
+.RI "\fIA frame is created each time a function is called, containing its own stack and the return address\&. \fP"
+.ti -1c
+.RI "file \fBPlugin\&.hpp\fP"
+.br
+.RI "\fILoads \&.dll/\&.so/\&.dynlib files\&. \fP"
+.ti -1c
+.RI "file \fBScope\&.hpp\fP"
+.br
+.RI "\fIThe virtual machine scope system\&. \fP"
+.ti -1c
+.RI "file \fBState\&.hpp\fP"
+.br
+.RI "\fIState used by the virtual machine: it loads the bytecode, can compile it if needed, load C++ functions\&.\&.\&. \fP"
+.ti -1c
+.RI "file \fBTypes\&.hpp\fP"
+.br
+.ti -1c
+.RI "file \fBUserType\&.hpp\fP"
+.br
+.RI "\fISubtype of the value, capable of handling any C++ type\&. \fP"
+.ti -1c
+.RI "file \fBValue\&.hpp\fP"
+.br
+.ti -1c
+.RI "file \fBVM\&.hpp\fP"
+.br
+.RI "\fIThe ArkScript virtual machine\&. \fP"
+.in -1c

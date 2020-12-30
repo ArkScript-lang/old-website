@@ -1,0 +1,104 @@
+.TH "include/Ark/VM/VM.hpp" 3 "Wed Dec 30 2020" "ArkScript" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/Ark/VM/VM.hpp \- The ArkScript virtual machine\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <vector>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <cinttypes>\fP
+.br
+\fC#include <algorithm>\fP
+.br
+\fC#include <optional>\fP
+.br
+\fC#include <memory>\fP
+.br
+\fC#include <unordered_map>\fP
+.br
+\fC#include <utility>\fP
+.br
+\fC#include <mutex>\fP
+.br
+\fC#include <Ark/VM/Value\&.hpp>\fP
+.br
+\fC#include <Ark/VM/Scope\&.hpp>\fP
+.br
+\fC#include <Ark/VM/Frame\&.hpp>\fP
+.br
+\fC#include <Ark/VM/State\&.hpp>\fP
+.br
+\fC#include <Ark/Builtins/Builtins\&.hpp>\fP
+.br
+\fC#include <Ark/Log\&.hpp>\fP
+.br
+\fC#include <Ark/Config\&.hpp>\fP
+.br
+\fC#include <Ark/VM/Plugin\&.hpp>\fP
+.br
+\fC#include <cmath>\fP
+.br
+\fC#include 'inline/VM\&.inl'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBArk::VM\fP"
+.br
+.RI "\fIThe ArkScript virtual machine, executing ArkScript bytecode\&. \fP"
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const Value \fBArk::Nil\fP = Value(internal::ValueType::Nil)"
+.br
+.RI "\fIArkScript Nil value\&. \fP"
+.ti -1c
+.RI "const Value \fBArk::False\fP = Value(internal::ValueType::False)"
+.br
+.RI "\fIArkScript False value\&. \fP"
+.ti -1c
+.RI "const Value \fBArk::True\fP = Value(internal::ValueType::True)"
+.br
+.RI "\fIArkScript True value\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+The ArkScript virtual machine\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Alexandre Plateau (lexplt.dev@gmail.com) 
+.RE
+.PP
+\fBVersion:\fP
+.RS 4
+0\&.1 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+2020-10-27
+.RE
+.PP
+\fBCopyright:\fP
+.RS 4
+Copyright (c) 2020 
+.RE
+.PP
+
+.PP
+Definition in file \fBVM\&.hpp\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ArkScript from the source code\&.
