@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0fc753815adf631039e8f93bf08a1393.html">lib</a></li><li class="navelem"><a class="el" href="dir_ecd4e685b4cbffd967a3d7f8d8f33319.html">ext</a></li><li class="navelem"><a class="el" href="dir_007349317fdea3e49e85022c3e8aed30.html">random</a></li><li class="navelem"><a class="el" href="dir_ed9f44f8cd9842d849996ed415204697.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6e0914821bfca1f501651442b1f58e25.html">lib</a></li><li class="navelem"><a class="el" href="dir_df970774a8b080190a9e20a8c7729596.html">ext</a></li><li class="navelem"><a class="el" href="dir_9e427cda8d8434e7698ce15fdedb85d5.html">random</a></li><li class="navelem"><a class="el" href="dir_5ec57159ccbead1c469e86ce6ac4bc56.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -119,11 +119,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;ARK_API_EXPORT Mapping_t getFunctionsMapping()</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;ARK_API_EXPORT mapping* getFunctionsMapping()</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    Mapping_t map;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    map[<span class="stringliteral">&quot;random&quot;</span>] = ArkRandom::random;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    map[<span class="stringliteral">&quot;rand10&quot;</span>] = ArkRandom::random_10;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    mapping* map = mapping_create(2);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    mapping_add(map[0], <span class="stringliteral">&quot;random&quot;</span>, ArkRandom::random);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    mapping_add(map[1], <span class="stringliteral">&quot;rand10&quot;</span>, ArkRandom::random_10);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> map;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
@@ -132,7 +132,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 10 2020 09:14:03 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 30 2020 13:43:53 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

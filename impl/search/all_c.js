@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['maybefromplugin',['mayBeFromPlugin',['../class_ark_1_1_compiler.html#a8b76a277d473afe29e1dfbefce89b29f',1,'Ark::Compiler']]]
+  ['m_5faddr',['m_addr',['../class_ark_1_1internal_1_1_frame.html#a4fdb6fd70d29256b7cdcea6976f9ea80',1,'Ark::internal::Frame']]],
+  ['m_5fpage_5faddr',['m_page_addr',['../class_ark_1_1internal_1_1_frame.html#a2ad696f1a81cf67b2a753672931f2076',1,'Ark::internal::Frame']]],
+  ['maybefromplugin',['mayBeFromPlugin',['../class_ark_1_1_compiler.html#a56d997501e125dbbd7fc24479586f5f7',1,'Ark::Compiler']]]
 ];

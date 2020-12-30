@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -122,18 +122,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:ac92e41c58dc2bf550d5076b5ac223f9e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac92e41c58dc2bf550d5076b5ac223f9e"></a>
-std::optional&lt; std::size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_compiler.html#ac92e41c58dc2bf550d5076b5ac223f9e">isOperator</a> (const std::string &amp;name) noexcept</td></tr>
-<tr class="memdesc:ac92e41c58dc2bf550d5076b5ac223f9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checking if a symbol is an operator. <br /></td></tr>
-<tr class="separator:ac92e41c58dc2bf550d5076b5ac223f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab11ac7b75c9cb8ceebca66a3a31c66ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab11ac7b75c9cb8ceebca66a3a31c66ce"></a>
-std::optional&lt; std::size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_compiler.html#ab11ac7b75c9cb8ceebca66a3a31c66ce">isBuiltin</a> (const std::string &amp;name) noexcept</td></tr>
-<tr class="memdesc:ab11ac7b75c9cb8ceebca66a3a31c66ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checking if a symbol is a builtin. <br /></td></tr>
-<tr class="separator:ab11ac7b75c9cb8ceebca66a3a31c66ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b76a277d473afe29e1dfbefce89b29f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b76a277d473afe29e1dfbefce89b29f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_compiler.html#a8b76a277d473afe29e1dfbefce89b29f">mayBeFromPlugin</a> (const std::string &amp;name) noexcept</td></tr>
-<tr class="memdesc:a8b76a277d473afe29e1dfbefce89b29f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checking if a symbol may be coming from a plugin. <br /></td></tr>
-<tr class="separator:a8b76a277d473afe29e1dfbefce89b29f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedba0902a0474a0916fc54c134a1aff0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedba0902a0474a0916fc54c134a1aff0"></a>
+std::optional&lt; std::size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_compiler.html#aedba0902a0474a0916fc54c134a1aff0">isOperator</a> (const std::string &amp;name) noexcept</td></tr>
+<tr class="memdesc:aedba0902a0474a0916fc54c134a1aff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checking if a symbol is an operator. <br /></td></tr>
+<tr class="separator:aedba0902a0474a0916fc54c134a1aff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0b25560f1f468ed0b5086b88eeaf0d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0b25560f1f468ed0b5086b88eeaf0d8"></a>
+std::optional&lt; std::size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_compiler.html#ad0b25560f1f468ed0b5086b88eeaf0d8">isBuiltin</a> (const std::string &amp;name) noexcept</td></tr>
+<tr class="memdesc:ad0b25560f1f468ed0b5086b88eeaf0d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checking if a symbol is a builtin. <br /></td></tr>
+<tr class="separator:ad0b25560f1f468ed0b5086b88eeaf0d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56d997501e125dbbd7fc24479586f5f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56d997501e125dbbd7fc24479586f5f7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_compiler.html#a56d997501e125dbbd7fc24479586f5f7">mayBeFromPlugin</a> (const std::string &amp;name) noexcept</td></tr>
+<tr class="memdesc:a56d997501e125dbbd7fc24479586f5f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checking if a symbol may be coming from a plugin. <br /></td></tr>
+<tr class="separator:a56d997501e125dbbd7fc24479586f5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac71ac4031b100fbcf9311ea89ad66930"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac71ac4031b100fbcf9311ea89ad66930"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_compiler.html#ac71ac4031b100fbcf9311ea89ad66930">throwCompilerError</a> (const std::string &amp;message, const <a class="el" href="class_ark_1_1internal_1_1_node.html">internal::Node</a> &amp;node)</td></tr>
+<tr class="memdesc:ac71ac4031b100fbcf9311ea89ad66930"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throw a nice error message. <br /></td></tr>
+<tr class="separator:ac71ac4031b100fbcf9311ea89ad66930"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4f08172e259bae294aba7ecf47d7215"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_compiler.html#ac4f08172e259bae294aba7ecf47d7215">_compile</a> (const <a class="el" href="class_ark_1_1internal_1_1_node.html">internal::Node</a> &amp;x, int p)</td></tr>
 <tr class="memdesc:ac4f08172e259bae294aba7ecf47d7215"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a single node recursively.  <a href="#ac4f08172e259bae294aba7ecf47d7215">More...</a><br /></td></tr>
 <tr class="separator:ac4f08172e259bae294aba7ecf47d7215"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,7 +187,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_compiler_8cpp_source.html#l00013">13</a> of file <a class="el" href="_compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_compiler_8cpp_source.html#l00014">14</a> of file <a class="el" href="_compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
 </div>
 </div>
@@ -221,7 +225,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_compiler_8cpp_source.html#l00018">18</a> of file <a class="el" href="_compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_compiler_8cpp_source.html#l00019">19</a> of file <a class="el" href="_compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
 </div>
 </div>
@@ -247,7 +251,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_compiler_8cpp_source.html#l00178">178</a> of file <a class="el" href="_compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_compiler_8cpp_source.html#l00190">190</a> of file <a class="el" href="_compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
 </div>
 </div>
@@ -275,7 +279,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>Return the constructed bytecode object. </p>
 <dl class="section return"><dt>Returns</dt><dd>const bytecode_t&amp; </dd></dl>
 
-<p>Definition at line <a class="el" href="_compiler_8cpp_source.html#l00188">188</a> of file <a class="el" href="_compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_compiler_8cpp_source.html#l00200">200</a> of file <a class="el" href="_compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
 </div>
 </div>
@@ -320,19 +324,18 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_compiler_8cpp_source.html#l00193">193</a> of file <a class="el" href="_compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_compiler_8cpp_source.html#l00205">205</a> of file <a class="el" href="_compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/Ark/Compiler/<a class="el" href="_compiler_8hpp_source.html">Compiler.hpp</a></li>
-<li>include/Ark/Compiler/<a class="el" href="_compiler_8inl_source.html">Compiler.inl</a></li>
 <li>src/Compiler/<a class="el" href="_compiler_8cpp_source.html">Compiler.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 10 2020 09:14:04 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 30 2020 13:58:01 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

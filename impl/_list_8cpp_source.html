@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_67b0f6a0a2945fc5389cc58c347ef75a.html">src</a></li><li class="navelem"><a class="el" href="dir_df95b12f9d968c380475a839a1d51d99.html">Builtins</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7871fbf1f99f422398f59cd3e9e8a548.html">Builtins</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -125,7 +125,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keywordflow">return</span> Value(static_cast&lt;int&gt;(std::distance&lt;Value::Iterator&gt;(l.begin(), it)));</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> Value(-1);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    Value removeAtList(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
@@ -138,7 +138,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_ark_1_1_type_error.html">Ark::TypeError</a>(LIST_RMAT_TE1);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        std::size_t idx = <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(n[1].number());</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">if</span> (idx &lt; 0 || idx &gt;= n[0].list().size())</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">if</span> (idx &gt;= n[0].list().size())</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">throw</span> std::runtime_error(LIST_RMAT_OOR);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        n[0].list().erase(n[0].list().begin () + idx);</div>
@@ -174,49 +174,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">for</span> (std::size_t i=start; i &lt; end; i += step)</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            retlist.push_back(n[0].list()[i]);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        Value ret(std::move(retlist));</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    Value sort_(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">if</span> (n.size() != 1)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">throw</span> std::runtime_error(LIST_SORT_ARITY);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">if</span> (n[0].valueType() != ValueType::List)</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_ark_1_1_type_error.html">Ark::TypeError</a>(LIST_SORT_TE0);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        std::sort(n[0].list().begin(), n[0].list().end());</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span> n[0];</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    Value fill(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">if</span> (n.size() != 2)</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">throw</span> std::runtime_error(LIST_FILL_ARITY);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">if</span> (n[0].valueType() != ValueType::Number)</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_ark_1_1_type_error.html">Ark::TypeError</a>(LIST_FILL_TE0);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        std::size_t c = <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(n[0].number());</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        std::vector&lt;Value&gt; l;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">for</span> (std::size_t i=0; i &lt; c; i++)</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            l.push_back(n[1]);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">return</span> Value(std::move(l));</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    Value setListAt(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">if</span> (n.size() != 3)</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">throw</span> std::runtime_error(LIST_SETAT_ARITY);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">if</span> (n[0].valueType() != ValueType::List)</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_ark_1_1_type_error.html">Ark::TypeError</a>(LIST_SETAT_TE0);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">if</span> (n[1].valueType() != ValueType::Number)</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_ark_1_1_type_error.html">Ark::TypeError</a>(LIST_SETAT_TE1);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        n[0].list()[<span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(n[1].number())] = n[2];</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">return</span> n[0];</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> Value(std::move(retlist));</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    Value sort_(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">if</span> (n.size() != 1)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">throw</span> std::runtime_error(LIST_SORT_ARITY);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">if</span> (n[0].valueType() != ValueType::List)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_ark_1_1_type_error.html">Ark::TypeError</a>(LIST_SORT_TE0);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        std::sort(n[0].list().begin(), n[0].list().end());</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">return</span> n[0];</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    Value fill(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">if</span> (n.size() != 2)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordflow">throw</span> std::runtime_error(LIST_FILL_ARITY);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">if</span> (n[0].valueType() != ValueType::Number)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_ark_1_1_type_error.html">Ark::TypeError</a>(LIST_FILL_TE0);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        std::size_t c = <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(n[0].number());</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        std::vector&lt;Value&gt; l;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">for</span> (std::size_t i=0; i &lt; c; i++)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            l.push_back(n[1]);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> Value(std::move(l));</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    Value setListAt(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">if</span> (n.size() != 3)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">throw</span> std::runtime_error(LIST_SETAT_ARITY);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">if</span> (n[0].valueType() != ValueType::List)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_ark_1_1_type_error.html">Ark::TypeError</a>(LIST_SETAT_TE0);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">if</span> (n[1].valueType() != ValueType::Number)</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_ark_1_1_type_error.html">Ark::TypeError</a>(LIST_SETAT_TE1);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        n[0].list()[<span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(n[1].number())] = n[2];</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">return</span> n[0];</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
 <div class="ttc" id="namespace_ark_1_1internal_1_1_builtins_1_1_list_html"><div class="ttname"><a href="namespace_ark_1_1internal_1_1_builtins_1_1_list.html">Ark::internal::Builtins::List</a></div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8hpp_source.html#l00040">Builtins.hpp:40</a></div></div>
 <div class="ttc" id="_v_m_8hpp_html"><div class="ttname"><a href="_v_m_8hpp.html">VM.hpp</a></div><div class="ttdoc">The ArkScript virtual machine. </div></div>
 <div class="ttc" id="class_ark_1_1_type_error_html"><div class="ttname"><a href="class_ark_1_1_type_error.html">Ark::TypeError</a></div><div class="ttdoc">A type error triggered when types don&#39;t match. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00024">Exceptions.hpp:24</a></div></div>
@@ -225,7 +224,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 10 2020 09:14:03 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 30 2020 13:57:58 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

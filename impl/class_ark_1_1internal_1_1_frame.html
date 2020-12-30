@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,6 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_ark_1_1internal_1_1_frame-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Ark::internal::Frame Class Reference</div>  </div>
@@ -110,39 +111,38 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_frame.html#afa38ebe72ea8a01ef30ba0dbe22b7b04">Frame</a> (const <a class="el" href="class_ark_1_1internal_1_1_frame.html">Frame</a> &amp;)=default</td></tr>
 <tr class="memdesc:afa38ebe72ea8a01ef30ba0dbe22b7b04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_ark_1_1internal_1_1_frame.html" title="Frame management. ">Frame</a> object from another one. <br /></td></tr>
 <tr class="separator:afa38ebe72ea8a01ef30ba0dbe22b7b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ebb34fe570be0292db5cc9d75806b21"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_frame.html#a4ebb34fe570be0292db5cc9d75806b21">Frame</a> (uint16_t caller_addr, uint16_t caller_page_addr, uint16_t new_pp) noexcept</td></tr>
-<tr class="memdesc:a4ebb34fe570be0292db5cc9d75806b21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_ark_1_1internal_1_1_frame.html" title="Frame management. ">Frame</a> object.  <a href="#a4ebb34fe570be0292db5cc9d75806b21">More...</a><br /></td></tr>
-<tr class="separator:a4ebb34fe570be0292db5cc9d75806b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bff0d905ff1ca97cf82b39dcf13d3ea"><td class="memItemLeft" align="right" valign="top">Value *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_frame.html#a1bff0d905ff1ca97cf82b39dcf13d3ea">pop</a> ()</td></tr>
-<tr class="memdesc:a1bff0d905ff1ca97cf82b39dcf13d3ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pop a value from the stack of the frame.  <a href="#a1bff0d905ff1ca97cf82b39dcf13d3ea">More...</a><br /></td></tr>
-<tr class="separator:a1bff0d905ff1ca97cf82b39dcf13d3ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a078d185602ff0ce8a763d72826478abd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_frame.html#a078d185602ff0ce8a763d72826478abd">Frame</a> (uint16_t caller_addr, uint16_t caller_page_addr) noexcept</td></tr>
+<tr class="memdesc:a078d185602ff0ce8a763d72826478abd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_ark_1_1internal_1_1_frame.html" title="Frame management. ">Frame</a> object.  <a href="#a078d185602ff0ce8a763d72826478abd">More...</a><br /></td></tr>
+<tr class="separator:a078d185602ff0ce8a763d72826478abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff6bf5c90b988936b8aec706c29d5704"><td class="memItemLeft" align="right" valign="top">Value *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_frame.html#aff6bf5c90b988936b8aec706c29d5704">pop</a> ()</td></tr>
+<tr class="memdesc:aff6bf5c90b988936b8aec706c29d5704"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pop a value from the stack of the frame.  <a href="#aff6bf5c90b988936b8aec706c29d5704">More...</a><br /></td></tr>
+<tr class="separator:aff6bf5c90b988936b8aec706c29d5704"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41a927b427f333651a4e9fcf009ec439"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_frame.html#a41a927b427f333651a4e9fcf009ec439">push</a> (const Value &amp;value) noexcept</td></tr>
 <tr class="memdesc:a41a927b427f333651a4e9fcf009ec439"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push a value on the stack of the frame.  <a href="#a41a927b427f333651a4e9fcf009ec439">More...</a><br /></td></tr>
 <tr class="separator:a41a927b427f333651a4e9fcf009ec439"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ec95954405b724e3f2065ea103d7011"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_frame.html#a4ec95954405b724e3f2065ea103d7011">push</a> (Value &amp;&amp;value) noexcept</td></tr>
 <tr class="memdesc:a4ec95954405b724e3f2065ea103d7011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push a value on the stack of the frame.  <a href="#a4ec95954405b724e3f2065ea103d7011">More...</a><br /></td></tr>
 <tr class="separator:a4ec95954405b724e3f2065ea103d7011"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8e3a0c5c490bb608868d6df4009d38a"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_frame.html#ac8e3a0c5c490bb608868d6df4009d38a">stackSize</a> () const noexcept</td></tr>
-<tr class="memdesc:ac8e3a0c5c490bb608868d6df4009d38a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the stack size.  <a href="#ac8e3a0c5c490bb608868d6df4009d38a">More...</a><br /></td></tr>
-<tr class="separator:ac8e3a0c5c490bb608868d6df4009d38a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e390b4f5da03503bd2b41b91ddd98eb"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_frame.html#a2e390b4f5da03503bd2b41b91ddd98eb">callerAddr</a> () const noexcept</td></tr>
-<tr class="memdesc:a2e390b4f5da03503bd2b41b91ddd98eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the caller address.  <a href="#a2e390b4f5da03503bd2b41b91ddd98eb">More...</a><br /></td></tr>
-<tr class="separator:a2e390b4f5da03503bd2b41b91ddd98eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82ebb95890ad3bb17c14a6f7a7730766"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_frame.html#a82ebb95890ad3bb17c14a6f7a7730766">callerPageAddr</a> () const noexcept</td></tr>
-<tr class="memdesc:a82ebb95890ad3bb17c14a6f7a7730766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the caller page address.  <a href="#a82ebb95890ad3bb17c14a6f7a7730766">More...</a><br /></td></tr>
-<tr class="separator:a82ebb95890ad3bb17c14a6f7a7730766"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a853a44ecbca178466db9be42eaf8c8cf"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_frame.html#a853a44ecbca178466db9be42eaf8c8cf">currentPageAddr</a> () const noexcept</td></tr>
-<tr class="memdesc:a853a44ecbca178466db9be42eaf8c8cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current page address.  <a href="#a853a44ecbca178466db9be42eaf8c8cf">More...</a><br /></td></tr>
-<tr class="separator:a853a44ecbca178466db9be42eaf8c8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cb2ae23ca2ee1bfceec280b38d01ed2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_frame.html#a9cb2ae23ca2ee1bfceec280b38d01ed2">incScopeCountToDelete</a> () noexcept</td></tr>
-<tr class="memdesc:a9cb2ae23ca2ee1bfceec280b38d01ed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment the number of scopes linked to this frame.  <a href="#a9cb2ae23ca2ee1bfceec280b38d01ed2">More...</a><br /></td></tr>
-<tr class="separator:a9cb2ae23ca2ee1bfceec280b38d01ed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02956c64ffb7b624272309f343cf35a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_frame.html#a02956c64ffb7b624272309f343cf35a5">resetScopeCountToDelete</a> () noexcept</td></tr>
-<tr class="memdesc:a02956c64ffb7b624272309f343cf35a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the number of scopes linked to this frame.  <a href="#a02956c64ffb7b624272309f343cf35a5">More...</a><br /></td></tr>
-<tr class="separator:a02956c64ffb7b624272309f343cf35a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0d8f22b73fe7acc95cf2d5efb0772ec"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_frame.html#ab0d8f22b73fe7acc95cf2d5efb0772ec">scopeCountToDelete</a> () const noexcept</td></tr>
-<tr class="memdesc:ab0d8f22b73fe7acc95cf2d5efb0772ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of scopes linked to this frame.  <a href="#ab0d8f22b73fe7acc95cf2d5efb0772ec">More...</a><br /></td></tr>
-<tr class="separator:ab0d8f22b73fe7acc95cf2d5efb0772ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61e65ed59653d7709034c5756e71a7c0"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_frame.html#a61e65ed59653d7709034c5756e71a7c0">stackSize</a> () const noexcept</td></tr>
+<tr class="memdesc:a61e65ed59653d7709034c5756e71a7c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the stack size.  <a href="#a61e65ed59653d7709034c5756e71a7c0">More...</a><br /></td></tr>
+<tr class="separator:a61e65ed59653d7709034c5756e71a7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a511d7234b4602f3ae7927c15625fd9b5"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_frame.html#a511d7234b4602f3ae7927c15625fd9b5">callerAddr</a> () const noexcept</td></tr>
+<tr class="memdesc:a511d7234b4602f3ae7927c15625fd9b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the caller address.  <a href="#a511d7234b4602f3ae7927c15625fd9b5">More...</a><br /></td></tr>
+<tr class="separator:a511d7234b4602f3ae7927c15625fd9b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92c86ed1a7f7849f477d1071918665d8"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_frame.html#a92c86ed1a7f7849f477d1071918665d8">callerPageAddr</a> () const noexcept</td></tr>
+<tr class="memdesc:a92c86ed1a7f7849f477d1071918665d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the caller page address.  <a href="#a92c86ed1a7f7849f477d1071918665d8">More...</a><br /></td></tr>
+<tr class="separator:a92c86ed1a7f7849f477d1071918665d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a4fdb6fd70d29256b7cdcea6976f9ea80"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fdb6fd70d29256b7cdcea6976f9ea80"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_frame.html#a4fdb6fd70d29256b7cdcea6976f9ea80">m_addr</a></td></tr>
+<tr class="memdesc:a4fdb6fd70d29256b7cdcea6976f9ea80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instruction pointer. <br /></td></tr>
+<tr class="separator:a4fdb6fd70d29256b7cdcea6976f9ea80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ad696f1a81cf67b2a753672931f2076"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ad696f1a81cf67b2a753672931f2076"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_frame.html#a2ad696f1a81cf67b2a753672931f2076">m_page_addr</a></td></tr>
+<tr class="memdesc:a2ad696f1a81cf67b2a753672931f2076"><td class="mdescLeft">&#160;</td><td class="mdescRight">Page pointer. <br /></td></tr>
+<tr class="separator:a2ad696f1a81cf67b2a753672931f2076"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_ark_1_1internal_1_1_frame.html" title="Frame management. ">Frame</a> management. </p>
@@ -153,7 +153,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_frame_8hpp_source.html#l00032">32</a> of file <a class="el" href="_frame_8hpp_source.html">Frame.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a4ebb34fe570be0292db5cc9d75806b21"></a>
+<a class="anchor" id="a078d185602ff0ce8a763d72826478abd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -170,13 +170,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>caller_page_addr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>new_pp</em>&#160;</td>
+          <td class="paramname"><em>caller_page_addr</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -196,17 +190,16 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">caller_addr</td><td>the address of the caller, to return to it afterward </td></tr>
     <tr><td class="paramname">caller_page_addr</td><td>the page address of the caller </td></tr>
-    <tr><td class="paramname">new_pp</td><td>the new page address where we're going </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_frame_8cpp_source.html#l00010">10</a> of file <a class="el" href="_frame_8cpp_source.html">Frame.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_frame_8cpp_source.html#l00012">12</a> of file <a class="el" href="_frame_8cpp_source.html">Frame.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a1bff0d905ff1ca97cf82b39dcf13d3ea"></a>
+<a class="anchor" id="aff6bf5c90b988936b8aec706c29d5704"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -214,7 +207,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Value * Frame::pop </td>
+          <td class="memname">Value* Ark::internal::Frame::pop </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -229,8 +222,6 @@ Public Member Functions</h2></td></tr>
 
 <p>Pop a value from the stack of the frame. </p>
 <dl class="section return"><dt>Returns</dt><dd>Value* the value popped </dd></dl>
-
-<p>Definition at line <a class="el" href="_frame_8hpp_source.html#l00004">4</a> of file <a class="el" href="_frame_8hpp_source.html">Frame.hpp</a>.</p>
 
 </div>
 </div>
@@ -264,8 +255,6 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_frame_8hpp_source.html#l00010">10</a> of file <a class="el" href="_frame_8hpp_source.html">Frame.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a4ec95954405b724e3f2065ea103d7011"></a>
@@ -298,11 +287,9 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_frame_8hpp_source.html#l00019">19</a> of file <a class="el" href="_frame_8hpp_source.html">Frame.hpp</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="ac8e3a0c5c490bb608868d6df4009d38a"></a>
+<a class="anchor" id="a61e65ed59653d7709034c5756e71a7c0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -310,7 +297,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t Frame::stackSize </td>
+          <td class="memname">std::size_t Ark::internal::Frame::stackSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -326,11 +313,9 @@ Public Member Functions</h2></td></tr>
 <p>Get the stack size. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::size_t </dd></dl>
 
-<p>Definition at line <a class="el" href="_frame_8hpp_source.html#l00030">30</a> of file <a class="el" href="_frame_8hpp_source.html">Frame.hpp</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a2e390b4f5da03503bd2b41b91ddd98eb"></a>
+<a class="anchor" id="a511d7234b4602f3ae7927c15625fd9b5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -338,7 +323,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t Frame::callerAddr </td>
+          <td class="memname">uint16_t Ark::internal::Frame::callerAddr </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -354,11 +339,9 @@ Public Member Functions</h2></td></tr>
 <p>Get the caller address. </p>
 <dl class="section return"><dt>Returns</dt><dd>uint16_t </dd></dl>
 
-<p>Definition at line <a class="el" href="_frame_8hpp_source.html#l00035">35</a> of file <a class="el" href="_frame_8hpp_source.html">Frame.hpp</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a82ebb95890ad3bb17c14a6f7a7730766"></a>
+<a class="anchor" id="a92c86ed1a7f7849f477d1071918665d8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -366,7 +349,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t Frame::callerPageAddr </td>
+          <td class="memname">uint16_t Ark::internal::Frame::callerPageAddr </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -382,132 +365,16 @@ Public Member Functions</h2></td></tr>
 <p>Get the caller page address. </p>
 <dl class="section return"><dt>Returns</dt><dd>uint16_t </dd></dl>
 
-<p>Definition at line <a class="el" href="_frame_8hpp_source.html#l00040">40</a> of file <a class="el" href="_frame_8hpp_source.html">Frame.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a853a44ecbca178466db9be42eaf8c8cf"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t Frame::currentPageAddr </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the current page address. </p>
-<dl class="section return"><dt>Returns</dt><dd>uint16_t </dd></dl>
-
-<p>Definition at line <a class="el" href="_frame_8hpp_source.html#l00045">45</a> of file <a class="el" href="_frame_8hpp_source.html">Frame.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9cb2ae23ca2ee1bfceec280b38d01ed2"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Frame::incScopeCountToDelete </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Increment the number of scopes linked to this frame. </p>
-<p>Needed for the primitive garbage collecting system. </p>
-
-<p>Definition at line <a class="el" href="_frame_8hpp_source.html#l00052">52</a> of file <a class="el" href="_frame_8hpp_source.html">Frame.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a02956c64ffb7b624272309f343cf35a5"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Frame::resetScopeCountToDelete </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reset the number of scopes linked to this frame. </p>
-<p>Needed for the primitive garbage collecting system. </p>
-
-<p>Definition at line <a class="el" href="_frame_8hpp_source.html#l00057">57</a> of file <a class="el" href="_frame_8hpp_source.html">Frame.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab0d8f22b73fe7acc95cf2d5efb0772ec"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t Frame::scopeCountToDelete </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the number of scopes linked to this frame. </p>
-<p>Needed for the primitive garbage collecting system.</p>
-<dl class="section return"><dt>Returns</dt><dd>uint8_t </dd></dl>
-
-<p>Definition at line <a class="el" href="_frame_8hpp_source.html#l00062">62</a> of file <a class="el" href="_frame_8hpp_source.html">Frame.hpp</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/Ark/VM/<a class="el" href="_frame_8hpp_source.html">Frame.hpp</a></li>
-<li>include/Ark/VM/inline/<a class="el" href="_frame_8inl_source.html">Frame.inl</a></li>
 <li>src/VM/<a class="el" href="_frame_8cpp_source.html">Frame.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 10 2020 09:14:04 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 30 2020 13:58:03 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,6 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="class_ark_1_1_optimizer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Ark::Optimizer Class Reference</div>  </div>
@@ -112,11 +113,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adf07a88c6cb61dc77e8abd88aa3fa64c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_ark_1_1internal_1_1_node.html">internal::Node</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_optimizer.html#adf07a88c6cb61dc77e8abd88aa3fa64c">ast</a> () const noexcept</td></tr>
 <tr class="memdesc:adf07a88c6cb61dc77e8abd88aa3fa64c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the modified AST.  <a href="#adf07a88c6cb61dc77e8abd88aa3fa64c">More...</a><br /></td></tr>
 <tr class="separator:adf07a88c6cb61dc77e8abd88aa3fa64c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a753252ac29d03ec1edc8133f81aae171"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_optimizer.html#a753252ac29d03ec1edc8133f81aae171">throwOptimizerError</a> (const std::string &amp;message, const <a class="el" href="class_ark_1_1internal_1_1_node.html">internal::Node</a> &amp;node)</td></tr>
+<tr class="memdesc:a753252ac29d03ec1edc8133f81aae171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a fancy error message.  <a href="#a753252ac29d03ec1edc8133f81aae171">More...</a><br /></td></tr>
+<tr class="separator:a753252ac29d03ec1edc8133f81aae171"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The ArkScript AST optimizer. </p>
 
-<p>Definition at line <a class="el" href="_optimizer_8hpp_source.html#l00029">29</a> of file <a class="el" href="_optimizer_8hpp_source.html">Optimizer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_optimizer_8hpp_source.html#l00030">30</a> of file <a class="el" href="_optimizer_8hpp_source.html">Optimizer.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a5c3536afe79b07936479ee7716e7abe1"></a>
 <div class="memitem">
@@ -172,6 +179,49 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a753252ac29d03ec1edc8133f81aae171"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ark::Optimizer::throwOptimizerError </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_ark_1_1internal_1_1_node.html">internal::Node</a> &amp;&#160;</td>
+          <td class="paramname"><em>node</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate a fancy error message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td></td></tr>
+    <tr><td class="paramname">node</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/Ark/Compiler/<a class="el" href="_optimizer_8hpp_source.html">Optimizer.hpp</a></li>
 <li>src/Compiler/<a class="el" href="_optimizer_8cpp_source.html">Optimizer.cpp</a></li>
@@ -179,7 +229,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 10 2020 09:14:04 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 30 2020 13:58:01 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

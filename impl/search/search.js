@@ -11,7 +11,8 @@ var indexSectionsWithContent =
   1: "abcflnopstuvz",
   2: "abcefilnoprsuv",
   3: "_abcdefghiklmnoprstuv~",
-  4: "t"
+  4: "m",
+  5: "t"
 };
 
 var indexSectionNames =
@@ -20,7 +21,8 @@ var indexSectionNames =
   1: "classes",
   2: "files",
   3: "functions",
-  4: "pages"
+  4: "variables",
+  5: "pages"
 };
 
 function convertToId(search)

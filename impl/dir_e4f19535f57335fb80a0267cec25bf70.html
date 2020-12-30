@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -64,7 +65,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -86,21 +87,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="files"></a>
 Files</h2></td></tr>
-<tr class="memitem:_bytecode_reader_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>BytecodeReader.hpp</b> <a href="_bytecode_reader_8hpp_source.html">[code]</a></td></tr>
+<tr class="memitem:_bytecode_reader_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bytecode_reader_8hpp.html">BytecodeReader.hpp</a> <a href="_bytecode_reader_8hpp_source.html">[code]</a></td></tr>
+<tr class="memdesc:_bytecode_reader_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bytecode disassembler for ArkScript. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:_compiler_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>Compiler.hpp</b> <a href="_compiler_8hpp_source.html">[code]</a></td></tr>
+<tr class="memitem:_compiler_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_compiler_8hpp.html">Compiler.hpp</a> <a href="_compiler_8hpp_source.html">[code]</a></td></tr>
+<tr class="memdesc:_compiler_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">ArkScript compiler is in charge of transforming the AST into bytecode. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:_compiler_8inl"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>Compiler.inl</b> <a href="_compiler_8inl_source.html">[code]</a></td></tr>
+<tr class="memitem:_c_value_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_value_8hpp.html">CValue.hpp</a> <a href="_c_value_8hpp_source.html">[code]</a></td></tr>
+<tr class="memdesc:_c_value_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">The basic value type handled by the compiler. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:_c_value_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>CValue.hpp</b> <a href="_c_value_8hpp_source.html">[code]</a></td></tr>
+<tr class="memitem:_instructions_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_instructions_8hpp.html">Instructions.hpp</a> <a href="_instructions_8hpp_source.html">[code]</a></td></tr>
+<tr class="memdesc:_instructions_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">The different instructions used by the compiler and virtual machine. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:_instructions_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>Instructions.hpp</b> <a href="_instructions_8hpp_source.html">[code]</a></td></tr>
+<tr class="memitem:_lexer_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lexer_8hpp.html">Lexer.hpp</a> <a href="_lexer_8hpp_source.html">[code]</a></td></tr>
+<tr class="memdesc:_lexer_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tokenize ArkScript code. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:_node_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_node_8hpp.html">Node.hpp</a> <a href="_node_8hpp_source.html">[code]</a></td></tr>
+<tr class="memdesc:_node_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">AST node used by the parser, optimizer and compiler. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:_optimizer_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_optimizer_8hpp.html">Optimizer.hpp</a> <a href="_optimizer_8hpp_source.html">[code]</a></td></tr>
+<tr class="memdesc:_optimizer_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimizes a given ArkScript AST. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:_parser_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_parser_8hpp.html">Parser.hpp</a> <a href="_parser_8hpp_source.html">[code]</a></td></tr>
+<tr class="memdesc:_parser_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a token stream into an AST by using the <a class="el" href="class_ark_1_1internal_1_1_node.html" title="A node of an Abstract Syntax Tree for ArkScript. ">Ark::internal::Node</a>. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2020 19:11:06 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 30 2020 13:58:04 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

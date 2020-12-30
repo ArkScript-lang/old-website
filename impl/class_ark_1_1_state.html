@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -113,7 +113,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a02076aa4cbeacde9fdc7cb294a543871"><td class="mdescLeft">&#160;</td><td class="mdescRight">Feed the state with ArkScript bytecode.  <a href="#a02076aa4cbeacde9fdc7cb294a543871">More...</a><br /></td></tr>
 <tr class="separator:a02076aa4cbeacde9fdc7cb294a543871"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad647def207227837eb23338fc6bed7f8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#ad647def207227837eb23338fc6bed7f8">doFile</a> (const std::string &amp;filename)</td></tr>
-<tr class="memdesc:ad647def207227837eb23338fc6bed7f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a file <em>only</em> if needed, and use the resulting bytecode.  <a href="#ad647def207227837eb23338fc6bed7f8">More...</a><br /></td></tr>
+<tr class="memdesc:ad647def207227837eb23338fc6bed7f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a file, and use the resulting bytecode.  <a href="#ad647def207227837eb23338fc6bed7f8">More...</a><br /></td></tr>
 <tr class="separator:ad647def207227837eb23338fc6bed7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3fda5c7fbf90319871e4057b28f84c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#ae3fda5c7fbf90319871e4057b28f84c8">doString</a> (const std::string &amp;code)</td></tr>
 <tr class="memdesc:ae3fda5c7fbf90319871e4057b28f84c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a string (representing ArkScript code) and store resulting bytecode in m_bytecode.  <a href="#ae3fda5c7fbf90319871e4057b28f84c8">More...</a><br /></td></tr>
@@ -121,6 +121,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a31505924979cc54dd107681f37f1a1dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#a31505924979cc54dd107681f37f1a1dd">loadFunction</a> (const std::string &amp;name, internal::Value::ProcType function) noexcept</td></tr>
 <tr class="memdesc:a31505924979cc54dd107681f37f1a1dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a function in the virtual machine.  <a href="#a31505924979cc54dd107681f37f1a1dd">More...</a><br /></td></tr>
 <tr class="separator:a31505924979cc54dd107681f37f1a1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa852b784bc447702c336b05ffddcaa98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#aa852b784bc447702c336b05ffddcaa98">setArgs</a> (const std::vector&lt; std::string &gt; &amp;args) noexcept</td></tr>
+<tr class="memdesc:aa852b784bc447702c336b05ffddcaa98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the script arguments in sys:args.  <a href="#aa852b784bc447702c336b05ffddcaa98">More...</a><br /></td></tr>
+<tr class="separator:aa852b784bc447702c336b05ffddcaa98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1dbcc1d68374da8d09433aadb3a7b05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#ad1dbcc1d68374da8d09433aadb3a7b05">setDebug</a> (unsigned level) noexcept</td></tr>
 <tr class="memdesc:ad1dbcc1d68374da8d09433aadb3a7b05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the debug level.  <a href="#ad1dbcc1d68374da8d09433aadb3a7b05">More...</a><br /></td></tr>
 <tr class="separator:ad1dbcc1d68374da8d09433aadb3a7b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -188,7 +191,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00013">13</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00014">14</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 
 </div>
 </div>
@@ -218,7 +221,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <dd>
 false on failure </dd></dl>
 
-<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00026">26</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00043">43</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 
 </div>
 </div>
@@ -247,7 +250,7 @@ false on failure </dd></dl>
 <dd>
 false on failure </dd></dl>
 
-<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00047">47</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00064">64</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 
 </div>
 </div>
@@ -265,7 +268,7 @@ false on failure </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Compile a file <em>only</em> if needed, and use the resulting bytecode. </p>
+<p>Compile a file, and use the resulting bytecode. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>path to an ArkScript code file </td></tr>
@@ -276,7 +279,7 @@ false on failure </dd></dl>
 <dd>
 false on failure </dd></dl>
 
-<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00092">92</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00109">109</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 
 </div>
 </div>
@@ -305,7 +308,7 @@ false on failure </dd></dl>
 <dd>
 false on failure </dd></dl>
 
-<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00159">159</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00157">157</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 
 </div>
 </div>
@@ -350,7 +353,41 @@ false on failure </dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00184">184</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00180">180</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa852b784bc447702c336b05ffddcaa98"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ark::State::setArgs </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the script arguments in sys:args. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00185">185</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 
 </div>
 </div>
@@ -384,7 +421,7 @@ false on failure </dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00189">189</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00193">193</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 
 </div>
 </div>
@@ -418,7 +455,7 @@ false on failure </dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00194">194</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00198">198</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 
 </div>
 </div>
@@ -487,7 +524,7 @@ false on failure </dd></dl>
 <dd>
 false on failure and raise an exception </dd></dl>
 
-<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00064">64</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00081">81</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 
 </div>
 </div>
@@ -498,7 +535,7 @@ false on failure and raise an exception </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 10 2020 09:14:04 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 30 2020 13:58:02 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

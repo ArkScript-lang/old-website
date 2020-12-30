@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0fc753815adf631039e8f93bf08a1393.html">lib</a></li><li class="navelem"><a class="el" href="dir_ecd4e685b4cbffd967a3d7f8d8f33319.html">ext</a></li><li class="navelem"><a class="el" href="dir_863b22a0d9134e922b1eebc5e6625ace.html">http</a></li><li class="navelem"><a class="el" href="dir_33bc9de511206d7535d4e11c609e5c3c.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6e0914821bfca1f501651442b1f58e25.html">lib</a></li><li class="navelem"><a class="el" href="dir_df970774a8b080190a9e20a8c7729596.html">ext</a></li><li class="navelem"><a class="el" href="dir_06017f4522b2990f26da9b981e3cd0ec.html">http</a></li><li class="navelem"><a class="el" href="dir_62be15db532d2f05e2a366f3f47ce50d.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -92,49 +92,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;http_module.hpp&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// module functions mapping</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;ARK_API_EXPORT Mapping_t getFunctionsMapping()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;ARK_API_EXPORT mapping* getFunctionsMapping()</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    Mapping_t map;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    mapping* map = mapping_create(28);</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="comment">// Server</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    map[<span class="stringliteral">&quot;http:server:create&quot;</span>] = http_create_server;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    map[<span class="stringliteral">&quot;http:server:get&quot;</span>] = http_server_get;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    map[<span class="stringliteral">&quot;http:server:post&quot;</span>] = http_server_post;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    map[<span class="stringliteral">&quot;http:server:put&quot;</span>] = http_server_put;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    map[<span class="stringliteral">&quot;http:server:delete&quot;</span>] = http_server_delete;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    map[<span class="stringliteral">&quot;http:server:stop&quot;</span>] = http_server_stop;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    map[<span class="stringliteral">&quot;http:server:listen&quot;</span>] = http_server_listen;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    map[<span class="stringliteral">&quot;http:server:setMountPoint&quot;</span>] = http_server_set_mount_point;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    map[<span class="stringliteral">&quot;http:server:rmMountPoint&quot;</span>] = http_server_remove_mount_point;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    map[<span class="stringliteral">&quot;http:server:setFileExtAndMimetypeMapping&quot;</span>] = http_server_set_fext_mimetype;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    map[<span class="stringliteral">&quot;http:server:enableLogger&quot;</span>] = http_server_enable_logger;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    mapping_add(map[0], <span class="stringliteral">&quot;http:server:create&quot;</span>, http_create_server);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    mapping_add(map[1], <span class="stringliteral">&quot;http:server:get&quot;</span>, http_server_get);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    mapping_add(map[2], <span class="stringliteral">&quot;http:server:post&quot;</span>, http_server_post);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    mapping_add(map[3], <span class="stringliteral">&quot;http:server:put&quot;</span>, http_server_put);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    mapping_add(map[4], <span class="stringliteral">&quot;http:server:delete&quot;</span>, http_server_delete);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    mapping_add(map[5], <span class="stringliteral">&quot;http:server:stop&quot;</span>, http_server_stop);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    mapping_add(map[6], <span class="stringliteral">&quot;http:server:listen&quot;</span>, http_server_listen);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    mapping_add(map[7], <span class="stringliteral">&quot;http:server:setMountPoint&quot;</span>, http_server_set_mount_point);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    mapping_add(map[8], <span class="stringliteral">&quot;http:server:rmMountPoint&quot;</span>, http_server_remove_mount_point);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    mapping_add(map[9], <span class="stringliteral">&quot;http:server:setFileExtAndMimetypeMapping&quot;</span>, http_server_set_fext_mimetype);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    mapping_add(map[10], <span class="stringliteral">&quot;http:server:enableLogger&quot;</span>, http_server_enable_logger);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// Client</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    map[<span class="stringliteral">&quot;http:headers:create&quot;</span>] = http_create_headers;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    map[<span class="stringliteral">&quot;http:client:create&quot;</span>] = http_create_client;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    map[<span class="stringliteral">&quot;http:client:get&quot;</span>] = http_client_get;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    map[<span class="stringliteral">&quot;http:params:create&quot;</span>] = http_create_params;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    map[<span class="stringliteral">&quot;http:client:post&quot;</span>] = http_client_post;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    map[<span class="stringliteral">&quot;http:client:put&quot;</span>] = http_client_put;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    map[<span class="stringliteral">&quot;http:client:delete&quot;</span>] = http_client_delete;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    map[<span class="stringliteral">&quot;http:client:setFollowLocation&quot;</span>] = http_client_set_follow_location;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    mapping_add(map[11], <span class="stringliteral">&quot;http:headers:create&quot;</span>, http_create_headers);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    mapping_add(map[12], <span class="stringliteral">&quot;http:client:create&quot;</span>, http_create_client);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    mapping_add(map[13], <span class="stringliteral">&quot;http:client:get&quot;</span>, http_client_get);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    mapping_add(map[14], <span class="stringliteral">&quot;http:params:create&quot;</span>, http_create_params);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    mapping_add(map[15], <span class="stringliteral">&quot;http:client:post&quot;</span>, http_client_post);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    mapping_add(map[16], <span class="stringliteral">&quot;http:client:put&quot;</span>, http_client_put);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    mapping_add(map[17], <span class="stringliteral">&quot;http:client:delete&quot;</span>, http_client_delete);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    mapping_add(map[18], <span class="stringliteral">&quot;http:client:setFollowLocation&quot;</span>, http_client_set_follow_location);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    map[<span class="stringliteral">&quot;http:client:setConnectionTimeout&quot;</span>] = http_client_set_co_timeout;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    map[<span class="stringliteral">&quot;http:client:setReadTimeout&quot;</span>] = http_client_set_read_timeout;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    map[<span class="stringliteral">&quot;http:client:setWriteTimeout&quot;</span>] = http_client_set_write_timeout;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    map[<span class="stringliteral">&quot;http:client:setBasicAuth&quot;</span>] = http_client_set_basic_auth;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    map[<span class="stringliteral">&quot;http:client:setBearerTokenAuth&quot;</span>] = http_client_set_bearer_token_auth;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    map[<span class="stringliteral">&quot;http:client:setKeepAlive&quot;</span>] = http_client_set_keep_alive;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    map[<span class="stringliteral">&quot;http:client:setProxy&quot;</span>] = http_client_set_proxy;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    map[<span class="stringliteral">&quot;http:client:setProxyBasicAuth&quot;</span>] = http_client_set_proxy_basic_auth;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    map[<span class="stringliteral">&quot;http:client:setProxyBearerTokenAuth&quot;</span>] = http_client_set_proxy_bearer_token_auth;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> map;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// Client</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    mapping_add(map[19], <span class="stringliteral">&quot;http:client:setConnectionTimeout&quot;</span>, http_client_set_co_timeout);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    mapping_add(map[20], <span class="stringliteral">&quot;http:client:setReadTimeout&quot;</span>, http_client_set_read_timeout);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    mapping_add(map[21], <span class="stringliteral">&quot;http:client:setWriteTimeout&quot;</span>, http_client_set_write_timeout);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    mapping_add(map[22], <span class="stringliteral">&quot;http:client:setBasicAuth&quot;</span>, http_client_set_basic_auth);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    mapping_add(map[23], <span class="stringliteral">&quot;http:client:setBearerTokenAuth&quot;</span>, http_client_set_bearer_token_auth);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    mapping_add(map[24], <span class="stringliteral">&quot;http:client:setKeepAlive&quot;</span>, http_client_set_keep_alive);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    mapping_add(map[25], <span class="stringliteral">&quot;http:client:setProxy&quot;</span>, http_client_set_proxy);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    mapping_add(map[26], <span class="stringliteral">&quot;http:client:setProxyBasicAuth&quot;</span>, http_client_set_proxy_basic_auth);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    mapping_add(map[27], <span class="stringliteral">&quot;http:client:setProxyBearerTokenAuth&quot;</span>, http_client_set_proxy_bearer_token_auth);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> map;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 10 2020 09:14:03 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 30 2020 13:43:53 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -102,13 +102,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#a02076aa4cbeacde9fdc7cb294a543871">feed</a>(const bytecode_t &amp;bytecode)</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#a31505924979cc54dd107681f37f1a1dd">loadFunction</a>(const std::string &amp;name, internal::Value::ProcType function) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#a877e05afb005b6b1cf580bd026892899">reset</a>() noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#ad1dbcc1d68374da8d09433aadb3a7b05">setDebug</a>(unsigned level) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#a91a6395162c1ee277731c100a7513ddf">setLibDir</a>(const std::string &amp;libDir) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#a4ce60250b6ece57bea02fff82994ce0e">State</a>(uint16_t options=DefaultFeatures, const std::string &amp;libdir=&quot;?&quot;) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#aa852b784bc447702c336b05ffddcaa98">setArgs</a>(const std::vector&lt; std::string &gt; &amp;args) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#ad1dbcc1d68374da8d09433aadb3a7b05">setDebug</a>(unsigned level) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#a91a6395162c1ee277731c100a7513ddf">setLibDir</a>(const std::string &amp;libDir) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#a4ce60250b6ece57bea02fff82994ce0e">State</a>(uint16_t options=DefaultFeatures, const std::string &amp;libdir=&quot;?&quot;) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 10 2020 09:14:04 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 30 2020 13:58:02 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_8c4318cdc491a9c73c11e1888ff7ee66.html">include</a></li><li class="navelem"><a class="el" href="dir_5604a9ac40877a8858fc922df7b05ef9.html">Ark</a></li><li class="navelem"><a class="el" href="dir_aef181cab0e588d5bfc6226659d40821.html">Compiler</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_781a7f3f79ad07b5fe9ffc7cb2e494a0.html">include</a></li><li class="navelem"><a class="el" href="dir_01e4cb7beeedabca4ee02ac580d34a82.html">Ark</a></li><li class="navelem"><a class="el" href="dir_f0230ff271b27c2ee91f23600151ecb4.html">Compiler</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// return a code page between the finalized ones and the temporary ones</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// based on index sent</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">inline</span> std::vector&lt;internal::Inst&gt;&amp; Compiler::page(<span class="keywordtype">int</span> i) noexcept</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">inline</span> std::vector&lt;internal::Inst_t&gt;&amp; Compiler::page(<span class="keywordtype">int</span> i) noexcept</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordflow">if</span> (i &gt;= 0)</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        <span class="keywordflow">return</span> m_code_pages[i];</div>
@@ -122,14 +122,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::string splitted = Utils::splitString(name, <span class="charliteral">&#39;:&#39;</span>)[0];</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">auto</span> it = std::find_if(m_plugins.begin(), m_plugins.end(),</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        [&amp;splitted](<span class="keyword">const</span> std::string&amp; plugin) -&gt; <span class="keywordtype">bool</span> {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">return</span> Utils::splitString(plugin, <span class="charliteral">&#39;.&#39;</span>)[0] == splitted;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">return</span> std::filesystem::path(plugin).stem().string() == splitted;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    });</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> it != m_plugins.end();</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> Compiler::throwCompilerError(<span class="keyword">const</span> std::string&amp; message, <span class="keyword">const</span> internal::Node&amp; node)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::stringstream ss;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    ss &lt;&lt; message &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (node.filename() != ARK_NO_NAME_FILE)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        ss &lt;&lt; <span class="stringliteral">&quot;In file &quot;</span> &lt;&lt; node.filename() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    ss &lt;&lt; <span class="stringliteral">&quot;On line &quot;</span> &lt;&lt; (node.line() + 1) &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; node.col() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (node.filename() != ARK_NO_NAME_FILE)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        std::vector&lt;std::string&gt; ctx = Utils::splitString(Utils::readFile(node.filename()), <span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=3; i &gt; -3; --i)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordtype">int</span> iline = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(node.line());</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">if</span> (iline - i &gt;= 0 &amp;&amp; iline - i &lt; ctx.size())</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="comment">// + 1 to display real lines numbers</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                ss &lt;&lt; std::setw(5) &lt;&lt; (iline - i + 1) &lt;&lt; <span class="stringliteral">&quot; | &quot;</span> &lt;&lt; ctx[iline - i] &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">if</span> (i == 0)  <span class="comment">// line of the error</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                ss &lt;&lt; <span class="stringliteral">&quot;      | &quot;</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="comment">// padding of spaces</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordflow">for</span> (std::size_t j=0; (node.string().size() &gt; node.col()) ? <span class="keyword">false</span> : (j &lt; node.col()); ++j)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    ss &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="comment">// show the error</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">for</span> (std::size_t j=0; (node.string().size() &gt; node.col()) ? (j &lt; ctx[node.line()].size()) : (j &lt; node.string().size()); ++j)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    ss &lt;&lt; <span class="stringliteral">&quot;^&quot;</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                ss &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="class_ark_1_1_compilation_error.html">Ark::CompilationError</a>(ss.str());</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="ttc" id="class_ark_1_1_compilation_error_html"><div class="ttname"><a href="class_ark_1_1_compilation_error.html">Ark::CompilationError</a></div><div class="ttdoc">CompilationError thrown by the compiler. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00156">Exceptions.hpp:156</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 10 2020 09:14:02 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 30 2020 13:43:48 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

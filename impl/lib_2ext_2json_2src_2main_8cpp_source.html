@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0fc753815adf631039e8f93bf08a1393.html">lib</a></li><li class="navelem"><a class="el" href="dir_ecd4e685b4cbffd967a3d7f8d8f33319.html">ext</a></li><li class="navelem"><a class="el" href="dir_8ec98f2b14304f6bbab36ee4f0f8d5bf.html">json</a></li><li class="navelem"><a class="el" href="dir_f2f87bcb1d9787f6217b2ad06107b59a.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6e0914821bfca1f501651442b1f58e25.html">lib</a></li><li class="navelem"><a class="el" href="dir_df970774a8b080190a9e20a8c7729596.html">ext</a></li><li class="navelem"><a class="el" href="dir_04ba6d2982207fe815ee70371f8ff581.html">json</a></li><li class="navelem"><a class="el" href="dir_0d8c4ced2c70942e4f3ccb7767b98cb5.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -171,7 +171,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (obj.is_boolean())</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">return</span> obj.get&lt;<span class="keywordtype">bool</span>&gt;() ? True : False;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (obj.is_number())</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">return</span> obj.get&lt;<span class="keywordtype">double</span>&gt;();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">return</span> Value(obj.get&lt;<span class="keywordtype">double</span>&gt;());</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (obj.is_array())</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        {</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            Value v(ValueType::List);</div>
@@ -180,7 +180,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">return</span> v;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (obj.is_string())</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">return</span> obj.get&lt;std::string&gt;();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">return</span> Value(obj.get&lt;std::string&gt;());</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">else</span>  <span class="comment">// is_object() == true</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        {</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            nlohmann::json* ptr = get_json_object().emplace_back(std::make_unique&lt;nlohmann::json&gt;(obj)).get();</div>
@@ -221,7 +221,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_ark_1_1_type_error.html">Ark::TypeError</a>(<span class="stringliteral">&quot;json:toString: json must be a jsonObject&quot;</span>); </div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        nlohmann::json&amp; json_object = args[0].usertype_ref().as&lt;nlohmann::json&gt;();</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">return</span> json_object.dump();</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">return</span> Value(json_object.dump());</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    nlohmann::json listToJson(std::vector&lt;Value&gt;&amp; arkList)</div>
@@ -406,17 +406,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    }</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;}</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;ARK_API_EXPORT Mapping_t getFunctionsMapping()</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;ARK_API_EXPORT mapping* getFunctionsMapping()</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;{</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    Mapping_t map;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    mapping* map = mapping_create(7);</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    map[<span class="stringliteral">&quot;json:open&quot;</span>] = json::open;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    map[<span class="stringliteral">&quot;json:get&quot;</span>] = json::get;</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    map[<span class="stringliteral">&quot;json:toString&quot;</span>] = json::toString;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    map[<span class="stringliteral">&quot;json:fromString&quot;</span>] = json::fromString;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    map[<span class="stringliteral">&quot;json:set&quot;</span>] = json::jset;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    map[<span class="stringliteral">&quot;json:write&quot;</span>] = json::write;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    map[<span class="stringliteral">&quot;json:fromList&quot;</span>] = json::fromList;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    mapping_add(map[0], <span class="stringliteral">&quot;json:open&quot;</span>, json::open);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    mapping_add(map[1], <span class="stringliteral">&quot;json:get&quot;</span>, json::get);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    mapping_add(map[2], <span class="stringliteral">&quot;json:toString&quot;</span>, json::toString);</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    mapping_add(map[3], <span class="stringliteral">&quot;json:fromString&quot;</span>, json::fromString);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    mapping_add(map[4], <span class="stringliteral">&quot;json:set&quot;</span>, json::jset);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    mapping_add(map[5], <span class="stringliteral">&quot;json:write&quot;</span>, json::write);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    mapping_add(map[6], <span class="stringliteral">&quot;json:fromList&quot;</span>, json::fromList);</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordflow">return</span> map;</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;}</div>
@@ -428,7 +428,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 10 2020 09:14:03 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 30 2020 13:43:53 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

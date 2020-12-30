@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0fc753815adf631039e8f93bf08a1393.html">lib</a></li><li class="navelem"><a class="el" href="dir_ecd4e685b4cbffd967a3d7f8d8f33319.html">ext</a></li><li class="navelem"><a class="el" href="dir_863b22a0d9134e922b1eebc5e6625ace.html">http</a></li><li class="navelem"><a class="el" href="dir_33bc9de511206d7535d4e11c609e5c3c.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6e0914821bfca1f501651442b1f58e25.html">lib</a></li><li class="navelem"><a class="el" href="dir_df970774a8b080190a9e20a8c7729596.html">ext</a></li><li class="navelem"><a class="el" href="dir_06017f4522b2990f26da9b981e3cd0ec.html">http</a></li><li class="navelem"><a class="el" href="dir_62be15db532d2f05e2a366f3f47ce50d.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -151,10 +151,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                {</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    <span class="comment">// craft params</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    std::vector&lt;std::unique_ptr&lt;Params&gt;&gt;&amp; p = get_params();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    p.emplace_back(std::make_unique&lt;Params&gt;(req.params));</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    std::list&lt;Params&gt;&amp; p = get_params();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    p.emplace_back(req.params);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    Value params = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(p.back().get()));</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    Value params = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(&amp;p.back()));</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    params.usertype_ref().setControlFuncs(get_cfs_param());</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    Value r = vm-&gt;<a class="code" href="class_ark_1_1_v_m.html#a810b761ab6cbfb005fc86c870b7557e7">resolve</a>(&amp;n[2], matches, params);</div>
@@ -170,10 +170,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (req.params.size() != 0)</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            {</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="comment">// craft params</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                std::vector&lt;std::unique_ptr&lt;Params&gt;&gt;&amp; p = get_params();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                p.emplace_back(std::make_unique&lt;Params&gt;(req.params));</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                std::list&lt;Params&gt;&amp; p = get_params();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                p.emplace_back(req.params);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                Value params = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(p.back().get()));</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                Value params = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(&amp;p.back()));</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                params.usertype_ref().setControlFuncs(get_cfs_param());</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                Value r = vm-&gt;<a class="code" href="class_ark_1_1_v_m.html#a810b761ab6cbfb005fc86c870b7557e7">resolve</a>(&amp;n[2], params);</div>
@@ -243,10 +243,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            {</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                <span class="comment">// craft params</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                std::vector&lt;std::unique_ptr&lt;Params&gt;&gt;&amp; p = get_params();</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                p.emplace_back(std::make_unique&lt;Params&gt;(req.params));</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                std::list&lt;Params&gt;&amp; p = get_params();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                p.emplace_back(req.params);</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                Value params = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(p.back().get()));</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                Value params = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(&amp;p.back()));</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                params.usertype_ref().setControlFuncs(get_cfs_param());</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                Value r = vm-&gt;<a class="code" href="class_ark_1_1_v_m.html#a810b761ab6cbfb005fc86c870b7557e7">resolve</a>(&amp;n[2], matches, req.body, params);</div>
@@ -262,10 +262,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (req.params.size() != 0)</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        {</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="comment">// craft params</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            std::vector&lt;std::unique_ptr&lt;Params&gt;&gt;&amp; p = get_params();</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            p.emplace_back(std::make_unique&lt;Params&gt;(req.params));</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            std::list&lt;Params&gt;&amp; p = get_params();</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            p.emplace_back(req.params);</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            Value params = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(p.back().get()));</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            Value params = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(&amp;p.back()));</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            params.usertype_ref().setControlFuncs(get_cfs_param());</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            Value r = vm-&gt;<a class="code" href="class_ark_1_1_v_m.html#a810b761ab6cbfb005fc86c870b7557e7">resolve</a>(&amp;n[2], req.body, params);</div>
@@ -334,10 +334,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            {</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                <span class="comment">// craft params</span></div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                std::vector&lt;std::unique_ptr&lt;Params&gt;&gt;&amp; p = get_params();</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                p.emplace_back(std::make_unique&lt;Params&gt;(req.params));</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                std::list&lt;Params&gt;&amp; p = get_params();</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                p.emplace_back(req.params);</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                Value params = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(p.back().get()));</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                Value params = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(&amp;p.back()));</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                params.usertype_ref().setControlFuncs(get_cfs_param());</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                Value r = vm-&gt;<a class="code" href="class_ark_1_1_v_m.html#a810b761ab6cbfb005fc86c870b7557e7">resolve</a>(&amp;n[2], matches, req.body, params);</div>
@@ -353,10 +353,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (req.params.size() != 0)</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        {</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <span class="comment">// craft params</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            std::vector&lt;std::unique_ptr&lt;Params&gt;&gt;&amp; p = get_params();</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            p.emplace_back(std::make_unique&lt;Params&gt;(req.params));</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            std::list&lt;Params&gt;&amp; p = get_params();</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            p.emplace_back(req.params);</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            Value params = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(p.back().get()));</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            Value params = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(&amp;p.back()));</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            params.usertype_ref().setControlFuncs(get_cfs_param());</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            Value r = vm-&gt;<a class="code" href="class_ark_1_1_v_m.html#a810b761ab6cbfb005fc86c870b7557e7">resolve</a>(&amp;n[2], req.body, params);</div>
@@ -425,10 +425,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            {</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                <span class="comment">// craft params</span></div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                std::vector&lt;std::unique_ptr&lt;Params&gt;&gt;&amp; p = get_params();</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                p.emplace_back(std::make_unique&lt;Params&gt;(req.params));</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                std::list&lt;Params&gt;&amp; p = get_params();</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                p.emplace_back(req.params);</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                Value params = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(p.back().get()));</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                Value params = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(&amp;p.back()));</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                params.usertype_ref().setControlFuncs(get_cfs_param());</div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                Value r = vm-&gt;<a class="code" href="class_ark_1_1_v_m.html#a810b761ab6cbfb005fc86c870b7557e7">resolve</a>(&amp;n[2], matches, req.body, params);</div>
@@ -444,10 +444,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (req.params.size() != 0)</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        {</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            <span class="comment">// craft params</span></div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            std::vector&lt;std::unique_ptr&lt;Params&gt;&gt;&amp; p = get_params();</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            p.emplace_back(std::make_unique&lt;Params&gt;(req.params));</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            std::list&lt;Params&gt;&amp; p = get_params();</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            p.emplace_back(req.params);</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            Value params = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(p.back().get()));</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            Value params = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(&amp;p.back()));</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            params.usertype_ref().setControlFuncs(get_cfs_param());</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;</div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            Value r = vm-&gt;<a class="code" href="class_ark_1_1_v_m.html#a810b761ab6cbfb005fc86c870b7557e7">resolve</a>(&amp;n[2], req.body, params);</div>
@@ -578,14 +578,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;</div>
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    <span class="keywordflow">return</span> Nil;</div>
 <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;}</div>
-<div class="ttc" id="class_ark_1_1_v_m_html_a810b761ab6cbfb005fc86c870b7557e7"><div class="ttname"><a href="class_ark_1_1_v_m.html#a810b761ab6cbfb005fc86c870b7557e7">Ark::VM::resolve</a></div><div class="ttdeci">internal::Value resolve(const internal::Value *val, Args &amp;&amp;...args)</div><div class="ttdoc">Resolving a function call (called by plugins) </div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00198">VM.hpp:198</a></div></div>
+<div class="ttc" id="class_ark_1_1_v_m_html_a810b761ab6cbfb005fc86c870b7557e7"><div class="ttname"><a href="class_ark_1_1_v_m.html#a810b761ab6cbfb005fc86c870b7557e7">Ark::VM::resolve</a></div><div class="ttdeci">internal::Value resolve(const internal::Value *val, Args &amp;&amp;...args)</div><div class="ttdoc">Resolving a function call (called by plugins) </div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00229">VM.hpp:229</a></div></div>
 <div class="ttc" id="class_ark_1_1_user_type_html"><div class="ttname"><a href="class_ark_1_1_user_type.html">Ark::UserType</a></div><div class="ttdoc">A class to be use C++ objects in ArkScript. </div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00029">UserType.hpp:29</a></div></div>
 <div class="ttc" id="class_ark_1_1_type_error_html"><div class="ttname"><a href="class_ark_1_1_type_error.html">Ark::TypeError</a></div><div class="ttdoc">A type error triggered when types don&#39;t match. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00024">Exceptions.hpp:24</a></div></div>
 <div class="ttc" id="class_ark_1_1_v_m_html"><div class="ttname"><a href="class_ark_1_1_v_m.html">Ark::VM</a></div><div class="ttdoc">The ArkScript virtual machine, executing ArkScript bytecode. </div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00045">VM.hpp:45</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 10 2020 09:14:03 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 30 2020 13:43:51 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

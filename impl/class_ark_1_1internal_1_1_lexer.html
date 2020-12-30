@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -115,21 +115,21 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a46fe4b43daad16c28b5658b7feac3f04"><td class="memItemLeft" align="right" valign="top">TokenType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_lexer.html#a46fe4b43daad16c28b5658b7feac3f04">guessType</a> (const std::string &amp;value) noexcept</td></tr>
-<tr class="memdesc:a46fe4b43daad16c28b5658b7feac3f04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to determine the type of a token.  <a href="#a46fe4b43daad16c28b5658b7feac3f04">More...</a><br /></td></tr>
-<tr class="separator:a46fe4b43daad16c28b5658b7feac3f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a372a39308f4d2d353f8ae29934e04c82"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_lexer.html#a372a39308f4d2d353f8ae29934e04c82">isKeyword</a> (const std::string &amp;value) noexcept</td></tr>
-<tr class="memdesc:a372a39308f4d2d353f8ae29934e04c82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the value is a keyword in ArkScript.  <a href="#a372a39308f4d2d353f8ae29934e04c82">More...</a><br /></td></tr>
-<tr class="separator:a372a39308f4d2d353f8ae29934e04c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a760e1ecc5f793ecb7c41f2ee2cbc7b5d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_lexer.html#a760e1ecc5f793ecb7c41f2ee2cbc7b5d">isOperator</a> (const std::string &amp;value) noexcept</td></tr>
-<tr class="memdesc:a760e1ecc5f793ecb7c41f2ee2cbc7b5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the value is an operator in ArkScript.  <a href="#a760e1ecc5f793ecb7c41f2ee2cbc7b5d">More...</a><br /></td></tr>
-<tr class="separator:a760e1ecc5f793ecb7c41f2ee2cbc7b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76a9d4e3ab64af87a30c52714e030114"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_lexer.html#a76a9d4e3ab64af87a30c52714e030114">endOfControlChar</a> (const std::string &amp;sequence, char next) noexcept</td></tr>
-<tr class="memdesc:a76a9d4e3ab64af87a30c52714e030114"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a control character / sequence is complete or not.  <a href="#a76a9d4e3ab64af87a30c52714e030114">More...</a><br /></td></tr>
-<tr class="separator:a76a9d4e3ab64af87a30c52714e030114"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d4328b5b32b40d46569604c88ab0f4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_lexer.html#a3d4328b5b32b40d46569604c88ab0f4f">throwTokenizingError</a> (const std::string &amp;message, const std::string &amp;match, std::size_t line, std::size_t col, const std::string &amp;context)</td></tr>
-<tr class="memdesc:a3d4328b5b32b40d46569604c88ab0f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">To throw nice lexer errors.  <a href="#a3d4328b5b32b40d46569604c88ab0f4f">More...</a><br /></td></tr>
-<tr class="separator:a3d4328b5b32b40d46569604c88ab0f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9baf9a01cdbcd627f5956296c5a104ee"><td class="memItemLeft" align="right" valign="top">TokenType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_lexer.html#a9baf9a01cdbcd627f5956296c5a104ee">guessType</a> (const std::string &amp;value) noexcept</td></tr>
+<tr class="memdesc:a9baf9a01cdbcd627f5956296c5a104ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to determine the type of a token.  <a href="#a9baf9a01cdbcd627f5956296c5a104ee">More...</a><br /></td></tr>
+<tr class="separator:a9baf9a01cdbcd627f5956296c5a104ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b1f8a519822d05fdc731b9a9c679f18"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_lexer.html#a8b1f8a519822d05fdc731b9a9c679f18">isKeyword</a> (const std::string &amp;value) noexcept</td></tr>
+<tr class="memdesc:a8b1f8a519822d05fdc731b9a9c679f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the value is a keyword in ArkScript.  <a href="#a8b1f8a519822d05fdc731b9a9c679f18">More...</a><br /></td></tr>
+<tr class="separator:a8b1f8a519822d05fdc731b9a9c679f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0bd674e07ea972da9fdbee81112d7e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_lexer.html#ab0bd674e07ea972da9fdbee81112d7e4">isOperator</a> (const std::string &amp;value) noexcept</td></tr>
+<tr class="memdesc:ab0bd674e07ea972da9fdbee81112d7e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the value is an operator in ArkScript.  <a href="#ab0bd674e07ea972da9fdbee81112d7e4">More...</a><br /></td></tr>
+<tr class="separator:ab0bd674e07ea972da9fdbee81112d7e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae281f672659764d4fa09f922e797e3bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_lexer.html#ae281f672659764d4fa09f922e797e3bd">endOfControlChar</a> (const std::string &amp;sequence, char next) noexcept</td></tr>
+<tr class="memdesc:ae281f672659764d4fa09f922e797e3bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a control character / sequence is complete or not.  <a href="#ae281f672659764d4fa09f922e797e3bd">More...</a><br /></td></tr>
+<tr class="separator:ae281f672659764d4fa09f922e797e3bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef306f456235475da2a834a2eb0f7fed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_lexer.html#aef306f456235475da2a834a2eb0f7fed">throwTokenizingError</a> (const std::string &amp;message, const std::string &amp;match, std::size_t line, std::size_t col, const std::string &amp;context)</td></tr>
+<tr class="memdesc:aef306f456235475da2a834a2eb0f7fed"><td class="mdescLeft">&#160;</td><td class="mdescRight">To throw nice lexer errors.  <a href="#aef306f456235475da2a834a2eb0f7fed">More...</a><br /></td></tr>
+<tr class="separator:aef306f456235475da2a834a2eb0f7fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The lexer, in charge of creating a list of tokens. </p>
@@ -153,7 +153,7 @@ Private Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -166,7 +166,7 @@ Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_lexer_8cpp_source.html#l00008">8</a> of file <a class="el" href="_lexer_8cpp_source.html">Lexer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_lexer_8cpp_source.html#l00010">10</a> of file <a class="el" href="_lexer_8cpp_source.html">Lexer.cpp</a>.</p>
 
 </div>
 </div>
@@ -194,7 +194,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="_lexer_8cpp_source.html#l00012">12</a> of file <a class="el" href="_lexer_8cpp_source.html">Lexer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_lexer_8cpp_source.html#l00014">14</a> of file <a class="el" href="_lexer_8cpp_source.html">Lexer.cpp</a>.</p>
 
 </div>
 </div>
@@ -222,11 +222,11 @@ Private Member Functions</h2></td></tr>
 <p>Return the list of tokens. </p>
 <dl class="section return"><dt>Returns</dt><dd>const std::vector&lt;Token&gt;&amp; </dd></dl>
 
-<p>Definition at line <a class="el" href="_lexer_8cpp_source.html#l00230">230</a> of file <a class="el" href="_lexer_8cpp_source.html">Lexer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_lexer_8cpp_source.html#l00234">234</a> of file <a class="el" href="_lexer_8cpp_source.html">Lexer.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a46fe4b43daad16c28b5658b7feac3f04"></a>
+<a class="anchor" id="a9baf9a01cdbcd627f5956296c5a104ee"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -234,7 +234,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">TokenType Lexer::guessType </td>
+          <td class="memname">TokenType Ark::internal::Lexer::guessType </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
@@ -257,11 +257,9 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>TokenType </dd></dl>
 
-<p>Definition at line <a class="el" href="_lexer_8hpp_source.html#l00007">7</a> of file <a class="el" href="_lexer_8hpp_source.html">Lexer.hpp</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a372a39308f4d2d353f8ae29934e04c82"></a>
+<a class="anchor" id="a8b1f8a519822d05fdc731b9a9c679f18"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -269,7 +267,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Lexer::isKeyword </td>
+          <td class="memname">bool Ark::internal::Lexer::isKeyword </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
@@ -294,11 +292,9 @@ Private Member Functions</h2></td></tr>
 <dd>
 false </dd></dl>
 
-<p>Definition at line <a class="el" href="_lexer_8hpp_source.html#l00029">29</a> of file <a class="el" href="_lexer_8hpp_source.html">Lexer.hpp</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a760e1ecc5f793ecb7c41f2ee2cbc7b5d"></a>
+<a class="anchor" id="ab0bd674e07ea972da9fdbee81112d7e4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -306,7 +302,7 @@ false </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Lexer::isOperator </td>
+          <td class="memname">bool Ark::internal::Lexer::isOperator </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
@@ -331,11 +327,9 @@ false </dd></dl>
 <dd>
 false </dd></dl>
 
-<p>Definition at line <a class="el" href="_lexer_8hpp_source.html#l00034">34</a> of file <a class="el" href="_lexer_8hpp_source.html">Lexer.hpp</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a76a9d4e3ab64af87a30c52714e030114"></a>
+<a class="anchor" id="ae281f672659764d4fa09f922e797e3bd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -343,7 +337,7 @@ false </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Lexer::endOfControlChar </td>
+          <td class="memname">bool Ark::internal::Lexer::endOfControlChar </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>sequence</em>, </td>
@@ -379,11 +373,9 @@ false </dd></dl>
 <dd>
 false </dd></dl>
 
-<p>Definition at line <a class="el" href="_lexer_8hpp_source.html#l00039">39</a> of file <a class="el" href="_lexer_8hpp_source.html">Lexer.hpp</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a3d4328b5b32b40d46569604c88ab0f4f"></a>
+<a class="anchor" id="aef306f456235475da2a834a2eb0f7fed"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -391,7 +383,7 @@ false </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Lexer::throwTokenizingError </td>
+          <td class="memname">void Ark::internal::Lexer::throwTokenizingError </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>message</em>, </td>
@@ -445,19 +437,16 @@ false </dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_lexer_8hpp_source.html#l00068">68</a> of file <a class="el" href="_lexer_8hpp_source.html">Lexer.hpp</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/Ark/Compiler/<a class="el" href="_lexer_8hpp_source.html">Lexer.hpp</a></li>
-<li>include/Ark/Compiler/<a class="el" href="_lexer_8inl_source.html">Lexer.inl</a></li>
 <li>src/Compiler/<a class="el" href="_lexer_8cpp_source.html">Lexer.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 10 2020 09:14:04 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 30 2020 13:58:03 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

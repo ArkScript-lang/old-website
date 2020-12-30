@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_8c4318cdc491a9c73c11e1888ff7ee66.html">include</a></li><li class="navelem"><a class="el" href="dir_5604a9ac40877a8858fc922df7b05ef9.html">Ark</a></li><li class="navelem"><a class="el" href="dir_aef181cab0e588d5bfc6226659d40821.html">Compiler</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_781a7f3f79ad07b5fe9ffc7cb2e494a0.html">include</a></li><li class="navelem"><a class="el" href="dir_01e4cb7beeedabca4ee02ac580d34a82.html">Ark</a></li><li class="navelem"><a class="el" href="dir_f0230ff271b27c2ee91f23600151ecb4.html">Compiler</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -89,7 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Parser.inl</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> Parser::except(<span class="keywordtype">bool</span> pred, <span class="keyword">const</span> std::string&amp; message, internal::Token token)</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> Parser::expect(<span class="keywordtype">bool</span> pred, <span class="keyword">const</span> std::string&amp; message, internal::Token token)</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;{</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="keywordflow">if</span> (!pred)</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;        throwParseError(message, token);</div>
@@ -109,7 +109,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=3; i &gt; -3; --i)</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">int</span> iline = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(token.line);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">if</span> (iline &gt;= i)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">if</span> (iline - i &gt;= 0 &amp;&amp; iline - i &lt; ctx.size())</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="comment">// + 1 to display real lines numbers</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            ss &lt;&lt; std::setw(5) &lt;&lt; (iline - i + 1) &lt;&lt; <span class="stringliteral">&quot; | &quot;</span> &lt;&lt; ctx[iline - i] &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">if</span> (i == 0)  <span class="comment">// line of the error</span></div>
@@ -136,7 +136,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 10 2020 09:14:02 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 30 2020 13:43:49 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_67b0f6a0a2945fc5389cc58c347ef75a.html">src</a></li><li class="navelem"><a class="el" href="dir_df95b12f9d968c380475a839a1d51d99.html">Builtins</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7871fbf1f99f422398f59cd3e9e8a548.html">Builtins</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -146,7 +146,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">if</span> (n[1].valueType() != ValueType::String)</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_ark_1_1_type_error.html">Ark::TypeError</a>(STR_FIND_TE1);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> n[0].string_ref().find(n[1].string_ref());</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> Value(n[0].string_ref().find(n[1].string_ref()));</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    Value removeAtStr(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
@@ -167,7 +167,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
 <div class="ttc" id="_utils_8hpp_html"><div class="ttname"><a href="_utils_8hpp.html">Utils.hpp</a></div><div class="ttdoc">Lots of utilities about string, filesystem and more. </div></div>
-<div class="ttc" id="namespace_ark_1_1internal_1_1_builtins_1_1_string_html"><div class="ttname"><a href="namespace_ark_1_1internal_1_1_builtins_1_1_string.html">Ark::internal::Builtins::String</a></div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8hpp_source.html#l00076">Builtins.hpp:76</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_1_1_builtins_1_1_string_html"><div class="ttname"><a href="namespace_ark_1_1internal_1_1_builtins_1_1_string.html">Ark::internal::Builtins::String</a></div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8hpp_source.html#l00077">Builtins.hpp:77</a></div></div>
 <div class="ttc" id="_v_m_8hpp_html"><div class="ttname"><a href="_v_m_8hpp.html">VM.hpp</a></div><div class="ttdoc">The ArkScript virtual machine. </div></div>
 <div class="ttc" id="class_ark_1_1_type_error_html"><div class="ttname"><a href="class_ark_1_1_type_error.html">Ark::TypeError</a></div><div class="ttdoc">A type error triggered when types don&#39;t match. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00024">Exceptions.hpp:24</a></div></div>
 <div class="ttc" id="_builtins_8hpp_html"><div class="ttname"><a href="_builtins_8hpp.html">Builtins.hpp</a></div><div class="ttdoc">Host the declaration of all the ArkScript builtins. </div></div>
@@ -175,7 +175,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 10 2020 09:14:03 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 30 2020 13:57:58 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

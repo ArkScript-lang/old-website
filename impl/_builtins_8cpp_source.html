@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_67b0f6a0a2945fc5389cc58c347ef75a.html">src</a></li><li class="navelem"><a class="el" href="dir_df95b12f9d968c380475a839a1d51d99.html">Builtins</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7871fbf1f99f422398f59cd3e9e8a548.html">Builtins</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -145,53 +145,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">// System</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        { <span class="stringliteral">&quot;sys:exec&quot;</span>, Value(System::system_) },</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        { <span class="stringliteral">&quot;sys:sleep&quot;</span>, Value(System::sleep) },</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment">// String</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        { <span class="stringliteral">&quot;str:format&quot;</span>, Value(String::format) },</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        { <span class="stringliteral">&quot;str:find&quot;</span>, Value(String::findSubStr) },</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        { <span class="stringliteral">&quot;str:removeAt&quot;</span>, Value(String::removeAtStr) },</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">// Mathematics</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        { <span class="stringliteral">&quot;math:exp&quot;</span>, Value(Mathematics::exponential) },</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        { <span class="stringliteral">&quot;math:ln&quot;</span>, Value(Mathematics::logarithm) },</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        { <span class="stringliteral">&quot;math:ceil&quot;</span>, Value(Mathematics::ceil_) },</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        { <span class="stringliteral">&quot;math:floor&quot;</span>, Value(Mathematics::floor_) },</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        { <span class="stringliteral">&quot;math:round&quot;</span>, Value(Mathematics::round_) },</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        { <span class="stringliteral">&quot;math:NaN?&quot;</span>, Value(Mathematics::isnan_) },</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        { <span class="stringliteral">&quot;math:Inf?&quot;</span>, Value(Mathematics::isinf_) },</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        { <span class="stringliteral">&quot;math:pi&quot;</span>, Mathematics::pi_ },</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        { <span class="stringliteral">&quot;math:e&quot;</span>, Mathematics::e_ },</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        { <span class="stringliteral">&quot;math:tau&quot;</span>, Mathematics::tau_ },</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        { <span class="stringliteral">&quot;math:Inf&quot;</span>, Mathematics::inf_ },</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        { <span class="stringliteral">&quot;math:NaN&quot;</span>, Mathematics::nan_ },</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        { <span class="stringliteral">&quot;math:cos&quot;</span>, Value(Mathematics::cos_) },</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        { <span class="stringliteral">&quot;math:sin&quot;</span>, Value(Mathematics::sin_) },</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        { <span class="stringliteral">&quot;math:tan&quot;</span>, Value(Mathematics::tan_) },</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        { <span class="stringliteral">&quot;math:arccos&quot;</span>, Value(Mathematics::acos_) },</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        { <span class="stringliteral">&quot;math:arcsin&quot;</span>, Value(Mathematics::asin_) },</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        { <span class="stringliteral">&quot;math:arctan&quot;</span>, Value(Mathematics::atan_) }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    };</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">// This list is related to include/Ark/Compiler/Instructions.hpp</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">// from FIRST_OPERATOR, to LAST_OPERATOR</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">// The order is very important</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">extern</span> <span class="keyword">const</span> std::vector&lt;std::string&gt; operators = {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="stringliteral">&quot;+&quot;</span>, <span class="stringliteral">&quot;-&quot;</span>, <span class="stringliteral">&quot;*&quot;</span>, <span class="stringliteral">&quot;/&quot;</span>,</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="stringliteral">&quot;&gt;&quot;</span>, <span class="stringliteral">&quot;&lt;&quot;</span>, <span class="stringliteral">&quot;&lt;=&quot;</span>, <span class="stringliteral">&quot;&gt;=&quot;</span>, <span class="stringliteral">&quot;!=&quot;</span>, <span class="stringliteral">&quot;=&quot;</span>,</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="stringliteral">&quot;len&quot;</span>, <span class="stringliteral">&quot;empty?&quot;</span>, <span class="stringliteral">&quot;firstOf&quot;</span>, <span class="stringliteral">&quot;tailOf&quot;</span>, <span class="stringliteral">&quot;headOf&quot;</span>,</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="stringliteral">&quot;nil?&quot;</span>, <span class="stringliteral">&quot;assert&quot;</span>,</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="stringliteral">&quot;toNumber&quot;</span>, <span class="stringliteral">&quot;toString&quot;</span>,</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="stringliteral">&quot;@&quot;</span>, <span class="stringliteral">&quot;and&quot;</span>, <span class="stringliteral">&quot;or&quot;</span>, <span class="stringliteral">&quot;mod&quot;</span>,</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="stringliteral">&quot;type&quot;</span>, <span class="stringliteral">&quot;hasField&quot;</span>,</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="stringliteral">&quot;not&quot;</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    };</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        { <span class="stringliteral">&quot;sys:exit&quot;</span>, Value(System::exit_) },</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="comment">// String</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        { <span class="stringliteral">&quot;str:format&quot;</span>, Value(String::format) },</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        { <span class="stringliteral">&quot;str:find&quot;</span>, Value(String::findSubStr) },</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        { <span class="stringliteral">&quot;str:removeAt&quot;</span>, Value(String::removeAtStr) },</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">// Mathematics</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        { <span class="stringliteral">&quot;math:exp&quot;</span>, Value(Mathematics::exponential) },</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        { <span class="stringliteral">&quot;math:ln&quot;</span>, Value(Mathematics::logarithm) },</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        { <span class="stringliteral">&quot;math:ceil&quot;</span>, Value(Mathematics::ceil_) },</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        { <span class="stringliteral">&quot;math:floor&quot;</span>, Value(Mathematics::floor_) },</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        { <span class="stringliteral">&quot;math:round&quot;</span>, Value(Mathematics::round_) },</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        { <span class="stringliteral">&quot;math:NaN?&quot;</span>, Value(Mathematics::isnan_) },</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        { <span class="stringliteral">&quot;math:Inf?&quot;</span>, Value(Mathematics::isinf_) },</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        { <span class="stringliteral">&quot;math:pi&quot;</span>, Mathematics::pi_ },</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        { <span class="stringliteral">&quot;math:e&quot;</span>, Mathematics::e_ },</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        { <span class="stringliteral">&quot;math:tau&quot;</span>, Mathematics::tau_ },</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        { <span class="stringliteral">&quot;math:Inf&quot;</span>, Mathematics::inf_ },</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        { <span class="stringliteral">&quot;math:NaN&quot;</span>, Mathematics::nan_ },</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        { <span class="stringliteral">&quot;math:cos&quot;</span>, Value(Mathematics::cos_) },</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        { <span class="stringliteral">&quot;math:sin&quot;</span>, Value(Mathematics::sin_) },</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        { <span class="stringliteral">&quot;math:tan&quot;</span>, Value(Mathematics::tan_) },</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        { <span class="stringliteral">&quot;math:arccos&quot;</span>, Value(Mathematics::acos_) },</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        { <span class="stringliteral">&quot;math:arcsin&quot;</span>, Value(Mathematics::asin_) },</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        { <span class="stringliteral">&quot;math:arctan&quot;</span>, Value(Mathematics::atan_) }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    };</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">// This list is related to include/Ark/Compiler/Instructions.hpp</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">// from FIRST_OPERATOR, to LAST_OPERATOR</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">// The order is very important</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">extern</span> <span class="keyword">const</span> std::vector&lt;std::string&gt; operators = {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="stringliteral">&quot;+&quot;</span>, <span class="stringliteral">&quot;-&quot;</span>, <span class="stringliteral">&quot;*&quot;</span>, <span class="stringliteral">&quot;/&quot;</span>,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="stringliteral">&quot;&gt;&quot;</span>, <span class="stringliteral">&quot;&lt;&quot;</span>, <span class="stringliteral">&quot;&lt;=&quot;</span>, <span class="stringliteral">&quot;&gt;=&quot;</span>, <span class="stringliteral">&quot;!=&quot;</span>, <span class="stringliteral">&quot;=&quot;</span>,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="stringliteral">&quot;len&quot;</span>, <span class="stringliteral">&quot;empty?&quot;</span>, <span class="stringliteral">&quot;firstOf&quot;</span>, <span class="stringliteral">&quot;tailOf&quot;</span>, <span class="stringliteral">&quot;headOf&quot;</span>,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="stringliteral">&quot;nil?&quot;</span>, <span class="stringliteral">&quot;assert&quot;</span>,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="stringliteral">&quot;toNumber&quot;</span>, <span class="stringliteral">&quot;toString&quot;</span>,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="stringliteral">&quot;@&quot;</span>, <span class="stringliteral">&quot;and&quot;</span>, <span class="stringliteral">&quot;or&quot;</span>, <span class="stringliteral">&quot;mod&quot;</span>,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="stringliteral">&quot;type&quot;</span>, <span class="stringliteral">&quot;hasField&quot;</span>,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="stringliteral">&quot;not&quot;</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    };</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
 <div class="ttc" id="namespace_ark_1_1internal_1_1_builtins_html"><div class="ttname"><a href="namespace_ark_1_1internal_1_1_builtins.html">Ark::internal::Builtins</a></div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8hpp_source.html#l00028">Builtins.hpp:28</a></div></div>
 <div class="ttc" id="_builtins_8hpp_html"><div class="ttname"><a href="_builtins_8hpp.html">Builtins.hpp</a></div><div class="ttdoc">Host the declaration of all the ArkScript builtins. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 10 2020 09:14:03 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 30 2020 13:57:58 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

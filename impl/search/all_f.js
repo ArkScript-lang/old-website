@@ -7,7 +7,8 @@ var searchData=
   ['parser',['Parser',['../class_ark_1_1_parser.html#aaa5af9b392c010b8c21786a1be773d46',1,'Ark::Parser']]],
   ['parser_2ehpp',['Parser.hpp',['../_parser_8hpp.html',1,'']]],
   ['plugin_2ehpp',['Plugin.hpp',['../_plugin_8hpp.html',1,'']]],
-  ['pop',['pop',['../class_ark_1_1internal_1_1_frame.html#a1bff0d905ff1ca97cf82b39dcf13d3ea',1,'Ark::internal::Frame']]],
+  ['pop',['pop',['../class_ark_1_1internal_1_1_frame.html#aff6bf5c90b988936b8aec706c29d5704',1,'Ark::internal::Frame']]],
+  ['popandresolveasptr',['popAndResolveAsPtr',['../class_ark_1_1_v_m.html#a4bd4b976fa6d51f139804e5622fbefb7',1,'Ark::VM']]],
   ['powerror',['PowError',['../class_ark_1_1_pow_error.html',1,'Ark']]],
   ['push',['push',['../class_ark_1_1internal_1_1_frame.html#a41a927b427f333651a4e9fcf009ec439',1,'Ark::internal::Frame::push(const Value &amp;value) noexcept'],['../class_ark_1_1internal_1_1_frame.html#a4ec95954405b724e3f2065ea103d7011',1,'Ark::internal::Frame::push(Value &amp;&amp;value) noexcept']]],
   ['push_5fback',['push_back',['../class_ark_1_1internal_1_1_node.html#abbb8b1bf7d2a00bc1d4161009e4a417a',1,'Ark::internal::Node::push_back()'],['../class_ark_1_1internal_1_1_scope.html#aa04908a6a894cb99558d47a8a2411726',1,'Ark::internal::Scope::push_back(uint16_t id, Value &amp;&amp;val) noexcept'],['../class_ark_1_1internal_1_1_scope.html#ab14ba43ab45044c7f19ce7a91ec0c938',1,'Ark::internal::Scope::push_back(uint16_t id, const Value &amp;val) noexcept']]]

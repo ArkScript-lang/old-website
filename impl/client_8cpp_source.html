@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0fc753815adf631039e8f93bf08a1393.html">lib</a></li><li class="navelem"><a class="el" href="dir_ecd4e685b4cbffd967a3d7f8d8f33319.html">ext</a></li><li class="navelem"><a class="el" href="dir_863b22a0d9134e922b1eebc5e6625ace.html">http</a></li><li class="navelem"><a class="el" href="dir_33bc9de511206d7535d4e11c609e5c3c.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6e0914821bfca1f501651442b1f58e25.html">lib</a></li><li class="navelem"><a class="el" href="dir_df970774a8b080190a9e20a8c7729596.html">ext</a></li><li class="navelem"><a class="el" href="dir_06017f4522b2990f26da9b981e3cd0ec.html">http</a></li><li class="navelem"><a class="el" href="dir_62be15db532d2f05e2a366f3f47ce50d.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -102,8 +102,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">if</span> ((n.size() % 2) == 1)</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;http:headers:create: needs an even number of arguments: [header -&gt; value]&quot;</span>);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::vector&lt;std::unique_ptr&lt;Headers&gt;&gt;&amp; h = get_headers();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    h.emplace_back(std::make_unique&lt;Headers&gt;());</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::list&lt;Headers&gt;&amp; h = get_headers();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    h.emplace_back();</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::string key = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">for</span> (Value&amp; v : n)</div>
@@ -115,12 +115,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            key = v.string_ref().toString();</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            h.back()-&gt;insert(std::pair&lt;std::string, std::string&gt;(key, v.string_ref().toString()));</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            h.back().insert(std::pair&lt;std::string, std::string&gt;(key, v.string_ref().toString()));</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            key = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    Value headers = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(h.back().get()));</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    Value headers = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(&amp;h.back()));</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    headers.usertype_ref().setControlFuncs(get_cfs_header());</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> headers;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
@@ -134,10 +134,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (n[1].valueType() != ValueType::Number)</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_ark_1_1_type_error.html">Ark::TypeError</a>(<span class="stringliteral">&quot;http:client:create: port must be a Number&quot;</span>);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::vector&lt;std::unique_ptr&lt;Client&gt;&gt;&amp; c = get_clients();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    c.emplace_back(std::make_unique&lt;Client&gt;(n[0].string_ref().toString(), static_cast&lt;int&gt;(n[1].number())));</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::list&lt;Client&gt;&amp; c = get_clients();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    c.emplace_back(n[0].string_ref().toString(), static_cast&lt;int&gt;(n[1].number()));</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    Value client = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(c.back().get()));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    Value client = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(&amp;c.back()));</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    client.usertype_ref().setControlFuncs(get_cfs_client());</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> client;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
@@ -180,8 +180,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> ((n.size() % 2) == 1)</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;http:params:create: needs an even number of arguments: [key -&gt; value]&quot;</span>);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    std::vector&lt;std::unique_ptr&lt;Params&gt;&gt;&amp; p = get_params();</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    p.emplace_back(std::make_unique&lt;Params&gt;());</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    std::list&lt;Params&gt;&amp; p = get_params();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    p.emplace_back();</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    std::string key = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">for</span> (Value&amp; v : n)</div>
@@ -193,12 +193,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            key = v.string_ref().toString();</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            p.back()-&gt;insert(std::pair&lt;std::string, std::string&gt;(key, v.string_ref().toString()));</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            p.back().insert(std::pair&lt;std::string, std::string&gt;(key, v.string_ref().toString()));</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            key = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    Value params = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(p.back().get()));</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    Value params = Ark::Value(<a class="code" href="class_ark_1_1_user_type.html">Ark::UserType</a>(&amp;p.back()));</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    params.usertype_ref().setControlFuncs(get_cfs_param());</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span> params;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
@@ -584,7 +584,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 10 2020 09:14:03 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 30 2020 13:43:51 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
