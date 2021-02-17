@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Arkscript | Documentation</title>
@@ -11,117 +12,126 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header class="navbar">
-    <a href="#" class="btn btn-link show-xl" tabindex="0" id="menu-show"><i class="icon icon-menu"></i></a>
-    <section class="navbar-section show-on-focus hide-xl">
-        <a href="/" class="navbar-brand mr-2 hide-xl">ArkScript</a>
-        <a href="/" class="btn btn-link">Home</a>
-        <a href="/documentation.html" class="btn btn-link">Documentation</a>
-        <a href="/contributing.html" class="btn btn-link">Contributing</a>
-        <div class="dropdown">
-            <a href="#" class="btn btn-link dropdown-toggle" tabindex="0">Tutorials <i class="icon icon-caret"></i></a>
-            <ul class="menu">
-                <li><a href="/tutorials/basics.html" class="btn btn-link">Basics</a></li>
-                <li><a href="/tutorials/building.html" class="btn btn-link">Building</a></li>
-                <li><a href="/tutorials/embedding.html" class="btn btn-link">Embedding</a></li>
-                <li><a href="/tutorials/bytecode.html" class="btn btn-link">Bytecode</a></li>
-            </ul>
+    <!-- HEADER -->
+    <header class="navbar">
+        <a href="#" class="btn btn-link show-xl" tabindex="0" id="menu-show"><i class="icon icon-menu"></i></a>
+        <section class="navbar-section show-on-focus hide-xl">
+            <a href="/" class="navbar-brand mr-2 hide-xl">ArkScript</a>
+            <a href="/" class="btn btn-link">Home</a>
+            <a href="/documentation.html" class="btn btn-link">Documentation</a>
+            <a href="/contributing.html" class="btn btn-link">Contributing</a>
+            <div class="dropdown">
+                <a href="#" class="btn btn-link dropdown-toggle" tabindex="0">Tutorials <i class="icon icon-caret"></i></a>
+                <ul class="menu">
+                    <li><a href="/tutorials/basics.html" class="btn btn-link">Basics</a></li>
+                    <li><a href="/tutorials/building.html" class="btn btn-link">Building</a></li>
+                    <li><a href="/tutorials/embedding.html" class="btn btn-link">Embedding</a></li>
+                    <li><a href="/tutorials/bytecode.html" class="btn btn-link">Bytecode</a></li>
+                </ul>
+            </div>
+            <div class="divider"></div>
+            <a href="https://github.com/ArkScript-lang/Ark" target="_blank" class="btn btn-link">Github</a>
+            <a href="https://discord.gg/YT5yDwn" target="_blank" class="btn btn-link">Discord</a>
+        </section>
+        <section class="navbar-section logo">
+            <a href="/"><img src="/assets/images/Ark-slim.png" alt="ArkScript"></a>
+        </section>
+    </header>
+
+    <!-- CONTENT -->
+    <div class="container" id="main">
+        <div class="columns">
+            <!-- The col-2 divs are an easy way to put some margin around the main content -->
+            <div class="col-2 hide-md"></div>
+
+            <!-- Actual content of the page-->
+            <div class="col-8 col-md-12" id="content">
+                <h1 class="text-center">Documentation</h1>
+
+                <section id="building-and-installing">
+                    <h2>Building and installing</h2>
+
+                    <div class="inner-section">
+                        <em>Nota bene:</em> the project was made to work only on 64 bits computers, meaning that it can not (and will never) work on 32 bits computers. 64 bits CPU appeared in the 1990s and allow developpers to use more RAM (from a few
+                        GB to thousands of TB), while 32 bits CPU appeared in 1960s, they shall now be replaced.
+
+                        <ul>
+                            <li>
+                                <a href="/tutorials/building.html#from-a-release" class="btn-link">Installing from a release</a>
+                            </li>
+                            <li>
+                                <a href="/tutorials/building.html#from-docker" class="btn-link">Installing through Docker</a>
+                            </li>
+                            <li>
+                                <a href="/tutorials/building.html#from-source" class="btn-link">Building and installing ArkScript</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="tutorials">
+                    <h2>Tutorials</h2>
+
+                    <div class="inner-section">
+                        <ul>
+                            <li>
+                                <a href="/tutorials/basics.html" class="btn-link">Learning ArkScript: the basics</a>
+                            </li>
+                            <li>
+                                <a href="/tutorials/embedding.html" class="btn-link">Embedding ArkScript in a C++ project</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="std-lib-doc">
+                    <h2>Standard Library Documentation</h2>
+
+                    <div class="inner-section">
+                        <a href="/std/index.html">The documentation of the ArkScript Standard Library</a>.
+                    </div>
+                </section>
+
+                <section id="impl-details">
+                    <h2>Implementation details</h2>
+
+                    <div class="inner-section">
+                        <a href="/impl/index.html" class="btn-link">The complete documentation of the implementation</a>.
+                    </div>
+                </section>
+
+                <section id="bytecode-doc">
+                    <h2>Virtual Machine related documentation</h2>
+
+                    <div class="inner-section">
+                        <a href="/tutorials/bytecode.html">How our bytecode is designed</a>
+                    </div>
+                </section>
+
+                <section id="manual">
+                    <h2>Linux manual</h2>
+
+                    <div class="inner-section">
+                        <a href="/man.zip">Download the manual as a zip</a>.
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-2 hide-md"></div>
         </div>
-        <div class="divider"></div>
-        <a href="https://github.com/ArkScript-lang/Ark" target="_blank" class="btn btn-link">Github</a>
-        <a href="https://discord.gg/YT5yDwn" target="_blank" class="btn btn-link">Discord</a>
-    </section>
-    <section class="navbar-section logo">
-        <a href="/"><img src="/assets/images/Ark-slim.png" alt="ArkScript"></a>
-    </section>
-</header>
-
-<!-- CONTENT -->
-<div class="container" id="main">
-    <div class="columns">
-        <!-- The col-2 divs are an easy way to put some margin around the main content -->
-        <div class="col-2 hide-md"></div>
-
-        <!-- Actual content of the page-->
-        <div class="col-8 col-md-12" id="content">
-            <h1 class="text-center">Documentation</h1>
-
-            <section id="building-and-installing">
-                <h2>Building and installing</h2>
-
-                <div class="inner-section">
-                    <em>Nota bene:</em> the project was made to work only on 64 bits computers, meaning that it can not
-                    (and will never) work on 32 bits computers. 64 bits CPU appeared in the 1990s and allow developpers
-                    to use more RAM (from a few GB to thousands of TB), while 32 bits CPU appeared in 1960s, they shall
-                    now be replaced.
-
-                    <ul>
-                        <li>
-                            <a href="/tutorials/building.html#from-a-release" class="btn-link">Installing from a release</a>
-                        </li>
-                        <li>
-                            <a href="/tutorials/building.html#from-source" class="btn-link">Building and installing ArkScript</a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="tutorials">
-                <h2>Tutorials</h2>
-
-                <div class="inner-section">
-                    <ul>
-                        <li>
-                            <a href="/tutorials/basics.html" class="btn-link">Learning ArkScript: the basics</a>
-                        </li>
-                        <li>
-                            <a href="/tutorials/embedding.html" class="btn-link">Embedding ArkScript in a C++ project</a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="std-lib-doc">
-                <h2>Standard Library Documentation</h2>
-
-                <div class="inner-section">
-                    TODO
-                </div>
-            </section>
-
-            <section id="impl-details">
-                <h2>Implementation details</h2>
-
-                <div class="inner-section">
-                    If you are looking for a complete documentation of the implementation, it can be found
-                    <a href="/impl/index.html" class="btn-link">here</a>.
-                </div>
-            </section>
-
-            <section id="bytecode-doc">
-                <h2>Bytecode Documentation</h2>
-
-                <div class="inner-section">
-                    <a href="/tutorials/bytecode.html">For advanced developers only</a>
-                </div>
-            </section>
-        </div>
-
-        <div class="col-2 hide-md"></div>
     </div>
-</div>
-<!-- END OF CONTENT -->
+    <!-- END OF CONTENT -->
 
-<!-- FOOTER -->
-<footer id="page-footer">
-    <p class="text-center">
-        Copyright &copy; 2020 Alexandre Plateau & Fabien Zoccola.<br>
-        All rights reserved.
-    </p>
-</footer>
+    <!-- FOOTER -->
+    <footer id="page-footer">
+        <p class="text-center">
+            Copyright &copy; 2020 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.
+        </p>
+    </footer>
 
 </body>
+
 </html>

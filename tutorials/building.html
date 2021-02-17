@@ -59,6 +59,7 @@
 
                     <div class="inner-section">
                         You can setup an environment variable named <code>ARKSCRIPT_PATH</code>, with the path to the installation directory of ArkScript, so that the standard library can be located without using <code>--lib &lt;path&gt;</code>. <em>This step is optional</em>.
+                        The environment variable should direct to a folder with the folder <code>lib/</code> inside.
                     </div>
                 </section>
 
@@ -74,6 +75,14 @@
                         <h3>Linux</h3>
                         Download the <code>linux64.zip</code> from the <a class="btn-link" href="https://github.com/ArkScript-lang/Ark/releases/latest">releases</a>. You can put the binaries and the lib anywhere you want, as long as you add it to your
                         path to execute ArkScript without giving the complete path (in your <code>.bashrc</code> for example). You can also create an environment variable as stated in the setup above.
+                    </div>
+                </section>
+
+                <section id="from-docker">
+                    <h2>Installing through Docker</h2>
+
+                    <div class="inner-section">
+                        Just launch <code>docker pull arkscript/stable:latest</code> and you're good to go! To run it, use <code>docker run -it arkscript/stable:latest [arkscript executable options here]</code>.
                     </div>
                 </section>
 
@@ -101,6 +110,9 @@
                             <li><code>-DARK_BUILD_EXE</code> to generate an executable, defaults to Off, building a shared library</li>
                             <li><code>-DARK_ENABLE_SYSTEM</code> to enable `sys:exec` (execute shell commands without restrictions), defaults to On</li>
                             <li><code>-DARK_PROFILER</code> to enable the <a href="https://github.com/plasma-umass/coz">coz</a> profiler, defaults to Off</li>
+                            <li><code>-DARK_PROFILER_COUNT</code> to count every creation/copy/move of the internal value type, defaults to Off</li>
+                            <li><code>-DARK_SCOPE_DICHOTOMY</code> to activate the dichotomic mode of the scope, defaults to Off</li>
+                            <li><code>-DARK_BUILD_MODULES</code> to build the modules, defaults to Off</li>
                         </ul>
 
                         <h3>Windows</h3>
@@ -131,7 +143,6 @@ PS> cmake --install build --config Release  # might need administrator rights
                         Commands:
                         <pre>
 <code class="rainbowjs" data-language="shell">
-# if you don't need the modules, you can forget the ARK_BUILD_MODULES define
 ~/ark$ cmake . -Bbuild -DARK_BUILD_EXE=On
 ~/ark$ cmake --build build --config Release
 ~/ark$ sudo cmake --install build --config Release  # needs administrator rights to install under /usr/bin

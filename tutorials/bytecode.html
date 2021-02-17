@@ -318,72 +318,67 @@
                                     <td>Push <code>empty?(TS)</code>, TS must be a list</td>
                                 </tr>
                                 <tr>
-                                    <td><code>FIRSTOF</code> (0x2c)</td>
+                                    <td><code>TAIL</code> (0x2c)</td>
                                     <td></td>
-                                    <td>Push <code>firstof(TS)</code>, the first element of TS (must be a list)</td>
+                                    <td>Push <code>tail(TS)</code>, all the elements of TS except the first one (TS must be a list)</td>
                                 </tr>
                                 <tr>
-                                    <td><code>TAILOF</code> (0x2d)</td>
+                                    <td><code>HEAD</code> (0x2d)</td>
                                     <td></td>
-                                    <td>Push <code>tailof(TS)</code>, all the elements of TS except the first one (TS must be a list)</td>
+                                    <td>Push <code>head(TS)</code>, the first element of TS or nil if empty (TS must be a list)</td>
                                 </tr>
                                 <tr>
-                                    <td><code>HEADOF</code> (0x2e)</td>
-                                    <td></td>
-                                    <td>Push <code>headof(TS)</code>, all the elements of TS except the last one (TS must be a list)</td>
-                                </tr>
-                                <tr>
-                                    <td><code>ISNIL</code> (0x2f)</td>
+                                    <td><code>ISNIL</code> (0x2e)</td>
                                     <td></td>
                                     <td>Push true if TS is nil, false otherwise</td>
                                 </tr>
                                 <tr>
-                                    <td><code>ASSERT</code> (0x30)</td>
+                                    <td><code>ASSERT</code> (0x2f)</td>
                                     <td></td>
                                     <td>Throw an exception if TS1 is false, and display TS (must be a string). Otherwise, push nil</td>
                                 </tr>
                                 <tr>
-                                    <td><code>TO_NUM</code> (0x31)</td>
+                                    <td><code>TO_NUM</code> (0x30)</td>
                                     <td></td>
                                     <td>Convert TS to number (must be a string)</td>
                                 </tr>
                                 <tr>
-                                    <td><code>TO_STR</code> (0x32)</td>
+                                    <td><code>TO_STR</code> (0x31)</td>
                                     <td></td>
                                     <td>Convert TS to string (must be a number)</td>
                                 </tr>
                                 <tr>
-                                    <td><code>AT</code> (0x33)</td>
+                                    <td><code>AT</code> (0x32)</td>
                                     <td></td>
                                     <td>Push the value at index TS (must be a number) in TS1 (must be a list)</td>
                                 </tr>
                                 <tr>
-                                    <td><code>AND_</code> (0x34)</td>
+                                    <td><code>AND_</code> (0x33)</td>
                                     <td></td>
                                     <td>Push true if TS and TS1 are true, false otherwise</td>
                                 </tr>
                                 <tr>
-                                    <td><code>OR_</code> (0x35)</td>
+                                    <td><code>OR_</code> (0x34)</td>
                                     <td></td>
                                     <td>Push true if TS or TS1 is true, false otherwise</td>
                                 </tr>
                                 <tr>
-                                    <td><code>MOD</code> (0x36)</td>
+                                    <td><code>MOD</code> (0x35)</td>
                                     <td></td>
                                     <td>Push <code>TS1 % TS</code></td>
                                 </tr>
                                 <tr>
-                                    <td><code>TYPE</code> (0x37)</td>
+                                    <td><code>TYPE</code> (0x36)</td>
                                     <td></td>
                                     <td>Push the type of TS as a string</td>
                                 </tr>
                                 <tr>
-                                    <td><code>HASFIELD</code> (0x38)</td>
+                                    <td><code>HASFIELD</code> (0x37)</td>
                                     <td></td>
                                     <td>Check if TS1 is a closure field of TS. TS must be a Closure and TS1 a String</td>
                                 </tr>
                                 <tr>
-                                    <td><code>NOT</code> (0x39)</td>
+                                    <td><code>NOT</code> (0x38)</td>
                                     <td></td>
                                     <td>Push <code>!TS</code></td>
                                 </tr>
