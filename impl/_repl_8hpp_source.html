@@ -14,7 +14,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-modern.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -40,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -95,7 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;Ark/Constants.hpp&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_constants_8hpp.html">Ark/Constants.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_compiler_8hpp.html">Ark/Compiler/Compiler.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_v_m_8hpp.html">Ark/VM/VM.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_state_8hpp.html">Ark/VM/State.hpp</a>&gt;</span></div>
@@ -103,38 +104,53 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark.html">Ark</a></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">class </span>Repl</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_ark_1_1_repl.html">   25</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_ark_1_1_repl.html">Repl</a></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        Repl(uint16_t options, std::string lib_dir);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="class_ark_1_1_repl.html#aab6a9ac80f189175ccb6817ecccfe66d">Repl</a>(uint16_t options, std::string lib_dir);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">void</span> run();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_ark_1_1_repl.html#a27884a932a9c4193e900ddd81960a737">run</a>();</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        std::string m_lib_dir;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        uint16_t m_options;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        Replxx m_repl;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">unsigned</span> m_lines;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">int</span> m_old_ip;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_ark_1_1_repl.html#af885195f6d803b0768fc793721502e19">   43</a></span>&#160;        std::string <a class="code" href="class_ark_1_1_repl.html#af885195f6d803b0768fc793721502e19">m_lib_dir</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_ark_1_1_repl.html#aab580778688efe8e28e831d63ad9843f">   44</a></span>&#160;        uint16_t <a class="code" href="class_ark_1_1_repl.html#aab580778688efe8e28e831d63ad9843f">m_options</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_ark_1_1_repl.html#ad1dc759ac0132b53c2c244f28f63b05b">   45</a></span>&#160;        <a class="code" href="_console_style_8hpp.html#a362bc7a2816fe6a0221748387af71066">Replxx</a> <a class="code" href="class_ark_1_1_repl.html#ad1dc759ac0132b53c2c244f28f63b05b">m_repl</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_ark_1_1_repl.html#adb838195096ce3d46143c7ca73aa864c">   46</a></span>&#160;        <span class="keywordtype">unsigned</span> <a class="code" href="class_ark_1_1_repl.html#adb838195096ce3d46143c7ca73aa864c">m_lines</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_ark_1_1_repl.html#ad042675ab12467a4ef6bffc1adcd1c12">   47</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_ark_1_1_repl.html#ad042675ab12467a4ef6bffc1adcd1c12">m_old_ip</a>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> print_repl_header();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">int</span> count_open_parentheses(<span class="keyword">const</span> std::string&amp; line);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">int</span> count_open_braces(<span class="keyword">const</span> std::string&amp; line);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> trim_whitespace(std::string&amp; line);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> cgui_setup();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_ark_1_1_repl.html#ae087302ee87fa0462f7b3363d3c220e0">print_repl_header</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_ark_1_1_repl.html#ab542e98c2a9f4958a7cec48237d3d520">count_open_parentheses</a>(<span class="keyword">const</span> std::string&amp; line);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_ark_1_1_repl.html#a9f85a9da12779d6275f32036bd96ac64">count_open_braces</a>(<span class="keyword">const</span> std::string&amp; line);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_ark_1_1_repl.html#aae632d83377be52ae3c574998e499cff">trim_whitespace</a>(std::string&amp; line);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_ark_1_1_repl.html#a23e13b34c36e04d41da77745c5768975">cui_setup</a>();</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    };</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_ark_1_1_repl_html_a9f85a9da12779d6275f32036bd96ac64"><div class="ttname"><a href="class_ark_1_1_repl.html#a9f85a9da12779d6275f32036bd96ac64">Ark::Repl::count_open_braces</a></div><div class="ttdeci">int count_open_braces(const std::string &amp;line)</div><div class="ttdef"><b>Definition:</b> <a href="_repl_8cpp_source.html#l00129">Repl.cpp:129</a></div></div>
 <div class="ttc" id="_state_8hpp_html"><div class="ttname"><a href="_state_8hpp.html">State.hpp</a></div><div class="ttdoc">State used by the virtual machine: it loads the bytecode, can compile it if needed, load C++ functions... </div></div>
+<div class="ttc" id="class_ark_1_1_repl_html_aab6a9ac80f189175ccb6817ecccfe66d"><div class="ttname"><a href="class_ark_1_1_repl.html#aab6a9ac80f189175ccb6817ecccfe66d">Ark::Repl::Repl</a></div><div class="ttdeci">Repl(uint16_t options, std::string lib_dir)</div><div class="ttdoc">Construct a new Repl object. </div><div class="ttdef"><b>Definition:</b> <a href="_repl_8cpp_source.html#l00011">Repl.cpp:11</a></div></div>
 <div class="ttc" id="_console_style_8hpp_html"><div class="ttname"><a href="_console_style_8hpp.html">ConsoleStyle.hpp</a></div><div class="ttdoc">Colors per token used by replxx. </div></div>
+<div class="ttc" id="class_ark_1_1_repl_html_adb838195096ce3d46143c7ca73aa864c"><div class="ttname"><a href="class_ark_1_1_repl.html#adb838195096ce3d46143c7ca73aa864c">Ark::Repl::m_lines</a></div><div class="ttdeci">unsigned m_lines</div><div class="ttdef"><b>Definition:</b> <a href="_repl_8hpp_source.html#l00046">Repl.hpp:46</a></div></div>
+<div class="ttc" id="_console_style_8hpp_html_a362bc7a2816fe6a0221748387af71066"><div class="ttname"><a href="_console_style_8hpp.html#a362bc7a2816fe6a0221748387af71066">Replxx</a></div><div class="ttdeci">replxx::Replxx Replxx</div><div class="ttdef"><b>Definition:</b> <a href="_console_style_8hpp_source.html#l00017">ConsoleStyle.hpp:17</a></div></div>
+<div class="ttc" id="class_ark_1_1_repl_html_ad1dc759ac0132b53c2c244f28f63b05b"><div class="ttname"><a href="class_ark_1_1_repl.html#ad1dc759ac0132b53c2c244f28f63b05b">Ark::Repl::m_repl</a></div><div class="ttdeci">Replxx m_repl</div><div class="ttdef"><b>Definition:</b> <a href="_repl_8hpp_source.html#l00045">Repl.hpp:45</a></div></div>
+<div class="ttc" id="class_ark_1_1_repl_html_a23e13b34c36e04d41da77745c5768975"><div class="ttname"><a href="class_ark_1_1_repl.html#a23e13b34c36e04d41da77745c5768975">Ark::Repl::cui_setup</a></div><div class="ttdeci">void cui_setup()</div><div class="ttdef"><b>Definition:</b> <a href="_repl_8cpp_source.html#l00155">Repl.cpp:155</a></div></div>
+<div class="ttc" id="_constants_8hpp_html"><div class="ttname"><a href="_constants_8hpp.html">Constants.hpp</a></div><div class="ttdoc">Constants used by ArkScript. </div></div>
+<div class="ttc" id="class_ark_1_1_repl_html_ad042675ab12467a4ef6bffc1adcd1c12"><div class="ttname"><a href="class_ark_1_1_repl.html#ad042675ab12467a4ef6bffc1adcd1c12">Ark::Repl::m_old_ip</a></div><div class="ttdeci">int m_old_ip</div><div class="ttdef"><b>Definition:</b> <a href="_repl_8hpp_source.html#l00047">Repl.hpp:47</a></div></div>
+<div class="ttc" id="class_ark_1_1_repl_html_aab580778688efe8e28e831d63ad9843f"><div class="ttname"><a href="class_ark_1_1_repl.html#aab580778688efe8e28e831d63ad9843f">Ark::Repl::m_options</a></div><div class="ttdeci">uint16_t m_options</div><div class="ttdef"><b>Definition:</b> <a href="_repl_8hpp_source.html#l00044">Repl.hpp:44</a></div></div>
+<div class="ttc" id="class_ark_1_1_repl_html_aae632d83377be52ae3c574998e499cff"><div class="ttname"><a href="class_ark_1_1_repl.html#aae632d83377be52ae3c574998e499cff">Ark::Repl::trim_whitespace</a></div><div class="ttdeci">void trim_whitespace(std::string &amp;line)</div><div class="ttdef"><b>Definition:</b> <a href="_repl_8cpp_source.html#l00145">Repl.cpp:145</a></div></div>
 <div class="ttc" id="_compiler_8hpp_html"><div class="ttname"><a href="_compiler_8hpp.html">Compiler.hpp</a></div><div class="ttdoc">ArkScript compiler is in charge of transforming the AST into bytecode. </div></div>
+<div class="ttc" id="class_ark_1_1_repl_html"><div class="ttname"><a href="class_ark_1_1_repl.html">Ark::Repl</a></div><div class="ttdef"><b>Definition:</b> <a href="_repl_8hpp_source.html#l00025">Repl.hpp:25</a></div></div>
+<div class="ttc" id="class_ark_1_1_repl_html_ab542e98c2a9f4958a7cec48237d3d520"><div class="ttname"><a href="class_ark_1_1_repl.html#ab542e98c2a9f4958a7cec48237d3d520">Ark::Repl::count_open_parentheses</a></div><div class="ttdeci">int count_open_parentheses(const std::string &amp;line)</div><div class="ttdef"><b>Definition:</b> <a href="_repl_8cpp_source.html#l00113">Repl.cpp:113</a></div></div>
+<div class="ttc" id="class_ark_1_1_repl_html_a27884a932a9c4193e900ddd81960a737"><div class="ttname"><a href="class_ark_1_1_repl.html#a27884a932a9c4193e900ddd81960a737">Ark::Repl::run</a></div><div class="ttdeci">int run()</div><div class="ttdoc">Start the REPL. </div><div class="ttdef"><b>Definition:</b> <a href="_repl_8cpp_source.html#l00015">Repl.cpp:15</a></div></div>
+<div class="ttc" id="class_ark_1_1_repl_html_ae087302ee87fa0462f7b3363d3c220e0"><div class="ttname"><a href="class_ark_1_1_repl.html#ae087302ee87fa0462f7b3363d3c220e0">Ark::Repl::print_repl_header</a></div><div class="ttdeci">void print_repl_header()</div><div class="ttdef"><b>Definition:</b> <a href="_repl_8cpp_source.html#l00102">Repl.cpp:102</a></div></div>
 <div class="ttc" id="_v_m_8hpp_html"><div class="ttname"><a href="_v_m_8hpp.html">VM.hpp</a></div><div class="ttdoc">The ArkScript virtual machine. </div></div>
+<div class="ttc" id="class_ark_1_1_repl_html_af885195f6d803b0768fc793721502e19"><div class="ttname"><a href="class_ark_1_1_repl.html#af885195f6d803b0768fc793721502e19">Ark::Repl::m_lib_dir</a></div><div class="ttdeci">std::string m_lib_dir</div><div class="ttdef"><b>Definition:</b> <a href="_repl_8hpp_source.html#l00043">Repl.hpp:43</a></div></div>
 <div class="ttc" id="namespace_ark_html"><div class="ttname"><a href="namespace_ark.html">Ark</a></div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8hpp_source.html#l00023">Builtins.hpp:23</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 30 2020 13:57:57 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 17 2021 12:14:35 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

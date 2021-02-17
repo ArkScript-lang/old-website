@@ -14,7 +14,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-modern.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -40,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -99,19 +100,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;replxx.hxx&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using</span> Replxx = replxx::Replxx;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="_util_8hpp.html#a362bc7a2816fe6a0221748387af71066">   21</a></span>&#160;<span class="keyword">using</span> <a class="code" href="_console_style_8hpp.html#a362bc7a2816fe6a0221748387af71066">Replxx</a> = <a class="code" href="_util_8hpp.html#a362bc7a2816fe6a0221748387af71066">replxx::Replxx</a>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">int</span> utf8str_codepoint_len(<span class="keywordtype">char</span> <span class="keyword">const</span> *s, <span class="keywordtype">int</span> utf8len);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">int</span> context_len(<span class="keywordtype">char</span> <span class="keyword">const</span> *prefix);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;Replxx::completions_t hook_completion(std::string <span class="keyword">const</span>&amp; context, <span class="keywordtype">int</span>&amp; contextLen, std::vector&lt;std::string&gt; <span class="keyword">const</span>&amp; user_data);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> hook_color(std::string <span class="keyword">const</span>&amp; str, Replxx::colors_t&amp; colors, std::vector&lt;std::pair&lt;std::string, Replxx::Color&gt;&gt; <span class="keyword">const</span>&amp; user_data);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;Replxx::hints_t hook_hint(std::string <span class="keyword">const</span>&amp; context, <span class="keywordtype">int</span>&amp; contextLen, Replxx::Color&amp; color, std::vector&lt;std::string&gt; <span class="keyword">const</span>&amp; examples);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">int</span> <a class="code" href="_util_8hpp.html#a0c8262d34abfafe28351abc072c3e91b">utf8str_codepoint_len</a>(<span class="keywordtype">char</span> <span class="keyword">const</span> *s, <span class="keywordtype">int</span> utf8len);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">int</span> <a class="code" href="_util_8hpp.html#aea1c73842f42185ee352b27e4518b944">context_len</a>(<span class="keywordtype">char</span> <span class="keyword">const</span> *prefix);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;Replxx::completions_t <a class="code" href="_util_8hpp.html#a45cc3fbbd53aa60d6f49bddd7685c5ab">hook_completion</a>(std::string <span class="keyword">const</span>&amp; context, <span class="keywordtype">int</span>&amp; contextLen, std::vector&lt;std::string&gt; <span class="keyword">const</span>&amp; user_data);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_util_8hpp.html#aa328121c8f97311bef5e3ab345503721">hook_color</a>(std::string <span class="keyword">const</span>&amp; str, Replxx::colors_t&amp; <a class="code" href="namespace_ark_1_1internal.html#a596c695cf00642e3dcbc019b9dc7c0ac">colors</a>, std::vector&lt;std::pair&lt;std::string, Replxx::Color&gt;&gt; <span class="keyword">const</span>&amp; user_data);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;Replxx::hints_t <a class="code" href="_util_8hpp.html#acd8a71e02f566f17518ba0bc05e47d4b">hook_hint</a>(std::string <span class="keyword">const</span>&amp; context, <span class="keywordtype">int</span>&amp; contextLen, Replxx::Color&amp; color, std::vector&lt;std::string&gt; <span class="keyword">const</span>&amp; examples);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="_util_8hpp_html_a362bc7a2816fe6a0221748387af71066"><div class="ttname"><a href="_util_8hpp.html#a362bc7a2816fe6a0221748387af71066">Replxx</a></div><div class="ttdeci">replxx::Replxx Replxx</div><div class="ttdef"><b>Definition:</b> <a href="_util_8hpp_source.html#l00021">Util.hpp:21</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_a596c695cf00642e3dcbc019b9dc7c0ac"><div class="ttname"><a href="namespace_ark_1_1internal.html#a596c695cf00642e3dcbc019b9dc7c0ac">Ark::internal::colors</a></div><div class="ttdeci">auto colors</div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00131">Node.cpp:131</a></div></div>
+<div class="ttc" id="_util_8hpp_html_acd8a71e02f566f17518ba0bc05e47d4b"><div class="ttname"><a href="_util_8hpp.html#acd8a71e02f566f17518ba0bc05e47d4b">hook_hint</a></div><div class="ttdeci">Replxx::hints_t hook_hint(std::string const &amp;context, int &amp;contextLen, Replxx::Color &amp;color, std::vector&lt; std::string &gt; const &amp;examples)</div><div class="ttdef"><b>Definition:</b> <a href="_util_8cpp_source.html#l00094">Util.cpp:94</a></div></div>
+<div class="ttc" id="_util_8hpp_html_aea1c73842f42185ee352b27e4518b944"><div class="ttname"><a href="_util_8hpp.html#aea1c73842f42185ee352b27e4518b944">context_len</a></div><div class="ttdeci">int context_len(char const *prefix)</div><div class="ttdef"><b>Definition:</b> <a href="_util_8cpp_source.html#l00027">Util.cpp:27</a></div></div>
+<div class="ttc" id="_console_style_8hpp_html_a362bc7a2816fe6a0221748387af71066"><div class="ttname"><a href="_console_style_8hpp.html#a362bc7a2816fe6a0221748387af71066">Replxx</a></div><div class="ttdeci">replxx::Replxx Replxx</div><div class="ttdef"><b>Definition:</b> <a href="_console_style_8hpp_source.html#l00017">ConsoleStyle.hpp:17</a></div></div>
+<div class="ttc" id="_util_8hpp_html_a0c8262d34abfafe28351abc072c3e91b"><div class="ttname"><a href="_util_8hpp.html#a0c8262d34abfafe28351abc072c3e91b">utf8str_codepoint_len</a></div><div class="ttdeci">int utf8str_codepoint_len(char const *s, int utf8len)</div><div class="ttdef"><b>Definition:</b> <a href="_util_8cpp_source.html#l00005">Util.cpp:5</a></div></div>
+<div class="ttc" id="_util_8hpp_html_aa328121c8f97311bef5e3ab345503721"><div class="ttname"><a href="_util_8hpp.html#aa328121c8f97311bef5e3ab345503721">hook_color</a></div><div class="ttdeci">void hook_color(std::string const &amp;str, Replxx::colors_t &amp;colors, std::vector&lt; std::pair&lt; std::string, Replxx::Color &gt;&gt; const &amp;user_data)</div><div class="ttdef"><b>Definition:</b> <a href="_util_8cpp_source.html#l00069">Util.cpp:69</a></div></div>
+<div class="ttc" id="_util_8hpp_html_a45cc3fbbd53aa60d6f49bddd7685c5ab"><div class="ttname"><a href="_util_8hpp.html#a45cc3fbbd53aa60d6f49bddd7685c5ab">hook_completion</a></div><div class="ttdeci">Replxx::completions_t hook_completion(std::string const &amp;context, int &amp;contextLen, std::vector&lt; std::string &gt; const &amp;user_data)</div><div class="ttdef"><b>Definition:</b> <a href="_util_8cpp_source.html#l00045">Util.cpp:45</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 30 2020 13:57:57 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 17 2021 12:14:35 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

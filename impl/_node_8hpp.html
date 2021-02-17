@@ -14,7 +14,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-modern.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -40,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,7 +88,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Node.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -111,14 +115,54 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A node of an Abstract Syntax Tree for ArkScript.  <a href="class_ark_1_1internal_1_1_node.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespace_ark_1_1internal"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark_1_1internal.html">Ark::internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ae774f9ffee40506c9663d0663c1f75ad"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark_1_1internal.html#ae774f9ffee40506c9663d0663c1f75ad">Ark::internal::Nodes</a> = std::vector&lt; Node &gt;</td></tr>
+<tr class="separator:ae774f9ffee40506c9663d0663c1f75ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a5300c6c0596db0a5a8f5b62d4d42ce4c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5300c6c0596db0a5a8f5b62d4d42ce4c"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>NodeType</b> </td></tr>
-<tr class="memdesc:a5300c6c0596db0a5a8f5b62d4d42ce4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The different node types available. <br /></td></tr>
+<tr class="memitem:a5300c6c0596db0a5a8f5b62d4d42ce4c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4c">Ark::internal::NodeType</a> { <br />
+&#160;&#160;<a class="el" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca02c86eb2792f3262c21d030a87e19793">Ark::internal::NodeType::Symbol</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca44a50f07b4bdc57740901280f9eddaf5">Ark::internal::NodeType::Capture</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4cad3e2f43779da90565fa9c24f9175dc04">Ark::internal::NodeType::GetField</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca220f3d3750583b9db48568a0b5b9a5f1">Ark::internal::NodeType::Keyword</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca27118326006d3829667a400ad23d5d98">Ark::internal::NodeType::String</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4cab2ee912b91d69b435159c7c3f6df7f5f">Ark::internal::NodeType::Number</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca4ee29ca12c7d126654bd0e5275de6135">Ark::internal::NodeType::List</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4caaf4bb376939e77df0e7c2332b837a866">Ark::internal::NodeType::Closure</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a5300c6c0596db0a5a8f5b62d4d42ce4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The different node types available.  <a href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4c">More...</a><br /></td></tr>
 <tr class="separator:a5300c6c0596db0a5a8f5b62d4d42ce4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a844cdbff6d30f493cb3044c72128f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a844cdbff6d30f493cb3044c72128f1"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Keyword</b> </td></tr>
-<tr class="memdesc:a9a844cdbff6d30f493cb3044c72128f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The different keywords available. <br /></td></tr>
+<tr class="memitem:a9a844cdbff6d30f493cb3044c72128f1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">Ark::internal::Keyword</a> { <br />
+&#160;&#160;<a class="el" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a46d6d315bea88efbf048125d2ec444b4">Ark::internal::Keyword::Fun</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1acae6404c4aecf46684930fe2a86676a6">Ark::internal::Keyword::Let</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1aebb87a770abac0e394d963d20ed574b7">Ark::internal::Keyword::Mut</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a5d5b78699e57104f2fa03bbdf7b9197b">Ark::internal::Keyword::Set</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a786887572f6ef1c20f2d8177cb2f1639">Ark::internal::Keyword::If</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a3cddbb8f43a4e074e2c2ce3e8622f43e">Ark::internal::Keyword::While</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a1a06729125544cab7cee73195fc044f0">Ark::internal::Keyword::Begin</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a72d6d7a1885885bb55a565fd1070581a">Ark::internal::Keyword::Import</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1ac48e929b2b1eabba2ba036884433345e">Ark::internal::Keyword::Quote</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a5526d60feb55086fbd12dd96b071a093">Ark::internal::Keyword::Del</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a9a844cdbff6d30f493cb3044c72128f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The different keywords available.  <a href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">More...</a><br /></td></tr>
 <tr class="separator:a9a844cdbff6d30f493cb3044c72128f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ad8c4b518d2483b9d0971f72184cc9cab"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark_1_1internal.html#ad8c4b518d2483b9d0971f72184cc9cab">Ark::internal::operator&lt;&lt;</a> (std::ostream &amp;os, const Nodes &amp;N) noexcept</td></tr>
+<tr class="separator:ad8c4b518d2483b9d0971f72184cc9cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>AST node used by the parser, optimizer and compiler. </p>
@@ -131,7 +175,7 @@ Enumerations</h2></td></tr>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 30 2020 13:58:00 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 17 2021 12:14:38 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

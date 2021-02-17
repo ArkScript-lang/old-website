@@ -14,7 +14,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-modern.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -40,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -112,34 +113,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark.html">Ark</a></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_ark_1_1_compiler.html">   38</a></span>&#160;    <span class="keyword">class </span>ARK_API_EXPORT <a class="code" href="class_ark_1_1_compiler.html">Compiler</a></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_ark_1_1_compiler.html">   38</a></span>&#160;    <span class="keyword">class </span><a class="code" href="_config_8hpp.html#a8df3feacb839d0a55cfa11e158752758">ARK_API_EXPORT</a> <a class="code" href="class_ark_1_1_compiler.html">Compiler</a></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="class_ark_1_1_compiler.html">Compiler</a>(<span class="keywordtype">unsigned</span> debug, <span class="keyword">const</span> std::string&amp; lib_dir, uint16_t options=DefaultFeatures);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="class_ark_1_1_compiler.html">Compiler</a>(<span class="keywordtype">unsigned</span> debug, <span class="keyword">const</span> std::string&amp; lib_dir, uint16_t options=<a class="code" href="namespace_ark.html#a01bf99e888f59670c0508d83cc23ffd4">DefaultFeatures</a>);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> feed(<span class="keyword">const</span> std::string&amp; code, <span class="keyword">const</span> std::string&amp; filename=ARK_NO_NAME_FILE);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> feed(<span class="keyword">const</span> std::string&amp; code, <span class="keyword">const</span> std::string&amp; filename=<a class="code" href="_constants_8hpp.html#ae99a69d821bd74354272ee56fc43f796">ARK_NO_NAME_FILE</a>);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">void</span> compile();</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">void</span> saveTo(<span class="keyword">const</span> std::string&amp; file);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">const</span> bytecode_t&amp; bytecode() noexcept;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespace_ark.html#a120175e12d54ead9aa7559d2231af817">bytecode_t</a>&amp; bytecode() noexcept;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="class_ark_1_1_parser.html">Parser</a> m_parser;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="class_ark_1_1_optimizer.html">Optimizer</a> m_optimizer;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        uint16_t m_options;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_ark_1_1_compiler.html#a20dfa5ed88f75b4a993128965e4d00bb">   79</a></span>&#160;        <a class="code" href="class_ark_1_1_parser.html">Parser</a> <a class="code" href="class_ark_1_1_compiler.html#a20dfa5ed88f75b4a993128965e4d00bb">m_parser</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_ark_1_1_compiler.html#a9d78cdfc4f5d6075fd0f50f7f6f8c4b7">   80</a></span>&#160;        <a class="code" href="class_ark_1_1_optimizer.html">Optimizer</a> <a class="code" href="class_ark_1_1_compiler.html#a9d78cdfc4f5d6075fd0f50f7f6f8c4b7">m_optimizer</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_ark_1_1_compiler.html#a8ec4f62b4188752d64a484ae1ef12e4f">   81</a></span>&#160;        uint16_t <a class="code" href="class_ark_1_1_compiler.html#a8ec4f62b4188752d64a484ae1ef12e4f">m_options</a>;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="comment">// tables: symbols, values, plugins and codes</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        std::vector&lt;internal::Node&gt; m_symbols;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        std::vector&lt;std::string&gt; m_defined_symbols;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        std::vector&lt;std::string&gt; m_plugins;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        std::vector&lt;internal::CValue&gt; m_values;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        std::vector&lt;std::vector&lt;internal::Inst_t&gt;&gt; m_code_pages;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_ark_1_1_compiler.html#ac5f4dd69bbe043cb014433fb5d664abe">   83</a></span>&#160;        std::vector&lt;internal::Node&gt; <a class="code" href="class_ark_1_1_compiler.html#ac5f4dd69bbe043cb014433fb5d664abe">m_symbols</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_ark_1_1_compiler.html#a3b4f5e7492f06a7a951a1a963b02bee1">   84</a></span>&#160;        std::vector&lt;std::string&gt; <a class="code" href="class_ark_1_1_compiler.html#a3b4f5e7492f06a7a951a1a963b02bee1">m_defined_symbols</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_ark_1_1_compiler.html#a73c8e35b2c0151a9368c7bb14a199af4">   85</a></span>&#160;        std::vector&lt;std::string&gt; <a class="code" href="class_ark_1_1_compiler.html#a73c8e35b2c0151a9368c7bb14a199af4">m_plugins</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_ark_1_1_compiler.html#a438297e71f599a87ddf2eb5289aa474e">   86</a></span>&#160;        std::vector&lt;internal::CValue&gt; <a class="code" href="class_ark_1_1_compiler.html#a438297e71f599a87ddf2eb5289aa474e">m_values</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_ark_1_1_compiler.html#a7fef6f7acf8abcaf56295fbf60f21128">   87</a></span>&#160;        std::vector&lt;std::vector&lt;internal::Inst_t&gt;&gt; <a class="code" href="class_ark_1_1_compiler.html#a7fef6f7acf8abcaf56295fbf60f21128">m_code_pages</a>;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="comment">// we need a temp code pages for some compilations passes</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        std::vector&lt;std::vector&lt;internal::Inst_t&gt;&gt; m_temp_pages;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_ark_1_1_compiler.html#a163a383730c183532cddc0cb1b9ec0b0">   89</a></span>&#160;        std::vector&lt;std::vector&lt;internal::Inst_t&gt;&gt; <a class="code" href="class_ark_1_1_compiler.html#a163a383730c183532cddc0cb1b9ec0b0">m_temp_pages</a>;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        bytecode_t m_bytecode;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">unsigned</span> m_debug;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_ark_1_1_compiler.html#adea9b690d084a306cd509213f792ca70">   91</a></span>&#160;        <a class="code" href="namespace_ark.html#a120175e12d54ead9aa7559d2231af817">bytecode_t</a> <a class="code" href="class_ark_1_1_compiler.html#adea9b690d084a306cd509213f792ca70">m_bytecode</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_ark_1_1_compiler.html#a892e413ce4626dbc7ace0c7c0bf4e6f0">   92</a></span>&#160;        <span class="keywordtype">unsigned</span> <a class="code" href="class_ark_1_1_compiler.html#a892e413ce4626dbc7ace0c7c0bf4e6f0">m_debug</a>;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="comment">// helper functions to get a temp or finalized code page</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keyword">inline</span> std::vector&lt;internal::Inst_t&gt;&amp; page(<span class="keywordtype">int</span> i) noexcept;</div>
@@ -166,28 +167,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordtype">void</span> pushNumber(uint16_t n, std::vector&lt;internal::Inst_t&gt;* page=<span class="keyword">nullptr</span>) noexcept;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    };</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">    #include &quot;Compiler.inl&quot;</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="preprocessor">#include &quot;Compiler.inl&quot;</span></div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_ark_1_1_compiler_html_a73c8e35b2c0151a9368c7bb14a199af4"><div class="ttname"><a href="class_ark_1_1_compiler.html#a73c8e35b2c0151a9368c7bb14a199af4">Ark::Compiler::m_plugins</a></div><div class="ttdeci">std::vector&lt; std::string &gt; m_plugins</div><div class="ttdef"><b>Definition:</b> <a href="_compiler_8hpp_source.html#l00085">Compiler.hpp:85</a></div></div>
+<div class="ttc" id="class_ark_1_1_compiler_html_a9d78cdfc4f5d6075fd0f50f7f6f8c4b7"><div class="ttname"><a href="class_ark_1_1_compiler.html#a9d78cdfc4f5d6075fd0f50f7f6f8c4b7">Ark::Compiler::m_optimizer</a></div><div class="ttdeci">Optimizer m_optimizer</div><div class="ttdef"><b>Definition:</b> <a href="_compiler_8hpp_source.html#l00080">Compiler.hpp:80</a></div></div>
 <div class="ttc" id="_optimizer_8hpp_html"><div class="ttname"><a href="_optimizer_8hpp.html">Optimizer.hpp</a></div><div class="ttdoc">Optimizes a given ArkScript AST. </div></div>
+<div class="ttc" id="namespace_ark_html_a120175e12d54ead9aa7559d2231af817"><div class="ttname"><a href="namespace_ark.html#a120175e12d54ead9aa7559d2231af817">Ark::bytecode_t</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; bytecode_t</div><div class="ttdef"><b>Definition:</b> <a href="_bytecode_reader_8hpp_source.html#l00026">BytecodeReader.hpp:26</a></div></div>
+<div class="ttc" id="class_ark_1_1_compiler_html_a20dfa5ed88f75b4a993128965e4d00bb"><div class="ttname"><a href="class_ark_1_1_compiler.html#a20dfa5ed88f75b4a993128965e4d00bb">Ark::Compiler::m_parser</a></div><div class="ttdeci">Parser m_parser</div><div class="ttdef"><b>Definition:</b> <a href="_compiler_8hpp_source.html#l00079">Compiler.hpp:79</a></div></div>
+<div class="ttc" id="_config_8hpp_html_a8df3feacb839d0a55cfa11e158752758"><div class="ttname"><a href="_config_8hpp.html#a8df3feacb839d0a55cfa11e158752758">ARK_API_EXPORT</a></div><div class="ttdeci">#define ARK_API_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="_config_8hpp_source.html#l00039">Config.hpp:39</a></div></div>
+<div class="ttc" id="class_ark_1_1_compiler_html_a7fef6f7acf8abcaf56295fbf60f21128"><div class="ttname"><a href="class_ark_1_1_compiler.html#a7fef6f7acf8abcaf56295fbf60f21128">Ark::Compiler::m_code_pages</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; internal::Inst_t &gt; &gt; m_code_pages</div><div class="ttdef"><b>Definition:</b> <a href="_compiler_8hpp_source.html#l00087">Compiler.hpp:87</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_node_html"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html">Ark::internal::Node</a></div><div class="ttdoc">A node of an Abstract Syntax Tree for ArkScript. </div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00057">Node.hpp:57</a></div></div>
 <div class="ttc" id="_config_8hpp_html"><div class="ttname"><a href="_config_8hpp.html">Config.hpp</a></div><div class="ttdoc">ArkScript configuration macros. </div></div>
+<div class="ttc" id="class_ark_1_1_compiler_html_ac5f4dd69bbe043cb014433fb5d664abe"><div class="ttname"><a href="class_ark_1_1_compiler.html#ac5f4dd69bbe043cb014433fb5d664abe">Ark::Compiler::m_symbols</a></div><div class="ttdeci">std::vector&lt; internal::Node &gt; m_symbols</div><div class="ttdef"><b>Definition:</b> <a href="_compiler_8hpp_source.html#l00083">Compiler.hpp:83</a></div></div>
+<div class="ttc" id="class_ark_1_1_compiler_html_a8ec4f62b4188752d64a484ae1ef12e4f"><div class="ttname"><a href="class_ark_1_1_compiler.html#a8ec4f62b4188752d64a484ae1ef12e4f">Ark::Compiler::m_options</a></div><div class="ttdeci">uint16_t m_options</div><div class="ttdef"><b>Definition:</b> <a href="_compiler_8hpp_source.html#l00081">Compiler.hpp:81</a></div></div>
+<div class="ttc" id="class_ark_1_1_compiler_html_a438297e71f599a87ddf2eb5289aa474e"><div class="ttname"><a href="class_ark_1_1_compiler.html#a438297e71f599a87ddf2eb5289aa474e">Ark::Compiler::m_values</a></div><div class="ttdeci">std::vector&lt; internal::CValue &gt; m_values</div><div class="ttdef"><b>Definition:</b> <a href="_compiler_8hpp_source.html#l00086">Compiler.hpp:86</a></div></div>
 <div class="ttc" id="_bytecode_reader_8hpp_html"><div class="ttname"><a href="_bytecode_reader_8hpp.html">BytecodeReader.hpp</a></div><div class="ttdoc">A bytecode disassembler for ArkScript. </div></div>
 <div class="ttc" id="_utils_8hpp_html"><div class="ttname"><a href="_utils_8hpp.html">Utils.hpp</a></div><div class="ttdoc">Lots of utilities about string, filesystem and more. </div></div>
+<div class="ttc" id="class_ark_1_1_compiler_html_adea9b690d084a306cd509213f792ca70"><div class="ttname"><a href="class_ark_1_1_compiler.html#adea9b690d084a306cd509213f792ca70">Ark::Compiler::m_bytecode</a></div><div class="ttdeci">bytecode_t m_bytecode</div><div class="ttdef"><b>Definition:</b> <a href="_compiler_8hpp_source.html#l00091">Compiler.hpp:91</a></div></div>
 <div class="ttc" id="class_ark_1_1_compiler_html"><div class="ttname"><a href="class_ark_1_1_compiler.html">Ark::Compiler</a></div><div class="ttdoc">The ArkScript bytecode compiler. </div><div class="ttdef"><b>Definition:</b> <a href="_compiler_8hpp_source.html#l00038">Compiler.hpp:38</a></div></div>
 <div class="ttc" id="class_ark_1_1_optimizer_html"><div class="ttname"><a href="class_ark_1_1_optimizer.html">Ark::Optimizer</a></div><div class="ttdoc">The ArkScript AST optimizer. </div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8hpp_source.html#l00030">Optimizer.hpp:30</a></div></div>
 <div class="ttc" id="_instructions_8hpp_html"><div class="ttname"><a href="_instructions_8hpp.html">Instructions.hpp</a></div><div class="ttdoc">The different instructions used by the compiler and virtual machine. </div></div>
 <div class="ttc" id="_c_value_8hpp_html"><div class="ttname"><a href="_c_value_8hpp.html">CValue.hpp</a></div><div class="ttdoc">The basic value type handled by the compiler. </div></div>
+<div class="ttc" id="class_ark_1_1_compiler_html_a163a383730c183532cddc0cb1b9ec0b0"><div class="ttname"><a href="class_ark_1_1_compiler.html#a163a383730c183532cddc0cb1b9ec0b0">Ark::Compiler::m_temp_pages</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; internal::Inst_t &gt; &gt; m_temp_pages</div><div class="ttdef"><b>Definition:</b> <a href="_compiler_8hpp_source.html#l00089">Compiler.hpp:89</a></div></div>
+<div class="ttc" id="_constants_8hpp_html_ae99a69d821bd74354272ee56fc43f796"><div class="ttname"><a href="_constants_8hpp.html#ae99a69d821bd74354272ee56fc43f796">ARK_NO_NAME_FILE</a></div><div class="ttdeci">#define ARK_NO_NAME_FILE</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00022">Constants.hpp:22</a></div></div>
+<div class="ttc" id="class_ark_1_1_compiler_html_a3b4f5e7492f06a7a951a1a963b02bee1"><div class="ttname"><a href="class_ark_1_1_compiler.html#a3b4f5e7492f06a7a951a1a963b02bee1">Ark::Compiler::m_defined_symbols</a></div><div class="ttdeci">std::vector&lt; std::string &gt; m_defined_symbols</div><div class="ttdef"><b>Definition:</b> <a href="_compiler_8hpp_source.html#l00084">Compiler.hpp:84</a></div></div>
 <div class="ttc" id="class_ark_1_1_parser_html"><div class="ttname"><a href="class_ark_1_1_parser.html">Ark::Parser</a></div><div class="ttdoc">The parser is responsible of constructing the Abstract Syntax Tree from a token list. </div><div class="ttdef"><b>Definition:</b> <a href="_parser_8hpp_source.html#l00033">Parser.hpp:33</a></div></div>
 <div class="ttc" id="_parser_8hpp_html"><div class="ttname"><a href="_parser_8hpp.html">Parser.hpp</a></div><div class="ttdoc">Parses a token stream into an AST by using the Ark::internal::Node. </div></div>
+<div class="ttc" id="namespace_ark_html_a01bf99e888f59670c0508d83cc23ffd4"><div class="ttname"><a href="namespace_ark.html#a01bf99e888f59670c0508d83cc23ffd4">Ark::DefaultFeatures</a></div><div class="ttdeci">constexpr uint16_t DefaultFeatures</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00035">Constants.hpp:35</a></div></div>
 <div class="ttc" id="_node_8hpp_html"><div class="ttname"><a href="_node_8hpp.html">Node.hpp</a></div><div class="ttdoc">AST node used by the parser, optimizer and compiler. </div></div>
 <div class="ttc" id="_builtins_8hpp_html"><div class="ttname"><a href="_builtins_8hpp.html">Builtins.hpp</a></div><div class="ttdoc">Host the declaration of all the ArkScript builtins. </div></div>
+<div class="ttc" id="class_ark_1_1_compiler_html_a892e413ce4626dbc7ace0c7c0bf4e6f0"><div class="ttname"><a href="class_ark_1_1_compiler.html#a892e413ce4626dbc7ace0c7c0bf4e6f0">Ark::Compiler::m_debug</a></div><div class="ttdeci">unsigned m_debug</div><div class="ttdef"><b>Definition:</b> <a href="_compiler_8hpp_source.html#l00092">Compiler.hpp:92</a></div></div>
 <div class="ttc" id="namespace_ark_html"><div class="ttname"><a href="namespace_ark.html">Ark</a></div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8hpp_source.html#l00023">Builtins.hpp:23</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 30 2020 13:57:56 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 17 2021 12:14:34 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

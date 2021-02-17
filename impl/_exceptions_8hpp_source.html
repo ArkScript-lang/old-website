@@ -14,7 +14,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-modern.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -40,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -101,23 +102,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_ark_1_1_type_error.html">   24</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_ark_1_1_type_error.html">TypeError</a> : <span class="keyword">public</span> std::exception</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="class_ark_1_1_type_error.html">TypeError</a>(<span class="keyword">const</span> std::string&amp; message) :</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            m_msg(<span class="stringliteral">&quot;TypeError: &quot;</span> + message)</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_ark_1_1_type_error.html#aa44342e2632cde168e73aef6754047a0">   27</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="class_ark_1_1_type_error.html#aa44342e2632cde168e73aef6754047a0">TypeError</a>(<span class="keyword">const</span> std::string&amp; message) :</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <a class="code" href="class_ark_1_1_type_error.html#a0c795002023f8ad9fa512d5d7b2caaa0">m_msg</a>(<span class="stringliteral">&quot;TypeError: &quot;</span> + message)</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {}</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> <span class="keywordflow">throw</span>()</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_ark_1_1_type_error.html#aada7ea58cc1e7f1d25b591504d40ebd0">   31</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_ark_1_1_type_error.html#aada7ea58cc1e7f1d25b591504d40ebd0">what</a>() <span class="keyword">const</span> throw()</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">return</span> m_msg.c_str();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_ark_1_1_type_error.html#a0c795002023f8ad9fa512d5d7b2caaa0">m_msg</a>.c_str();</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        std::string m_msg;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_ark_1_1_type_error.html#a0c795002023f8ad9fa512d5d7b2caaa0">   37</a></span>&#160;        std::string <a class="code" href="class_ark_1_1_type_error.html#a0c795002023f8ad9fa512d5d7b2caaa0">m_msg</a>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    };</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_ark_1_1_zero_division_error.html">   44</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_ark_1_1_zero_division_error.html">ZeroDivisionError</a> : <span class="keyword">public</span> std::exception</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> <span class="keywordflow">throw</span>()</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_ark_1_1_zero_division_error.html#af725fdd61d13bb8171f73be4e9e415ec">   47</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_ark_1_1_zero_division_error.html#af725fdd61d13bb8171f73be4e9e415ec">what</a>() <span class="keyword">const</span> throw()</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        {</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">return</span> </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="stringliteral">&quot;ZeroDivisionError: In ordonary arithmetic, the expression has no meaning, &quot;</span></div>
@@ -130,7 +131,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_ark_1_1_pow_error.html">   61</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_ark_1_1_pow_error.html">PowError</a> : <span class="keyword">public</span> std::exception</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> <span class="keywordflow">throw</span>()</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_ark_1_1_pow_error.html#a6d84df2ede0d722fc984158a8e26a2d2">   64</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_ark_1_1_pow_error.html#a6d84df2ede0d722fc984158a8e26a2d2">what</a>() <span class="keyword">const</span> throw()</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="stringliteral">&quot;PowError: Can not pow the given number (a) to the given exponent (b) because &quot;</span></div>
@@ -141,89 +142,109 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_ark_1_1_assertion_failed.html">   76</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_ark_1_1_assertion_failed.html">AssertionFailed</a> : <span class="keyword">public</span> std::exception</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="class_ark_1_1_assertion_failed.html">AssertionFailed</a>(<span class="keyword">const</span> std::string&amp; message) :</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            m_msg(<span class="stringliteral">&quot;AssertionFailed: &quot;</span> + message)</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_ark_1_1_assertion_failed.html#a53766300514379fbab6775e089d59cc8">   79</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="class_ark_1_1_assertion_failed.html#a53766300514379fbab6775e089d59cc8">AssertionFailed</a>(<span class="keyword">const</span> std::string&amp; message) :</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <a class="code" href="class_ark_1_1_assertion_failed.html#aa1ddab60f662337ae36b6aec3fca57fe">m_msg</a>(<span class="stringliteral">&quot;AssertionFailed: &quot;</span> + message)</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        {}</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> <span class="keywordflow">throw</span>()</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_ark_1_1_assertion_failed.html#a3f06fec9c273836e11494734bbc4d627">   83</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_ark_1_1_assertion_failed.html#a3f06fec9c273836e11494734bbc4d627">what</a>() <span class="keyword">const</span> throw()</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">return</span> m_msg.c_str();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_ark_1_1_assertion_failed.html#aa1ddab60f662337ae36b6aec3fca57fe">m_msg</a>.c_str();</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        std::string m_msg;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_ark_1_1_assertion_failed.html#aa1ddab60f662337ae36b6aec3fca57fe">   89</a></span>&#160;        std::string <a class="code" href="class_ark_1_1_assertion_failed.html#aa1ddab60f662337ae36b6aec3fca57fe">m_msg</a>;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    };</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
 <div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_ark_1_1_syntax_error.html">   96</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_ark_1_1_syntax_error.html">SyntaxError</a> : <span class="keyword">public</span> std::exception</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="class_ark_1_1_syntax_error.html">SyntaxError</a>(<span class="keyword">const</span> std::string&amp; message) :</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            m_msg(<span class="stringliteral">&quot;SyntaxError: &quot;</span> + message)</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="class_ark_1_1_syntax_error.html#a59dc82fb880dd8e3a049cfdde7305d81">   99</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="class_ark_1_1_syntax_error.html#a59dc82fb880dd8e3a049cfdde7305d81">SyntaxError</a>(<span class="keyword">const</span> std::string&amp; message) :</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <a class="code" href="class_ark_1_1_syntax_error.html#a501ccd53dbe476117494a55b04b2236b">m_msg</a>(<span class="stringliteral">&quot;SyntaxError: &quot;</span> + message)</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        {}</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> <span class="keywordflow">throw</span>()</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="class_ark_1_1_syntax_error.html#a1a7d6f0bf14b31269ebde08171b3a1e5">  103</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_ark_1_1_syntax_error.html#a1a7d6f0bf14b31269ebde08171b3a1e5">what</a>() <span class="keyword">const</span> throw()</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">return</span> m_msg.c_str();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_ark_1_1_syntax_error.html#a501ccd53dbe476117494a55b04b2236b">m_msg</a>.c_str();</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        std::string m_msg;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_ark_1_1_syntax_error.html#a501ccd53dbe476117494a55b04b2236b">  109</a></span>&#160;        std::string <a class="code" href="class_ark_1_1_syntax_error.html#a501ccd53dbe476117494a55b04b2236b">m_msg</a>;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    };</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
 <div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_ark_1_1_parse_error.html">  116</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_ark_1_1_parse_error.html">ParseError</a> : <span class="keyword">public</span> std::exception</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    {</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="class_ark_1_1_parse_error.html">ParseError</a>(<span class="keyword">const</span> std::string&amp; message) :</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            m_msg(<span class="stringliteral">&quot;ParseError: &quot;</span> + message)</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_ark_1_1_parse_error.html#a46eabd4243bd1e9835644318a8da39b4">  119</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="class_ark_1_1_parse_error.html#a46eabd4243bd1e9835644318a8da39b4">ParseError</a>(<span class="keyword">const</span> std::string&amp; message) :</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <a class="code" href="class_ark_1_1_parse_error.html#ad7198c18af1c0aa2b07588ef0c4eac7b">m_msg</a>(<span class="stringliteral">&quot;ParseError: &quot;</span> + message)</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        {}</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> <span class="keywordflow">throw</span>()</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="class_ark_1_1_parse_error.html#a29febd682d7eef3991461607f8c7fcf1">  123</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_ark_1_1_parse_error.html#a29febd682d7eef3991461607f8c7fcf1">what</a>() <span class="keyword">const</span> throw()</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">return</span> m_msg.c_str();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_ark_1_1_parse_error.html#ad7198c18af1c0aa2b07588ef0c4eac7b">m_msg</a>.c_str();</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        }</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        std::string m_msg;</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="class_ark_1_1_parse_error.html#ad7198c18af1c0aa2b07588ef0c4eac7b">  129</a></span>&#160;        std::string <a class="code" href="class_ark_1_1_parse_error.html#ad7198c18af1c0aa2b07588ef0c4eac7b">m_msg</a>;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    };</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
 <div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="class_ark_1_1_optimizer_error.html">  136</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_ark_1_1_optimizer_error.html">OptimizerError</a> : <span class="keyword">public</span> std::exception</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    {</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="class_ark_1_1_optimizer_error.html">OptimizerError</a>(<span class="keyword">const</span> std::string&amp; message) :</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            m_msg(<span class="stringliteral">&quot;OptimizerError: &quot;</span> + message)</div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="class_ark_1_1_optimizer_error.html#af12f268e7c39d3c18c19c4b3a839dedf">  139</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="class_ark_1_1_optimizer_error.html#af12f268e7c39d3c18c19c4b3a839dedf">OptimizerError</a>(<span class="keyword">const</span> std::string&amp; message) :</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <a class="code" href="class_ark_1_1_optimizer_error.html#a5730c62fc5e40854590209a572d6956a">m_msg</a>(<span class="stringliteral">&quot;OptimizerError: &quot;</span> + message)</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        {}</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> <span class="keywordflow">throw</span>()</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="class_ark_1_1_optimizer_error.html#a5038ab1697e97b362480fac8399617ed">  143</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_ark_1_1_optimizer_error.html#a5038ab1697e97b362480fac8399617ed">what</a>() <span class="keyword">const</span> throw()</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        {</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordflow">return</span> m_msg.c_str();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_ark_1_1_optimizer_error.html#a5730c62fc5e40854590209a572d6956a">m_msg</a>.c_str();</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        }</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        std::string m_msg;</div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="class_ark_1_1_optimizer_error.html#a5730c62fc5e40854590209a572d6956a">  149</a></span>&#160;        std::string <a class="code" href="class_ark_1_1_optimizer_error.html#a5730c62fc5e40854590209a572d6956a">m_msg</a>;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    };</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
 <div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="class_ark_1_1_compilation_error.html">  156</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_ark_1_1_compilation_error.html">CompilationError</a> : <span class="keyword">public</span> std::exception</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    {</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="class_ark_1_1_compilation_error.html">CompilationError</a>(<span class="keyword">const</span> std::string&amp; message) :</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            m_msg(<span class="stringliteral">&quot;CompilationError: &quot;</span> + message)</div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="class_ark_1_1_compilation_error.html#a8f42ec8b1741241064e445fa81f3c4ea">  159</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="class_ark_1_1_compilation_error.html#a8f42ec8b1741241064e445fa81f3c4ea">CompilationError</a>(<span class="keyword">const</span> std::string&amp; message) :</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <a class="code" href="class_ark_1_1_compilation_error.html#a950a7ff4907b0f8a085ded23712b1b8e">m_msg</a>(<span class="stringliteral">&quot;CompilationError: &quot;</span> + message)</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        {}</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> <span class="keywordflow">throw</span>()</div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="class_ark_1_1_compilation_error.html#a6faab8e8d921cd283d0e44ed050040de">  163</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_ark_1_1_compilation_error.html#a6faab8e8d921cd283d0e44ed050040de">what</a>() <span class="keyword">const</span> throw()</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        {</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordflow">return</span> m_msg.c_str();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_ark_1_1_compilation_error.html#a950a7ff4907b0f8a085ded23712b1b8e">m_msg</a>.c_str();</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        }</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        std::string m_msg;</div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="class_ark_1_1_compilation_error.html#a950a7ff4907b0f8a085ded23712b1b8e">  169</a></span>&#160;        std::string <a class="code" href="class_ark_1_1_compilation_error.html#a950a7ff4907b0f8a085ded23712b1b8e">m_msg</a>;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    };</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;}</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_ark_1_1_syntax_error_html_a1a7d6f0bf14b31269ebde08171b3a1e5"><div class="ttname"><a href="class_ark_1_1_syntax_error.html#a1a7d6f0bf14b31269ebde08171b3a1e5">Ark::SyntaxError::what</a></div><div class="ttdeci">virtual const char * what() const </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00103">Exceptions.hpp:103</a></div></div>
+<div class="ttc" id="class_ark_1_1_assertion_failed_html_a53766300514379fbab6775e089d59cc8"><div class="ttname"><a href="class_ark_1_1_assertion_failed.html#a53766300514379fbab6775e089d59cc8">Ark::AssertionFailed::AssertionFailed</a></div><div class="ttdeci">AssertionFailed(const std::string &amp;message)</div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00079">Exceptions.hpp:79</a></div></div>
+<div class="ttc" id="class_ark_1_1_compilation_error_html_a950a7ff4907b0f8a085ded23712b1b8e"><div class="ttname"><a href="class_ark_1_1_compilation_error.html#a950a7ff4907b0f8a085ded23712b1b8e">Ark::CompilationError::m_msg</a></div><div class="ttdeci">std::string m_msg</div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00169">Exceptions.hpp:169</a></div></div>
+<div class="ttc" id="class_ark_1_1_parse_error_html_ad7198c18af1c0aa2b07588ef0c4eac7b"><div class="ttname"><a href="class_ark_1_1_parse_error.html#ad7198c18af1c0aa2b07588ef0c4eac7b">Ark::ParseError::m_msg</a></div><div class="ttdeci">std::string m_msg</div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00129">Exceptions.hpp:129</a></div></div>
+<div class="ttc" id="class_ark_1_1_type_error_html_aada7ea58cc1e7f1d25b591504d40ebd0"><div class="ttname"><a href="class_ark_1_1_type_error.html#aada7ea58cc1e7f1d25b591504d40ebd0">Ark::TypeError::what</a></div><div class="ttdeci">virtual const char * what() const </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00031">Exceptions.hpp:31</a></div></div>
+<div class="ttc" id="class_ark_1_1_parse_error_html_a29febd682d7eef3991461607f8c7fcf1"><div class="ttname"><a href="class_ark_1_1_parse_error.html#a29febd682d7eef3991461607f8c7fcf1">Ark::ParseError::what</a></div><div class="ttdeci">virtual const char * what() const </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00123">Exceptions.hpp:123</a></div></div>
+<div class="ttc" id="class_ark_1_1_type_error_html_aa44342e2632cde168e73aef6754047a0"><div class="ttname"><a href="class_ark_1_1_type_error.html#aa44342e2632cde168e73aef6754047a0">Ark::TypeError::TypeError</a></div><div class="ttdeci">TypeError(const std::string &amp;message)</div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00027">Exceptions.hpp:27</a></div></div>
 <div class="ttc" id="class_ark_1_1_compilation_error_html"><div class="ttname"><a href="class_ark_1_1_compilation_error.html">Ark::CompilationError</a></div><div class="ttdoc">CompilationError thrown by the compiler. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00156">Exceptions.hpp:156</a></div></div>
 <div class="ttc" id="class_ark_1_1_zero_division_error_html"><div class="ttname"><a href="class_ark_1_1_zero_division_error.html">Ark::ZeroDivisionError</a></div><div class="ttdoc">A special zero division error triggered when a number is divided by 0. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00044">Exceptions.hpp:44</a></div></div>
+<div class="ttc" id="class_ark_1_1_optimizer_error_html_a5730c62fc5e40854590209a572d6956a"><div class="ttname"><a href="class_ark_1_1_optimizer_error.html#a5730c62fc5e40854590209a572d6956a">Ark::OptimizerError::m_msg</a></div><div class="ttdeci">std::string m_msg</div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00149">Exceptions.hpp:149</a></div></div>
+<div class="ttc" id="class_ark_1_1_compilation_error_html_a8f42ec8b1741241064e445fa81f3c4ea"><div class="ttname"><a href="class_ark_1_1_compilation_error.html#a8f42ec8b1741241064e445fa81f3c4ea">Ark::CompilationError::CompilationError</a></div><div class="ttdeci">CompilationError(const std::string &amp;message)</div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00159">Exceptions.hpp:159</a></div></div>
+<div class="ttc" id="class_ark_1_1_pow_error_html_a6d84df2ede0d722fc984158a8e26a2d2"><div class="ttname"><a href="class_ark_1_1_pow_error.html#a6d84df2ede0d722fc984158a8e26a2d2">Ark::PowError::what</a></div><div class="ttdeci">virtual const char * what() const </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00064">Exceptions.hpp:64</a></div></div>
+<div class="ttc" id="class_ark_1_1_optimizer_error_html_af12f268e7c39d3c18c19c4b3a839dedf"><div class="ttname"><a href="class_ark_1_1_optimizer_error.html#af12f268e7c39d3c18c19c4b3a839dedf">Ark::OptimizerError::OptimizerError</a></div><div class="ttdeci">OptimizerError(const std::string &amp;message)</div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00139">Exceptions.hpp:139</a></div></div>
+<div class="ttc" id="class_ark_1_1_assertion_failed_html_aa1ddab60f662337ae36b6aec3fca57fe"><div class="ttname"><a href="class_ark_1_1_assertion_failed.html#aa1ddab60f662337ae36b6aec3fca57fe">Ark::AssertionFailed::m_msg</a></div><div class="ttdeci">std::string m_msg</div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00089">Exceptions.hpp:89</a></div></div>
 <div class="ttc" id="class_ark_1_1_assertion_failed_html"><div class="ttname"><a href="class_ark_1_1_assertion_failed.html">Ark::AssertionFailed</a></div><div class="ttdoc">An assertion error, only triggered from ArkScript code through (assert expr error-message) ...</div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00076">Exceptions.hpp:76</a></div></div>
+<div class="ttc" id="class_ark_1_1_optimizer_error_html_a5038ab1697e97b362480fac8399617ed"><div class="ttname"><a href="class_ark_1_1_optimizer_error.html#a5038ab1697e97b362480fac8399617ed">Ark::OptimizerError::what</a></div><div class="ttdeci">virtual const char * what() const </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00143">Exceptions.hpp:143</a></div></div>
 <div class="ttc" id="class_ark_1_1_parse_error_html"><div class="ttname"><a href="class_ark_1_1_parse_error.html">Ark::ParseError</a></div><div class="ttdoc">ParseError thrown by the parser. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00116">Exceptions.hpp:116</a></div></div>
+<div class="ttc" id="class_ark_1_1_compilation_error_html_a6faab8e8d921cd283d0e44ed050040de"><div class="ttname"><a href="class_ark_1_1_compilation_error.html#a6faab8e8d921cd283d0e44ed050040de">Ark::CompilationError::what</a></div><div class="ttdeci">virtual const char * what() const </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00163">Exceptions.hpp:163</a></div></div>
+<div class="ttc" id="class_ark_1_1_syntax_error_html_a59dc82fb880dd8e3a049cfdde7305d81"><div class="ttname"><a href="class_ark_1_1_syntax_error.html#a59dc82fb880dd8e3a049cfdde7305d81">Ark::SyntaxError::SyntaxError</a></div><div class="ttdeci">SyntaxError(const std::string &amp;message)</div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00099">Exceptions.hpp:99</a></div></div>
+<div class="ttc" id="class_ark_1_1_assertion_failed_html_a3f06fec9c273836e11494734bbc4d627"><div class="ttname"><a href="class_ark_1_1_assertion_failed.html#a3f06fec9c273836e11494734bbc4d627">Ark::AssertionFailed::what</a></div><div class="ttdeci">virtual const char * what() const </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00083">Exceptions.hpp:83</a></div></div>
+<div class="ttc" id="class_ark_1_1_type_error_html_a0c795002023f8ad9fa512d5d7b2caaa0"><div class="ttname"><a href="class_ark_1_1_type_error.html#a0c795002023f8ad9fa512d5d7b2caaa0">Ark::TypeError::m_msg</a></div><div class="ttdeci">std::string m_msg</div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00037">Exceptions.hpp:37</a></div></div>
+<div class="ttc" id="class_ark_1_1_syntax_error_html_a501ccd53dbe476117494a55b04b2236b"><div class="ttname"><a href="class_ark_1_1_syntax_error.html#a501ccd53dbe476117494a55b04b2236b">Ark::SyntaxError::m_msg</a></div><div class="ttdeci">std::string m_msg</div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00109">Exceptions.hpp:109</a></div></div>
+<div class="ttc" id="class_ark_1_1_zero_division_error_html_af725fdd61d13bb8171f73be4e9e415ec"><div class="ttname"><a href="class_ark_1_1_zero_division_error.html#af725fdd61d13bb8171f73be4e9e415ec">Ark::ZeroDivisionError::what</a></div><div class="ttdeci">virtual const char * what() const </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00047">Exceptions.hpp:47</a></div></div>
+<div class="ttc" id="class_ark_1_1_parse_error_html_a46eabd4243bd1e9835644318a8da39b4"><div class="ttname"><a href="class_ark_1_1_parse_error.html#a46eabd4243bd1e9835644318a8da39b4">Ark::ParseError::ParseError</a></div><div class="ttdeci">ParseError(const std::string &amp;message)</div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00119">Exceptions.hpp:119</a></div></div>
 <div class="ttc" id="class_ark_1_1_optimizer_error_html"><div class="ttname"><a href="class_ark_1_1_optimizer_error.html">Ark::OptimizerError</a></div><div class="ttdoc">OptimizerError thrown by the AST optimizer. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00136">Exceptions.hpp:136</a></div></div>
 <div class="ttc" id="class_ark_1_1_type_error_html"><div class="ttname"><a href="class_ark_1_1_type_error.html">Ark::TypeError</a></div><div class="ttdoc">A type error triggered when types don&#39;t match. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00024">Exceptions.hpp:24</a></div></div>
 <div class="ttc" id="class_ark_1_1_pow_error_html"><div class="ttname"><a href="class_ark_1_1_pow_error.html">Ark::PowError</a></div><div class="ttdoc">A pow error triggered when we can&#39;t do a pow b. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00061">Exceptions.hpp:61</a></div></div>
@@ -232,7 +253,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 30 2020 13:57:57 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 17 2021 12:14:35 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

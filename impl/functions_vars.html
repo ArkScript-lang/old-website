@@ -14,7 +14,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-modern.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -40,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -64,6 +64,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li class="current"><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -72,6 +73,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
+      <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow4" class="tabs3">
+    <ul class="tablist">
+      <li><a href="#index_c"><span>c</span></a></li>
+      <li><a href="#index_d"><span>d</span></a></li>
+      <li><a href="#index_l"><span>l</span></a></li>
+      <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_n"><span>n</span></a></li>
+      <li><a href="#index_o"><span>o</span></a></li>
+      <li><a href="#index_t"><span>t</span></a></li>
+      <li class="current"><a href="#index_v"><span>v</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -80,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -90,18 +105,274 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 <div class="contents">
-&#160;<ul>
-<li>m_addr
-: <a class="el" href="class_ark_1_1internal_1_1_frame.html#a4fdb6fd70d29256b7cdcea6976f9ea80">Ark::internal::Frame</a>
+&#160;
+
+<h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>col
+: <a class="el" href="struct_ark_1_1internal_1_1_token.html#a42d2f41c802e64550a346d89a7417210">Ark::internal::Token</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
+<li>deleter
+: <a class="el" href="struct_ark_1_1_user_type_1_1_control_funcs.html#ae16e8254044be4569e78b3ab0debf723">Ark::UserType::ControlFuncs</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
+<li>line
+: <a class="el" href="struct_ark_1_1internal_1_1_token.html#a0156ffe13fe4b75501597456c35a1c83">Ark::internal::Token</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>m__no_value
+: <a class="el" href="class_ark_1_1_v_m.html#a2fb678d70b43bb00a39d58661617ef43">Ark::VM</a>
+</li>
+<li>m_ast
+: <a class="el" href="class_ark_1_1_optimizer.html#aa8b27d74a61b0cee727f4cf14efc0a9b">Ark::Optimizer</a>
+, <a class="el" href="class_ark_1_1_parser.html#a80f9e37fb3fd8ef69adaab25c9c1b5f3">Ark::Parser</a>
+</li>
+<li>m_binded
+: <a class="el" href="class_ark_1_1_state.html#aa12901642915bdc5880a2202bf4629b8">Ark::State</a>
+</li>
+<li>m_buffer
+: <a class="el" href="class_ark_1_1_logger.html#a7735062593216fb5d6ea646a3f62d73f">Ark::Logger</a>
+</li>
+<li>m_bytecode
+: <a class="el" href="class_ark_1_1_bytecode_reader.html#adf3ea083851deb83caa8e3eddfba95fd">Ark::BytecodeReader</a>
+, <a class="el" href="class_ark_1_1_compiler.html#adea9b690d084a306cd509213f792ca70">Ark::Compiler</a>
+, <a class="el" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">Ark::State</a>
+</li>
+<li>m_code
+: <a class="el" href="class_ark_1_1_parser.html#a2d9d8b296d109be78fcbc2be41873f42">Ark::Parser</a>
+</li>
+<li>m_code_pages
+: <a class="el" href="class_ark_1_1_compiler.html#a7fef6f7acf8abcaf56295fbf60f21128">Ark::Compiler</a>
+</li>
+<li>m_col
+: <a class="el" href="class_ark_1_1internal_1_1_node.html#aec9b37d7d0ef76ac9584b90497b94766">Ark::internal::Node</a>
+</li>
+<li>m_constants
+: <a class="el" href="class_ark_1_1_state.html#abd9f3fe8b6e6e589696a0ec04a8d3511">Ark::State</a>
+</li>
+<li>m_constType
+: <a class="el" href="class_ark_1_1internal_1_1_value.html#abea71efa1fa6c9f3e8c22dbcb4e2d2d6">Ark::internal::Value</a>
+</li>
+<li>m_data
+: <a class="el" href="class_ark_1_1internal_1_1_scope.html#a7b23fd2be84afd89f624557155c15fe2">Ark::internal::Scope</a>
+, <a class="el" href="class_ark_1_1_user_type.html#ad35883bb472e1edcae2cc28b63ad83e7">Ark::UserType</a>
+</li>
+<li>m_debug
+: <a class="el" href="class_ark_1_1_compiler.html#a892e413ce4626dbc7ace0c7c0bf4e6f0">Ark::Compiler</a>
+, <a class="el" href="class_ark_1_1internal_1_1_lexer.html#addbfd2cfabde72dbe264958ce0d9f515">Ark::internal::Lexer</a>
+, <a class="el" href="class_ark_1_1_parser.html#a9c05599489a99d9d8987c8149569f32b">Ark::Parser</a>
+</li>
+<li>m_debug_level
+: <a class="el" href="class_ark_1_1_state.html#ac612a46c05c538df07704fbd4edc3607">Ark::State</a>
+</li>
+<li>m_defined_symbols
+: <a class="el" href="class_ark_1_1_compiler.html#a3b4f5e7492f06a7a951a1a963b02bee1">Ark::Compiler</a>
+</li>
+<li>m_exitCode
+: <a class="el" href="class_ark_1_1_v_m.html#af7c38b43ba86f6b3f4471a1367bdb5ef">Ark::VM</a>
+</li>
+<li>m_fc
+: <a class="el" href="class_ark_1_1_v_m.html#ad4b63d9b30ae7aace744e1e2f503c7dd">Ark::VM</a>
+</li>
+<li>m_file
+: <a class="el" href="class_ark_1_1_logger.html#a382c208d00c2a4687ce7633fa07f939e">Ark::Logger</a>
+, <a class="el" href="class_ark_1_1_parser.html#a36268503a2ee8c4c1789213a095d9cfe">Ark::Parser</a>
+</li>
+<li>m_filename
+: <a class="el" href="class_ark_1_1internal_1_1_node.html#a4f21160ed287c5d5504149d3c718fd08">Ark::internal::Node</a>
+, <a class="el" href="class_ark_1_1_state.html#a49ff30e9372a01fa115e1d473d78ff7d">Ark::State</a>
+</li>
+<li>m_funcs
+: <a class="el" href="class_ark_1_1_user_type.html#ac44ffce3906341bea5daf754ec3f4519">Ark::UserType</a>
+</li>
+<li>m_ip
+: <a class="el" href="class_ark_1_1_v_m.html#a892cfa7b8f3b23622091ab5c0c192619">Ark::VM</a>
+</li>
+<li>m_last_sym_loaded
+: <a class="el" href="class_ark_1_1_v_m.html#a358defab470981a23beb1543c2618075">Ark::VM</a>
+</li>
+<li>m_last_token
+: <a class="el" href="class_ark_1_1_parser.html#a1131a7a222f894d85d7afa6a5972747a">Ark::Parser</a>
+</li>
+<li>m_level
+: <a class="el" href="class_ark_1_1_logger.html#ac881aa5a68e490c69ceb35e290ca9099">Ark::Logger</a>
+</li>
+<li>m_lexer
+: <a class="el" href="class_ark_1_1_parser.html#ac084e3e70fa7e85989bda0a92c3c6f2f">Ark::Parser</a>
+</li>
+<li>m_lib_dir
+: <a class="el" href="class_ark_1_1_repl.html#af885195f6d803b0768fc793721502e19">Ark::Repl</a>
+</li>
+<li>m_libdir
+: <a class="el" href="class_ark_1_1_parser.html#a383bd2412c68ecea0d598ac849f4fe2b">Ark::Parser</a>
+, <a class="el" href="class_ark_1_1_state.html#a1f74b3a2bdac7408bf696adc2c21d9fb">Ark::State</a>
+</li>
+<li>m_line
+: <a class="el" href="class_ark_1_1internal_1_1_node.html#a9d6e3cd4bdebefe4650b08e7570fe4d1">Ark::internal::Node</a>
+</li>
+<li>m_lines
+: <a class="el" href="class_ark_1_1_repl.html#adb838195096ce3d46143c7ca73aa864c">Ark::Repl</a>
+</li>
+<li>m_list
+: <a class="el" href="class_ark_1_1internal_1_1_node.html#a335fd06cadf9354288f5f12aa5ed74fa">Ark::internal::Node</a>
+</li>
+<li>m_loaded
+: <a class="el" href="class_ark_1_1internal_1_1_shared_library.html#ad1e6c0172d246eae8c73570eb6fa42d8">Ark::internal::SharedLibrary</a>
+</li>
+<li>m_locals
+: <a class="el" href="class_ark_1_1_v_m.html#a22c664ca4d7bd3223f7019715cfccebc">Ark::VM</a>
+</li>
+<li>m_msg
+: <a class="el" href="class_ark_1_1_assertion_failed.html#aa1ddab60f662337ae36b6aec3fca57fe">Ark::AssertionFailed</a>
+, <a class="el" href="class_ark_1_1_compilation_error.html#a950a7ff4907b0f8a085ded23712b1b8e">Ark::CompilationError</a>
+, <a class="el" href="class_ark_1_1_optimizer_error.html#a5730c62fc5e40854590209a572d6956a">Ark::OptimizerError</a>
+, <a class="el" href="class_ark_1_1_parse_error.html#ad7198c18af1c0aa2b07588ef0c4eac7b">Ark::ParseError</a>
+, <a class="el" href="class_ark_1_1_syntax_error.html#a501ccd53dbe476117494a55b04b2236b">Ark::SyntaxError</a>
+, <a class="el" href="class_ark_1_1_type_error.html#a0c795002023f8ad9fa512d5d7b2caaa0">Ark::TypeError</a>
+</li>
+<li>m_mutex
+: <a class="el" href="class_ark_1_1_v_m.html#a6f2bf344a2ca2ba4dd5a0c5075e01dcd">Ark::VM</a>
+</li>
+<li>m_old_ip
+: <a class="el" href="class_ark_1_1_repl.html#ad042675ab12467a4ef6bffc1adcd1c12">Ark::Repl</a>
+</li>
+<li>m_optimizer
+: <a class="el" href="class_ark_1_1_compiler.html#a9d78cdfc4f5d6075fd0f50f7f6f8c4b7">Ark::Compiler</a>
+</li>
+<li>m_options
+: <a class="el" href="class_ark_1_1_compiler.html#a8ec4f62b4188752d64a484ae1ef12e4f">Ark::Compiler</a>
+, <a class="el" href="class_ark_1_1_optimizer.html#aba47f9ac9fd0a8181d41a6210b930336">Ark::Optimizer</a>
+, <a class="el" href="class_ark_1_1_parser.html#a10cc11fef143c95678b9131b248c3c9b">Ark::Parser</a>
+, <a class="el" href="class_ark_1_1_repl.html#aab580778688efe8e28e831d63ad9843f">Ark::Repl</a>
+, <a class="el" href="class_ark_1_1_state.html#a8c9748d6de5ac5e611b7690018c467cd">Ark::State</a>
 </li>
 <li>m_page_addr
-: <a class="el" href="class_ark_1_1internal_1_1_frame.html#a2ad696f1a81cf67b2a753672931f2076">Ark::internal::Frame</a>
+: <a class="el" href="class_ark_1_1internal_1_1_closure.html#a5b988d12a962cd1575be756cc0eb931f">Ark::internal::Closure</a>
+</li>
+<li>m_pages
+: <a class="el" href="class_ark_1_1_state.html#ab30d0ca94fb2543fb073e5f66c074c37">Ark::State</a>
+</li>
+<li>m_parent_include
+: <a class="el" href="class_ark_1_1_parser.html#a0d5298010b9bd45ced8a5a5ff84ee95e">Ark::Parser</a>
+</li>
+<li>m_parser
+: <a class="el" href="class_ark_1_1_compiler.html#a20dfa5ed88f75b4a993128965e4d00bb">Ark::Compiler</a>
+</li>
+<li>m_path
+: <a class="el" href="class_ark_1_1internal_1_1_shared_library.html#abc126e4018039a96052602adbc5b9b6b">Ark::internal::SharedLibrary</a>
+</li>
+<li>m_plugins
+: <a class="el" href="class_ark_1_1_compiler.html#a73c8e35b2c0151a9368c7bb14a199af4">Ark::Compiler</a>
+</li>
+<li>m_pp
+: <a class="el" href="class_ark_1_1_v_m.html#a60123c1e7342a1c58a4c066499b3012a">Ark::VM</a>
+</li>
+<li>m_repl
+: <a class="el" href="class_ark_1_1_repl.html#ad1dc759ac0132b53c2c244f28f63b05b">Ark::Repl</a>
+</li>
+<li>m_running
+: <a class="el" href="class_ark_1_1_v_m.html#a88a0e03526e62bd069d4ad0f19641f9d">Ark::VM</a>
+</li>
+<li>m_saved_scope
+: <a class="el" href="class_ark_1_1_v_m.html#a4a24a01bdf19170426853b90d78a9929">Ark::VM</a>
+</li>
+<li>m_scope
+: <a class="el" href="class_ark_1_1internal_1_1_closure.html#a5e6ece42bd91670619597f2660f59e32">Ark::internal::Closure</a>
+</li>
+<li>m_scope_count_to_delete
+: <a class="el" href="class_ark_1_1_v_m.html#a316ed7a5ec895e90ce854728708267da">Ark::VM</a>
+</li>
+<li>m_shared_lib_objects
+: <a class="el" href="class_ark_1_1_v_m.html#a217392b6d1b283d9cd6d1275ac21ed43">Ark::VM</a>
+</li>
+<li>m_sp
+: <a class="el" href="class_ark_1_1_v_m.html#a518b5066a7e5ee7b82dda4b9b017de19">Ark::VM</a>
+</li>
+<li>m_stack
+: <a class="el" href="class_ark_1_1_v_m.html#a300ed1ec39198fee868685aa034e3aba">Ark::VM</a>
+</li>
+<li>m_state
+: <a class="el" href="class_ark_1_1_v_m.html#a597d67a33b2cf925c0a2e57eb8a94228">Ark::VM</a>
+</li>
+<li>m_symAppearances
+: <a class="el" href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">Ark::Optimizer</a>
+</li>
+<li>m_symbols
+: <a class="el" href="class_ark_1_1_compiler.html#ac5f4dd69bbe043cb014433fb5d664abe">Ark::Compiler</a>
+, <a class="el" href="class_ark_1_1_state.html#a9b47055deafbe7eb0061c0b59fadab8b">Ark::State</a>
+</li>
+<li>m_temp_pages
+: <a class="el" href="class_ark_1_1_compiler.html#a163a383730c183532cddc0cb1b9ec0b0">Ark::Compiler</a>
+</li>
+<li>m_tokens
+: <a class="el" href="class_ark_1_1internal_1_1_lexer.html#ab767de9c2861bba1adaf71540f948d2b">Ark::internal::Lexer</a>
+</li>
+<li>m_type
+: <a class="el" href="class_ark_1_1internal_1_1_node.html#a4bb33ec1d08b011cb4df29e9ec41405e">Ark::internal::Node</a>
+</li>
+<li>m_type_id
+: <a class="el" href="class_ark_1_1_user_type.html#aa40425598ca3682487dae54a8b108dc6">Ark::UserType</a>
+</li>
+<li>m_until_frame_count
+: <a class="el" href="class_ark_1_1_v_m.html#a394dff50d34814e2ad8c12abe062fc17">Ark::VM</a>
+</li>
+<li>m_user_pointer
+: <a class="el" href="class_ark_1_1_v_m.html#a4a382e3a80a36055632b085db76f8b28">Ark::VM</a>
+</li>
+<li>m_value
+: <a class="el" href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">Ark::internal::Node</a>
+, <a class="el" href="class_ark_1_1internal_1_1_value.html#ad5061f22733c4690882b0fcbbc9078e0">Ark::internal::Value</a>
+</li>
+<li>m_values
+: <a class="el" href="class_ark_1_1_compiler.html#a438297e71f599a87ddf2eb5289aa474e">Ark::Compiler</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>name
+: <a class="el" href="structmapping.html#a72af5f06cf1c63771665a9296512124b">mapping</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
+<li>ostream_func
+: <a class="el" href="struct_ark_1_1_user_type_1_1_control_funcs.html#a25a1cb7d33f5bf8a610a42fb848b7bfb">Ark::UserType::ControlFuncs</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>token
+: <a class="el" href="struct_ark_1_1internal_1_1_token.html#ac19490b6ef33cbf6a1d15b7a5ddcf255">Ark::internal::Token</a>
+</li>
+<li>type
+: <a class="el" href="struct_ark_1_1internal_1_1_c_value.html#adf6b92d0fb266c3203717f5528ddc147">Ark::internal::CValue</a>
+, <a class="el" href="struct_ark_1_1internal_1_1_token.html#a9aae1b9f04f66f43262a2811470e4ee6">Ark::internal::Token</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_v"></a>- v -</h3><ul>
+<li>value
+: <a class="el" href="struct_ark_1_1internal_1_1_c_value.html#aa11d72559e8debf87a375c0b0ee366fa">Ark::internal::CValue</a>
+, <a class="el" href="structmapping.html#a849ab998f56641f2635e8abe132f33ca">mapping</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 30 2020 13:58:06 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 17 2021 12:14:53 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

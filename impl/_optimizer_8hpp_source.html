@@ -14,7 +14,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-modern.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -40,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -100,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_node_8hpp.html">Ark/Compiler/Node.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_exceptions_8hpp.html">Ark/Exceptions.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;Ark/Constants.hpp&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_constants_8hpp.html">Ark/Constants.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark.html">Ark</a></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
@@ -114,25 +115,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">const</span> <a class="code" href="class_ark_1_1internal_1_1_node.html">internal::Node</a>&amp; <a class="code" href="class_ark_1_1_optimizer.html#adf07a88c6cb61dc77e8abd88aa3fa64c">ast</a>() <span class="keyword">const</span> noexcept;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html">internal::Node</a> m_ast;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        uint16_t m_options;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        std::unordered_map&lt;std::string, unsigned&gt; m_symAppearances;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_ark_1_1_optimizer.html#aa8b27d74a61b0cee727f4cf14efc0a9b">   54</a></span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html">internal::Node</a> <a class="code" href="class_ark_1_1_optimizer.html#aa8b27d74a61b0cee727f4cf14efc0a9b">m_ast</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_ark_1_1_optimizer.html#aba47f9ac9fd0a8181d41a6210b930336">   55</a></span>&#160;        uint16_t <a class="code" href="class_ark_1_1_optimizer.html#aba47f9ac9fd0a8181d41a6210b930336">m_options</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">   56</a></span>&#160;        std::unordered_map&lt;std::string, unsigned&gt; <a class="code" href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">m_symAppearances</a>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_ark_1_1_optimizer.html#a753252ac29d03ec1edc8133f81aae171">throwOptimizerError</a>(<span class="keyword">const</span> std::string&amp; message, <span class="keyword">const</span> <a class="code" href="class_ark_1_1internal_1_1_node.html">internal::Node</a>&amp; node);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// iterate over the AST and remove unused top level functions and constants</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">void</span> remove_unused();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">void</span> run_on_global_scope_vars(<a class="code" href="class_ark_1_1internal_1_1_node.html">internal::Node</a>&amp; node, <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(<a class="code" href="class_ark_1_1internal_1_1_node.html">internal::Node</a>&amp;, <a class="code" href="class_ark_1_1internal_1_1_node.html">internal::Node</a>&amp;, <span class="keywordtype">int</span>)&gt;&amp; func);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">void</span> count_occurences(<span class="keyword">const</span> <a class="code" href="class_ark_1_1internal_1_1_node.html">internal::Node</a>&amp; node);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_ark_1_1_optimizer.html#ad1a30323e90d937376dd38f1f7f94a1c">remove_unused</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_ark_1_1_optimizer.html#a95a50e5a97bad92006c15d8425718577">run_on_global_scope_vars</a>(<a class="code" href="class_ark_1_1internal_1_1_node.html">internal::Node</a>&amp; node, <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(<a class="code" href="class_ark_1_1internal_1_1_node.html">internal::Node</a>&amp;, <a class="code" href="class_ark_1_1internal_1_1_node.html">internal::Node</a>&amp;, <span class="keywordtype">int</span>)&gt;&amp; func);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_ark_1_1_optimizer.html#a86c4cbde96039649014dc8b51fd2c749">count_occurences</a>(<span class="keyword">const</span> <a class="code" href="class_ark_1_1internal_1_1_node.html">internal::Node</a>&amp; node);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    };</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif  // ark_compiler_optimizer</span></div>
+<div class="ttc" id="class_ark_1_1_optimizer_html_a95a50e5a97bad92006c15d8425718577"><div class="ttname"><a href="class_ark_1_1_optimizer.html#a95a50e5a97bad92006c15d8425718577">Ark::Optimizer::run_on_global_scope_vars</a></div><div class="ttdeci">void run_on_global_scope_vars(internal::Node &amp;node, const std::function&lt; void(internal::Node &amp;, internal::Node &amp;, int)&gt; &amp;func)</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8cpp_source.html#l00044">Optimizer.cpp:44</a></div></div>
 <div class="ttc" id="class_ark_1_1_optimizer_html_a5c3536afe79b07936479ee7716e7abe1"><div class="ttname"><a href="class_ark_1_1_optimizer.html#a5c3536afe79b07936479ee7716e7abe1">Ark::Optimizer::feed</a></div><div class="ttdeci">void feed(const internal::Node &amp;ast)</div><div class="ttdoc">Send the AST to the optimizer, then run the different optimization strategies on it. </div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8cpp_source.html#l00011">Optimizer.cpp:11</a></div></div>
 <div class="ttc" id="_exceptions_8hpp_html"><div class="ttname"><a href="_exceptions_8hpp.html">Exceptions.hpp</a></div><div class="ttdoc">ArkScript homemade exceptions. </div></div>
+<div class="ttc" id="class_ark_1_1_optimizer_html_aa8b27d74a61b0cee727f4cf14efc0a9b"><div class="ttname"><a href="class_ark_1_1_optimizer.html#aa8b27d74a61b0cee727f4cf14efc0a9b">Ark::Optimizer::m_ast</a></div><div class="ttdeci">internal::Node m_ast</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8hpp_source.html#l00054">Optimizer.hpp:54</a></div></div>
 <div class="ttc" id="class_ark_1_1_optimizer_html_a0a3c9ce6e2e3721fc033fa8ca2ef53c2"><div class="ttname"><a href="class_ark_1_1_optimizer.html#a0a3c9ce6e2e3721fc033fa8ca2ef53c2">Ark::Optimizer::Optimizer</a></div><div class="ttdeci">Optimizer(uint16_t options) noexcept</div><div class="ttdoc">Construct a new Optimizer. </div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8cpp_source.html#l00007">Optimizer.cpp:7</a></div></div>
+<div class="ttc" id="class_ark_1_1_optimizer_html_aba47f9ac9fd0a8181d41a6210b930336"><div class="ttname"><a href="class_ark_1_1_optimizer.html#aba47f9ac9fd0a8181d41a6210b930336">Ark::Optimizer::m_options</a></div><div class="ttdeci">uint16_t m_options</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8hpp_source.html#l00055">Optimizer.hpp:55</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_node_html"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html">Ark::internal::Node</a></div><div class="ttdoc">A node of an Abstract Syntax Tree for ArkScript. </div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00057">Node.hpp:57</a></div></div>
+<div class="ttc" id="class_ark_1_1_optimizer_html_a86c4cbde96039649014dc8b51fd2c749"><div class="ttname"><a href="class_ark_1_1_optimizer.html#a86c4cbde96039649014dc8b51fd2c749">Ark::Optimizer::count_occurences</a></div><div class="ttdeci">void count_occurences(const internal::Node &amp;node)</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8cpp_source.html#l00070">Optimizer.cpp:70</a></div></div>
+<div class="ttc" id="class_ark_1_1_optimizer_html_ad1a30323e90d937376dd38f1f7f94a1c"><div class="ttname"><a href="class_ark_1_1_optimizer.html#ad1a30323e90d937376dd38f1f7f94a1c">Ark::Optimizer::remove_unused</a></div><div class="ttdeci">void remove_unused()</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8cpp_source.html#l00024">Optimizer.cpp:24</a></div></div>
+<div class="ttc" id="_constants_8hpp_html"><div class="ttname"><a href="_constants_8hpp.html">Constants.hpp</a></div><div class="ttdoc">Constants used by ArkScript. </div></div>
 <div class="ttc" id="class_ark_1_1_optimizer_html"><div class="ttname"><a href="class_ark_1_1_optimizer.html">Ark::Optimizer</a></div><div class="ttdoc">The ArkScript AST optimizer. </div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8hpp_source.html#l00030">Optimizer.hpp:30</a></div></div>
+<div class="ttc" id="class_ark_1_1_optimizer_html_a89ee118f930a52409e8f5ab999cf800d"><div class="ttname"><a href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">Ark::Optimizer::m_symAppearances</a></div><div class="ttdeci">std::unordered_map&lt; std::string, unsigned &gt; m_symAppearances</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8hpp_source.html#l00056">Optimizer.hpp:56</a></div></div>
 <div class="ttc" id="class_ark_1_1_optimizer_html_adf07a88c6cb61dc77e8abd88aa3fa64c"><div class="ttname"><a href="class_ark_1_1_optimizer.html#adf07a88c6cb61dc77e8abd88aa3fa64c">Ark::Optimizer::ast</a></div><div class="ttdeci">const internal::Node &amp; ast() const noexcept</div><div class="ttdoc">Returns the modified AST. </div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8cpp_source.html#l00019">Optimizer.cpp:19</a></div></div>
 <div class="ttc" id="class_ark_1_1_optimizer_html_a753252ac29d03ec1edc8133f81aae171"><div class="ttname"><a href="class_ark_1_1_optimizer.html#a753252ac29d03ec1edc8133f81aae171">Ark::Optimizer::throwOptimizerError</a></div><div class="ttdeci">void throwOptimizerError(const std::string &amp;message, const internal::Node &amp;node)</div><div class="ttdoc">Generate a fancy error message. </div></div>
 <div class="ttc" id="_node_8hpp_html"><div class="ttname"><a href="_node_8hpp.html">Node.hpp</a></div><div class="ttdoc">AST node used by the parser, optimizer and compiler. </div></div>
@@ -140,7 +148,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 30 2020 13:57:57 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 17 2021 12:14:35 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -14,7 +14,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-modern.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -40,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -64,6 +64,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -72,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,13 +84,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Ark</b></li><li class="navelem"><a class="el" href="class_ark_1_1_user_type.html">UserType</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespace_ark.html">Ark</a></li><li class="navelem"><a class="el" href="class_ark_1_1_user_type.html">UserType</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="class_ark_1_1_user_type-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Ark::UserType Class Reference</div>  </div>
@@ -113,9 +116,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afb19a67a68908277c17e3d277230db96"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#afb19a67a68908277c17e3d277230db96">UserType</a> (T *<a class="el" href="class_ark_1_1_user_type.html#a74773d93bf626ec5c794d7f138f7d617">data</a>=nullptr) noexcept</td></tr>
 <tr class="memdesc:afb19a67a68908277c17e3d277230db96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new User Type object.  <a href="#afb19a67a68908277c17e3d277230db96">More...</a><br /></td></tr>
 <tr class="separator:afb19a67a68908277c17e3d277230db96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bc29ae76bff2c31ff420a0ef8b65f04"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#a4bc29ae76bff2c31ff420a0ef8b65f04">~UserType</a> () noexcept</td></tr>
-<tr class="memdesc:a4bc29ae76bff2c31ff420a0ef8b65f04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the User Type object.  <a href="#a4bc29ae76bff2c31ff420a0ef8b65f04">More...</a><br /></td></tr>
-<tr class="separator:a4bc29ae76bff2c31ff420a0ef8b65f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a680d689670c641e333abf0c4c6bb586c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#a680d689670c641e333abf0c4c6bb586c">del</a> ()</td></tr>
+<tr class="memdesc:a680d689670c641e333abf0c4c6bb586c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the User Type object.  <a href="#a680d689670c641e333abf0c4c6bb586c">More...</a><br /></td></tr>
+<tr class="separator:a680d689670c641e333abf0c4c6bb586c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6a3625b32722af12de75b7f0a669f31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#aa6a3625b32722af12de75b7f0a669f31">setControlFuncs</a> (<a class="el" href="struct_ark_1_1_user_type_1_1_control_funcs.html">ControlFuncs</a> *block) noexcept</td></tr>
 <tr class="memdesc:aa6a3625b32722af12de75b7f0a669f31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the control functions structure.  <a href="#aa6a3625b32722af12de75b7f0a669f31">More...</a><br /></td></tr>
 <tr class="separator:aa6a3625b32722af12de75b7f0a669f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,6 +133,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a89d580d8347deb8159d19b0465118165"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#a89d580d8347deb8159d19b0465118165">as</a> () noexcept</td></tr>
 <tr class="memdesc:a89d580d8347deb8159d19b0465118165"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the underlying object as a given type.  <a href="#a89d580d8347deb8159d19b0465118165">More...</a><br /></td></tr>
 <tr class="separator:a89d580d8347deb8159d19b0465118165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d44f0061b3c2cd5b63013e07fc30aa"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a02d44f0061b3c2cd5b63013e07fc30aa"><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#a02d44f0061b3c2cd5b63013e07fc30aa">as</a> () const noexcept</td></tr>
+<tr class="separator:a02d44f0061b3c2cd5b63013e07fc30aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa40425598ca3682487dae54a8b108dc6"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#aa40425598ca3682487dae54a8b108dc6">m_type_id</a></td></tr>
+<tr class="separator:aa40425598ca3682487dae54a8b108dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad35883bb472e1edcae2cc28b63ad83e7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#ad35883bb472e1edcae2cc28b63ad83e7">m_data</a></td></tr>
+<tr class="separator:ad35883bb472e1edcae2cc28b63ad83e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac44ffce3906341bea5daf754ec3f4519"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_ark_1_1_user_type_1_1_control_funcs.html">ControlFuncs</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#ac44ffce3906341bea5daf754ec3f4519">m_funcs</a></td></tr>
+<tr class="separator:ac44ffce3906341bea5daf754ec3f4519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a9665e2d9b46bd9c224a1c9f7958973cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#a9665e2d9b46bd9c224a1c9f7958973cc">operator==</a> (const <a class="el" href="class_ark_1_1_user_type.html">UserType</a> &amp;A, const <a class="el" href="class_ark_1_1_user_type.html">UserType</a> &amp;B) noexcept</td></tr>
+<tr class="separator:a9665e2d9b46bd9c224a1c9f7958973cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74780b63de43347692a0ba104df8c36c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#a74780b63de43347692a0ba104df8c36c">operator&lt;</a> (const <a class="el" href="class_ark_1_1_user_type.html">UserType</a> &amp;A, const <a class="el" href="class_ark_1_1_user_type.html">UserType</a> &amp;B) noexcept</td></tr>
+<tr class="separator:a74780b63de43347692a0ba104df8c36c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69bf126d5c7296d3a2dbe85f93550d55"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html#a69bf126d5c7296d3a2dbe85f93550d55">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="class_ark_1_1_user_type.html">UserType</a> &amp;A) noexcept</td></tr>
+<tr class="separator:a69bf126d5c7296d3a2dbe85f93550d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class to be use C++ objects in ArkScript. </p>
@@ -176,10 +200,20 @@ template&lt;typename T &gt; </div>
 </dl>
 
 <p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00049">49</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                                    :</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="class_ark_1_1_user_type.html#ad35883bb472e1edcae2cc28b63ad83e7">m_data</a>(static_cast&lt;void*&gt;(<a class="code" href="class_ark_1_1_user_type.html#a74773d93bf626ec5c794d7f138f7d617">data</a>)),</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="class_ark_1_1_user_type.html#ac44ffce3906341bea5daf754ec3f4519">m_funcs</a>(<span class="keyword">nullptr</span>),</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="class_ark_1_1_user_type.html#aa40425598ca3682487dae54a8b108dc6">m_type_id</a>(<span class="keyword">typeid</span>(T).hash_code() &amp; static_cast&lt;uint16_t&gt;(~0))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {}</div>
+<div class="ttc" id="class_ark_1_1_user_type_html_ac44ffce3906341bea5daf754ec3f4519"><div class="ttname"><a href="class_ark_1_1_user_type.html#ac44ffce3906341bea5daf754ec3f4519">Ark::UserType::m_funcs</a></div><div class="ttdeci">ControlFuncs * m_funcs</div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00128">UserType.hpp:128</a></div></div>
+<div class="ttc" id="class_ark_1_1_user_type_html_aa40425598ca3682487dae54a8b108dc6"><div class="ttname"><a href="class_ark_1_1_user_type.html#aa40425598ca3682487dae54a8b108dc6">Ark::UserType::m_type_id</a></div><div class="ttdeci">uint16_t m_type_id</div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00126">UserType.hpp:126</a></div></div>
+<div class="ttc" id="class_ark_1_1_user_type_html_a74773d93bf626ec5c794d7f138f7d617"><div class="ttname"><a href="class_ark_1_1_user_type.html#a74773d93bf626ec5c794d7f138f7d617">Ark::UserType::data</a></div><div class="ttdeci">void * data() const noexcept</div><div class="ttdoc">Get the pointer to the object. </div></div>
+<div class="ttc" id="class_ark_1_1_user_type_html_ad35883bb472e1edcae2cc28b63ad83e7"><div class="ttname"><a href="class_ark_1_1_user_type.html#ad35883bb472e1edcae2cc28b63ad83e7">Ark::UserType::m_data</a></div><div class="ttdeci">void * m_data</div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00127">UserType.hpp:127</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a4bc29ae76bff2c31ff420a0ef8b65f04"></a>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a680d689670c641e333abf0c4c6bb586c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -187,7 +221,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Ark::UserType::~UserType </td>
+          <td class="memname">void Ark::UserType::del </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -195,7 +229,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -204,10 +238,17 @@ template&lt;typename T &gt; </div>
 <p>Called by the <a class="el" href="class_ark_1_1_v_m.html" title="The ArkScript virtual machine, executing ArkScript bytecode. ">VM</a> when <code>(del obj)</code> is found or when the object goes out of scope. </p>
 
 <p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00060">60</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="comment">// call a custom deleter on the data held by the usertype</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_ark_1_1_user_type.html#ac44ffce3906341bea5daf754ec3f4519">m_funcs</a> != <span class="keyword">nullptr</span> &amp;&amp; <a class="code" href="class_ark_1_1_user_type.html#ac44ffce3906341bea5daf754ec3f4519">m_funcs</a>-&gt;<a class="code" href="struct_ark_1_1_user_type_1_1_control_funcs.html#ae16e8254044be4569e78b3ab0debf723">deleter</a> != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;               <a class="code" href="class_ark_1_1_user_type.html#ac44ffce3906341bea5daf754ec3f4519">m_funcs</a>-&gt;<a class="code" href="struct_ark_1_1_user_type_1_1_control_funcs.html#ae16e8254044be4569e78b3ab0debf723">deleter</a>(<a class="code" href="class_ark_1_1_user_type.html#ad35883bb472e1edcae2cc28b63ad83e7">m_data</a>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="ttc" id="class_ark_1_1_user_type_html_ac44ffce3906341bea5daf754ec3f4519"><div class="ttname"><a href="class_ark_1_1_user_type.html#ac44ffce3906341bea5daf754ec3f4519">Ark::UserType::m_funcs</a></div><div class="ttdeci">ControlFuncs * m_funcs</div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00128">UserType.hpp:128</a></div></div>
+<div class="ttc" id="struct_ark_1_1_user_type_1_1_control_funcs_html_ae16e8254044be4569e78b3ab0debf723"><div class="ttname"><a href="struct_ark_1_1_user_type_1_1_control_funcs.html#ae16e8254044be4569e78b3ab0debf723">Ark::UserType::ControlFuncs::deleter</a></div><div class="ttdeci">void(* deleter)(void *)</div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00039">UserType.hpp:39</a></div></div>
+<div class="ttc" id="class_ark_1_1_user_type_html_ad35883bb472e1edcae2cc28b63ad83e7"><div class="ttname"><a href="class_ark_1_1_user_type.html#ad35883bb472e1edcae2cc28b63ad83e7">Ark::UserType::m_data</a></div><div class="ttdeci">void * m_data</div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00127">UserType.hpp:127</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aa6a3625b32722af12de75b7f0a669f31"></a>
 <div class="memitem">
 <div class="memproto">
@@ -307,7 +348,11 @@ template&lt;typename T &gt; </div>
 false </dd></dl>
 
 <p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00098">98</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">return</span> (<span class="keyword">typeid</span>(T).hash_code() &amp; static_cast&lt;uint16_t&gt;(~0)) == <a class="code" href="class_ark_1_1_user_type.html#aa40425598ca3682487dae54a8b108dc6">m_type_id</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
+<div class="ttc" id="class_ark_1_1_user_type_html_aa40425598ca3682487dae54a8b108dc6"><div class="ttname"><a href="class_ark_1_1_user_type.html#aa40425598ca3682487dae54a8b108dc6">Ark::UserType::m_type_id</a></div><div class="ttdeci">uint16_t m_type_id</div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00126">UserType.hpp:126</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a89d580d8347deb8159d19b0465118165"></a>
@@ -343,6 +388,211 @@ template&lt;typename T &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>T&amp; </dd></dl>
 
 <p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00110">110</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">static_cast&lt;</span>T*<span class="keyword">&gt;</span>(<a class="code" href="class_ark_1_1_user_type.html#ad35883bb472e1edcae2cc28b63ad83e7">m_data</a>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div>
+<div class="ttc" id="class_ark_1_1_user_type_html_ad35883bb472e1edcae2cc28b63ad83e7"><div class="ttname"><a href="class_ark_1_1_user_type.html#ad35883bb472e1edcae2cc28b63ad83e7">Ark::UserType::m_data</a></div><div class="ttdeci">void * m_data</div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00127">UserType.hpp:127</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a02d44f0061b3c2cd5b63013e07fc30aa"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T&amp; Ark::UserType::as </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00116">116</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">static_cast&lt;</span>T*<span class="keyword">&gt;</span>(<a class="code" href="class_ark_1_1_user_type.html#ad35883bb472e1edcae2cc28b63ad83e7">m_data</a>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
+<div class="ttc" id="class_ark_1_1_user_type_html_ad35883bb472e1edcae2cc28b63ad83e7"><div class="ttname"><a href="class_ark_1_1_user_type.html#ad35883bb472e1edcae2cc28b63ad83e7">Ark::UserType::m_data</a></div><div class="ttdeci">void * m_data</div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00127">UserType.hpp:127</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="a9665e2d9b46bd9c224a1c9f7958973cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_ark_1_1_user_type.html">UserType</a> &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_ark_1_1_user_type.html">UserType</a> &amp;&#160;</td>
+          <td class="paramname"><em>B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a74780b63de43347692a0ba104df8c36c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_ark_1_1_user_type.html">UserType</a> &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_ark_1_1_user_type.html">UserType</a> &amp;&#160;</td>
+          <td class="paramname"><em>B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a69bf126d5c7296d3a2dbe85f93550d55"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_ark_1_1_user_type.html">UserType</a> &amp;&#160;</td>
+          <td class="paramname"><em>A</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="aa40425598ca3682487dae54a8b108dc6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Ark::UserType::m_type_id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00126">126</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad35883bb472e1edcae2cc28b63ad83e7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* Ark::UserType::m_data</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00127">127</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac44ffce3906341bea5daf754ec3f4519"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_ark_1_1_user_type_1_1_control_funcs.html">ControlFuncs</a>* Ark::UserType::m_funcs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_user_type_8hpp_source.html#l00128">128</a> of file <a class="el" href="_user_type_8hpp_source.html">UserType.hpp</a>.</p>
 
 </div>
 </div>
@@ -352,7 +602,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 30 2020 13:58:02 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 17 2021 12:14:44 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

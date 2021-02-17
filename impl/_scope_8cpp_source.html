@@ -14,7 +14,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-modern.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -40,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,14 +90,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Scope.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_scope_8hpp.html">Ark/VM/Scope.hpp</a>&gt;</span></div>
+<a href="_scope_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_scope_8hpp.html">Ark/VM/Scope.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifdef ARK_SCOPE_DICHOTOMY</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">    #include &lt;algorithm&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define push_pair(id, val) m_data.emplace_back(std::pair&lt;uint16_t, Value&gt;(id, val))</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define insert_pair(place, id, val) m_data.insert(place, std::pair&lt;uint16_t, Value&gt;(id, val))</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="_scope_8cpp.html#a2271c7943ba8265357cc56c730ff3c84">    7</a></span>&#160;<span class="preprocessor">#define push_pair(id, val) m_data.emplace_back(std::pair&lt;uint16_t, Value&gt;(id, val))</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="_scope_8cpp.html#acf703166101a9a69806c5044f7c4248e">    8</a></span>&#160;<span class="preprocessor">#define insert_pair(place, id, val) m_data.insert(place, std::pair&lt;uint16_t, Value&gt;(id, val))</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark_1_1internal.html">Ark::internal</a></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
@@ -104,64 +105,64 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">    #ifndef ARK_SCOPE_DICHOTOMY</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="comment">// PERF costs a lot</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        m_data.reserve(2);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_scope.html#a7b23fd2be84afd89f624557155c15fe2">m_data</a>.reserve(4);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">    #endif</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_scope.html#aa04908a6a894cb99558d47a8a2411726">   20</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_ark_1_1internal_1_1_scope.html#aa04908a6a894cb99558d47a8a2411726">Scope::push_back</a>(uint16_t <span class="keywordtype">id</span>, Value&amp;&amp; val) noexcept</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_scope.html#aa04908a6a894cb99558d47a8a2411726">   20</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_ark_1_1internal_1_1_scope.html#aa04908a6a894cb99558d47a8a2411726">Scope::push_back</a>(uint16_t <span class="keywordtype">id</span>, <a class="code" href="class_ark_1_1internal_1_1_value.html">Value</a>&amp;&amp; val) noexcept</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">    #ifdef ARK_SCOPE_DICHOTOMY</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">switch</span> (m_data.size())</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">switch</span> (<a class="code" href="class_ark_1_1internal_1_1_scope.html#a7b23fd2be84afd89f624557155c15fe2">m_data</a>.size())</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                push_pair(std::move(<span class="keywordtype">id</span>), std::move(val));</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <a class="code" href="_scope_8cpp.html#a2271c7943ba8265357cc56c730ff3c84">push_pair</a>(std::move(<span class="keywordtype">id</span>), std::move(val));</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="keywordflow">if</span> (m_data[0].first &lt; <span class="keywordtype">id</span>)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                    push_pair(std::move(<span class="keywordtype">id</span>), std::move(val));</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_ark_1_1internal_1_1_scope.html#a7b23fd2be84afd89f624557155c15fe2">m_data</a>[0].first &lt; <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                    <a class="code" href="_scope_8cpp.html#a2271c7943ba8265357cc56c730ff3c84">push_pair</a>(std::move(<span class="keywordtype">id</span>), std::move(val));</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    insert_pair(m_data.begin(), std::move(<span class="keywordtype">id</span>), std::move(val));</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    <a class="code" href="_scope_8cpp.html#acf703166101a9a69806c5044f7c4248e">insert_pair</a>(<a class="code" href="class_ark_1_1internal_1_1_scope.html#a7b23fd2be84afd89f624557155c15fe2">m_data</a>.begin(), std::move(<span class="keywordtype">id</span>), std::move(val));</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keyword">auto</span> lower = std::lower_bound(m_data.begin(), m_data.end(), id, [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; lhs, uint16_t id) -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keyword">auto</span> lower = std::lower_bound(<a class="code" href="class_ark_1_1internal_1_1_scope.html#a7b23fd2be84afd89f624557155c15fe2">m_data</a>.begin(), <a class="code" href="class_ark_1_1internal_1_1_scope.html#a7b23fd2be84afd89f624557155c15fe2">m_data</a>.end(), id, [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; lhs, uint16_t id) -&gt; <span class="keywordtype">bool</span> {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    <span class="keywordflow">return</span> lhs.first &lt; id;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                });</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                insert_pair(lower, std::move(<span class="keywordtype">id</span>), std::move(val));</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <a class="code" href="_scope_8cpp.html#acf703166101a9a69806c5044f7c4248e">insert_pair</a>(lower, std::move(<span class="keywordtype">id</span>), std::move(val));</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">    #else</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">// PERF faster on ackermann, compared to the dichotomic version</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        push_pair(std::move(<span class="keywordtype">id</span>), std::move(val));</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="_scope_8cpp.html#a2271c7943ba8265357cc56c730ff3c84">push_pair</a>(std::move(<span class="keywordtype">id</span>), std::move(val));</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">    #endif</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_scope.html#ab14ba43ab45044c7f19ce7a91ec0c938">   49</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_ark_1_1internal_1_1_scope.html#aa04908a6a894cb99558d47a8a2411726">Scope::push_back</a>(uint16_t <span class="keywordtype">id</span>, <span class="keyword">const</span> Value&amp; val) noexcept</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_scope.html#ab14ba43ab45044c7f19ce7a91ec0c938">   49</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_ark_1_1internal_1_1_scope.html#aa04908a6a894cb99558d47a8a2411726">Scope::push_back</a>(uint16_t <span class="keywordtype">id</span>, <span class="keyword">const</span> <a class="code" href="class_ark_1_1internal_1_1_value.html">Value</a>&amp; val) noexcept</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">    #ifdef ARK_SCOPE_DICHOTOMY</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">switch</span> (m_data.size())</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                push_pair(<span class="keywordtype">id</span>, val);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <a class="code" href="_scope_8cpp.html#a2271c7943ba8265357cc56c730ff3c84">push_pair</a>(<span class="keywordtype">id</span>, val);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">case</span> 1:</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">if</span> (m_data[0].first &lt; <span class="keywordtype">id</span>)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    push_pair(<span class="keywordtype">id</span>, val);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    <a class="code" href="_scope_8cpp.html#a2271c7943ba8265357cc56c730ff3c84">push_pair</a>(<span class="keywordtype">id</span>, val);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    insert_pair(m_data.begin(), id, val);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    <a class="code" href="_scope_8cpp.html#acf703166101a9a69806c5044f7c4248e">insert_pair</a>(m_data.begin(), id, val);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">default</span>:</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keyword">auto</span> lower = std::lower_bound(m_data.begin(), m_data.end(), id, [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; lhs, uint16_t id) -&gt; <span class="keywordtype">bool</span> {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    <span class="keywordflow">return</span> lhs.first &lt; id;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                });</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                insert_pair(lower, <span class="keywordtype">id</span>, val);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <a class="code" href="_scope_8cpp.html#acf703166101a9a69806c5044f7c4248e">insert_pair</a>(lower, <span class="keywordtype">id</span>, val);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">    #else</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        push_pair(<span class="keywordtype">id</span>, val);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="_scope_8cpp.html#a2271c7943ba8265357cc56c730ff3c84">push_pair</a>(<span class="keywordtype">id</span>, val);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">    #endif</span></div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
@@ -170,7 +171,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">return</span> operator[](<span class="keywordtype">id</span>) != <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_scope.html#a4699a37b43de871b6e45b8417a54d04e">   82</a></span>&#160;    Value* <a class="code" href="class_ark_1_1internal_1_1_scope.html#a4699a37b43de871b6e45b8417a54d04e">Scope::operator[]</a>(uint16_t <span class="keywordtype">id</span>) noexcept</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_scope.html#a4699a37b43de871b6e45b8417a54d04e">   82</a></span>&#160;    <a class="code" href="class_ark_1_1internal_1_1_value.html">Value</a>* <a class="code" href="class_ark_1_1internal_1_1_scope.html#a4699a37b43de871b6e45b8417a54d04e">Scope::operator[]</a>(uint16_t <span class="keywordtype">id</span>) noexcept</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">    #ifdef ARK_SCOPE_DICHOTOMY</span></div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">switch</span> (m_data.size())</div>
@@ -201,11 +202,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">    #endif</span></div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_scope.html#a39349a331b69333504f1c489ecee2d00">  113</a></span>&#160;    uint16_t <a class="code" href="class_ark_1_1internal_1_1_scope.html#a39349a331b69333504f1c489ecee2d00">Scope::idFromValue</a>(Value&amp;&amp; val) noexcept</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_scope.html#a39349a331b69333504f1c489ecee2d00">  113</a></span>&#160;    uint16_t <a class="code" href="class_ark_1_1internal_1_1_scope.html#a39349a331b69333504f1c489ecee2d00">Scope::idFromValue</a>(<a class="code" href="class_ark_1_1internal_1_1_value.html">Value</a>&amp;&amp; val) noexcept</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">for</span> (std::size_t i=0, end=m_data.size(); i &lt; end; ++i)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">for</span> (std::size_t i=0, end=<a class="code" href="class_ark_1_1internal_1_1_scope.html#a7b23fd2be84afd89f624557155c15fe2">m_data</a>.size(); i &lt; end; ++i)</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">if</span> (m_data[i].second == val)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_ark_1_1internal_1_1_scope.html#a7b23fd2be84afd89f624557155c15fe2">m_data</a>[i].second == val)</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                <span class="keywordflow">return</span> i;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>uint16_t<span class="keyword">&gt;</span>(~0);</div>
@@ -213,21 +214,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
 <div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_scope.html#ad16445440b626135cdd3a432a19228cb">  123</a></span>&#160;    <span class="keyword">const</span> std::size_t <a class="code" href="class_ark_1_1internal_1_1_scope.html#ad16445440b626135cdd3a432a19228cb">Scope::size</a>() const noexcept</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">return</span> m_data.size();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_ark_1_1internal_1_1_scope.html#a7b23fd2be84afd89f624557155c15fe2">m_data</a>.size();</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
 <div class="ttc" id="class_ark_1_1internal_1_1_scope_html_ad16445440b626135cdd3a432a19228cb"><div class="ttname"><a href="class_ark_1_1internal_1_1_scope.html#ad16445440b626135cdd3a432a19228cb">Ark::internal::Scope::size</a></div><div class="ttdeci">const std::size_t size() const noexcept</div><div class="ttdoc">Return the size of the scope. </div><div class="ttdef"><b>Definition:</b> <a href="_scope_8cpp_source.html#l00123">Scope.cpp:123</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_scope_html_a6b53c13cc93ed329f3b6dc274b331bc3"><div class="ttname"><a href="class_ark_1_1internal_1_1_scope.html#a6b53c13cc93ed329f3b6dc274b331bc3">Ark::internal::Scope::has</a></div><div class="ttdeci">bool has(uint16_t id) noexcept</div><div class="ttdoc">Check if the scope has a specific symbol in memory. </div><div class="ttdef"><b>Definition:</b> <a href="_scope_8cpp_source.html#l00077">Scope.cpp:77</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_scope_html_a4699a37b43de871b6e45b8417a54d04e"><div class="ttname"><a href="class_ark_1_1internal_1_1_scope.html#a4699a37b43de871b6e45b8417a54d04e">Ark::internal::Scope::operator[]</a></div><div class="ttdeci">Value * operator[](uint16_t id) noexcept</div><div class="ttdoc">Get a value from its symbol id. </div><div class="ttdef"><b>Definition:</b> <a href="_scope_8cpp_source.html#l00082">Scope.cpp:82</a></div></div>
+<div class="ttc" id="_scope_8cpp_html_acf703166101a9a69806c5044f7c4248e"><div class="ttname"><a href="_scope_8cpp.html#acf703166101a9a69806c5044f7c4248e">insert_pair</a></div><div class="ttdeci">#define insert_pair(place, id, val)</div><div class="ttdef"><b>Definition:</b> <a href="_scope_8cpp_source.html#l00008">Scope.cpp:8</a></div></div>
+<div class="ttc" id="_scope_8cpp_html_a2271c7943ba8265357cc56c730ff3c84"><div class="ttname"><a href="_scope_8cpp.html#a2271c7943ba8265357cc56c730ff3c84">push_pair</a></div><div class="ttdeci">#define push_pair(id, val)</div><div class="ttdef"><b>Definition:</b> <a href="_scope_8cpp_source.html#l00007">Scope.cpp:7</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_scope_html_ae29d1667b0da6e9749abd541cbd9d65e"><div class="ttname"><a href="class_ark_1_1internal_1_1_scope.html#ae29d1667b0da6e9749abd541cbd9d65e">Ark::internal::Scope::Scope</a></div><div class="ttdeci">Scope() noexcept</div><div class="ttdoc">Construct a new Scope object. </div><div class="ttdef"><b>Definition:</b> <a href="_scope_8cpp_source.html#l00012">Scope.cpp:12</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html"><div class="ttname"><a href="namespace_ark_1_1internal.html">Ark::internal</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_value_html"><div class="ttname"><a href="class_ark_1_1internal_1_1_value.html">Ark::internal::Value</a></div><div class="ttdef"><b>Definition:</b> <a href="_value_8hpp_source.html#l00082">Value.hpp:82</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_scope_html_aa04908a6a894cb99558d47a8a2411726"><div class="ttname"><a href="class_ark_1_1internal_1_1_scope.html#aa04908a6a894cb99558d47a8a2411726">Ark::internal::Scope::push_back</a></div><div class="ttdeci">void push_back(uint16_t id, Value &amp;&amp;val) noexcept</div><div class="ttdoc">Put a value in the scope. </div><div class="ttdef"><b>Definition:</b> <a href="_scope_8cpp_source.html#l00020">Scope.cpp:20</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_scope_html_a39349a331b69333504f1c489ecee2d00"><div class="ttname"><a href="class_ark_1_1internal_1_1_scope.html#a39349a331b69333504f1c489ecee2d00">Ark::internal::Scope::idFromValue</a></div><div class="ttdeci">uint16_t idFromValue(Value &amp;&amp;val) noexcept</div><div class="ttdoc">Get the id of a variable based on its value ; used for debug only. </div><div class="ttdef"><b>Definition:</b> <a href="_scope_8cpp_source.html#l00113">Scope.cpp:113</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_scope_html_a7b23fd2be84afd89f624557155c15fe2"><div class="ttname"><a href="class_ark_1_1internal_1_1_scope.html#a7b23fd2be84afd89f624557155c15fe2">Ark::internal::Scope::m_data</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; uint16_t, Value &gt; &gt; m_data</div><div class="ttdef"><b>Definition:</b> <a href="_scope_8hpp_source.html#l00087">Scope.hpp:87</a></div></div>
 <div class="ttc" id="_scope_8hpp_html"><div class="ttname"><a href="_scope_8hpp.html">Scope.hpp</a></div><div class="ttdoc">The virtual machine scope system. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 30 2020 13:57:59 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 17 2021 12:14:38 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

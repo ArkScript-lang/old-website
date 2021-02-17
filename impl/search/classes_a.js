@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['usertype',['UserType',['../class_ark_1_1_user_type.html',1,'Ark']]]
+  ['token',['Token',['../struct_ark_1_1internal_1_1_token.html',1,'Ark::internal']]],
+  ['typeerror',['TypeError',['../class_ark_1_1_type_error.html',1,'Ark']]]
 ];

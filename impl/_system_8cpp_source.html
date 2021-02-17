@@ -14,7 +14,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-modern.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -40,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">System.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_builtins_8hpp.html">Ark/Builtins/Builtins.hpp</a>&gt;</span></div>
+<a href="_system_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_builtins_8hpp.html">Ark/Builtins/Builtins.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
@@ -104,17 +105,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#undef abs</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;Ark/Constants.hpp&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_constants_8hpp.html">Ark/Constants.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;Ark/Builtins/BuiltinsErrors.inl&gt;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_v_m_8hpp.html">Ark/VM/VM.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark_1_1internal_1_1_builtins_1_1_system.html">Ark::internal::Builtins::System</a></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    Value system_(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="namespace_ark_1_1internal_1_1_builtins_1_1_system.html#a629e7c07ca9563c02f257c67306b526e">   22</a></span>&#160;    <a class="code" href="class_ark_1_1internal_1_1_value.html">Value</a> <a class="code" href="namespace_ark_1_1internal_1_1_builtins_1_1_system.html#a629e7c07ca9563c02f257c67306b526e">system_</a>(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">if</span> (n.size() != 1)</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">throw</span> std::runtime_error(SYS_SYS_ARITY);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">if</span> (n[0].valueType() != ValueType::String)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">if</span> (n[0].valueType() != <a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98">ValueType::String</a>)</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_ark_1_1_type_error.html">Ark::TypeError</a>(SYS_SYS_TE0);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">        #ifdef ARK_ENABLE_SYSTEM</span></div>
@@ -125,47 +126,56 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;sys:exec: couldn&#39;t retrieve command output&quot;</span>);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">while</span> (fgets(buffer.data(), buffer.size(), pipe.get()) != <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                result += buffer.data();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">return</span> Value(result);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">Value</a>(result);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">        #endif  // ARK_ENABLE_SYSTEM</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> nil;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespace_ark_1_1internal_1_1_builtins.html#a0541c7c43175f68aca89a4c3a61fca12">nil</a>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    Value sleep(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="namespace_ark_1_1internal_1_1_builtins_1_1_system.html#a13840639439071941a08d3a0d96dd0c1">   43</a></span>&#160;    <a class="code" href="class_ark_1_1internal_1_1_value.html">Value</a> <a class="code" href="namespace_ark_1_1internal_1_1_builtins_1_1_system.html#a13840639439071941a08d3a0d96dd0c1">sleep</a>(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">if</span> (n.size() != 1)</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">throw</span> std::runtime_error(SYS_SLEEP_ARITY);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span> (n[0].valueType() != ValueType::Number)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span> (n[0].valueType() != <a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f">ValueType::Number</a>)</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_ark_1_1_type_error.html">Ark::TypeError</a>(SYS_SLEEP_TE0);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">auto</span> duration = std::chrono::duration&lt;double, std::ratio&lt;1, 1000&gt;&gt;(n[0].number());</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        std::this_thread::sleep_for(duration);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> nil;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespace_ark_1_1internal_1_1_builtins.html#a0541c7c43175f68aca89a4c3a61fca12">nil</a>;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    Value exit_(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="namespace_ark_1_1internal_1_1_builtins_1_1_system.html#a220362c466a194d75883b80055c0a1dd">   56</a></span>&#160;    <a class="code" href="class_ark_1_1internal_1_1_value.html">Value</a> <a class="code" href="namespace_ark_1_1internal_1_1_builtins_1_1_system.html#a220362c466a194d75883b80055c0a1dd">exit_</a>(std::vector&lt;Value&gt;&amp; n, <a class="code" href="class_ark_1_1_v_m.html">Ark::VM</a>* vm)</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">if</span> (n.size() != 1)</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">throw</span> std::runtime_error(SYS_EXIT_ARITY);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">if</span> (n[0].valueType() != ValueType::Number)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">if</span> (n[0].valueType() != <a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f">ValueType::Number</a>)</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_ark_1_1_type_error.html">Ark::TypeError</a>(SYS_EXIT_TE0);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        vm-&gt;<a class="code" href="class_ark_1_1_v_m.html#af7ab87072e0dca859367534ad92edf1d">exit</a>(static_cast&lt;int&gt;(n[0].number()));</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> nil;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespace_ark_1_1internal_1_1_builtins.html#a0541c7c43175f68aca89a4c3a61fca12">nil</a>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="ttc" id="namespace_ark_1_1internal_html_abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f"><div class="ttname"><a href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f">Ark::internal::CValueType::Number</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_1_1_builtins_1_1_system_html"><div class="ttname"><a href="namespace_ark_1_1internal_1_1_builtins_1_1_system.html">Ark::internal::Builtins::System</a></div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8hpp_source.html#l00070">Builtins.hpp:70</a></div></div>
+<div class="ttc" id="namespace_ark_html_a78cf7bec8c2cee4247c5efa4b1e4aa9c"><div class="ttname"><a href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">Ark::Value</a></div><div class="ttdeci">internal::Value Value</div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00266">VM.hpp:266</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_1_1_builtins_html_a0541c7c43175f68aca89a4c3a61fca12"><div class="ttname"><a href="namespace_ark_1_1internal_1_1_builtins.html#a0541c7c43175f68aca89a4c3a61fca12">Ark::internal::Builtins::nil</a></div><div class="ttdeci">const Value nil</div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8cpp_source.html#l00013">Builtins.cpp:13</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_1_1_builtins_1_1_system_html_a13840639439071941a08d3a0d96dd0c1"><div class="ttname"><a href="namespace_ark_1_1internal_1_1_builtins_1_1_system.html#a13840639439071941a08d3a0d96dd0c1">Ark::internal::Builtins::System::sleep</a></div><div class="ttdeci">Value sleep(std::vector&lt; Value &gt; &amp;n, Ark::VM *vm)</div><div class="ttdef"><b>Definition:</b> <a href="_system_8cpp_source.html#l00043">System.cpp:43</a></div></div>
+<div class="ttc" id="_constants_8hpp_html"><div class="ttname"><a href="_constants_8hpp.html">Constants.hpp</a></div><div class="ttdoc">Constants used by ArkScript. </div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_value_html"><div class="ttname"><a href="class_ark_1_1internal_1_1_value.html">Ark::internal::Value</a></div><div class="ttdef"><b>Definition:</b> <a href="_value_8hpp_source.html#l00082">Value.hpp:82</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_1_1_builtins_1_1_system_html_a629e7c07ca9563c02f257c67306b526e"><div class="ttname"><a href="namespace_ark_1_1internal_1_1_builtins_1_1_system.html#a629e7c07ca9563c02f257c67306b526e">Ark::internal::Builtins::System::system_</a></div><div class="ttdeci">Value system_(std::vector&lt; Value &gt; &amp;n, Ark::VM *vm)</div><div class="ttdef"><b>Definition:</b> <a href="_system_8cpp_source.html#l00022">System.cpp:22</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_1_1_builtins_1_1_system_html_a220362c466a194d75883b80055c0a1dd"><div class="ttname"><a href="namespace_ark_1_1internal_1_1_builtins_1_1_system.html#a220362c466a194d75883b80055c0a1dd">Ark::internal::Builtins::System::exit_</a></div><div class="ttdeci">Value exit_(std::vector&lt; Value &gt; &amp;n, Ark::VM *vm)</div><div class="ttdef"><b>Definition:</b> <a href="_system_8cpp_source.html#l00056">System.cpp:56</a></div></div>
 <div class="ttc" id="_v_m_8hpp_html"><div class="ttname"><a href="_v_m_8hpp.html">VM.hpp</a></div><div class="ttdoc">The ArkScript virtual machine. </div></div>
 <div class="ttc" id="class_ark_1_1_type_error_html"><div class="ttname"><a href="class_ark_1_1_type_error.html">Ark::TypeError</a></div><div class="ttdoc">A type error triggered when types don&#39;t match. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00024">Exceptions.hpp:24</a></div></div>
-<div class="ttc" id="class_ark_1_1_v_m_html_af7ab87072e0dca859367534ad92edf1d"><div class="ttname"><a href="class_ark_1_1_v_m.html#af7ab87072e0dca859367534ad92edf1d">Ark::VM::exit</a></div><div class="ttdeci">void exit(int code) noexcept</div><div class="ttdoc">Ask the VM to exit with a given exit code. </div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8cpp_source.html#l00166">VM.cpp:166</a></div></div>
+<div class="ttc" id="class_ark_1_1_v_m_html_af7ab87072e0dca859367534ad92edf1d"><div class="ttname"><a href="class_ark_1_1_v_m.html#af7ab87072e0dca859367534ad92edf1d">Ark::VM::exit</a></div><div class="ttdeci">void exit(int code) noexcept</div><div class="ttdoc">Ask the VM to exit with a given exit code. </div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8cpp_source.html#l00161">VM.cpp:161</a></div></div>
 <div class="ttc" id="_builtins_8hpp_html"><div class="ttname"><a href="_builtins_8hpp.html">Builtins.hpp</a></div><div class="ttdoc">Host the declaration of all the ArkScript builtins. </div></div>
-<div class="ttc" id="class_ark_1_1_v_m_html"><div class="ttname"><a href="class_ark_1_1_v_m.html">Ark::VM</a></div><div class="ttdoc">The ArkScript virtual machine, executing ArkScript bytecode. </div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00045">VM.hpp:45</a></div></div>
+<div class="ttc" id="class_ark_1_1_v_m_html"><div class="ttname"><a href="class_ark_1_1_v_m.html">Ark::VM</a></div><div class="ttdoc">The ArkScript virtual machine, executing ArkScript bytecode. </div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00047">VM.hpp:47</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98"><div class="ttname"><a href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98">Ark::internal::CValueType::String</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 30 2020 13:57:58 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 17 2021 12:14:36 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

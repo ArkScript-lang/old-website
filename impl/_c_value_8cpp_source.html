@@ -14,7 +14,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-modern.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -40,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,55 +90,62 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">CValue.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_c_value_8hpp.html">Ark/Compiler/CValue.hpp</a>&gt;</span></div>
+<a href="_c_value_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_c_value_8hpp.html">Ark/Compiler/CValue.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark_1_1internal.html">Ark::internal</a></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    CValue::CValue(<span class="keywordtype">double</span> value) noexcept :</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="struct_ark_1_1internal_1_1_c_value.html#a41e2839881408a8d8e8d0b35dd0e20e6">    5</a></span>&#160;    <a class="code" href="struct_ark_1_1internal_1_1_c_value.html#a41e2839881408a8d8e8d0b35dd0e20e6">CValue::CValue</a>(<span class="keywordtype">double</span> value) noexcept :</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        value(value),</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        type(CValueType::Number)</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        type(<a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f">CValueType::Number</a>)</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {}</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    CValue::CValue(<span class="keywordtype">long</span> value) noexcept :</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="struct_ark_1_1internal_1_1_c_value.html#ac49e0488101825ac905fcc2530c90551">   10</a></span>&#160;    <a class="code" href="struct_ark_1_1internal_1_1_c_value.html#a41e2839881408a8d8e8d0b35dd0e20e6">CValue::CValue</a>(<span class="keywordtype">long</span> value) noexcept :</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        value(static_cast&lt;double&gt;(value)),</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        type(CValueType::Number)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        type(<a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f">CValueType::Number</a>)</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {}</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    CValue::CValue(<span class="keyword">const</span> std::string&amp; value) noexcept :</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="struct_ark_1_1internal_1_1_c_value.html#a626e1c2e877dc7aad3cbe08f2188df24">   15</a></span>&#160;    <a class="code" href="struct_ark_1_1internal_1_1_c_value.html#a41e2839881408a8d8e8d0b35dd0e20e6">CValue::CValue</a>(<span class="keyword">const</span> std::string&amp; value) noexcept :</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        value(value),</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        type(CValueType::String)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        type(<a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98">CValueType::String</a>)</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {}</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    CValue::CValue(<span class="keyword">const</span> Node&amp; v) noexcept</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="struct_ark_1_1internal_1_1_c_value.html#a517b81a292b59c3e15c88de21c6d5888">   20</a></span>&#160;    <a class="code" href="struct_ark_1_1internal_1_1_c_value.html#a41e2839881408a8d8e8d0b35dd0e20e6">CValue::CValue</a>(<span class="keyword">const</span> <a class="code" href="class_ark_1_1internal_1_1_node.html">Node</a>&amp; v) noexcept</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">if</span> (v.nodeType() == NodeType::Number)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">if</span> (v.nodeType() == <a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f">NodeType::Number</a>)</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            value = v.number();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            type = CValueType::Number;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            type = <a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f">CValueType::Number</a>;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (v.nodeType() == NodeType::String)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (v.nodeType() == <a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98">NodeType::String</a>)</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            value = v.string();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            type = CValueType::String;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            type = <a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98">CValueType::String</a>;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    CValue::CValue(std::size_t value) noexcept :</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="struct_ark_1_1internal_1_1_c_value.html#aef32ccd1fe8fa590f212f54bd0b52095">   34</a></span>&#160;    <a class="code" href="struct_ark_1_1internal_1_1_c_value.html#a41e2839881408a8d8e8d0b35dd0e20e6">CValue::CValue</a>(std::size_t value) noexcept :</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        value(value),</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        type(CValueType::PageAddr)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        type(<a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a6666eaba81f13e74d10ac1a9c9d6d7b1">CValueType::PageAddr</a>)</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {}</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">bool</span> CValue::operator==(<span class="keyword">const</span> CValue&amp; A) noexcept</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="struct_ark_1_1internal_1_1_c_value.html#a88316d06f9a3fa88779bf95178344c52">   39</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="struct_ark_1_1internal_1_1_c_value.html#a88316d06f9a3fa88779bf95178344c52">CValue::operator==</a>(<span class="keyword">const</span> <a class="code" href="struct_ark_1_1internal_1_1_c_value.html">CValue</a>&amp; A) noexcept</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> A.value == value &amp;&amp; A.type == type;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="ttc" id="struct_ark_1_1internal_1_1_c_value_html"><div class="ttname"><a href="struct_ark_1_1internal_1_1_c_value.html">Ark::internal::CValue</a></div><div class="ttdoc">A Compiler Value class helper to handle multiple types. </div><div class="ttdef"><b>Definition:</b> <a href="_c_value_8hpp_source.html#l00037">CValue.hpp:37</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f"><div class="ttname"><a href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f">Ark::internal::CValueType::Number</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html">Ark::internal::Node</a></div><div class="ttdoc">A node of an Abstract Syntax Tree for ArkScript. </div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00057">Node.hpp:57</a></div></div>
+<div class="ttc" id="struct_ark_1_1internal_1_1_c_value_html_a41e2839881408a8d8e8d0b35dd0e20e6"><div class="ttname"><a href="struct_ark_1_1internal_1_1_c_value.html#a41e2839881408a8d8e8d0b35dd0e20e6">Ark::internal::CValue::CValue</a></div><div class="ttdeci">CValue(double value) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="_c_value_8cpp_source.html#l00005">CValue.cpp:5</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_abbd0e65f86a8884c76fdf41f5e1389d3a6666eaba81f13e74d10ac1a9c9d6d7b1"><div class="ttname"><a href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a6666eaba81f13e74d10ac1a9c9d6d7b1">Ark::internal::CValueType::PageAddr</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html"><div class="ttname"><a href="namespace_ark_1_1internal.html">Ark::internal</a></div></div>
+<div class="ttc" id="struct_ark_1_1internal_1_1_c_value_html_a88316d06f9a3fa88779bf95178344c52"><div class="ttname"><a href="struct_ark_1_1internal_1_1_c_value.html#a88316d06f9a3fa88779bf95178344c52">Ark::internal::CValue::operator==</a></div><div class="ttdeci">bool operator==(const CValue &amp;A) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="_c_value_8cpp_source.html#l00039">CValue.cpp:39</a></div></div>
 <div class="ttc" id="_c_value_8hpp_html"><div class="ttname"><a href="_c_value_8hpp.html">CValue.hpp</a></div><div class="ttdoc">The basic value type handled by the compiler. </div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98"><div class="ttname"><a href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98">Ark::internal::CValueType::String</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 30 2020 13:57:58 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 17 2021 12:14:37 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

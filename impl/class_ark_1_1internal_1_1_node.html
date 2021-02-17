@@ -14,7 +14,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-modern.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -40,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -64,6 +64,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -72,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,12 +84,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Ark</b></li><li class="navelem"><b>internal</b></li><li class="navelem"><a class="el" href="class_ark_1_1internal_1_1_node.html">Node</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespace_ark.html">Ark</a></li><li class="navelem"><a class="el" href="namespace_ark_1_1internal.html">internal</a></li><li class="navelem"><a class="el" href="class_ark_1_1internal_1_1_node.html">Node</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="class_ark_1_1internal_1_1_node-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Ark::internal::Node Class Reference</div>  </div>
@@ -100,6 +104,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p><code>#include &lt;<a class="el" href="_node_8hpp_source.html">Node.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:acb51b539cbe2a7e737e63f8b3a7da94a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#acb51b539cbe2a7e737e63f8b3a7da94a">Iterator</a> = std::vector&lt; <a class="el" href="class_ark_1_1internal_1_1_node.html">Node</a> &gt;::const_iterator</td></tr>
+<tr class="separator:acb51b539cbe2a7e737e63f8b3a7da94a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accde98529d2367b1cafb23b1f87148fd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#accde98529d2367b1cafb23b1f87148fd">Map</a> = std::unordered_map&lt; std::string, <a class="el" href="class_ark_1_1internal_1_1_node.html">Node</a> &gt;</td></tr>
+<tr class="separator:accde98529d2367b1cafb23b1f87148fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a384f0d71de3e144b7abf8e916f9852ee"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a384f0d71de3e144b7abf8e916f9852ee">Value</a> = mpark::variant&lt; double, std::string, <a class="el" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">Keyword</a> &gt;</td></tr>
+<tr class="separator:a384f0d71de3e144b7abf8e916f9852ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:addc5861f6f2ac317efc79dc08a32d003"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#addc5861f6f2ac317efc79dc08a32d003">Node</a> (int value) noexcept</td></tr>
@@ -111,10 +124,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a51f781e3a53e76c4d728687f4342aa57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a51f781e3a53e76c4d728687f4342aa57">Node</a> (const std::string &amp;value) noexcept</td></tr>
 <tr class="memdesc:a51f781e3a53e76c4d728687f4342aa57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_ark_1_1internal_1_1_node.html" title="A node of an Abstract Syntax Tree for ArkScript. ">Node</a> object.  <a href="#a51f781e3a53e76c4d728687f4342aa57">More...</a><br /></td></tr>
 <tr class="separator:a51f781e3a53e76c4d728687f4342aa57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9820c1bc45286e101b003a1c45c6aaac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a9820c1bc45286e101b003a1c45c6aaac">Node</a> (Keyword value) noexcept</td></tr>
+<tr class="memitem:a9820c1bc45286e101b003a1c45c6aaac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a9820c1bc45286e101b003a1c45c6aaac">Node</a> (<a class="el" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">Keyword</a> value) noexcept</td></tr>
 <tr class="memdesc:a9820c1bc45286e101b003a1c45c6aaac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_ark_1_1internal_1_1_node.html" title="A node of an Abstract Syntax Tree for ArkScript. ">Node</a> object.  <a href="#a9820c1bc45286e101b003a1c45c6aaac">More...</a><br /></td></tr>
 <tr class="separator:a9820c1bc45286e101b003a1c45c6aaac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a344c097048cfd2d81829ceb7d3996eea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a344c097048cfd2d81829ceb7d3996eea">Node</a> (NodeType type=NodeType::Symbol) noexcept</td></tr>
+<tr class="memitem:a344c097048cfd2d81829ceb7d3996eea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a344c097048cfd2d81829ceb7d3996eea">Node</a> (<a class="el" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4c">NodeType</a> type=<a class="el" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca02c86eb2792f3262c21d030a87e19793">NodeType::Symbol</a>) noexcept</td></tr>
 <tr class="memdesc:a344c097048cfd2d81829ceb7d3996eea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_ark_1_1internal_1_1_node.html" title="A node of an Abstract Syntax Tree for ArkScript. ">Node</a> object, does not set the value.  <a href="#a344c097048cfd2d81829ceb7d3996eea">More...</a><br /></td></tr>
 <tr class="separator:a344c097048cfd2d81829ceb7d3996eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14e15ff75dafca1ff786fe66ba37fb53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a14e15ff75dafca1ff786fe66ba37fb53">Node</a> (const <a class="el" href="class_ark_1_1internal_1_1_node.html">Node</a> &amp;other) noexcept</td></tr>
@@ -126,7 +139,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad159c2bdf88e06ab0c80a4df70ded00d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#ad159c2bdf88e06ab0c80a4df70ded00d">number</a> () const noexcept</td></tr>
 <tr class="memdesc:ad159c2bdf88e06ab0c80a4df70ded00d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number held by the value (if the node type allows it)  <a href="#ad159c2bdf88e06ab0c80a4df70ded00d">More...</a><br /></td></tr>
 <tr class="separator:ad159c2bdf88e06ab0c80a4df70ded00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a376cc93a34f6880af8d69187356c6f2c"><td class="memItemLeft" align="right" valign="top">Keyword&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a376cc93a34f6880af8d69187356c6f2c">keyword</a> () const noexcept</td></tr>
+<tr class="memitem:a376cc93a34f6880af8d69187356c6f2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">Keyword</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a376cc93a34f6880af8d69187356c6f2c">keyword</a> () const noexcept</td></tr>
 <tr class="memdesc:a376cc93a34f6880af8d69187356c6f2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the keyword held by the value (if the node type allows it)  <a href="#a376cc93a34f6880af8d69187356c6f2c">More...</a><br /></td></tr>
 <tr class="separator:a376cc93a34f6880af8d69187356c6f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbb8b1bf7d2a00bc1d4161009e4a417a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#abbb8b1bf7d2a00bc1d4161009e4a417a">push_back</a> (const <a class="el" href="class_ark_1_1internal_1_1_node.html">Node</a> &amp;node) noexcept</td></tr>
@@ -138,10 +151,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4e64572723858cd506ddbc02e0053d36"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="class_ark_1_1internal_1_1_node.html">Node</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a4e64572723858cd506ddbc02e0053d36">const_list</a> () const noexcept</td></tr>
 <tr class="memdesc:a4e64572723858cd506ddbc02e0053d36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the list of sub-nodes held by the node.  <a href="#a4e64572723858cd506ddbc02e0053d36">More...</a><br /></td></tr>
 <tr class="separator:a4e64572723858cd506ddbc02e0053d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a013322065e18b121d531a6d93f012ca1"><td class="memItemLeft" align="right" valign="top">NodeType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a013322065e18b121d531a6d93f012ca1">nodeType</a> () const noexcept</td></tr>
+<tr class="memitem:a013322065e18b121d531a6d93f012ca1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4c">NodeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a013322065e18b121d531a6d93f012ca1">nodeType</a> () const noexcept</td></tr>
 <tr class="memdesc:a013322065e18b121d531a6d93f012ca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the node type.  <a href="#a013322065e18b121d531a6d93f012ca1">More...</a><br /></td></tr>
 <tr class="separator:a013322065e18b121d531a6d93f012ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20cf4b5aaeaa1e21f6eb681733d7c920"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a20cf4b5aaeaa1e21f6eb681733d7c920">setNodeType</a> (NodeType type) noexcept</td></tr>
+<tr class="memitem:a20cf4b5aaeaa1e21f6eb681733d7c920"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a20cf4b5aaeaa1e21f6eb681733d7c920">setNodeType</a> (<a class="el" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4c">NodeType</a> type) noexcept</td></tr>
 <tr class="memdesc:a20cf4b5aaeaa1e21f6eb681733d7c920"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the <a class="el" href="class_ark_1_1internal_1_1_node.html" title="A node of an Abstract Syntax Tree for ArkScript. ">Node</a> Type object.  <a href="#a20cf4b5aaeaa1e21f6eb681733d7c920">More...</a><br /></td></tr>
 <tr class="separator:a20cf4b5aaeaa1e21f6eb681733d7c920"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcd8330924778f11ccb5973630a8f54e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#abcd8330924778f11ccb5973630a8f54e">setString</a> (const std::string &amp;value) noexcept</td></tr>
@@ -150,7 +163,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa854f6855267d7caf9705fdaa74105f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#aa854f6855267d7caf9705fdaa74105f0">setNumber</a> (double value) noexcept</td></tr>
 <tr class="memdesc:aa854f6855267d7caf9705fdaa74105f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Number object.  <a href="#aa854f6855267d7caf9705fdaa74105f0">More...</a><br /></td></tr>
 <tr class="separator:aa854f6855267d7caf9705fdaa74105f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a344761bb47a165e75dc242cfd07254f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a344761bb47a165e75dc242cfd07254f9">setKeyword</a> (Keyword kw) noexcept</td></tr>
+<tr class="memitem:a344761bb47a165e75dc242cfd07254f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a344761bb47a165e75dc242cfd07254f9">setKeyword</a> (<a class="el" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">Keyword</a> kw) noexcept</td></tr>
 <tr class="memdesc:a344761bb47a165e75dc242cfd07254f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Keyword object.  <a href="#a344761bb47a165e75dc242cfd07254f9">More...</a><br /></td></tr>
 <tr class="separator:a344761bb47a165e75dc242cfd07254f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3087344c1f8de8c8753fdcdfa102b4af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a3087344c1f8de8c8753fdcdfa102b4af">setPos</a> (std::size_t <a class="el" href="class_ark_1_1internal_1_1_node.html#ae8549b27b386e1116078038f20798e19">line</a>, std::size_t <a class="el" href="class_ark_1_1internal_1_1_node.html#ab43cdfad8757b9079c13d9693698b852">col</a>) noexcept</td></tr>
@@ -168,12 +181,77 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2d0746c6100afa6f9fa3da6196b64c5c"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a2d0746c6100afa6f9fa3da6196b64c5c">filename</a> () const noexcept</td></tr>
 <tr class="memdesc:a2d0746c6100afa6f9fa3da6196b64c5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the filename in which this node was created.  <a href="#a2d0746c6100afa6f9fa3da6196b64c5c">More...</a><br /></td></tr>
 <tr class="separator:a2d0746c6100afa6f9fa3da6196b64c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a4bb33ec1d08b011cb4df29e9ec41405e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4c">NodeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a4bb33ec1d08b011cb4df29e9ec41405e">m_type</a></td></tr>
+<tr class="separator:a4bb33ec1d08b011cb4df29e9ec41405e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d462c278146bcef4b58ea3263daefe1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ark_1_1internal_1_1_node.html#a384f0d71de3e144b7abf8e916f9852ee">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">m_value</a></td></tr>
+<tr class="separator:a5d462c278146bcef4b58ea3263daefe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a335fd06cadf9354288f5f12aa5ed74fa"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_ark_1_1internal_1_1_node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a335fd06cadf9354288f5f12aa5ed74fa">m_list</a></td></tr>
+<tr class="separator:a335fd06cadf9354288f5f12aa5ed74fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d6e3cd4bdebefe4650b08e7570fe4d1"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a9d6e3cd4bdebefe4650b08e7570fe4d1">m_line</a> = 0</td></tr>
+<tr class="separator:a9d6e3cd4bdebefe4650b08e7570fe4d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec9b37d7d0ef76ac9584b90497b94766"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#aec9b37d7d0ef76ac9584b90497b94766">m_col</a> = 0</td></tr>
+<tr class="separator:aec9b37d7d0ef76ac9584b90497b94766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f21160ed287c5d5504149d3c718fd08"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#a4f21160ed287c5d5504149d3c718fd08">m_filename</a> = &quot;&quot;</td></tr>
+<tr class="separator:a4f21160ed287c5d5504149d3c718fd08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:ab68fecbeb2e8af7793f9e158ef26d2a6"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#ab68fecbeb2e8af7793f9e158ef26d2a6">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="class_ark_1_1internal_1_1_node.html">Node</a> &amp;N) noexcept</td></tr>
+<tr class="separator:ab68fecbeb2e8af7793f9e158ef26d2a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac562303e969f463ea5681d21c26eadf4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_node.html#ac562303e969f463ea5681d21c26eadf4">operator==</a> (const <a class="el" href="class_ark_1_1internal_1_1_node.html">Node</a> &amp;A, const <a class="el" href="class_ark_1_1internal_1_1_node.html">Node</a> &amp;B)</td></tr>
+<tr class="separator:ac562303e969f463ea5681d21c26eadf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A node of an Abstract Syntax Tree for ArkScript. </p>
 
 <p>Definition at line <a class="el" href="_node_8hpp_source.html#l00057">57</a> of file <a class="el" href="_node_8hpp_source.html">Node.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="acb51b539cbe2a7e737e63f8b3a7da94a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_ark_1_1internal_1_1_node.html#acb51b539cbe2a7e737e63f8b3a7da94a">Ark::internal::Node::Iterator</a> =  std::vector&lt;<a class="el" href="class_ark_1_1internal_1_1_node.html">Node</a>&gt;::const_iterator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_node_8hpp_source.html#l00060">60</a> of file <a class="el" href="_node_8hpp_source.html">Node.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="accde98529d2367b1cafb23b1f87148fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_ark_1_1internal_1_1_node.html#accde98529d2367b1cafb23b1f87148fd">Ark::internal::Node::Map</a> =  std::unordered_map&lt;std::string, <a class="el" href="class_ark_1_1internal_1_1_node.html">Node</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_node_8hpp_source.html#l00061">61</a> of file <a class="el" href="_node_8hpp_source.html">Node.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a384f0d71de3e144b7abf8e916f9852ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_ark_1_1internal_1_1_node.html#a384f0d71de3e144b7abf8e916f9852ee">Ark::internal::Node::Value</a> =  mpark::variant&lt;double, std::string, <a class="el" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">Keyword</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_node_8hpp_source.html#l00062">62</a> of file <a class="el" href="_node_8hpp_source.html">Node.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="addc5861f6f2ac317efc79dc08a32d003"></a>
 <div class="memitem">
 <div class="memproto">
@@ -205,7 +283,14 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00007">7</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                                 :</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a4bb33ec1d08b011cb4df29e9ec41405e">m_type</a>(<a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f">NodeType::Number</a>),</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">m_value</a>(static_cast&lt;double&gt;(value))</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {}</div>
+<div class="ttc" id="namespace_ark_1_1internal_html_abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f"><div class="ttname"><a href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f">Ark::internal::CValueType::Number</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a4bb33ec1d08b011cb4df29e9ec41405e"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a4bb33ec1d08b011cb4df29e9ec41405e">Ark::internal::Node::m_type</a></div><div class="ttdeci">NodeType m_type</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00223">Node.hpp:223</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a5d462c278146bcef4b58ea3263daefe1"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">Ark::internal::Node::m_value</a></div><div class="ttdeci">Value m_value</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00224">Node.hpp:224</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad65ea91c6bb50ca6bc7115478ce82dbb"></a>
@@ -239,7 +324,14 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00012">12</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                    :</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a4bb33ec1d08b011cb4df29e9ec41405e">m_type</a>(<a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f">NodeType::Number</a>),</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">m_value</a>(value)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {}</div>
+<div class="ttc" id="namespace_ark_1_1internal_html_abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f"><div class="ttname"><a href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f">Ark::internal::CValueType::Number</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a4bb33ec1d08b011cb4df29e9ec41405e"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a4bb33ec1d08b011cb4df29e9ec41405e">Ark::internal::Node::m_type</a></div><div class="ttdeci">NodeType m_type</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00223">Node.hpp:223</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a5d462c278146bcef4b58ea3263daefe1"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">Ark::internal::Node::m_value</a></div><div class="ttdeci">Value m_value</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00224">Node.hpp:224</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a51f781e3a53e76c4d728687f4342aa57"></a>
@@ -273,7 +365,14 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00017">17</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                                              :</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a4bb33ec1d08b011cb4df29e9ec41405e">m_type</a>(<a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98">NodeType::String</a>),</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">m_value</a>(value)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {}</div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a4bb33ec1d08b011cb4df29e9ec41405e"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a4bb33ec1d08b011cb4df29e9ec41405e">Ark::internal::Node::m_type</a></div><div class="ttdeci">NodeType m_type</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00223">Node.hpp:223</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a5d462c278146bcef4b58ea3263daefe1"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">Ark::internal::Node::m_value</a></div><div class="ttdeci">Value m_value</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00224">Node.hpp:224</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98"><div class="ttname"><a href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98">Ark::internal::CValueType::String</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a9820c1bc45286e101b003a1c45c6aaac"></a>
@@ -286,7 +385,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">Ark::internal::Node::Node </td>
           <td>(</td>
-          <td class="paramtype">Keyword&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">Keyword</a>&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
@@ -307,7 +406,14 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00022">22</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                                     :</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a4bb33ec1d08b011cb4df29e9ec41405e">m_type</a>(<a class="code" href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba220f3d3750583b9db48568a0b5b9a5f1">NodeType::Keyword</a>),</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">m_value</a>(value)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {}</div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a4bb33ec1d08b011cb4df29e9ec41405e"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a4bb33ec1d08b011cb4df29e9ec41405e">Ark::internal::Node::m_type</a></div><div class="ttdeci">NodeType m_type</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00223">Node.hpp:223</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_ac8f70ee0316f6d163228ed70ef976bfba220f3d3750583b9db48568a0b5b9a5f1"><div class="ttname"><a href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba220f3d3750583b9db48568a0b5b9a5f1">Ark::internal::TokenType::Keyword</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a5d462c278146bcef4b58ea3263daefe1"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">Ark::internal::Node::m_value</a></div><div class="ttdeci">Value m_value</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00224">Node.hpp:224</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a344c097048cfd2d81829ceb7d3996eea"></a>
@@ -320,8 +426,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">Ark::internal::Node::Node </td>
           <td>(</td>
-          <td class="paramtype">NodeType&#160;</td>
-          <td class="paramname"><em>type</em> = <code>NodeType::Symbol</code></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4c">NodeType</a>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca02c86eb2792f3262c21d030a87e19793">NodeType::Symbol</a></code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -341,7 +447,11 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00027">27</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                     :</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a4bb33ec1d08b011cb4df29e9ec41405e">m_type</a>(type)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {}</div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a4bb33ec1d08b011cb4df29e9ec41405e"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a4bb33ec1d08b011cb4df29e9ec41405e">Ark::internal::Node::m_type</a></div><div class="ttdeci">NodeType m_type</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00223">Node.hpp:223</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a14e15ff75dafca1ff786fe66ba37fb53"></a>
@@ -375,7 +485,21 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00031">31</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                         :</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a4bb33ec1d08b011cb4df29e9ec41405e">m_type</a>(other.m_type),</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">m_value</a>(other.m_value),</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a335fd06cadf9354288f5f12aa5ed74fa">m_list</a>(other.m_list),</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a9d6e3cd4bdebefe4650b08e7570fe4d1">m_line</a>(other.m_line),</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#aec9b37d7d0ef76ac9584b90497b94766">m_col</a>(other.m_col),</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a4f21160ed287c5d5504149d3c718fd08">m_filename</a>(other.m_filename)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {}</div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_aec9b37d7d0ef76ac9584b90497b94766"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#aec9b37d7d0ef76ac9584b90497b94766">Ark::internal::Node::m_col</a></div><div class="ttdeci">std::size_t m_col</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00227">Node.hpp:227</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a335fd06cadf9354288f5f12aa5ed74fa"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a335fd06cadf9354288f5f12aa5ed74fa">Ark::internal::Node::m_list</a></div><div class="ttdeci">std::vector&lt; Node &gt; m_list</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00225">Node.hpp:225</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a4f21160ed287c5d5504149d3c718fd08"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a4f21160ed287c5d5504149d3c718fd08">Ark::internal::Node::m_filename</a></div><div class="ttdeci">std::string m_filename</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00228">Node.hpp:228</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a4bb33ec1d08b011cb4df29e9ec41405e"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a4bb33ec1d08b011cb4df29e9ec41405e">Ark::internal::Node::m_type</a></div><div class="ttdeci">NodeType m_type</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00223">Node.hpp:223</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a5d462c278146bcef4b58ea3263daefe1"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">Ark::internal::Node::m_value</a></div><div class="ttdeci">Value m_value</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00224">Node.hpp:224</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a9d6e3cd4bdebefe4650b08e7570fe4d1"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a9d6e3cd4bdebefe4650b08e7570fe4d1">Ark::internal::Node::m_line</a></div><div class="ttdeci">std::size_t m_line</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00227">Node.hpp:227</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -404,7 +528,11 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>const std::string&amp; </dd></dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00042">42</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> mpark::get&lt;std::string&gt;(<a class="code" href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">m_value</a>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a5d462c278146bcef4b58ea3263daefe1"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">Ark::internal::Node::m_value</a></div><div class="ttdeci">Value m_value</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00224">Node.hpp:224</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad159c2bdf88e06ab0c80a4df70ded00d"></a>
@@ -432,7 +560,11 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00047">47</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> mpark::get&lt;double&gt;(<a class="code" href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">m_value</a>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a5d462c278146bcef4b58ea3263daefe1"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">Ark::internal::Node::m_value</a></div><div class="ttdeci">Value m_value</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00224">Node.hpp:224</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a376cc93a34f6880af8d69187356c6f2c"></a>
@@ -443,7 +575,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Keyword Ark::internal::Node::keyword </td>
+          <td class="memname"><a class="el" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">Keyword</a> Ark::internal::Node::keyword </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -460,7 +592,11 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Keyword </dd></dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00052">52</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> mpark::get&lt;Keyword&gt;(<a class="code" href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">m_value</a>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a5d462c278146bcef4b58ea3263daefe1"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">Ark::internal::Node::m_value</a></div><div class="ttdeci">Value m_value</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00224">Node.hpp:224</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="abbb8b1bf7d2a00bc1d4161009e4a417a"></a>
@@ -494,7 +630,11 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00059">59</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a335fd06cadf9354288f5f12aa5ed74fa">m_list</a>.push_back(node);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a335fd06cadf9354288f5f12aa5ed74fa"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a335fd06cadf9354288f5f12aa5ed74fa">Ark::internal::Node::m_list</a></div><div class="ttdeci">std::vector&lt; Node &gt; m_list</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00225">Node.hpp:225</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="af7d8dbbbaabe5cf9b0a40e09e34dc68e"></a>
@@ -522,7 +662,11 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;Node&gt;&amp; </dd></dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00064">64</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_ark_1_1internal_1_1_node.html#a335fd06cadf9354288f5f12aa5ed74fa">m_list</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a335fd06cadf9354288f5f12aa5ed74fa"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a335fd06cadf9354288f5f12aa5ed74fa">Ark::internal::Node::m_list</a></div><div class="ttdeci">std::vector&lt; Node &gt; m_list</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00225">Node.hpp:225</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a4e64572723858cd506ddbc02e0053d36"></a>
@@ -550,7 +694,11 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>const std::vector&lt;Node&gt;&amp; </dd></dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00069">69</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_ark_1_1internal_1_1_node.html#a335fd06cadf9354288f5f12aa5ed74fa">m_list</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a335fd06cadf9354288f5f12aa5ed74fa"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a335fd06cadf9354288f5f12aa5ed74fa">Ark::internal::Node::m_list</a></div><div class="ttdeci">std::vector&lt; Node &gt; m_list</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00225">Node.hpp:225</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a013322065e18b121d531a6d93f012ca1"></a>
@@ -561,7 +709,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">NodeType Ark::internal::Node::nodeType </td>
+          <td class="memname"><a class="el" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4c">NodeType</a> Ark::internal::Node::nodeType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -578,7 +726,11 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>NodeType </dd></dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00076">76</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_ark_1_1internal_1_1_node.html#a4bb33ec1d08b011cb4df29e9ec41405e">m_type</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a4bb33ec1d08b011cb4df29e9ec41405e"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a4bb33ec1d08b011cb4df29e9ec41405e">Ark::internal::Node::m_type</a></div><div class="ttdeci">NodeType m_type</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00223">Node.hpp:223</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a20cf4b5aaeaa1e21f6eb681733d7c920"></a>
@@ -591,7 +743,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Ark::internal::Node::setNodeType </td>
           <td>(</td>
-          <td class="paramtype">NodeType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4c">NodeType</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
           <td></td>
         </tr>
@@ -612,7 +764,11 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00081">81</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a4bb33ec1d08b011cb4df29e9ec41405e">m_type</a> = type;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a4bb33ec1d08b011cb4df29e9ec41405e"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a4bb33ec1d08b011cb4df29e9ec41405e">Ark::internal::Node::m_type</a></div><div class="ttdeci">NodeType m_type</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00223">Node.hpp:223</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="abcd8330924778f11ccb5973630a8f54e"></a>
@@ -646,7 +802,11 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00086">86</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">m_value</a> = value;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a5d462c278146bcef4b58ea3263daefe1"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">Ark::internal::Node::m_value</a></div><div class="ttdeci">Value m_value</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00224">Node.hpp:224</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aa854f6855267d7caf9705fdaa74105f0"></a>
@@ -680,7 +840,11 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00091">91</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">m_value</a> = value;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a5d462c278146bcef4b58ea3263daefe1"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">Ark::internal::Node::m_value</a></div><div class="ttdeci">Value m_value</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00224">Node.hpp:224</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a344761bb47a165e75dc242cfd07254f9"></a>
@@ -693,7 +857,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Ark::internal::Node::setKeyword </td>
           <td>(</td>
-          <td class="paramtype">Keyword&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">Keyword</a>&#160;</td>
           <td class="paramname"><em>kw</em></td><td>)</td>
           <td></td>
         </tr>
@@ -714,7 +878,11 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00096">96</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">m_value</a> = kw;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a5d462c278146bcef4b58ea3263daefe1"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a5d462c278146bcef4b58ea3263daefe1">Ark::internal::Node::m_value</a></div><div class="ttdeci">Value m_value</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00224">Node.hpp:224</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3087344c1f8de8c8753fdcdfa102b4af"></a>
@@ -759,7 +927,15 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00103">103</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a9d6e3cd4bdebefe4650b08e7570fe4d1">m_line</a> = <a class="code" href="class_ark_1_1internal_1_1_node.html#ae8549b27b386e1116078038f20798e19">line</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#aec9b37d7d0ef76ac9584b90497b94766">m_col</a> = <a class="code" href="class_ark_1_1internal_1_1_node.html#ab43cdfad8757b9079c13d9693698b852">col</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_aec9b37d7d0ef76ac9584b90497b94766"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#aec9b37d7d0ef76ac9584b90497b94766">Ark::internal::Node::m_col</a></div><div class="ttdeci">std::size_t m_col</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00227">Node.hpp:227</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_ab43cdfad8757b9079c13d9693698b852"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#ab43cdfad8757b9079c13d9693698b852">Ark::internal::Node::col</a></div><div class="ttdeci">std::size_t col() const noexcept</div><div class="ttdoc">Get the column at which this node was created. </div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00119">Node.cpp:119</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_ae8549b27b386e1116078038f20798e19"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#ae8549b27b386e1116078038f20798e19">Ark::internal::Node::line</a></div><div class="ttdeci">std::size_t line() const noexcept</div><div class="ttdoc">Get the line at which this node was created. </div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00114">Node.cpp:114</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a9d6e3cd4bdebefe4650b08e7570fe4d1"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a9d6e3cd4bdebefe4650b08e7570fe4d1">Ark::internal::Node::m_line</a></div><div class="ttdeci">std::size_t m_line</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00227">Node.hpp:227</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a718bcc9c6517f71168c61daf71c525aa"></a>
@@ -793,7 +969,12 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00109">109</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_node.html#a4f21160ed287c5d5504149d3c718fd08">m_filename</a> = <a class="code" href="class_ark_1_1internal_1_1_node.html#a2d0746c6100afa6f9fa3da6196b64c5c">filename</a>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a4f21160ed287c5d5504149d3c718fd08"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a4f21160ed287c5d5504149d3c718fd08">Ark::internal::Node::m_filename</a></div><div class="ttdeci">std::string m_filename</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00228">Node.hpp:228</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a2d0746c6100afa6f9fa3da6196b64c5c"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a2d0746c6100afa6f9fa3da6196b64c5c">Ark::internal::Node::filename</a></div><div class="ttdeci">const std::string &amp; filename() const noexcept</div><div class="ttdoc">Return the filename in which this node was created. </div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00124">Node.cpp:124</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ae8549b27b386e1116078038f20798e19"></a>
@@ -821,7 +1002,11 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>std::size_t </dd></dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00114">114</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_ark_1_1internal_1_1_node.html#a9d6e3cd4bdebefe4650b08e7570fe4d1">m_line</a>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a9d6e3cd4bdebefe4650b08e7570fe4d1"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a9d6e3cd4bdebefe4650b08e7570fe4d1">Ark::internal::Node::m_line</a></div><div class="ttdeci">std::size_t m_line</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00227">Node.hpp:227</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ab43cdfad8757b9079c13d9693698b852"></a>
@@ -849,7 +1034,11 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>std::size_t </dd></dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00119">119</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_ark_1_1internal_1_1_node.html#aec9b37d7d0ef76ac9584b90497b94766">m_col</a>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_aec9b37d7d0ef76ac9584b90497b94766"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#aec9b37d7d0ef76ac9584b90497b94766">Ark::internal::Node::m_col</a></div><div class="ttdeci">std::size_t m_col</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00227">Node.hpp:227</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a2d0746c6100afa6f9fa3da6196b64c5c"></a>
@@ -877,6 +1066,295 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>const std::string&amp; </dd></dl>
 
 <p>Definition at line <a class="el" href="_node_8cpp_source.html#l00124">124</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_ark_1_1internal_1_1_node.html#a4f21160ed287c5d5504149d3c718fd08">m_filename</a>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a4f21160ed287c5d5504149d3c718fd08"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a4f21160ed287c5d5504149d3c718fd08">Ark::internal::Node::m_filename</a></div><div class="ttdeci">std::string m_filename</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00228">Node.hpp:228</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="ab68fecbeb2e8af7793f9e158ef26d2a6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_ark_1_1internal_1_1_node.html">Node</a> &amp;&#160;</td>
+          <td class="paramname"><em>N</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_node_8cpp_source.html#l00139">139</a> of file <a class="el" href="_node_8cpp_source.html">Node.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> index = 0;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">switch</span>(N.m_type)</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98">NodeType::String</a>:</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            os &lt;&lt; N.string();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca02c86eb2792f3262c21d030a87e19793">NodeType::Symbol</a>:</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            os &lt;&lt; <span class="stringliteral">&quot;(Symbol) &quot;</span> &lt;&lt; N.string();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba44a50f07b4bdc57740901280f9eddaf5">NodeType::Capture</a>:</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            os &lt;&lt; <span class="stringliteral">&quot;(Capture) &quot;</span> &lt;&lt; N.string();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfbad3e2f43779da90565fa9c24f9175dc04">NodeType::GetField</a>:</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            os &lt;&lt; <span class="stringliteral">&quot;(GetField) &quot;</span> &lt;&lt; N.string();</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f">NodeType::Number</a>:</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            os &lt;&lt; N.number();</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca4ee29ca12c7d126654bd0e5275de6135">NodeType::List</a>:</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            os &lt;&lt; <a class="code" href="namespace_ark_1_1internal.html#a596c695cf00642e3dcbc019b9dc7c0ac">colors</a>[index % <a class="code" href="namespace_ark_1_1internal.html#a596c695cf00642e3dcbc019b9dc7c0ac">colors</a>.size()] &lt;&lt; <span class="stringliteral">&quot;( &quot;</span> &lt;&lt; termcolor::reset;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            index++;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; t: N.m_list)</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                os &lt;&lt; t &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            index--;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            os &lt;&lt; <a class="code" href="namespace_ark_1_1internal.html#a596c695cf00642e3dcbc019b9dc7c0ac">colors</a>[index % <a class="code" href="namespace_ark_1_1internal.html#a596c695cf00642e3dcbc019b9dc7c0ac">colors</a>.size()] &lt;&lt; <span class="stringliteral">&quot;)&quot;</span> &lt;&lt; termcolor::reset;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4caaf4bb376939e77df0e7c2332b837a866">NodeType::Closure</a>:</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            os &lt;&lt; <span class="stringliteral">&quot;Closure&quot;</span>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba220f3d3750583b9db48568a0b5b9a5f1">NodeType::Keyword</a>:</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordflow">switch</span>(N.keyword())</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a46d6d315bea88efbf048125d2ec444b4">Keyword::Fun</a>:    os &lt;&lt; <span class="stringliteral">&quot;Fun&quot;</span>;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1acae6404c4aecf46684930fe2a86676a6">Keyword::Let</a>:    os &lt;&lt; <span class="stringliteral">&quot;Let&quot;</span>;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1aebb87a770abac0e394d963d20ed574b7">Keyword::Mut</a>:    os &lt;&lt; <span class="stringliteral">&quot;Mut&quot;</span>;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a5d5b78699e57104f2fa03bbdf7b9197b">Keyword::Set</a>:    os &lt;&lt; <span class="stringliteral">&quot;Set&quot;</span>;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a786887572f6ef1c20f2d8177cb2f1639">Keyword::If</a>:     os &lt;&lt; <span class="stringliteral">&quot;If&quot;</span>;     <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a3cddbb8f43a4e074e2c2ce3e8622f43e">Keyword::While</a>:  os &lt;&lt; <span class="stringliteral">&quot;While&quot;</span>;  <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a1a06729125544cab7cee73195fc044f0">Keyword::Begin</a>:  os &lt;&lt; <span class="stringliteral">&quot;Begin&quot;</span>;  <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a72d6d7a1885885bb55a565fd1070581a">Keyword::Import</a>: os &lt;&lt; <span class="stringliteral">&quot;Import&quot;</span>; <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1ac48e929b2b1eabba2ba036884433345e">Keyword::Quote</a>:  os &lt;&lt; <span class="stringliteral">&quot;Quote&quot;</span>;  <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a5526d60feb55086fbd12dd96b071a093">Keyword::Del</a>:    os &lt;&lt; <span class="stringliteral">&quot;Del&quot;</span>;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            os &lt;&lt; <span class="stringliteral">&quot;~\\._./~&quot;</span>;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">return</span> os;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    }</div>
+<div class="ttc" id="namespace_ark_1_1internal_html_a9a844cdbff6d30f493cb3044c72128f1a5526d60feb55086fbd12dd96b071a093"><div class="ttname"><a href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a5526d60feb55086fbd12dd96b071a093">Ark::internal::Keyword::Del</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_a9a844cdbff6d30f493cb3044c72128f1a5d5b78699e57104f2fa03bbdf7b9197b"><div class="ttname"><a href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a5d5b78699e57104f2fa03bbdf7b9197b">Ark::internal::Keyword::Set</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f"><div class="ttname"><a href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f">Ark::internal::CValueType::Number</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_a5300c6c0596db0a5a8f5b62d4d42ce4caaf4bb376939e77df0e7c2332b837a866"><div class="ttname"><a href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4caaf4bb376939e77df0e7c2332b837a866">Ark::internal::NodeType::Closure</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_a9a844cdbff6d30f493cb3044c72128f1aebb87a770abac0e394d963d20ed574b7"><div class="ttname"><a href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1aebb87a770abac0e394d963d20ed574b7">Ark::internal::Keyword::Mut</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_a9a844cdbff6d30f493cb3044c72128f1a1a06729125544cab7cee73195fc044f0"><div class="ttname"><a href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a1a06729125544cab7cee73195fc044f0">Ark::internal::Keyword::Begin</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_a596c695cf00642e3dcbc019b9dc7c0ac"><div class="ttname"><a href="namespace_ark_1_1internal.html#a596c695cf00642e3dcbc019b9dc7c0ac">Ark::internal::colors</a></div><div class="ttdeci">auto colors</div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00131">Node.cpp:131</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_a9a844cdbff6d30f493cb3044c72128f1ac48e929b2b1eabba2ba036884433345e"><div class="ttname"><a href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1ac48e929b2b1eabba2ba036884433345e">Ark::internal::Keyword::Quote</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_a5300c6c0596db0a5a8f5b62d4d42ce4ca4ee29ca12c7d126654bd0e5275de6135"><div class="ttname"><a href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca4ee29ca12c7d126654bd0e5275de6135">Ark::internal::NodeType::List</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_a9a844cdbff6d30f493cb3044c72128f1a3cddbb8f43a4e074e2c2ce3e8622f43e"><div class="ttname"><a href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a3cddbb8f43a4e074e2c2ce3e8622f43e">Ark::internal::Keyword::While</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_ac8f70ee0316f6d163228ed70ef976bfbad3e2f43779da90565fa9c24f9175dc04"><div class="ttname"><a href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfbad3e2f43779da90565fa9c24f9175dc04">Ark::internal::TokenType::GetField</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_a9a844cdbff6d30f493cb3044c72128f1a786887572f6ef1c20f2d8177cb2f1639"><div class="ttname"><a href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a786887572f6ef1c20f2d8177cb2f1639">Ark::internal::Keyword::If</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_a5300c6c0596db0a5a8f5b62d4d42ce4ca02c86eb2792f3262c21d030a87e19793"><div class="ttname"><a href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca02c86eb2792f3262c21d030a87e19793">Ark::internal::NodeType::Symbol</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_a9a844cdbff6d30f493cb3044c72128f1acae6404c4aecf46684930fe2a86676a6"><div class="ttname"><a href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1acae6404c4aecf46684930fe2a86676a6">Ark::internal::Keyword::Let</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_ac8f70ee0316f6d163228ed70ef976bfba44a50f07b4bdc57740901280f9eddaf5"><div class="ttname"><a href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba44a50f07b4bdc57740901280f9eddaf5">Ark::internal::TokenType::Capture</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_a9a844cdbff6d30f493cb3044c72128f1a46d6d315bea88efbf048125d2ec444b4"><div class="ttname"><a href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a46d6d315bea88efbf048125d2ec444b4">Ark::internal::Keyword::Fun</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_ac8f70ee0316f6d163228ed70ef976bfba220f3d3750583b9db48568a0b5b9a5f1"><div class="ttname"><a href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba220f3d3750583b9db48568a0b5b9a5f1">Ark::internal::TokenType::Keyword</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98"><div class="ttname"><a href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98">Ark::internal::CValueType::String</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_a9a844cdbff6d30f493cb3044c72128f1a72d6d7a1885885bb55a565fd1070581a"><div class="ttname"><a href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a72d6d7a1885885bb55a565fd1070581a">Ark::internal::Keyword::Import</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ac562303e969f463ea5681d21c26eadf4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_ark_1_1internal_1_1_node.html">Node</a> &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_ark_1_1internal_1_1_node.html">Node</a> &amp;&#160;</td>
+          <td class="paramname"><em>B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a4bb33ec1d08b011cb4df29e9ec41405e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4c">NodeType</a> Ark::internal::Node::m_type</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_node_8hpp_source.html#l00223">223</a> of file <a class="el" href="_node_8hpp_source.html">Node.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5d462c278146bcef4b58ea3263daefe1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_ark_1_1internal_1_1_node.html#a384f0d71de3e144b7abf8e916f9852ee">Value</a> Ark::internal::Node::m_value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_node_8hpp_source.html#l00224">224</a> of file <a class="el" href="_node_8hpp_source.html">Node.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a335fd06cadf9354288f5f12aa5ed74fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_ark_1_1internal_1_1_node.html">Node</a>&gt; Ark::internal::Node::m_list</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_node_8hpp_source.html#l00225">225</a> of file <a class="el" href="_node_8hpp_source.html">Node.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d6e3cd4bdebefe4650b08e7570fe4d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t Ark::internal::Node::m_line = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_node_8hpp_source.html#l00227">227</a> of file <a class="el" href="_node_8hpp_source.html">Node.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aec9b37d7d0ef76ac9584b90497b94766"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t Ark::internal::Node::m_col = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_node_8hpp_source.html#l00227">227</a> of file <a class="el" href="_node_8hpp_source.html">Node.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4f21160ed287c5d5504149d3c718fd08"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Ark::internal::Node::m_filename = &quot;&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_node_8hpp_source.html#l00228">228</a> of file <a class="el" href="_node_8hpp_source.html">Node.hpp</a>.</p>
 
 </div>
 </div>
@@ -887,7 +1365,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 30 2020 13:58:03 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 17 2021 12:14:45 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

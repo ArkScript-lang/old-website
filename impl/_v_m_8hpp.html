@@ -14,7 +14,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-modern.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -40,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,6 +88,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">VM.hpp File Reference</div>  </div>
@@ -95,7 +99,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>The ArkScript virtual machine.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;cinttypes&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
@@ -106,7 +111,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;mutex&gt;</code><br />
 <code>#include &lt;<a class="el" href="_value_8hpp_source.html">Ark/VM/Value.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_scope_8hpp_source.html">Ark/VM/Scope.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_frame_8hpp_source.html">Ark/VM/Frame.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_state_8hpp_source.html">Ark/VM/State.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_builtins_8hpp_source.html">Ark/Builtins/Builtins.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_log_8hpp_source.html">Ark/Log.hpp</a>&gt;</code><br />
@@ -123,19 +127,33 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ArkScript virtual machine, executing ArkScript bytecode.  <a href="class_ark_1_1_v_m.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespace_ark"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html">Ark</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a4ce2d9493f7426adb3d07d6c31f855dd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_m_8hpp.html#a4ce2d9493f7426adb3d07d6c31f855dd">ARK_STACK_SIZE</a>&#160;&#160;&#160;8192</td></tr>
+<tr class="separator:a4ce2d9493f7426adb3d07d6c31f855dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a78cf7bec8c2cee4247c5efa4b1e4aa9c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">Ark::Value</a> = internal::Value</td></tr>
+<tr class="separator:a78cf7bec8c2cee4247c5efa4b1e4aa9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a774da7cbe563571345cb640fd25445aa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a774da7cbe563571345cb640fd25445aa">Ark::ValueType</a> = internal::ValueType</td></tr>
+<tr class="separator:a774da7cbe563571345cb640fd25445aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a6f6137d90ab3f9eb176863172b1621d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f6137d90ab3f9eb176863172b1621d5"></a>
-const Value&#160;</td><td class="memItemRight" valign="bottom"><b>Ark::Nil</b> = Value(internal::ValueType::Nil)</td></tr>
-<tr class="memdesc:a6f6137d90ab3f9eb176863172b1621d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ArkScript Nil value. <br /></td></tr>
+<tr class="memitem:a6f6137d90ab3f9eb176863172b1621d5"><td class="memItemLeft" align="right" valign="top">const Value&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a6f6137d90ab3f9eb176863172b1621d5">Ark::Nil</a> = Value(internal::ValueType::Nil)</td></tr>
+<tr class="memdesc:a6f6137d90ab3f9eb176863172b1621d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ArkScript Nil value.  <a href="#a6f6137d90ab3f9eb176863172b1621d5">More...</a><br /></td></tr>
 <tr class="separator:a6f6137d90ab3f9eb176863172b1621d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1922edba810bdeb01252289e02308139"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1922edba810bdeb01252289e02308139"></a>
-const Value&#160;</td><td class="memItemRight" valign="bottom"><b>Ark::False</b> = Value(internal::ValueType::False)</td></tr>
-<tr class="memdesc:a1922edba810bdeb01252289e02308139"><td class="mdescLeft">&#160;</td><td class="mdescRight">ArkScript False value. <br /></td></tr>
+<tr class="memitem:a1922edba810bdeb01252289e02308139"><td class="memItemLeft" align="right" valign="top">const Value&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a1922edba810bdeb01252289e02308139">Ark::False</a> = Value(internal::ValueType::False)</td></tr>
+<tr class="memdesc:a1922edba810bdeb01252289e02308139"><td class="mdescLeft">&#160;</td><td class="mdescRight">ArkScript False value.  <a href="#a1922edba810bdeb01252289e02308139">More...</a><br /></td></tr>
 <tr class="separator:a1922edba810bdeb01252289e02308139"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a496e7ab83c7d6a21935c4e996785785f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a496e7ab83c7d6a21935c4e996785785f"></a>
-const Value&#160;</td><td class="memItemRight" valign="bottom"><b>Ark::True</b> = Value(internal::ValueType::True)</td></tr>
-<tr class="memdesc:a496e7ab83c7d6a21935c4e996785785f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ArkScript True value. <br /></td></tr>
+<tr class="memitem:a496e7ab83c7d6a21935c4e996785785f"><td class="memItemLeft" align="right" valign="top">const Value&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a496e7ab83c7d6a21935c4e996785785f">Ark::True</a> = Value(internal::ValueType::True)</td></tr>
+<tr class="memdesc:a496e7ab83c7d6a21935c4e996785785f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ArkScript True value.  <a href="#a496e7ab83c7d6a21935c4e996785785f">More...</a><br /></td></tr>
 <tr class="separator:a496e7ab83c7d6a21935c4e996785785f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -146,10 +164,25 @@ const Value&#160;</td><td class="memItemRight" valign="bottom"><b>Ark::True</b> 
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2020 </dd></dl>
 
 <p>Definition in file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a4ce2d9493f7426adb3d07d6c31f855dd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARK_STACK_SIZE&#160;&#160;&#160;8192</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00034">34</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 30 2020 13:58:01 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 17 2021 12:14:40 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

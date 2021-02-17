@@ -14,7 +14,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-modern.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -40,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Closure.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_closure_8hpp.html">Ark/VM/Closure.hpp</a>&gt;</span></div>
+<a href="_closure_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_closure_8hpp.html">Ark/VM/Closure.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_scope_8hpp.html">Ark/VM/Scope.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
@@ -100,43 +101,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        m_page_addr(0)</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {}</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_closure.html#a45c5985ae75ba56ff141defa9d860016">   12</a></span>&#160;    <a class="code" href="class_ark_1_1internal_1_1_closure.html#ada3fa64db63900c3f8236b6cf3a424ce">Closure::Closure</a>(Scope_t&amp;&amp; scope_ptr, PageAddr_t pa) noexcept :</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_closure.html#a45c5985ae75ba56ff141defa9d860016">   12</a></span>&#160;    <a class="code" href="class_ark_1_1internal_1_1_closure.html#ada3fa64db63900c3f8236b6cf3a424ce">Closure::Closure</a>(<a class="code" href="namespace_ark_1_1internal.html#ad34d3cc31879e65762d87ee39528a5da">Scope_t</a>&amp;&amp; scope_ptr, <a class="code" href="namespace_ark_1_1internal.html#ad60f205ec1831ecd89c29f5af4030d7c">PageAddr_t</a> pa) noexcept :</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        m_scope(scope_ptr),</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        m_page_addr(pa)</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {}</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_closure.html#a5fa30de2d1ca542f8d406a8a355fb4c2">   17</a></span>&#160;    <a class="code" href="class_ark_1_1internal_1_1_closure.html#ada3fa64db63900c3f8236b6cf3a424ce">Closure::Closure</a>(<span class="keyword">const</span> Scope_t&amp; scope_ptr, PageAddr_t pa) noexcept :</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_closure.html#a5fa30de2d1ca542f8d406a8a355fb4c2">   17</a></span>&#160;    <a class="code" href="class_ark_1_1internal_1_1_closure.html#ada3fa64db63900c3f8236b6cf3a424ce">Closure::Closure</a>(<span class="keyword">const</span> <a class="code" href="namespace_ark_1_1internal.html#ad34d3cc31879e65762d87ee39528a5da">Scope_t</a>&amp; scope_ptr, <a class="code" href="namespace_ark_1_1internal.html#ad60f205ec1831ecd89c29f5af4030d7c">PageAddr_t</a> pa) noexcept :</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        m_scope(scope_ptr),</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        m_page_addr(pa)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {}</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_closure.html#a5ded29994e12ed7135572bd5433d6a3e">   22</a></span>&#160;    <span class="keyword">const</span> Scope_t&amp; <a class="code" href="class_ark_1_1internal_1_1_closure.html#a5ded29994e12ed7135572bd5433d6a3e">Closure::scope</a>() const noexcept</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_closure.html#a5ded29994e12ed7135572bd5433d6a3e">   22</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="namespace_ark_1_1internal.html#ad34d3cc31879e65762d87ee39528a5da">Scope_t</a>&amp; <a class="code" href="class_ark_1_1internal_1_1_closure.html#a5ded29994e12ed7135572bd5433d6a3e">Closure::scope</a>() const noexcept</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">return</span> m_scope;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_ark_1_1internal_1_1_closure.html#a5e6ece42bd91670619597f2660f59e32">m_scope</a>;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_closure.html#a8f73825daf4555a2281a874de3510fe2">   27</a></span>&#160;    Scope_t&amp; <a class="code" href="class_ark_1_1internal_1_1_closure.html#a8f73825daf4555a2281a874de3510fe2">Closure::scope_ref</a>() noexcept</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_closure.html#a8f73825daf4555a2281a874de3510fe2">   27</a></span>&#160;    <a class="code" href="namespace_ark_1_1internal.html#ad34d3cc31879e65762d87ee39528a5da">Scope_t</a>&amp; <a class="code" href="class_ark_1_1internal_1_1_closure.html#a8f73825daf4555a2281a874de3510fe2">Closure::scope_ref</a>() noexcept</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">return</span> m_scope;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_ark_1_1internal_1_1_closure.html#a5e6ece42bd91670619597f2660f59e32">m_scope</a>;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::ostream&amp; operator&lt;&lt;(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="class_ark_1_1internal_1_1_closure.html">Closure</a>&amp; C) noexcept</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="namespace_ark_1_1internal.html#acd8ce1131b92797d6b6ca3927a3a47dd">   32</a></span>&#160;    std::ostream&amp; <a class="code" href="namespace_ark_1_1internal.html#ad8c4b518d2483b9d0971f72184cc9cab">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="class_ark_1_1internal_1_1_closure.html">Closure</a>&amp; C) noexcept</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        os &lt;&lt; <span class="stringliteral">&quot;Closure&lt;&quot;</span> &lt;&lt; C.m_page_addr &lt;&lt; <span class="stringliteral">&quot;&gt;&quot;</span>;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">return</span> os;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
 <div class="ttc" id="_closure_8hpp_html"><div class="ttname"><a href="_closure_8hpp.html">Closure.hpp</a></div><div class="ttdoc">Subtype of the value type, handling closures. </div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_closure_html_a5e6ece42bd91670619597f2660f59e32"><div class="ttname"><a href="class_ark_1_1internal_1_1_closure.html#a5e6ece42bd91670619597f2660f59e32">Ark::internal::Closure::m_scope</a></div><div class="ttdeci">Scope_t m_scope</div><div class="ttdef"><b>Definition:</b> <a href="_closure_8hpp_source.html#l00089">Closure.hpp:89</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_ad60f205ec1831ecd89c29f5af4030d7c"><div class="ttname"><a href="namespace_ark_1_1internal.html#ad60f205ec1831ecd89c29f5af4030d7c">Ark::internal::PageAddr_t</a></div><div class="ttdeci">uint16_t PageAddr_t</div><div class="ttdef"><b>Definition:</b> <a href="_types_8hpp_source.html#l00008">Types.hpp:8</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_ad8c4b518d2483b9d0971f72184cc9cab"><div class="ttname"><a href="namespace_ark_1_1internal.html#ad8c4b518d2483b9d0971f72184cc9cab">Ark::internal::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const Nodes &amp;N) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00203">Node.cpp:203</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_closure_html_a8f73825daf4555a2281a874de3510fe2"><div class="ttname"><a href="class_ark_1_1internal_1_1_closure.html#a8f73825daf4555a2281a874de3510fe2">Ark::internal::Closure::scope_ref</a></div><div class="ttdeci">Scope_t &amp; scope_ref() noexcept</div><div class="ttdoc">Return a reference to the scpoe held by the object. </div><div class="ttdef"><b>Definition:</b> <a href="_closure_8cpp_source.html#l00027">Closure.cpp:27</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html"><div class="ttname"><a href="namespace_ark_1_1internal.html">Ark::internal</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_closure_html"><div class="ttname"><a href="class_ark_1_1internal_1_1_closure.html">Ark::internal::Closure</a></div><div class="ttdoc">Closure management. </div><div class="ttdef"><b>Definition:</b> <a href="_closure_8hpp_source.html#l00038">Closure.hpp:38</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_ad34d3cc31879e65762d87ee39528a5da"><div class="ttname"><a href="namespace_ark_1_1internal.html#ad34d3cc31879e65762d87ee39528a5da">Ark::internal::Scope_t</a></div><div class="ttdeci">std::shared_ptr&lt; Scope &gt; Scope_t</div><div class="ttdoc">Scope handling. </div><div class="ttdef"><b>Definition:</b> <a href="_closure_8hpp_source.html#l00032">Closure.hpp:32</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_closure_html_ada3fa64db63900c3f8236b6cf3a424ce"><div class="ttname"><a href="class_ark_1_1internal_1_1_closure.html#ada3fa64db63900c3f8236b6cf3a424ce">Ark::internal::Closure::Closure</a></div><div class="ttdeci">Closure() noexcept</div><div class="ttdoc">Construct a new Closure object. </div><div class="ttdef"><b>Definition:</b> <a href="_closure_8cpp_source.html#l00007">Closure.cpp:7</a></div></div>
 <div class="ttc" id="_scope_8hpp_html"><div class="ttname"><a href="_scope_8hpp.html">Scope.hpp</a></div><div class="ttdoc">The virtual machine scope system. </div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_closure_html_a5ded29994e12ed7135572bd5433d6a3e"><div class="ttname"><a href="class_ark_1_1internal_1_1_closure.html#a5ded29994e12ed7135572bd5433d6a3e">Ark::internal::Closure::scope</a></div><div class="ttdeci">const Scope_t &amp; scope() const noexcept</div><div class="ttdoc">Return the scope held by the object. </div><div class="ttdef"><b>Definition:</b> <a href="_closure_8cpp_source.html#l00022">Closure.cpp:22</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 30 2020 13:57:59 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 17 2021 12:14:37 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

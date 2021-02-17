@@ -14,7 +14,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-modern.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -40,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,6 +88,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">Lexer.hpp File Reference</div>  </div>
@@ -108,16 +111,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_ark_1_1internal_1_1_token.html">Ark::internal::Token</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_lexer.html">Ark::internal::Lexer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The lexer, in charge of creating a list of tokens.  <a href="class_ark_1_1internal_1_1_lexer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespace_ark_1_1internal"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark_1_1internal.html">Ark::internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ac8f70ee0316f6d163228ed70ef976bfb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfb">Ark::internal::TokenType</a> { <br />
+&#160;&#160;<a class="el" href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba0940b48511da784b3c7213afa0c0eade">Ark::internal::TokenType::Grouping</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba27118326006d3829667a400ad23d5d98">Ark::internal::TokenType::String</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfbab2ee912b91d69b435159c7c3f6df7f5f">Ark::internal::TokenType::Number</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfbae1b3ec89ead7f83a9245ed5c9cacfdbf">Ark::internal::TokenType::Operator</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba29ee5d1ebcc033234938a5234f1f2075">Ark::internal::TokenType::Identifier</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba44a50f07b4bdc57740901280f9eddaf5">Ark::internal::TokenType::Capture</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfbad3e2f43779da90565fa9c24f9175dc04">Ark::internal::TokenType::GetField</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba220f3d3750583b9db48568a0b5b9a5f1">Ark::internal::TokenType::Keyword</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba72ef2b9b6965d078e3c7f95487a82d1c">Ark::internal::TokenType::Skip</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba0be8406951cdfda82f00f79328cf4efc">Ark::internal::TokenType::Comment</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba7ef3835dfef7bf9d951ce6cbb8270e85">Ark::internal::TokenType::Shorthand</a>, 
+<a class="el" href="namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba5b0a8637935072d1ec30e60bb2cae1e6">Ark::internal::TokenType::Mismatch</a>
+<br />
+ }</td></tr>
+<tr class="separator:ac8f70ee0316f6d163228ed70ef976bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:af0dd5b155b0cb906a87c5c28099dff98"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0dd5b155b0cb906a87c5c28099dff98"></a>
-const std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Ark::internal::keywords</b></td></tr>
-<tr class="memdesc:af0dd5b155b0cb906a87c5c28099dff98"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of available keywords in ArkScript. <br /></td></tr>
+<tr class="memitem:af539f8120cb8faea3bf7d6a07ff0615e"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark_1_1internal.html#af539f8120cb8faea3bf7d6a07ff0615e">Ark::internal::tokentype_string</a></td></tr>
+<tr class="separator:af539f8120cb8faea3bf7d6a07ff0615e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0dd5b155b0cb906a87c5c28099dff98"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark_1_1internal.html#af0dd5b155b0cb906a87c5c28099dff98">Ark::internal::keywords</a></td></tr>
+<tr class="memdesc:af0dd5b155b0cb906a87c5c28099dff98"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of available keywords in ArkScript.  <a href="#af0dd5b155b0cb906a87c5c28099dff98">More...</a><br /></td></tr>
 <tr class="separator:af0dd5b155b0cb906a87c5c28099dff98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b338d2bc2ab3f5f26cdfdb0a4d4ba70"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark_1_1internal.html#a1b338d2bc2ab3f5f26cdfdb0a4d4ba70">Ark::internal::operators</a></td></tr>
+<tr class="separator:a1b338d2bc2ab3f5f26cdfdb0a4d4ba70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Tokenize ArkScript code. </p>
@@ -130,7 +164,7 @@ const std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 30 2020 13:58:00 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 17 2021 12:14:38 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

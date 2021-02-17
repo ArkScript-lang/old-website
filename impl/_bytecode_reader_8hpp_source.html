@@ -14,7 +14,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-modern.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -40,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -98,41 +99,60 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;cinttypes&gt;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_config_8hpp.html">Ark/Config.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark.html">Ark</a></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">using</span> bytecode_t = std::vector&lt;uint8_t&gt;;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_ark_1_1_bytecode_reader.html">   33</a></span>&#160;    <span class="keyword">class </span>ARK_API_EXPORT <a class="code" href="class_ark_1_1_bytecode_reader.html">BytecodeReader</a></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="class_ark_1_1_bytecode_reader.html">BytecodeReader</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> feed(<span class="keyword">const</span> std::string&amp; file);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;optional&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_config_8hpp.html">Ark/Config.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark.html">Ark</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="namespace_ark.html#a120175e12d54ead9aa7559d2231af817">   26</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="namespace_ark.html#a120175e12d54ead9aa7559d2231af817">bytecode_t</a> = std::vector&lt;uint8_t&gt;;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4">   28</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4">BytecodeSegment</a> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4ab1c94ca2fbc3e78fc30069c8d0f01680">All</a>,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4a5214a8a633c296d1d9d504fc54556692">Symbols</a>,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4ac82a6100dace2b41087ba6cf99a5976a">Values</a>,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4aca0dbad92a874b2f69b549293387925e">Code</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    };</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_ark_1_1_bytecode_reader.html">   40</a></span>&#160;    <span class="keyword">class </span><a class="code" href="_config_8hpp.html#a8df3feacb839d0a55cfa11e158752758">ARK_API_EXPORT</a> <a class="code" href="class_ark_1_1_bytecode_reader.html">BytecodeReader</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="class_ark_1_1_bytecode_reader.html">BytecodeReader</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">const</span> bytecode_t&amp; bytecode() noexcept;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> feed(<span class="keyword">const</span> std::string&amp; file);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> timestamp();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespace_ark.html#a120175e12d54ead9aa7559d2231af817">bytecode_t</a>&amp; bytecode() noexcept;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">void</span> display();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        bytecode_t m_bytecode;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        uint16_t readNumber(std::size_t&amp; i);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    };</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> timestamp();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">void</span> display(<a class="code" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4">BytecodeSegment</a> segment = <a class="code" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4ab1c94ca2fbc3e78fc30069c8d0f01680">BytecodeSegment::All</a>,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                     std::optional&lt;uint16_t&gt; sStart = std::nullopt,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                     std::optional&lt;uint16_t&gt; sEnd = std::nullopt,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                     std::optional&lt;uint16_t&gt; cPage = std::nullopt);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_ark_1_1_bytecode_reader.html#adf3ea083851deb83caa8e3eddfba95fd">   84</a></span>&#160;        <a class="code" href="namespace_ark.html#a120175e12d54ead9aa7559d2231af817">bytecode_t</a> <a class="code" href="class_ark_1_1_bytecode_reader.html#adf3ea083851deb83caa8e3eddfba95fd">m_bytecode</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        uint16_t <a class="code" href="_v_m_8cpp.html#abf3e0564875d5311f1fccb84265fe8c1">readNumber</a>(std::size_t&amp; i);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    };</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="namespace_ark_html_a120175e12d54ead9aa7559d2231af817"><div class="ttname"><a href="namespace_ark.html#a120175e12d54ead9aa7559d2231af817">Ark::bytecode_t</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; bytecode_t</div><div class="ttdef"><b>Definition:</b> <a href="_bytecode_reader_8hpp_source.html#l00026">BytecodeReader.hpp:26</a></div></div>
+<div class="ttc" id="namespace_ark_html_afa776c29439b830386e8220ccab402f4"><div class="ttname"><a href="namespace_ark.html#afa776c29439b830386e8220ccab402f4">Ark::BytecodeSegment</a></div><div class="ttdeci">BytecodeSegment</div><div class="ttdef"><b>Definition:</b> <a href="_bytecode_reader_8hpp_source.html#l00028">BytecodeReader.hpp:28</a></div></div>
+<div class="ttc" id="class_ark_1_1_bytecode_reader_html_adf3ea083851deb83caa8e3eddfba95fd"><div class="ttname"><a href="class_ark_1_1_bytecode_reader.html#adf3ea083851deb83caa8e3eddfba95fd">Ark::BytecodeReader::m_bytecode</a></div><div class="ttdeci">bytecode_t m_bytecode</div><div class="ttdef"><b>Definition:</b> <a href="_bytecode_reader_8hpp_source.html#l00084">BytecodeReader.hpp:84</a></div></div>
+<div class="ttc" id="_config_8hpp_html_a8df3feacb839d0a55cfa11e158752758"><div class="ttname"><a href="_config_8hpp.html#a8df3feacb839d0a55cfa11e158752758">ARK_API_EXPORT</a></div><div class="ttdeci">#define ARK_API_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="_config_8hpp_source.html#l00039">Config.hpp:39</a></div></div>
 <div class="ttc" id="_config_8hpp_html"><div class="ttname"><a href="_config_8hpp.html">Config.hpp</a></div><div class="ttdoc">ArkScript configuration macros. </div></div>
-<div class="ttc" id="class_ark_1_1_bytecode_reader_html"><div class="ttname"><a href="class_ark_1_1_bytecode_reader.html">Ark::BytecodeReader</a></div><div class="ttdoc">This class is just a helper to. </div><div class="ttdef"><b>Definition:</b> <a href="_bytecode_reader_8hpp_source.html#l00033">BytecodeReader.hpp:33</a></div></div>
+<div class="ttc" id="class_ark_1_1_bytecode_reader_html"><div class="ttname"><a href="class_ark_1_1_bytecode_reader.html">Ark::BytecodeReader</a></div><div class="ttdoc">This class is just a helper to. </div><div class="ttdef"><b>Definition:</b> <a href="_bytecode_reader_8hpp_source.html#l00040">BytecodeReader.hpp:40</a></div></div>
+<div class="ttc" id="namespace_ark_html_afa776c29439b830386e8220ccab402f4aca0dbad92a874b2f69b549293387925e"><div class="ttname"><a href="namespace_ark.html#afa776c29439b830386e8220ccab402f4aca0dbad92a874b2f69b549293387925e">Ark::BytecodeSegment::Code</a></div></div>
+<div class="ttc" id="namespace_ark_html_afa776c29439b830386e8220ccab402f4ab1c94ca2fbc3e78fc30069c8d0f01680"><div class="ttname"><a href="namespace_ark.html#afa776c29439b830386e8220ccab402f4ab1c94ca2fbc3e78fc30069c8d0f01680">Ark::BytecodeSegment::All</a></div></div>
+<div class="ttc" id="_v_m_8cpp_html_abf3e0564875d5311f1fccb84265fe8c1"><div class="ttname"><a href="_v_m_8cpp.html#abf3e0564875d5311f1fccb84265fe8c1">readNumber</a></div><div class="ttdeci">#define readNumber(var)</div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8cpp_source.html#l00004">VM.cpp:4</a></div></div>
+<div class="ttc" id="namespace_ark_html_afa776c29439b830386e8220ccab402f4a5214a8a633c296d1d9d504fc54556692"><div class="ttname"><a href="namespace_ark.html#afa776c29439b830386e8220ccab402f4a5214a8a633c296d1d9d504fc54556692">Ark::BytecodeSegment::Symbols</a></div></div>
 <div class="ttc" id="namespace_ark_html"><div class="ttname"><a href="namespace_ark.html">Ark</a></div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8hpp_source.html#l00023">Builtins.hpp:23</a></div></div>
+<div class="ttc" id="namespace_ark_html_afa776c29439b830386e8220ccab402f4ac82a6100dace2b41087ba6cf99a5976a"><div class="ttname"><a href="namespace_ark.html#afa776c29439b830386e8220ccab402f4ac82a6100dace2b41087ba6cf99a5976a">Ark::BytecodeSegment::Values</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 30 2020 13:57:56 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 17 2021 12:14:34 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

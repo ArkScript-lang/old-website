@@ -14,7 +14,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-modern.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -40,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -64,6 +64,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -72,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,7 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Ark</b></li><li class="navelem"><a class="el" href="class_ark_1_1_state.html">State</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespace_ark.html">Ark</a></li><li class="navelem"><a class="el" href="class_ark_1_1_state.html">State</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -101,15 +102,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#a6088b8198a0ad3494ba110e8589e8e31">feed</a>(const std::string &amp;bytecode_filename)</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#a02076aa4cbeacde9fdc7cb294a543871">feed</a>(const bytecode_t &amp;bytecode)</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#a31505924979cc54dd107681f37f1a1dd">loadFunction</a>(const std::string &amp;name, internal::Value::ProcType function) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#aa12901642915bdc5880a2202bf4629b8">m_binded</a></td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a></td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#abd9f3fe8b6e6e589696a0ec04a8d3511">m_constants</a></td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#ac612a46c05c538df07704fbd4edc3607">m_debug_level</a></td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#a49ff30e9372a01fa115e1d473d78ff7d">m_filename</a></td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#a1f74b3a2bdac7408bf696adc2c21d9fb">m_libdir</a></td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#a8c9748d6de5ac5e611b7690018c467cd">m_options</a></td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#ab30d0ca94fb2543fb073e5f66c074c37">m_pages</a></td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#a9b47055deafbe7eb0061c0b59fadab8b">m_symbols</a></td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#abfb23f5bc3487de4b5ea564573046b78">Repl</a> class</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#a877e05afb005b6b1cf580bd026892899">reset</a>() noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#aa852b784bc447702c336b05ffddcaa98">setArgs</a>(const std::vector&lt; std::string &gt; &amp;args) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#ad1dbcc1d68374da8d09433aadb3a7b05">setDebug</a>(unsigned level) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#a91a6395162c1ee277731c100a7513ddf">setLibDir</a>(const std::string &amp;libDir) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#a4ce60250b6ece57bea02fff82994ce0e">State</a>(uint16_t options=DefaultFeatures, const std::string &amp;libdir=&quot;?&quot;) noexcept</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_state.html#a59464b5f49d5a34c59b57e69840618fd">throwStateError</a>(const std::string &amp;message)</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_state.html#ac692204ff14b03296e5ff3cfc4a3b3d6">VM</a> class</td><td class="entry"><a class="el" href="class_ark_1_1_state.html">Ark::State</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 30 2020 13:58:02 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 17 2021 12:14:43 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

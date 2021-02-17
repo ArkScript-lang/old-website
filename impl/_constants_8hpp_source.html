@@ -14,7 +14,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-modern.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -40,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,41 +90,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Constants.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<a href="_constants_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef ark_constants</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define ark_constants</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define ARK_VERSION_MAJOR 3</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define ARK_VERSION_MINOR 0</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define ARK_VERSION_PATCH 15</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define ARK_VERSION ((ARK_VERSION_MAJOR &lt;&lt; 16) + (ARK_VERSION_MINOR &lt;&lt; 8) + ARK_VERSION_PATCH)</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define ARK_COMPILATION_OPTIONS &quot;/DWIN32 /D_WINDOWS /W3 /GR /EHsc&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define ARK_COMPILER &quot;MSVC&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define ARK_CACHE_DIRNAME &quot;__arkscript__&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define ARK_NO_NAME_FILE &quot;FILE&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#afc92e3b88d55ef7fe54acb1da7d62745">   15</a></span>&#160;<span class="preprocessor">#define ARK_VERSION_MAJOR 3</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#a2503c1ff3c39b13920befc7686b03d38">   16</a></span>&#160;<span class="preprocessor">#define ARK_VERSION_MINOR 0</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#a1a667125606e5219c4f6ed6f9309ed32">   17</a></span>&#160;<span class="preprocessor">#define ARK_VERSION_PATCH 15</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#adb53da0bb3a00c28566bd8f051ed72d6">   18</a></span>&#160;<span class="preprocessor">#define ARK_VERSION ((ARK_VERSION_MAJOR &lt;&lt; 16) + (ARK_VERSION_MINOR &lt;&lt; 8) + ARK_VERSION_PATCH)</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#abdfb061c37bb03ce7d33cea01c70a64d">   19</a></span>&#160;<span class="preprocessor">#define ARK_COMPILATION_OPTIONS &quot;/DWIN32 /D_WINDOWS /W3 /GR /EHsc&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#a1117e7a814daf74a4935079b9b29ab84">   20</a></span>&#160;<span class="preprocessor">#define ARK_COMPILER &quot;MSVC&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#af90a944d153c7ebc6603779c1438c80f">   21</a></span>&#160;<span class="preprocessor">#define ARK_CACHE_DIRNAME &quot;__arkscript__&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#ae99a69d821bd74354272ee56fc43f796">   22</a></span>&#160;<span class="preprocessor">#define ARK_NO_NAME_FILE &quot;FILE&quot;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;cinttypes&gt;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark.html">Ark</a></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// VM options</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    constexpr uint16_t FeaturePersist            = 1 &lt;&lt; 0;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    constexpr uint16_t FeatureFunctionArityCheck = 1 &lt;&lt; 1;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="namespace_ark.html#a80f2edc1285469fdf422c9c22b18597c">   29</a></span>&#160;    constexpr uint16_t <a class="code" href="namespace_ark.html#a80f2edc1285469fdf422c9c22b18597c">FeaturePersist</a>            = 1 &lt;&lt; 0;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="namespace_ark.html#a5af874de3f33e2b4720e1b6d65722a35">   30</a></span>&#160;    constexpr uint16_t <a class="code" href="namespace_ark.html#a5af874de3f33e2b4720e1b6d65722a35">FeatureFunctionArityCheck</a> = 1 &lt;&lt; 1;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// Compiler options</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    constexpr uint16_t FeatureRemoveUnusedVars   = 1 &lt;&lt; 4;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">   32</a></span>&#160;    constexpr uint16_t <a class="code" href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">FeatureRemoveUnusedVars</a>   = 1 &lt;&lt; 4;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// Default features for the VM x Compiler x Parser</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    constexpr uint16_t DefaultFeatures =</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="namespace_ark.html#a01bf99e888f59670c0508d83cc23ffd4">   35</a></span>&#160;    constexpr uint16_t <a class="code" href="namespace_ark.html#a01bf99e888f59670c0508d83cc23ffd4">DefaultFeatures</a> =</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        FeatureFunctionArityCheck</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        | FeatureRemoveUnusedVars;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        | <a class="code" href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">FeatureRemoveUnusedVars</a>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif  // ark_constants</span></div>
+<div class="ttc" id="namespace_ark_html_aed352fcea78905393d0edd9e1ae1423d"><div class="ttname"><a href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">Ark::FeatureRemoveUnusedVars</a></div><div class="ttdeci">constexpr uint16_t FeatureRemoveUnusedVars</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00032">Constants.hpp:32</a></div></div>
+<div class="ttc" id="namespace_ark_html_a5af874de3f33e2b4720e1b6d65722a35"><div class="ttname"><a href="namespace_ark.html#a5af874de3f33e2b4720e1b6d65722a35">Ark::FeatureFunctionArityCheck</a></div><div class="ttdeci">constexpr uint16_t FeatureFunctionArityCheck</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00030">Constants.hpp:30</a></div></div>
+<div class="ttc" id="namespace_ark_html_a80f2edc1285469fdf422c9c22b18597c"><div class="ttname"><a href="namespace_ark.html#a80f2edc1285469fdf422c9c22b18597c">Ark::FeaturePersist</a></div><div class="ttdeci">constexpr uint16_t FeaturePersist</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00029">Constants.hpp:29</a></div></div>
+<div class="ttc" id="namespace_ark_html_a01bf99e888f59670c0508d83cc23ffd4"><div class="ttname"><a href="namespace_ark.html#a01bf99e888f59670c0508d83cc23ffd4">Ark::DefaultFeatures</a></div><div class="ttdeci">constexpr uint16_t DefaultFeatures</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00035">Constants.hpp:35</a></div></div>
 <div class="ttc" id="namespace_ark_html"><div class="ttname"><a href="namespace_ark.html">Ark</a></div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8hpp_source.html#l00023">Builtins.hpp:23</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 30 2020 13:57:57 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 17 2021 12:14:35 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

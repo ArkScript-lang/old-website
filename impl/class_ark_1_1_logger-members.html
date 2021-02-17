@@ -14,7 +14,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-modern.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -40,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -64,6 +64,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -72,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,7 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Ark</b></li><li class="navelem"><a class="el" href="class_ark_1_1_logger.html">Logger</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespace_ark.html">Ark</a></li><li class="navelem"><a class="el" href="class_ark_1_1_logger.html">Logger</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -94,10 +95,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="class_ark_1_1_logger.html">Ark::Logger</a>, including all inherited members.</p>
 <table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_logger.html#ad941a6ef05bf6076303ff85e7f1c4aa8">colorize</a>(LogColor color)</td><td class="entry"><a class="el" href="class_ark_1_1_logger.html">Ark::Logger</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_logger.html#a00e7eb4c25886c15bf6ac7abeb234913">data</a>(Args &amp;&amp;...args)</td><td class="entry"><a class="el" href="class_ark_1_1_logger.html">Ark::Logger</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_logger.html#a6345d8a7d9aae36e3b7300d0309497dc">error</a>(Args &amp;&amp;...args)</td><td class="entry"><a class="el" href="class_ark_1_1_logger.html">Ark::Logger</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_logger.html#a303adddddc7c05e39d7f7253f097701a">info</a>(Args &amp;&amp;...args)</td><td class="entry"><a class="el" href="class_ark_1_1_logger.html">Ark::Logger</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_logger.html#a8070d7d90d8876dd2da06039ee5f106a">log</a>(Args &amp;&amp;...args)</td><td class="entry"><a class="el" href="class_ark_1_1_logger.html">Ark::Logger</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_logger.html#a8a76171feccc1650ac85e062710d72e6">Logger</a>(const std::string &amp;file=&quot;&quot;)</td><td class="entry"><a class="el" href="class_ark_1_1_logger.html">Ark::Logger</a></td><td class="entry"><span class="mlabel">explicit</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_logger.html#a13b642fb6de02f104b665d270794d43c">Logger</a>(const Logger &amp;)=delete</td><td class="entry"><a class="el" href="class_ark_1_1_logger.html">Ark::Logger</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_logger.html#a7735062593216fb5d6ea646a3f62d73f">m_buffer</a></td><td class="entry"><a class="el" href="class_ark_1_1_logger.html">Ark::Logger</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_logger.html#a382c208d00c2a4687ce7633fa07f939e">m_file</a></td><td class="entry"><a class="el" href="class_ark_1_1_logger.html">Ark::Logger</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_logger.html#ac881aa5a68e490c69ceb35e290ca9099">m_level</a></td><td class="entry"><a class="el" href="class_ark_1_1_logger.html">Ark::Logger</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_logger.html#a690d21826d209d4584cf720cfa007d10">make_str</a>(const T &amp;arg)</td><td class="entry"><a class="el" href="class_ark_1_1_logger.html">Ark::Logger</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_logger.html#a7650bd2a59a6c016bb15aac31086ed6e">make_str</a>(const T &amp;arg, const Args &amp;...args)</td><td class="entry"><a class="el" href="class_ark_1_1_logger.html">Ark::Logger</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_logger.html#af67cb5fb850680f6614f8de89fef35c0">setLevel</a>(LogLevel level)</td><td class="entry"><a class="el" href="class_ark_1_1_logger.html">Ark::Logger</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_logger.html#a84c6f59aa5ac0c6903265c84044c5253">success</a>(Args &amp;&amp;...args)</td><td class="entry"><a class="el" href="class_ark_1_1_logger.html">Ark::Logger</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_logger.html#ade96a252140b470ddf4787aca3f1d391">warn</a>(Args &amp;&amp;...args)</td><td class="entry"><a class="el" href="class_ark_1_1_logger.html">Ark::Logger</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_ark_1_1_logger.html#ac4830d47b8d98ed5aa510a6710fa4128">write</a>(LogColor color, const Args &amp;...args)</td><td class="entry"><a class="el" href="class_ark_1_1_logger.html">Ark::Logger</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_ark_1_1_logger.html#a94dccb427df0105099b0ceb20ba18121">~Logger</a>()</td><td class="entry"><a class="el" href="class_ark_1_1_logger.html">Ark::Logger</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 30 2020 13:58:01 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 17 2021 12:14:42 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
