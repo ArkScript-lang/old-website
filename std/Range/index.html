@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    
+    <title>Range - ArkScript</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../css/base.min.css" rel="stylesheet">
+    <link href="../css/dark.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body >
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="..">ArkScript</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../Exceptions/">Exceptions</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../Functional/">Functional</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../List/">List</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../Mathematics/">Mathematics</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="./">Range</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../String/">String</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../Switch/">Switch</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../os/">Os</a>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../Mathematics/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../String/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#range">Range</a></li>
+            <li class="second-level"><a href="#range-i-_b">(range  i _b)</a></li>
+                
+            <li class="second-level"><a href="#rangeforeach-_r-_f">(range:forEach  _r _f)</a></li>
+                
+            <li class="second-level"><a href="#rangefilter-range">(range:filter  range )</a></li>
+                
+            <li class="second-level"><a href="#rangemap-range">(range:map  range )</a></li>
+                
+            <li class="second-level"><a href="#rangereduce-range">(range:reduce  range )</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h3 id="range">Range</h3>
+<h4 id="range-i-_b">(range  i _b)</h4>
+<p>Create a ranged closure in interval [a, b[</p>
+<p><strong>i</strong> the beginning of the range</p>
+<p><strong>_b</strong> the end of the range</p>
+<p><em>Has a field <code>asList</code> to compute a list from the current state of the range, and another one <code>reset</code>.</em></p>
+<pre><code>(let obj (range 1 10))
+(print (obj.asList))  # [1 2 3 4 5 6 7 8 9]
+(while (not (nil? (obj)))
+    (print obj.i))  # print the current element
+(print (obj.asList))  # [], the range has been used
+(obj.reset)  # the range is ready to be used again
+(print (obj.asList))  # [1 2 3 4 5 6 7 8 9]
+</code></pre>
+<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
+<h4 id="rangeforeach-_r-_f">(range:forEach  _r _f)</h4>
+<p>Run a function on each element of the range</p>
+<p><strong>_r</strong> the range object</p>
+<p><strong>_f</strong> the function</p>
+<p><em>The range is unmodified.</em></p>
+<pre><code>(let obj (range 1 10))
+(range:forEach obj (fun (e) (print e)))
+</code></pre>
+<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
+<h4 id="rangefilter-range">(range:filter  <em>range </em>)</h4>
+<p>Create a list based on a range and a filter function</p>
+<p><strong>_range</strong> the range object</p>
+<p><strong>_fun</strong> the filter function</p>
+<p><em>The range is unmodified.</em></p>
+<pre><code>(let obj (range 1 10))
+(print (range:filter obj math:even))  # [2 4 6 8]
+</code></pre>
+<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
+<h4 id="rangemap-range">(range:map  <em>range </em>)</h4>
+<p>Create a list based on a range and a function to apply to each elements</p>
+<p><strong>_range</strong> the range object</p>
+<p><strong>_fun</strong> the function to apply</p>
+<p><em>The range is unmodified.</em></p>
+<pre><code>(let obj (range 1 10))
+(print (range:map obj (fun (e) (* e e))))  # [1 4 9 16 25 36 49 64 81]
+</code></pre>
+<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
+<h4 id="rangereduce-range">(range:reduce  <em>range </em>)</h4>
+<p>Create a reduced list based on a range and a reduction function</p>
+<p><strong>_range</strong> the range object</p>
+<p><strong>_fun</strong> the reduction function</p>
+<p><em>The range is unmodified.</em></p>
+<pre><code>(let obj (range 1 10))
+(print (range:reduce obj (fun (e) (+ e e))))  # 45
+</code></pre>
+<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="https://github.com/ArkScript-lang/ArkDoc">ArkDoc</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = ".."</script>
+    
+    <script src="../js/base.js"></script>
+    <script src="../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
