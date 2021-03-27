@@ -233,8 +233,7 @@
 # another example using conditions
 (mut i 0)
 (while (< i 10)
-    (puts i " ")  # won't put a 
-    at the end of the content
+    (puts i " ")  # won't put a \n at the end of the content
     (set i (+ 1 i)))
 </code>
                     </pre>
@@ -276,6 +275,50 @@
 (print (foo 12 14))  # 26
 </code>
                     </pre>
+                    <p>
+                        You can also use <i>quoting</i> to quickly create anonymous functions taking 0 arguments, useful to make callbacks on the run:
+                    </p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(let i_want_a_callback (fun (cb) {
+    (print "I am a function")
+    (cb)
+    (print "I am still here")
+}))
+
+# would work, but a bit long to write
+(i_want_a_callback (fun () (print "hello world")))
+
+# using the quote shorthand '
+(i_want_a_callback '(print "hello world"))
+# or by using the keyword
+(i_want_a_callback (quote (print "hello world")))
+</code>
+                    </pre>
+                </div>
+            </section>
+
+            <section id="closures">
+                <h2>Closures</h2>
+
+                <div class="inner-section">
+                    TODO
+                </div>
+            </section>
+
+            <section id="import">
+                <h2>Importing code</h2>
+
+                <div class="inner-section">
+                    TODO
+                </div>
+            </section>
+
+            <section id="macros">
+                <h2>Using macros to manipulate code at compile time</h2>
+
+                <div class="inner-section">
+                    TODO
                 </div>
             </section>
         </div>
