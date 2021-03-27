@@ -6,7 +6,7 @@
     <meta name="google-site-verification" content="gXbITmlhbvLO1TWvX5IR9EjjZliC0eV7QFGNx0UmPfo" />
 
     <meta charset="UTF-8">
-    <title>Arkscript</title>
+    <title>ArkScript</title>
     <link rel="stylesheet" href="/assets/css/spectre.min.css" type="text/css">
     <link rel="stylesheet" href="/assets/css/spectre-icons.min.css" type="text/css">
     <link rel="stylesheet" href="/assets/css/rainbowjs-theme.css" type="text/css">
@@ -111,6 +111,7 @@
 
                         <br> It also has:
                         <ul>
+                            <li>macros (if/else, values and functions) to manipulate ArkScript code during compilation</li>
                             <li>a REPL with autocompletion and coloration</li>
                             <li>
                                 a growing standard library, composed of ArkScript (under <code>lib/std/</code>) and C++ (under <code>lib/ext/</code>)
@@ -213,6 +214,8 @@
                                             <li><a class="btn-link" href="https://github.com/rinz13r">@rinz13r</a></li>
                                             <li><a class="btn-link" href="https://github.com/FrenchMasterSword">@FrenchMasterSword</a></li>
                                             <li><a class="btn-link" href="https://github.com/rstefanic">@rstefanic</a></li>
+                                            <li><a class="btn-link" href="https://github.com/PierrePharel">@PierrePharel</a></li>
+                                            <li><a class="btn-link" href="https://gitlab.com/Wafelack">@Wafelack</a></li>
                                         </ul>
                                     </li>
 
@@ -221,6 +224,7 @@
                                         <ul class="no-dot">
                                             <li><a class="btn-link" href="https://github.com/SuperFola">@SuperFola</a></li>
                                             <li><a class="btn-link" href="https://github.com/rinz13r">@rinz13r</a></li>
+                                            <li><a class="btn-link" href="https://github.com/PierrePharel">@PierrePharel</a></li>
                                         </ul>
                                     </li>
 
@@ -228,6 +232,7 @@
                                         The REPL
                                         <ul class="no-dot">
                                             <li><a class="btn-link" href="https://github.com/rstefanic">@rstefanic</a></li>
+                                            <li><a class="btn-link" href="https://github.com/PierrePharel">@PierrePharel</a></li>
                                         </ul>
                                     </li>
 
@@ -236,6 +241,7 @@
                                         <ul class="no-dot">
                                             <li><a class="btn-link" href="https://github.com/SuperFola">@SuperFola</a></li>
                                             <li><a class="btn-link" href="https://github.com/DontBelieveMe">@DontBelieveMe</a></li>
+                                            <li><a class="btn-link" href="https://github.com/PierrePharel">@PierrePharel</a></li>
                                         </ul>
                                     </li>
 
@@ -244,6 +250,7 @@
                                         <ul class="no-dot">
                                             <li><a class="btn-link" href="https://github.com/SuperFola">@SuperFola</a></li>
                                             <li><a class="btn-link" href="https://github.com/OfficePop">@OfficePop</a></li>
+                                            <li><a class="btn-link" href="https://github.com/PierrePharel">@PierrePharel</a></li>
                                         </ul>
                                     </li>
 
@@ -252,13 +259,14 @@
                                         <ul class="no-dot">
                                             <li><a class="btn-link" href="https://github.com/SuperFola">@SuperFola</a></li>
                                             <li><a class="btn-link" href="https://github.com/FrenchMasterSword">@FrenchMasterSword</a></li>
+                                            <li><a class="btn-link" href="https://github.com/PierrePharel">@PierrePharel</a></li>
                                         </ul>
                                     </li>
 
                                     <li>
                                         The logos
                                         <ul class="no-dot">
-                                            <li>Mazz</li>
+                                            <li><a class="btn-link" href="https://github.com/mazzlabs">@mazzdevs</a></li>
                                         </ul>
                                     </li>
 
@@ -266,6 +274,7 @@
                                         The docker integration
                                         <ul class="no-dot">
                                             <li><a class="btn-link" href="https://github.com/yardenshoham">@yardenshoham</a></li>
+                                            <li><a class="btn-link" href="https://github.com/SuperFola">@SuperFola</a></li>
                                         </ul>
                                     </li>
 
@@ -273,6 +282,7 @@
                                         The website
                                         <ul class="no-dot">
                                             <li><a class="btn-link" href="https://github.com/fabien-zoccola">@fabien-zoccola</a></li>
+                                            <li><a class="btn-link" href="https://github.com/SuperFola">@SuperFola</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -333,6 +343,24 @@
                     <h2>Building</h2>
 
                     <div class="inner-section">
+                        Different CMake options are available:
+                        <ul>
+                            <li>
+                                <code>-DARK_BUILD_EXE</code> to generate an executable, defaults to Off, building a shared library only
+                            </li>
+                            <li>
+                                <code>-DARK_ENABLE_SYSTEM</code> to enable <code>sys:exec</code> (execute shell commands without restrictions), defaults to On
+                            </li>
+                            <li>
+                                <code>-DARK_PROFILER</code> to enable the <a href="https://github.com/plasma-umass/coz">coz</a> profiler, defaults to Off
+                            </li>
+                            <li>
+                                <code>-DARK_PROFILER_COUNT</code> to count every creation/copy/move of the internal value type, defaults to Off
+                            </li>
+                            <li>
+                                <code>-DARK_SCOPE_DICHOTOMY</code> to activate the dichotomic mode of the scope, defaults to Off
+                            </li>
+                        </ul>
                         <pre>
 <code class="rainbowjs">
 # first, clone it
@@ -340,8 +368,8 @@
 ~/Ark$ cd Ark
 ~/Ark$ git submodule update --init --recursive
 # building Ark
-~/Ark$ cmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Release -DARK_BUILD_EXE=On
-~/Ark$ cmake --build build
+~/Ark$ cmake . -Bbuild -DCMAKE_BUILD_TYPE=Release -DARK_BUILD_EXE=On
+~/Ark$ cmake --build build --config Release
 # installing Ark (might need administrative privileges)
 ~/Ark$ cmake --install build --config Release
 # running
@@ -435,7 +463,7 @@ LICENSE
 
     <footer id="page-footer">
         <p class="text-center">
-            Copyright &copy; 2020 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.
+            Copyright &copy; 2020-2021 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.
         </p>
     </footer>
 
