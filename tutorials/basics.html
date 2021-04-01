@@ -220,21 +220,25 @@
                     <p><strong>Example:</strong></p>
                     <pre>
 <code class="rainbowjs" data-language="arkscript">
+(import "random.arkm")
+
 # continue must be a mutable for us the be able to modify it
 (mut continue true)
 (while continue {
     (print "hello")
 
     # 10% chance of stopping the loop
-    (if (< (random) 0.1)
+    # random returns a number in range [0, 32768[
+    (if (< (/ (random) 32768) 0.1)
         (set continue false))
 })
 
 # another example using conditions
 (mut i 0)
-(while (< i 10)
+(while (< i 10) {
     (puts i " ")  # won't put a \n at the end of the content
-    (set i (+ 1 i)))
+    (set i (+ 1 i))
+})
 </code>
                     </pre>
                 </div>
@@ -302,7 +306,58 @@
                 <h2>Closures</h2>
 
                 <div class="inner-section">
-                    TODO
+                    <p>Closure, or function closure, is a way to implementing lexically scoped name binding<a href="https://en.wikipedia.org/wiki/Closure_(computer_programming)"><sup>1</sup></a>. It stores a function along with an environment, explicitly mapped with specified variables. This allows to reuse and modify captured variables each time the closure is called.</p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(let make_closure (fun (name age) {
+    (let coolness_factor 12)
+
+    # here, we return a closure!
+    (fun (&name &age &coolness_factor)
+        # each time it will be called, it will display the captured variables
+        (print name " " age " " coolness_factor))
+}))
+
+(let closure (make_closure "Pietro" 42))
+(closure)  # prints Pietro 42 12
+</code>
+                    </pre>
+                    <p>Closures capture variables explicitly in their arguments' list, by prefixing them with <code>&</code>. We can access the captured fields through the <code>closure.field</code> notation, in a read only way:</p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(print closure.age)  # 42
+(print closure.coolness_factor)  # 12
+
+(let make (fun (a)
+    (fun (&a) ())))
+
+(let foo (fun () (print "bar")))
+
+(let closure_bis (make foo))
+# we can also call captured functions
+(closure_bis.a)  # prints bar
+</code>
+                    </pre>
+                    <p>Finally, you can modify the closure content when using it from the inside, through itself or its captured functions:</p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(let make (fun (name age) {
+    (let set-age (fun (new)
+        (set age new)))
+
+    (fun (new-name &name &age &set-age)
+        (if (not (nil? new-name))
+            (set name new-name)))
+}))
+
+(let egg (make "egg" 1))
+(print egg.age)  # 1
+(egg.set-age 2)
+(print egg.age " " egg.name)  # 2 egg
+(egg "not an egg")
+(print egg.name " " egg.age)  # not an egg 2
+</code>
+                    </pre>
                 </div>
             </section>
 
