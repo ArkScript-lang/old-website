@@ -40,54 +40,60 @@
 </header>
 
 <!-- CONTENT -->
-<div class="container" id="main">
-    <div class="columns">
-        <!-- The col-2 divs are an easy way to put some margin around the main content -->
-        <div class="columns col-2">
-            <div class="col-md-9 col-mx-auto p-sticky">
+<div class="container off-canvas off-canvas-sidebar-show" id="main">
+    <!-- off-screen toggle button -->
+    <a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+        <i class="icon icon-menu"></i>
+    </a>
+
+    <!-- table of content -->
+    <div id="sidebar-id" class="off-canvas-sidebar">
+        <ul class="nav">
+            <li class="nav-item active">
+                <a href="#">Table of content</a>
                 <ul class="nav">
-                    <li class="nav-item active">
-                        <a href="#">Table of content</a>
-                        <ul class="nav">
-                            <li class="nav-item">
-                                <a href="#learning-arkscript">Learning ArkScript</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#creating-variables">Creating variables</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#comments">Comments</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#program-structure">Program structure</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#io">Basic Input/Output</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#conditions">Conditions</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#loops">Loops</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#functions">Functions</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#closures">Closures</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#import">Importing code</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#macros">Using macros to manipulate code at compile time</a>
-                            </li>
-                        </ul>
+                    <li class="nav-item">
+                        <a href="#learning-arkscript">Learning ArkScript</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#creating-variables">Creating variables</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#comments">Comments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#program-structure">Program structure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#io">Basic Input/Output</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#conditions">Conditions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#loops">Loops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#functions">Functions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#closures">Closures</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#import">Importing code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#macros">Using macros to manipulate code at compile time</a>
                     </li>
                 </ul>
-            </div>
-        </div>
+            </li>
+        </ul>
+    </div>
 
+    <a class="off-canvas-overlay" href="#close"></a>
+
+    <div class="columns off-canvas-content">
+        <div class="col-2"></div>
         <!-- Actual content of the page-->
         <div class="col-8" id="content">
             <h1 class="text-center">Tutorials - The language</h1>
