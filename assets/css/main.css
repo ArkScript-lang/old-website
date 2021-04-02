@@ -141,6 +141,12 @@ header.navbar:not(.has-banner) img, header.navbar:not(.has-banner) .navbar-cente
   height: 12vh;
 }
 
+.off-canvas .off-canvas-toggle {
+  position: fixed;
+  top: 10vh;
+  left: 15px;
+}
+
 #sidebar {
   background: #161616;
   max-width: 15vw;
@@ -278,6 +284,11 @@ footer#page-footer p {
     margin: 0;
     width: 100vw;
   }
+
+  .off-canvas .off-canvas-toggle {
+    left: -6px;
+    border-bottom-right-radius: 10px;
+  }
 }
 ul.no-dot {
   list-style: none;
@@ -330,6 +341,14 @@ pre.rainbow-show {
 }
 
 @media screen and (max-width: 1280px) {
+  .col-2 {
+    display: none;
+  }
+
+  .col-8 {
+    width: 100vw;
+  }
+
   #content {
     margin-top: 7.5vh;
     padding: 5vh 10px;

@@ -55,12 +55,17 @@ header.navbar:not(.has-banner)
 
 
 // SIDEBAR
-#sidebar
-    &~.off-canvas-overlay
-        cursor: initial
+.off-canvas .off-canvas-toggle
+    position: fixed
+    top: $header-height * 2
+    left: 15px
 
+#sidebar
     background: $menus-bg-color
     max-width: 15vw
+
+    &~.off-canvas-overlay
+        cursor: initial
 
     .nav .nav-item a
         color: darken($body-color, 3%)
@@ -180,3 +185,8 @@ footer#page-footer
             flex-direction: column
             margin: 0
             width: 100vw
+
+    // sidebar button behaviour
+    .off-canvas .off-canvas-toggle
+        left: -6px
+        border-bottom-right-radius: 10px
