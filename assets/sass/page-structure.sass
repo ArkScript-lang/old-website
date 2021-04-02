@@ -1,6 +1,10 @@
 @import "_vars.sass"
 
-// Navbar header
+// PAGE STRUCTURE SASS FILE
+// contains header, footer and sidebar styles
+
+
+// NAVBAR/HEADER
 $banner-height: 60vh
 $header-sections-font-size: 0.8rem
 
@@ -35,7 +39,8 @@ header.navbar:not(.has-banner)
     img, .navbar-center, .navbar-center a, div.dropdown-link
         height: $header-height * 1.5
 
-// Banner
+
+// BANNER
 #banner
     height: $banner-height
     margin-bottom: 25px
@@ -48,7 +53,26 @@ header.navbar:not(.has-banner)
     img
         height: $banner-height / 5
 
-// footer
+
+// SIDEBAR
+.off-canvas .off-canvas-toggle
+    position: fixed
+    top: $header-height * 2
+    left: 15px
+
+#sidebar
+    background: $menus-bg-color
+    max-width: 15vw
+
+    &~.off-canvas-overlay
+        cursor: initial
+
+    .nav .nav-item a
+        color: darken($body-color, 3%)
+        &:hover
+            color: $btn-link-color
+
+// FOOTER
 footer#page-footer
     bottom: 0
     width: 100vw
@@ -60,13 +84,15 @@ footer#page-footer
         margin: 0
         padding: 0
 
-// dropdown menu
+
+// DROPDOWN
 .btn.btn-link.dropdown-toggle:focus
     box-shadow: none
 .menu
     background-color: $menus-bg-color
 .dropdown .dropdown-toggle:focus+.menu, .dropdown .menu:hover, .dropdown.active .menu
     display: block !important
+
 
 // Hiding the logo on the index page by default (will show only on click on the menu toggler!)
 .hide
@@ -77,7 +103,8 @@ footer#page-footer
     margin-right: 0
 
 
-// Responsive
+
+// RESPONSIVE
 @media screen and (max-width: $break-width)
     .dropdown-toggle .icon.icon-caret
         display: none
@@ -158,3 +185,8 @@ footer#page-footer
             flex-direction: column
             margin: 0
             width: 100vw
+
+    // sidebar button behaviour
+    .off-canvas .off-canvas-toggle
+        left: -6px
+        border-bottom-right-radius: 10px

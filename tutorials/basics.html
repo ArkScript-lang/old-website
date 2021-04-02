@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>ArkScript | Tutorials - Basics</title>
     <link rel="stylesheet" href="/assets/css/spectre.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/spectre-exp.min.css" type="text/css">
     <link rel="stylesheet" href="/assets/css/spectre-icons.min.css" type="text/css">
     <link rel="stylesheet" href="/assets/css/rainbowjs-theme.css" type="text/css">
     <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
@@ -24,7 +25,7 @@
         <div class="dropdown">
             <a href="#" class="btn btn-link dropdown-toggle" tabindex="0">Tutorials <i class="icon icon-caret"></i></a>
             <ul class="menu">
-                <li><a href="/tutorials/basics.html" class="btn btn-link">Basics</a></li>
+                <li><a href="/tutorials/basics.html" class="btn btn-link">The language</a></li>
                 <li><a href="/tutorials/building.html" class="btn btn-link">Building</a></li>
                 <li><a href="/tutorials/embedding.html" class="btn btn-link">Embedding</a></li>
                 <li><a href="/tutorials/bytecode.html" class="btn btn-link">Bytecode</a></li>
@@ -41,13 +42,66 @@
 
 <!-- CONTENT -->
 <div class="container" id="main">
-    <div class="columns">
-        <!-- The col-2 divs are an easy way to put some margin around the main content -->
-        <div class="col-2"></div>
 
+    <div class="off-canvas">
+
+        <!-- off-screen toggle button -->
+        <a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar">
+            <i class="icon icon-menu"></i>
+        </a>
+
+        <!-- table of content -->
+        <div id="sidebar" class="off-canvas-sidebar">
+            <ul class="nav">
+                <li class="nav-item active">
+                    <a href="#">Table of contents</a>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#learning-arkscript">Learning ArkScript</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#creating-variables">Creating variables</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#comments">Comments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#program-structure">Program structure</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#io">Basic Input/Output</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#conditions">Conditions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#loops">Loops</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#functions">Functions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#closures">Closures</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#import">Importing code</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#macros">Using macros to manipulate code at compile time</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <a class="off-canvas-overlay" href="#close"></a>
+    </div>
+
+    <div class="columns off-canvas-content">
+        <div class="col-2"></div>
         <!-- Actual content of the page-->
         <div class="col-8" id="content">
-            <h1 class="text-center">Tutorials - Basics</h1>
+            <h1 class="text-center">Tutorials - The language</h1>
 
             <section id="learning-arkscript">
                 <h2>Learning ArkScript: the basics</h2>
@@ -220,21 +274,25 @@
                     <p><strong>Example:</strong></p>
                     <pre>
 <code class="rainbowjs" data-language="arkscript">
+(import "random.arkm")
+
 # continue must be a mutable for us the be able to modify it
 (mut continue true)
 (while continue {
     (print "hello")
 
     # 10% chance of stopping the loop
-    (if (< (random) 0.1)
+    # random returns a number in range [0, 32768[
+    (if (< (/ (random) 32768) 0.1)
         (set continue false))
 })
 
 # another example using conditions
 (mut i 0)
-(while (< i 10)
+(while (< i 10) {
     (puts i " ")  # won't put a \n at the end of the content
-    (set i (+ 1 i)))
+    (set i (+ 1 i))
+})
 </code>
                     </pre>
                 </div>
@@ -302,7 +360,58 @@
                 <h2>Closures</h2>
 
                 <div class="inner-section">
-                    TODO
+                    <p>Closure, or function closure, is a way to implementing lexically scoped name binding<a href="https://en.wikipedia.org/wiki/Closure_(computer_programming)"><sup>1</sup></a>. It stores a function along with an environment, explicitly mapped with specified variables. This allows to reuse and modify captured variables each time the closure is called.</p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(let make_closure (fun (name age) {
+    (let coolness_factor 12)
+
+    # here, we return a closure!
+    (fun (&name &age &coolness_factor)
+        # each time it will be called, it will display the captured variables
+        (print name " " age " " coolness_factor))
+}))
+
+(let closure (make_closure "Pietro" 42))
+(closure)  # prints Pietro 42 12
+</code>
+                    </pre>
+                    <p>Closures capture variables explicitly in their arguments' list, by prefixing them with <code>&</code>. We can access the captured fields through the <code>closure.field</code> notation, in a read only way:</p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(print closure.age)  # 42
+(print closure.coolness_factor)  # 12
+
+(let make (fun (a)
+    (fun (&a) ())))
+
+(let foo (fun () (print "bar")))
+
+(let closure_bis (make foo))
+# we can also call captured functions
+(closure_bis.a)  # prints bar
+</code>
+                    </pre>
+                    <p>Finally, you can modify the closure content when using it from the inside, through itself or its captured functions:</p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(let make (fun (name age) {
+    (let set-age (fun (new)
+        (set age new)))
+
+    (fun (new-name &name &age &set-age)
+        (if (not (nil? new-name))
+            (set name new-name)))
+}))
+
+(let egg (make "egg" 1))
+(print egg.age)  # 1
+(egg.set-age 2)
+(print egg.age " " egg.name)  # 2 egg
+(egg "not an egg")
+(print egg.name " " egg.age)  # not an egg 2
+</code>
+                    </pre>
                 </div>
             </section>
 

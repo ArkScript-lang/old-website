@@ -44,6 +44,12 @@ pre.rainbow-show
 
 // Responsive
 @media screen and (max-width: $break-width)
+    // remove content side columns
+    .col-2
+        display: none
+    .col-8
+        width: 100vw
+
     #content
         margin-top: $header-height * 1.5
         padding: 5vh 10px
