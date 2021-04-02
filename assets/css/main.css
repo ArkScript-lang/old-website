@@ -141,6 +141,20 @@ header.navbar:not(.has-banner) img, header.navbar:not(.has-banner) .navbar-cente
   height: 12vh;
 }
 
+#sidebar {
+  background: #161616;
+  max-width: 15vw;
+}
+#sidebar ~ .off-canvas-overlay {
+  cursor: initial;
+}
+#sidebar .nav .nav-item a {
+  color: #d8d8d8;
+}
+#sidebar .nav .nav-item a:hover {
+  color: deepskyblue;
+}
+
 footer#page-footer {
   bottom: 0;
   width: 100vw;
