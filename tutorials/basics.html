@@ -353,6 +353,7 @@
 (i_want_a_callback (quote (print "hello world")))
 </code>
                     </pre>
+                    <p>Also, we have a set of builtins functions in the language, available without importing anything ; for example <code>print</code> or <code>input</code>, which we used before. Note that builtins <strong>must be called</strong>, you can't do things like <code>(let my_print print)</code>, or <code>(let my_tail tail)</code>, otherwise it will result in an error because those functions are special.</p>
                 </div>
             </section>
 
@@ -419,7 +420,11 @@
                 <h2>Importing code</h2>
 
                 <div class="inner-section">
-                    TODO
+                    <p>Putting code in multiple files is pretty to make it reusable and more maintainable.</p>
+                    <p>In ArkScript, imported code is copied from the specified file into the current one, with a guarantee: circular includes are detected and prevented, making execution always possible even if you include a lot of files.</p>
+                    <p>Files are imported by doing so: <code>(import "myfile.ark")</code>. The path to the target file is <strong>relative to the source file</strong>, not to the main executed file.</p>
+                    <p>The only exception about paths in <code>import</code>s is when you import an ArkScript module, ending in <code>.arkm</code>. Those files are either in the standard library, thus you can just write their name and ArkScript will find them, or they <strong>must be alongside the final executed file</strong>.</p>
+                    <p>When importing files from the standard library, you don't need to write the path to the library folder, just the path of the file in it. For example: <code>(import "String.ark")</code> will work without problems.</p>
                 </div>
             </section>
 
