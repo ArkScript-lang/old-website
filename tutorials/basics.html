@@ -432,7 +432,120 @@
                 <h2>Using macros to manipulate code at compile time</h2>
 
                 <div class="inner-section">
-                    TODO
+                    <p>A macro is a rule or pattern that specifies how a certain input should be mapped to a replacement output. Applying a macro to an input is name <em>macro expansion</em><a href="https://en.wikipedia.org/wiki/Macro_(computer_science)"><sup>2</sup></a>.</p>
+                    <p>In ArkScript, there are 3 different types of macros:</p>
+                    <ul>
+                        <li>conditions: <code>!{if condition then else}</code></li>
+                        <li>constants: <code>!{my_const value}</code></li>
+                        <li>functions: <code>!{my_function (foo bar) body}</code></li>
+                    </ul>
+                    <p><strong>Constant macros</strong> are just associations <code>identifier to value</code>, the value being whatever you want (even another bloc of code, for example <code>(let b 12)</code>). The code is scanned and when such macro is found, it's applied wherever possible.</p>
+                    <p><strong>Macros' scopes</strong> are tied to the bloc in which they are defined. At the end of said bloc, the macros defined in it are destroyed. Note that a macro defined a in bloc, which includes other blocs, will be available in all the other sub-blocs.</p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+!{a 12}
+
+{
+    (print a)  # will print 12, it works!
+
+    !{a 1}  # we can shadow macros by defining other macros with the
+            # same name in sub-blocs
+    (print a)  # 1
+}
+
+(print a)  # a is still 12 here
+</code>
+                    </pre>
+                    <p><strong>Condition macros</strong> may only work on compile time expressions, using only other macros. For example:</p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+!{foo 12}
+!{bar 14}
+
+# the condition being true will result in the print being inserted in the program
+# while the (let a) will be deleted
+!{if (and (= foo 12) (= bar 14))
+    (print "foo is 12 and bar is 14")
+    (let a (+ 12 14))}
+</code>
+                    </pre>
+                    <p>In a <em>condition macro</em> we can define other macros and use other conditions macros:</p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+!{a 12}
+!{if (= a 12)
+    !{b 14}
+    !{c 13}
+}
+
+(print b)  # prints 14
+(print c)  # compilation error: unbound variable c
+           # c is unavailable here because it was never defined
+</code>
+                    </pre>
+                    <p><strong>Function macros</strong> are evaluated recursively, thus they can call themselves or other macros, and use <em>condition macros</em>. A particularity is that their arguments can ArkScript code blocs, such as a <code>(let a 12)</code> or even complexe code blocs like <code>{ (mut i 0) (while continue { (print "hello") (set i (+ 1 i)) (if (> i 12) (set continue false)) }) }</code>.</p>
+                    <p>Those macros can use a magic pattern <code>...args</code> (args being the name of the argument, you can use whatever you want) as the last argument to tell the compiler that the macros can take any number of arguments. This is called <em>varargs</em> or <em>variadic arguments</em>.</p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+!{foo (a b) {
+    (print a " " b)
+    (let c (+ a b))
+}}
+
+(foo 1 2)
+(print c)  # prints 3
+
+!{bar (a ...args)
+    (print a " " args)}
+
+(bar 1)  # prints 1
+(bar 1 2)  # prints 1 [2]
+(bar 1 2 3)  # prints 1 [2 3]
+</code>
+                    </pre>
+                    <p>Here is a more complex example implementing the <em>thread macro</em>. The fist argument is the data, then each function is applied onto it, one after another. It allows us to write more readable code, instead of the ugly <code>(read-string (slurp (io:file (io:resource filename))))</code>.</p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+!{-> (first ...args) {
+    !{if (> (len args) 0)
+        ((-> ...args) first)
+        first
+    }
+}}
+
+(let filename "hello.json")
+(let io:resource (fun (file) {
+    (print "io:resource")
+    file
+}))
+(let io:file (fun (name) {
+    (print "io:file")
+    name
+}))
+(let slurp (fun (a) {
+    (print "io:slurp")
+    a
+}))
+(let read-string (fun (a) {
+    (print "read-string")
+    a
+}))
+
+(print (-> filename io:resource io:file slurp read-string))
+# it will print:
+#   read-string
+#   io:slurp
+#   io:file
+#   io:resource
+#   hello.json
+</code>
+                    </pre>
+                    <p>Here is the list of the available compile time functions, to work with macros (in macros):</p>
+                    <ul>
+                        <li>Comparison operators: <code>&equals;</code>, <code>!&equals;</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code></li>
+                        <li>Chaining conditions / inverting them: <code>not</code>, <code>and</code>, <code>or</code></li>
+                        <li>Working on lists: <code>len</code>, <code>@</code>, <code>head</code>, <code>tail</code></li>
+                    </ul>
                 </div>
             </section>
         </div>
