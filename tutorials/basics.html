@@ -430,6 +430,7 @@
 
             <section id="macros">
                 <h2>Using macros to manipulate code at compile time</h2>
+                <h6><em>Available in ArkScript 3.0.16</em></h6>
 
                 <div class="inner-section">
                     <p>A macro is a rule or pattern that specifies how a certain input should be mapped to a replacement output. Applying a macro to an input is name <em>macro expansion</em><a href="https://en.wikipedia.org/wiki/Macro_(computer_science)"><sup>2</sup></a>.</p>
@@ -441,6 +442,7 @@
                     </ul>
                     <p><strong>Constant macros</strong> are just associations <code>identifier to value</code>, the value being whatever you want (even another bloc of code, for example <code>(let b 12)</code>). The code is scanned and when such macro is found, it's applied wherever possible.</p>
                     <p><strong>Macros' scopes</strong> are tied to the bloc in which they are defined. At the end of said bloc, the macros defined in it are destroyed. Note that a macro defined a in bloc, which includes other blocs, will be available in all the other sub-blocs.</p>
+                    <p>Named macros can be undefined by using <code>!{undef name}</code>.</p>
                     <pre>
 <code class="rainbowjs" data-language="arkscript">
 !{a 12}
@@ -451,6 +453,9 @@
     !{a 1}  # we can shadow macros by defining other macros with the
             # same name in sub-blocs
     (print a)  # 1
+
+    !{undef a}
+    (print a)  # 12, because we undefined the nearest version of a
 }
 
 (print a)  # a is still 12 here
@@ -503,7 +508,7 @@
 (bar 1 2 3)  # prints 1 [2 3]
 </code>
                     </pre>
-                    <p>Here is a more complex example implementing the <em>thread macro</em>. The fist argument is the data, then each function is applied onto it, one after another. It allows us to write more readable code, instead of the ugly <code>(read-string (slurp (io:file (io:resource filename))))</code>.</p>
+                    <p>Here is a more complex example implementing the <em>thread macro</em>. The first argument is the data, then each function is applied onto it, one after another. It allows us to write more readable code, instead of the ugly <code>(read-string (slurp (io:file (io:resource filename))))</code>.</p>
                     <pre>
 <code class="rainbowjs" data-language="arkscript">
 !{-> (first ...args) {
