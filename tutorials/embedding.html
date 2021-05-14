@@ -204,11 +204,11 @@ int main()
                                 <ul>
                                     <li><code>double number() const</code> for numbers</li>
                                     <li><code>const String& string() const</code> for strings</li>
-                                    <li><code>String& string_ref()</code> for strings (use this one if you need to directly modify the object and avoid a copy)</li>
-                                    <li><code>const std::vector&lt;Value&gt;& const_list() const</code> for lists</li>
+                                    <li><code>String& stringRef()</code> for strings (use this one if you need to directly modify the object and avoid a copy)</li>
+                                    <li><code>const std::vector&lt;Value&gt;& constList() const</code> for lists</li>
                                     <li><code>std::vector&lt;Value&gt;& list()</code> for lists (use this one if you need to directly modify the object and avoid a copy)</li>
                                     <li><code>const UserType& usertype() const</code> for usertypes</li>
-                                    <li><code>UserType& usertype_ref()</code> for usertypes (use this one if you need to directly modify the object and avoid a copy)</li>
+                                    <li><code>UserType& usertypeRef()</code> for usertypes (use this one if you need to directly modify the object and avoid a copy)</li>
                                 </ul>
                             </li>
                             <li>
@@ -274,7 +274,7 @@ int main()
 
         // register the unique control functions block for this usertype
         // this cfs block can be shared between multiple usertype to reduce memory usage
-        v.usertype_ref().setControlFuncs(get_cfs());
+        v.usertypeRef().setControlFuncs(get_cfs());
 
         return v;
     });
