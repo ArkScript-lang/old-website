@@ -430,7 +430,7 @@
 
             <section id="macros">
                 <h2>Using macros to manipulate code at compile time</h2>
-                <h6><em>Available in ArkScript 3.0.16</em></h6>
+                <h6><em>Available in ArkScript 3.1.0</em></h6>
 
                 <div class="inner-section">
                     <p>A macro is a rule or pattern that specifies how a certain input should be mapped to a replacement output. Applying a macro to an input is name <em>macro expansion</em><a href="https://en.wikipedia.org/wiki/Macro_(computer_science)"><sup>2</sup></a>.</p>
@@ -550,6 +550,21 @@
                         <li>Comparison operators: <code>&equals;</code>, <code>!&equals;</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code></li>
                         <li>Chaining conditions / inverting them: <code>not</code>, <code>and</code>, <code>or</code></li>
                         <li>Working on lists: <code>len</code>, <code>@</code>, <code>head</code>, <code>tail</code></li>
+                    </ul>
+                    <p>
+                        We also have a few predefined macros to work on ArkScript code and ease code generation. For example, one
+                        can generate a new symbol using <code>(symcat symbol value-or-expression)</code>, or count the number of arguments of a function with
+                        <code>(argcount function-name)</code>.
+                    </p>
+                    <ul>
+                        <li>
+                            <code>symcat</code>: generate a new symbol from a given symbol and a value or expression.
+                            <code>(- a 1)</code> with <code>a</code> a constant macro (or macro argument) is valid.
+                        </li>
+                        <li>
+                            <code>argcount</code>: retrieve at compile time the number of arguments taken by a given function.
+                            The function must have been defined <i>before</i> using <code>argcount</code>.
+                        </li>
                     </ul>
                 </div>
             </section>
