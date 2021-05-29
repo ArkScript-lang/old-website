@@ -36,7 +36,7 @@ jobs:
           cd arkdoc
           mkdir source
           mv ../std-latest/*.ark source/
-          ruby ./ArkDoc.rb -s ./source/ -g ArkScript
+          ruby ./ArkDoc.rb -g ArkScript
           mv docs/ArkScript/site/* ../std/
           
       - name: Commit
