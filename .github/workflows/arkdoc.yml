@@ -29,16 +29,18 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7.0
+          
+      - name: Pip install mkdoc
+        uses: BSFishy/pip-action@v1
+        with:
+          packages: mkdocs
 
       - name: Generate documentation
         shell: bash
         run: |
-          ls
           cd arkdoc
-          ls
           mkdir source
           mv ../std-latest/*.ark source/
-          ls source
           ruby ArkDoc.rb -g "ArkScript"
           mv docs/ArkScript/site/* ../std/
           
