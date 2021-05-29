@@ -163,6 +163,8 @@
                 
             <li class="second-level"><a href="#strreplace-_string-_pattern-_new">(str:replace  _string _pattern _new)</a></li>
                 
+            <li class="second-level"><a href="#strjoin-_list-_delim">(str:join  _list _delim)</a></li>
+                
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
@@ -207,9 +209,9 @@
 </code></pre>
 <p>Author : <a href="https://github.com/Natendrtfm">Natendrtfm</a></p>
 <h4 id="strsplit-_string-_separator">(str:split  _string _separator)</h4>
-<p>Split a string in multiple substrings in a list, given a separator (single character)</p>
+<p>Split a string in multiple substrings in a list, given a separator</p>
 <p><strong>_string</strong> the string to split</p>
-<p><strong>_separator</strong> the separator to use for splitting (single char)</p>
+<p><strong>_separator</strong> the separator to use for splitting</p>
 <p><em>Returns a list of strings. Example :</em></p>
 <pre><code>(import &quot;String.ark&quot;)
 (let message &quot;hello world, I like boats&quot;)
@@ -225,6 +227,15 @@
 <pre><code>(import &quot;String.ark&quot;)
 (let message &quot;hello XXX, do you like the name XXX?&quot;)
 (print (str:replace message &quot;XXX&quot; &quot;Harry&quot;))  # hello Harry, do you like the name Harry?
+</code></pre>
+<h4 id="strjoin-_list-_delim">(str:join  _list _delim)</h4>
+<p>Join a list of elements with a given string delimiter</p>
+<p><strong>_list</strong> host the elements to join</p>
+<p><strong>_delim</strong> a string delimiter to be put between each element</p>
+<p><em>The original list isn't modified</em></p>
+<pre><code>(import &quot;String.ark&quot;)
+(let data [1 &quot;hello&quot; 3.14 true &quot;world&quot;])
+(print (str:join data &quot;;&quot;)) # 1;hello;3.14;true;world
 </code></pre></div>
         
         
