@@ -33,10 +33,13 @@ jobs:
       - name: Generate documentation
         shell: bash
         run: |
+          ls
           cd arkdoc
+          ls
           mkdir source
           mv ../std-latest/*.ark source/
-          ruby ./ArkDoc.rb -g ArkScript
+          ls source
+          ruby ArkDoc.rb -g "ArkScript"
           mv docs/ArkScript/site/* ../std/
           
       - name: Commit
