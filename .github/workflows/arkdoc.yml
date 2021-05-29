@@ -1,0 +1,49 @@
+name: Update ArkDoc documentation
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout website
+        uses: actions/checkout@v2
+        
+      - name: Checkout ArkDoc
+        uses: actions/checkout@v2
+        with:
+          repository: ArkScript-lang/ArkDoc
+          path: './arkdoc'
+          
+      - name: Checkout std
+        uses: actions/checkout@v2
+        with:
+          repository: ArkScript-lang/std
+          path: './std-latest'
+
+      - name: Set up Ruby 2.7.0
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7.0
+
+      - name: Generate documentation
+        shell: bash
+        run: |
+          cd arkdoc
+          ruby ./ArkDoc.rb -s ../std-latest -g ArkScript
+          mv docs/ArkScript/site/* ../std/
+          
+      - name: Commit
+        uses: github-actions-x/commit@v2.8
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          push-branch: 'master'
+          commit-message: 'Updating ArkScript std documentation'
+          force-add: 'true'
+          files: std/
+          name: Alexandre Plateau through GitHub Action
+          email: lexplt.dev@gmail.com
