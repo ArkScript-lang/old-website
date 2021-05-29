@@ -42,7 +42,13 @@ jobs:
           mkdir source
           mv ../std-latest/*.ark source/
           ruby ArkDoc.rb -g "ArkScript"
-          mv docs/ArkScript/site/* ../std/
+          mv docs/ArkScript/site/* ../std2/
+          
+      - name: Files
+        shell: bash
+        run: |
+          rm -r std/
+          mv std2/ std/
           
       - name: Commit
         uses: github-actions-x/commit@v2.8
