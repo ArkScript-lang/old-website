@@ -34,7 +34,9 @@ jobs:
         shell: bash
         run: |
           cd arkdoc
-          ruby ./ArkDoc.rb -s ../std-latest/ -g ArkScript
+          mkdir source
+          mv ../std-latest/*.ark source/
+          ruby ./ArkDoc.rb -s ./source/ -g ArkScript
           mv docs/ArkScript/site/* ../std/
           
       - name: Commit
