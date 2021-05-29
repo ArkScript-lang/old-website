@@ -75,7 +75,7 @@
                             </li>
                             <li>
                                 Link your project to the lib produced by ArkScript:
-                                <code>target_link_library(${PROJECT_NAME} PUBLIC ArkReactor)</code> (modify the privacy according to what you chosed in your project)
+                                <code>target_link_library(${PROJECT_NAME} PUBLIC ArkReactor)</code> (modify the privacy according to what you chose for your project)
                             </li>
                             <li>You're good to go! Everything you need will be available through <code>#include &lt;Ark/Ark.hpp&gt;</code></li>
                         </ol>
@@ -84,6 +84,10 @@
 
                 <section id="using-arkscript">
                     <h2>Using ArkScript</h2>
+
+                    <p>
+                        A <code>Ark::State</code> is made to be shared between multiple virtual machines. It stores the bytecode and user defined functions & constants. You <b>must</b> link all your C++ functions & constants <i>before</i> calling the methods <code>doString</code> / <code>doFile</code> of your state, as the compilation process done by the state involves unbound variables checks.
+                    </p>
 
                     <div class="inner-section">
                         An example is often worth a thousand words:
@@ -160,8 +164,6 @@ Ark::Value my_function(std::vector&lt;Ark::Value&gt;& args, Ark::VM* vm)
 int main()
 {
     Ark::State state(/* options */ Ark::FeaturePersist);
-    state.doFile("myfile.ark");  // we can call state.doFile() before or after state.loadFunction()
-
     state.loadFunction("my_function", my_function);
 
     // we can also load C++ lambdas
@@ -170,6 +172,8 @@ int main()
     state.loadFunction("foo", [](std::vector&lt;Ark::Value&gt;& args, Ark::VM* vm) {
         return Ark::Value(static_cast&lt;int&gt;(args.size()));
     });
+
+    state.doFile("myfile.ark");  // we can call state.doFile() before or after state.loadFunction()
 
     Ark::VM vm(&state);
     vm.run();
