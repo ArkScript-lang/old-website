@@ -38,6 +38,7 @@ jobs:
       - name: Generate documentation
         shell: bash
         run: |
+          mkdir std2
           cd arkdoc
           mkdir source
           mv ../std-latest/*.ark source/
