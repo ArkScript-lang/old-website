@@ -85,22 +85,22 @@
                         ArkScript is:
                         <ul>
                             <li>
-                                small: the compiler, and the virtual machines fit under 5000 lines, but also small in term of keywords (it has only 10)!
+                                small: the compiler and the virtual machines fit under 8000 lines, but also small in terms of keywords (it has only 10)!
                             </li>
                             <li>
                                 a scripting language: it's very easy to embed it in your application. The builtin construction is quite easy to understand, so adding your own functions to the virtual machine is effortless
                             </li>
                             <li>
-                                portable: it produces a bytecode which is run by its virtual machine, like Java but without the <code>OutOfMemoryException</code>
+                                portable: it produces a bytecode which is run by its virtual machine, the same way Java does it (with a smaller memory footprint)
                             </li>
                             <li>
-                                a functional language: every parameter is passed by value, everything is immutable unless you use <code>mut</code> to define a mutable variable
+                                a functional language: every parameter is passed by value, everything is immutable unless you use <code>mut</code> to specify your need of mutability
                             </li>
                             <li>
-                                powerful: it can handle object oriented programming in a very elegant way with its closures and explicit captures (see examples/church-encoding)
+                                powerful: it can handle object-oriented programming in a very elegant way with its closures and explicit captures (see <code>examples/closures.ark</code>)
                             </li>
                             <li>
-                                promoting functionalities before performances: expressiveness often brings more productivity, but performances aren't bad at all
+                                promoting functionalities before performances: expressiveness often brings more productivity, even though performances aren't left behind
                             </li>
                             <li>
                                 easy to compile: it takes less than 200ms to compile and check a complex code with a lot of branches and sub-branches of 200 lines.
@@ -110,18 +110,18 @@
                                 <code>[...]</code> is expanded to <code>(list ...)</code> and <code>{}</code> to <code>(begin ...)</code>. More shorthands will come in the future.
                             </li>
                             <li>
-                                extensible: it is very easy to create a C++ module to use in the language
+                                extensible: it is very easy to create a C++ module to use it in the language, adding functionalities
                             </li>
                         </ul>
 
                         <br> It also has:
                         <ul>
-                            <li>macros (if/else, values and functions) to manipulate ArkScript code during compilation</li>
+                            <li>macros: if/else, values, and functions</li>
                             <li>a REPL with autocompletion and coloration</li>
                             <li>
                                 a growing standard library, composed of ArkScript (under <code>lib/std/</code>) and C++ (under <code>lib/ext/</code>)
                             </li>
-                            <li>a lot of unit tests, which are ran before every release to ensure everything works as intended</li>
+                            <li>a lot of unit tests (but never enough), which are ran before every release to ensure everything work as intended</li>
                             <li>
                                 docker images:
                                 <ul>
@@ -142,9 +142,9 @@
                         <pre>
 <code class="rainbowjs" data-language="arkscript">
 (let fibo (fun (n)
-(if (< n 2)
-    n
-    (+ (fibo (- n 1)) (fibo (- n 2))))))
+    (if (< n 2)
+        n
+        (+ (fibo (- n 1)) (fibo (- n 2))))))
 
 (print (fibo 28))  # display 317811
 </code>
@@ -153,46 +153,39 @@
                         <h3>More or less game</h3>
                         <pre>
 <code class="rainbowjs" data-language="arkscript">
-# more or less game
-(print "More or less game!")
-
 (import "random.arkm")
 (import "Math.ark")
 
 (let number (mod (abs (random)) 10000))
-(mut value 0)
-(mut essais 0)
 
+(mut value 0)
+(mut tries 0)
 (mut continue true)
 
 (while continue {
-(set value (toNumber (input "Input a numeric value: ")))
+    (set value (toNumber (input "Input a numeric value: ")))
 
-(if (< value number)
-    # then
-    (print "More!")
-    # else
-    (if (= value number)
+    (if (< value number)
         # then
-        { (print "Bingo!") (set continue false) }
+        (print "More!")
         # else
-        (print "Less!")))
+        (if (= value number)
+            # then
+            {
+                (print "Bingo!")
+                (set continue false)
+            }
+            # else
+            (print "Less!")))
 
-(set essais (+ 1 essais))})
+    (set tries (+ 1 tries))
+})
 
-(print "You won in " essais " tries")
+(print "You won in " tries " tries")
 </code>
                         </pre>
 
                         <p>More examples are available in the <code>examples/</code> folder.</p>
-                    </div>
-                </section>
-
-                <section id="performances">
-                    <h2>Performances</h2>
-
-                    <div>
-                        We run <a class="btn-link" href="https://github.com/ArkScript-lang/benchmarks/blob/master/README.md">benchmarks</a> periodically, check them out!
                     </div>
                 </section>
 
@@ -202,6 +195,22 @@
                     <div class="inner-section">
                         <section>
                             Check <a class="btn-link" href="/contributing.html">our guide</a>!
+                        </section>
+
+                        <section id="related">
+                            <h5>Related projects</h5>
+
+                            <div>
+                                We have other projects tightly related to ArkScript, which aren't necessarily C++ oriented:
+
+                                <ul>
+                                    <li>the <a href="https://github.com/ArkScript-lang/rfc">Request For Comments</a>, where we discuss new features for the language</li>
+                                    <li>the <a href="https://github.com/ArkScript-lang/std">standard library</a>, written in ArkScript itself</li>
+                                    <li>the <a href="https://github.com/ArkScript-lang/modules">standard library modules</a>, extending the capacities of the language, written in C++</li>
+                                    <li><a href="https://github.com/ArkScript-lang/ArkDoc">ArkDoc</a>, a documentation generator à la doxygen, for ArkScript, written in Ruby</li>
+                                    <li>our <a href="https://github.com/ArkScript-lang/arkscript-lang.github.io">website</a> written in HTML, CSS and JavaScript</li>
+                                </ul>
+                            </div>
                         </section>
 
                         <section id="contributors">
@@ -269,7 +278,7 @@
                                     </li>
 
                                     <li>
-                                        The logos
+                                        The logo
                                         <ul class="no-dot">
                                             <li><a class="btn-link" href="https://github.com/mazzlabs">@mazzdevs</a></li>
                                         </ul>
@@ -313,101 +322,17 @@
 
                 </section>
 
-                <section id="dependencies">
-                    <h2>Dependencies</h2>
-
-                    <div class="inner-section">
-                        <ul>
-                            <li>C++17</li>
-                            <li>CMake >= 3.12</li>
-                            <li>On Windows: Visual Studio >= 11</li>
-                            <li>
-                                On macOS versions prior to 10.15, <code>libc++</code> lacks <code>filesystem</code> in the standard library.
-                                <ul>
-                                    <li>
-                                        Install a newer compiler using <a class="btn-link" href="https://docs.brew.sh/">Homebrew</a>:
-                                        <code>brew install gcc && brew link gcc</code>
-                                    </li>
-                                    <li>
-                                        Pass compiler path to <code>cmake</code> in the build step:
-                                        <code>-DCMAKE_CXX_COMPILER=/usr/local/bin/g++-9</code>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                        Libs already included:
-                        <ul>
-                            <li><a class="btn-link" href="https://github.com/muellan/clipp">CLIPP</a>, MIT licence</li>
-                            <li><a class="btn-link" href="https://github.com/ikalnytskyi/termcolor">termcolor</a>, BSD (3-clause) licence</li>
-                        </ul>
-                    </div>
-                </section>
-
                 <section id="building">
                     <h2>Building ArkScript</h2>
 
-                    <div class="inner-section">
-                        Different CMake options are available:
-                        <ul>
-                            <li>
-                                <code>-DARK_BUILD_EXE</code> to generate an executable, defaults to Off, building a shared library only
-                            </li>
-                            <li>
-                                <code>-DARK_ENABLE_SYSTEM</code> to enable <code>sys:exec</code> (execute shell commands without restrictions), defaults to On
-                            </li>
-                            <li>
-                                <code>-DARK_PROFILER</code> to enable the <a href="https://github.com/plasma-umass/coz">coz</a> profiler, defaults to Off
-                            </li>
-                            <li>
-                                <code>-DARK_PROFILER_COUNT</code> to count every creation/copy/move of the internal value type, defaults to Off
-                            </li>
-                            <li>
-                                <code>-DARK_SCOPE_DICHOTOMY</code> to activate the dichotomic mode of the scope, defaults to Off
-                            </li>
-                        </ul>
-                        <pre>
-<code class="rainbowjs">
-# first, clone it
-~$ git clone --depth=50 --branch=dev https://github.com/ArkScript-lang/Ark.git
-~/Ark$ cd Ark
-~/Ark$ git submodule update --init --recursive
-# building Ark
-~/Ark$ cmake . -Bbuild -DCMAKE_BUILD_TYPE=Release -DARK_BUILD_EXE=On
-~/Ark$ cmake --build build --config Release
-# installing Ark (might need administrative privileges)
-~/Ark$ cmake --install build --config Release
-# running
-~/Ark$ Ark --help
-DESCRIPTION
-        ArkScript programming language
+                    Check out <a href="/tutorials/building.html">our guide</a>!
+                </section>
 
-SYNOPSIS
-        ark -h
-        ark -v
-        ark --dev-info
-        ark -e <expression>
-        ark -c <file> [-d]
-        ark -bcr <file>
-        ark <file> [-d] [-L <lib_dir>] [-f(fac|no-fac)] [-f(ruv|no-ruv)]
+                <section id="performances">
+                    <h2>Performances</h2>
 
-OPTIONS
-        -h, --help                  Display this message
-        -v, --version               Display ArkScript version and exit
-        --dev-info                  Display development information and exit
-        -e, --eval                  Evaluate ArkScript expression
-        -c, --compile               Compile the given program to bytecode, but do not run
-        -d, --debug...              Increase debug level (default: 0)
-        -bcr, --bytecode-reader     Launch the bytecode reader
-        -L, --lib                   Set the location of the ArkScript standard library   
-        -f(fac|no-fac)              Toggle function arity checks (default: ON)
-        -f(ruv|no-ruv)              Remove unused variables (default: ON)
-
-LICENSE
-        Mozilla Public License 2.0
-~/Ark$
-</code>
-                        </pre>
+                    <div>
+                        We run <a class="btn-link" href="https://github.com/ArkScript-lang/benchmarks/blob/master/README.md">benchmarks</a> periodically, check them out!
                     </div>
                 </section>
 
