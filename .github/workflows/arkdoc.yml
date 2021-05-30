@@ -12,13 +12,13 @@ jobs:
     steps:
       - name: Checkout website
         uses: actions/checkout@v2
-        
+
       - name: Checkout ArkDoc
         uses: actions/checkout@v2
         with:
           repository: ArkScript-lang/ArkDoc
           path: './arkdoc'
-          
+
       - name: Checkout std
         uses: actions/checkout@v2
         with:
@@ -29,7 +29,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7.0
-          
+
       - name: Pip install mkdoc
         uses: BSFishy/pip-action@v1
         with:
@@ -38,19 +38,19 @@ jobs:
       - name: Generate documentation
         shell: bash
         run: |
-          mkdir std2
+          mkdir std
           cd arkdoc
           mkdir source
           mv ../std-latest/*.ark source/
           ruby ArkDoc.rb -g "ArkScript"
-          mv docs/ArkScript/site/* ../std2/
-          
+          mv docs/ArkScript/site/* ../std/
+
       - name: Files
         shell: bash
         run: |
-          rm -r std/
-          mv std2/ std/
-          
+          rm -r docs/std/
+          mv std/ docs/
+
       - name: Commit
         uses: github-actions-x/commit@v2.8
         with:
