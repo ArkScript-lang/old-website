@@ -69,12 +69,67 @@
                     <div class="inner-section">
                         <h3>Windows</h3>
                         Download the <code>win64.zip</code> from the <a class="btn-link" href="https://github.com/ArkScript-lang/Ark/releases/latest">releases</a>, and unpack it wherever you want, as long as you remember where (or add the location to
-                        an environment variable as specified in the setup section, to avoid using <code>--lib &lt;path&gt;</code>). To use the command <code>Ark</code> from everywhere, you will need to
+                        an environment variable as specified in the setup section, to avoid using <code>--lib &lt;path&gt;</code>). To use the command <code>ark</code> from everywhere, you will need to
                         <a class="btn-link" href="https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ee537574(v=office.14)">add it to your PATH</a> environment variable.
 
                         <h3>Linux</h3>
                         Download the <code>linux64.zip</code> from the <a class="btn-link" href="https://github.com/ArkScript-lang/Ark/releases/latest">releases</a>. You can put the binaries and the lib anywhere you want, as long as you add it to your
                         path to execute ArkScript without giving the complete path (in your <code>.bashrc</code> for example). You can also create an environment variable as stated in the setup above.
+
+                        <div>
+                            You can also use the following script, however, you must know that this method will add the folder where ArkScript will be downloaded to your <code>PATH</code>.
+                            The executable being named <code>ark</code> you can have <b>conflicts</b> with another existing program named <code>ark</code> as well, <a href="https://linux.die.net/man/1/ark">a KDE archiving tool</a>.
+                        </div>
+                        <div>
+                            Save the following code as <code>install_arkscript.sh</code> and run <code>bash install_arkscript.sh</code>.
+                        </div>
+
+                        <pre>
+<code class="rainbowjs" data-language="shell">
+#!/usr/bin/env bash
+set -euo pipefail
+mkdir -p "${HOME}/.ark"
+cd "${HOME}/.ark"
+install_dir=`pwd`
+
+current=`curl -s https://github.com/ArkScript-lang/Ark/releases/latest | egrep -o "tag/(?[^\"]+)" | cut -c 5- -`
+url="https://github.com/ArkScript-lang/Ark/releases/download/$current/linux64.zip"
+wget --quiet $url
+
+if [ -f linux64.zip ]; then
+    unzip -o linux64.zip
+    rm linux64.zip
+fi
+
+# export arkscript path to your PATH variable to call it from everywhere
+# export also ARKSCRIPT_PATH for arkscript to find its standard library
+shellrc=""
+path_update="export PATH=\"\$PATH:${install_dir}\""
+SHELL=$(echo $SHELL | rev | cut -d'/' -f 1 | rev)
+case $SHELL in
+   "fish")
+      shellrc="$HOME/.config/fish/config.fish"
+      path_update="set PATH $install_dir \$PATH"
+      ;;
+   "zsh")
+      shellrc="$HOME/.zshrc"
+      ;;
+   "bash")
+      shellrc="$HOME/.bashrc"
+      ;;
+   *)
+      echo "Unsupported shell: $SHELL. Please open an issue at <https://github.com/ArkScript-lang/Ark/issues/new> to request it."
+      exit 1
+      ;;
+ esac
+
+cat >> ${shellrc}<< EOF
+$path_update
+export ARKSCRIPT_PATH="${install_dir}"
+EOF
+echo "Don't forget to reload your shell configuration (\`source ${shellrc}\`) to refresh your path."
+</code>
+                        </pre>
                     </div>
                 </section>
 
