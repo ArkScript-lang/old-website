@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['readnumber',['readNumber',['../_v_m_8cpp.html#abf3e0564875d5311f1fccb84265fe8c1',1,'VM.cpp']]],
-  ['registervarglobal',['registerVarGlobal',['../_v_m_8cpp.html#a4d027d28a7e8b74b44184215f70722ea',1,'VM.cpp']]],
-  ['registervariable',['registerVariable',['../_v_m_8cpp.html#a1006bd8546b1d33e6e46ece8d103a943',1,'VM.cpp']]]
+  ['variant_5fget',['variant_get',['../_value_8hpp.html#af9cce6a839650d7dae599115a978bfb0',1,'Value.hpp']]],
+  ['variant_5ft',['variant_t',['../_value_8hpp.html#a6f97ef87ba50c690969338e4d43d3975',1,'Value.hpp']]]
 ];

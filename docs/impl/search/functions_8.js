@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['hadbegin',['hadBegin',['../class_ark_1_1internal_1_1_macro_processor.html#a9acf4a4aa1310ef38d7d0c46cea6fbde',1,'Ark::internal::MacroProcessor']]],
+  ['handlecalls',['handleCalls',['../class_ark_1_1_compiler.html#a1112cc23f71871fc8cd0fa327c34c227',1,'Ark::Compiler']]],
   ['has',['has',['../class_ark_1_1internal_1_1_scope.html#a6b53c13cc93ed329f3b6dc274b331bc3',1,'Ark::internal::Scope']]],
   ['hook_5fcolor',['hook_color',['../_util_8hpp.html#aa328121c8f97311bef5e3ab345503721',1,'hook_color(std::string const &amp;str, Replxx::colors_t &amp;colors, std::vector&lt; std::pair&lt; std::string, Replxx::Color &gt;&gt; const &amp;user_data):&#160;Util.cpp'],['../_util_8cpp.html#aac8fb5a3debd8821383da80d168d505f',1,'hook_color(std::string const &amp;context, Replxx::colors_t &amp;colors, std::vector&lt; std::pair&lt; std::string, Replxx::Color &gt;&gt; const &amp;regex_color):&#160;Util.cpp']]],
   ['hook_5fcompletion',['hook_completion',['../_util_8hpp.html#a45cc3fbbd53aa60d6f49bddd7685c5ab',1,'hook_completion(std::string const &amp;context, int &amp;contextLen, std::vector&lt; std::string &gt; const &amp;user_data):&#160;Util.cpp'],['../_util_8cpp.html#acd76803225b075870b092cddca28c682',1,'hook_completion(std::string const &amp;context, int &amp;contextLen, std::vector&lt; std::string &gt; const &amp;examples):&#160;Util.cpp']]],

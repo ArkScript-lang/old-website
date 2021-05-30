@@ -91,8 +91,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="_closure_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef ark_vm_closure</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define ark_vm_closure</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef ARK_VM_CLOSURE_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define ARK_VM_CLOSURE_HPP</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
@@ -117,7 +117,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespace_ark_1_1internal.html#ad34d3cc31879e65762d87ee39528a5da">Scope_t</a>&amp; <a class="code" href="class_ark_1_1internal_1_1_closure.html#a5ded29994e12ed7135572bd5433d6a3e">scope</a>() <span class="keyword">const</span> noexcept;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#ad34d3cc31879e65762d87ee39528a5da">Scope_t</a>&amp; <a class="code" href="class_ark_1_1internal_1_1_closure.html#a8f73825daf4555a2281a874de3510fe2">scope_ref</a>() noexcept;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#ad34d3cc31879e65762d87ee39528a5da">Scope_t</a>&amp; <a class="code" href="class_ark_1_1internal_1_1_closure.html#a5e8d6654661bc8258f998e2bd14d0be9">refScope</a>() noexcept;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
 <div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_closure.html#a46b5619c1045b50879865e1868dc780b">   82</a></span>&#160;        <span class="keyword">inline</span> <a class="code" href="namespace_ark_1_1internal.html#ad60f205ec1831ecd89c29f5af4030d7c">PageAddr_t</a> <a class="code" href="class_ark_1_1internal_1_1_closure.html#a46b5619c1045b50879865e1868dc780b">pageAddr</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_ark_1_1internal_1_1_closure.html#a5b988d12a962cd1575be756cc0eb931f">m_page_addr</a>; }</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
@@ -144,6 +144,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_afbd4e91ba8a9a360afd072e743777df7"><div class="ttname"><a href="namespace_ark_1_1internal.html#afbd4e91ba8a9a360afd072e743777df7">Ark::internal::operator==</a></div><div class="ttdeci">bool operator==(const Closure &amp;A, const Closure &amp;B) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="_closure_8hpp_source.html#l00094">Closure.hpp:94</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_closure_html_a5e8d6654661bc8258f998e2bd14d0be9"><div class="ttname"><a href="class_ark_1_1internal_1_1_closure.html#a5e8d6654661bc8258f998e2bd14d0be9">Ark::internal::Closure::refScope</a></div><div class="ttdeci">Scope_t &amp; refScope() noexcept</div><div class="ttdoc">Return a reference to the scpoe held by the object. </div><div class="ttdef"><b>Definition:</b> <a href="_closure_8cpp_source.html#l00027">Closure.cpp:27</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_closure_html_a4e88a600b3a774015fef3c761f9136f8"><div class="ttname"><a href="class_ark_1_1internal_1_1_closure.html#a4e88a600b3a774015fef3c761f9136f8">Ark::internal::Closure::operator==</a></div><div class="ttdeci">friend bool operator==(const Closure &amp;A, const Closure &amp;B) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="_closure_8hpp_source.html#l00094">Closure.hpp:94</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_closure_html_ad605c7a9fae116b7fb258e84bee0bc84"><div class="ttname"><a href="class_ark_1_1internal_1_1_closure.html#ad605c7a9fae116b7fb258e84bee0bc84">Ark::internal::Closure::operator&lt;</a></div><div class="ttdeci">friend bool operator&lt;(const Closure &amp;A, const Closure &amp;B) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="_closure_8hpp_source.html#l00099">Closure.hpp:99</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_closure_html_a46b5619c1045b50879865e1868dc780b"><div class="ttname"><a href="class_ark_1_1internal_1_1_closure.html#a46b5619c1045b50879865e1868dc780b">Ark::internal::Closure::pageAddr</a></div><div class="ttdeci">PageAddr_t pageAddr() const </div><div class="ttdoc">Return the page address of the object. </div><div class="ttdef"><b>Definition:</b> <a href="_closure_8hpp_source.html#l00082">Closure.hpp:82</a></div></div>
@@ -151,7 +152,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_ark_1_1internal_1_1_closure_html_aafbb296a8b40019607196754f38d110a"><div class="ttname"><a href="class_ark_1_1internal_1_1_closure.html#aafbb296a8b40019607196754f38d110a">Ark::internal::Closure::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const Closure &amp;C) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="_closure_8cpp_source.html#l00032">Closure.cpp:32</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_closure_html_a5e6ece42bd91670619597f2660f59e32"><div class="ttname"><a href="class_ark_1_1internal_1_1_closure.html#a5e6ece42bd91670619597f2660f59e32">Ark::internal::Closure::m_scope</a></div><div class="ttdeci">Scope_t m_scope</div><div class="ttdef"><b>Definition:</b> <a href="_closure_8hpp_source.html#l00089">Closure.hpp:89</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_ad60f205ec1831ecd89c29f5af4030d7c"><div class="ttname"><a href="namespace_ark_1_1internal.html#ad60f205ec1831ecd89c29f5af4030d7c">Ark::internal::PageAddr_t</a></div><div class="ttdeci">uint16_t PageAddr_t</div><div class="ttdef"><b>Definition:</b> <a href="_types_8hpp_source.html#l00008">Types.hpp:8</a></div></div>
-<div class="ttc" id="class_ark_1_1internal_1_1_closure_html_a8f73825daf4555a2281a874de3510fe2"><div class="ttname"><a href="class_ark_1_1internal_1_1_closure.html#a8f73825daf4555a2281a874de3510fe2">Ark::internal::Closure::scope_ref</a></div><div class="ttdeci">Scope_t &amp; scope_ref() noexcept</div><div class="ttdoc">Return a reference to the scpoe held by the object. </div><div class="ttdef"><b>Definition:</b> <a href="_closure_8cpp_source.html#l00027">Closure.cpp:27</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html"><div class="ttname"><a href="namespace_ark_1_1internal.html">Ark::internal</a></div></div>
 <div class="ttc" id="_types_8hpp_html"><div class="ttname"><a href="_types_8hpp.html">Types.hpp</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_closure_html"><div class="ttname"><a href="class_ark_1_1internal_1_1_closure.html">Ark::internal::Closure</a></div><div class="ttdoc">Closure management. </div><div class="ttdef"><b>Definition:</b> <a href="_closure_8hpp_source.html#l00038">Closure.hpp:38</a></div></div>
@@ -162,7 +162,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 17 2021 12:54:15 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 30 2021 16:41:22 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

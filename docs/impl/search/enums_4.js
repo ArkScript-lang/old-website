@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['logcolor',['LogColor',['../namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909e',1,'Ark']]],
-  ['loglevel',['LogLevel',['../namespace_ark.html#ac788a16dcad2f3354aa90ebb4ff4fcb1',1,'Ark']]]
+  ['nodetype',['NodeType',['../namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4c',1,'Ark::internal']]]
 ];

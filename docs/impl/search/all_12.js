@@ -1,14 +1,17 @@
 var searchData=
 [
   ['readfile',['readFile',['../namespace_ark_1_1internal_1_1_builtins_1_1_i_o.html#a42aee6150fd06d31ac637181d4d59f6e',1,'Ark::internal::Builtins::IO::readFile()'],['../namespace_ark_1_1_utils.html#a08fab59297a574abc8a37a6d46eebacb',1,'Ark::Utils::readFile()']]],
-  ['readnumber',['readNumber',['../class_ark_1_1_bytecode_reader.html#afe863595d283036fd85c8d6b93b95261',1,'Ark::BytecodeReader::readNumber()'],['../_v_m_8cpp.html#abf3e0564875d5311f1fccb84265fe8c1',1,'readNumber():&#160;VM.cpp']]],
-  ['red',['Red',['../namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909eaee38e4d5dd68c4e440825018d549cb47',1,'Ark']]],
+  ['readnumber',['readNumber',['../class_ark_1_1_bytecode_reader.html#afe863595d283036fd85c8d6b93b95261',1,'Ark::BytecodeReader::readNumber()'],['../class_ark_1_1_v_m.html#af4bd4c8a7a9a9479279570ca68aeaf20',1,'Ark::VM::readNumber()']]],
+  ['recurapply',['recurApply',['../class_ark_1_1internal_1_1_macro_processor.html#a4583402299b71915e8bc258e36caff8c',1,'Ark::internal::MacroProcessor']]],
+  ['refclosure',['refClosure',['../class_ark_1_1internal_1_1_value.html#a314bf15f2c97b04944df71960a04d310',1,'Ark::internal::Value']]],
   ['reference',['reference',['../class_ark_1_1internal_1_1_value.html#a2edbbf3f4bcbe594c20f65e1362f344e',1,'Ark::internal::Value::reference()'],['../namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8a63d5049791d9d79d86e9a108b0a999ca',1,'Ark::internal::Reference()']]],
-  ['registervarglobal',['registerVarGlobal',['../_v_m_8cpp.html#a4d027d28a7e8b74b44184215f70722ea',1,'VM.cpp']]],
-  ['registervariable',['registerVariable',['../_v_m_8cpp.html#a1006bd8546b1d33e6e46ece8d103a943',1,'VM.cpp']]],
+  ['refscope',['refScope',['../class_ark_1_1internal_1_1_closure.html#a5e8d6654661bc8258f998e2bd14d0be9',1,'Ark::internal::Closure']]],
+  ['registerfuncdef',['registerFuncDef',['../class_ark_1_1internal_1_1_macro_processor.html#aedc3172cda3c42a2083127af836eac81',1,'Ark::internal::MacroProcessor']]],
+  ['registermacro',['registerMacro',['../class_ark_1_1internal_1_1_macro_executor.html#ab3864ba306ea433c82bf391a5a474ef8',1,'Ark::internal::MacroExecutor::registerMacro()'],['../class_ark_1_1internal_1_1_macro_processor.html#a5aecfdc38cf109dc22bb13f1fcc3bee4',1,'Ark::internal::MacroProcessor::registerMacro()']]],
   ['remove_5funused',['remove_unused',['../class_ark_1_1_optimizer.html#ad1a30323e90d937376dd38f1f7f94a1c',1,'Ark::Optimizer']]],
   ['removeatlist',['removeAtList',['../namespace_ark_1_1internal_1_1_builtins_1_1_list.html#aeb34f3bb1de80ee5f7357a2625e554cb',1,'Ark::internal::Builtins::List']]],
   ['removeatstr',['removeAtStr',['../namespace_ark_1_1internal_1_1_builtins_1_1_string.html#a2029f28115c80de2fd18cd4174d1ad60',1,'Ark::internal::Builtins::String']]],
+  ['removebegin',['removeBegin',['../class_ark_1_1internal_1_1_macro_processor.html#a082eb1105482c8cd65bd9aeea7e9f841',1,'Ark::internal::MacroProcessor']]],
   ['removefiles',['removeFiles',['../namespace_ark_1_1internal_1_1_builtins_1_1_i_o.html#aafcf5cc6b4639592cecc78895268d85c',1,'Ark::internal::Builtins::IO']]],
   ['repl',['Repl',['../class_ark_1_1_repl.html',1,'Ark']]],
   ['repl',['Repl',['../class_ark_1_1_state.html#abfb23f5bc3487de4b5ea564573046b78',1,'Ark::State::Repl()'],['../class_ark_1_1_v_m.html#abfb23f5bc3487de4b5ea564573046b78',1,'Ark::VM::Repl()'],['../class_ark_1_1_repl.html#aab6a9ac80f189175ccb6817ecccfe66d',1,'Ark::Repl::Repl()']]],
@@ -22,5 +25,5 @@ var searchData=
   ['reverselist',['reverseList',['../namespace_ark_1_1internal_1_1_builtins_1_1_list.html#af206830997f20b0ea89166692478a7b9',1,'Ark::internal::Builtins::List']]],
   ['round_5f',['round_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a7980509925909ccba26fc513dc4b7167',1,'Ark::internal::Builtins::Mathematics']]],
   ['run',['run',['../class_ark_1_1_repl.html#a27884a932a9c4193e900ddd81960a737',1,'Ark::Repl::run()'],['../class_ark_1_1_v_m.html#a00ace4106ec9b646e0d85dc531dcf1f8',1,'Ark::VM::run()']]],
-  ['run_5fon_5fglobal_5fscope_5fvars',['run_on_global_scope_vars',['../class_ark_1_1_optimizer.html#a95a50e5a97bad92006c15d8425718577',1,'Ark::Optimizer']]]
+  ['runonglobalscopevars',['runOnGlobalScopeVars',['../class_ark_1_1_optimizer.html#a6cad67f9f670afca4f204a48a37f7f04',1,'Ark::Optimizer']]]
 ];

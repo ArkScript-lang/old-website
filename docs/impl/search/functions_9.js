@@ -1,8 +1,7 @@
 var searchData=
 [
   ['idfromvalue',['idFromValue',['../class_ark_1_1internal_1_1_scope.html#a39349a331b69333504f1c489ecee2d00',1,'Ark::internal::Scope']]],
-  ['info',['info',['../class_ark_1_1_logger.html#a303adddddc7c05e39d7f7253f097701a',1,'Ark::Logger']]],
-  ['init',['init',['../class_ark_1_1_v_m.html#ae0749e81e975e0d1a92c2d89995e50f0',1,'Ark::VM']]],
+  ['init',['init',['../class_ark_1_1internal_1_1_node.html#a0af1d77329a4061a552a1e7ac478998c',1,'Ark::internal::Node::init()'],['../class_ark_1_1_v_m.html#ae0749e81e975e0d1a92c2d89995e50f0',1,'Ark::VM::init()']]],
   ['input',['input',['../namespace_ark_1_1internal_1_1_builtins_1_1_i_o.html#a0cd87f66042331cfdfee284df2568d0f',1,'Ark::internal::Builtins::IO']]],
   ['is',['is',['../class_ark_1_1_user_type.html#ae7511b67702032d9c8255754faf09c4c',1,'Ark::UserType']]],
   ['isbuiltin',['isBuiltin',['../class_ark_1_1_compiler.html#ad0b25560f1f468ed0b5086b88eeaf0d8',1,'Ark::Compiler']]],
@@ -16,5 +15,7 @@ var searchData=
   ['isinteger',['isInteger',['../namespace_ark_1_1_utils.html#aaab1f03c4cb8c8a98a7be4d5211f2b1a',1,'Ark::Utils']]],
   ['iskeyword',['isKeyword',['../class_ark_1_1internal_1_1_lexer.html#a8b1f8a519822d05fdc731b9a9c679f18',1,'Ark::internal::Lexer']]],
   ['isnan_5f',['isnan_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a98cebc925b869fdf02dc4d5ba4ac7143',1,'Ark::internal::Builtins::Mathematics']]],
-  ['isoperator',['isOperator',['../class_ark_1_1_compiler.html#aedba0902a0474a0916fc54c134a1aff0',1,'Ark::Compiler::isOperator()'],['../class_ark_1_1internal_1_1_lexer.html#ab0bd674e07ea972da9fdbee81112d7e4',1,'Ark::internal::Lexer::isOperator()']]]
+  ['isoperator',['isOperator',['../class_ark_1_1_compiler.html#aedba0902a0474a0916fc54c134a1aff0',1,'Ark::Compiler::isOperator()'],['../class_ark_1_1internal_1_1_lexer.html#ab0bd674e07ea972da9fdbee81112d7e4',1,'Ark::internal::Lexer::isOperator()']]],
+  ['ispredefined',['isPredefined',['../class_ark_1_1internal_1_1_macro_executor.html#add7338bad4db868807b2f9e9ca24d6e3',1,'Ark::internal::MacroExecutor::isPredefined()'],['../class_ark_1_1internal_1_1_macro_processor.html#abdc1384681bb70e9e53ea66b1f325063',1,'Ark::internal::MacroProcessor::isPredefined()']]],
+  ['istruthy',['isTruthy',['../class_ark_1_1internal_1_1_macro_executor.html#a84e42959721a5c84f6fae6bf572b11ad',1,'Ark::internal::MacroExecutor::isTruthy()'],['../class_ark_1_1internal_1_1_macro_processor.html#a9913e292f95d6211828e21b01e83d1aa',1,'Ark::internal::MacroProcessor::isTruthy()']]]
 ];

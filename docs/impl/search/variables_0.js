@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['builtins',['builtins',['../namespace_ark_1_1internal_1_1_builtins.html#adf374eed1361c4e2e59cb70fb5602606',1,'Ark::internal::Builtins']]]
+  ['ark_5fstack_5fsize',['ARK_STACK_SIZE',['../namespace_ark.html#a6768a96bb577723257181ba91f7b9485',1,'Ark']]]
 ];

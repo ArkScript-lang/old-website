@@ -121,11 +121,14 @@ Private Member Functions</h2></td></tr>
 <tr class="memdesc:a753252ac29d03ec1edc8133f81aae171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a fancy error message.  <a href="#a753252ac29d03ec1edc8133f81aae171">More...</a><br /></td></tr>
 <tr class="separator:a753252ac29d03ec1edc8133f81aae171"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1a30323e90d937376dd38f1f7f94a1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_optimizer.html#ad1a30323e90d937376dd38f1f7f94a1c">remove_unused</a> ()</td></tr>
+<tr class="memdesc:ad1a30323e90d937376dd38f1f7f94a1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over the AST and remove unused top level functions and constants.  <a href="#ad1a30323e90d937376dd38f1f7f94a1c">More...</a><br /></td></tr>
 <tr class="separator:ad1a30323e90d937376dd38f1f7f94a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95a50e5a97bad92006c15d8425718577"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_optimizer.html#a95a50e5a97bad92006c15d8425718577">run_on_global_scope_vars</a> (<a class="el" href="class_ark_1_1internal_1_1_node.html">internal::Node</a> &amp;node, const std::function&lt; void(<a class="el" href="class_ark_1_1internal_1_1_node.html">internal::Node</a> &amp;, <a class="el" href="class_ark_1_1internal_1_1_node.html">internal::Node</a> &amp;, int)&gt; &amp;func)</td></tr>
-<tr class="separator:a95a50e5a97bad92006c15d8425718577"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86c4cbde96039649014dc8b51fd2c749"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_optimizer.html#a86c4cbde96039649014dc8b51fd2c749">count_occurences</a> (const <a class="el" href="class_ark_1_1internal_1_1_node.html">internal::Node</a> &amp;node)</td></tr>
-<tr class="separator:a86c4cbde96039649014dc8b51fd2c749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cad67f9f670afca4f204a48a37f7f04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_optimizer.html#a6cad67f9f670afca4f204a48a37f7f04">runOnGlobalScopeVars</a> (<a class="el" href="class_ark_1_1internal_1_1_node.html">internal::Node</a> &amp;node, const std::function&lt; void(<a class="el" href="class_ark_1_1internal_1_1_node.html">internal::Node</a> &amp;, <a class="el" href="class_ark_1_1internal_1_1_node.html">internal::Node</a> &amp;, int)&gt; &amp;func)</td></tr>
+<tr class="memdesc:a6cad67f9f670afca4f204a48a37f7f04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a given functor on the global scope symbols.  <a href="#a6cad67f9f670afca4f204a48a37f7f04">More...</a><br /></td></tr>
+<tr class="separator:a6cad67f9f670afca4f204a48a37f7f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31b9a9bb1602baaa872167f93ccf7aee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_optimizer.html#a31b9a9bb1602baaa872167f93ccf7aee">countOccurences</a> (<a class="el" href="class_ark_1_1internal_1_1_node.html">internal::Node</a> &amp;node)</td></tr>
+<tr class="memdesc:a31b9a9bb1602baaa872167f93ccf7aee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count the occurences of each symbol in the AST, recursively.  <a href="#a31b9a9bb1602baaa872167f93ccf7aee">More...</a><br /></td></tr>
+<tr class="separator:a31b9a9bb1602baaa872167f93ccf7aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -139,7 +142,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The ArkScript AST optimizer. </p>
 
-<p>Definition at line <a class="el" href="_optimizer_8hpp_source.html#l00030">30</a> of file <a class="el" href="_optimizer_8hpp_source.html">Optimizer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_optimizer_8hpp_source.html#l00031">31</a> of file <a class="el" href="_optimizer_8hpp_source.html">Optimizer.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a0a3c9ce6e2e3721fc033fa8ca2ef53c2"></a>
 <div class="memitem">
@@ -169,7 +172,7 @@ Private Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                                                  :</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <a class="code" href="class_ark_1_1_optimizer.html#aba47f9ac9fd0a8181d41a6210b930336">m_options</a>(options)</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {}</div>
-<div class="ttc" id="class_ark_1_1_optimizer_html_aba47f9ac9fd0a8181d41a6210b930336"><div class="ttname"><a href="class_ark_1_1_optimizer.html#aba47f9ac9fd0a8181d41a6210b930336">Ark::Optimizer::m_options</a></div><div class="ttdeci">uint16_t m_options</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8hpp_source.html#l00055">Optimizer.hpp:55</a></div></div>
+<div class="ttc" id="class_ark_1_1_optimizer_html_aba47f9ac9fd0a8181d41a6210b930336"><div class="ttname"><a href="class_ark_1_1_optimizer.html#aba47f9ac9fd0a8181d41a6210b930336">Ark::Optimizer::m_options</a></div><div class="ttdeci">uint16_t m_options</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8hpp_source.html#l00056">Optimizer.hpp:56</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -203,10 +206,10 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_ark_1_1_optimizer.html#aba47f9ac9fd0a8181d41a6210b930336">m_options</a> &amp; <a class="code" href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">FeatureRemoveUnusedVars</a>)</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <a class="code" href="class_ark_1_1_optimizer.html#ad1a30323e90d937376dd38f1f7f94a1c">remove_unused</a>();</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
-<div class="ttc" id="class_ark_1_1_optimizer_html_aa8b27d74a61b0cee727f4cf14efc0a9b"><div class="ttname"><a href="class_ark_1_1_optimizer.html#aa8b27d74a61b0cee727f4cf14efc0a9b">Ark::Optimizer::m_ast</a></div><div class="ttdeci">internal::Node m_ast</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8hpp_source.html#l00054">Optimizer.hpp:54</a></div></div>
-<div class="ttc" id="class_ark_1_1_optimizer_html_aba47f9ac9fd0a8181d41a6210b930336"><div class="ttname"><a href="class_ark_1_1_optimizer.html#aba47f9ac9fd0a8181d41a6210b930336">Ark::Optimizer::m_options</a></div><div class="ttdeci">uint16_t m_options</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8hpp_source.html#l00055">Optimizer.hpp:55</a></div></div>
-<div class="ttc" id="class_ark_1_1_optimizer_html_ad1a30323e90d937376dd38f1f7f94a1c"><div class="ttname"><a href="class_ark_1_1_optimizer.html#ad1a30323e90d937376dd38f1f7f94a1c">Ark::Optimizer::remove_unused</a></div><div class="ttdeci">void remove_unused()</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8cpp_source.html#l00024">Optimizer.cpp:24</a></div></div>
-<div class="ttc" id="namespace_ark_html_aed352fcea78905393d0edd9e1ae1423d"><div class="ttname"><a href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">Ark::FeatureRemoveUnusedVars</a></div><div class="ttdeci">constexpr uint16_t FeatureRemoveUnusedVars</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00032">Constants.hpp:32</a></div></div>
+<div class="ttc" id="class_ark_1_1_optimizer_html_aa8b27d74a61b0cee727f4cf14efc0a9b"><div class="ttname"><a href="class_ark_1_1_optimizer.html#aa8b27d74a61b0cee727f4cf14efc0a9b">Ark::Optimizer::m_ast</a></div><div class="ttdeci">internal::Node m_ast</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8hpp_source.html#l00055">Optimizer.hpp:55</a></div></div>
+<div class="ttc" id="class_ark_1_1_optimizer_html_aba47f9ac9fd0a8181d41a6210b930336"><div class="ttname"><a href="class_ark_1_1_optimizer.html#aba47f9ac9fd0a8181d41a6210b930336">Ark::Optimizer::m_options</a></div><div class="ttdeci">uint16_t m_options</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8hpp_source.html#l00056">Optimizer.hpp:56</a></div></div>
+<div class="ttc" id="class_ark_1_1_optimizer_html_ad1a30323e90d937376dd38f1f7f94a1c"><div class="ttname"><a href="class_ark_1_1_optimizer.html#ad1a30323e90d937376dd38f1f7f94a1c">Ark::Optimizer::remove_unused</a></div><div class="ttdeci">void remove_unused()</div><div class="ttdoc">Iterate over the AST and remove unused top level functions and constants. </div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8cpp_source.html#l00024">Optimizer.cpp:24</a></div></div>
+<div class="ttc" id="namespace_ark_html_aed352fcea78905393d0edd9e1ae1423d"><div class="ttname"><a href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">Ark::FeatureRemoveUnusedVars</a></div><div class="ttdeci">constexpr uint16_t FeatureRemoveUnusedVars</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00046">Constants.hpp:46</a></div></div>
 <div class="ttc" id="class_ark_1_1_optimizer_html_adf07a88c6cb61dc77e8abd88aa3fa64c"><div class="ttname"><a href="class_ark_1_1_optimizer.html#adf07a88c6cb61dc77e8abd88aa3fa64c">Ark::Optimizer::ast</a></div><div class="ttdeci">const internal::Node &amp; ast() const noexcept</div><div class="ttdoc">Returns the modified AST. </div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8cpp_source.html#l00019">Optimizer.cpp:19</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -239,7 +242,7 @@ Private Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_ark_1_1_optimizer.html#aa8b27d74a61b0cee727f4cf14efc0a9b">m_ast</a>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
-<div class="ttc" id="class_ark_1_1_optimizer_html_aa8b27d74a61b0cee727f4cf14efc0a9b"><div class="ttname"><a href="class_ark_1_1_optimizer.html#aa8b27d74a61b0cee727f4cf14efc0a9b">Ark::Optimizer::m_ast</a></div><div class="ttdeci">internal::Node m_ast</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8hpp_source.html#l00054">Optimizer.hpp:54</a></div></div>
+<div class="ttc" id="class_ark_1_1_optimizer_html_aa8b27d74a61b0cee727f4cf14efc0a9b"><div class="ttname"><a href="class_ark_1_1_optimizer.html#aa8b27d74a61b0cee727f4cf14efc0a9b">Ark::Optimizer::m_ast</a></div><div class="ttdeci">internal::Node m_ast</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8hpp_source.html#l00055">Optimizer.hpp:55</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -284,6 +287,12 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="_optimizer_8hpp_source.html#l00065">65</a> of file <a class="el" href="_optimizer_8hpp_source.html">Optimizer.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">throw</span> OptimizerError(<a class="code" href="namespace_ark_1_1internal.html#afd94fd5d6c6dadaff702d31594c85a9e">internal::makeNodeBasedErrorCtx</a>(message, node));</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="ttc" id="namespace_ark_1_1internal_html_afd94fd5d6c6dadaff702d31594c85a9e"><div class="ttname"><a href="namespace_ark_1_1internal.html#afd94fd5d6c6dadaff702d31594c85a9e">Ark::internal::makeNodeBasedErrorCtx</a></div><div class="ttdeci">std::string makeNodeBasedErrorCtx(const std::string &amp;message, const Ark::internal::Node &amp;node)</div><div class="ttdoc">Construct an error message based on a given node. </div><div class="ttdef"><b>Definition:</b> <a href="make_node_based_error_8cpp_source.html#l00010">makeNodeBasedError.cpp:10</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad1a30323e90d937376dd38f1f7f94a1c"></a>
@@ -307,35 +316,38 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Iterate over the AST and remove unused top level functions and constants. </p>
+
 <p>Definition at line <a class="el" href="_optimizer_8cpp_source.html#l00024">24</a> of file <a class="el" href="_optimizer_8cpp_source.html">Optimizer.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="comment">// do not handle non-list nodes</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_ark_1_1_optimizer.html#aa8b27d74a61b0cee727f4cf14efc0a9b">m_ast</a>.<a class="code" href="class_ark_1_1internal_1_1_node.html#a013322065e18b121d531a6d93f012ca1">nodeType</a>() != NodeType::List)</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="class_ark_1_1_optimizer.html#a95a50e5a97bad92006c15d8425718577">run_on_global_scope_vars</a>(<a class="code" href="class_ark_1_1_optimizer.html#aa8b27d74a61b0cee727f4cf14efc0a9b">m_ast</a>, [<span class="keyword">this</span>](Node&amp; node, Node&amp; parent, <span class="keywordtype">int</span> idx){</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <a class="code" href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">m_symAppearances</a>[node.const_list()[1].string()] = 0;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="class_ark_1_1_optimizer.html#a6cad67f9f670afca4f204a48a37f7f04">runOnGlobalScopeVars</a>(<a class="code" href="class_ark_1_1_optimizer.html#aa8b27d74a61b0cee727f4cf14efc0a9b">m_ast</a>, [<span class="keyword">this</span>](Node&amp; node, Node&amp; parent, <span class="keywordtype">int</span> idx){</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <a class="code" href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">m_symAppearances</a>[node.constList()[1].string()] = 0;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        });</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="class_ark_1_1_optimizer.html#a86c4cbde96039649014dc8b51fd2c749">count_occurences</a>(<a class="code" href="class_ark_1_1_optimizer.html#aa8b27d74a61b0cee727f4cf14efc0a9b">m_ast</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="class_ark_1_1_optimizer.html#a31b9a9bb1602baaa872167f93ccf7aee">countOccurences</a>(<a class="code" href="class_ark_1_1_optimizer.html#aa8b27d74a61b0cee727f4cf14efc0a9b">m_ast</a>);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">// logic: remove piece of code with only 1 reference</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="class_ark_1_1_optimizer.html#a95a50e5a97bad92006c15d8425718577">run_on_global_scope_vars</a>(<a class="code" href="class_ark_1_1_optimizer.html#aa8b27d74a61b0cee727f4cf14efc0a9b">m_ast</a>, [<span class="keyword">this</span>](Node&amp; node, Node&amp; parent, <span class="keywordtype">int</span> idx){</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            std::string name = node.<a class="code" href="class_ark_1_1internal_1_1_node.html#a4e64572723858cd506ddbc02e0053d36">const_list</a>()[1].string();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">// logic: remove piece of code with only 1 reference, if they aren&#39;t function calls</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="class_ark_1_1_optimizer.html#a6cad67f9f670afca4f204a48a37f7f04">runOnGlobalScopeVars</a>(<a class="code" href="class_ark_1_1_optimizer.html#aa8b27d74a61b0cee727f4cf14efc0a9b">m_ast</a>, [<span class="keyword">this</span>](Node&amp; node, Node&amp; parent, <span class="keywordtype">int</span> idx){</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            std::string name = node.<a class="code" href="class_ark_1_1internal_1_1_node.html#a30f2735c3aafed035a7e5380066866a6">constList</a>()[1].string();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="comment">// a variable was only declared and never used</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">m_symAppearances</a>.find(name) != <a class="code" href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">m_symAppearances</a>.end() &amp;&amp; <a class="code" href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">m_symAppearances</a>[name] == 1)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                parent.list().erase(parent.list().begin() + idx);  <span class="comment">// erase the node from the list</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        });</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
-<div class="ttc" id="class_ark_1_1_optimizer_html_a95a50e5a97bad92006c15d8425718577"><div class="ttname"><a href="class_ark_1_1_optimizer.html#a95a50e5a97bad92006c15d8425718577">Ark::Optimizer::run_on_global_scope_vars</a></div><div class="ttdeci">void run_on_global_scope_vars(internal::Node &amp;node, const std::function&lt; void(internal::Node &amp;, internal::Node &amp;, int)&gt; &amp;func)</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8cpp_source.html#l00044">Optimizer.cpp:44</a></div></div>
-<div class="ttc" id="class_ark_1_1_optimizer_html_aa8b27d74a61b0cee727f4cf14efc0a9b"><div class="ttname"><a href="class_ark_1_1_optimizer.html#aa8b27d74a61b0cee727f4cf14efc0a9b">Ark::Optimizer::m_ast</a></div><div class="ttdeci">internal::Node m_ast</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8hpp_source.html#l00054">Optimizer.hpp:54</a></div></div>
-<div class="ttc" id="class_ark_1_1_optimizer_html_a86c4cbde96039649014dc8b51fd2c749"><div class="ttname"><a href="class_ark_1_1_optimizer.html#a86c4cbde96039649014dc8b51fd2c749">Ark::Optimizer::count_occurences</a></div><div class="ttdeci">void count_occurences(const internal::Node &amp;node)</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8cpp_source.html#l00070">Optimizer.cpp:70</a></div></div>
-<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a4e64572723858cd506ddbc02e0053d36"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a4e64572723858cd506ddbc02e0053d36">Ark::internal::Node::const_list</a></div><div class="ttdeci">const std::vector&lt; Node &gt; &amp; const_list() const noexcept</div><div class="ttdoc">Return the list of sub-nodes held by the node. </div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00069">Node.cpp:69</a></div></div>
-<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a013322065e18b121d531a6d93f012ca1"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a013322065e18b121d531a6d93f012ca1">Ark::internal::Node::nodeType</a></div><div class="ttdeci">NodeType nodeType() const noexcept</div><div class="ttdoc">Return the node type. </div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00076">Node.cpp:76</a></div></div>
-<div class="ttc" id="class_ark_1_1_optimizer_html_a89ee118f930a52409e8f5ab999cf800d"><div class="ttname"><a href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">Ark::Optimizer::m_symAppearances</a></div><div class="ttdeci">std::unordered_map&lt; std::string, unsigned &gt; m_symAppearances</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8hpp_source.html#l00056">Optimizer.hpp:56</a></div></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">m_symAppearances</a>.find(name) != <a class="code" href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">m_symAppearances</a>.end() &amp;&amp; <a class="code" href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">m_symAppearances</a>[name] == 1</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                &amp;&amp; parent.list()[idx].list()[2].nodeType() != NodeType::List)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                parent.list().erase(parent.list().begin() + idx);  <span class="comment">// erase the node from the list</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        });</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1_optimizer_html_aa8b27d74a61b0cee727f4cf14efc0a9b"><div class="ttname"><a href="class_ark_1_1_optimizer.html#aa8b27d74a61b0cee727f4cf14efc0a9b">Ark::Optimizer::m_ast</a></div><div class="ttdeci">internal::Node m_ast</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8hpp_source.html#l00055">Optimizer.hpp:55</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a30f2735c3aafed035a7e5380066866a6"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a30f2735c3aafed035a7e5380066866a6">Ark::internal::Node::constList</a></div><div class="ttdeci">const std::vector&lt; Node &gt; &amp; constList() const noexcept</div><div class="ttdoc">Return the list of sub-nodes held by the node. </div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00083">Node.cpp:83</a></div></div>
+<div class="ttc" id="class_ark_1_1_optimizer_html_a6cad67f9f670afca4f204a48a37f7f04"><div class="ttname"><a href="class_ark_1_1_optimizer.html#a6cad67f9f670afca4f204a48a37f7f04">Ark::Optimizer::runOnGlobalScopeVars</a></div><div class="ttdeci">void runOnGlobalScopeVars(internal::Node &amp;node, const std::function&lt; void(internal::Node &amp;, internal::Node &amp;, int)&gt; &amp;func)</div><div class="ttdoc">Run a given functor on the global scope symbols. </div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8cpp_source.html#l00045">Optimizer.cpp:45</a></div></div>
+<div class="ttc" id="class_ark_1_1internal_1_1_node_html_a013322065e18b121d531a6d93f012ca1"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a013322065e18b121d531a6d93f012ca1">Ark::internal::Node::nodeType</a></div><div class="ttdeci">NodeType nodeType() const noexcept</div><div class="ttdoc">Return the node type. </div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00090">Node.cpp:90</a></div></div>
+<div class="ttc" id="class_ark_1_1_optimizer_html_a89ee118f930a52409e8f5ab999cf800d"><div class="ttname"><a href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">Ark::Optimizer::m_symAppearances</a></div><div class="ttdeci">std::unordered_map&lt; std::string, unsigned &gt; m_symAppearances</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8hpp_source.html#l00057">Optimizer.hpp:57</a></div></div>
+<div class="ttc" id="class_ark_1_1_optimizer_html_a31b9a9bb1602baaa872167f93ccf7aee"><div class="ttname"><a href="class_ark_1_1_optimizer.html#a31b9a9bb1602baaa872167f93ccf7aee">Ark::Optimizer::countOccurences</a></div><div class="ttdeci">void countOccurences(internal::Node &amp;node)</div><div class="ttdoc">Count the occurences of each symbol in the AST, recursively. </div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8cpp_source.html#l00071">Optimizer.cpp:71</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a95a50e5a97bad92006c15d8425718577"></a>
+<a class="anchor" id="a6cad67f9f670afca4f204a48a37f7f04"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -343,7 +355,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Ark::Optimizer::run_on_global_scope_vars </td>
+          <td class="memname">void Ark::Optimizer::runOnGlobalScopeVars </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_ark_1_1internal_1_1_node.html">internal::Node</a> &amp;&#160;</td>
           <td class="paramname"><em>node</em>, </td>
@@ -367,37 +379,46 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_optimizer_8cpp_source.html#l00044">44</a> of file <a class="el" href="_optimizer_8cpp_source.html">Optimizer.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">int</span> i = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(node.const_list().size());</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">// iterate only on the first level, using reverse iterators to avoid copy-delete-move to nowhere</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> it=node.list().rbegin(); it != node.list().rend(); ++it)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            i--;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">if</span> (it-&gt;const_list().size() &gt; 0 &amp;&amp; it-&gt;const_list()[0].nodeType() == <a class="code" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">NodeType::Keyword</a>)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <a class="code" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">Keyword</a> kw = it-&gt;const_list()[0].keyword();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="comment">// eliminate nested begin blocks</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keywordflow">if</span> (kw == Keyword::Begin)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    <a class="code" href="class_ark_1_1_optimizer.html#a95a50e5a97bad92006c15d8425718577">run_on_global_scope_vars</a>(*it, func);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    <span class="comment">// skip let/ mut detection</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="comment">// check if it&#39;s a let/mut declaration</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (kw == Keyword::Let || kw == Keyword::Mut)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    func(*it, node, i);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="ttc" id="class_ark_1_1_optimizer_html_a95a50e5a97bad92006c15d8425718577"><div class="ttname"><a href="class_ark_1_1_optimizer.html#a95a50e5a97bad92006c15d8425718577">Ark::Optimizer::run_on_global_scope_vars</a></div><div class="ttdeci">void run_on_global_scope_vars(internal::Node &amp;node, const std::function&lt; void(internal::Node &amp;, internal::Node &amp;, int)&gt; &amp;func)</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8cpp_source.html#l00044">Optimizer.cpp:44</a></div></div>
-<div class="ttc" id="namespace_ark_1_1internal_html_a9a844cdbff6d30f493cb3044c72128f1"><div class="ttname"><a href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">Ark::internal::Keyword</a></div><div class="ttdeci">Keyword</div><div class="ttdoc">The different keywords available. </div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00039">Node.hpp:39</a></div></div>
+<p>Run a given functor on the global scope symbols. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td></td></tr>
+    <tr><td class="paramname">func</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_optimizer_8cpp_source.html#l00045">45</a> of file <a class="el" href="_optimizer_8cpp_source.html">Optimizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">int</span> i = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(node.constList().size());</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">// iterate only on the first level, using reverse iterators to avoid copy-delete-move to nowhere</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> it=node.list().rbegin(); it != node.list().rend(); ++it)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            i--;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">if</span> (it-&gt;constList().size() &gt; 0 &amp;&amp; it-&gt;constList()[0].nodeType() == <a class="code" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">NodeType::Keyword</a>)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <a class="code" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">Keyword</a> kw = it-&gt;constList()[0].keyword();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="comment">// eliminate nested begin blocks</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="keywordflow">if</span> (kw == Keyword::Begin)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    <a class="code" href="class_ark_1_1_optimizer.html#a6cad67f9f670afca4f204a48a37f7f04">runOnGlobalScopeVars</a>(*it, func);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    <span class="comment">// skip let/ mut detection</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="comment">// check if it&#39;s a let/mut declaration</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (kw == Keyword::Let || kw == Keyword::Mut)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    func(*it, node, i);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="ttc" id="namespace_ark_1_1internal_html_a9a844cdbff6d30f493cb3044c72128f1"><div class="ttname"><a href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">Ark::internal::Keyword</a></div><div class="ttdeci">Keyword</div><div class="ttdoc">The different keywords available. </div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00043">Node.hpp:43</a></div></div>
+<div class="ttc" id="class_ark_1_1_optimizer_html_a6cad67f9f670afca4f204a48a37f7f04"><div class="ttname"><a href="class_ark_1_1_optimizer.html#a6cad67f9f670afca4f204a48a37f7f04">Ark::Optimizer::runOnGlobalScopeVars</a></div><div class="ttdeci">void runOnGlobalScopeVars(internal::Node &amp;node, const std::function&lt; void(internal::Node &amp;, internal::Node &amp;, int)&gt; &amp;func)</div><div class="ttdoc">Run a given functor on the global scope symbols. </div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8cpp_source.html#l00045">Optimizer.cpp:45</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a86c4cbde96039649014dc8b51fd2c749"></a>
+<a class="anchor" id="a31b9a9bb1602baaa872167f93ccf7aee"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -405,9 +426,9 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Ark::Optimizer::count_occurences </td>
+          <td class="memname">void Ark::Optimizer::countOccurences </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_ark_1_1internal_1_1_node.html">internal::Node</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_ark_1_1internal_1_1_node.html">internal::Node</a> &amp;&#160;</td>
           <td class="paramname"><em>node</em></td><td>)</td>
           <td></td>
         </tr>
@@ -419,24 +440,32 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_optimizer_8cpp_source.html#l00070">70</a> of file <a class="el" href="_optimizer_8cpp_source.html">Optimizer.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">if</span> (node.nodeType() == NodeType::Symbol || node.nodeType() == NodeType::Capture)</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            std::string name = node.string();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="comment">// check if it&#39;s the name of something declared in global scope</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">m_symAppearances</a>.find(name) != <a class="code" href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">m_symAppearances</a>.end())</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <a class="code" href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">m_symAppearances</a>[name]++;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (node.nodeType() == NodeType::List)</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="comment">// iterate over children</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span> it=node.const_list().begin(), end=node.const_list().end(); it != end; ++it)</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <a class="code" href="class_ark_1_1_optimizer.html#a86c4cbde96039649014dc8b51fd2c749">count_occurences</a>(*it);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
-<div class="ttc" id="class_ark_1_1_optimizer_html_a86c4cbde96039649014dc8b51fd2c749"><div class="ttname"><a href="class_ark_1_1_optimizer.html#a86c4cbde96039649014dc8b51fd2c749">Ark::Optimizer::count_occurences</a></div><div class="ttdeci">void count_occurences(const internal::Node &amp;node)</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8cpp_source.html#l00070">Optimizer.cpp:70</a></div></div>
-<div class="ttc" id="class_ark_1_1_optimizer_html_a89ee118f930a52409e8f5ab999cf800d"><div class="ttname"><a href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">Ark::Optimizer::m_symAppearances</a></div><div class="ttdeci">std::unordered_map&lt; std::string, unsigned &gt; m_symAppearances</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8hpp_source.html#l00056">Optimizer.hpp:56</a></div></div>
+<p>Count the occurences of each symbol in the AST, recursively. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_optimizer_8cpp_source.html#l00071">71</a> of file <a class="el" href="_optimizer_8cpp_source.html">Optimizer.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">if</span> (node.nodeType() == NodeType::Symbol || node.nodeType() == NodeType::Capture)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            std::string name = node.string();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="comment">// check if it&#39;s the name of something declared in global scope</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">m_symAppearances</a>.find(name) != <a class="code" href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">m_symAppearances</a>.end())</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                <a class="code" href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">m_symAppearances</a>[name]++;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (node.nodeType() == NodeType::List)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="comment">// iterate over children</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">for</span> (std::size_t i = 0, end = node.constList().size(); i != end; ++i)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <a class="code" href="class_ark_1_1_optimizer.html#a31b9a9bb1602baaa872167f93ccf7aee">countOccurences</a>(node.list()[i]);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1_optimizer_html_a89ee118f930a52409e8f5ab999cf800d"><div class="ttname"><a href="class_ark_1_1_optimizer.html#a89ee118f930a52409e8f5ab999cf800d">Ark::Optimizer::m_symAppearances</a></div><div class="ttdeci">std::unordered_map&lt; std::string, unsigned &gt; m_symAppearances</div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8hpp_source.html#l00057">Optimizer.hpp:57</a></div></div>
+<div class="ttc" id="class_ark_1_1_optimizer_html_a31b9a9bb1602baaa872167f93ccf7aee"><div class="ttname"><a href="class_ark_1_1_optimizer.html#a31b9a9bb1602baaa872167f93ccf7aee">Ark::Optimizer::countOccurences</a></div><div class="ttdeci">void countOccurences(internal::Node &amp;node)</div><div class="ttdoc">Count the occurences of each symbol in the AST, recursively. </div><div class="ttdef"><b>Definition:</b> <a href="_optimizer_8cpp_source.html#l00071">Optimizer.cpp:71</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -459,7 +488,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_optimizer_8hpp_source.html#l00054">54</a> of file <a class="el" href="_optimizer_8hpp_source.html">Optimizer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_optimizer_8hpp_source.html#l00055">55</a> of file <a class="el" href="_optimizer_8hpp_source.html">Optimizer.hpp</a>.</p>
 
 </div>
 </div>
@@ -481,7 +510,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_optimizer_8hpp_source.html#l00055">55</a> of file <a class="el" href="_optimizer_8hpp_source.html">Optimizer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_optimizer_8hpp_source.html#l00056">56</a> of file <a class="el" href="_optimizer_8hpp_source.html">Optimizer.hpp</a>.</p>
 
 </div>
 </div>
@@ -503,7 +532,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_optimizer_8hpp_source.html#l00056">56</a> of file <a class="el" href="_optimizer_8hpp_source.html">Optimizer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_optimizer_8hpp_source.html#l00057">57</a> of file <a class="el" href="_optimizer_8hpp_source.html">Optimizer.hpp</a>.</p>
 
 </div>
 </div>
@@ -514,7 +543,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 17 2021 12:54:18 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 30 2021 16:41:24 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

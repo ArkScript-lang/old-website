@@ -1,9 +1,7 @@
 var searchData=
 [
   ['backtrace',['backtrace',['../class_ark_1_1_v_m.html#a9128d6b7ba084b47f0e1daf337155a8c',1,'Ark::VM']]],
-  ['bcr',['bcr',['../main_8cpp.html#afed45b7c9308d50b33a51ba572aa7757',1,'main.cpp']]],
   ['begin',['Begin',['../namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a1a06729125544cab7cee73195fc044f0',1,'Ark::internal']]],
-  ['blue',['Blue',['../namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909ea9594eec95be70e7b1710f730fdda33d9',1,'Ark']]],
   ['builtin',['BUILTIN',['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa32493ca580dc36eb98a8999fa065202c',1,'Ark::internal']]],
   ['builtins',['builtins',['../namespace_ark_1_1internal_1_1_builtins.html#adf374eed1361c4e2e59cb70fb5602606',1,'Ark::internal::Builtins']]],
   ['builtins_2ecpp',['Builtins.cpp',['../_builtins_8cpp.html',1,'']]],

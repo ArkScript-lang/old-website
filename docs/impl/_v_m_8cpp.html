@@ -88,13 +88,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
 <div class="title">VM.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="_v_m_8hpp_source.html">Ark/VM/VM.hpp</a>&gt;</code><br />
+<code>#include &lt;termcolor.hpp&gt;</code><br />
 </div>
 <p><a href="_v_m_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -107,139 +107,11 @@ Classes</h2></td></tr>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespace_ark"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html">Ark</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:abf3e0564875d5311f1fccb84265fe8c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_m_8cpp.html#abf3e0564875d5311f1fccb84265fe8c1">readNumber</a>(var)</td></tr>
-<tr class="separator:abf3e0564875d5311f1fccb84265fe8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1006bd8546b1d33e6e46ece8d103a943"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_m_8cpp.html#a1006bd8546b1d33e6e46ece8d103a943">registerVariable</a>(id,  value)&#160;&#160;&#160;((*m_locals.back()).push_back(id, value))</td></tr>
-<tr class="separator:a1006bd8546b1d33e6e46ece8d103a943"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d027d28a7e8b74b44184215f70722ea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_m_8cpp.html#a4d027d28a7e8b74b44184215f70722ea">registerVarGlobal</a>(id,  value)&#160;&#160;&#160;((*m_locals[0]).push_back(id, value))</td></tr>
-<tr class="separator:a4d027d28a7e8b74b44184215f70722ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a565f057778451535abe5d26977f61baf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_m_8cpp.html#a565f057778451535abe5d26977f61baf">createNewScope</a>()&#160;&#160;&#160;m_locals.emplace_back(std::make_shared&lt;<a class="el" href="class_ark_1_1internal_1_1_scope.html">Scope</a>&gt;());</td></tr>
-<tr class="separator:a565f057778451535abe5d26977f61baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89f1c60a19b6337062c2c73337296d53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_m_8cpp.html#a89f1c60a19b6337062c2c73337296d53">getVariableInCurrentScope</a>(id)&#160;&#160;&#160;((*m_locals.back())[id])</td></tr>
-<tr class="separator:a89f1c60a19b6337062c2c73337296d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="abf3e0564875d5311f1fccb84265fe8c1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define readNumber</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">var</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                \</div>
-<div class="line">    var = (<span class="keyword">static_cast&lt;</span>uint16_t<span class="keyword">&gt;</span>(m_state-&gt;m_pages[m_pp][m_ip]) &lt;&lt; 8) +   \</div>
-<div class="line">           static_cast&lt;uint16_t&gt;(m_state-&gt;m_pages[m_pp][m_ip + 1]);      \</div>
-<div class="line">    ++m_ip;                                                              \</div>
-<div class="line">    }</div>
-</div><!-- fragment -->
-<p>Definition at line <a class="el" href="_v_m_8cpp_source.html#l00004">4</a> of file <a class="el" href="_v_m_8cpp_source.html">VM.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a1006bd8546b1d33e6e46ece8d103a943"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define registerVariable</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">id, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">value&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;((*m_locals.back()).push_back(id, value))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_v_m_8cpp_source.html#l00010">10</a> of file <a class="el" href="_v_m_8cpp_source.html">VM.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4d027d28a7e8b74b44184215f70722ea"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define registerVarGlobal</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">id, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">value&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;((*m_locals[0]).push_back(id, value))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_v_m_8cpp_source.html#l00012">12</a> of file <a class="el" href="_v_m_8cpp_source.html">VM.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a565f057778451535abe5d26977f61baf"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define createNewScope</td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;m_locals.emplace_back(std::make_shared&lt;<a class="el" href="class_ark_1_1internal_1_1_scope.html">Scope</a>&gt;());</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_v_m_8cpp_source.html#l00014">14</a> of file <a class="el" href="_v_m_8cpp_source.html">VM.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a89f1c60a19b6337062c2c73337296d53"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define getVariableInCurrentScope</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">id</td><td>)</td>
-          <td>&#160;&#160;&#160;((*m_locals.back())[id])</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_v_m_8cpp_source.html#l00016">16</a> of file <a class="el" href="_v_m_8cpp_source.html">VM.cpp</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 17 2021 12:54:17 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 30 2021 16:41:24 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

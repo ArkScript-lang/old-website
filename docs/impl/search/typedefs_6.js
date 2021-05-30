@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['replxx',['Replxx',['../_console_style_8hpp.html#a362bc7a2816fe6a0221748387af71066',1,'Replxx():&#160;ConsoleStyle.hpp'],['../_util_8hpp.html#a362bc7a2816fe6a0221748387af71066',1,'Replxx():&#160;Util.hpp']]]
+  ['scope_5ft',['Scope_t',['../namespace_ark_1_1internal.html#ad34d3cc31879e65762d87ee39528a5da',1,'Ark::internal']]]
 ];

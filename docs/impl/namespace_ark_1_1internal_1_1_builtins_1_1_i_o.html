@@ -145,7 +145,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordflow">for</span> (Value::Iterator it=n.begin(), it_end=n.end(); it != it_end; ++it)</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            std::cout &lt;&lt; (*it);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        std::cout &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        std::cout &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespace_ark_1_1internal_1_1_builtins.html#a0541c7c43175f68aca89a4c3a61fca12">nil</a>;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
@@ -226,7 +226,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">Value</a>(line);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
-<div class="ttc" id="namespace_ark_html_a78cf7bec8c2cee4247c5efa4b1e4aa9c"><div class="ttname"><a href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">Ark::Value</a></div><div class="ttdeci">internal::Value Value</div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00266">VM.hpp:266</a></div></div>
+<div class="ttc" id="namespace_ark_html_a78cf7bec8c2cee4247c5efa4b1e4aa9c"><div class="ttname"><a href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">Ark::Value</a></div><div class="ttdeci">internal::Value Value</div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00285">VM.hpp:285</a></div></div>
 <div class="ttc" id="class_ark_1_1_type_error_html"><div class="ttname"><a href="class_ark_1_1_type_error.html">Ark::TypeError</a></div><div class="ttdoc">A type error triggered when types don&#39;t match. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00024">Exceptions.hpp:24</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -270,7 +270,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                f.close();</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Couldn&#39;t write to file \&quot;&quot;</span> + n[0].string_ref().<a class="code" href="namespace_ark_1_1_utils.html#acf273f8770ae1e42c20d81ab978e8c24">toString</a>() + <span class="stringliteral">&quot;\&quot;&quot;</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Couldn&#39;t write to file \&quot;&quot;</span> + n[0].stringRef().toString() + <span class="stringliteral">&quot;\&quot;&quot;</span>);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">// filename, mode (a or w), content</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (n.size() == 3)</div>
@@ -295,14 +295,13 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                f.close();</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            }</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Couldn&#39;t write to file \&quot;&quot;</span> + n[0].string_ref().<a class="code" href="namespace_ark_1_1_utils.html#acf273f8770ae1e42c20d81ab978e8c24">toString</a>() + <span class="stringliteral">&quot;\&quot;&quot;</span>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Couldn&#39;t write to file \&quot;&quot;</span> + n[0].stringRef().toString() + <span class="stringliteral">&quot;\&quot;&quot;</span>);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">throw</span> std::runtime_error(IO_WRITE_ARITY);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespace_ark_1_1internal_1_1_builtins.html#a0541c7c43175f68aca89a4c3a61fca12">nil</a>;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
 <div class="ttc" id="namespace_ark_1_1internal_1_1_builtins_html_a0541c7c43175f68aca89a4c3a61fca12"><div class="ttname"><a href="namespace_ark_1_1internal_1_1_builtins.html#a0541c7c43175f68aca89a4c3a61fca12">Ark::internal::Builtins::nil</a></div><div class="ttdeci">const Value nil</div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8cpp_source.html#l00013">Builtins.cpp:13</a></div></div>
-<div class="ttc" id="namespace_ark_1_1_utils_html_acf273f8770ae1e42c20d81ab978e8c24"><div class="ttname"><a href="namespace_ark_1_1_utils.html#acf273f8770ae1e42c20d81ab978e8c24">Ark::Utils::toString</a></div><div class="ttdeci">std::string toString(T &amp;&amp;object)</div><div class="ttdoc">Home made version of std::to_string to convert to string anything which has an operator<< for this...</div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00038">Utils.hpp:38</a></div></div>
 <div class="ttc" id="class_ark_1_1_type_error_html"><div class="ttname"><a href="class_ark_1_1_type_error.html">Ark::TypeError</a></div><div class="ttdoc">A type error triggered when types don&#39;t match. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00024">Exceptions.hpp:24</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -344,9 +343,9 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">Value</a>(<a class="code" href="namespace_ark_1_1_utils.html#a08fab59297a574abc8a37a6d46eebacb">Ark::Utils::readFile</a>(filename));</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
-<div class="ttc" id="namespace_ark_1_1_utils_html_a1e2624f09a9e767e1792b69b879aa73f"><div class="ttname"><a href="namespace_ark_1_1_utils.html#a1e2624f09a9e767e1792b69b879aa73f">Ark::Utils::fileExists</a></div><div class="ttdeci">bool fileExists(const std::string &amp;name) noexcept</div><div class="ttdoc">Checks if a file exists. </div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00156">Utils.hpp:156</a></div></div>
-<div class="ttc" id="namespace_ark_html_a78cf7bec8c2cee4247c5efa4b1e4aa9c"><div class="ttname"><a href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">Ark::Value</a></div><div class="ttdeci">internal::Value Value</div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00266">VM.hpp:266</a></div></div>
-<div class="ttc" id="namespace_ark_1_1_utils_html_a08fab59297a574abc8a37a6d46eebacb"><div class="ttname"><a href="namespace_ark_1_1_utils.html#a08fab59297a574abc8a37a6d46eebacb">Ark::Utils::readFile</a></div><div class="ttdeci">std::string readFile(const std::string &amp;name)</div><div class="ttdoc">Helper to read a file. </div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00175">Utils.hpp:175</a></div></div>
+<div class="ttc" id="namespace_ark_1_1_utils_html_a1e2624f09a9e767e1792b69b879aa73f"><div class="ttname"><a href="namespace_ark_1_1_utils.html#a1e2624f09a9e767e1792b69b879aa73f">Ark::Utils::fileExists</a></div><div class="ttdeci">bool fileExists(const std::string &amp;name) noexcept</div><div class="ttdoc">Checks if a file exists. </div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00141">Utils.hpp:141</a></div></div>
+<div class="ttc" id="namespace_ark_html_a78cf7bec8c2cee4247c5efa4b1e4aa9c"><div class="ttname"><a href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">Ark::Value</a></div><div class="ttdeci">internal::Value Value</div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00285">VM.hpp:285</a></div></div>
+<div class="ttc" id="namespace_ark_1_1_utils_html_a08fab59297a574abc8a37a6d46eebacb"><div class="ttname"><a href="namespace_ark_1_1_utils.html#a08fab59297a574abc8a37a6d46eebacb">Ark::Utils::readFile</a></div><div class="ttdeci">std::string readFile(const std::string &amp;name)</div><div class="ttdoc">Helper to read a file. </div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00160">Utils.hpp:160</a></div></div>
 <div class="ttc" id="class_ark_1_1_type_error_html"><div class="ttname"><a href="class_ark_1_1_type_error.html">Ark::TypeError</a></div><div class="ttdoc">A type error triggered when types don&#39;t match. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00024">Exceptions.hpp:24</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -384,7 +383,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespace_ark_1_1_utils.html#a1e2624f09a9e767e1792b69b879aa73f">Ark::Utils::fileExists</a>(n[0].<span class="keywordtype">string</span>().c_str()) ? <a class="code" href="namespace_ark_1_1internal_1_1_builtins.html#ac42d5de362d48803ef2a49f7f1e21e98">trueSym</a> : <a class="code" href="namespace_ark_1_1internal_1_1_builtins.html#a50c50c475a29822fe85e5c16b91c9015">falseSym</a>;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
-<div class="ttc" id="namespace_ark_1_1_utils_html_a1e2624f09a9e767e1792b69b879aa73f"><div class="ttname"><a href="namespace_ark_1_1_utils.html#a1e2624f09a9e767e1792b69b879aa73f">Ark::Utils::fileExists</a></div><div class="ttdeci">bool fileExists(const std::string &amp;name) noexcept</div><div class="ttdoc">Checks if a file exists. </div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00156">Utils.hpp:156</a></div></div>
+<div class="ttc" id="namespace_ark_1_1_utils_html_a1e2624f09a9e767e1792b69b879aa73f"><div class="ttname"><a href="namespace_ark_1_1_utils.html#a1e2624f09a9e767e1792b69b879aa73f">Ark::Utils::fileExists</a></div><div class="ttdeci">bool fileExists(const std::string &amp;name) noexcept</div><div class="ttdoc">Checks if a file exists. </div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00141">Utils.hpp:141</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_1_1_builtins_html_a50c50c475a29822fe85e5c16b91c9015"><div class="ttname"><a href="namespace_ark_1_1internal_1_1_builtins.html#a50c50c475a29822fe85e5c16b91c9015">Ark::internal::Builtins::falseSym</a></div><div class="ttdeci">const Value falseSym</div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8cpp_source.html#l00011">Builtins.cpp:11</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_1_1_builtins_html_ac42d5de362d48803ef2a49f7f1e21e98"><div class="ttname"><a href="namespace_ark_1_1internal_1_1_builtins.html#ac42d5de362d48803ef2a49f7f1e21e98">Ark::internal::Builtins::trueSym</a></div><div class="ttdeci">const Value trueSym</div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8cpp_source.html#l00012">Builtins.cpp:12</a></div></div>
 <div class="ttc" id="class_ark_1_1_type_error_html"><div class="ttname"><a href="class_ark_1_1_type_error.html">Ark::TypeError</a></div><div class="ttdoc">A type error triggered when types don&#39;t match. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00024">Exceptions.hpp:24</a></div></div>
@@ -428,7 +427,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">Value</a>(std::move(r));</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
-<div class="ttc" id="namespace_ark_html_a78cf7bec8c2cee4247c5efa4b1e4aa9c"><div class="ttname"><a href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">Ark::Value</a></div><div class="ttdeci">internal::Value Value</div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00266">VM.hpp:266</a></div></div>
+<div class="ttc" id="namespace_ark_html_a78cf7bec8c2cee4247c5efa4b1e4aa9c"><div class="ttname"><a href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">Ark::Value</a></div><div class="ttdeci">internal::Value Value</div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00285">VM.hpp:285</a></div></div>
 <div class="ttc" id="class_ark_1_1_type_error_html"><div class="ttname"><a href="class_ark_1_1_type_error.html">Ark::TypeError</a></div><div class="ttdoc">A type error triggered when types don&#39;t match. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00024">Exceptions.hpp:24</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -557,7 +556,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 17 2021 12:54:19 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 30 2021 16:41:25 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

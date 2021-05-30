@@ -2,8 +2,7 @@ var searchData=
 [
   ['saferun',['safeRun',['../class_ark_1_1_v_m.html#a8c19cbd581697a9d7e4c7088fa35138c',1,'Ark::VM']]],
   ['saveto',['saveTo',['../class_ark_1_1_compiler.html#ad27a872a5235bf0ae6531b94397507c4',1,'Ark::Compiler']]],
-  ['scope',['scope',['../class_ark_1_1internal_1_1_closure.html#a5ded29994e12ed7135572bd5433d6a3e',1,'Ark::internal::Closure::scope()'],['../class_ark_1_1internal_1_1_scope.html#ae29d1667b0da6e9749abd541cbd9d65e',1,'Ark::internal::Scope::Scope()']]],
-  ['scope_5fref',['scope_ref',['../class_ark_1_1internal_1_1_closure.html#a8f73825daf4555a2281a874de3510fe2',1,'Ark::internal::Closure']]],
+  ['scope',['Scope',['../class_ark_1_1internal_1_1_scope.html#ae29d1667b0da6e9749abd541cbd9d65e',1,'Ark::internal::Scope::Scope()'],['../class_ark_1_1internal_1_1_closure.html#a5ded29994e12ed7135572bd5433d6a3e',1,'Ark::internal::Closure::scope()']]],
   ['seekfile',['seekFile',['../class_ark_1_1_parser.html#a60c38a43f1771b681dc5c6990b7a65d9',1,'Ark::Parser']]],
   ['setargs',['setArgs',['../class_ark_1_1_state.html#aa852b784bc447702c336b05ffddcaa98',1,'Ark::State']]],
   ['setconst',['setConst',['../class_ark_1_1internal_1_1_value.html#afc370e460c3a3e2f42b6826f4a17e035',1,'Ark::internal::Value']]],
@@ -11,7 +10,6 @@ var searchData=
   ['setdebug',['setDebug',['../class_ark_1_1_state.html#ad1dbcc1d68374da8d09433aadb3a7b05',1,'Ark::State']]],
   ['setfilename',['setFilename',['../class_ark_1_1internal_1_1_node.html#a718bcc9c6517f71168c61daf71c525aa',1,'Ark::internal::Node']]],
   ['setkeyword',['setKeyword',['../class_ark_1_1internal_1_1_node.html#a344761bb47a165e75dc242cfd07254f9',1,'Ark::internal::Node']]],
-  ['setlevel',['setLevel',['../class_ark_1_1_logger.html#af67cb5fb850680f6614f8de89fef35c0',1,'Ark::Logger']]],
   ['setlibdir',['setLibDir',['../class_ark_1_1_state.html#a91a6395162c1ee277731c100a7513ddf',1,'Ark::State']]],
   ['setlistat',['setListAt',['../namespace_ark_1_1internal_1_1_builtins_1_1_list.html#a195a97b4124963c33a12ee7db3e900e8',1,'Ark::internal::Builtins::List']]],
   ['setnodetype',['setNodeType',['../class_ark_1_1internal_1_1_node.html#a20cf4b5aaeaa1e21f6eb681733d7c920',1,'Ark::internal::Node']]],
@@ -28,10 +26,11 @@ var searchData=
   ['splitstring',['splitString',['../namespace_ark_1_1_utils.html#a36bb5c3af2b0d286e35514a0fc21590b',1,'Ark::Utils']]],
   ['state',['State',['../class_ark_1_1_state.html#a4ce60250b6ece57bea02fff82994ce0e',1,'Ark::State']]],
   ['string',['string',['../class_ark_1_1internal_1_1_node.html#a2f4471104ade54106ab85f46fd5e708c',1,'Ark::internal::Node::string()'],['../class_ark_1_1internal_1_1_value.html#ab6b4d2ca6a2bfb9a18502e0a8aa651e6',1,'Ark::internal::Value::string()']]],
-  ['string_5fref',['string_ref',['../class_ark_1_1internal_1_1_value.html#ac8be305de83703ad76ed629424bbc44b',1,'Ark::internal::Value']]],
+  ['stringref',['stringRef',['../class_ark_1_1internal_1_1_value.html#aac6d4642fc8aed24685e58120a51be70',1,'Ark::internal::Value']]],
   ['stringreplaceall',['stringReplaceAll',['../namespace_ark_1_1_utils.html#a42d877db7a8408435fc4d1e09ae81972',1,'Ark::Utils']]],
-  ['success',['success',['../class_ark_1_1_logger.html#a84c6f59aa5ac0c6903265c84044c5253',1,'Ark::Logger']]],
   ['sugar',['sugar',['../class_ark_1_1_parser.html#a1f6e282dcbcb45f0f3b83c74693a9a07',1,'Ark::Parser']]],
+  ['swapstackforfuncall',['swapStackForFunCall',['../class_ark_1_1_v_m.html#a0752b3a390d8cb1bc774f64db19bcb69',1,'Ark::VM']]],
+  ['symbolexecutor',['SymbolExecutor',['../class_ark_1_1internal_1_1_symbol_executor.html#adedecdaa6c93f60e601c4673bdaeceda',1,'Ark::internal::SymbolExecutor']]],
   ['syntaxerror',['SyntaxError',['../class_ark_1_1_syntax_error.html#a59dc82fb880dd8e3a049cfdde7305d81',1,'Ark::SyntaxError']]],
   ['system_5f',['system_',['../namespace_ark_1_1internal_1_1_builtins_1_1_system.html#a629e7c07ca9563c02f257c67306b526e',1,'Ark::internal::Builtins::System']]]
 ];

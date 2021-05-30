@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['tailof',['TAILOF',['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa3be34259b6312bc0295d3936f8b3a9c9',1,'Ark::internal']]],
+  ['tail',['TAIL',['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780faba6b55e08dff6039159ac458b4ef458c',1,'Ark::internal']]],
   ['tan_5f',['tan_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a6c855edc18ac99e314b4678fe639597b',1,'Ark::internal::Builtins::Mathematics']]],
   ['tau_5f',['tau_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a8ce8e0ebded8592d52db484cdff7a0f9',1,'Ark::internal::Builtins::Mathematics']]],
   ['throwcompilererror',['throwCompilerError',['../class_ark_1_1_compiler.html#ac71ac4031b100fbcf9311ea89ad66930',1,'Ark::Compiler']]],
+  ['throwmacroprocessingerror',['throwMacroProcessingError',['../class_ark_1_1internal_1_1_macro_executor.html#a8d482429d4abd29c3ea405bf506a92c5',1,'Ark::internal::MacroExecutor::throwMacroProcessingError()'],['../class_ark_1_1internal_1_1_macro_processor.html#aa54ef47d50242ea4ab59a23669dd8399',1,'Ark::internal::MacroProcessor::throwMacroProcessingError()']]],
   ['throwoptimizererror',['throwOptimizerError',['../class_ark_1_1_optimizer.html#a753252ac29d03ec1edc8133f81aae171',1,'Ark::Optimizer']]],
   ['throwparseerror',['throwParseError',['../class_ark_1_1_parser.html#ae33843e684469dd3e924fd991e36c773',1,'Ark::Parser']]],
   ['throwparseerror_5f',['throwParseError_',['../class_ark_1_1_parser.html#a24a70912995817ba00a9b2e0aef053b7',1,'Ark::Parser']]],
@@ -17,17 +18,17 @@ var searchData=
   ['to_5fstr',['TO_STR',['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fac5b48140324365f43e9cea1365a133c7',1,'Ark::internal']]],
   ['todo_20list',['Todo List',['../todo.html',1,'']]],
   ['token',['Token',['../struct_ark_1_1internal_1_1_token.html',1,'Ark::internal']]],
-  ['token',['Token',['../struct_ark_1_1internal_1_1_token.html#a9323fd1112cd5f46dace3c0bbba1115f',1,'Ark::internal::Token::Token()=default'],['../struct_ark_1_1internal_1_1_token.html#a4072984bc6f2746998ef49fe2b76cbde',1,'Ark::internal::Token::Token(TokenType type, const std::string &amp;tok, std::size_t line, std::size_t col) noexcept'],['../struct_ark_1_1internal_1_1_token.html#ae91bd2e255ba33ebb8fb3afbce33f56f',1,'Ark::internal::Token::Token(const Token &amp;)=default'],['../struct_ark_1_1internal_1_1_token.html#ac19490b6ef33cbf6a1d15b7a5ddcf255',1,'Ark::internal::Token::token()']]],
-  ['tokens',['tokens',['../class_ark_1_1internal_1_1_lexer.html#aad707866c8ba3f303e706785545dd784',1,'Ark::internal::Lexer']]],
+  ['token',['token',['../struct_ark_1_1internal_1_1_token.html#ac19490b6ef33cbf6a1d15b7a5ddcf255',1,'Ark::internal::Token::token()'],['../struct_ark_1_1internal_1_1_token.html#a9323fd1112cd5f46dace3c0bbba1115f',1,'Ark::internal::Token::Token()=default'],['../struct_ark_1_1internal_1_1_token.html#a4072984bc6f2746998ef49fe2b76cbde',1,'Ark::internal::Token::Token(TokenType type, const std::string &amp;tok, std::size_t line, std::size_t col) noexcept'],['../struct_ark_1_1internal_1_1_token.html#ae91bd2e255ba33ebb8fb3afbce33f56f',1,'Ark::internal::Token::Token(const Token &amp;)=default']]],
+  ['tokens',['tokens',['../class_ark_1_1internal_1_1_lexer.html#a5429dd76ebc94c37cb9a6aa5513b1868',1,'Ark::internal::Lexer']]],
   ['tokentype',['TokenType',['../namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfb',1,'Ark::internal']]],
   ['tokentype_5fstring',['tokentype_string',['../namespace_ark_1_1internal.html#af539f8120cb8faea3bf7d6a07ff0615e',1,'Ark::internal']]],
-  ['tostring',['toString',['../namespace_ark_1_1_utils.html#acf273f8770ae1e42c20d81ab978e8c24',1,'Ark::Utils']]],
   ['trim_5fwhitespace',['trim_whitespace',['../class_ark_1_1_repl.html#aae632d83377be52ae3c574998e499cff',1,'Ark::Repl']]],
   ['true',['True',['../namespace_ark.html#a496e7ab83c7d6a21935c4e996785785f',1,'Ark::True()'],['../namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8af827cf462f62848df37c5e1e94a4da74',1,'Ark::internal::True()']]],
+  ['truenode',['TrueNode',['../class_ark_1_1internal_1_1_node.html#a4693baae42900acb7d2511ea0c1b9d6a',1,'Ark::internal::Node']]],
   ['truesym',['trueSym',['../namespace_ark_1_1internal_1_1_builtins.html#ac42d5de362d48803ef2a49f7f1e21e98',1,'Ark::internal::Builtins']]],
   ['type',['type',['../struct_ark_1_1internal_1_1_c_value.html#adf6b92d0fb266c3203717f5528ddc147',1,'Ark::internal::CValue::type()'],['../struct_ark_1_1internal_1_1_token.html#a9aae1b9f04f66f43262a2811470e4ee6',1,'Ark::internal::Token::type()'],['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa0abc5673fb17135485f15875ac434137',1,'Ark::internal::TYPE()']]],
-  ['typeerror',['TypeError',['../class_ark_1_1_type_error.html#aa44342e2632cde168e73aef6754047a0',1,'Ark::TypeError']]],
   ['typeerror',['TypeError',['../class_ark_1_1_type_error.html',1,'Ark']]],
+  ['typeerror',['TypeError',['../class_ark_1_1_type_error.html#aa44342e2632cde168e73aef6754047a0',1,'Ark::TypeError']]],
   ['types_2ehpp',['Types.hpp',['../_types_8hpp.html',1,'']]],
   ['types_5fto_5fstr',['types_to_str',['../namespace_ark_1_1internal.html#a39673c5b45dab135d681a754d23a2756',1,'Ark::internal']]]
 ];

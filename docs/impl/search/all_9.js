@@ -5,8 +5,7 @@ var searchData=
   ['if',['If',['../namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a786887572f6ef1c20f2d8177cb2f1639',1,'Ark::internal']]],
   ['import',['Import',['../namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a72d6d7a1885885bb55a565fd1070581a',1,'Ark::internal']]],
   ['inf_5f',['inf_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a7398662d9e3d1a1c2b9dfcf2640f59d6',1,'Ark::internal::Builtins::Mathematics']]],
-  ['info',['info',['../class_ark_1_1_logger.html#a303adddddc7c05e39d7f7253f097701a',1,'Ark::Logger']]],
-  ['init',['init',['../class_ark_1_1_v_m.html#ae0749e81e975e0d1a92c2d89995e50f0',1,'Ark::VM']]],
+  ['init',['init',['../class_ark_1_1internal_1_1_node.html#a0af1d77329a4061a552a1e7ac478998c',1,'Ark::internal::Node::init()'],['../class_ark_1_1_v_m.html#ae0749e81e975e0d1a92c2d89995e50f0',1,'Ark::VM::init()']]],
   ['init_5fconst_5ftype',['init_const_type',['../_value_8cpp.html#a88143a99bed655da1f79c230ba9c9e30',1,'Value.cpp']]],
   ['input',['input',['../namespace_ark_1_1internal_1_1_builtins_1_1_i_o.html#a0cd87f66042331cfdfee284df2568d0f',1,'Ark::internal::Builtins::IO']]],
   ['insert_5fpair',['insert_pair',['../_scope_8cpp.html#acf703166101a9a69806c5044f7c4248e',1,'Scope.cpp']]],
@@ -29,6 +28,8 @@ var searchData=
   ['isnan_5f',['isnan_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a98cebc925b869fdf02dc4d5ba4ac7143',1,'Ark::internal::Builtins::Mathematics']]],
   ['isnil',['ISNIL',['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa47216d8ba3f558c69fa591de825321d4',1,'Ark::internal']]],
   ['isoperator',['isOperator',['../class_ark_1_1_compiler.html#aedba0902a0474a0916fc54c134a1aff0',1,'Ark::Compiler::isOperator()'],['../class_ark_1_1internal_1_1_lexer.html#ab0bd674e07ea972da9fdbee81112d7e4',1,'Ark::internal::Lexer::isOperator()']]],
+  ['ispredefined',['isPredefined',['../class_ark_1_1internal_1_1_macro_executor.html#add7338bad4db868807b2f9e9ca24d6e3',1,'Ark::internal::MacroExecutor::isPredefined()'],['../class_ark_1_1internal_1_1_macro_processor.html#abdc1384681bb70e9e53ea66b1f325063',1,'Ark::internal::MacroProcessor::isPredefined()']]],
+  ['istruthy',['isTruthy',['../class_ark_1_1internal_1_1_macro_executor.html#a84e42959721a5c84f6fae6bf572b11ad',1,'Ark::internal::MacroExecutor::isTruthy()'],['../class_ark_1_1internal_1_1_macro_processor.html#a9913e292f95d6211828e21b01e83d1aa',1,'Ark::internal::MacroProcessor::isTruthy()']]],
   ['iterator',['Iterator',['../class_ark_1_1internal_1_1_node.html#acb51b539cbe2a7e737e63f8b3a7da94a',1,'Ark::internal::Node::Iterator()'],['../class_ark_1_1internal_1_1_value.html#ab6dc81de246e8b196f0bab5e941b3797',1,'Ark::internal::Value::Iterator()']]],
   ['value',['Value',['../class_ark_1_1_v_m.html#ab3fe719a7c2b6510e89d4ffeb341f856',1,'Ark::VM']]]
 ];

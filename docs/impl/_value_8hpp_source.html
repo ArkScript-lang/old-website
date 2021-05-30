@@ -91,8 +91,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="_value_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef ark_vm_value</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define ark_vm_value</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef ARK_VM_VALUE_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define ARK_VM_VALUE_HPP</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#ifndef USE_MPARK</span></div>
@@ -111,52 +111,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;Ark/String.hpp&gt;</span>  <span class="comment">// our string implementation</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span>  <span class="comment">// strcmp</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_types_8hpp.html">Ark/VM/Types.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_closure_8hpp.html">Ark/VM/Closure.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_exceptions_8hpp.html">Ark/Exceptions.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_user_type_8hpp.html">Ark/VM/UserType.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_config_8hpp.html">Ark/Config.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_profiling_8hpp.html">Ark/Profiling.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark.html">Ark</a></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">class </span>VM;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark_1_1internal.html">Ark::internal</a></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// Note from the creator: we can have at most 0b01111111 (127) different types</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// because type index is stored on the 7 right most bits of a uint8_t in the class Value.</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">// Order is also important because we are doing some optimizations to check ranges</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">// of types based on their integer values.</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8">   53</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8">ValueType</a></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca4ee29ca12c7d126654bd0e5275de6135">List</a>      = 0,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f">Number</a>    = 1,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98">String</a>    = 2,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a6666eaba81f13e74d10ac1a9c9d6d7b1">PageAddr</a>  = 3,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8a78c1e09380f2f8ea572cd59c5cd4bc92">CProc</a>     = 4,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_closure.html">Closure</a>   = 5,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8a8f9bfe9d1345237cb3b2b205864da075">User</a>      = 6,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8a4da8b7eb2c3f2007cf8238334401ef51">Nil</a>       = 7,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8af827cf462f62848df37c5e1e94a4da74">True</a>      = 8,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8af8320b26d30ab433c5a54546d21f414c">False</a>     = 9,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8aec0fc0100c4fc1ce4eea230c3dc10360">Undefined</a> = 10,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8a63d5049791d9d79d86e9a108b0a999ca">Reference</a> = 11,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8adf754f9ba8524ed3333ec938d0636862">InstPtr</a>   = 12</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    };</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="namespace_ark_1_1internal.html#a39673c5b45dab135d681a754d23a2756">   71</a></span>&#160;    <span class="keyword">const</span> std::array&lt;std::string, 13&gt; <a class="code" href="namespace_ark_1_1internal.html#a39673c5b45dab135d681a754d23a2756">types_to_str</a> = {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="stringliteral">&quot;List&quot;</span>,  <span class="stringliteral">&quot;Number&quot;</span>,  <span class="stringliteral">&quot;String&quot;</span>,    <span class="stringliteral">&quot;Function&quot;</span>,</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="stringliteral">&quot;CProc&quot;</span>, <span class="stringliteral">&quot;Closure&quot;</span>, <span class="stringliteral">&quot;UserType&quot;</span>,  <span class="stringliteral">&quot;Nil&quot;</span>,</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="stringliteral">&quot;Bool&quot;</span>,  <span class="stringliteral">&quot;Bool&quot;</span>,    <span class="stringliteral">&quot;Undefined&quot;</span>, <span class="stringliteral">&quot;Reference&quot;</span>,</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="stringliteral">&quot;InstPtr&quot;</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    };</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_types_8hpp.html">Ark/VM/Types.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_closure_8hpp.html">Ark/VM/Closure.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_exceptions_8hpp.html">Ark/Exceptions.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_user_type_8hpp.html">Ark/VM/UserType.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_config_8hpp.html">Ark/Config.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_profiling_8hpp.html">Ark/Profiling.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark.html">Ark</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">class </span>VM;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark_1_1internal.html">Ark::internal</a></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// Note from the creator: we can have at most 0b01111111 (127) different types</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// because type index is stored on the 7 right most bits of a uint8_t in the class Value.</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// Order is also important because we are doing some optimizations to check ranges</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">// of types based on their integer values.</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8">   52</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8">ValueType</a></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca4ee29ca12c7d126654bd0e5275de6135">List</a>      = 0,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f">Number</a>    = 1,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98">String</a>    = 2,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a6666eaba81f13e74d10ac1a9c9d6d7b1">PageAddr</a>  = 3,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8a78c1e09380f2f8ea572cd59c5cd4bc92">CProc</a>     = 4,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_closure.html">Closure</a>   = 5,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8a8f9bfe9d1345237cb3b2b205864da075">User</a>      = 6,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8a4da8b7eb2c3f2007cf8238334401ef51">Nil</a>       = 7,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8af827cf462f62848df37c5e1e94a4da74">True</a>      = 8,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8af8320b26d30ab433c5a54546d21f414c">False</a>     = 9,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8aec0fc0100c4fc1ce4eea230c3dc10360">Undefined</a> = 10,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8a63d5049791d9d79d86e9a108b0a999ca">Reference</a> = 11,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8adf754f9ba8524ed3333ec938d0636862">InstPtr</a>   = 12</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    };</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="namespace_ark_1_1internal.html#a39673c5b45dab135d681a754d23a2756">   70</a></span>&#160;    <span class="keyword">const</span> std::array&lt;std::string, 13&gt; <a class="code" href="namespace_ark_1_1internal.html#a39673c5b45dab135d681a754d23a2756">types_to_str</a> = {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="stringliteral">&quot;List&quot;</span>,  <span class="stringliteral">&quot;Number&quot;</span>,  <span class="stringliteral">&quot;String&quot;</span>,    <span class="stringliteral">&quot;Function&quot;</span>,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="stringliteral">&quot;CProc&quot;</span>, <span class="stringliteral">&quot;Closure&quot;</span>, <span class="stringliteral">&quot;UserType&quot;</span>,  <span class="stringliteral">&quot;Nil&quot;</span>,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="stringliteral">&quot;Bool&quot;</span>,  <span class="stringliteral">&quot;Bool&quot;</span>,    <span class="stringliteral">&quot;Undefined&quot;</span>, <span class="stringliteral">&quot;Reference&quot;</span>,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="stringliteral">&quot;InstPtr&quot;</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    };</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">// for debugging purposes only</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#ifdef ARK_PROFILER_COUNT</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">extern</span> <span class="keywordtype">unsigned</span> value_creations, value_copies, value_moves;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
@@ -186,7 +186,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        template&lt;typename T&gt;</div>
 <div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_value.html#ae6aee8a0015395b98f5473752c3c439f">  124</a></span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_value.html">Value</a>(<a class="code" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8">ValueType</a> type, T&amp;&amp; value) noexcept :</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            m_constType(static_cast&lt;uint8_t&gt;(type)),</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            m_const_type(static_cast&lt;uint8_t&gt;(type)),</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            m_value(value)</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        {}</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
@@ -228,15 +228,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        inline const String&amp; <span class="keywordtype">string</span>() const;</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        inline const std::vector&lt;<a class="code" href="class_ark_1_1internal_1_1_value.html">Value</a>&gt;&amp; const_list() const;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        inline const std::vector&lt;<a class="code" href="class_ark_1_1internal_1_1_value.html">Value</a>&gt;&amp; constList() const;</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        inline const UserType&amp; usertype() const;</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        std::vector&lt;<a class="code" href="class_ark_1_1internal_1_1_value.html">Value</a>&gt;&amp; list();</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        String&amp; string_ref();</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        String&amp; stringRef();</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        UserType&amp; usertype_ref();</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        UserType&amp; usertypeRef();</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_value.html">Value</a>* reference() const;</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
@@ -252,7 +252,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00309"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_value.html#af87a0b637b3d1bef0deaebc4bdd4c777">  309</a></span>&#160;        friend class <a class="code" href="namespace_ark.html">Ark</a>::<a class="code" href="class_ark_1_1_v_m.html">VM</a>;</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    private:</div>
-<div class="line"><a name="l00312"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_value.html#abea71efa1fa6c9f3e8c22dbcb4e2d2d6">  312</a></span>&#160;        uint8_t m_constType;  </div>
+<div class="line"><a name="l00312"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_value.html#ad7032a71a9b5499b111485dcb0526e59">  312</a></span>&#160;        uint8_t m_const_type;  </div>
 <div class="line"><a name="l00313"></a><span class="lineno"><a class="line" href="class_ark_1_1internal_1_1_value.html#ad5061f22733c4690882b0fcbbc9078e0">  313</a></span>&#160;        <a class="code" href="class_ark_1_1internal_1_1_value.html#a95ce7d487f22936b672de326a3c40dbe">Value_t</a> m_value;</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="comment">// private getters only for the virtual machine</span></div>
@@ -263,7 +263,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        inline const internal::Closure&amp; closure() const;</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        internal::Closure&amp; closure_ref();</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        internal::Closure&amp; refClosure();</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        inline const <span class="keywordtype">bool</span> isConst() const noexcept;</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
@@ -274,7 +274,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;}</div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="namespace_ark_1_1internal_html_a39673c5b45dab135d681a754d23a2756"><div class="ttname"><a href="namespace_ark_1_1internal.html#a39673c5b45dab135d681a754d23a2756">Ark::internal::types_to_str</a></div><div class="ttdeci">const std::array&lt; std::string, 13 &gt; types_to_str</div><div class="ttdef"><b>Definition:</b> <a href="_value_8hpp_source.html#l00071">Value.hpp:71</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_a39673c5b45dab135d681a754d23a2756"><div class="ttname"><a href="namespace_ark_1_1internal.html#a39673c5b45dab135d681a754d23a2756">Ark::internal::types_to_str</a></div><div class="ttdeci">const std::array&lt; std::string, 13 &gt; types_to_str</div><div class="ttdef"><b>Definition:</b> <a href="_value_8hpp_source.html#l00070">Value.hpp:70</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_value_html_ab2184c23b292028e5dc5f26931cbe10f"><div class="ttname"><a href="class_ark_1_1internal_1_1_value.html#ab2184c23b292028e5dc5f26931cbe10f">Ark::internal::Value::ConstIterator</a></div><div class="ttdeci">std::vector&lt; Value &gt;::const_iterator ConstIterator</div><div class="ttdef"><b>Definition:</b> <a href="_value_8hpp_source.html#l00087">Value.hpp:87</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_abfe0e7f68892a575080e21f06e84bfe8a8f9bfe9d1345237cb3b2b205864da075"><div class="ttname"><a href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8a8f9bfe9d1345237cb3b2b205864da075">Ark::internal::ValueType::User</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_abfe0e7f68892a575080e21f06e84bfe8a63d5049791d9d79d86e9a108b0a999ca"><div class="ttname"><a href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8a63d5049791d9d79d86e9a108b0a999ca">Ark::internal::ValueType::Reference</a></div></div>
@@ -285,7 +285,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_ark_1_1_user_type_html"><div class="ttname"><a href="class_ark_1_1_user_type.html">Ark::UserType</a></div><div class="ttdoc">A class to be use C++ objects in ArkScript. </div><div class="ttdef"><b>Definition:</b> <a href="_user_type_8hpp_source.html#l00029">UserType.hpp:29</a></div></div>
 <div class="ttc" id="_closure_8hpp_html"><div class="ttname"><a href="_closure_8hpp.html">Closure.hpp</a></div><div class="ttdoc">Subtype of the value type, handling closures. </div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_a5300c6c0596db0a5a8f5b62d4d42ce4caaf4bb376939e77df0e7c2332b837a866"><div class="ttname"><a href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4caaf4bb376939e77df0e7c2332b837a866">Ark::internal::NodeType::Closure</a></div></div>
-<div class="ttc" id="namespace_ark_html_a78cf7bec8c2cee4247c5efa4b1e4aa9c"><div class="ttname"><a href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">Ark::Value</a></div><div class="ttdeci">internal::Value Value</div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00266">VM.hpp:266</a></div></div>
+<div class="ttc" id="namespace_ark_html_a78cf7bec8c2cee4247c5efa4b1e4aa9c"><div class="ttname"><a href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">Ark::Value</a></div><div class="ttdeci">internal::Value Value</div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00285">VM.hpp:285</a></div></div>
 <div class="ttc" id="_config_8hpp_html_a8df3feacb839d0a55cfa11e158752758"><div class="ttname"><a href="_config_8hpp.html#a8df3feacb839d0a55cfa11e158752758">ARK_API_EXPORT</a></div><div class="ttdeci">#define ARK_API_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="_config_8hpp_source.html#l00039">Config.hpp:39</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_value_html_ab6dc81de246e8b196f0bab5e941b3797"><div class="ttname"><a href="class_ark_1_1internal_1_1_value.html#ab6dc81de246e8b196f0bab5e941b3797">Ark::internal::Value::Iterator</a></div><div class="ttdeci">std::vector&lt; Value &gt;::iterator Iterator</div><div class="ttdef"><b>Definition:</b> <a href="_value_8hpp_source.html#l00086">Value.hpp:86</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_abfe0e7f68892a575080e21f06e84bfe8a4da8b7eb2c3f2007cf8238334401ef51"><div class="ttname"><a href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8a4da8b7eb2c3f2007cf8238334401ef51">Ark::internal::ValueType::Nil</a></div></div>
@@ -303,16 +303,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="_value_8hpp_html_a6f97ef87ba50c690969338e4d43d3975"><div class="ttname"><a href="_value_8hpp.html#a6f97ef87ba50c690969338e4d43d3975">variant_t</a></div><div class="ttdeci">#define variant_t</div><div class="ttdef"><b>Definition:</b> <a href="_value_8hpp_source.html#l00018">Value.hpp:18</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_abfe0e7f68892a575080e21f06e84bfe8adf754f9ba8524ed3333ec938d0636862"><div class="ttname"><a href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8adf754f9ba8524ed3333ec938d0636862">Ark::internal::ValueType::InstPtr</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_abfe0e7f68892a575080e21f06e84bfe8af827cf462f62848df37c5e1e94a4da74"><div class="ttname"><a href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8af827cf462f62848df37c5e1e94a4da74">Ark::internal::ValueType::True</a></div></div>
-<div class="ttc" id="namespace_ark_1_1internal_html_abfe0e7f68892a575080e21f06e84bfe8"><div class="ttname"><a href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8">Ark::internal::ValueType</a></div><div class="ttdeci">ValueType</div><div class="ttdef"><b>Definition:</b> <a href="_value_8hpp_source.html#l00053">Value.hpp:53</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_abfe0e7f68892a575080e21f06e84bfe8"><div class="ttname"><a href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8">Ark::internal::ValueType</a></div><div class="ttdeci">ValueType</div><div class="ttdef"><b>Definition:</b> <a href="_value_8hpp_source.html#l00052">Value.hpp:52</a></div></div>
 <div class="ttc" id="_user_type_8hpp_html"><div class="ttname"><a href="_user_type_8hpp.html">UserType.hpp</a></div><div class="ttdoc">Subtype of the value, capable of handling any C++ type. </div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_abfe0e7f68892a575080e21f06e84bfe8aec0fc0100c4fc1ce4eea230c3dc10360"><div class="ttname"><a href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8aec0fc0100c4fc1ce4eea230c3dc10360">Ark::internal::ValueType::Undefined</a></div></div>
 <div class="ttc" id="namespace_ark_html"><div class="ttname"><a href="namespace_ark.html">Ark</a></div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8hpp_source.html#l00023">Builtins.hpp:23</a></div></div>
-<div class="ttc" id="class_ark_1_1_v_m_html"><div class="ttname"><a href="class_ark_1_1_v_m.html">Ark::VM</a></div><div class="ttdoc">The ArkScript virtual machine, executing ArkScript bytecode. </div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00047">VM.hpp:47</a></div></div>
+<div class="ttc" id="class_ark_1_1_v_m_html"><div class="ttname"><a href="class_ark_1_1_v_m.html">Ark::VM</a></div><div class="ttdoc">The ArkScript virtual machine, executing ArkScript bytecode. </div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00046">VM.hpp:46</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98"><div class="ttname"><a href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98">Ark::internal::CValueType::String</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 17 2021 12:54:15 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 30 2021 16:41:22 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['defaultfeatures',['DefaultFeatures',['../namespace_ark.html#a01bf99e888f59670c0508d83cc23ffd4',1,'Ark']]],
-  ['deleter',['deleter',['../struct_ark_1_1_user_type_1_1_control_funcs.html#ae16e8254044be4569e78b3ab0debf723',1,'Ark::UserType::ControlFuncs']]]
+  ['col',['col',['../struct_ark_1_1internal_1_1_token.html#a42d2f41c802e64550a346d89a7417210',1,'Ark::internal::Token']]],
+  ['colors',['colors',['../namespace_ark_1_1internal.html#a596c695cf00642e3dcbc019b9dc7c0ac',1,'Ark::internal']]],
+  ['colorsregexdict',['ColorsRegexDict',['../namespace_ark.html#a71dcd8d595df0a5cee8fb7477df9f54d',1,'Ark']]]
 ];

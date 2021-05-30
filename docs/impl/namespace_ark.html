@@ -115,8 +115,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_compiler.html">Compiler</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ArkScript bytecode compiler.  <a href="class_ark_1_1_compiler.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_logger.html">Logger</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A basic logger.  <a href="class_ark_1_1_logger.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_macro_processing_error.html">MacroProcessingError</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_ark_1_1_macro_processing_error.html" title="MacroProcessingError thrown by the compiler. ">MacroProcessingError</a> thrown by the compiler.  <a href="class_ark_1_1_macro_processing_error.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_optimizer.html">Optimizer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ArkScript AST optimizer.  <a href="class_ark_1_1_optimizer.html#details">More...</a><br /></td></tr>
@@ -165,32 +165,27 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:afa776c29439b830386e8220ccab402f4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4">BytecodeSegment</a> { <a class="el" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4ab1c94ca2fbc3e78fc30069c8d0f01680">BytecodeSegment::All</a>, 
+<tr class="memitem:afa776c29439b830386e8220ccab402f4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4">BytecodeSegment</a> { <br />
+&#160;&#160;<a class="el" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4ab1c94ca2fbc3e78fc30069c8d0f01680">BytecodeSegment::All</a>, 
 <a class="el" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4a5214a8a633c296d1d9d504fc54556692">BytecodeSegment::Symbols</a>, 
 <a class="el" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4ac82a6100dace2b41087ba6cf99a5976a">BytecodeSegment::Values</a>, 
-<a class="el" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4aca0dbad92a874b2f69b549293387925e">BytecodeSegment::Code</a>
+<a class="el" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4aca0dbad92a874b2f69b549293387925e">BytecodeSegment::Code</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4a763b156a072fb9d37024c87537552764">BytecodeSegment::HeadersOnly</a>
+<br />
  }</td></tr>
 <tr class="separator:afa776c29439b830386e8220ccab402f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac788a16dcad2f3354aa90ebb4ff4fcb1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#ac788a16dcad2f3354aa90ebb4ff4fcb1">LogLevel</a> { <a class="el" href="namespace_ark.html#ac788a16dcad2f3354aa90ebb4ff4fcb1a97f23c6c22adf444e315c346bfdb2fb4">LogLevel::Dont</a>, 
-<a class="el" href="namespace_ark.html#ac788a16dcad2f3354aa90ebb4ff4fcb1a960b44c579bc2f6818d2daaf9e4c16f0">LogLevel::Normal</a>
- }</td></tr>
-<tr class="separator:ac788a16dcad2f3354aa90ebb4ff4fcb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27bb67360ba8845f6ab7241df9ca909e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909e">LogColor</a> { <br />
-&#160;&#160;<a class="el" href="namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909eae6662662a3f90aa497566c9b4a32f2f7">LogColor::Nope</a>, 
-<a class="el" href="namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909eaee38e4d5dd68c4e440825018d549cb47">LogColor::Red</a>, 
-<a class="el" href="namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909ea9594eec95be70e7b1710f730fdda33d9">LogColor::Blue</a>, 
-<a class="el" href="namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909ead382816a3cbeed082c9e216e7392eed1">LogColor::Green</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909ea51e6cd92b6c45f9affdc158ecca2b8b8">LogColor::Yellow</a>, 
-<a class="el" href="namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909eab91cc2c1416fcca942b61c7ac5b1a9ac">LogColor::Magenta</a>
-<br />
- }</td></tr>
-<tr class="separator:a27bb67360ba8845f6ab7241df9ca909e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ab3598fa5ef3f86a50a81dd75c87850c6"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#ab3598fa5ef3f86a50a81dd75c87850c6">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="class_ark_1_1_parser.html">Parser</a> &amp;P) noexcept</td></tr>
 <tr class="separator:ab3598fa5ef3f86a50a81dd75c87850c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb0a9f9c9e76fd48b12aea9cadd82d07"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#afb0a9f9c9e76fd48b12aea9cadd82d07">operator==</a> (const <a class="el" href="class_ark_1_1_user_type.html">UserType</a> &amp;A, const <a class="el" href="class_ark_1_1_user_type.html">UserType</a> &amp;B) noexcept</td></tr>
+<tr class="separator:afb0a9f9c9e76fd48b12aea9cadd82d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca53d37b1c61260d7604ae196c5768bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#aca53d37b1c61260d7604ae196c5768bb">operator&lt;</a> (const <a class="el" href="class_ark_1_1_user_type.html">UserType</a> &amp;A, const <a class="el" href="class_ark_1_1_user_type.html">UserType</a> &amp;B) noexcept</td></tr>
+<tr class="separator:aca53d37b1c61260d7604ae196c5768bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b3ce9424bc3a81355cee7d9dabf3ed4"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a8b3ce9424bc3a81355cee7d9dabf3ed4">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="class_ark_1_1_user_type.html">UserType</a> &amp;A) noexcept</td></tr>
+<tr class="separator:a8b3ce9424bc3a81355cee7d9dabf3ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -202,12 +197,12 @@ Variables</h2></td></tr>
 <tr class="separator:aed352fcea78905393d0edd9e1ae1423d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01bf99e888f59670c0508d83cc23ffd4"><td class="memItemLeft" align="right" valign="top">constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a01bf99e888f59670c0508d83cc23ffd4">DefaultFeatures</a></td></tr>
 <tr class="separator:a01bf99e888f59670c0508d83cc23ffd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b4f2a2f677f4d1b7077c5792280b2df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ark_1_1_logger.html">Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a1b4f2a2f677f4d1b7077c5792280b2df">logger</a> = <a class="el" href="class_ark_1_1_logger.html">Logger</a>()</td></tr>
-<tr class="separator:a1b4f2a2f677f4d1b7077c5792280b2df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d6c64031ae03374faefd9c56a8f01e8"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a9d6c64031ae03374faefd9c56a8f01e8">KeywordsDict</a></td></tr>
 <tr class="separator:a9d6c64031ae03374faefd9c56a8f01e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71dcd8d595df0a5cee8fb7477df9f54d"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::pair&lt; std::string, Replxx::Color &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a71dcd8d595df0a5cee8fb7477df9f54d">ColorsRegexDict</a></td></tr>
 <tr class="separator:a71dcd8d595df0a5cee8fb7477df9f54d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6768a96bb577723257181ba91f7b9485"><td class="memItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a6768a96bb577723257181ba91f7b9485">ARK_STACK_SIZE</a> = 8192</td></tr>
+<tr class="separator:a6768a96bb577723257181ba91f7b9485"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f6137d90ab3f9eb176863172b1621d5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a6f6137d90ab3f9eb176863172b1621d5">Nil</a> = <a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a>(internal::ValueType::Nil)</td></tr>
 <tr class="memdesc:a6f6137d90ab3f9eb176863172b1621d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ArkScript Nil value.  <a href="#a6f6137d90ab3f9eb176863172b1621d5">More...</a><br /></td></tr>
 <tr class="separator:a6f6137d90ab3f9eb176863172b1621d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -243,7 +238,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00266">266</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00285">285</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
 
 </div>
 </div>
@@ -257,7 +252,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00267">267</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00286">286</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
 
 </div>
 </div>
@@ -288,6 +283,8 @@ Variables</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="afa776c29439b830386e8220ccab402f4aca0dbad92a874b2f69b549293387925e"></a>Code&#160;</td><td class="fielddoc">
 </td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afa776c29439b830386e8220ccab402f4a763b156a072fb9d37024c87537552764"></a>HeadersOnly&#160;</td><td class="fielddoc">
+</td></tr>
 </table>
 
 <p>Definition at line <a class="el" href="_bytecode_reader_8hpp_source.html#l00028">28</a> of file <a class="el" href="_bytecode_reader_8hpp_source.html">BytecodeReader.hpp</a>.</p>
@@ -295,96 +292,14 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4ab1c94ca2fbc3e78fc30069c8d0f01680">All</a>,</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4a5214a8a633c296d1d9d504fc54556692">Symbols</a>,</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4ac82a6100dace2b41087ba6cf99a5976a">Values</a>,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4aca0dbad92a874b2f69b549293387925e">Code</a></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    };</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4aca0dbad92a874b2f69b549293387925e">Code</a>,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="namespace_ark.html#afa776c29439b830386e8220ccab402f4a763b156a072fb9d37024c87537552764">HeadersOnly</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    };</div>
 <div class="ttc" id="namespace_ark_html_afa776c29439b830386e8220ccab402f4aca0dbad92a874b2f69b549293387925e"><div class="ttname"><a href="namespace_ark.html#afa776c29439b830386e8220ccab402f4aca0dbad92a874b2f69b549293387925e">Ark::BytecodeSegment::Code</a></div></div>
 <div class="ttc" id="namespace_ark_html_afa776c29439b830386e8220ccab402f4ab1c94ca2fbc3e78fc30069c8d0f01680"><div class="ttname"><a href="namespace_ark.html#afa776c29439b830386e8220ccab402f4ab1c94ca2fbc3e78fc30069c8d0f01680">Ark::BytecodeSegment::All</a></div></div>
+<div class="ttc" id="namespace_ark_html_afa776c29439b830386e8220ccab402f4a763b156a072fb9d37024c87537552764"><div class="ttname"><a href="namespace_ark.html#afa776c29439b830386e8220ccab402f4a763b156a072fb9d37024c87537552764">Ark::BytecodeSegment::HeadersOnly</a></div></div>
 <div class="ttc" id="namespace_ark_html_afa776c29439b830386e8220ccab402f4a5214a8a633c296d1d9d504fc54556692"><div class="ttname"><a href="namespace_ark.html#afa776c29439b830386e8220ccab402f4a5214a8a633c296d1d9d504fc54556692">Ark::BytecodeSegment::Symbols</a></div></div>
 <div class="ttc" id="namespace_ark_html_afa776c29439b830386e8220ccab402f4ac82a6100dace2b41087ba6cf99a5976a"><div class="ttname"><a href="namespace_ark.html#afa776c29439b830386e8220ccab402f4ac82a6100dace2b41087ba6cf99a5976a">Ark::BytecodeSegment::Values</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a class="anchor" id="ac788a16dcad2f3354aa90ebb4ff4fcb1"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="namespace_ark.html#ac788a16dcad2f3354aa90ebb4ff4fcb1">Ark::LogLevel</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ac788a16dcad2f3354aa90ebb4ff4fcb1a97f23c6c22adf444e315c346bfdb2fb4"></a>Dont&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ac788a16dcad2f3354aa90ebb4ff4fcb1a960b44c579bc2f6818d2daaf9e4c16f0"></a>Normal&#160;</td><td class="fielddoc">
-</td></tr>
-</table>
-
-<p>Definition at line <a class="el" href="_log_8hpp_source.html#l00028">28</a> of file <a class="el" href="_log_8hpp_source.html">Log.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="namespace_ark.html#ac788a16dcad2f3354aa90ebb4ff4fcb1a97f23c6c22adf444e315c346bfdb2fb4">Dont</a>,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="namespace_ark.html#ac788a16dcad2f3354aa90ebb4ff4fcb1a960b44c579bc2f6818d2daaf9e4c16f0">Normal</a></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    };</div>
-<div class="ttc" id="namespace_ark_html_ac788a16dcad2f3354aa90ebb4ff4fcb1a97f23c6c22adf444e315c346bfdb2fb4"><div class="ttname"><a href="namespace_ark.html#ac788a16dcad2f3354aa90ebb4ff4fcb1a97f23c6c22adf444e315c346bfdb2fb4">Ark::LogLevel::Dont</a></div></div>
-<div class="ttc" id="namespace_ark_html_ac788a16dcad2f3354aa90ebb4ff4fcb1a960b44c579bc2f6818d2daaf9e4c16f0"><div class="ttname"><a href="namespace_ark.html#ac788a16dcad2f3354aa90ebb4ff4fcb1a960b44c579bc2f6818d2daaf9e4c16f0">Ark::LogLevel::Normal</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a class="anchor" id="a27bb67360ba8845f6ab7241df9ca909e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909e">Ark::LogColor</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a27bb67360ba8845f6ab7241df9ca909eae6662662a3f90aa497566c9b4a32f2f7"></a>Nope&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a27bb67360ba8845f6ab7241df9ca909eaee38e4d5dd68c4e440825018d549cb47"></a>Red&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a27bb67360ba8845f6ab7241df9ca909ea9594eec95be70e7b1710f730fdda33d9"></a>Blue&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a27bb67360ba8845f6ab7241df9ca909ead382816a3cbeed082c9e216e7392eed1"></a>Green&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a27bb67360ba8845f6ab7241df9ca909ea51e6cd92b6c45f9affdc158ecca2b8b8"></a>Yellow&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a27bb67360ba8845f6ab7241df9ca909eab91cc2c1416fcca942b61c7ac5b1a9ac"></a>Magenta&#160;</td><td class="fielddoc">
-</td></tr>
-</table>
-
-<p>Definition at line <a class="el" href="_log_8hpp_source.html#l00034">34</a> of file <a class="el" href="_log_8hpp_source.html">Log.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909eae6662662a3f90aa497566c9b4a32f2f7">Nope</a>,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909eaee38e4d5dd68c4e440825018d549cb47">Red</a>,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909ea9594eec95be70e7b1710f730fdda33d9">Blue</a>,</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909ead382816a3cbeed082c9e216e7392eed1">Green</a>,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909ea51e6cd92b6c45f9affdc158ecca2b8b8">Yellow</a>,</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909eab91cc2c1416fcca942b61c7ac5b1a9ac">Magenta</a></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    };</div>
-<div class="ttc" id="namespace_ark_html_a27bb67360ba8845f6ab7241df9ca909ead382816a3cbeed082c9e216e7392eed1"><div class="ttname"><a href="namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909ead382816a3cbeed082c9e216e7392eed1">Ark::LogColor::Green</a></div></div>
-<div class="ttc" id="namespace_ark_html_a27bb67360ba8845f6ab7241df9ca909ea9594eec95be70e7b1710f730fdda33d9"><div class="ttname"><a href="namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909ea9594eec95be70e7b1710f730fdda33d9">Ark::LogColor::Blue</a></div></div>
-<div class="ttc" id="namespace_ark_html_a27bb67360ba8845f6ab7241df9ca909eab91cc2c1416fcca942b61c7ac5b1a9ac"><div class="ttname"><a href="namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909eab91cc2c1416fcca942b61c7ac5b1a9ac">Ark::LogColor::Magenta</a></div></div>
-<div class="ttc" id="namespace_ark_html_a27bb67360ba8845f6ab7241df9ca909eae6662662a3f90aa497566c9b4a32f2f7"><div class="ttname"><a href="namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909eae6662662a3f90aa497566c9b4a32f2f7">Ark::LogColor::Nope</a></div></div>
-<div class="ttc" id="namespace_ark_html_a27bb67360ba8845f6ab7241df9ca909eaee38e4d5dd68c4e440825018d549cb47"><div class="ttname"><a href="namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909eaee38e4d5dd68c4e440825018d549cb47">Ark::LogColor::Red</a></div></div>
-<div class="ttc" id="namespace_ark_html_a27bb67360ba8845f6ab7241df9ca909ea51e6cd92b6c45f9affdc158ecca2b8b8"><div class="ttname"><a href="namespace_ark.html#a27bb67360ba8845f6ab7241df9ca909ea51e6cd92b6c45f9affdc158ecca2b8b8">Ark::LogColor::Yellow</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -421,19 +336,140 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_parser_8cpp_source.html#l00502">502</a> of file <a class="el" href="_parser_8cpp_source.html">Parser.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    {</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;        os &lt;&lt; <span class="stringliteral">&quot;AST&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;        <span class="keywordflow">if</span> (P.ast().nodeType() == NodeType::List)</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;        {</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;            <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; node: P.ast().const_list())</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;                std::cout &lt;&lt; (i++) &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; node &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        }</div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;            os &lt;&lt; <span class="stringliteral">&quot;Single item&quot;</span> &lt;&lt; std::endl &lt;&lt; P.m_ast &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;        <span class="keywordflow">return</span> os;</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    }</div>
+<p>Definition at line <a class="el" href="_parser_8cpp_source.html#l00549">549</a> of file <a class="el" href="_parser_8cpp_source.html">Parser.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    {</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;        os &lt;&lt; <span class="stringliteral">&quot;AST\n&quot;</span>;</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;        <span class="keywordflow">if</span> (P.ast().nodeType() == NodeType::List)</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;        {</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;            <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; node: P.ast().constList())</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;                std::cout &lt;&lt; (i++) &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; node &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;        }</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;            os &lt;&lt; <span class="stringliteral">&quot;Single item\n&quot;</span> &lt;&lt; P.m_ast &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;        <span class="keywordflow">return</span> os;</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="afb0a9f9c9e76fd48b12aea9cadd82d07"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ark::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const UserType &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const UserType &amp;&#160;</td>
+          <td class="paramname"><em>B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_user_type_8cpp_source.html#l00012">12</a> of file <a class="el" href="_user_type_8cpp_source.html">UserType.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordflow">return</span> (A.m_type_id == B.m_type_id) &amp;&amp; (A.m_data == B.m_data);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aca53d37b1c61260d7604ae196c5768bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ark::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const UserType &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const UserType &amp;&#160;</td>
+          <td class="paramname"><em>B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_user_type_8cpp_source.html#l00017">17</a> of file <a class="el" href="_user_type_8cpp_source.html">UserType.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a8b3ce9424bc3a81355cee7d9dabf3ed4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; Ark::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const UserType &amp;&#160;</td>
+          <td class="paramname"><em>A</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_user_type_8cpp_source.html#l00022">22</a> of file <a class="el" href="_user_type_8cpp_source.html">UserType.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">if</span> (A.m_funcs != <span class="keyword">nullptr</span> &amp;&amp; A.m_funcs-&gt;ostream_func != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">return</span> A.m_funcs-&gt;ostream_func(os, A);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        os &lt;&lt; <span class="stringliteral">&quot;UserType&lt;&quot;</span> &lt;&lt; A.m_type_id &lt;&lt; <span class="stringliteral">&quot;, 0x&quot;</span> &lt;&lt; A.m_data &lt;&lt; <span class="stringliteral">&quot;&gt;&quot;</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">return</span> os;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -448,7 +484,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_constants_8hpp_source.html#l00029">29</a> of file <a class="el" href="_constants_8hpp_source.html">Constants.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_constants_8hpp_source.html#l00043">43</a> of file <a class="el" href="_constants_8hpp_source.html">Constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -462,7 +498,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_constants_8hpp_source.html#l00030">30</a> of file <a class="el" href="_constants_8hpp_source.html">Constants.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_constants_8hpp_source.html#l00044">44</a> of file <a class="el" href="_constants_8hpp_source.html">Constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -476,7 +512,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_constants_8hpp_source.html#l00032">32</a> of file <a class="el" href="_constants_8hpp_source.html">Constants.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_constants_8hpp_source.html#l00046">46</a> of file <a class="el" href="_constants_8hpp_source.html">Constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -492,24 +528,10 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">        <a class="code" href="namespace_ark.html#a5af874de3f33e2b4720e1b6d65722a35">FeatureFunctionArityCheck</a></div>
 <div class="line">        | <a class="code" href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">FeatureRemoveUnusedVars</a></div>
-<div class="ttc" id="namespace_ark_html_aed352fcea78905393d0edd9e1ae1423d"><div class="ttname"><a href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">Ark::FeatureRemoveUnusedVars</a></div><div class="ttdeci">constexpr uint16_t FeatureRemoveUnusedVars</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00032">Constants.hpp:32</a></div></div>
-<div class="ttc" id="namespace_ark_html_a5af874de3f33e2b4720e1b6d65722a35"><div class="ttname"><a href="namespace_ark.html#a5af874de3f33e2b4720e1b6d65722a35">Ark::FeatureFunctionArityCheck</a></div><div class="ttdeci">constexpr uint16_t FeatureFunctionArityCheck</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00030">Constants.hpp:30</a></div></div>
+<div class="ttc" id="namespace_ark_html_aed352fcea78905393d0edd9e1ae1423d"><div class="ttname"><a href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">Ark::FeatureRemoveUnusedVars</a></div><div class="ttdeci">constexpr uint16_t FeatureRemoveUnusedVars</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00046">Constants.hpp:46</a></div></div>
+<div class="ttc" id="namespace_ark_html_a5af874de3f33e2b4720e1b6d65722a35"><div class="ttname"><a href="namespace_ark.html#a5af874de3f33e2b4720e1b6d65722a35">Ark::FeatureFunctionArityCheck</a></div><div class="ttdeci">constexpr uint16_t FeatureFunctionArityCheck</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00044">Constants.hpp:44</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="_constants_8hpp_source.html#l00035">35</a> of file <a class="el" href="_constants_8hpp_source.html">Constants.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a1b4f2a2f677f4d1b7077c5792280b2df"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_ark_1_1_logger.html">Logger</a> Ark::logger = <a class="el" href="class_ark_1_1_logger.html">Logger</a>()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_log_8cpp_source.html#l00060">60</a> of file <a class="el" href="_log_8cpp_source.html">Log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_constants_8hpp_source.html#l00049">49</a> of file <a class="el" href="_constants_8hpp_source.html">Constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -541,6 +563,20 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6768a96bb577723257181ba91f7b9485"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::size_t Ark::ARK_STACK_SIZE = 8192</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00040">40</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a6f6137d90ab3f9eb176863172b1621d5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -553,7 +589,7 @@ Variables</h2></td></tr>
 
 <p>ArkScript Nil value. </p>
 
-<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00270">270</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00289">289</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
 
 </div>
 </div>
@@ -569,7 +605,7 @@ Variables</h2></td></tr>
 
 <p>ArkScript False value. </p>
 
-<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00272">272</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00291">291</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
 
 </div>
 </div>
@@ -585,14 +621,14 @@ Variables</h2></td></tr>
 
 <p>ArkScript True value. </p>
 
-<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00274">274</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00293">293</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 17 2021 12:54:17 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 30 2021 16:41:24 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
