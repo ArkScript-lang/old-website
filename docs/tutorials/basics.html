@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArkScript | Tutorials - Basics</title>
+    <link rel="stylesheet" href="/assets/css/spectre.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/spectre-exp.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/spectre-icons.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/rainbowjs-theme.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="navbar">
+    <a href="#" class="btn btn-link show-xl" tabindex="0" id="menu-show"><i class="icon icon-menu"></i></a>
+    <section class="navbar-section show-on-focus hide-xl">
+        <a href="/" class="navbar-brand mr-2 hide-xl">ArkScript</a>
+        <a href="/" class="btn btn-link">Home</a>
+        <a href="/documentation.html" class="btn btn-link">Documentation</a>
+        <a href="/contributing.html" class="btn btn-link">Contributing</a>
+        <div class="dropdown">
+            <a href="#" class="btn btn-link dropdown-toggle" tabindex="0">Tutorials <i class="icon icon-caret"></i></a>
+            <ul class="menu">
+                <li><a href="/tutorials/basics.html" class="btn btn-link">The language</a></li>
+                <li><a href="/tutorials/building.html" class="btn btn-link">Building</a></li>
+                <li><a href="/tutorials/embedding.html" class="btn btn-link">Embedding</a></li>
+                <li><a href="/tutorials/bytecode.html" class="btn btn-link">Bytecode</a></li>
+            </ul>
+        </div>
+        <div class="divider"></div>
+        <a href="https://github.com/ArkScript-lang/Ark" target="_blank" class="btn btn-link">Github</a>
+        <a href="https://discord.gg/YT5yDwn" target="_blank" class="btn btn-link">Discord</a>
+    </section>
+    <section class="navbar-section logo">
+        <a href="/"><img src="/assets/images/Ark-slim.png" alt="ArkScript"></a>
+    </section>
+</header>
+
+<!-- CONTENT -->
+<div class="container" id="main">
+
+    <div class="off-canvas">
+
+        <!-- off-screen toggle button -->
+        <a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar">
+            <i class="icon icon-menu"></i>
+        </a>
+
+        <!-- table of content -->
+        <div id="sidebar" class="off-canvas-sidebar">
+            <ul class="nav">
+                <li class="nav-item active">
+                    <a href="#">Table of contents</a>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#learning-arkscript">Learning ArkScript</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#creating-variables">Creating variables</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#comments">Comments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#program-structure">Program structure</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#io">Basic Input/Output</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#conditions">Conditions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#loops">Loops</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#functions">Functions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#closures">Closures</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#import">Importing code</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#macros">Using macros to manipulate code at compile time</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <a class="off-canvas-overlay" href="#close"></a>
+    </div>
+
+    <div class="columns off-canvas-content">
+        <div class="col-2"></div>
+        <!-- Actual content of the page-->
+        <div class="col-8" id="content">
+            <h1 class="text-center">Tutorials - The language</h1>
+
+            <section id="learning-arkscript">
+                <h2>Learning ArkScript: the basics</h2>
+
+                <div class="inner-section">
+                    In ArkScript, there are two main rules:
+                    <ul>
+                        <li>The first rule is that <code>(a b c ...)</code> is a function call, <code>a</code> is the function and <code>b c ...</code> being the arguments.</li>
+                        <li>
+                            The second rule is the <em class="text-bold">only</em> exception to the first rule: when declaring functions like <code>(fun (arg1 arg2 ...) body)</code>,
+                            the definition of the argument block <em class="text-bold">isn't</em> considered as a function call.
+                        </li>
+                    </ul>
+                    To sum it up: everything is a function call, except the definition of the arguments block of a function.
+                </div>
+            </section>
+
+            <section id="creating-variables">
+                <h2>Creating variables</h2>
+
+                <div class="inner-section">
+                    In ArkScript, there are 2 types of <em>variables</em>: <code class="error">mutables</code> and <code class="error">immutables</code>.
+                    The <em>immutable</em> variables can't be modified or redefined, while <em>mutable</em> variables can.
+                    <br>
+                    The following three keywords are important when talking about variables:
+                    <ul>
+                        <li><code>let</code> <em>defines</em> an <code class="error">immutable</code> variable</li>
+                        <li><code>mut</code> <em>defines</em> a <code class="error">mutable</code> variable</li>
+                        <li><code>set</code> changes the value of a given mutable variable (trying on an immutable variable will throw an error)</li>
+                    </ul>
+                    <br><br>
+                    Example:
+
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(let a 12)  # immutable variable
+(let a "hello")  # cannot redefine constant
+(set a "world")  # cannot modify constant, will throw an error
+
+(mut b [12 42 64])  # mutable variable
+(mut b "hello")  # no problem, the operation is allowed
+(set b "ArkScript is cool!")  # no problem, operation is allowed on mutables
+</code>
+                    </pre>
+                </div>
+            </section>
+
+            <section id="comments">
+                <h2>Comments</h2>
+
+                <div class="inner-section">
+                    As you have seen in the example above, we can write code that won't be executed, using <code># text</code>.
+                    This is a comment, only for the developer, and will be totally ignored when compiling and executing.
+                </div>
+            </section>
+
+            <section id="program-structure">
+                <h2>Program structure</h2>
+
+                <div class="inner-section">
+                    <p>
+                        An ArkScript program is a collection of blocks. A block <code>(function arguments...)</code>, thus, those are valid programs:
+                    </p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(print "hello world")
+</code>
+                    </pre>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(let a 12)
+(let foo (fun (a b)
+    (+ a b)))
+(print (foo a a))
+</code>
+                    </pre>
+                    <p>
+                        Multiple blocks can be put into one by using the <strong>begin construction</strong>:
+                    </p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(begin
+    (let a 12)
+    (print a)
+    (let b (* a 2))
+    (print b))
+
+# and can be accessed from outside, begin doesn't create a scope
+(print a " " b)
+</code>
+                    </pre>
+
+                    <p>
+                        <code>(begin)</code> and <code>{}</code> are synonyms.
+                    </p>
+                </div>
+            </section>
+
+            <section id="io">
+                <h2>Basic Input/Output</h2>
+
+                <div class="inner-section">
+                    <p>
+                        User interactions are a must have in a programming language. To achieve such interaction in a shell (the big black windows where our code is running), we have what we call <i>IO</i> or <i>input/output</i>, through <code>print</code> and <code>input</code>. One can write text to the shell, the other can prompt the user and retrieve what they wrote.
+                    </p>
+                    <p>
+                        <strong>Example:</strong> <code>(print "hello" " world")</code>, will print <code>hello world</code>.
+                    </p>
+                    <p>
+                        The print function won't put spaces between each element printed, thus we have
+                        to do it ourselves.
+                    </p>
+
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(let a (input "what is your name?"))  # will print what the user wrote,
+(print a)                             # after having validated by pressing Enter
+                                      # The prompt is optionnal, (input) will
+                                      # also work on its own.
+</code>
+                    </pre>
+                </div>
+            </section>
+
+            <section id="conditions">
+                <h2>Conditions</h2>
+
+                <div class="inner-section">
+                    <p>
+                        In any programming language, it's useful to control the program flow, to be able to give the user multiple choices (attacking an ennemy, befriending it, spying on it...) and those things are achieved through conditions.
+                    </p>
+                    <p>
+                        Constructing a condition is done like so:
+                    </p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(if condition then else)
+</code>
+                    </pre>
+                    <p>The else bloc is optionnal.</p>
+                    <p><strong>Examples:</strong></p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(if (= a 12)
+    # then
+    (print "a is 12")
+    # else
+    (print "a is not 12"))
+
+(if (and (< a 12) (> b 14))
+    (print "a is < 12 AND b is > 14"))
+</code>
+                    </pre>
+                    <p>
+                        The then and the else parts can be composed of multiple functions by using the begin construction.
+                    </p>
+                </div>
+            </section>
+
+            <section id="loops">
+                <h2>Loops</h2>
+
+                <div class="inner-section">
+                    <p>
+                        Giving the user a choice is a thing, but repeating an action is another that is very useful in a program as well. For example, if we need to compute the sum of values in a list, we would need to loop over the values of the list. In video games, we would need loops to generate waves of ennemies.
+                    </p>
+                    <p>
+                        Loops in ArkScript are created by using the keyword while.
+                    </p>
+                    <p><strong>Example:</strong></p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(import "random.arkm")
+
+# continue must be a mutable for us the be able to modify it
+(mut continue true)
+(while continue {
+    (print "hello")
+
+    # 10% chance of stopping the loop
+    # random returns a number in range [0, 32768[
+    (if (< (/ (random) 32768) 0.1)
+        (set continue false))
+})
+
+# another example using conditions
+(mut i 0)
+(while (< i 10) {
+    (puts i " ")  # won't put a \n at the end of the content
+    (set i (+ 1 i))
+})
+</code>
+                    </pre>
+                </div>
+            </section>
+
+            <section id="functions">
+                <h2>Functions</h2>
+
+                <div class="inner-section">
+                    <p>
+                        Functions are a tool to factorize code, to follow the DRY (don't repeat yourself) principle. Who would want to write 10 times the same 100 lines when they can use a function and call it 10 times inside a loop?
+                    </p>
+                    <p>
+                        Note: ArkScript was particularly optimized to deal with function using few arguments, thus encouraging code reuse and code split into functions.
+                    </p>
+                    <p>
+                        A function is composed of 2 parts: the argument lists and the body:
+                    </p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(fun (a b c) (print a b c))
+</code>
+                    </pre>
+                    <p>
+                        <code>(a b c)</code> is the argument list, the print bloc is the body.
+                    </p>
+                    <p>
+                        The value returned by a function is the last evaluated value in the body, if none, nil is returned.
+                    </p>
+                    <p><strong>Example:</strong></p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(let foo (fun (a b) (begin
+    (print "function got: " a " " b)
+    # return value:
+    (+ a b))))
+
+(print (foo 12 14))  # 26
+</code>
+                    </pre>
+                    <p>
+                        You can also use <i>quoting</i> to quickly create anonymous functions taking 0 arguments, useful to make callbacks on the run:
+                    </p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(let i_want_a_callback (fun (cb) {
+    (print "I am a function")
+    (cb)
+    (print "I am still here")
+}))
+
+# would work, but a bit long to write
+(i_want_a_callback (fun () (print "hello world")))
+
+# using the quote shorthand '
+(i_want_a_callback '(print "hello world"))
+# or by using the keyword
+(i_want_a_callback (quote (print "hello world")))
+</code>
+                    </pre>
+                    <p>Also, we have a set of builtins functions in the language, available without importing anything ; for example <code>print</code> or <code>input</code>, which we used before. Note that builtins <strong>must be called</strong>, you can't do things like <code>(let my_print print)</code>, or <code>(let my_tail tail)</code>, otherwise it will result in an error because those functions are special.</p>
+                </div>
+            </section>
+
+            <section id="closures">
+                <h2>Closures</h2>
+
+                <div class="inner-section">
+                    <p>Closure, or function closure, is a way to implementing lexically scoped name binding<a href="https://en.wikipedia.org/wiki/Closure_(computer_programming)"><sup>1</sup></a>. It stores a function along with an environment, explicitly mapped with specified variables. This allows to reuse and modify captured variables each time the closure is called.</p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(let make_closure (fun (name age) {
+    (let coolness_factor 12)
+
+    # here, we return a closure!
+    (fun (&name &age &coolness_factor)
+        # each time it will be called, it will display the captured variables
+        (print name " " age " " coolness_factor))
+}))
+
+(let closure (make_closure "Pietro" 42))
+(closure)  # prints Pietro 42 12
+</code>
+                    </pre>
+                    <p>Closures capture variables explicitly in their arguments' list, by prefixing them with <code>&</code>. We can access the captured fields through the <code>closure.field</code> notation, in a read only way:</p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(print closure.age)  # 42
+(print closure.coolness_factor)  # 12
+
+(let make (fun (a)
+    (fun (&a) ())))
+
+(let foo (fun () (print "bar")))
+
+(let closure_bis (make foo))
+# we can also call captured functions
+(closure_bis.a)  # prints bar
+</code>
+                    </pre>
+                    <p>Finally, you can modify the closure content when using it from the inside, through itself or its captured functions:</p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(let make (fun (name age) {
+    (let set-age (fun (new)
+        (set age new)))
+
+    (fun (new-name &name &age &set-age)
+        (if (not (nil? new-name))
+            (set name new-name)))
+}))
+
+(let egg (make "egg" 1))
+(print egg.age)  # 1
+(egg.set-age 2)
+(print egg.age " " egg.name)  # 2 egg
+(egg "not an egg")
+(print egg.name " " egg.age)  # not an egg 2
+</code>
+                    </pre>
+                </div>
+            </section>
+
+            <section id="import">
+                <h2>Importing code</h2>
+
+                <div class="inner-section">
+                    <p>Putting code in multiple files is pretty to make it reusable and more maintainable.</p>
+                    <p>In ArkScript, imported code is copied from the specified file into the current one, with a guarantee: circular includes are detected and prevented, making execution always possible even if you include a lot of files.</p>
+                    <p>Files are imported by doing so: <code>(import "myfile.ark")</code>. The path to the target file is <strong>relative to the source file</strong>, not to the main executed file.</p>
+                    <p>The only exception about paths in <code>import</code>s is when you import an ArkScript module, ending in <code>.arkm</code>. Those files are either in the standard library, thus you can just write their name and ArkScript will find them, or they <strong>must be alongside the final executed file</strong>.</p>
+                    <p>When importing files from the standard library, you don't need to write the path to the library folder, just the path of the file in it. For example: <code>(import "String.ark")</code> will work without problems.</p>
+                </div>
+            </section>
+
+            <section id="macros">
+                <h2>Using macros to manipulate code at compile time</h2>
+                <h6><em>Available in ArkScript 3.1.0</em></h6>
+
+                <div class="inner-section">
+                    <p>A macro is a rule or pattern that specifies how a certain input should be mapped to a replacement output. Applying a macro to an input is name <em>macro expansion</em><a href="https://en.wikipedia.org/wiki/Macro_(computer_science)"><sup>2</sup></a>.</p>
+                    <p>In ArkScript, there are 3 different types of macros:</p>
+                    <ul>
+                        <li>conditions: <code>!{if condition then else}</code></li>
+                        <li>constants: <code>!{my_const value}</code></li>
+                        <li>functions: <code>!{my_function (foo bar) body}</code></li>
+                    </ul>
+                    <p><strong>Constant macros</strong> are just associations <code>identifier to value</code>, the value being whatever you want (even another bloc of code, for example <code>(let b 12)</code>). The code is scanned and when such macro is found, it's applied wherever possible.</p>
+                    <p><strong>Macros' scopes</strong> are tied to the bloc in which they are defined. At the end of said bloc, the macros defined in it are destroyed. Note that a macro defined a in bloc, which includes other blocs, will be available in all the other sub-blocs.</p>
+                    <p>Named macros can be undefined by using <code>!{undef name}</code>.</p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+!{a 12}
+
+{
+    (print a)  # will print 12, it works!
+
+    !{a 1}  # we can shadow macros by defining other macros with the
+            # same name in sub-blocs
+    (print a)  # 1
+
+    !{undef a}
+    (print a)  # 12, because we undefined the nearest version of a
+}
+
+(print a)  # a is still 12 here
+</code>
+                    </pre>
+                    <p><strong>Condition macros</strong> may only work on compile time expressions, using only other macros. For example:</p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+!{foo 12}
+!{bar 14}
+
+# the condition being true will result in the print being inserted in the program
+# while the (let a) will be deleted
+!{if (and (= foo 12) (= bar 14))
+    (print "foo is 12 and bar is 14")
+    (let a (+ 12 14))}
+</code>
+                    </pre>
+                    <p>In a <em>condition macro</em> we can define other macros and use other conditions macros:</p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+!{a 12}
+!{if (= a 12)
+    !{b 14}
+    !{c 13}
+}
+
+(print b)  # prints 14
+(print c)  # compilation error: unbound variable c
+           # c is unavailable here because it was never defined
+</code>
+                    </pre>
+                    <p><strong>Function macros</strong> are evaluated recursively, thus they can call themselves or other macros, and use <em>condition macros</em>. A particularity is that their arguments can ArkScript code blocs, such as a <code>(let a 12)</code> or even complexe code blocs like <code>{ (mut i 0) (while continue { (print "hello") (set i (+ 1 i)) (if (> i 12) (set continue false)) }) }</code>.</p>
+                    <p>Those macros can use a magic pattern <code>...args</code> (args being the name of the argument, you can use whatever you want) as the last argument to tell the compiler that the macros can take any number of arguments. This is called <em>varargs</em> or <em>variadic arguments</em>.</p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+!{foo (a b) {
+    (print a " " b)
+    (let c (+ a b))
+}}
+
+(foo 1 2)
+(print c)  # prints 3
+
+!{bar (a ...args)
+    (print a " " args)}
+
+(bar 1)  # prints 1
+(bar 1 2)  # prints 1 [2]
+(bar 1 2 3)  # prints 1 [2 3]
+</code>
+                    </pre>
+                    <p>Here is a more complex example implementing the <em>thread macro</em>. The first argument is the data, then each function is applied onto it, one after another. It allows us to write more readable code, instead of the ugly <code>(read-string (slurp (io:file (io:resource filename))))</code>.</p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+!{-> (first ...args) {
+    !{if (> (len args) 0)
+        ((-> ...args) first)
+        first
+    }
+}}
+
+(let filename "hello.json")
+(let io:resource (fun (file) {
+    (print "io:resource")
+    file
+}))
+(let io:file (fun (name) {
+    (print "io:file")
+    name
+}))
+(let slurp (fun (a) {
+    (print "io:slurp")
+    a
+}))
+(let read-string (fun (a) {
+    (print "read-string")
+    a
+}))
+
+(print (-> filename io:resource io:file slurp read-string))
+# it will print:
+#   read-string
+#   io:slurp
+#   io:file
+#   io:resource
+#   hello.json
+</code>
+                    </pre>
+                    <p>Here is the list of the available compile time functions, to work with macros (in macros):</p>
+                    <ul>
+                        <li>Comparison operators: <code>&equals;</code>, <code>!&equals;</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code></li>
+                        <li>Chaining conditions / inverting them: <code>not</code>, <code>and</code>, <code>or</code></li>
+                        <li>Working on lists: <code>len</code>, <code>@</code>, <code>head</code>, <code>tail</code></li>
+                    </ul>
+                    <p>
+                        We also have a few predefined macros to work on ArkScript code and ease code generation. For example, one
+                        can generate a new symbol using <code>(symcat symbol value-or-expression)</code>, or count the number of arguments of a function with
+                        <code>(argcount function-name)</code>.
+                    </p>
+                    <ul>
+                        <li>
+                            <code>symcat</code>: generate a new symbol from a given symbol and a value or expression.
+                            <code>(- a 1)</code> with <code>a</code> a constant macro (or macro argument) is valid.
+                        </li>
+                        <li>
+                            <code>argcount</code>: retrieve at compile time the number of arguments taken by a given function.
+                            The function must have been defined <i>before</i> using <code>argcount</code>.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-2"></div>
+    </div>
+</div>
+<!-- END OF CONTENT -->
+
+<!-- FOOTER -->
+<footer id="page-footer">
+    <p class="text-center">
+        Copyright &copy; 2020-2021 Alexandre Plateau & Fabien Zoccola.<br>
+        All rights reserved.
+    </p>
+</footer>
+
+<!-- Rainbow.js for syntax coloring -->
+<script src="/assets/js/rainbow.min.js"></script>
+<script src="/assets/js/languages/arkscript.js"></script>
+
+</body>
+</html>
