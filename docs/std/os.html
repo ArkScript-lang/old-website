@@ -8,10 +8,10 @@
     
     
     
-    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.ico">
 
     
-    <title>Exceptions - ArkScript</title>
+    <title>Os - ArkScript</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="../css/base.min.css" rel="stylesheet">
-    <link href="../css/dark.min.css" rel="stylesheet">
+    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="css/base.min.css" rel="stylesheet">
+    <link href="css/dark.min.css" rel="stylesheet">
 
     
         
@@ -59,7 +59,7 @@
             <!-- Main title -->
 
             
-              <a class="navbar-brand" href="..">ArkScript</a>
+              <a class="navbar-brand" href="index.html">ArkScript</a>
             
         </div>
 
@@ -70,55 +70,55 @@
                 
                 
                     <li >
-                        <a href="..">Home</a>
+                        <a href="index.html">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="Exceptions.html">Exceptions</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="Functional.html">Functional</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="List.html">List</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="Mathematics.html">Mathematics</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="Range.html">Range</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="String.html">String</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="Switch.html">Switch</a>
                     </li>
                 
                 
                 
                     <li class="active">
-                        <a href="./">Exceptions</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="../Functional/">Functional</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="../List/">List</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="../Mathematics/">Mathematics</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="../Range/">Range</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="../String/">String</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="../Switch/">Switch</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="../os/">Os</a>
+                        <a href="os.html">Os</a>
                     </li>
                 
                 
@@ -131,12 +131,12 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="..">
+                        <a rel="prev" href="Switch.html">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li >
-                        <a rel="next" href="../Functional/">
+                    <li class="disabled">
+                        <a rel="next" >
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -150,44 +150,17 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#exceptions">Exceptions</a></li>
-            <li class="second-level"><a href="#throw-_x">(throw  _x)</a></li>
-                
-            <li class="second-level"><a href="#return-_y">(return  _y)</a></li>
-                
-            <li class="second-level"><a href="#try-_either-_continue-_handle">(try  _either _continue _handle)</a></li>
+        <li class="first-level active"><a href="#os">os</a></li>
+            <li class="second-level"><a href="#oshome_dir">(os:home_dir)</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h3 id="exceptions">Exceptions</h3>
-<h4 id="throw-_x">(throw  _x)</h4>
-<p>throw takes a value as its argument and return it to be used by try</p>
-<p><strong>_x</strong> the value to return</p>
-<pre><code>(let error (throw &quot;cannot divide by zero&quot;))
-</code></pre>
-<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
-<h4 id="return-_y">(return  _y)</h4>
-<p>return takes a value as its argument and return it to be used by try</p>
-<p><strong>_x</strong> the value to return</p>
-<pre><code>(let value (return (/ 1 x)))
-</code></pre>
-<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
-<h4 id="try-_either-_continue-_handle">(try  _either _continue _handle)</h4>
-<p>Takes a value either returned by throw or return and apply a given on it if it's an error or not</p>
-<p><strong>_either</strong> the value to test</p>
-<p><strong>_continue</strong> the success handler</p>
-<p><strong>_handle</strong> the error handler</p>
-<pre><code>(let invert (fun (x)
-    (if (= x 0)
-        (throw &quot;cannot divide by zero&quot;)
-        (return (/ 1 x)))))
-(try (invert 0)
-    (fun (inverted) (print inverted))
-    (fun (err) (print err)))
-</code></pre>
-<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p></div>
+<h3 id="os">os</h3>
+<h4 id="oshome_dir">(os:home_dir)</h4>
+<p>Returns the home dir of the current user</p>
+<p>Author : <a href="https://github.com/Wafelack">Wafelack</a></p></div>
         
         
     </div>
@@ -207,7 +180,7 @@
       </footer>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../js/bootstrap-3.0.3.min.js"></script>
+    <script src="js/bootstrap-3.0.3.min.js"></script>
 
     
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
@@ -215,10 +188,10 @@
     <script>hljs.initHighlightingOnLoad();</script>
     
 
-    <script>var base_url = ".."</script>
+    <script>var base_url = "."</script>
     
-    <script src="../js/base.js"></script>
-    <script src="../search/main.js"></script>
+    <script src="js/base.js"></script>
+    <script src="search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

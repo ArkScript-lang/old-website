@@ -8,10 +8,10 @@
     
     
     
-    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.ico">
 
     
-    <title>Functional - ArkScript</title>
+    <title>List - ArkScript</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="../css/base.min.css" rel="stylesheet">
-    <link href="../css/dark.min.css" rel="stylesheet">
+    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="css/base.min.css" rel="stylesheet">
+    <link href="css/dark.min.css" rel="stylesheet">
 
     
         
@@ -59,7 +59,7 @@
             <!-- Main title -->
 
             
-              <a class="navbar-brand" href="..">ArkScript</a>
+              <a class="navbar-brand" href="index.html">ArkScript</a>
             
         </div>
 
@@ -70,55 +70,55 @@
                 
                 
                     <li >
-                        <a href="..">Home</a>
+                        <a href="index.html">Home</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="../Exceptions/">Exceptions</a>
+                        <a href="Exceptions.html">Exceptions</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="Functional.html">Functional</a>
                     </li>
                 
                 
                 
                     <li class="active">
-                        <a href="./">Functional</a>
+                        <a href="List.html">List</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="../List/">List</a>
+                        <a href="Mathematics.html">Mathematics</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="../Mathematics/">Mathematics</a>
+                        <a href="Range.html">Range</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="../Range/">Range</a>
+                        <a href="String.html">String</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="../String/">String</a>
+                        <a href="Switch.html">Switch</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="../Switch/">Switch</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="../os/">Os</a>
+                        <a href="os.html">Os</a>
                     </li>
                 
                 
@@ -131,12 +131,12 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../Exceptions/">
+                        <a rel="prev" href="Functional.html">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../List/">
+                        <a rel="next" href="Mathematics.html">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -150,53 +150,44 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#functional">Functional</a></li>
-            <li class="second-level"><a href="#compose-_f-_g">(compose  _f _g)</a></li>
+        <li class="first-level active"><a href="#list">List</a></li>
+            <li class="second-level"><a href="#listtake-_l-_n">(list:take  _L _n)</a></li>
                 
-            <li class="second-level"><a href="#left-_x">(left  _x)</a></li>
+            <li class="second-level"><a href="#listunzip-_l">(list:unzip  _L)</a></li>
                 
-            <li class="second-level"><a href="#right-_y">(right  _y)</a></li>
-                
-            <li class="second-level"><a href="#flip-_f-_a">(flip  _f _a)</a></li>
+            <li class="second-level"><a href="#listzip-_a-_b">(list:zip  _a _b)</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h3 id="functional">Functional</h3>
-<h4 id="compose-_f-_g">(compose  _f _g)</h4>
-<p>Compose function calls</p>
-<p><strong>_f</strong> the first function</p>
-<p><strong>_g</strong> the second function</p>
-<pre><code>(let foo (fun (a) (* a a)))
-(let bar (fun (b) (+ b b)))
-(let composed (compose foo bar))
-(print (composed 12))  # return value is (12 + 12) * (12 + 12)
+<h3 id="list">List</h3>
+<h4 id="listtake-_l-_n">(list:take  _L _n)</h4>
+<p>Take the first n elements of</p>
+<p><strong>_L</strong> the list to work on</p>
+<p><strong>_n</strong> the number of elements to take</p>
+<p><em>The original list is left unmodified.</em></p>
+<pre><code>(print (list:take [1 2 3 4 5 6 7 8 9] 4))  # [1 2 3 4]
 </code></pre>
 <p>Author : <a href="https://github.com/rstefanic">rstefanic</a></p>
-<h4 id="left-_x">(left  _x)</h4>
-<p>Take a value as its argument and return a function taking 2 arguments which will call the first function on the value</p>
-<p><strong>_x</strong> the value</p>
-<pre><code>(let val (left 12))
-(val (fun (x) (print x &quot; i am called&quot;)) (fun (x) (print x &quot; i am NOT called&quot;)))
+<h4 id="listunzip-_l">(list:unzip  _L)</h4>
+<p>Unzip a list of [[a b] [c d]...] into [[a c ...] [b d ...]]</p>
+<p><strong>_L</strong> the list to work on</p>
+<p><em>The original list is left unmodified.</em></p>
+<pre><code>(let zipped [[1 5] [2 6] [3 7] [4 8]])
+(print (list:unzip zipped))  # [[1 2 3 4] [5 6 7 8]]
 </code></pre>
-<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
-<h4 id="right-_y">(right  _y)</h4>
-<p>Take a value as its argument and return a function taking 2 arguments which will call the second function on the value</p>
-<p><strong>_y</strong> the value</p>
-<pre><code>(let val (right 12))
-(val (fun (x) (print x &quot; i am NOT called&quot;)) (fun (x) (print x &quot; i am called&quot;)))
+<p>Author : <a href="https://github.com/FrenchMasterSword">FrenchMasterSword</a></p>
+<h4 id="listzip-_a-_b">(list:zip  _a _b)</h4>
+<p>Zip two lists into one: [1 2 3 4] and [5 6 7 8] will give [[1 5] [2 6] [3 7] [4 8]]</p>
+<p><strong>_a</strong> the first list to work on</p>
+<p><strong>_b</strong> the second list to work on</p>
+<p><em>The original lists are left unmodified.</em></p>
+<pre><code>(let a [1 2 3 4])
+(let b [5 6 7 8])
+(print (list:zip a b))  # [[1 5] [2 6] [3 7] [4 8]]
 </code></pre>
-<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
-<h4 id="flip-_f-_a">(flip  _f _a)</h4>
-<p>Flip the arguments of a function</p>
-<p><strong>_f</strong> the function</p>
-<p><strong>_a</strong> the first argument</p>
-<p><em>Returns a function taking 1 argument: the second argument of the function to flip</em></p>
-<pre><code>(let foo (fun (a b) (- a b)))
-((flip foo 14) 12) # will call (foo 12 14) instead of (foo 14 12)
-</code></pre>
-<p>Author : <a href="https://github.com/rstefanic">rstefanic</a></p></div>
+<p>Author : <a href="https://github.com/FrenchMasterSword">FrenchMasterSword</a></p></div>
         
         
     </div>
@@ -216,7 +207,7 @@
       </footer>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../js/bootstrap-3.0.3.min.js"></script>
+    <script src="js/bootstrap-3.0.3.min.js"></script>
 
     
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
@@ -224,10 +215,10 @@
     <script>hljs.initHighlightingOnLoad();</script>
     
 
-    <script>var base_url = ".."</script>
+    <script>var base_url = "."</script>
     
-    <script src="../js/base.js"></script>
-    <script src="../search/main.js"></script>
+    <script src="js/base.js"></script>
+    <script src="search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

@@ -8,10 +8,10 @@
     
     
     
-    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.ico">
 
     
-    <title>Mathematics - ArkScript</title>
+    <title>Range - ArkScript</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="../css/base.min.css" rel="stylesheet">
-    <link href="../css/dark.min.css" rel="stylesheet">
+    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="css/base.min.css" rel="stylesheet">
+    <link href="css/dark.min.css" rel="stylesheet">
 
     
         
@@ -59,7 +59,7 @@
             <!-- Main title -->
 
             
-              <a class="navbar-brand" href="..">ArkScript</a>
+              <a class="navbar-brand" href="index.html">ArkScript</a>
             
         </div>
 
@@ -70,55 +70,55 @@
                 
                 
                     <li >
-                        <a href="..">Home</a>
+                        <a href="index.html">Home</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="../Exceptions/">Exceptions</a>
+                        <a href="Exceptions.html">Exceptions</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="../Functional/">Functional</a>
+                        <a href="Functional.html">Functional</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="../List/">List</a>
+                        <a href="List.html">List</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="Mathematics.html">Mathematics</a>
                     </li>
                 
                 
                 
                     <li class="active">
-                        <a href="./">Mathematics</a>
+                        <a href="Range.html">Range</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="../Range/">Range</a>
+                        <a href="String.html">String</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="../String/">String</a>
+                        <a href="Switch.html">Switch</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="../Switch/">Switch</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="../os/">Os</a>
+                        <a href="os.html">Os</a>
                     </li>
                 
                 
@@ -131,12 +131,12 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../List/">
+                        <a rel="prev" href="Mathematics.html">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../Range/">
+                        <a rel="next" href="String.html">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -150,77 +150,72 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#mathematics">Mathematics</a></li>
-            <li class="second-level"><a href="#mathabs-_x">(math:abs  _x)</a></li>
+        <li class="first-level active"><a href="#range">Range</a></li>
+            <li class="second-level"><a href="#range-i-_b">(range  i _b)</a></li>
                 
-            <li class="second-level"><a href="#matheven-_n">(math:even  _n)</a></li>
+            <li class="second-level"><a href="#rangeforeach-_r-_f">(range:forEach  _r _f)</a></li>
                 
-            <li class="second-level"><a href="#mathodd-_n">(math:odd  _n)</a></li>
+            <li class="second-level"><a href="#rangefilter-range">(range:filter  range )</a></li>
                 
-            <li class="second-level"><a href="#mathmin-_a-_b">(math:min  _a _b)</a></li>
+            <li class="second-level"><a href="#rangemap-range">(range:map  range )</a></li>
                 
-            <li class="second-level"><a href="#mathmax-_a-_b">(math:max  _a _b)</a></li>
-                
-            <li class="second-level"><a href="#mathpow-_x-_a">(math:pow  _x _a)</a></li>
-                
-            <li class="second-level"><a href="#mathsqrt-_x">(math:sqrt  _x)</a></li>
-                
-            <li class="second-level"><a href="#mathfibo-n-p-c">(math:fibo  n p c)</a></li>
-                
-            <li class="second-level"><a href="#mathdivs-n">(math:divs  n)</a></li>
+            <li class="second-level"><a href="#rangereduce-range">(range:reduce  range )</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h3 id="mathematics">Mathematics</h3>
-<h4 id="mathabs-_x">(math:abs  _x)</h4>
-<p>Return the absolute value of a number</p>
-<p><strong>_x</strong> the number to get the absolute value of</p>
-<p>Author : <a href="https://github.com/rstefanic">rstefanic</a></p>
-<h4 id="matheven-_n">(math:even  _n)</h4>
-<p>Return true if the number is even, false otherwise</p>
-<p><strong>_n</strong> the number</p>
-<p>Author : <a href="https://github.com/rstefanic">rstefanic</a></p>
-<h4 id="mathodd-_n">(math:odd  _n)</h4>
-<p>Return true if the number is odd, false otherwise</p>
-<p><strong>_n</strong> the number</p>
-<p>Author : <a href="https://github.com/rstefanic">rstefanic</a></p>
-<h4 id="mathmin-_a-_b">(math:min  _a _b)</h4>
-<p>Get the minimum between two numbers</p>
-<p><strong>_a</strong> the first number</p>
-<p><strong>_b</strong> the second number</p>
-<p>Author : <a href="https://github.com/rstefanic">rstefanic</a></p>
-<h4 id="mathmax-_a-_b">(math:max  _a _b)</h4>
-<p>Get the maximum between two numbers</p>
-<p><strong>_a</strong> the first number</p>
-<p><strong>_b</strong> the second number</p>
-<p>Author : <a href="https://github.com/rstefanic">rstefanic</a></p>
-<h4 id="mathpow-_x-_a">(math:pow  _x _a)</h4>
-<p>Get a number to a given power</p>
-<p><em>Note that it's defined as exp(a * ln(x)), thus won't work for negative numbers</em></p>
-<p><strong>_x</strong> the number to pow</p>
-<p><strong>_a</strong> the exponent</p>
-<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
-<h4 id="mathsqrt-_x">(math:sqrt  _x)</h4>
-<p>Get the square root of a number</p>
-<p><em>Square roots can't be taken for negative numbers for obvious reasons.</em></p>
-<p><strong>_x</strong> the number</p>
-<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
-<h4 id="mathfibo-n-p-c">(math:fibo  n p c)</h4>
-<p>Run the fibonacci function on a number</p>
-<p><strong>n</strong> the number</p>
-<p><strong>p</strong> an accumulator</p>
-<p><strong>c</strong> an accumulator</p>
-<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
-<pre><code>(math:fibo 45 0 1)
+<h3 id="range">Range</h3>
+<h4 id="range-i-_b">(range  i _b)</h4>
+<p>Create a ranged closure in interval [a, b[</p>
+<p><strong>i</strong> the beginning of the range</p>
+<p><strong>_b</strong> the end of the range</p>
+<p><em>Has a field <code>asList</code> to compute a list from the current state of the range, and another one <code>reset</code>.</em></p>
+<pre><code>(let obj (range 1 10))
+(print (obj.asList))  # [1 2 3 4 5 6 7 8 9]
+(while (not (nil? (obj)))
+    (print obj.i))  # print the current element
+(print (obj.asList))  # [], the range has been used
+(obj.reset)  # the range is ready to be used again
+(print (obj.asList))  # [1 2 3 4 5 6 7 8 9]
 </code></pre>
-<h4 id="mathdivs-n">(math:divs  n)</h4>
-<p>Returns the list of a number's divisors</p>
-<p><strong>n</strong> the number</p>
-<p>Author : <a href="https://github.com/Wafelack">Wafelack</a></p>
-<pre><code>(math:divs 6) # Returns [1 2 3 6]
-</code></pre></div>
+<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
+<h4 id="rangeforeach-_r-_f">(range:forEach  _r _f)</h4>
+<p>Run a function on each element of the range</p>
+<p><strong>_r</strong> the range object</p>
+<p><strong>_f</strong> the function</p>
+<p><em>The range is unmodified.</em></p>
+<pre><code>(let obj (range 1 10))
+(range:forEach obj (fun (e) (print e)))
+</code></pre>
+<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
+<h4 id="rangefilter-range">(range:filter  <em>range </em>)</h4>
+<p>Create a list based on a range and a filter function</p>
+<p><strong>_range</strong> the range object</p>
+<p><strong>_fun</strong> the filter function</p>
+<p><em>The range is unmodified.</em></p>
+<pre><code>(let obj (range 1 10))
+(print (range:filter obj math:even))  # [2 4 6 8]
+</code></pre>
+<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
+<h4 id="rangemap-range">(range:map  <em>range </em>)</h4>
+<p>Create a list based on a range and a function to apply to each elements</p>
+<p><strong>_range</strong> the range object</p>
+<p><strong>_fun</strong> the function to apply</p>
+<p><em>The range is unmodified.</em></p>
+<pre><code>(let obj (range 1 10))
+(print (range:map obj (fun (e) (* e e))))  # [1 4 9 16 25 36 49 64 81]
+</code></pre>
+<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
+<h4 id="rangereduce-range">(range:reduce  <em>range </em>)</h4>
+<p>Create a reduced list based on a range and a reduction function</p>
+<p><strong>_range</strong> the range object</p>
+<p><strong>_fun</strong> the reduction function</p>
+<p><em>The range is unmodified.</em></p>
+<pre><code>(let obj (range 1 10))
+(print (range:reduce obj (fun (e) (+ e e))))  # 45
+</code></pre>
+<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p></div>
         
         
     </div>
@@ -240,7 +235,7 @@
       </footer>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../js/bootstrap-3.0.3.min.js"></script>
+    <script src="js/bootstrap-3.0.3.min.js"></script>
 
     
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
@@ -248,10 +243,10 @@
     <script>hljs.initHighlightingOnLoad();</script>
     
 
-    <script>var base_url = ".."</script>
+    <script>var base_url = "."</script>
     
-    <script src="../js/base.js"></script>
-    <script src="../search/main.js"></script>
+    <script src="js/base.js"></script>
+    <script src="search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
