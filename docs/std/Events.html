@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="img/favicon.ico">
 
     
-    <title>Functional - ArkScript</title>
+    <title>Events - ArkScript</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -75,7 +75,7 @@
                 
                 
                 
-                    <li >
+                    <li class="active">
                         <a href="Events.html">Events</a>
                     </li>
                 
@@ -87,7 +87,7 @@
                 
                 
                 
-                    <li class="active">
+                    <li >
                         <a href="Functional.html">Functional</a>
                     </li>
                 
@@ -137,12 +137,12 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="Exceptions.html">
+                        <a rel="prev" href="index.html">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="List.html">
+                        <a rel="next" href="Exceptions.html">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -156,53 +156,70 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#functional">Functional</a></li>
-            <li class="second-level"><a href="#compose-_f-_g">(compose  _f _g)</a></li>
+        <li class="first-level active"><a href="#events">Events</a></li>
+            <li class="second-level"><a href="#eventsmanagermake">(events:manager:make)</a></li>
                 
-            <li class="second-level"><a href="#left-_x">(left  _x)</a></li>
+            <li class="second-level"><a href="#_check_valid-callback">(_check_valid  callback)</a></li>
                 
-            <li class="second-level"><a href="#right-_y">(right  _y)</a></li>
+            <li class="second-level"><a href="#on-typ-callback">(on  typ callback)</a></li>
                 
-            <li class="second-level"><a href="#flip-_f-_a">(flip  _f _a)</a></li>
+            <li class="second-level"><a href="#emitwith-val-typ">(emitWith  val typ)</a></li>
+                
+            <li class="second-level"><a href="#emit-typ">(emit  typ)</a></li>
+                
+            <li class="second-level"><a href="#removelistenersoftype-typ">(removeListenersOfType  typ)</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h3 id="functional">Functional</h3>
-<h4 id="compose-_f-_g">(compose  _f _g)</h4>
-<p>Compose function calls</p>
-<p><strong>_f</strong> the first function</p>
-<p><strong>_g</strong> the second function</p>
-<pre><code>(let foo (fun (a) (* a a)))
-(let bar (fun (b) (+ b b)))
-(let composed (compose foo bar))
-(print (composed 12))  # return value is (12 + 12) * (12 + 12)
+<h3 id="events">Events</h3>
+<h4 id="eventsmanagermake">(events:manager:make)</h4>
+<p>Allows to register events listeners and emit events</p>
+<pre><code>(let em (events:manager:make))
+(em.on &quot;myType&quot; (fun (value) (print &quot;This is a callback&quot;)))
+(em.emit &quot;myType&quot;)  # =&gt; prints &quot;This is a callback&quot; thanks to the registered listener
 </code></pre>
-<p>Author : <a href="https://github.com/rstefanic">rstefanic</a></p>
-<h4 id="left-_x">(left  _x)</h4>
-<p>Take a value as its argument and return a function taking 2 arguments which will call the first function on the value</p>
-<p><strong>_x</strong> the value</p>
-<pre><code>(let val (left 12))
-(val (fun (x) (print x &quot; i am called&quot;)) (fun (x) (print x &quot; i am NOT called&quot;)))
+<p>Author : <a href="https://github.com/fabien-zoccola">fabien-zoccola</a></p>
+<h4 id="_check_valid-callback">(_check_valid  callback)</h4>
+<p>Checks if a given callback is valid (is a function or a closure)</p>
+<p><strong>callback</strong> the callback to check</p>
+<p><em>Returns true if the callback is a function/closure, false otherwise</em></p>
+<pre><code>    # (closure._check_valid (fun (param) ()))  # =&gt; true
+    # (closure._check_valid (fun (param) {}))  # =&gt; true
+    # (closure._check_valid 5)  # =&gt; false
 </code></pre>
-<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
-<h4 id="right-_y">(right  _y)</h4>
-<p>Take a value as its argument and return a function taking 2 arguments which will call the second function on the value</p>
-<p><strong>_y</strong> the value</p>
-<pre><code>(let val (right 12))
-(val (fun (x) (print x &quot; i am NOT called&quot;)) (fun (x) (print x &quot; i am called&quot;)))
+<p>Author : <a href="https://github.com/fabien-zoccola">fabien-zoccola</a></p>
+<h4 id="on-typ-callback">(on  typ callback)</h4>
+<p>Registers an event listener</p>
+<p><strong>typ</strong> the type of the event to listen for</p>
+<p><strong>callback</strong> the function/closure that will be called when an event is emitted</p>
+<p><em>Adds a [type callback] list to the listeners list</em></p>
+<pre><code>    # (closure.on &quot;myType&quot; (fun (param) ())
 </code></pre>
-<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
-<h4 id="flip-_f-_a">(flip  _f _a)</h4>
-<p>Flip the arguments of a function</p>
-<p><strong>_f</strong> the function</p>
-<p><strong>_a</strong> the first argument</p>
-<p><em>Returns a function taking 1 argument: the second argument of the function to flip</em></p>
-<pre><code>(let foo (fun (a b) (- a b)))
-((flip foo 14) 12) # will call (foo 12 14) instead of (foo 14 12)
+<p>Author : <a href="https://github.com/fabien-zoccola">fabien-zoccola</a></p>
+<h4 id="emitwith-val-typ">(emitWith  val typ)</h4>
+<p>Emits an event with a value</p>
+<p><strong>val</strong> the emitted value</p>
+<p><strong>typ</strong> the type of the emitted event</p>
+<p><em>Makes a forEach on the listeners list, and calls the callback. Returns a boolean of whether we called at least one listener</em></p>
+<pre><code>    # (closure.emitWith 5 &quot;myType&quot;)
 </code></pre>
-<p>Author : <a href="https://github.com/rstefanic">rstefanic</a></p></div>
+<p>Author : <a href="https://github.com/fabien-zoccola">fabien-zoccola</a></p>
+<h4 id="emit-typ">(emit  typ)</h4>
+<p>Emits an event with no value</p>
+<p><strong>typ</strong> the type of the emitted event</p>
+<p><em>Calls emitWith nil <typ></em></p>
+<pre><code>    # (closure.emit &quot;myType&quot;)
+</code></pre>
+<p>Author : <a href="https://github.com/fabien-zoccola">fabien-zoccola</a></p>
+<h4 id="removelistenersoftype-typ">(removeListenersOfType  typ)</h4>
+<p>Removes all listeners of a given type</p>
+<p><strong>typ</strong> the type of event to remove from the list</p>
+<p><em>Returns if at least one listener has been removed</em></p>
+<pre><code>    # (closure.remove_listeners_of_type &quot;myType&quot;)
+</code></pre>
+<p>Author : <a href="https://github.com/fabien-zoccola">fabien-zoccola</a></p></div>
         
         
     </div>
