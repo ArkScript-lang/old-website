@@ -165,6 +165,10 @@
                 
             <li class="second-level"><a href="#listfoldleft-_l-_init-_f">(list:foldLeft  _L _init _f)</a></li>
                 
+            <li class="second-level"><a href="#listforall-a-f">(list:forAll  a f)</a></li>
+                
+            <li class="second-level"><a href="#listany-a-f">(list:any  a f)</a></li>
+                
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
@@ -205,7 +209,25 @@
 <pre><code>(let a [1 2 3 4])
 (print (list:foldLeft a 0 (fun (a b) (+ a b))))  # 10
 </code></pre>
-<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p></div>
+<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
+<h4 id="listforall-a-f">(list:forAll  a f)</h4>
+<p>Check if a condition is verified for all elements of a list</p>
+<p><strong>a</strong> the list to work on</p>
+<p><strong>f</strong> the conditon</p>
+<pre><code>(let a [1 2 3 4])
+(let f (fun(e)(&lt; e 5)))
+(print (list:forAll a f))  # true
+</code></pre>
+<p>Author : <a href="https://github.com/Gryfenfer97">Gryfenfer97</a></p>
+<h4 id="listany-a-f">(list:any  a f)</h4>
+<p>Check if a condition if verified for one or more elements of a list</p>
+<p><strong>a</strong> the list to work on</p>
+<p><strong>f</strong> the conditon</p>
+<pre><code>(let a [1 2 3 4])
+(let f (fun(e)(&lt; e 3)))
+(print (list:any a f))  # true
+</code></pre>
+<p>Author : <a href="https://github.com/Gryfenfer97">Gryfenfer97</a></p></div>
         
         
     </div>
