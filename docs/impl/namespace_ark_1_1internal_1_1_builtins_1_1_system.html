@@ -95,11 +95,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a629e7c07ca9563c02f257c67306b526e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark_1_1internal_1_1_builtins_1_1_system.html#a629e7c07ca9563c02f257c67306b526e">system_</a> (std::vector&lt; <a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a> &gt; &amp;n, <a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a> *vm)</td></tr>
+<tr class="memitem:a629e7c07ca9563c02f257c67306b526e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ark_1_1_value.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark_1_1internal_1_1_builtins_1_1_system.html#a629e7c07ca9563c02f257c67306b526e">system_</a> (std::vector&lt; <a class="el" href="class_ark_1_1_value.html">Value</a> &gt; &amp;n, <a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a> *vm)</td></tr>
 <tr class="separator:a629e7c07ca9563c02f257c67306b526e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13840639439071941a08d3a0d96dd0c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark_1_1internal_1_1_builtins_1_1_system.html#a13840639439071941a08d3a0d96dd0c1">sleep</a> (std::vector&lt; <a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a> &gt; &amp;n, <a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a> *vm)</td></tr>
+<tr class="memitem:a13840639439071941a08d3a0d96dd0c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ark_1_1_value.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark_1_1internal_1_1_builtins_1_1_system.html#a13840639439071941a08d3a0d96dd0c1">sleep</a> (std::vector&lt; <a class="el" href="class_ark_1_1_value.html">Value</a> &gt; &amp;n, <a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a> *vm)</td></tr>
 <tr class="separator:a13840639439071941a08d3a0d96dd0c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a220362c466a194d75883b80055c0a1dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark_1_1internal_1_1_builtins_1_1_system.html#a220362c466a194d75883b80055c0a1dd">exit_</a> (std::vector&lt; <a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a> &gt; &amp;n, <a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a> *vm)</td></tr>
+<tr class="memitem:a220362c466a194d75883b80055c0a1dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ark_1_1_value.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark_1_1internal_1_1_builtins_1_1_system.html#a220362c466a194d75883b80055c0a1dd">exit_</a> (std::vector&lt; <a class="el" href="class_ark_1_1_value.html">Value</a> &gt; &amp;n, <a class="el" href="class_ark_1_1_v_m.html">Ark::VM</a> *vm)</td></tr>
 <tr class="separator:a220362c466a194d75883b80055c0a1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -108,7 +108,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a> Ark::internal::Builtins::System::system_ </td>
+          <td class="memname"><a class="el" href="class_ark_1_1_value.html">Value</a> Ark::internal::Builtins::System::system_ </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; Value &gt; &amp;&#160;</td>
           <td class="paramname"><em>n</em>, </td>
@@ -142,13 +142,12 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;sys:exec: couldn&#39;t retrieve command output&quot;</span>);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">while</span> (fgets(buffer.data(), buffer.size(), pipe.get()) != <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                result += buffer.data();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">Value</a>(result);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">return</span> Value(result);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">        #endif  // ARK_ENABLE_SYSTEM</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespace_ark_1_1internal_1_1_builtins.html#a0541c7c43175f68aca89a4c3a61fca12">nil</a>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
-<div class="ttc" id="namespace_ark_html_a78cf7bec8c2cee4247c5efa4b1e4aa9c"><div class="ttname"><a href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">Ark::Value</a></div><div class="ttdeci">internal::Value Value</div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00285">VM.hpp:285</a></div></div>
-<div class="ttc" id="namespace_ark_1_1internal_1_1_builtins_html_a0541c7c43175f68aca89a4c3a61fca12"><div class="ttname"><a href="namespace_ark_1_1internal_1_1_builtins.html#a0541c7c43175f68aca89a4c3a61fca12">Ark::internal::Builtins::nil</a></div><div class="ttdeci">const Value nil</div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8cpp_source.html#l00013">Builtins.cpp:13</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_1_1_builtins_html_a0541c7c43175f68aca89a4c3a61fca12"><div class="ttname"><a href="namespace_ark_1_1internal_1_1_builtins.html#a0541c7c43175f68aca89a4c3a61fca12">Ark::internal::Builtins::nil</a></div><div class="ttdeci">const Value nil</div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8cpp_source.html#l00011">Builtins.cpp:11</a></div></div>
 <div class="ttc" id="class_ark_1_1_type_error_html"><div class="ttname"><a href="class_ark_1_1_type_error.html">Ark::TypeError</a></div><div class="ttdoc">A type error triggered when types don&#39;t match. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00024">Exceptions.hpp:24</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -158,7 +157,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a> Ark::internal::Builtins::System::sleep </td>
+          <td class="memname"><a class="el" href="class_ark_1_1_value.html">Value</a> Ark::internal::Builtins::System::sleep </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; Value &gt; &amp;&#160;</td>
           <td class="paramname"><em>n</em>, </td>
@@ -189,7 +188,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespace_ark_1_1internal_1_1_builtins.html#a0541c7c43175f68aca89a4c3a61fca12">nil</a>;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="ttc" id="namespace_ark_1_1internal_1_1_builtins_html_a0541c7c43175f68aca89a4c3a61fca12"><div class="ttname"><a href="namespace_ark_1_1internal_1_1_builtins.html#a0541c7c43175f68aca89a4c3a61fca12">Ark::internal::Builtins::nil</a></div><div class="ttdeci">const Value nil</div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8cpp_source.html#l00013">Builtins.cpp:13</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_1_1_builtins_html_a0541c7c43175f68aca89a4c3a61fca12"><div class="ttname"><a href="namespace_ark_1_1internal_1_1_builtins.html#a0541c7c43175f68aca89a4c3a61fca12">Ark::internal::Builtins::nil</a></div><div class="ttdeci">const Value nil</div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8cpp_source.html#l00011">Builtins.cpp:11</a></div></div>
 <div class="ttc" id="class_ark_1_1_type_error_html"><div class="ttname"><a href="class_ark_1_1_type_error.html">Ark::TypeError</a></div><div class="ttdoc">A type error triggered when types don&#39;t match. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00024">Exceptions.hpp:24</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -199,7 +198,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a> Ark::internal::Builtins::System::exit_ </td>
+          <td class="memname"><a class="el" href="class_ark_1_1_value.html">Value</a> Ark::internal::Builtins::System::exit_ </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; Value &gt; &amp;&#160;</td>
           <td class="paramname"><em>n</em>, </td>
@@ -229,16 +228,16 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespace_ark_1_1internal_1_1_builtins.html#a0541c7c43175f68aca89a4c3a61fca12">nil</a>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
-<div class="ttc" id="namespace_ark_1_1internal_1_1_builtins_html_a0541c7c43175f68aca89a4c3a61fca12"><div class="ttname"><a href="namespace_ark_1_1internal_1_1_builtins.html#a0541c7c43175f68aca89a4c3a61fca12">Ark::internal::Builtins::nil</a></div><div class="ttdeci">const Value nil</div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8cpp_source.html#l00013">Builtins.cpp:13</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_1_1_builtins_html_a0541c7c43175f68aca89a4c3a61fca12"><div class="ttname"><a href="namespace_ark_1_1internal_1_1_builtins.html#a0541c7c43175f68aca89a4c3a61fca12">Ark::internal::Builtins::nil</a></div><div class="ttdeci">const Value nil</div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8cpp_source.html#l00011">Builtins.cpp:11</a></div></div>
 <div class="ttc" id="class_ark_1_1_type_error_html"><div class="ttname"><a href="class_ark_1_1_type_error.html">Ark::TypeError</a></div><div class="ttdoc">A type error triggered when types don&#39;t match. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8hpp_source.html#l00024">Exceptions.hpp:24</a></div></div>
-<div class="ttc" id="class_ark_1_1_v_m_html_af7ab87072e0dca859367534ad92edf1d"><div class="ttname"><a href="class_ark_1_1_v_m.html#af7ab87072e0dca859367534ad92edf1d">Ark::VM::exit</a></div><div class="ttdeci">void exit(int code) noexcept</div><div class="ttdoc">Ask the VM to exit with a given exit code. </div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8cpp_source.html#l00145">VM.cpp:145</a></div></div>
+<div class="ttc" id="class_ark_1_1_v_m_html_af7ab87072e0dca859367534ad92edf1d"><div class="ttname"><a href="class_ark_1_1_v_m.html#af7ab87072e0dca859367534ad92edf1d">Ark::VM::exit</a></div><div class="ttdeci">void exit(int code) noexcept</div><div class="ttdoc">Ask the VM to exit with a given exit code. </div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8cpp_source.html#l00139">VM.cpp:139</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 30 2021 16:41:25 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 13 2021 12:01:18 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

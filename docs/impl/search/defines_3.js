@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['coz_5fbegin',['COZ_BEGIN',['../_profiling_8hpp.html#a816e99a0d083e6ce0d783fcc824782fa',1,'Profiling.hpp']]],
-  ['coz_5fend',['COZ_END',['../_profiling_8hpp.html#a85a466184ae1ea357393d98f1738eb46',1,'Profiling.hpp']]],
-  ['coz_5fprogress',['COZ_PROGRESS',['../_profiling_8hpp.html#aeff1dc92349fcf3bd5c4c5c7675900a6',1,'Profiling.hpp']]],
-  ['coz_5fprogress_5fnamed',['COZ_PROGRESS_NAMED',['../_profiling_8hpp.html#ab1d62467de757e309e99af513e6a8691',1,'Profiling.hpp']]]
+  ['gen_5fcomparator',['GEN_COMPARATOR',['../_macro_processor_8cpp.html#a870ad3e992f06ebee3bf0e8d391587a7',1,'MacroProcessor.cpp']]],
+  ['gen_5fnot_5fbody',['GEN_NOT_BODY',['../_macro_processor_8cpp.html#a0f3c7f623263a4a2cec9b4db777d413c',1,'MacroProcessor.cpp']]],
+  ['gen_5fop',['GEN_OP',['../_macro_processor_8cpp.html#a4fba6b380dc4af3c4f88311d61cfdde5',1,'MacroProcessor.cpp']]]
 ];

@@ -16,8 +16,8 @@ var indexSectionsWithContent =
   6: "bcimprsv",
   7: "bcikntv",
   8: "abcdefghijklmnopqrstuvw",
-  9: "aimorv",
-  10: "_abcgipv",
+  9: "amorv",
+  10: "_acgipv",
   11: "t"
 };
 

@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['builtins_5ffunction',['Builtins_Function',['../_builtins_8cpp.html#a16f028dc9f1e747a9c6487f56e31aa19',1,'Builtins.cpp']]]
+  ['coz_5fbegin',['COZ_BEGIN',['../_profiling_8hpp.html#a816e99a0d083e6ce0d783fcc824782fa',1,'Profiling.hpp']]],
+  ['coz_5fend',['COZ_END',['../_profiling_8hpp.html#a85a466184ae1ea357393d98f1738eb46',1,'Profiling.hpp']]],
+  ['coz_5fprogress',['COZ_PROGRESS',['../_profiling_8hpp.html#aeff1dc92349fcf3bd5c4c5c7675900a6',1,'Profiling.hpp']]],
+  ['coz_5fprogress_5fnamed',['COZ_PROGRESS_NAMED',['../_profiling_8hpp.html#ab1d62467de757e309e99af513e6a8691',1,'Profiling.hpp']]]
 ];

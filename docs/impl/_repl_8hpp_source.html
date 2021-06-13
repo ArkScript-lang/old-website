@@ -107,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_ark_1_1_repl.html">   25</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_ark_1_1_repl.html">Repl</a></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="class_ark_1_1_repl.html#aab6a9ac80f189175ccb6817ecccfe66d">Repl</a>(uint16_t options, std::string lib_dir);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="class_ark_1_1_repl.html#a5f86caf37532dcf6ec8b238010e3e766">Repl</a>(uint16_t options, <span class="keyword">const</span> std::string&amp; lib_dir);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_ark_1_1_repl.html#a27884a932a9c4193e900ddd81960a737">run</a>();</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
@@ -129,7 +129,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="class_ark_1_1_repl_html_a9f85a9da12779d6275f32036bd96ac64"><div class="ttname"><a href="class_ark_1_1_repl.html#a9f85a9da12779d6275f32036bd96ac64">Ark::Repl::count_open_braces</a></div><div class="ttdeci">int count_open_braces(const std::string &amp;line)</div><div class="ttdef"><b>Definition:</b> <a href="_repl_8cpp_source.html#l00129">Repl.cpp:129</a></div></div>
 <div class="ttc" id="_state_8hpp_html"><div class="ttname"><a href="_state_8hpp.html">State.hpp</a></div><div class="ttdoc">State used by the virtual machine: it loads the bytecode, can compile it if needed, load C++ functions... </div></div>
-<div class="ttc" id="class_ark_1_1_repl_html_aab6a9ac80f189175ccb6817ecccfe66d"><div class="ttname"><a href="class_ark_1_1_repl.html#aab6a9ac80f189175ccb6817ecccfe66d">Ark::Repl::Repl</a></div><div class="ttdeci">Repl(uint16_t options, std::string lib_dir)</div><div class="ttdoc">Construct a new Repl object. </div><div class="ttdef"><b>Definition:</b> <a href="_repl_8cpp_source.html#l00011">Repl.cpp:11</a></div></div>
 <div class="ttc" id="_console_style_8hpp_html"><div class="ttname"><a href="_console_style_8hpp.html">ConsoleStyle.hpp</a></div><div class="ttdoc">Colors per token used by replxx. </div></div>
 <div class="ttc" id="class_ark_1_1_repl_html_adb838195096ce3d46143c7ca73aa864c"><div class="ttname"><a href="class_ark_1_1_repl.html#adb838195096ce3d46143c7ca73aa864c">Ark::Repl::m_lines</a></div><div class="ttdeci">unsigned m_lines</div><div class="ttdef"><b>Definition:</b> <a href="_repl_8hpp_source.html#l00046">Repl.hpp:46</a></div></div>
 <div class="ttc" id="_console_style_8hpp_html_a362bc7a2816fe6a0221748387af71066"><div class="ttname"><a href="_console_style_8hpp.html#a362bc7a2816fe6a0221748387af71066">Replxx</a></div><div class="ttdeci">replxx::Replxx Replxx</div><div class="ttdef"><b>Definition:</b> <a href="_console_style_8hpp_source.html#l00017">ConsoleStyle.hpp:17</a></div></div>
@@ -144,13 +143,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_ark_1_1_repl_html_ab542e98c2a9f4958a7cec48237d3d520"><div class="ttname"><a href="class_ark_1_1_repl.html#ab542e98c2a9f4958a7cec48237d3d520">Ark::Repl::count_open_parentheses</a></div><div class="ttdeci">int count_open_parentheses(const std::string &amp;line)</div><div class="ttdef"><b>Definition:</b> <a href="_repl_8cpp_source.html#l00113">Repl.cpp:113</a></div></div>
 <div class="ttc" id="class_ark_1_1_repl_html_a27884a932a9c4193e900ddd81960a737"><div class="ttname"><a href="class_ark_1_1_repl.html#a27884a932a9c4193e900ddd81960a737">Ark::Repl::run</a></div><div class="ttdeci">int run()</div><div class="ttdoc">Start the REPL. </div><div class="ttdef"><b>Definition:</b> <a href="_repl_8cpp_source.html#l00015">Repl.cpp:15</a></div></div>
 <div class="ttc" id="class_ark_1_1_repl_html_ae087302ee87fa0462f7b3363d3c220e0"><div class="ttname"><a href="class_ark_1_1_repl.html#ae087302ee87fa0462f7b3363d3c220e0">Ark::Repl::print_repl_header</a></div><div class="ttdeci">void print_repl_header()</div><div class="ttdef"><b>Definition:</b> <a href="_repl_8cpp_source.html#l00102">Repl.cpp:102</a></div></div>
+<div class="ttc" id="class_ark_1_1_repl_html_a5f86caf37532dcf6ec8b238010e3e766"><div class="ttname"><a href="class_ark_1_1_repl.html#a5f86caf37532dcf6ec8b238010e3e766">Ark::Repl::Repl</a></div><div class="ttdeci">Repl(uint16_t options, const std::string &amp;lib_dir)</div><div class="ttdoc">Construct a new Repl object. </div><div class="ttdef"><b>Definition:</b> <a href="_repl_8cpp_source.html#l00011">Repl.cpp:11</a></div></div>
 <div class="ttc" id="_v_m_8hpp_html"><div class="ttname"><a href="_v_m_8hpp.html">VM.hpp</a></div><div class="ttdoc">The ArkScript virtual machine. </div></div>
 <div class="ttc" id="class_ark_1_1_repl_html_af885195f6d803b0768fc793721502e19"><div class="ttname"><a href="class_ark_1_1_repl.html#af885195f6d803b0768fc793721502e19">Ark::Repl::m_lib_dir</a></div><div class="ttdeci">std::string m_lib_dir</div><div class="ttdef"><b>Definition:</b> <a href="_repl_8hpp_source.html#l00043">Repl.hpp:43</a></div></div>
 <div class="ttc" id="namespace_ark_html"><div class="ttname"><a href="namespace_ark.html">Ark</a></div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8hpp_source.html#l00023">Builtins.hpp:23</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 30 2021 16:41:22 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 13 2021 12:01:15 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -7,9 +7,5 @@ var searchData=
   ['ark_5fcompiler',['ARK_COMPILER',['../_constants_8hpp.html#a1117e7a814daf74a4935079b9b29ab84',1,'Constants.hpp']]],
   ['ark_5fno_5fname_5ffile',['ARK_NO_NAME_FILE',['../_constants_8hpp.html#ae99a69d821bd74354272ee56fc43f796',1,'Constants.hpp']]],
   ['ark_5fos_5flinux',['ARK_OS_LINUX',['../_config_8hpp.html#afd6fad0f44d13ab15ff79c78c10786a8',1,'Config.hpp']]],
-  ['ark_5fplatform_5fname',['ARK_PLATFORM_NAME',['../_constants_8hpp.html#a473be7f5eca195f89cf4637236f29ad2',1,'Constants.hpp']]],
-  ['ark_5fversion',['ARK_VERSION',['../_constants_8hpp.html#adb53da0bb3a00c28566bd8f051ed72d6',1,'Constants.hpp']]],
-  ['ark_5fversion_5fmajor',['ARK_VERSION_MAJOR',['../_constants_8hpp.html#afc92e3b88d55ef7fe54acb1da7d62745',1,'Constants.hpp']]],
-  ['ark_5fversion_5fminor',['ARK_VERSION_MINOR',['../_constants_8hpp.html#a2503c1ff3c39b13920befc7686b03d38',1,'Constants.hpp']]],
-  ['ark_5fversion_5fpatch',['ARK_VERSION_PATCH',['../_constants_8hpp.html#a1a667125606e5219c4f6ed6f9309ed32',1,'Constants.hpp']]]
+  ['ark_5fplatform_5fname',['ARK_PLATFORM_NAME',['../_constants_8hpp.html#a473be7f5eca195f89cf4637236f29ad2',1,'Constants.hpp']]]
 ];

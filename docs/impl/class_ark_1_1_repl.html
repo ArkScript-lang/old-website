@@ -102,9 +102,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aab6a9ac80f189175ccb6817ecccfe66d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_repl.html#aab6a9ac80f189175ccb6817ecccfe66d">Repl</a> (uint16_t options, std::string lib_dir)</td></tr>
-<tr class="memdesc:aab6a9ac80f189175ccb6817ecccfe66d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_ark_1_1_repl.html">Repl</a> object.  <a href="#aab6a9ac80f189175ccb6817ecccfe66d">More...</a><br /></td></tr>
-<tr class="separator:aab6a9ac80f189175ccb6817ecccfe66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f86caf37532dcf6ec8b238010e3e766"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_repl.html#a5f86caf37532dcf6ec8b238010e3e766">Repl</a> (uint16_t options, const std::string &amp;lib_dir)</td></tr>
+<tr class="memdesc:a5f86caf37532dcf6ec8b238010e3e766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_ark_1_1_repl.html">Repl</a> object.  <a href="#a5f86caf37532dcf6ec8b238010e3e766">More...</a><br /></td></tr>
+<tr class="separator:a5f86caf37532dcf6ec8b238010e3e766"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27884a932a9c4193e900ddd81960a737"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_repl.html#a27884a932a9c4193e900ddd81960a737">run</a> ()</td></tr>
 <tr class="memdesc:a27884a932a9c4193e900ddd81960a737"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the REPL.  <a href="#a27884a932a9c4193e900ddd81960a737">More...</a><br /></td></tr>
 <tr class="separator:a27884a932a9c4193e900ddd81960a737"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,7 +139,7 @@ Private Attributes</h2></td></tr>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_repl_8hpp_source.html#l00025">25</a> of file <a class="el" href="_repl_8hpp_source.html">Repl.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aab6a9ac80f189175ccb6817ecccfe66d"></a>
+<a class="anchor" id="a5f86caf37532dcf6ec8b238010e3e766"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -152,7 +152,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>lib_dir</em>&#160;</td>
         </tr>
         <tr>
@@ -173,7 +173,7 @@ Private Attributes</h2></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="_repl_8cpp_source.html#l00011">11</a> of file <a class="el" href="_repl_8cpp_source.html">Repl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                                                  :</div>
+<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                                                         :</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="class_ark_1_1_repl.html#aab580778688efe8e28e831d63ad9843f">m_options</a>(options), <a class="code" href="class_ark_1_1_repl.html#af885195f6d803b0768fc793721502e19">m_lib_dir</a>(lib_dir), <a class="code" href="class_ark_1_1_repl.html#adb838195096ce3d46143c7ca73aa864c">m_lines</a>(1), <a class="code" href="class_ark_1_1_repl.html#ad042675ab12467a4ef6bffc1adcd1c12">m_old_ip</a>(0)</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {}</div>
 <div class="ttc" id="class_ark_1_1_repl_html_adb838195096ce3d46143c7ca73aa864c"><div class="ttname"><a href="class_ark_1_1_repl.html#adb838195096ce3d46143c7ca73aa864c">Ark::Repl::m_lines</a></div><div class="ttdeci">unsigned m_lines</div><div class="ttdef"><b>Definition:</b> <a href="_repl_8hpp_source.html#l00046">Repl.hpp:46</a></div></div>
@@ -326,14 +326,14 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        std::printf(</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="stringliteral">&quot;ArkScript REPL -- Version %i.%i.%i [LICENSE: Mozilla Public License 2.0]\n&quot;</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="stringliteral">&quot;Type \&quot;(quit)\&quot; to quit.\n&quot;</span>,</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <a class="code" href="_constants_8hpp.html#afc92e3b88d55ef7fe54acb1da7d62745">ARK_VERSION_MAJOR</a>,</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <a class="code" href="_constants_8hpp.html#a2503c1ff3c39b13920befc7686b03d38">ARK_VERSION_MINOR</a>,</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <a class="code" href="_constants_8hpp.html#a1a667125606e5219c4f6ed6f9309ed32">ARK_VERSION_PATCH</a></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <a class="code" href="_constants_8hpp.html#a4c94ae2a54ca868cb8971136188976e3">ARK_VERSION_MAJOR</a>,</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <a class="code" href="_constants_8hpp.html#ae92e5cb7f969a516e5ad53ff6c0b9800">ARK_VERSION_MINOR</a>,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <a class="code" href="_constants_8hpp.html#a8b54f548bc7ddf5e0833bd12e4b65635">ARK_VERSION_PATCH</a></div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        );</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
-<div class="ttc" id="_constants_8hpp_html_afc92e3b88d55ef7fe54acb1da7d62745"><div class="ttname"><a href="_constants_8hpp.html#afc92e3b88d55ef7fe54acb1da7d62745">ARK_VERSION_MAJOR</a></div><div class="ttdeci">#define ARK_VERSION_MAJOR</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00015">Constants.hpp:15</a></div></div>
-<div class="ttc" id="_constants_8hpp_html_a2503c1ff3c39b13920befc7686b03d38"><div class="ttname"><a href="_constants_8hpp.html#a2503c1ff3c39b13920befc7686b03d38">ARK_VERSION_MINOR</a></div><div class="ttdeci">#define ARK_VERSION_MINOR</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00016">Constants.hpp:16</a></div></div>
-<div class="ttc" id="_constants_8hpp_html_a1a667125606e5219c4f6ed6f9309ed32"><div class="ttname"><a href="_constants_8hpp.html#a1a667125606e5219c4f6ed6f9309ed32">ARK_VERSION_PATCH</a></div><div class="ttdeci">#define ARK_VERSION_PATCH</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00017">Constants.hpp:17</a></div></div>
+<div class="ttc" id="_constants_8hpp_html_a8b54f548bc7ddf5e0833bd12e4b65635"><div class="ttname"><a href="_constants_8hpp.html#a8b54f548bc7ddf5e0833bd12e4b65635">ARK_VERSION_PATCH</a></div><div class="ttdeci">constexpr int ARK_VERSION_PATCH</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00017">Constants.hpp:17</a></div></div>
+<div class="ttc" id="_constants_8hpp_html_a4c94ae2a54ca868cb8971136188976e3"><div class="ttname"><a href="_constants_8hpp.html#a4c94ae2a54ca868cb8971136188976e3">ARK_VERSION_MAJOR</a></div><div class="ttdeci">constexpr int ARK_VERSION_MAJOR</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00015">Constants.hpp:15</a></div></div>
+<div class="ttc" id="_constants_8hpp_html_ae92e5cb7f969a516e5ad53ff6c0b9800"><div class="ttname"><a href="_constants_8hpp.html#ae92e5cb7f969a516e5ad53ff6c0b9800">ARK_VERSION_MINOR</a></div><div class="ttdeci">constexpr int ARK_VERSION_MINOR</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00016">Constants.hpp:16</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -363,7 +363,7 @@ Private Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    {</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordtype">int</span> open_parentheses = 0;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">char</span>&amp; c: line)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">char</span>&amp; c : line)</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        {</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">switch</span> (c)</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            {</div>
@@ -403,7 +403,7 @@ Private Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    {</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordtype">int</span> open_braces = 0;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">char</span>&amp; c: line)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">char</span>&amp; c : line)</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        {</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keywordflow">switch</span> (c)</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            {</div>
@@ -614,7 +614,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 30 2021 16:41:24 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 13 2021 12:01:17 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

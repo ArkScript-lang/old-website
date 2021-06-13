@@ -94,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef ARK_COMPILER_CVALUE_HPP</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define ARK_COMPILER_CVALUE_HPP</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;variant.hpp&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;variant&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_node_8hpp.html">Ark/Compiler/Node.hpp</a>&gt;</span></div>
@@ -110,7 +110,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="struct_ark_1_1internal_1_1_c_value.html">   37</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_ark_1_1internal_1_1_c_value.html">CValue</a></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="struct_ark_1_1internal_1_1_c_value.html#aa11d72559e8debf87a375c0b0ee366fa">   39</a></span>&#160;        mpark::variant&lt;double, std::string, std::size_t&gt; <a class="code" href="struct_ark_1_1internal_1_1_c_value.html#aa11d72559e8debf87a375c0b0ee366fa">value</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="struct_ark_1_1internal_1_1_c_value.html#adf1d2c70d742ceda3f5c020ab4b92b95">   39</a></span>&#160;        std::variant&lt;double, std::string, std::size_t&gt; <a class="code" href="struct_ark_1_1internal_1_1_c_value.html#adf1d2c70d742ceda3f5c020ab4b92b95">value</a>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="struct_ark_1_1internal_1_1_c_value.html#adf6b92d0fb266c3203717f5528ddc147">   40</a></span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3">CValueType</a> <a class="code" href="struct_ark_1_1internal_1_1_c_value.html#adf6b92d0fb266c3203717f5528ddc147">type</a>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">// Numbers</span></div>
@@ -136,14 +136,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="namespace_ark_1_1internal_html_abbd0e65f86a8884c76fdf41f5e1389d3a6666eaba81f13e74d10ac1a9c9d6d7b1"><div class="ttname"><a href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a6666eaba81f13e74d10ac1a9c9d6d7b1">Ark::internal::CValueType::PageAddr</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html"><div class="ttname"><a href="namespace_ark_1_1internal.html">Ark::internal</a></div></div>
 <div class="ttc" id="struct_ark_1_1internal_1_1_c_value_html_a88316d06f9a3fa88779bf95178344c52"><div class="ttname"><a href="struct_ark_1_1internal_1_1_c_value.html#a88316d06f9a3fa88779bf95178344c52">Ark::internal::CValue::operator==</a></div><div class="ttdeci">bool operator==(const CValue &amp;A) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="_c_value_8cpp_source.html#l00039">CValue.cpp:39</a></div></div>
-<div class="ttc" id="struct_ark_1_1internal_1_1_c_value_html_aa11d72559e8debf87a375c0b0ee366fa"><div class="ttname"><a href="struct_ark_1_1internal_1_1_c_value.html#aa11d72559e8debf87a375c0b0ee366fa">Ark::internal::CValue::value</a></div><div class="ttdeci">mpark::variant&lt; double, std::string, std::size_t &gt; value</div><div class="ttdef"><b>Definition:</b> <a href="_c_value_8hpp_source.html#l00039">CValue.hpp:39</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_abbd0e65f86a8884c76fdf41f5e1389d3"><div class="ttname"><a href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3">Ark::internal::CValueType</a></div><div class="ttdeci">CValueType</div><div class="ttdoc">Enumeration to keep track of the type of a C(ompiler)Value. </div><div class="ttdef"><b>Definition:</b> <a href="_c_value_8hpp_source.html#l00026">CValue.hpp:26</a></div></div>
 <div class="ttc" id="_node_8hpp_html"><div class="ttname"><a href="_node_8hpp.html">Node.hpp</a></div><div class="ttdoc">AST node used by the parser, optimizer and compiler. </div></div>
+<div class="ttc" id="struct_ark_1_1internal_1_1_c_value_html_adf1d2c70d742ceda3f5c020ab4b92b95"><div class="ttname"><a href="struct_ark_1_1internal_1_1_c_value.html#adf1d2c70d742ceda3f5c020ab4b92b95">Ark::internal::CValue::value</a></div><div class="ttdeci">std::variant&lt; double, std::string, std::size_t &gt; value</div><div class="ttdef"><b>Definition:</b> <a href="_c_value_8hpp_source.html#l00039">CValue.hpp:39</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98"><div class="ttname"><a href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98">Ark::internal::CValueType::String</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 30 2021 16:41:22 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 13 2021 12:01:15 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

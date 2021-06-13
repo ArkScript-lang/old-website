@@ -121,9 +121,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae3fda5c7fbf90319871e4057b28f84c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#ae3fda5c7fbf90319871e4057b28f84c8">doString</a> (const std::string &amp;code)</td></tr>
 <tr class="memdesc:ae3fda5c7fbf90319871e4057b28f84c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a string (representing ArkScript code) and store resulting bytecode in m_bytecode.  <a href="#ae3fda5c7fbf90319871e4057b28f84c8">More...</a><br /></td></tr>
 <tr class="separator:ae3fda5c7fbf90319871e4057b28f84c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31505924979cc54dd107681f37f1a1dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#a31505924979cc54dd107681f37f1a1dd">loadFunction</a> (const std::string &amp;name, <a class="el" href="class_ark_1_1internal_1_1_value.html#a95b11117e2e711f3b7fb52702997d6b3">internal::Value::ProcType</a> function) noexcept</td></tr>
-<tr class="memdesc:a31505924979cc54dd107681f37f1a1dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a function in the virtual machine.  <a href="#a31505924979cc54dd107681f37f1a1dd">More...</a><br /></td></tr>
-<tr class="separator:a31505924979cc54dd107681f37f1a1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7fcdf3a13facf2fa6933a88d08f4027"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#ab7fcdf3a13facf2fa6933a88d08f4027">loadFunction</a> (const std::string &amp;name, <a class="el" href="class_ark_1_1_value.html#ada6d66b70de081c31124e0bb0acf1aa4">Value::ProcType</a> function) noexcept</td></tr>
+<tr class="memdesc:ab7fcdf3a13facf2fa6933a88d08f4027"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a function in the virtual machine.  <a href="#ab7fcdf3a13facf2fa6933a88d08f4027">More...</a><br /></td></tr>
+<tr class="separator:ab7fcdf3a13facf2fa6933a88d08f4027"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa852b784bc447702c336b05ffddcaa98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#aa852b784bc447702c336b05ffddcaa98">setArgs</a> (const std::vector&lt; std::string &gt; &amp;args) noexcept</td></tr>
 <tr class="memdesc:aa852b784bc447702c336b05ffddcaa98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the script arguments in sys:args.  <a href="#aa852b784bc447702c336b05ffddcaa98">More...</a><br /></td></tr>
 <tr class="separator:aa852b784bc447702c336b05ffddcaa98"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,12 +162,12 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a8c9748d6de5ac5e611b7690018c467cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b47055deafbe7eb0061c0b59fadab8b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#a9b47055deafbe7eb0061c0b59fadab8b">m_symbols</a></td></tr>
 <tr class="separator:a9b47055deafbe7eb0061c0b59fadab8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd9f3fe8b6e6e589696a0ec04a8d3511"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_ark_1_1internal_1_1_value.html">internal::Value</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#abd9f3fe8b6e6e589696a0ec04a8d3511">m_constants</a></td></tr>
-<tr class="separator:abd9f3fe8b6e6e589696a0ec04a8d3511"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b5df7febb31b23bad6fee46c416f3a5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_ark_1_1_value.html">Value</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#a4b5df7febb31b23bad6fee46c416f3a5">m_constants</a></td></tr>
+<tr class="separator:a4b5df7febb31b23bad6fee46c416f3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab30d0ca94fb2543fb073e5f66c074c37"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespace_ark.html#a120175e12d54ead9aa7559d2231af817">bytecode_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#ab30d0ca94fb2543fb073e5f66c074c37">m_pages</a></td></tr>
 <tr class="separator:ab30d0ca94fb2543fb073e5f66c074c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa12901642915bdc5880a2202bf4629b8"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="class_ark_1_1internal_1_1_value.html">internal::Value</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#aa12901642915bdc5880a2202bf4629b8">m_binded</a></td></tr>
-<tr class="separator:aa12901642915bdc5880a2202bf4629b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9628e06b3fd719747d96a44194bbe5e1"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="class_ark_1_1_value.html">Value</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_state.html#a9628e06b3fd719747d96a44194bbe5e1">m_binded</a></td></tr>
+<tr class="separator:a9628e06b3fd719747d96a44194bbe5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -256,7 +256,7 @@ Friends</h2></td></tr>
 <div class="ttc" id="class_ark_1_1_state_html_ac612a46c05c538df07704fbd4edc3607"><div class="ttname"><a href="class_ark_1_1_state.html#ac612a46c05c538df07704fbd4edc3607">Ark::State::m_debug_level</a></div><div class="ttdeci">unsigned m_debug_level</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00137">State.hpp:137</a></div></div>
 <div class="ttc" id="class_ark_1_1_state_html_a1f74b3a2bdac7408bf696adc2c21d9fb"><div class="ttname"><a href="class_ark_1_1_state.html#a1f74b3a2bdac7408bf696adc2c21d9fb">Ark::State::m_libdir</a></div><div class="ttdeci">std::string m_libdir</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00140">State.hpp:140</a></div></div>
 <div class="ttc" id="namespace_ark_1_1_utils_html_a3598d0ca35b3c7afd6183f2093807db3"><div class="ttname"><a href="namespace_ark_1_1_utils.html#a3598d0ca35b3c7afd6183f2093807db3">Ark::Utils::canonicalRelPath</a></div><div class="ttdeci">std::string canonicalRelPath(const std::string &amp;path)</div><div class="ttdoc">Get the canonical relative path from a path. </div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00198">Utils.hpp:198</a></div></div>
-<div class="ttc" id="_constants_8hpp_html_ae99a69d821bd74354272ee56fc43f796"><div class="ttname"><a href="_constants_8hpp.html#ae99a69d821bd74354272ee56fc43f796">ARK_NO_NAME_FILE</a></div><div class="ttdeci">#define ARK_NO_NAME_FILE</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00022">Constants.hpp:22</a></div></div>
+<div class="ttc" id="_constants_8hpp_html_ae99a69d821bd74354272ee56fc43f796"><div class="ttname"><a href="_constants_8hpp.html#ae99a69d821bd74354272ee56fc43f796">ARK_NO_NAME_FILE</a></div><div class="ttdeci">#define ARK_NO_NAME_FILE</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00024">Constants.hpp:24</a></div></div>
 <div class="ttc" id="class_ark_1_1_state_html_a49ff30e9372a01fa115e1d473d78ff7d"><div class="ttname"><a href="class_ark_1_1_state.html#a49ff30e9372a01fa115e1d473d78ff7d">Ark::State::m_filename</a></div><div class="ttdeci">std::string m_filename</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00141">State.hpp:141</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -432,7 +432,7 @@ false on failure </dd></dl>
 <div class="ttc" id="class_ark_1_1_bytecode_reader_html"><div class="ttname"><a href="class_ark_1_1_bytecode_reader.html">Ark::BytecodeReader</a></div><div class="ttdoc">This class is just a helper to. </div><div class="ttdef"><b>Definition:</b> <a href="_bytecode_reader_8hpp_source.html#l00041">BytecodeReader.hpp:41</a></div></div>
 <div class="ttc" id="class_ark_1_1_bytecode_reader_html_a37cde505cab84043af9803660b5ca691"><div class="ttname"><a href="class_ark_1_1_bytecode_reader.html#a37cde505cab84043af9803660b5ca691">Ark::BytecodeReader::timestamp</a></div><div class="ttdeci">unsigned long long timestamp()</div><div class="ttdoc">Return the read timestamp from the bytecode file. </div><div class="ttdef"><b>Definition:</b> <a href="_bytecode_reader_8cpp_source.html#l00037">BytecodeReader.cpp:37</a></div></div>
 <div class="ttc" id="class_ark_1_1_bytecode_reader_html_afa24b92283b27f5e67e32ee80669027a"><div class="ttname"><a href="class_ark_1_1_bytecode_reader.html#afa24b92283b27f5e67e32ee80669027a">Ark::BytecodeReader::feed</a></div><div class="ttdeci">void feed(const std::string &amp;file)</div><div class="ttdoc">Construct needed data before displaying information about a given file. </div><div class="ttdef"><b>Definition:</b> <a href="_bytecode_reader_8cpp_source.html#l00015">BytecodeReader.cpp:15</a></div></div>
-<div class="ttc" id="_constants_8hpp_html_af90a944d153c7ebc6603779c1438c80f"><div class="ttname"><a href="_constants_8hpp.html#af90a944d153c7ebc6603779c1438c80f">ARK_CACHE_DIRNAME</a></div><div class="ttdeci">#define ARK_CACHE_DIRNAME</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00021">Constants.hpp:21</a></div></div>
+<div class="ttc" id="_constants_8hpp_html_af90a944d153c7ebc6603779c1438c80f"><div class="ttname"><a href="_constants_8hpp.html#af90a944d153c7ebc6603779c1438c80f">ARK_CACHE_DIRNAME</a></div><div class="ttdeci">#define ARK_CACHE_DIRNAME</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00023">Constants.hpp:23</a></div></div>
 <div class="ttc" id="namespace_ark_1_1_utils_html_af03dab382269619376bd2de1c98d5a01"><div class="ttname"><a href="namespace_ark_1_1_utils.html#af03dab382269619376bd2de1c98d5a01">Ark::Utils::getFilenameFromPath</a></div><div class="ttdeci">std::string getFilenameFromPath(const std::string &amp;path)</div><div class="ttdoc">Get the filename from a path. </div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00187">Utils.hpp:187</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -469,13 +469,13 @@ false on failure </dd></dl>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">try</span></div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        {</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            compiler.feed(code);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; p : <a class="code" href="class_ark_1_1_state.html#aa12901642915bdc5880a2202bf4629b8">m_binded</a>)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; p : <a class="code" href="class_ark_1_1_state.html#a9628e06b3fd719747d96a44194bbe5e1">m_binded</a>)</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                compiler.m_defined_symbols.push_back(p.first);</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            compiler.compile();</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e)</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        {</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            std::printf(<span class="stringliteral">&quot;%s: %s\n&quot;</span>, <span class="keyword">typeid</span>(e).name(), e.what());</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            std::printf(<span class="stringliteral">&quot;%s\n&quot;</span>, e.what());</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        }</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">catch</span> (...)</div>
@@ -486,15 +486,15 @@ false on failure </dd></dl>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_ark_1_1_state.html#a6088b8198a0ad3494ba110e8589e8e31">feed</a>(compiler.bytecode());</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1_state_html_a9628e06b3fd719747d96a44194bbe5e1"><div class="ttname"><a href="class_ark_1_1_state.html#a9628e06b3fd719747d96a44194bbe5e1">Ark::State::m_binded</a></div><div class="ttdeci">std::unordered_map&lt; std::string, Value &gt; m_binded</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00150">State.hpp:150</a></div></div>
 <div class="ttc" id="class_ark_1_1_state_html_a6088b8198a0ad3494ba110e8589e8e31"><div class="ttname"><a href="class_ark_1_1_state.html#a6088b8198a0ad3494ba110e8589e8e31">Ark::State::feed</a></div><div class="ttdeci">bool feed(const std::string &amp;bytecode_filename)</div><div class="ttdoc">Feed the state by giving it the path to an existing bytecode file. </div><div class="ttdef"><b>Definition:</b> <a href="_state_8cpp_source.html#l00044">State.cpp:44</a></div></div>
 <div class="ttc" id="class_ark_1_1_state_html_a8c9748d6de5ac5e611b7690018c467cd"><div class="ttname"><a href="class_ark_1_1_state.html#a8c9748d6de5ac5e611b7690018c467cd">Ark::State::m_options</a></div><div class="ttdeci">uint16_t m_options</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00142">State.hpp:142</a></div></div>
 <div class="ttc" id="class_ark_1_1_state_html_ac612a46c05c538df07704fbd4edc3607"><div class="ttname"><a href="class_ark_1_1_state.html#ac612a46c05c538df07704fbd4edc3607">Ark::State::m_debug_level</a></div><div class="ttdeci">unsigned m_debug_level</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00137">State.hpp:137</a></div></div>
 <div class="ttc" id="class_ark_1_1_state_html_a1f74b3a2bdac7408bf696adc2c21d9fb"><div class="ttname"><a href="class_ark_1_1_state.html#a1f74b3a2bdac7408bf696adc2c21d9fb">Ark::State::m_libdir</a></div><div class="ttdeci">std::string m_libdir</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00140">State.hpp:140</a></div></div>
-<div class="ttc" id="class_ark_1_1_state_html_aa12901642915bdc5880a2202bf4629b8"><div class="ttname"><a href="class_ark_1_1_state.html#aa12901642915bdc5880a2202bf4629b8">Ark::State::m_binded</a></div><div class="ttdeci">std::unordered_map&lt; std::string, internal::Value &gt; m_binded</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00150">State.hpp:150</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a31505924979cc54dd107681f37f1a1dd"></a>
+<a class="anchor" id="ab7fcdf3a13facf2fa6933a88d08f4027"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -510,7 +510,7 @@ false on failure </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_ark_1_1internal_1_1_value.html#a95b11117e2e711f3b7fb52702997d6b3">internal::Value::ProcType</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="class_ark_1_1_value.html#ada6d66b70de081c31124e0bb0acf1aa4">Value::ProcType</a>&#160;</td>
           <td class="paramname"><em>function</em>&#160;</td>
         </tr>
         <tr>
@@ -537,10 +537,9 @@ false on failure </dd></dl>
 
 <p>Definition at line <a class="el" href="_state_8cpp_source.html#l00177">177</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    {</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <a class="code" href="class_ark_1_1_state.html#aa12901642915bdc5880a2202bf4629b8">m_binded</a>[name] = <a class="code" href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">internal::Value</a>(std::move(<span class="keyword">function</span>));</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <a class="code" href="class_ark_1_1_state.html#a9628e06b3fd719747d96a44194bbe5e1">m_binded</a>[name] = Value(std::move(<span class="keyword">function</span>));</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
-<div class="ttc" id="namespace_ark_html_a78cf7bec8c2cee4247c5efa4b1e4aa9c"><div class="ttname"><a href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">Ark::Value</a></div><div class="ttdeci">internal::Value Value</div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00285">VM.hpp:285</a></div></div>
-<div class="ttc" id="class_ark_1_1_state_html_aa12901642915bdc5880a2202bf4629b8"><div class="ttname"><a href="class_ark_1_1_state.html#aa12901642915bdc5880a2202bf4629b8">Ark::State::m_binded</a></div><div class="ttdeci">std::unordered_map&lt; std::string, internal::Value &gt; m_binded</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00150">State.hpp:150</a></div></div>
+<div class="ttc" id="class_ark_1_1_state_html_a9628e06b3fd719747d96a44194bbe5e1"><div class="ttname"><a href="class_ark_1_1_state.html#a9628e06b3fd719747d96a44194bbe5e1">Ark::State::m_binded</a></div><div class="ttdeci">std::unordered_map&lt; std::string, Value &gt; m_binded</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00150">State.hpp:150</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -576,17 +575,16 @@ false on failure </dd></dl>
 
 <p>Definition at line <a class="el" href="_state_8cpp_source.html#l00182">182</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    {</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <a class="code" href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">internal::Value</a> val(<a class="code" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca4ee29ca12c7d126654bd0e5275de6135">internal::ValueType::List</a>);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        Value val(<a class="code" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a4ee29ca12c7d126654bd0e5275de6135">ValueType::List</a>);</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string&amp; arg : args)</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            val.push_back(<a class="code" href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">internal::Value</a>(arg));</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <a class="code" href="class_ark_1_1_state.html#aa12901642915bdc5880a2202bf4629b8">m_binded</a>[<span class="stringliteral">&quot;sys:args&quot;</span>] = val;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            val.push_back(Value(arg));</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <a class="code" href="class_ark_1_1_state.html#a9628e06b3fd719747d96a44194bbe5e1">m_binded</a>[<span class="stringliteral">&quot;sys:args&quot;</span>] = val;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <a class="code" href="class_ark_1_1_state.html#aa12901642915bdc5880a2202bf4629b8">m_binded</a>[<span class="stringliteral">&quot;sys:platform&quot;</span>] = <a class="code" href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">internal::Value</a>(<a class="code" href="_constants_8hpp.html#a473be7f5eca195f89cf4637236f29ad2">ARK_PLATFORM_NAME</a>);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <a class="code" href="class_ark_1_1_state.html#a9628e06b3fd719747d96a44194bbe5e1">m_binded</a>[<span class="stringliteral">&quot;sys:platform&quot;</span>] = Value(<a class="code" href="_constants_8hpp.html#a473be7f5eca195f89cf4637236f29ad2">ARK_PLATFORM_NAME</a>);</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
-<div class="ttc" id="namespace_ark_html_a78cf7bec8c2cee4247c5efa4b1e4aa9c"><div class="ttname"><a href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">Ark::Value</a></div><div class="ttdeci">internal::Value Value</div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00285">VM.hpp:285</a></div></div>
-<div class="ttc" id="namespace_ark_1_1internal_html_a5300c6c0596db0a5a8f5b62d4d42ce4ca4ee29ca12c7d126654bd0e5275de6135"><div class="ttname"><a href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca4ee29ca12c7d126654bd0e5275de6135">Ark::internal::NodeType::List</a></div></div>
-<div class="ttc" id="_constants_8hpp_html_a473be7f5eca195f89cf4637236f29ad2"><div class="ttname"><a href="_constants_8hpp.html#a473be7f5eca195f89cf4637236f29ad2">ARK_PLATFORM_NAME</a></div><div class="ttdeci">#define ARK_PLATFORM_NAME</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00035">Constants.hpp:35</a></div></div>
-<div class="ttc" id="class_ark_1_1_state_html_aa12901642915bdc5880a2202bf4629b8"><div class="ttname"><a href="class_ark_1_1_state.html#aa12901642915bdc5880a2202bf4629b8">Ark::State::m_binded</a></div><div class="ttdeci">std::unordered_map&lt; std::string, internal::Value &gt; m_binded</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00150">State.hpp:150</a></div></div>
+<div class="ttc" id="class_ark_1_1_state_html_a9628e06b3fd719747d96a44194bbe5e1"><div class="ttname"><a href="class_ark_1_1_state.html#a9628e06b3fd719747d96a44194bbe5e1">Ark::State::m_binded</a></div><div class="ttdeci">std::unordered_map&lt; std::string, Value &gt; m_binded</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00150">State.hpp:150</a></div></div>
+<div class="ttc" id="_constants_8hpp_html_a473be7f5eca195f89cf4637236f29ad2"><div class="ttname"><a href="_constants_8hpp.html#a473be7f5eca195f89cf4637236f29ad2">ARK_PLATFORM_NAME</a></div><div class="ttdeci">#define ARK_PLATFORM_NAME</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00037">Constants.hpp:37</a></div></div>
+<div class="ttc" id="namespace_ark_html_a794d6cb0fd25e2dbc678c17ff605e159a4ee29ca12c7d126654bd0e5275de6135"><div class="ttname"><a href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a4ee29ca12c7d126654bd0e5275de6135">Ark::ValueType::List</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -689,17 +687,17 @@ false on failure </dd></dl>
 
 <p>Reset <a class="el" href="class_ark_1_1_state.html" title="Ark state to handle the dirty job of loading and compiling ArkScript code. ">State</a> (all member variables related to execution) </p>
 
-<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00340">340</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    {</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <a class="code" href="class_ark_1_1_state.html#a9b47055deafbe7eb0061c0b59fadab8b">m_symbols</a>.clear();</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <a class="code" href="class_ark_1_1_state.html#abd9f3fe8b6e6e589696a0ec04a8d3511">m_constants</a>.clear();</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <a class="code" href="class_ark_1_1_state.html#ab30d0ca94fb2543fb073e5f66c074c37">m_pages</a>.clear();</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <a class="code" href="class_ark_1_1_state.html#aa12901642915bdc5880a2202bf4629b8">m_binded</a>.clear(); </div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    }</div>
-<div class="ttc" id="class_ark_1_1_state_html_abd9f3fe8b6e6e589696a0ec04a8d3511"><div class="ttname"><a href="class_ark_1_1_state.html#abd9f3fe8b6e6e589696a0ec04a8d3511">Ark::State::m_constants</a></div><div class="ttdeci">std::vector&lt; internal::Value &gt; m_constants</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00146">State.hpp:146</a></div></div>
+<p>Definition at line <a class="el" href="_state_8cpp_source.html#l00337">337</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    {</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <a class="code" href="class_ark_1_1_state.html#a9b47055deafbe7eb0061c0b59fadab8b">m_symbols</a>.clear();</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <a class="code" href="class_ark_1_1_state.html#a4b5df7febb31b23bad6fee46c416f3a5">m_constants</a>.clear();</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <a class="code" href="class_ark_1_1_state.html#ab30d0ca94fb2543fb073e5f66c074c37">m_pages</a>.clear();</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <a class="code" href="class_ark_1_1_state.html#a9628e06b3fd719747d96a44194bbe5e1">m_binded</a>.clear(); </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1_state_html_a4b5df7febb31b23bad6fee46c416f3a5"><div class="ttname"><a href="class_ark_1_1_state.html#a4b5df7febb31b23bad6fee46c416f3a5">Ark::State::m_constants</a></div><div class="ttdeci">std::vector&lt; Value &gt; m_constants</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00146">State.hpp:146</a></div></div>
+<div class="ttc" id="class_ark_1_1_state_html_a9628e06b3fd719747d96a44194bbe5e1"><div class="ttname"><a href="class_ark_1_1_state.html#a9628e06b3fd719747d96a44194bbe5e1">Ark::State::m_binded</a></div><div class="ttdeci">std::unordered_map&lt; std::string, Value &gt; m_binded</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00150">State.hpp:150</a></div></div>
 <div class="ttc" id="class_ark_1_1_state_html_a9b47055deafbe7eb0061c0b59fadab8b"><div class="ttname"><a href="class_ark_1_1_state.html#a9b47055deafbe7eb0061c0b59fadab8b">Ark::State::m_symbols</a></div><div class="ttdeci">std::vector&lt; std::string &gt; m_symbols</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00145">State.hpp:145</a></div></div>
 <div class="ttc" id="class_ark_1_1_state_html_ab30d0ca94fb2543fb073e5f66c074c37"><div class="ttname"><a href="class_ark_1_1_state.html#ab30d0ca94fb2543fb073e5f66c074c37">Ark::State::m_pages</a></div><div class="ttdeci">std::vector&lt; bytecode_t &gt; m_pages</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00147">State.hpp:147</a></div></div>
-<div class="ttc" id="class_ark_1_1_state_html_aa12901642915bdc5880a2202bf4629b8"><div class="ttname"><a href="class_ark_1_1_state.html#aa12901642915bdc5880a2202bf4629b8">Ark::State::m_binded</a></div><div class="ttdeci">std::unordered_map&lt; std::string, internal::Value &gt; m_binded</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00150">State.hpp:150</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -728,7 +726,7 @@ false on failure </dd></dl>
 
 <p>Definition at line <a class="el" href="_state_8cpp_source.html#l00202">202</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    {</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keyword">using namespace </span><a class="code" href="namespace_ark_1_1internal.html">Ark::internal</a>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keyword">using namespace </span>internal;</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="comment">// configure tables and pages</span></div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        std::size_t i = 0;</div>
@@ -749,135 +747,130 @@ false on failure </dd></dl>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        uint16_t minor = readNumber(i); i++;</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        uint16_t patch = readNumber(i); i++;</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">if</span> (major != <a class="code" href="_constants_8hpp.html#afc92e3b88d55ef7fe54acb1da7d62745">ARK_VERSION_MAJOR</a>)</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">if</span> (major != <a class="code" href="_constants_8hpp.html#a4c94ae2a54ca868cb8971136188976e3">ARK_VERSION_MAJOR</a>)</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        {</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            std::string str_version = std::to_string(major) + <span class="stringliteral">&quot;.&quot;</span> +</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                std::to_string(minor) + <span class="stringliteral">&quot;.&quot;</span> +</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                std::to_string(patch);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            std::string builtin_version = std::to_string(<a class="code" href="_constants_8hpp.html#afc92e3b88d55ef7fe54acb1da7d62745">ARK_VERSION_MAJOR</a>) + <span class="stringliteral">&quot;.&quot;</span> +</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                std::to_string(<a class="code" href="_constants_8hpp.html#a2503c1ff3c39b13920befc7686b03d38">ARK_VERSION_MINOR</a>) + <span class="stringliteral">&quot;.&quot;</span> +</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                std::to_string(<a class="code" href="_constants_8hpp.html#a1a667125606e5219c4f6ed6f9309ed32">ARK_VERSION_PATCH</a>);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <a class="code" href="class_ark_1_1_state.html#a59464b5f49d5a34c59b57e69840618fd">throwStateError</a>(<span class="stringliteral">&quot;Compiler and VM versions don&#39;t match: &quot;</span> + str_version + <span class="stringliteral">&quot; and &quot;</span> + builtin_version);</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        }</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keyword">using</span> timestamp_t = <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> long;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        timestamp_t timestamp = 0;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keyword">auto</span> aa = (<span class="keyword">static_cast&lt;</span>timestamp_t<span class="keyword">&gt;</span>(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[  i]) &lt;&lt; 56),</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            ba = (<span class="keyword">static_cast&lt;</span>timestamp_t<span class="keyword">&gt;</span>(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[++i]) &lt;&lt; 48),</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            ca = (<span class="keyword">static_cast&lt;</span>timestamp_t<span class="keyword">&gt;</span>(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[++i]) &lt;&lt; 40),</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            da = (<span class="keyword">static_cast&lt;</span>timestamp_t<span class="keyword">&gt;</span>(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[++i]) &lt;&lt; 32),</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            ea = (<span class="keyword">static_cast&lt;</span>timestamp_t<span class="keyword">&gt;</span>(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[++i]) &lt;&lt; 24),</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            fa = (<span class="keyword">static_cast&lt;</span>timestamp_t<span class="keyword">&gt;</span>(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[++i]) &lt;&lt; 16),</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            ga = (<span class="keyword">static_cast&lt;</span>timestamp_t<span class="keyword">&gt;</span>(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[++i]) &lt;&lt;  8),</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            ha = (<span class="keyword">static_cast&lt;</span>timestamp_t<span class="keyword">&gt;</span>(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[++i]));</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        i++;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        timestamp = aa + ba + ca + da + ea + fa + ga + ha;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        std::vector&lt;unsigned char&gt; hash(picosha2::k_digest_size);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        picosha2::hash256(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>.begin() + i + picosha2::k_digest_size, <a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>.end(), hash);</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="comment">// checking integrity</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="keywordflow">for</span> (std::size_t j=0; j &lt; picosha2::k_digest_size; ++j)</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        {</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <span class="keywordflow">if</span> (hash[j] != <a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i])</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                <a class="code" href="class_ark_1_1_state.html#a59464b5f49d5a34c59b57e69840618fd">throwStateError</a>(<span class="stringliteral">&quot;Integrity check failed&quot;</span>);</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            ++i;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        }</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i] == <a class="code" href="namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa234f75eef5509256c428275320794bb5">Instruction::SYM_TABLE_START</a>)</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <a class="code" href="class_ark_1_1_state.html#a59464b5f49d5a34c59b57e69840618fd">throwStateError</a>(<span class="stringliteral">&quot;Compiler and VM versions don&#39;t match: &quot;</span> + str_version + <span class="stringliteral">&quot; and &quot;</span> + <a class="code" href="_constants_8hpp.html#ac2a71a92e550ab32be24666563bd4428">ARK_VERSION_STR</a>);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keyword">using</span> timestamp_t = <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> long;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        timestamp_t timestamp = 0;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keyword">auto</span> aa = (<span class="keyword">static_cast&lt;</span>timestamp_t<span class="keyword">&gt;</span>(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[  i]) &lt;&lt; 56),</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            ba = (<span class="keyword">static_cast&lt;</span>timestamp_t<span class="keyword">&gt;</span>(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[++i]) &lt;&lt; 48),</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            ca = (<span class="keyword">static_cast&lt;</span>timestamp_t<span class="keyword">&gt;</span>(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[++i]) &lt;&lt; 40),</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            da = (<span class="keyword">static_cast&lt;</span>timestamp_t<span class="keyword">&gt;</span>(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[++i]) &lt;&lt; 32),</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            ea = (<span class="keyword">static_cast&lt;</span>timestamp_t<span class="keyword">&gt;</span>(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[++i]) &lt;&lt; 24),</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            fa = (<span class="keyword">static_cast&lt;</span>timestamp_t<span class="keyword">&gt;</span>(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[++i]) &lt;&lt; 16),</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            ga = (<span class="keyword">static_cast&lt;</span>timestamp_t<span class="keyword">&gt;</span>(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[++i]) &lt;&lt;  8),</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            ha = (<span class="keyword">static_cast&lt;</span>timestamp_t<span class="keyword">&gt;</span>(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[++i]));</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        i++;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        timestamp = aa + ba + ca + da + ea + fa + ga + ha;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        std::vector&lt;unsigned char&gt; hash(picosha2::k_digest_size);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        picosha2::hash256(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>.begin() + i + picosha2::k_digest_size, <a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>.end(), hash);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="comment">// checking integrity</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordflow">for</span> (std::size_t j = 0; j &lt; picosha2::k_digest_size; ++j)</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <span class="keywordflow">if</span> (hash[j] != <a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i])</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                <a class="code" href="class_ark_1_1_state.html#a59464b5f49d5a34c59b57e69840618fd">throwStateError</a>(<span class="stringliteral">&quot;Integrity check failed&quot;</span>);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            ++i;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        }</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i] == <a class="code" href="namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa234f75eef5509256c428275320794bb5">Instruction::SYM_TABLE_START</a>)</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            i++;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            uint16_t size = readNumber(i);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <a class="code" href="class_ark_1_1_state.html#a9b47055deafbe7eb0061c0b59fadab8b">m_symbols</a>.reserve(size);</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            i++;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            uint16_t size = readNumber(i);</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            <a class="code" href="class_ark_1_1_state.html#a9b47055deafbe7eb0061c0b59fadab8b">m_symbols</a>.reserve(size);</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            i++;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            <span class="keywordflow">for</span> (uint16_t j=0; j &lt; size; ++j)</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            {</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                std::string symbol = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                <span class="keywordflow">while</span> (<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i] != 0)</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                    symbol.push_back(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i++]);</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                i++;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                <a class="code" href="class_ark_1_1_state.html#a9b47055deafbe7eb0061c0b59fadab8b">m_symbols</a>.push_back(symbol);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            }</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        }</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <a class="code" href="class_ark_1_1_state.html#a59464b5f49d5a34c59b57e69840618fd">throwStateError</a>(<span class="stringliteral">&quot;couldn&#39;t find symbols table&quot;</span>);</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i] == <a class="code" href="namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fad554aa28929f53168b0fdeb6909f85d0">Instruction::VAL_TABLE_START</a>)</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        {</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            <span class="keywordflow">for</span> (uint16_t j = 0; j &lt; size; ++j)</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                std::string symbol = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                <span class="keywordflow">while</span> (<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i] != 0)</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                    symbol.push_back(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i++]);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                i++;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                <a class="code" href="class_ark_1_1_state.html#a9b47055deafbe7eb0061c0b59fadab8b">m_symbols</a>.push_back(symbol);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        }</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <a class="code" href="class_ark_1_1_state.html#a59464b5f49d5a34c59b57e69840618fd">throwStateError</a>(<span class="stringliteral">&quot;Couldn&#39;t find symbols table&quot;</span>);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i] == <a class="code" href="namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fad554aa28929f53168b0fdeb6909f85d0">Instruction::VAL_TABLE_START</a>)</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        {</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            i++;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            uint16_t size = readNumber(i);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            <a class="code" href="class_ark_1_1_state.html#a4b5df7febb31b23bad6fee46c416f3a5">m_constants</a>.reserve(size);</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            i++;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            uint16_t size = readNumber(i);</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <a class="code" href="class_ark_1_1_state.html#abd9f3fe8b6e6e589696a0ec04a8d3511">m_constants</a>.reserve(size);</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            i++;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            <span class="keywordflow">for</span> (uint16_t j=0; j &lt; size; ++j)</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            {</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                uint8_t type = <a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i];</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                i++;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                <span class="keywordflow">if</span> (type == <a class="code" href="namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fac8f4e572da4e97caba83c2c9da8aa89a">Instruction::NUMBER_TYPE</a>)</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                {</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                    std::string val = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                    <span class="keywordflow">while</span> (<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i] != 0)</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                        val.push_back(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i++]);</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                    i++;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                    <a class="code" href="class_ark_1_1_state.html#abd9f3fe8b6e6e589696a0ec04a8d3511">m_constants</a>.emplace_back(std::stod(val));</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                }</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == <a class="code" href="namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa8f0676c34d58346e3c9522c49a2a3bf0">Instruction::STRING_TYPE</a>)</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                {</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                    std::string val = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                    <span class="keywordflow">while</span> (<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i] != 0)</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                        val.push_back(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i++]);</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                    i++;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                    <a class="code" href="class_ark_1_1_state.html#abd9f3fe8b6e6e589696a0ec04a8d3511">m_constants</a>.emplace_back(val);</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                }</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == <a class="code" href="namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa63ed41d8ad730e44805a772821085cb1">Instruction::FUNC_TYPE</a>)</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                {</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                    uint16_t addr = readNumber(i);</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                    i++;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                    <a class="code" href="class_ark_1_1_state.html#abd9f3fe8b6e6e589696a0ec04a8d3511">m_constants</a>.emplace_back(addr);</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                    i++;  <span class="comment">// skip NOP</span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                }</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                    <a class="code" href="class_ark_1_1_state.html#a59464b5f49d5a34c59b57e69840618fd">throwStateError</a>(<span class="stringliteral">&quot;unknown value type for value &quot;</span> + std::to_string(j));</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            }</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        }</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <a class="code" href="class_ark_1_1_state.html#a59464b5f49d5a34c59b57e69840618fd">throwStateError</a>(<span class="stringliteral">&quot;couldn&#39;t find constants table&quot;</span>);</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="keywordflow">while</span> (<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i] == <a class="code" href="namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa0c2488987370416136cac91f311bfe1d">Instruction::CODE_SEGMENT_START</a>)</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        {</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            i++;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            uint16_t size = readNumber(i);</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            i++;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <span class="keywordflow">for</span> (uint16_t j = 0; j &lt; size; ++j)</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                uint8_t type = <a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i];</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                i++;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                <span class="keywordflow">if</span> (type == <a class="code" href="namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fac8f4e572da4e97caba83c2c9da8aa89a">Instruction::NUMBER_TYPE</a>)</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                {</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                    std::string val = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                    <span class="keywordflow">while</span> (<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i] != 0)</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                        val.push_back(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i++]);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                    i++;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                    <a class="code" href="class_ark_1_1_state.html#a4b5df7febb31b23bad6fee46c416f3a5">m_constants</a>.emplace_back(std::stod(val));</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                }</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == <a class="code" href="namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa8f0676c34d58346e3c9522c49a2a3bf0">Instruction::STRING_TYPE</a>)</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                    std::string val = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                    <span class="keywordflow">while</span> (<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i] != 0)</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                        val.push_back(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i++]);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                    i++;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                    <a class="code" href="class_ark_1_1_state.html#a4b5df7febb31b23bad6fee46c416f3a5">m_constants</a>.emplace_back(val);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == <a class="code" href="namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa63ed41d8ad730e44805a772821085cb1">Instruction::FUNC_TYPE</a>)</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                {</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                    uint16_t addr = readNumber(i);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                    i++;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                    <a class="code" href="class_ark_1_1_state.html#a4b5df7febb31b23bad6fee46c416f3a5">m_constants</a>.emplace_back(addr);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                    i++;  <span class="comment">// skip NOP</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                }</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                    <a class="code" href="class_ark_1_1_state.html#a59464b5f49d5a34c59b57e69840618fd">throwStateError</a>(<span class="stringliteral">&quot;Unknown value type for value &quot;</span> + std::to_string(j));</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        }</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            <a class="code" href="class_ark_1_1_state.html#a59464b5f49d5a34c59b57e69840618fd">throwStateError</a>(<span class="stringliteral">&quot;Couldn&#39;t find constants table&quot;</span>);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordflow">while</span> (<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i] == <a class="code" href="namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa0c2488987370416136cac91f311bfe1d">Instruction::CODE_SEGMENT_START</a>)</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        {</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            i++;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            uint16_t size = readNumber(i);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            i++;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            <a class="code" href="class_ark_1_1_state.html#ab30d0ca94fb2543fb073e5f66c074c37">m_pages</a>.emplace_back();</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            <a class="code" href="class_ark_1_1_state.html#ab30d0ca94fb2543fb073e5f66c074c37">m_pages</a>.back().reserve(size);</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <a class="code" href="class_ark_1_1_state.html#ab30d0ca94fb2543fb073e5f66c074c37">m_pages</a>.emplace_back();</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            <a class="code" href="class_ark_1_1_state.html#ab30d0ca94fb2543fb073e5f66c074c37">m_pages</a>.back().reserve(size);</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            <span class="keywordflow">for</span> (uint16_t j=0; j &lt; size; ++j)</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                <a class="code" href="class_ark_1_1_state.html#ab30d0ca94fb2543fb073e5f66c074c37">m_pages</a>.back().push_back(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i++]);</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            </div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            <span class="keywordflow">if</span> (i == <a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>.size())</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        }</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    }</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <span class="keywordflow">for</span> (uint16_t j = 0; j &lt; size; ++j)</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                <a class="code" href="class_ark_1_1_state.html#ab30d0ca94fb2543fb073e5f66c074c37">m_pages</a>.back().push_back(<a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>[i++]);</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            </div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            <span class="keywordflow">if</span> (i == <a class="code" href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">m_bytecode</a>.size())</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        }</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1_state_html_a4b5df7febb31b23bad6fee46c416f3a5"><div class="ttname"><a href="class_ark_1_1_state.html#a4b5df7febb31b23bad6fee46c416f3a5">Ark::State::m_constants</a></div><div class="ttdeci">std::vector&lt; Value &gt; m_constants</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00146">State.hpp:146</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_adebb9f0092e2413dc3f8407c5d42780fa8c1965164febc582c6c9e4864c4161b2"><div class="ttname"><a href="namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa8c1965164febc582c6c9e4864c4161b2">Ark::internal::NOP</a></div><div class="ttdef"><b>Definition:</b> <a href="_instructions_8hpp_source.html#l00031">Instructions.hpp:31</a></div></div>
+<div class="ttc" id="_constants_8hpp_html_ac2a71a92e550ab32be24666563bd4428"><div class="ttname"><a href="_constants_8hpp.html#ac2a71a92e550ab32be24666563bd4428">ARK_VERSION_STR</a></div><div class="ttdeci">constexpr char ARK_VERSION_STR[3]</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00019">Constants.hpp:19</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_adebb9f0092e2413dc3f8407c5d42780fa234f75eef5509256c428275320794bb5"><div class="ttname"><a href="namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa234f75eef5509256c428275320794bb5">Ark::internal::SYM_TABLE_START</a></div><div class="ttdef"><b>Definition:</b> <a href="_instructions_8hpp_source.html#l00032">Instructions.hpp:32</a></div></div>
-<div class="ttc" id="_constants_8hpp_html_afc92e3b88d55ef7fe54acb1da7d62745"><div class="ttname"><a href="_constants_8hpp.html#afc92e3b88d55ef7fe54acb1da7d62745">ARK_VERSION_MAJOR</a></div><div class="ttdeci">#define ARK_VERSION_MAJOR</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00015">Constants.hpp:15</a></div></div>
-<div class="ttc" id="_constants_8hpp_html_a2503c1ff3c39b13920befc7686b03d38"><div class="ttname"><a href="_constants_8hpp.html#a2503c1ff3c39b13920befc7686b03d38">ARK_VERSION_MINOR</a></div><div class="ttdeci">#define ARK_VERSION_MINOR</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00016">Constants.hpp:16</a></div></div>
 <div class="ttc" id="class_ark_1_1_state_html_a59464b5f49d5a34c59b57e69840618fd"><div class="ttname"><a href="class_ark_1_1_state.html#a59464b5f49d5a34c59b57e69840618fd">Ark::State::throwStateError</a></div><div class="ttdeci">void throwStateError(const std::string &amp;message)</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00132">State.hpp:132</a></div></div>
-<div class="ttc" id="class_ark_1_1_state_html_abd9f3fe8b6e6e589696a0ec04a8d3511"><div class="ttname"><a href="class_ark_1_1_state.html#abd9f3fe8b6e6e589696a0ec04a8d3511">Ark::State::m_constants</a></div><div class="ttdeci">std::vector&lt; internal::Value &gt; m_constants</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00146">State.hpp:146</a></div></div>
 <div class="ttc" id="class_ark_1_1_state_html_a9b47055deafbe7eb0061c0b59fadab8b"><div class="ttname"><a href="class_ark_1_1_state.html#a9b47055deafbe7eb0061c0b59fadab8b">Ark::State::m_symbols</a></div><div class="ttdeci">std::vector&lt; std::string &gt; m_symbols</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00145">State.hpp:145</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_adebb9f0092e2413dc3f8407c5d42780fa8f0676c34d58346e3c9522c49a2a3bf0"><div class="ttname"><a href="namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa8f0676c34d58346e3c9522c49a2a3bf0">Ark::internal::STRING_TYPE</a></div><div class="ttdef"><b>Definition:</b> <a href="_instructions_8hpp_source.html#l00035">Instructions.hpp:35</a></div></div>
-<div class="ttc" id="namespace_ark_1_1internal_html"><div class="ttname"><a href="namespace_ark_1_1internal.html">Ark::internal</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_adebb9f0092e2413dc3f8407c5d42780fad554aa28929f53168b0fdeb6909f85d0"><div class="ttname"><a href="namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fad554aa28929f53168b0fdeb6909f85d0">Ark::internal::VAL_TABLE_START</a></div><div class="ttdef"><b>Definition:</b> <a href="_instructions_8hpp_source.html#l00033">Instructions.hpp:33</a></div></div>
 <div class="ttc" id="class_ark_1_1_state_html_ab30d0ca94fb2543fb073e5f66c074c37"><div class="ttname"><a href="class_ark_1_1_state.html#ab30d0ca94fb2543fb073e5f66c074c37">Ark::State::m_pages</a></div><div class="ttdeci">std::vector&lt; bytecode_t &gt; m_pages</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00147">State.hpp:147</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_adebb9f0092e2413dc3f8407c5d42780fa63ed41d8ad730e44805a772821085cb1"><div class="ttname"><a href="namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa63ed41d8ad730e44805a772821085cb1">Ark::internal::FUNC_TYPE</a></div><div class="ttdef"><b>Definition:</b> <a href="_instructions_8hpp_source.html#l00036">Instructions.hpp:36</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_adebb9f0092e2413dc3f8407c5d42780fa0c2488987370416136cac91f311bfe1d"><div class="ttname"><a href="namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa0c2488987370416136cac91f311bfe1d">Ark::internal::CODE_SEGMENT_START</a></div><div class="ttdef"><b>Definition:</b> <a href="_instructions_8hpp_source.html#l00037">Instructions.hpp:37</a></div></div>
+<div class="ttc" id="_constants_8hpp_html_a4c94ae2a54ca868cb8971136188976e3"><div class="ttname"><a href="_constants_8hpp.html#a4c94ae2a54ca868cb8971136188976e3">ARK_VERSION_MAJOR</a></div><div class="ttdeci">constexpr int ARK_VERSION_MAJOR</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00015">Constants.hpp:15</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_adebb9f0092e2413dc3f8407c5d42780fac8f4e572da4e97caba83c2c9da8aa89a"><div class="ttname"><a href="namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fac8f4e572da4e97caba83c2c9da8aa89a">Ark::internal::NUMBER_TYPE</a></div><div class="ttdef"><b>Definition:</b> <a href="_instructions_8hpp_source.html#l00034">Instructions.hpp:34</a></div></div>
-<div class="ttc" id="_constants_8hpp_html_a1a667125606e5219c4f6ed6f9309ed32"><div class="ttname"><a href="_constants_8hpp.html#a1a667125606e5219c4f6ed6f9309ed32">ARK_VERSION_PATCH</a></div><div class="ttdeci">#define ARK_VERSION_PATCH</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00017">Constants.hpp:17</a></div></div>
 <div class="ttc" id="class_ark_1_1_state_html_a23fccb2950f6188daa6b7ebc3facce0a"><div class="ttname"><a href="class_ark_1_1_state.html#a23fccb2950f6188daa6b7ebc3facce0a">Ark::State::m_bytecode</a></div><div class="ttdeci">bytecode_t m_bytecode</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00139">State.hpp:139</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -933,7 +926,7 @@ false on failure and raise an exception </dd></dl>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">try</span></div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        {</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            compiler.feed(<a class="code" href="namespace_ark_1_1_utils.html#a08fab59297a574abc8a37a6d46eebacb">Utils::readFile</a>(file), file);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; p : <a class="code" href="class_ark_1_1_state.html#aa12901642915bdc5880a2202bf4629b8">m_binded</a>)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; p : <a class="code" href="class_ark_1_1_state.html#a9628e06b3fd719747d96a44194bbe5e1">m_binded</a>)</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                compiler.m_defined_symbols.push_back(p.first);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            compiler.compile();</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
@@ -955,11 +948,11 @@ false on failure and raise an exception </dd></dl>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
+<div class="ttc" id="class_ark_1_1_state_html_a9628e06b3fd719747d96a44194bbe5e1"><div class="ttname"><a href="class_ark_1_1_state.html#a9628e06b3fd719747d96a44194bbe5e1">Ark::State::m_binded</a></div><div class="ttdeci">std::unordered_map&lt; std::string, Value &gt; m_binded</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00150">State.hpp:150</a></div></div>
 <div class="ttc" id="class_ark_1_1_state_html_a8c9748d6de5ac5e611b7690018c467cd"><div class="ttname"><a href="class_ark_1_1_state.html#a8c9748d6de5ac5e611b7690018c467cd">Ark::State::m_options</a></div><div class="ttdeci">uint16_t m_options</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00142">State.hpp:142</a></div></div>
 <div class="ttc" id="class_ark_1_1_state_html_ac612a46c05c538df07704fbd4edc3607"><div class="ttname"><a href="class_ark_1_1_state.html#ac612a46c05c538df07704fbd4edc3607">Ark::State::m_debug_level</a></div><div class="ttdeci">unsigned m_debug_level</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00137">State.hpp:137</a></div></div>
 <div class="ttc" id="class_ark_1_1_state_html_a1f74b3a2bdac7408bf696adc2c21d9fb"><div class="ttname"><a href="class_ark_1_1_state.html#a1f74b3a2bdac7408bf696adc2c21d9fb">Ark::State::m_libdir</a></div><div class="ttdeci">std::string m_libdir</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00140">State.hpp:140</a></div></div>
 <div class="ttc" id="namespace_ark_1_1_utils_html_a08fab59297a574abc8a37a6d46eebacb"><div class="ttname"><a href="namespace_ark_1_1_utils.html#a08fab59297a574abc8a37a6d46eebacb">Ark::Utils::readFile</a></div><div class="ttdeci">std::string readFile(const std::string &amp;name)</div><div class="ttdoc">Helper to read a file. </div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00160">Utils.hpp:160</a></div></div>
-<div class="ttc" id="class_ark_1_1_state_html_aa12901642915bdc5880a2202bf4629b8"><div class="ttname"><a href="class_ark_1_1_state.html#aa12901642915bdc5880a2202bf4629b8">Ark::State::m_binded</a></div><div class="ttdeci">std::unordered_map&lt; std::string, internal::Value &gt; m_binded</div><div class="ttdef"><b>Definition:</b> <a href="_state_8hpp_source.html#l00150">State.hpp:150</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1170,7 +1163,7 @@ false on failure and raise an exception </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="abd9f3fe8b6e6e589696a0ec04a8d3511"></a>
+<a class="anchor" id="a4b5df7febb31b23bad6fee46c416f3a5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1178,7 +1171,7 @@ false on failure and raise an exception </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="class_ark_1_1internal_1_1_value.html">internal::Value</a>&gt; Ark::State::m_constants</td>
+          <td class="memname">std::vector&lt;<a class="el" href="class_ark_1_1_value.html">Value</a>&gt; Ark::State::m_constants</td>
         </tr>
       </table>
   </td>
@@ -1214,7 +1207,7 @@ false on failure and raise an exception </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="aa12901642915bdc5880a2202bf4629b8"></a>
+<a class="anchor" id="a9628e06b3fd719747d96a44194bbe5e1"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1222,7 +1215,7 @@ false on failure and raise an exception </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="class_ark_1_1internal_1_1_value.html">internal::Value</a>&gt; Ark::State::m_binded</td>
+          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="class_ark_1_1_value.html">Value</a>&gt; Ark::State::m_binded</td>
         </tr>
       </table>
   </td>
@@ -1243,7 +1236,7 @@ false on failure and raise an exception </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 30 2021 16:41:24 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 13 2021 12:01:17 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

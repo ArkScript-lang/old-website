@@ -7,5 +7,5 @@ var searchData=
   ['truenode',['TrueNode',['../class_ark_1_1internal_1_1_node.html#a4693baae42900acb7d2511ea0c1b9d6a',1,'Ark::internal::Node']]],
   ['truesym',['trueSym',['../namespace_ark_1_1internal_1_1_builtins.html#ac42d5de362d48803ef2a49f7f1e21e98',1,'Ark::internal::Builtins']]],
   ['type',['type',['../struct_ark_1_1internal_1_1_c_value.html#adf6b92d0fb266c3203717f5528ddc147',1,'Ark::internal::CValue::type()'],['../struct_ark_1_1internal_1_1_token.html#a9aae1b9f04f66f43262a2811470e4ee6',1,'Ark::internal::Token::type()']]],
-  ['types_5fto_5fstr',['types_to_str',['../namespace_ark_1_1internal.html#a39673c5b45dab135d681a754d23a2756',1,'Ark::internal']]]
+  ['types_5fto_5fstr',['types_to_str',['../namespace_ark.html#acda85568e0ab829ec4c303f1ac053759',1,'Ark']]]
 ];

@@ -94,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark_1_1_utils.html">Ark::Utils</a></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="namespace_ark_1_1_utils.html#a74ed2d5c771082f05a303f4517e89e8a">    5</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="namespace_ark_1_1_utils.html#a74ed2d5c771082f05a303f4517e89e8a">dec_places</a>(<span class="keywordtype">double</span> d)</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="namespace_ark_1_1_utils.html#aa50e900722d2e024cda404cddc368e60">    5</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="namespace_ark_1_1_utils.html#aa50e900722d2e024cda404cddc368e60">decPlaces</a>(<span class="keywordtype">double</span> d)</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    {</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        constexpr <span class="keywordtype">double</span> precision = 1e-7;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <span class="keywordtype">double</span> temp = 0.0;</div>
@@ -110,7 +110,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">return</span> decimal_places;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="namespace_ark_1_1_utils.html#a18ffff13ecac6bc1770a8ae85c2c844d">   21</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="namespace_ark_1_1_utils.html#a18ffff13ecac6bc1770a8ae85c2c844d">dig_places</a>(<span class="keywordtype">double</span> d)</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="namespace_ark_1_1_utils.html#ab846c6c6c707a259d04c2425a51e9176">   21</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="namespace_ark_1_1_utils.html#ab846c6c6c707a259d04c2425a51e9176">digPlaces</a>(<span class="keywordtype">double</span> d)</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">int</span> digit_places = 0;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">int</span> i = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(d);</div>
@@ -122,14 +122,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> digit_places;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
-<div class="ttc" id="namespace_ark_1_1_utils_html_a74ed2d5c771082f05a303f4517e89e8a"><div class="ttname"><a href="namespace_ark_1_1_utils.html#a74ed2d5c771082f05a303f4517e89e8a">Ark::Utils::dec_places</a></div><div class="ttdeci">int dec_places(double d)</div><div class="ttdoc">Count the number of decimals for a double. </div><div class="ttdef"><b>Definition:</b> <a href="_utils_8cpp_source.html#l00005">Utils.cpp:5</a></div></div>
 <div class="ttc" id="namespace_ark_1_1_utils_html"><div class="ttname"><a href="namespace_ark_1_1_utils.html">Ark::Utils</a></div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00028">Utils.hpp:28</a></div></div>
+<div class="ttc" id="namespace_ark_1_1_utils_html_aa50e900722d2e024cda404cddc368e60"><div class="ttname"><a href="namespace_ark_1_1_utils.html#aa50e900722d2e024cda404cddc368e60">Ark::Utils::decPlaces</a></div><div class="ttdeci">int decPlaces(double d)</div><div class="ttdoc">Count the number of decimals for a double. </div><div class="ttdef"><b>Definition:</b> <a href="_utils_8cpp_source.html#l00005">Utils.cpp:5</a></div></div>
 <div class="ttc" id="_utils_8hpp_html"><div class="ttname"><a href="_utils_8hpp.html">Utils.hpp</a></div><div class="ttdoc">Lots of utilities about string, filesystem and more. </div></div>
-<div class="ttc" id="namespace_ark_1_1_utils_html_a18ffff13ecac6bc1770a8ae85c2c844d"><div class="ttname"><a href="namespace_ark_1_1_utils.html#a18ffff13ecac6bc1770a8ae85c2c844d">Ark::Utils::dig_places</a></div><div class="ttdeci">int dig_places(double d)</div><div class="ttdoc">Count the number of digits for a double. </div><div class="ttdef"><b>Definition:</b> <a href="_utils_8cpp_source.html#l00021">Utils.cpp:21</a></div></div>
+<div class="ttc" id="namespace_ark_1_1_utils_html_ab846c6c6c707a259d04c2425a51e9176"><div class="ttname"><a href="namespace_ark_1_1_utils.html#ab846c6c6c707a259d04c2425a51e9176">Ark::Utils::digPlaces</a></div><div class="ttdeci">int digPlaces(double d)</div><div class="ttdoc">Count the number of digits for a double. </div><div class="ttdef"><b>Definition:</b> <a href="_utils_8cpp_source.html#l00021">Utils.cpp:21</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 30 2021 16:41:22 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 13 2021 12:01:16 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

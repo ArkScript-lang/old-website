@@ -147,6 +147,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_user_type.html">UserType</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class to be use C++ objects in ArkScript.  <a href="class_ark_1_1_user_type.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_value.html">Value</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_v_m.html">VM</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ArkScript virtual machine, executing ArkScript bytecode.  <a href="class_ark_1_1_v_m.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,10 +160,6 @@ Classes</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:a120175e12d54ead9aa7559d2231af817"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a120175e12d54ead9aa7559d2231af817">bytecode_t</a> = std::vector&lt; uint8_t &gt;</td></tr>
 <tr class="separator:a120175e12d54ead9aa7559d2231af817"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78cf7bec8c2cee4247c5efa4b1e4aa9c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a78cf7bec8c2cee4247c5efa4b1e4aa9c">Value</a> = <a class="el" href="class_ark_1_1internal_1_1_value.html">internal::Value</a></td></tr>
-<tr class="separator:a78cf7bec8c2cee4247c5efa4b1e4aa9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a774da7cbe563571345cb640fd25445aa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a774da7cbe563571345cb640fd25445aa">ValueType</a> = <a class="el" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8">internal::ValueType</a></td></tr>
-<tr class="separator:a774da7cbe563571345cb640fd25445aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -175,6 +173,26 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:afa776c29439b830386e8220ccab402f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a794d6cb0fd25e2dbc678c17ff605e159"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159">ValueType</a> { <br />
+&#160;&#160;<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a4ee29ca12c7d126654bd0e5275de6135">ValueType::List</a> = 0, 
+<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159ab2ee912b91d69b435159c7c3f6df7f5f">ValueType::Number</a> = 1, 
+<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a27118326006d3829667a400ad23d5d98">ValueType::String</a> = 2, 
+<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a6666eaba81f13e74d10ac1a9c9d6d7b1">ValueType::PageAddr</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a78c1e09380f2f8ea572cd59c5cd4bc92">ValueType::CProc</a> = 4, 
+<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159aaf4bb376939e77df0e7c2332b837a866">ValueType::Closure</a> = 5, 
+<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a8f9bfe9d1345237cb3b2b205864da075">ValueType::User</a> = 6, 
+<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a4da8b7eb2c3f2007cf8238334401ef51">ValueType::Nil</a> = 7, 
+<br />
+&#160;&#160;<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159af827cf462f62848df37c5e1e94a4da74">ValueType::True</a> = 8, 
+<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159af8320b26d30ab433c5a54546d21f414c">ValueType::False</a> = 9, 
+<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159aec0fc0100c4fc1ce4eea230c3dc10360">ValueType::Undefined</a> = 10, 
+<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a63d5049791d9d79d86e9a108b0a999ca">ValueType::Reference</a> = 11, 
+<br />
+&#160;&#160;<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159adf754f9ba8524ed3333ec938d0636862">ValueType::InstPtr</a> = 12
+<br />
+ }</td></tr>
+<tr class="separator:a794d6cb0fd25e2dbc678c17ff605e159"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -186,11 +204,11 @@ Functions</h2></td></tr>
 <tr class="separator:aca53d37b1c61260d7604ae196c5768bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b3ce9424bc3a81355cee7d9dabf3ed4"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a8b3ce9424bc3a81355cee7d9dabf3ed4">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="class_ark_1_1_user_type.html">UserType</a> &amp;A) noexcept</td></tr>
 <tr class="separator:a8b3ce9424bc3a81355cee7d9dabf3ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f215f4a9488f1e17fe7c656cd8a9933"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a2f215f4a9488f1e17fe7c656cd8a9933">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="class_ark_1_1_value.html">Value</a> &amp;V) noexcept</td></tr>
+<tr class="separator:a2f215f4a9488f1e17fe7c656cd8a9933"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a80f2edc1285469fdf422c9c22b18597c"><td class="memItemLeft" align="right" valign="top">constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a80f2edc1285469fdf422c9c22b18597c">FeaturePersist</a> = 1 &lt;&lt; 0</td></tr>
-<tr class="separator:a80f2edc1285469fdf422c9c22b18597c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5af874de3f33e2b4720e1b6d65722a35"><td class="memItemLeft" align="right" valign="top">constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a5af874de3f33e2b4720e1b6d65722a35">FeatureFunctionArityCheck</a> = 1 &lt;&lt; 1</td></tr>
 <tr class="separator:a5af874de3f33e2b4720e1b6d65722a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed352fcea78905393d0edd9e1ae1423d"><td class="memItemLeft" align="right" valign="top">constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">FeatureRemoveUnusedVars</a> = 1 &lt;&lt; 4</td></tr>
@@ -201,15 +219,17 @@ Variables</h2></td></tr>
 <tr class="separator:a9d6c64031ae03374faefd9c56a8f01e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71dcd8d595df0a5cee8fb7477df9f54d"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::pair&lt; std::string, Replxx::Color &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a71dcd8d595df0a5cee8fb7477df9f54d">ColorsRegexDict</a></td></tr>
 <tr class="separator:a71dcd8d595df0a5cee8fb7477df9f54d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6768a96bb577723257181ba91f7b9485"><td class="memItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a6768a96bb577723257181ba91f7b9485">ARK_STACK_SIZE</a> = 8192</td></tr>
-<tr class="separator:a6768a96bb577723257181ba91f7b9485"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f6137d90ab3f9eb176863172b1621d5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a6f6137d90ab3f9eb176863172b1621d5">Nil</a> = <a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a>(internal::ValueType::Nil)</td></tr>
+<tr class="memitem:acda85568e0ab829ec4c303f1ac053759"><td class="memItemLeft" align="right" valign="top">const std::array&lt; std::string, 13 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#acda85568e0ab829ec4c303f1ac053759">types_to_str</a></td></tr>
+<tr class="separator:acda85568e0ab829ec4c303f1ac053759"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ca5a4b587da0ce80caa46d3487e7ac0"><td class="memItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a0ca5a4b587da0ce80caa46d3487e7ac0">ArkVMStackSize</a> = 8192</td></tr>
+<tr class="separator:a0ca5a4b587da0ce80caa46d3487e7ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f6137d90ab3f9eb176863172b1621d5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_ark_1_1_value.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a6f6137d90ab3f9eb176863172b1621d5">Nil</a> = <a class="el" href="class_ark_1_1_value.html">Value</a>(ValueType::Nil)</td></tr>
 <tr class="memdesc:a6f6137d90ab3f9eb176863172b1621d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ArkScript Nil value.  <a href="#a6f6137d90ab3f9eb176863172b1621d5">More...</a><br /></td></tr>
 <tr class="separator:a6f6137d90ab3f9eb176863172b1621d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1922edba810bdeb01252289e02308139"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a1922edba810bdeb01252289e02308139">False</a> = <a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a>(internal::ValueType::False)</td></tr>
+<tr class="memitem:a1922edba810bdeb01252289e02308139"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_ark_1_1_value.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a1922edba810bdeb01252289e02308139">False</a> = <a class="el" href="class_ark_1_1_value.html">Value</a>(ValueType::False)</td></tr>
 <tr class="memdesc:a1922edba810bdeb01252289e02308139"><td class="mdescLeft">&#160;</td><td class="mdescRight">ArkScript False value.  <a href="#a1922edba810bdeb01252289e02308139">More...</a><br /></td></tr>
 <tr class="separator:a1922edba810bdeb01252289e02308139"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a496e7ab83c7d6a21935c4e996785785f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a496e7ab83c7d6a21935c4e996785785f">True</a> = <a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a>(internal::ValueType::True)</td></tr>
+<tr class="memitem:a496e7ab83c7d6a21935c4e996785785f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_ark_1_1_value.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a496e7ab83c7d6a21935c4e996785785f">True</a> = <a class="el" href="class_ark_1_1_value.html">Value</a>(ValueType::True)</td></tr>
 <tr class="memdesc:a496e7ab83c7d6a21935c4e996785785f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ArkScript True value.  <a href="#a496e7ab83c7d6a21935c4e996785785f">More...</a><br /></td></tr>
 <tr class="separator:a496e7ab83c7d6a21935c4e996785785f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -225,34 +245,6 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_bytecode_reader_8hpp_source.html#l00026">26</a> of file <a class="el" href="_bytecode_reader_8hpp_source.html">BytecodeReader.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a78cf7bec8c2cee4247c5efa4b1e4aa9c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="class_ark_1_1internal_1_1_value.html">Ark::Value</a> = typedef <a class="el" href="class_ark_1_1internal_1_1_value.html">internal::Value</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00285">285</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a774da7cbe563571345cb640fd25445aa"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8">Ark::ValueType</a> = typedef <a class="el" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8">internal::ValueType</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00286">286</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
 
 </div>
 </div>
@@ -303,6 +295,85 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a class="anchor" id="a794d6cb0fd25e2dbc678c17ff605e159"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159">Ark::ValueType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a794d6cb0fd25e2dbc678c17ff605e159a4ee29ca12c7d126654bd0e5275de6135"></a>List&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a794d6cb0fd25e2dbc678c17ff605e159ab2ee912b91d69b435159c7c3f6df7f5f"></a>Number&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a794d6cb0fd25e2dbc678c17ff605e159a27118326006d3829667a400ad23d5d98"></a>String&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a794d6cb0fd25e2dbc678c17ff605e159a6666eaba81f13e74d10ac1a9c9d6d7b1"></a>PageAddr&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a794d6cb0fd25e2dbc678c17ff605e159a78c1e09380f2f8ea572cd59c5cd4bc92"></a>CProc&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a794d6cb0fd25e2dbc678c17ff605e159aaf4bb376939e77df0e7c2332b837a866"></a>Closure&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a794d6cb0fd25e2dbc678c17ff605e159a8f9bfe9d1345237cb3b2b205864da075"></a>User&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a794d6cb0fd25e2dbc678c17ff605e159a4da8b7eb2c3f2007cf8238334401ef51"></a>Nil&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a794d6cb0fd25e2dbc678c17ff605e159af827cf462f62848df37c5e1e94a4da74"></a>True&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a794d6cb0fd25e2dbc678c17ff605e159af8320b26d30ab433c5a54546d21f414c"></a>False&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a794d6cb0fd25e2dbc678c17ff605e159aec0fc0100c4fc1ce4eea230c3dc10360"></a>Undefined&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a794d6cb0fd25e2dbc678c17ff605e159a63d5049791d9d79d86e9a108b0a999ca"></a>Reference&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a794d6cb0fd25e2dbc678c17ff605e159adf754f9ba8524ed3333ec938d0636862"></a>InstPtr&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="_value_8hpp_source.html#l00048">48</a> of file <a class="el" href="_value_8hpp_source.html">Value.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca4ee29ca12c7d126654bd0e5275de6135">List</a>      = 0,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f">Number</a>    = 1,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98">String</a>    = 2,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a6666eaba81f13e74d10ac1a9c9d6d7b1">PageAddr</a>  = 3,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a78c1e09380f2f8ea572cd59c5cd4bc92">CProc</a>     = 4,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4caaf4bb376939e77df0e7c2332b837a866">Closure</a>   = 5,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a8f9bfe9d1345237cb3b2b205864da075">User</a>      = 6,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="namespace_ark.html#a6f6137d90ab3f9eb176863172b1621d5">Nil</a>       = 7,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="namespace_ark.html#a496e7ab83c7d6a21935c4e996785785f">True</a>      = 8,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="namespace_ark.html#a1922edba810bdeb01252289e02308139">False</a>     = 9,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159aec0fc0100c4fc1ce4eea230c3dc10360">Undefined</a> = 10,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a63d5049791d9d79d86e9a108b0a999ca">Reference</a> = 11,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159adf754f9ba8524ed3333ec938d0636862">InstPtr</a>   = 12</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    };</div>
+<div class="ttc" id="namespace_ark_html_a794d6cb0fd25e2dbc678c17ff605e159a78c1e09380f2f8ea572cd59c5cd4bc92"><div class="ttname"><a href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a78c1e09380f2f8ea572cd59c5cd4bc92">Ark::ValueType::CProc</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f"><div class="ttname"><a href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f">Ark::internal::CValueType::Number</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_a5300c6c0596db0a5a8f5b62d4d42ce4caaf4bb376939e77df0e7c2332b837a866"><div class="ttname"><a href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4caaf4bb376939e77df0e7c2332b837a866">Ark::internal::NodeType::Closure</a></div></div>
+<div class="ttc" id="namespace_ark_html_a496e7ab83c7d6a21935c4e996785785f"><div class="ttname"><a href="namespace_ark.html#a496e7ab83c7d6a21935c4e996785785f">Ark::True</a></div><div class="ttdeci">const Value True</div><div class="ttdoc">ArkScript True value. </div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00289">VM.hpp:289</a></div></div>
+<div class="ttc" id="namespace_ark_html_a794d6cb0fd25e2dbc678c17ff605e159adf754f9ba8524ed3333ec938d0636862"><div class="ttname"><a href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159adf754f9ba8524ed3333ec938d0636862">Ark::ValueType::InstPtr</a></div></div>
+<div class="ttc" id="namespace_ark_html_a6f6137d90ab3f9eb176863172b1621d5"><div class="ttname"><a href="namespace_ark.html#a6f6137d90ab3f9eb176863172b1621d5">Ark::Nil</a></div><div class="ttdeci">const Value Nil</div><div class="ttdoc">ArkScript Nil value. </div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00285">VM.hpp:285</a></div></div>
+<div class="ttc" id="namespace_ark_html_a794d6cb0fd25e2dbc678c17ff605e159aec0fc0100c4fc1ce4eea230c3dc10360"><div class="ttname"><a href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159aec0fc0100c4fc1ce4eea230c3dc10360">Ark::ValueType::Undefined</a></div></div>
+<div class="ttc" id="namespace_ark_html_a794d6cb0fd25e2dbc678c17ff605e159a63d5049791d9d79d86e9a108b0a999ca"><div class="ttname"><a href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a63d5049791d9d79d86e9a108b0a999ca">Ark::ValueType::Reference</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_a5300c6c0596db0a5a8f5b62d4d42ce4ca4ee29ca12c7d126654bd0e5275de6135"><div class="ttname"><a href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca4ee29ca12c7d126654bd0e5275de6135">Ark::internal::NodeType::List</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_abbd0e65f86a8884c76fdf41f5e1389d3a6666eaba81f13e74d10ac1a9c9d6d7b1"><div class="ttname"><a href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a6666eaba81f13e74d10ac1a9c9d6d7b1">Ark::internal::CValueType::PageAddr</a></div></div>
+<div class="ttc" id="namespace_ark_html_a794d6cb0fd25e2dbc678c17ff605e159a8f9bfe9d1345237cb3b2b205864da075"><div class="ttname"><a href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a8f9bfe9d1345237cb3b2b205864da075">Ark::ValueType::User</a></div></div>
+<div class="ttc" id="namespace_ark_html_a1922edba810bdeb01252289e02308139"><div class="ttname"><a href="namespace_ark.html#a1922edba810bdeb01252289e02308139">Ark::False</a></div><div class="ttdeci">const Value False</div><div class="ttdoc">ArkScript False value. </div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00287">VM.hpp:287</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98"><div class="ttname"><a href="namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98">Ark::internal::CValueType::String</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ab3598fa5ef3f86a50a81dd75c87850c6"></a>
 <div class="memitem">
@@ -336,19 +407,19 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_parser_8cpp_source.html#l00549">549</a> of file <a class="el" href="_parser_8cpp_source.html">Parser.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    {</div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;        os &lt;&lt; <span class="stringliteral">&quot;AST\n&quot;</span>;</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;        <span class="keywordflow">if</span> (P.ast().nodeType() == NodeType::List)</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;        {</div>
-<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;            <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; node: P.ast().constList())</div>
-<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;                std::cout &lt;&lt; (i++) &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; node &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;        }</div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;            os &lt;&lt; <span class="stringliteral">&quot;Single item\n&quot;</span> &lt;&lt; P.m_ast &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;        <span class="keywordflow">return</span> os;</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    }</div>
+<p>Definition at line <a class="el" href="_parser_8cpp_source.html#l00551">551</a> of file <a class="el" href="_parser_8cpp_source.html">Parser.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    {</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;        os &lt;&lt; <span class="stringliteral">&quot;AST\n&quot;</span>;</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;        <span class="keywordflow">if</span> (P.ast().nodeType() == NodeType::List)</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;        {</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;            <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; node : P.ast().constList())</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;                std::cout &lt;&lt; (i++) &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; node &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;        }</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;            os &lt;&lt; <span class="stringliteral">&quot;Single item\n&quot;</span> &lt;&lt; P.m_ast &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        <span class="keywordflow">return</span> os;</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -473,21 +544,127 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="a80f2edc1285469fdf422c9c22b18597c"></a>
+<a class="anchor" id="a2f215f4a9488f1e17fe7c656cd8a9933"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint16_t Ark::FeaturePersist = 1 &lt;&lt; 0</td>
+          <td class="memname">std::ostream&amp; Ark::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Value &amp;&#160;</td>
+          <td class="paramname"><em>V</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_constants_8hpp_source.html#l00043">43</a> of file <a class="el" href="_constants_8hpp_source.html">Constants.hpp</a>.</p>
-
+<p>Definition at line <a class="el" href="_value_8cpp_source.html#l00151">151</a> of file <a class="el" href="_value_8cpp_source.html">Value.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">switch</span> (V.valueType())</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">case</span> ValueType::Number:</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordtype">double</span> d = V.number();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            os.precision(<a class="code" href="namespace_ark_1_1_utils.html#ab846c6c6c707a259d04c2425a51e9176">Utils::digPlaces</a>(d) + <a class="code" href="namespace_ark_1_1_utils.html#aa50e900722d2e024cda404cddc368e60">Utils::decPlaces</a>(d));</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            os &lt;&lt; d;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">case</span> ValueType::String:</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            os &lt;&lt; V.string().c_str();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordflow">case</span> ValueType::PageAddr:</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            os &lt;&lt; <span class="stringliteral">&quot;Function @ &quot;</span> &lt;&lt; V.pageAddr();</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">case</span> ValueType::CProc:</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            os &lt;&lt; <span class="stringliteral">&quot;CProcedure&quot;</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordflow">case</span> ValueType::List:</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            os &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = V.constList().begin(), it_end = V.constList().end(); it != it_end; ++it)</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                <span class="keywordflow">if</span> (it-&gt;valueType() == ValueType::String)</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                    os &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span> &lt;&lt; (*it) &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                    os &lt;&lt; (*it);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                <span class="keywordflow">if</span> (it + 1 != it_end)</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                    os &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            os &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">case</span> ValueType::Closure:</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            os &lt;&lt; V.closure();</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordflow">case</span> ValueType::User:</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            os &lt;&lt; V.usertype();</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="namespace_ark.html#a6f6137d90ab3f9eb176863172b1621d5">ValueType::Nil</a>:</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            os &lt;&lt; <span class="stringliteral">&quot;nil&quot;</span>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="namespace_ark.html#a496e7ab83c7d6a21935c4e996785785f">ValueType::True</a>:</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            os &lt;&lt; <span class="stringliteral">&quot;true&quot;</span>;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="namespace_ark.html#a1922edba810bdeb01252289e02308139">ValueType::False</a>:</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            os &lt;&lt; <span class="stringliteral">&quot;false&quot;</span>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordflow">case</span> ValueType::Undefined:</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            os &lt;&lt; <span class="stringliteral">&quot;undefined&quot;</span>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">case</span> ValueType::Reference:</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            os &lt;&lt; (*V.reference());</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">case</span> ValueType::InstPtr:</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            os &lt;&lt; <span class="stringliteral">&quot;Instruction @ &quot;</span> &lt;&lt; V.<a class="code" href="class_ark_1_1_value.html#a179651e4b80295d28c2fce4422e91f7c">pageAddr</a>();</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            os &lt;&lt; <span class="stringliteral">&quot;~\\._./~&quot;</span>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">return</span> os;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    }</div>
+<div class="ttc" id="namespace_ark_html_a496e7ab83c7d6a21935c4e996785785f"><div class="ttname"><a href="namespace_ark.html#a496e7ab83c7d6a21935c4e996785785f">Ark::True</a></div><div class="ttdeci">const Value True</div><div class="ttdoc">ArkScript True value. </div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00289">VM.hpp:289</a></div></div>
+<div class="ttc" id="namespace_ark_html_a6f6137d90ab3f9eb176863172b1621d5"><div class="ttname"><a href="namespace_ark.html#a6f6137d90ab3f9eb176863172b1621d5">Ark::Nil</a></div><div class="ttdeci">const Value Nil</div><div class="ttdoc">ArkScript Nil value. </div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00285">VM.hpp:285</a></div></div>
+<div class="ttc" id="class_ark_1_1_value_html_a179651e4b80295d28c2fce4422e91f7c"><div class="ttname"><a href="class_ark_1_1_value.html#a179651e4b80295d28c2fce4422e91f7c">Ark::Value::pageAddr</a></div><div class="ttdeci">internal::PageAddr_t pageAddr() const </div><div class="ttdoc">Return the page address held by the value. </div></div>
+<div class="ttc" id="namespace_ark_1_1_utils_html_aa50e900722d2e024cda404cddc368e60"><div class="ttname"><a href="namespace_ark_1_1_utils.html#aa50e900722d2e024cda404cddc368e60">Ark::Utils::decPlaces</a></div><div class="ttdeci">int decPlaces(double d)</div><div class="ttdoc">Count the number of decimals for a double. </div><div class="ttdef"><b>Definition:</b> <a href="_utils_8cpp_source.html#l00005">Utils.cpp:5</a></div></div>
+<div class="ttc" id="namespace_ark_1_1_utils_html_ab846c6c6c707a259d04c2425a51e9176"><div class="ttname"><a href="namespace_ark_1_1_utils.html#ab846c6c6c707a259d04c2425a51e9176">Ark::Utils::digPlaces</a></div><div class="ttdeci">int digPlaces(double d)</div><div class="ttdoc">Count the number of digits for a double. </div><div class="ttdef"><b>Definition:</b> <a href="_utils_8cpp_source.html#l00021">Utils.cpp:21</a></div></div>
+<div class="ttc" id="namespace_ark_html_a1922edba810bdeb01252289e02308139"><div class="ttname"><a href="namespace_ark.html#a1922edba810bdeb01252289e02308139">Ark::False</a></div><div class="ttdeci">const Value False</div><div class="ttdoc">ArkScript False value. </div><div class="ttdef"><b>Definition:</b> <a href="_v_m_8hpp_source.html#l00287">VM.hpp:287</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
+<h2 class="groupheader">Variable Documentation</h2>
 <a class="anchor" id="a5af874de3f33e2b4720e1b6d65722a35"></a>
 <div class="memitem">
 <div class="memproto">
@@ -498,7 +675,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_constants_8hpp_source.html#l00044">44</a> of file <a class="el" href="_constants_8hpp_source.html">Constants.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_constants_8hpp_source.html#l00045">45</a> of file <a class="el" href="_constants_8hpp_source.html">Constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -512,7 +689,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_constants_8hpp_source.html#l00046">46</a> of file <a class="el" href="_constants_8hpp_source.html">Constants.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_constants_8hpp_source.html#l00047">47</a> of file <a class="el" href="_constants_8hpp_source.html">Constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -528,10 +705,10 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">        <a class="code" href="namespace_ark.html#a5af874de3f33e2b4720e1b6d65722a35">FeatureFunctionArityCheck</a></div>
 <div class="line">        | <a class="code" href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">FeatureRemoveUnusedVars</a></div>
-<div class="ttc" id="namespace_ark_html_aed352fcea78905393d0edd9e1ae1423d"><div class="ttname"><a href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">Ark::FeatureRemoveUnusedVars</a></div><div class="ttdeci">constexpr uint16_t FeatureRemoveUnusedVars</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00046">Constants.hpp:46</a></div></div>
-<div class="ttc" id="namespace_ark_html_a5af874de3f33e2b4720e1b6d65722a35"><div class="ttname"><a href="namespace_ark.html#a5af874de3f33e2b4720e1b6d65722a35">Ark::FeatureFunctionArityCheck</a></div><div class="ttdeci">constexpr uint16_t FeatureFunctionArityCheck</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00044">Constants.hpp:44</a></div></div>
+<div class="ttc" id="namespace_ark_html_aed352fcea78905393d0edd9e1ae1423d"><div class="ttname"><a href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">Ark::FeatureRemoveUnusedVars</a></div><div class="ttdeci">constexpr uint16_t FeatureRemoveUnusedVars</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00047">Constants.hpp:47</a></div></div>
+<div class="ttc" id="namespace_ark_html_a5af874de3f33e2b4720e1b6d65722a35"><div class="ttname"><a href="namespace_ark.html#a5af874de3f33e2b4720e1b6d65722a35">Ark::FeatureFunctionArityCheck</a></div><div class="ttdeci">constexpr uint16_t FeatureFunctionArityCheck</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00045">Constants.hpp:45</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="_constants_8hpp_source.html#l00049">49</a> of file <a class="el" href="_constants_8hpp_source.html">Constants.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_constants_8hpp_source.html#l00050">50</a> of file <a class="el" href="_constants_8hpp_source.html">Constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -563,12 +740,32 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6768a96bb577723257181ba91f7b9485"></a>
+<a class="anchor" id="acda85568e0ab829ec4c303f1ac053759"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr std::size_t Ark::ARK_STACK_SIZE = 8192</td>
+          <td class="memname">const std::array&lt;std::string, 13&gt; Ark::types_to_str</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">        <span class="stringliteral">&quot;List&quot;</span>,  <span class="stringliteral">&quot;Number&quot;</span>,  <span class="stringliteral">&quot;String&quot;</span>,    <span class="stringliteral">&quot;Function&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;CProc&quot;</span>, <span class="stringliteral">&quot;Closure&quot;</span>, <span class="stringliteral">&quot;UserType&quot;</span>,  <span class="stringliteral">&quot;Nil&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;Bool&quot;</span>,  <span class="stringliteral">&quot;Bool&quot;</span>,    <span class="stringliteral">&quot;Undefined&quot;</span>, <span class="stringliteral">&quot;Reference&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;InstPtr&quot;</span></div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p>Definition at line <a class="el" href="_value_8hpp_source.html#l00066">66</a> of file <a class="el" href="_value_8hpp_source.html">Value.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0ca5a4b587da0ce80caa46d3487e7ac0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::size_t Ark::ArkVMStackSize = 8192</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -582,14 +779,14 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a> Ark::Nil = <a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a>(internal::ValueType::Nil)</td>
+          <td class="memname">const <a class="el" href="class_ark_1_1_value.html">Value</a> Ark::Nil = <a class="el" href="class_ark_1_1_value.html">Value</a>(ValueType::Nil)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>ArkScript Nil value. </p>
 
-<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00289">289</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00285">285</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
 
 </div>
 </div>
@@ -598,14 +795,14 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a> Ark::False = <a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a>(internal::ValueType::False)</td>
+          <td class="memname">const <a class="el" href="class_ark_1_1_value.html">Value</a> Ark::False = <a class="el" href="class_ark_1_1_value.html">Value</a>(ValueType::False)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>ArkScript False value. </p>
 
-<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00291">291</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00287">287</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
 
 </div>
 </div>
@@ -614,21 +811,21 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a> Ark::True = <a class="el" href="class_ark_1_1internal_1_1_value.html">Value</a>(internal::ValueType::True)</td>
+          <td class="memname">const <a class="el" href="class_ark_1_1_value.html">Value</a> Ark::True = <a class="el" href="class_ark_1_1_value.html">Value</a>(ValueType::True)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>ArkScript True value. </p>
 
-<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00293">293</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_v_m_8hpp_source.html#l00289">289</a> of file <a class="el" href="_v_m_8hpp_source.html">VM.hpp</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 30 2021 16:41:24 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 13 2021 12:01:16 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -94,55 +94,60 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef INCLUDE_ARK_CONSTANTS_HPP_IN</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define INCLUDE_ARK_CONSTANTS_HPP_IN</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#afc92e3b88d55ef7fe54acb1da7d62745">   15</a></span>&#160;<span class="preprocessor">#define ARK_VERSION_MAJOR 3</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#a2503c1ff3c39b13920befc7686b03d38">   16</a></span>&#160;<span class="preprocessor">#define ARK_VERSION_MINOR 0</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#a1a667125606e5219c4f6ed6f9309ed32">   17</a></span>&#160;<span class="preprocessor">#define ARK_VERSION_PATCH 15</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#adb53da0bb3a00c28566bd8f051ed72d6">   18</a></span>&#160;<span class="preprocessor">#define ARK_VERSION ((ARK_VERSION_MAJOR &lt;&lt; 16) + (ARK_VERSION_MINOR &lt;&lt; 8) + ARK_VERSION_PATCH)</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#abdfb061c37bb03ce7d33cea01c70a64d">   19</a></span>&#160;<span class="preprocessor">#define ARK_COMPILATION_OPTIONS &quot;/DWIN32 /D_WINDOWS /W3 /GR /EHsc&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#a1117e7a814daf74a4935079b9b29ab84">   20</a></span>&#160;<span class="preprocessor">#define ARK_COMPILER &quot;MSVC&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#af90a944d153c7ebc6603779c1438c80f">   21</a></span>&#160;<span class="preprocessor">#define ARK_CACHE_DIRNAME &quot;__arkscript__&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#ae99a69d821bd74354272ee56fc43f796">   22</a></span>&#160;<span class="preprocessor">#define ARK_NO_NAME_FILE &quot;FILE&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#if defined(_WIN32) || defined(_WIN64)</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">    #define ARK_PLATFORM_NAME &quot;Windows&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#elif defined(__APPLE__) || defined(__MACH__)</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">    #define ARK_PLATFORM_NAME &quot;Mac OSX&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#elif defined(__linux__)</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">    #define ARK_PLATFORM_NAME &quot;Linux&quot;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#elif defined(__FreeBSD__)</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">    #define ARK_PLATFORM_NAME &quot;FreeBSD&quot;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#elif defined(__unix) || defined(__unix__)</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">    #define ARK_PLATFORM_NAME &quot;Unix&quot;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#a473be7f5eca195f89cf4637236f29ad2">   35</a></span>&#160;<span class="preprocessor">    #define ARK_PLATFORM_NAME &quot;Other&quot;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;cinttypes&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#a4c94ae2a54ca868cb8971136188976e3">   15</a></span>&#160;constexpr <span class="keywordtype">int</span> <a class="code" href="_constants_8hpp.html#a4c94ae2a54ca868cb8971136188976e3">ARK_VERSION_MAJOR</a> = 3;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#ae92e5cb7f969a516e5ad53ff6c0b9800">   16</a></span>&#160;constexpr <span class="keywordtype">int</span> <a class="code" href="_constants_8hpp.html#ae92e5cb7f969a516e5ad53ff6c0b9800">ARK_VERSION_MINOR</a> = 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#a8b54f548bc7ddf5e0833bd12e4b65635">   17</a></span>&#160;constexpr <span class="keywordtype">int</span> <a class="code" href="_constants_8hpp.html#a8b54f548bc7ddf5e0833bd12e4b65635">ARK_VERSION_PATCH</a> = 15;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#afceb83565468f28ce4348246564e8549">   18</a></span>&#160;constexpr <span class="keywordtype">int</span> <a class="code" href="_constants_8hpp.html#afceb83565468f28ce4348246564e8549">ARK_VERSION</a> = (<a class="code" href="_constants_8hpp.html#a4c94ae2a54ca868cb8971136188976e3">ARK_VERSION_MAJOR</a> &lt;&lt; 16) + (<a class="code" href="_constants_8hpp.html#ae92e5cb7f969a516e5ad53ff6c0b9800">ARK_VERSION_MINOR</a> &lt;&lt; 8) + <a class="code" href="_constants_8hpp.html#a8b54f548bc7ddf5e0833bd12e4b65635">ARK_VERSION_PATCH</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#ac2a71a92e550ab32be24666563bd4428">   19</a></span>&#160;constexpr <span class="keywordtype">char</span> <a class="code" href="_constants_8hpp.html#ac2a71a92e550ab32be24666563bd4428">ARK_VERSION_STR</a>[3] = {<a class="code" href="_constants_8hpp.html#a4c94ae2a54ca868cb8971136188976e3">ARK_VERSION_MAJOR</a> + <span class="charliteral">&#39;0&#39;</span>, <a class="code" href="_constants_8hpp.html#ae92e5cb7f969a516e5ad53ff6c0b9800">ARK_VERSION_MINOR</a> + <span class="charliteral">&#39;0&#39;</span>, <a class="code" href="_constants_8hpp.html#a8b54f548bc7ddf5e0833bd12e4b65635">ARK_VERSION_PATCH</a> + <span class="charliteral">&#39;0&#39;</span>};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#abdfb061c37bb03ce7d33cea01c70a64d">   21</a></span>&#160;<span class="preprocessor">#define ARK_COMPILATION_OPTIONS &quot;/DWIN32 /D_WINDOWS /W3 /GR /EHsc&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#a1117e7a814daf74a4935079b9b29ab84">   22</a></span>&#160;<span class="preprocessor">#define ARK_COMPILER &quot;MSVC&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#af90a944d153c7ebc6603779c1438c80f">   23</a></span>&#160;<span class="preprocessor">#define ARK_CACHE_DIRNAME &quot;__arkscript__&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#ae99a69d821bd74354272ee56fc43f796">   24</a></span>&#160;<span class="preprocessor">#define ARK_NO_NAME_FILE &quot;FILE&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#if defined(_WIN32) || defined(_WIN64)</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">    #define ARK_PLATFORM_NAME &quot;Windows&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#elif defined(__APPLE__) || defined(__MACH__)</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">    #define ARK_PLATFORM_NAME &quot;Mac OSX&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#elif defined(__linux__)</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">    #define ARK_PLATFORM_NAME &quot;Linux&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#elif defined(__FreeBSD__)</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">    #define ARK_PLATFORM_NAME &quot;FreeBSD&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#elif defined(__unix) || defined(__unix__)</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">    #define ARK_PLATFORM_NAME &quot;Unix&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="_constants_8hpp.html#a473be7f5eca195f89cf4637236f29ad2">   37</a></span>&#160;<span class="preprocessor">    #define ARK_PLATFORM_NAME &quot;Other&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark.html">Ark</a></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// VM options</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="namespace_ark.html#a80f2edc1285469fdf422c9c22b18597c">   43</a></span>&#160;    constexpr uint16_t <a class="code" href="namespace_ark.html#a80f2edc1285469fdf422c9c22b18597c">FeaturePersist</a>            = 1 &lt;&lt; 0;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="namespace_ark.html#a5af874de3f33e2b4720e1b6d65722a35">   44</a></span>&#160;    constexpr uint16_t <a class="code" href="namespace_ark.html#a5af874de3f33e2b4720e1b6d65722a35">FeatureFunctionArityCheck</a> = 1 &lt;&lt; 1;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// Compiler options</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">   46</a></span>&#160;    constexpr uint16_t <a class="code" href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">FeatureRemoveUnusedVars</a>   = 1 &lt;&lt; 4;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// Default features for the VM x Compiler x Parser</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespace_ark.html#a01bf99e888f59670c0508d83cc23ffd4">   49</a></span>&#160;    constexpr uint16_t <a class="code" href="namespace_ark.html#a01bf99e888f59670c0508d83cc23ffd4">DefaultFeatures</a> =</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        FeatureFunctionArityCheck</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        | <a class="code" href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">FeatureRemoveUnusedVars</a>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="namespace_ark_html_aed352fcea78905393d0edd9e1ae1423d"><div class="ttname"><a href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">Ark::FeatureRemoveUnusedVars</a></div><div class="ttdeci">constexpr uint16_t FeatureRemoveUnusedVars</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00046">Constants.hpp:46</a></div></div>
-<div class="ttc" id="namespace_ark_html_a5af874de3f33e2b4720e1b6d65722a35"><div class="ttname"><a href="namespace_ark.html#a5af874de3f33e2b4720e1b6d65722a35">Ark::FeatureFunctionArityCheck</a></div><div class="ttdeci">constexpr uint16_t FeatureFunctionArityCheck</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00044">Constants.hpp:44</a></div></div>
-<div class="ttc" id="namespace_ark_html_a80f2edc1285469fdf422c9c22b18597c"><div class="ttname"><a href="namespace_ark.html#a80f2edc1285469fdf422c9c22b18597c">Ark::FeaturePersist</a></div><div class="ttdeci">constexpr uint16_t FeaturePersist</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00043">Constants.hpp:43</a></div></div>
-<div class="ttc" id="namespace_ark_html_a01bf99e888f59670c0508d83cc23ffd4"><div class="ttname"><a href="namespace_ark.html#a01bf99e888f59670c0508d83cc23ffd4">Ark::DefaultFeatures</a></div><div class="ttdeci">constexpr uint16_t DefaultFeatures</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00049">Constants.hpp:49</a></div></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;cinttypes&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ark.html">Ark</a></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// VM options</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="namespace_ark.html#a5af874de3f33e2b4720e1b6d65722a35">   45</a></span>&#160;    constexpr uint16_t <a class="code" href="namespace_ark.html#a5af874de3f33e2b4720e1b6d65722a35">FeatureFunctionArityCheck</a> = 1 &lt;&lt; 1;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// Compiler options</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">   47</a></span>&#160;    constexpr uint16_t <a class="code" href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">FeatureRemoveUnusedVars</a>   = 1 &lt;&lt; 4;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// Default features for the VM x Compiler x Parser</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="namespace_ark.html#a01bf99e888f59670c0508d83cc23ffd4">   50</a></span>&#160;    constexpr uint16_t <a class="code" href="namespace_ark.html#a01bf99e888f59670c0508d83cc23ffd4">DefaultFeatures</a> =</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        FeatureFunctionArityCheck</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        | <a class="code" href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">FeatureRemoveUnusedVars</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="_constants_8hpp_html_ac2a71a92e550ab32be24666563bd4428"><div class="ttname"><a href="_constants_8hpp.html#ac2a71a92e550ab32be24666563bd4428">ARK_VERSION_STR</a></div><div class="ttdeci">constexpr char ARK_VERSION_STR[3]</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00019">Constants.hpp:19</a></div></div>
+<div class="ttc" id="_constants_8hpp_html_afceb83565468f28ce4348246564e8549"><div class="ttname"><a href="_constants_8hpp.html#afceb83565468f28ce4348246564e8549">ARK_VERSION</a></div><div class="ttdeci">constexpr int ARK_VERSION</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00018">Constants.hpp:18</a></div></div>
+<div class="ttc" id="namespace_ark_html_aed352fcea78905393d0edd9e1ae1423d"><div class="ttname"><a href="namespace_ark.html#aed352fcea78905393d0edd9e1ae1423d">Ark::FeatureRemoveUnusedVars</a></div><div class="ttdeci">constexpr uint16_t FeatureRemoveUnusedVars</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00047">Constants.hpp:47</a></div></div>
+<div class="ttc" id="namespace_ark_html_a5af874de3f33e2b4720e1b6d65722a35"><div class="ttname"><a href="namespace_ark.html#a5af874de3f33e2b4720e1b6d65722a35">Ark::FeatureFunctionArityCheck</a></div><div class="ttdeci">constexpr uint16_t FeatureFunctionArityCheck</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00045">Constants.hpp:45</a></div></div>
+<div class="ttc" id="_constants_8hpp_html_a8b54f548bc7ddf5e0833bd12e4b65635"><div class="ttname"><a href="_constants_8hpp.html#a8b54f548bc7ddf5e0833bd12e4b65635">ARK_VERSION_PATCH</a></div><div class="ttdeci">constexpr int ARK_VERSION_PATCH</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00017">Constants.hpp:17</a></div></div>
+<div class="ttc" id="_constants_8hpp_html_a4c94ae2a54ca868cb8971136188976e3"><div class="ttname"><a href="_constants_8hpp.html#a4c94ae2a54ca868cb8971136188976e3">ARK_VERSION_MAJOR</a></div><div class="ttdeci">constexpr int ARK_VERSION_MAJOR</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00015">Constants.hpp:15</a></div></div>
+<div class="ttc" id="namespace_ark_html_a01bf99e888f59670c0508d83cc23ffd4"><div class="ttname"><a href="namespace_ark.html#a01bf99e888f59670c0508d83cc23ffd4">Ark::DefaultFeatures</a></div><div class="ttdeci">constexpr uint16_t DefaultFeatures</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00050">Constants.hpp:50</a></div></div>
+<div class="ttc" id="_constants_8hpp_html_ae92e5cb7f969a516e5ad53ff6c0b9800"><div class="ttname"><a href="_constants_8hpp.html#ae92e5cb7f969a516e5ad53ff6c0b9800">ARK_VERSION_MINOR</a></div><div class="ttdeci">constexpr int ARK_VERSION_MINOR</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8hpp_source.html#l00016">Constants.hpp:16</a></div></div>
 <div class="ttc" id="namespace_ark_html"><div class="ttname"><a href="namespace_ark.html">Ark</a></div><div class="ttdef"><b>Definition:</b> <a href="_builtins_8hpp_source.html#l00023">Builtins.hpp:23</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 30 2021 16:41:22 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 13 2021 12:01:15 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

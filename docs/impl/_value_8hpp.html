@@ -106,7 +106,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;Ark/String.hpp&gt;</code><br />
 <code>#include &lt;array&gt;</code><br />
-<code>#include &lt;<a class="el" href="_types_8hpp_source.html">Ark/VM/Types.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_closure_8hpp_source.html">Ark/VM/Closure.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_exceptions_8hpp_source.html">Ark/Exceptions.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_user_type_8hpp_source.html">Ark/VM/UserType.hpp</a>&gt;</code><br />
@@ -118,14 +117,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1internal_1_1_value.html">Ark::internal::Value</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ark_1_1_value.html">Ark::Value</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespace_ark"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html">Ark</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespace_ark_1_1internal"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark_1_1internal.html">Ark::internal</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -137,37 +134,37 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:abfe0e7f68892a575080e21f06e84bfe8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8">Ark::internal::ValueType</a> { <br />
-&#160;&#160;<a class="el" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8a4ee29ca12c7d126654bd0e5275de6135">Ark::internal::ValueType::List</a> = 0, 
-<a class="el" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8ab2ee912b91d69b435159c7c3f6df7f5f">Ark::internal::ValueType::Number</a> = 1, 
-<a class="el" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8a27118326006d3829667a400ad23d5d98">Ark::internal::ValueType::String</a> = 2, 
-<a class="el" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8a6666eaba81f13e74d10ac1a9c9d6d7b1">Ark::internal::ValueType::PageAddr</a> = 3, 
+<tr class="memitem:a794d6cb0fd25e2dbc678c17ff605e159"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159">Ark::ValueType</a> { <br />
+&#160;&#160;<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a4ee29ca12c7d126654bd0e5275de6135">Ark::ValueType::List</a> = 0, 
+<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159ab2ee912b91d69b435159c7c3f6df7f5f">Ark::ValueType::Number</a> = 1, 
+<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a27118326006d3829667a400ad23d5d98">Ark::ValueType::String</a> = 2, 
+<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a6666eaba81f13e74d10ac1a9c9d6d7b1">Ark::ValueType::PageAddr</a> = 3, 
 <br />
-&#160;&#160;<a class="el" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8a78c1e09380f2f8ea572cd59c5cd4bc92">Ark::internal::ValueType::CProc</a> = 4, 
-<a class="el" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8aaf4bb376939e77df0e7c2332b837a866">Ark::internal::ValueType::Closure</a> = 5, 
-<a class="el" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8a8f9bfe9d1345237cb3b2b205864da075">Ark::internal::ValueType::User</a> = 6, 
-<a class="el" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8a4da8b7eb2c3f2007cf8238334401ef51">Ark::internal::ValueType::Nil</a> = 7, 
+&#160;&#160;<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a78c1e09380f2f8ea572cd59c5cd4bc92">Ark::ValueType::CProc</a> = 4, 
+<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159aaf4bb376939e77df0e7c2332b837a866">Ark::ValueType::Closure</a> = 5, 
+<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a8f9bfe9d1345237cb3b2b205864da075">Ark::ValueType::User</a> = 6, 
+<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a4da8b7eb2c3f2007cf8238334401ef51">Ark::ValueType::Nil</a> = 7, 
 <br />
-&#160;&#160;<a class="el" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8af827cf462f62848df37c5e1e94a4da74">Ark::internal::ValueType::True</a> = 8, 
-<a class="el" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8af8320b26d30ab433c5a54546d21f414c">Ark::internal::ValueType::False</a> = 9, 
-<a class="el" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8aec0fc0100c4fc1ce4eea230c3dc10360">Ark::internal::ValueType::Undefined</a> = 10, 
-<a class="el" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8a63d5049791d9d79d86e9a108b0a999ca">Ark::internal::ValueType::Reference</a> = 11, 
+&#160;&#160;<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159af827cf462f62848df37c5e1e94a4da74">Ark::ValueType::True</a> = 8, 
+<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159af8320b26d30ab433c5a54546d21f414c">Ark::ValueType::False</a> = 9, 
+<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159aec0fc0100c4fc1ce4eea230c3dc10360">Ark::ValueType::Undefined</a> = 10, 
+<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a63d5049791d9d79d86e9a108b0a999ca">Ark::ValueType::Reference</a> = 11, 
 <br />
-&#160;&#160;<a class="el" href="namespace_ark_1_1internal.html#abfe0e7f68892a575080e21f06e84bfe8adf754f9ba8524ed3333ec938d0636862">Ark::internal::ValueType::InstPtr</a> = 12
+&#160;&#160;<a class="el" href="namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159adf754f9ba8524ed3333ec938d0636862">Ark::ValueType::InstPtr</a> = 12
 <br />
  }</td></tr>
-<tr class="separator:abfe0e7f68892a575080e21f06e84bfe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a794d6cb0fd25e2dbc678c17ff605e159"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a39673c5b45dab135d681a754d23a2756"><td class="memItemLeft" align="right" valign="top">const std::array&lt; std::string, 13 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark_1_1internal.html#a39673c5b45dab135d681a754d23a2756">Ark::internal::types_to_str</a></td></tr>
-<tr class="separator:a39673c5b45dab135d681a754d23a2756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acda85568e0ab829ec4c303f1ac053759"><td class="memItemLeft" align="right" valign="top">const std::array&lt; std::string, 13 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ark.html#acda85568e0ab829ec4c303f1ac053759">Ark::types_to_str</a></td></tr>
+<tr class="separator:acda85568e0ab829ec4c303f1ac053759"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Default value type handled by the virtual machine </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.2 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2020-10-27</dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2020 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2020-2021 </dd></dl>
 
 <p>Definition in file <a class="el" href="_value_8hpp_source.html">Value.hpp</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -202,7 +199,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 30 2021 16:41:23 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 13 2021 12:01:16 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
