@@ -99,8 +99,7 @@ int main()
 {
     // A state can be shared by multiple virtual machines (note that they will NEVER modify it)
     // leave constructor empty to select the default standard library (loaded from an environment variable $ARKSCRIPT_PATH/lib)
-    // persistance is needed to use vm.call(function_name, args...)
-    Ark::State state(/* options */ Ark::FeaturePersist);
+    Ark::State state;
 
     // Will automatically compile the file if needed (if not, will take it from the ark cache)
     state.doFile("myfile.ark");
@@ -163,7 +162,7 @@ Ark::Value my_function(std::vector&lt;Ark::Value&gt;& args, Ark::VM* vm)
 
 int main()
 {
-    Ark::State state(/* options */ Ark::FeaturePersist);
+    Ark::State state;
     state.loadFunction("my_function", my_function);
 
     // we can also load C++ lambdas
