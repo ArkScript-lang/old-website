@@ -2,6 +2,7 @@ var searchData=
 [
   ['tail',['TAIL',['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780faba6b55e08dff6039159ac458b4ef458c',1,'Ark::internal']]],
   ['tan_5f',['tan_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a6c855edc18ac99e314b4678fe639597b',1,'Ark::internal::Builtins::Mathematics']]],
+  ['tanh_5f',['tanh_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a0fcb4a031f6cdd387018ab055bcf92e2',1,'Ark::internal::Builtins::Mathematics']]],
   ['tau_5f',['tau_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a8ce8e0ebded8592d52db484cdff7a0f9',1,'Ark::internal::Builtins::Mathematics']]],
   ['throwcompilererror',['throwCompilerError',['../class_ark_1_1_compiler.html#ac71ac4031b100fbcf9311ea89ad66930',1,'Ark::Compiler']]],
   ['throwmacroprocessingerror',['throwMacroProcessingError',['../class_ark_1_1internal_1_1_macro_executor.html#a8d482429d4abd29c3ea405bf506a92c5',1,'Ark::internal::MacroExecutor::throwMacroProcessingError()'],['../class_ark_1_1internal_1_1_macro_processor.html#aa54ef47d50242ea4ab59a23669dd8399',1,'Ark::internal::MacroProcessor::throwMacroProcessingError()']]],

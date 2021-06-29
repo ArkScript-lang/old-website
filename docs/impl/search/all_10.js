@@ -25,7 +25,7 @@ var searchData=
   ['plugin',['PLUGIN',['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fafc29a3aa6e94ad8c002dfbd6859412e1',1,'Ark::internal']]],
   ['plugin_2ecpp',['Plugin.cpp',['../_plugin_8cpp.html',1,'']]],
   ['plugin_2ehpp',['Plugin.hpp',['../_plugin_8hpp.html',1,'']]],
-  ['pop',['pop',['../class_ark_1_1_v_m.html#af498532f8bc0763c0d9ed713b0f53e38',1,'Ark::VM::pop()'],['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa07bdaee9ad660de3c24cdcc66988619c',1,'Ark::internal::POP()']]],
+  ['pop',['pop',['../class_ark_1_1_v_m.html#af498532f8bc0763c0d9ed713b0f53e38',1,'Ark::VM']]],
   ['pop_5fjump_5fif_5ffalse',['POP_JUMP_IF_FALSE',['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa110cb00f3e3c816e4343e23e42248162',1,'Ark::internal']]],
   ['pop_5fjump_5fif_5ftrue',['POP_JUMP_IF_TRUE',['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780faed44c268c1691e778abd7a0c79768324',1,'Ark::internal']]],
   ['popandresolveasptr',['popAndResolveAsPtr',['../class_ark_1_1_v_m.html#a9fc092c10f9999c465d54f651c08952a',1,'Ark::VM']]],

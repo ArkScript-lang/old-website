@@ -20,7 +20,6 @@ var searchData=
   ['m_5ffile',['m_file',['../class_ark_1_1_parser.html#a36268503a2ee8c4c1789213a095d9cfe',1,'Ark::Parser']]],
   ['m_5ffilename',['m_filename',['../class_ark_1_1internal_1_1_node.html#a4f21160ed287c5d5504149d3c718fd08',1,'Ark::internal::Node::m_filename()'],['../class_ark_1_1_state.html#a49ff30e9372a01fa115e1d473d78ff7d',1,'Ark::State::m_filename()']]],
   ['m_5ffuncs',['m_funcs',['../class_ark_1_1_user_type.html#ac44ffce3906341bea5daf754ec3f4519',1,'Ark::UserType']]],
-  ['m_5fhistory',['m_history',['../class_ark_1_1_compiler.html#a802594a8f72afb041c2a06363f15b976',1,'Ark::Compiler']]],
   ['m_5fip',['m_ip',['../class_ark_1_1_v_m.html#a892cfa7b8f3b23622091ab5c0c192619',1,'Ark::VM']]],
   ['m_5flast_5fsym_5floaded',['m_last_sym_loaded',['../class_ark_1_1_v_m.html#a358defab470981a23beb1543c2618075',1,'Ark::VM']]],
   ['m_5flast_5ftoken',['m_last_token',['../class_ark_1_1_parser.html#a1131a7a222f894d85d7afa6a5972747a',1,'Ark::Parser']]],

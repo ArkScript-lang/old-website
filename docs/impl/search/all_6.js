@@ -19,6 +19,5 @@ var searchData=
   ['floor_5f',['floor_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a950f531fe6739c39f61c40befc2df72b',1,'Ark::internal::Builtins::Mathematics']]],
   ['format',['format',['../namespace_ark_1_1internal_1_1_builtins_1_1_string.html#a26fa1fb8e12a7852a09cf4da9aaebbf6',1,'Ark::internal::Builtins::String']]],
   ['fun',['Fun',['../namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a46d6d315bea88efbf048125d2ec444b4',1,'Ark::internal']]],
-  ['func_5ftype',['FUNC_TYPE',['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa63ed41d8ad730e44805a772821085cb1',1,'Ark::internal']]],
-  ['function',['Function',['../namespace_ark_1_1internal.html#a9d7c9df77acc76a1eed32dcf23678954a86408593c34af77fdd90df932f8b5261',1,'Ark::internal']]]
+  ['func_5ftype',['FUNC_TYPE',['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa63ed41d8ad730e44805a772821085cb1',1,'Ark::internal']]]
 ];

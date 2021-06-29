@@ -19,6 +19,7 @@ var searchData=
   ['setuserpointer',['setUserPointer',['../class_ark_1_1_v_m.html#a5e8b56e0a675cbc1b300ad7be84cdcd4',1,'Ark::VM']]],
   ['sharedlibrary',['SharedLibrary',['../class_ark_1_1internal_1_1_shared_library.html#a303d9b499a5e261c15a743d306cf2232',1,'Ark::internal::SharedLibrary::SharedLibrary()'],['../class_ark_1_1internal_1_1_shared_library.html#aeeb89476f9df58b0f15ccd7b19b8ec56',1,'Ark::internal::SharedLibrary::SharedLibrary(const std::string &amp;path)']]],
   ['sin_5f',['sin_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a74839677ff7636f9478518515aed712b',1,'Ark::internal::Builtins::Mathematics']]],
+  ['sinh_5f',['sinh_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a8ca6ca57f9031a8996ec2813e7da723c',1,'Ark::internal::Builtins::Mathematics']]],
   ['size',['size',['../class_ark_1_1internal_1_1_scope.html#ad16445440b626135cdd3a432a19228cb',1,'Ark::internal::Scope']]],
   ['sleep',['sleep',['../namespace_ark_1_1internal_1_1_builtins_1_1_system.html#a13840639439071941a08d3a0d96dd0c1',1,'Ark::internal::Builtins::System']]],
   ['slicelist',['sliceList',['../namespace_ark_1_1internal_1_1_builtins_1_1_list.html#ae4f6c7709ce27c3f47f37c33e2c388c0',1,'Ark::internal::Builtins::List']]],

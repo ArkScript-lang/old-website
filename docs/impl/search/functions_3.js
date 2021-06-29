@@ -1,6 +1,7 @@
 var searchData=
 [
   ['call',['call',['../class_ark_1_1_v_m.html#aa9bff215cf0efef6cd0854e02dad824f',1,'Ark::VM::call(const std::string &amp;name, Args &amp;&amp;...args)'],['../class_ark_1_1_v_m.html#a4bee4b74523e3fe43c54944aae3831d7',1,'Ark::VM::call(int16_t argc_=-1)']]],
+  ['canbecompiletimeevaluated',['canBeCompileTimeEvaluated',['../class_ark_1_1internal_1_1_macro_processor.html#a5fbe3cda5708621fc61fa4044516d277',1,'Ark::internal::MacroProcessor']]],
   ['canhandle',['canHandle',['../class_ark_1_1internal_1_1_macro_executor.html#a52cdc7bf4d5089a68cbccb2310f0a159',1,'Ark::internal::MacroExecutor::canHandle()'],['../class_ark_1_1internal_1_1_conditional_executor.html#af56d8634ccd0d291d6aae58a23dd4403',1,'Ark::internal::ConditionalExecutor::canHandle()'],['../class_ark_1_1internal_1_1_list_executor.html#ad98b015e928b4003852f1ea9a44e9616',1,'Ark::internal::ListExecutor::canHandle()'],['../class_ark_1_1internal_1_1_symbol_executor.html#aa2804ae84834c9753c689322142fc86d',1,'Ark::internal::SymbolExecutor::canHandle()']]],
   ['canonicalrelpath',['canonicalRelPath',['../namespace_ark_1_1_utils.html#a3598d0ca35b3c7afd6183f2093807db3',1,'Ark::Utils']]],
   ['ceil_5f',['ceil_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a7cc938acab51831665c83a86031b84a2',1,'Ark::internal::Builtins::Mathematics']]],
@@ -28,6 +29,7 @@ var searchData=
   ['constlist',['constList',['../class_ark_1_1internal_1_1_node.html#a30f2735c3aafed035a7e5380066866a6',1,'Ark::internal::Node::constList()'],['../class_ark_1_1_value.html#a549cb16cc5f360607bb838baff1fc145',1,'Ark::Value::constList()']]],
   ['context_5flen',['context_len',['../_util_8hpp.html#aea1c73842f42185ee352b27e4518b944',1,'context_len(char const *prefix):&#160;Util.cpp'],['../_util_8cpp.html#aea1c73842f42185ee352b27e4518b944',1,'context_len(char const *prefix):&#160;Util.cpp']]],
   ['cos_5f',['cos_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a168d4bf231df99806ce44b049d2b9caa',1,'Ark::internal::Builtins::Mathematics']]],
+  ['cosh_5f',['cosh_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a2ddbc1a81b7a086e9aa01150d094e35e',1,'Ark::internal::Builtins::Mathematics']]],
   ['count_5fopen_5fbraces',['count_open_braces',['../class_ark_1_1_repl.html#a9f85a9da12779d6275f32036bd96ac64',1,'Ark::Repl']]],
   ['count_5fopen_5fparentheses',['count_open_parentheses',['../class_ark_1_1_repl.html#ab542e98c2a9f4958a7cec48237d3d520',1,'Ark::Repl']]],
   ['countarkobjects',['countArkObjects',['../class_ark_1_1_compiler.html#aeb661cfc3f336a54bb71a43047ea33f8',1,'Ark::Compiler']]],

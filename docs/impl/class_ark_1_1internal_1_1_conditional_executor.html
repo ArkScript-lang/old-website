@@ -235,7 +235,7 @@ false </dd></dl>
 <div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        Node&amp; first = node.list()[0];</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordflow">if</span> (first.keyword() == <a class="code" href="namespace_ark_1_1internal.html#a9d7c9df77acc76a1eed32dcf23678954a786887572f6ef1c20f2d8177cb2f1639">Keyword::If</a>)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordflow">if</span> (first.keyword() == <a class="code" href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a786887572f6ef1c20f2d8177cb2f1639">Keyword::If</a>)</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            Node cond = node.list()[1];</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            Node temp = <a class="code" href="class_ark_1_1internal_1_1_macro_executor.html#a0e38cdada243b3c3f45f21cceca95d83">evaluate</a>(cond, <span class="comment">/* is_not_body */</span> <span class="keyword">true</span>);</div>
@@ -265,11 +265,11 @@ false </dd></dl>
 <div class="ttc" id="class_ark_1_1internal_1_1_macro_executor_html_a84e42959721a5c84f6fae6bf572b11ad"><div class="ttname"><a href="class_ark_1_1internal_1_1_macro_executor.html#a84e42959721a5c84f6fae6bf572b11ad">Ark::internal::MacroExecutor::isTruthy</a></div><div class="ttdeci">bool isTruthy(const Node &amp;node)</div><div class="ttdoc">Check if a node can be evaluated to true. </div><div class="ttdef"><b>Definition:</b> <a href="_macro_executor_8cpp_source.html#l00020">MacroExecutor.cpp:20</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_node_html_af7d8dbbbaabe5cf9b0a40e09e34dc68e"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#af7d8dbbbaabe5cf9b0a40e09e34dc68e">Ark::internal::Node::list</a></div><div class="ttdeci">std::vector&lt; Node &gt; &amp; list() noexcept</div><div class="ttdoc">Return the list of sub-nodes held by the node. </div><div class="ttdef"><b>Definition:</b> <a href="_node_8cpp_source.html#l00078">Node.cpp:78</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_a5300c6c0596db0a5a8f5b62d4d42ce4ca92e592d90b9548016776a6fb68dccded"><div class="ttname"><a href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca92e592d90b9548016776a6fb68dccded">Ark::internal::NodeType::Unused</a></div></div>
-<div class="ttc" id="namespace_ark_1_1internal_html_a9d7c9df77acc76a1eed32dcf23678954a786887572f6ef1c20f2d8177cb2f1639"><div class="ttname"><a href="namespace_ark_1_1internal.html#a9d7c9df77acc76a1eed32dcf23678954a786887572f6ef1c20f2d8177cb2f1639">Ark::internal::NodeCategory::If</a></div></div>
 <div class="ttc" id="namespace_ark_1_1internal_html_a5300c6c0596db0a5a8f5b62d4d42ce4ca4374cf34c5d58482ffae982196bd2114"><div class="ttname"><a href="namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca4374cf34c5d58482ffae982196bd2114">Ark::internal::NodeType::Macro</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_node_html_a11848681f4a28449c1077ff99f3f9542"><div class="ttname"><a href="class_ark_1_1internal_1_1_node.html#a11848681f4a28449c1077ff99f3f9542">Ark::internal::Node::NilNode</a></div><div class="ttdeci">static Node NilNode</div><div class="ttdef"><b>Definition:</b> <a href="_node_8hpp_source.html#l00068">Node.hpp:68</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_macro_executor_html_a0e38cdada243b3c3f45f21cceca95d83"><div class="ttname"><a href="class_ark_1_1internal_1_1_macro_executor.html#a0e38cdada243b3c3f45f21cceca95d83">Ark::internal::MacroExecutor::evaluate</a></div><div class="ttdeci">Node evaluate(Node &amp;node, bool is_not_body)</div><div class="ttdoc">Evaluate only the macros. </div><div class="ttdef"><b>Definition:</b> <a href="_macro_executor_8cpp_source.html#l00025">MacroExecutor.cpp:25</a></div></div>
 <div class="ttc" id="class_ark_1_1internal_1_1_macro_executor_html_ab3864ba306ea433c82bf391a5a474ef8"><div class="ttname"><a href="class_ark_1_1internal_1_1_macro_executor.html#ab3864ba306ea433c82bf391a5a474ef8">Ark::internal::MacroExecutor::registerMacro</a></div><div class="ttdeci">void registerMacro(Node &amp;node)</div><div class="ttdoc">Registers macros based on their type. </div><div class="ttdef"><b>Definition:</b> <a href="_macro_executor_8cpp_source.html#l00015">MacroExecutor.cpp:15</a></div></div>
+<div class="ttc" id="namespace_ark_1_1internal_html_a9a844cdbff6d30f493cb3044c72128f1a786887572f6ef1c20f2d8177cb2f1639"><div class="ttname"><a href="namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a786887572f6ef1c20f2d8177cb2f1639">Ark::internal::Keyword::If</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -321,7 +321,7 @@ false </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 13 2021 12:01:17 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 29 2021 23:50:43 for ArkScript by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

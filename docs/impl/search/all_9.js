@@ -3,7 +3,7 @@ var searchData=
   ['id',['id',['../struct_ark_1_1internal_1_1type__uid__impl.html#aecc2aabc407d9515c967e7f8500a71d5',1,'Ark::internal::type_uid_impl']]],
   ['identifier',['Identifier',['../namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba29ee5d1ebcc033234938a5234f1f2075',1,'Ark::internal']]],
   ['idfromvalue',['idFromValue',['../class_ark_1_1internal_1_1_scope.html#a39349a331b69333504f1c489ecee2d00',1,'Ark::internal::Scope']]],
-  ['if',['If',['../namespace_ark_1_1internal.html#a9d7c9df77acc76a1eed32dcf23678954a786887572f6ef1c20f2d8177cb2f1639',1,'Ark::internal::If()'],['../namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a786887572f6ef1c20f2d8177cb2f1639',1,'Ark::internal::If()']]],
+  ['if',['If',['../namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a786887572f6ef1c20f2d8177cb2f1639',1,'Ark::internal']]],
   ['import',['Import',['../namespace_ark_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a72d6d7a1885885bb55a565fd1070581a',1,'Ark::internal']]],
   ['inf_5f',['inf_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a7398662d9e3d1a1c2b9dfcf2640f59d6',1,'Ark::internal::Builtins::Mathematics']]],
   ['init',['init',['../class_ark_1_1internal_1_1_node.html#a0af1d77329a4061a552a1e7ac478998c',1,'Ark::internal::Node::init()'],['../class_ark_1_1_v_m.html#ae0749e81e975e0d1a92c2d89995e50f0',1,'Ark::VM::init()']]],
@@ -18,7 +18,6 @@ var searchData=
   ['is',['is',['../class_ark_1_1_user_type.html#ae7511b67702032d9c8255754faf09c4c',1,'Ark::UserType']]],
   ['isbuiltin',['isBuiltin',['../class_ark_1_1_compiler.html#ad0b25560f1f468ed0b5086b88eeaf0d8',1,'Ark::Compiler']]],
   ['isconst',['isConst',['../class_ark_1_1_value.html#ac52bdcc04c598f30244ccd896afb47bf',1,'Ark::Value']]],
-  ['iscurrentnodestored',['isCurrentNodeStored',['../class_ark_1_1_compiler.html#ad8dd22c37ca5802cc9b490cc7a41686a',1,'Ark::Compiler']]],
   ['isdirectory',['isDirectory',['../namespace_ark_1_1internal_1_1_builtins_1_1_i_o.html#aab9086a2e10307cff1cddde170ff9797',1,'Ark::internal::Builtins::IO']]],
   ['isdouble',['isDouble',['../namespace_ark_1_1_utils.html#afeaaabff8a0661920f770e2bab8a7eda',1,'Ark::Utils']]],
   ['isfloat',['isFloat',['../namespace_ark_1_1_utils.html#a0c0ca8e6828f10569d9410d26939f052',1,'Ark::Utils']]],
@@ -32,7 +31,6 @@ var searchData=
   ['isnil',['ISNIL',['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa47216d8ba3f558c69fa591de825321d4',1,'Ark::internal']]],
   ['isoperator',['isOperator',['../class_ark_1_1_compiler.html#aedba0902a0474a0916fc54c134a1aff0',1,'Ark::Compiler::isOperator()'],['../class_ark_1_1internal_1_1_lexer.html#ab0bd674e07ea972da9fdbee81112d7e4',1,'Ark::internal::Lexer::isOperator()']]],
   ['ispredefined',['isPredefined',['../class_ark_1_1internal_1_1_macro_executor.html#add7338bad4db868807b2f9e9ca24d6e3',1,'Ark::internal::MacroExecutor::isPredefined()'],['../class_ark_1_1internal_1_1_macro_processor.html#abdc1384681bb70e9e53ea66b1f325063',1,'Ark::internal::MacroProcessor::isPredefined()']]],
-  ['isterminalnode',['isTerminalNode',['../class_ark_1_1_compiler.html#a83319d9ada858c7147cc56b24463ccd7',1,'Ark::Compiler']]],
   ['istruthy',['isTruthy',['../class_ark_1_1internal_1_1_macro_executor.html#a84e42959721a5c84f6fae6bf572b11ad',1,'Ark::internal::MacroExecutor::isTruthy()'],['../class_ark_1_1internal_1_1_macro_processor.html#a9913e292f95d6211828e21b01e83d1aa',1,'Ark::internal::MacroProcessor::isTruthy()']]],
   ['iterator',['Iterator',['../class_ark_1_1internal_1_1_node.html#acb51b539cbe2a7e737e63f8b3a7da94a',1,'Ark::internal::Node::Iterator()'],['../class_ark_1_1_value.html#a990118831b11f77999d58216e8ffce68',1,'Ark::Value::Iterator()']]]
 ];

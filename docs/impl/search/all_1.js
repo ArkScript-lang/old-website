@@ -1,6 +1,7 @@
 var searchData=
 [
   ['acos_5f',['acos_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#aa60a869e5fe265c8330ec70839899262',1,'Ark::internal::Builtins::Mathematics']]],
+  ['acosh_5f',['acosh_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a737f727cf05ffd2c5ee716a9c5c5b0c0',1,'Ark::internal::Builtins::Mathematics']]],
   ['add',['ADD',['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa4c82ca0d18822806e36b58e49784eeb7',1,'Ark::internal']]],
   ['adddefinedsymbol',['addDefinedSymbol',['../class_ark_1_1_compiler.html#a7ec6ba4eeac4d755d72c0b8e84d39100',1,'Ark::Compiler']]],
   ['addsymbol',['addSymbol',['../class_ark_1_1_compiler.html#a3fc62e4c31f950a859ce9009532a6d78',1,'Ark::Compiler']]],
@@ -29,12 +30,14 @@ var searchData=
   ['arkvmstacksize',['ArkVMStackSize',['../namespace_ark.html#a0ca5a4b587da0ce80caa46d3487e7ac0',1,'Ark']]],
   ['as',['as',['../class_ark_1_1_user_type.html#a89d580d8347deb8159d19b0465118165',1,'Ark::UserType::as() noexcept'],['../class_ark_1_1_user_type.html#a02d44f0061b3c2cd5b63013e07fc30aa',1,'Ark::UserType::as() const noexcept']]],
   ['asin_5f',['asin_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#ade0b9a3b2d7335e51f2036fa89cf9a14',1,'Ark::internal::Builtins::Mathematics']]],
+  ['asinh_5f',['asinh_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a5ffcefc1362a8f6aa150096e5d788604',1,'Ark::internal::Builtins::Mathematics']]],
   ['assert',['ASSERT',['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa93d2be6a263e75b58af07e95b3f144dd',1,'Ark::internal']]],
   ['assertionfailed',['AssertionFailed',['../class_ark_1_1_assertion_failed.html',1,'Ark']]],
   ['assertionfailed',['AssertionFailed',['../class_ark_1_1_assertion_failed.html#a53766300514379fbab6775e089d59cc8',1,'Ark::AssertionFailed']]],
   ['ast',['ast',['../class_ark_1_1internal_1_1_macro_processor.html#a3b5adb1ac78f311b33108d495a397c3e',1,'Ark::internal::MacroProcessor::ast()'],['../class_ark_1_1_optimizer.html#adf07a88c6cb61dc77e8abd88aa3fa64c',1,'Ark::Optimizer::ast()'],['../class_ark_1_1_parser.html#aed4ed1a46b2d109585787a568066457e',1,'Ark::Parser::ast()']]],
   ['at',['AT',['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa93e267bca42261b1fbe76253840a662b',1,'Ark::internal']]],
   ['atan_5f',['atan_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a703e0f587edf22361ff6adfba80f0639',1,'Ark::internal::Builtins::Mathematics']]],
+  ['atanh_5f',['atanh_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a6b5f0b627fd3897a37427b4947ea53e5',1,'Ark::internal::Builtins::Mathematics']]],
   ['atom',['atom',['../class_ark_1_1_parser.html#ac43e61abc0ed7aee78bc62526cceb28b',1,'Ark::Parser']]],
   ['builtins',['Builtins',['../namespace_ark_1_1internal_1_1_builtins.html',1,'Ark::internal']]],
   ['internal',['internal',['../namespace_ark_1_1internal.html',1,'Ark']]],

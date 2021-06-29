@@ -1,6 +1,7 @@
 var searchData=
 [
   ['call',['call',['../class_ark_1_1_v_m.html#aa9bff215cf0efef6cd0854e02dad824f',1,'Ark::VM::call(const std::string &amp;name, Args &amp;&amp;...args)'],['../class_ark_1_1_v_m.html#a4bee4b74523e3fe43c54944aae3831d7',1,'Ark::VM::call(int16_t argc_=-1)'],['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa0d19547973896db46706527300ba630d',1,'Ark::internal::CALL()']]],
+  ['canbecompiletimeevaluated',['canBeCompileTimeEvaluated',['../class_ark_1_1internal_1_1_macro_processor.html#a5fbe3cda5708621fc61fa4044516d277',1,'Ark::internal::MacroProcessor']]],
   ['canhandle',['canHandle',['../class_ark_1_1internal_1_1_macro_executor.html#a52cdc7bf4d5089a68cbccb2310f0a159',1,'Ark::internal::MacroExecutor::canHandle()'],['../class_ark_1_1internal_1_1_conditional_executor.html#af56d8634ccd0d291d6aae58a23dd4403',1,'Ark::internal::ConditionalExecutor::canHandle()'],['../class_ark_1_1internal_1_1_list_executor.html#ad98b015e928b4003852f1ea9a44e9616',1,'Ark::internal::ListExecutor::canHandle()'],['../class_ark_1_1internal_1_1_symbol_executor.html#aa2804ae84834c9753c689322142fc86d',1,'Ark::internal::SymbolExecutor::canHandle()']]],
   ['canonicalrelpath',['canonicalRelPath',['../namespace_ark_1_1_utils.html#a3598d0ca35b3c7afd6183f2093807db3',1,'Ark::Utils']]],
   ['capture',['Capture',['../namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba44a50f07b4bdc57740901280f9eddaf5',1,'Ark::internal::Capture()'],['../namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca44a50f07b4bdc57740901280f9eddaf5',1,'Ark::internal::Capture()'],['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa68f8b0b3e523eb4ebcdb6057fd618ae4',1,'Ark::internal::CAPTURE()']]],
@@ -50,6 +51,7 @@ var searchData=
   ['context_5flen',['context_len',['../_util_8hpp.html#aea1c73842f42185ee352b27e4518b944',1,'context_len(char const *prefix):&#160;Util.cpp'],['../_util_8cpp.html#aea1c73842f42185ee352b27e4518b944',1,'context_len(char const *prefix):&#160;Util.cpp']]],
   ['controlfuncs',['ControlFuncs',['../struct_ark_1_1_user_type_1_1_control_funcs.html',1,'Ark::UserType']]],
   ['cos_5f',['cos_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a168d4bf231df99806ce44b049d2b9caa',1,'Ark::internal::Builtins::Mathematics']]],
+  ['cosh_5f',['cosh_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a2ddbc1a81b7a086e9aa01150d094e35e',1,'Ark::internal::Builtins::Mathematics']]],
   ['count_5fopen_5fbraces',['count_open_braces',['../class_ark_1_1_repl.html#a9f85a9da12779d6275f32036bd96ac64',1,'Ark::Repl']]],
   ['count_5fopen_5fparentheses',['count_open_parentheses',['../class_ark_1_1_repl.html#ab542e98c2a9f4958a7cec48237d3d520',1,'Ark::Repl']]],
   ['countarkobjects',['countArkObjects',['../class_ark_1_1_compiler.html#aeb661cfc3f336a54bb71a43047ea33f8',1,'Ark::Compiler']]],
@@ -61,8 +63,8 @@ var searchData=
   ['cproc',['CProc',['../namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a78c1e09380f2f8ea572cd59c5cd4bc92',1,'Ark']]],
   ['createnewscope',['createNewScope',['../class_ark_1_1_v_m.html#ab9f9c94b1df587eabeb5243307a3b875',1,'Ark::VM']]],
   ['cui_5fsetup',['cui_setup',['../class_ark_1_1_repl.html#a23e13b34c36e04d41da77745c5768975',1,'Ark::Repl']]],
-  ['cvalue',['CValue',['../struct_ark_1_1internal_1_1_c_value.html#a41e2839881408a8d8e8d0b35dd0e20e6',1,'Ark::internal::CValue::CValue(double value) noexcept'],['../struct_ark_1_1internal_1_1_c_value.html#ac49e0488101825ac905fcc2530c90551',1,'Ark::internal::CValue::CValue(long value) noexcept'],['../struct_ark_1_1internal_1_1_c_value.html#a626e1c2e877dc7aad3cbe08f2188df24',1,'Ark::internal::CValue::CValue(const std::string &amp;value) noexcept'],['../struct_ark_1_1internal_1_1_c_value.html#a517b81a292b59c3e15c88de21c6d5888',1,'Ark::internal::CValue::CValue(const Node &amp;v) noexcept'],['../struct_ark_1_1internal_1_1_c_value.html#aef32ccd1fe8fa590f212f54bd0b52095',1,'Ark::internal::CValue::CValue(std::size_t value) noexcept']]],
   ['cvalue',['CValue',['../struct_ark_1_1internal_1_1_c_value.html',1,'Ark::internal']]],
+  ['cvalue',['CValue',['../struct_ark_1_1internal_1_1_c_value.html#a41e2839881408a8d8e8d0b35dd0e20e6',1,'Ark::internal::CValue::CValue(double value) noexcept'],['../struct_ark_1_1internal_1_1_c_value.html#ac49e0488101825ac905fcc2530c90551',1,'Ark::internal::CValue::CValue(long value) noexcept'],['../struct_ark_1_1internal_1_1_c_value.html#a626e1c2e877dc7aad3cbe08f2188df24',1,'Ark::internal::CValue::CValue(const std::string &amp;value) noexcept'],['../struct_ark_1_1internal_1_1_c_value.html#a517b81a292b59c3e15c88de21c6d5888',1,'Ark::internal::CValue::CValue(const Node &amp;v) noexcept'],['../struct_ark_1_1internal_1_1_c_value.html#aef32ccd1fe8fa590f212f54bd0b52095',1,'Ark::internal::CValue::CValue(std::size_t value) noexcept']]],
   ['cvalue_2ecpp',['CValue.cpp',['../_c_value_8cpp.html',1,'']]],
   ['cvalue_2ehpp',['CValue.hpp',['../_c_value_8hpp.html',1,'']]],
   ['cvaluetype',['CValueType',['../namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3',1,'Ark::internal']]]

@@ -27,6 +27,7 @@ var searchData=
   ['sharedlibrary',['SharedLibrary',['../class_ark_1_1internal_1_1_shared_library.html#a303d9b499a5e261c15a743d306cf2232',1,'Ark::internal::SharedLibrary::SharedLibrary()'],['../class_ark_1_1internal_1_1_shared_library.html#aeeb89476f9df58b0f15ccd7b19b8ec56',1,'Ark::internal::SharedLibrary::SharedLibrary(const std::string &amp;path)']]],
   ['shorthand',['Shorthand',['../namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba7ef3835dfef7bf9d951ce6cbb8270e85',1,'Ark::internal']]],
   ['sin_5f',['sin_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a74839677ff7636f9478518515aed712b',1,'Ark::internal::Builtins::Mathematics']]],
+  ['sinh_5f',['sinh_',['../namespace_ark_1_1internal_1_1_builtins_1_1_mathematics.html#a8ca6ca57f9031a8996ec2813e7da723c',1,'Ark::internal::Builtins::Mathematics']]],
   ['size',['size',['../class_ark_1_1internal_1_1_scope.html#ad16445440b626135cdd3a432a19228cb',1,'Ark::internal::Scope']]],
   ['skip',['Skip',['../namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba72ef2b9b6965d078e3c7f95487a82d1c',1,'Ark::internal']]],
   ['sleep',['sleep',['../namespace_ark_1_1internal_1_1_builtins_1_1_system.html#a13840639439071941a08d3a0d96dd0c1',1,'Ark::internal::Builtins::System']]],
@@ -38,7 +39,7 @@ var searchData=
   ['state',['State',['../class_ark_1_1_state.html',1,'Ark']]],
   ['state_2ecpp',['State.cpp',['../_state_8cpp.html',1,'']]],
   ['state_2ehpp',['State.hpp',['../_state_8hpp.html',1,'']]],
-  ['store',['STORE',['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fae5df672f286a80479e2e02f33efdfd9a',1,'Ark::internal::STORE()'],['../namespace_ark_1_1internal.html#a9d7c9df77acc76a1eed32dcf23678954afdb0c388de01d545017cdf9ccf00eb72',1,'Ark::internal::Store()']]],
+  ['store',['STORE',['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fae5df672f286a80479e2e02f33efdfd9a',1,'Ark::internal']]],
   ['string',['string',['../class_ark_1_1internal_1_1_node.html#a2f4471104ade54106ab85f46fd5e708c',1,'Ark::internal::Node::string()'],['../class_ark_1_1_value.html#ab67d2f948a874a9ed464ba1574989b8d',1,'Ark::Value::string()'],['../namespace_ark_1_1internal.html#abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98',1,'Ark::internal::String()'],['../namespace_ark_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba27118326006d3829667a400ad23d5d98',1,'Ark::internal::String()'],['../namespace_ark_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca27118326006d3829667a400ad23d5d98',1,'Ark::internal::String()'],['../namespace_ark.html#a794d6cb0fd25e2dbc678c17ff605e159a27118326006d3829667a400ad23d5d98',1,'Ark::String()']]],
   ['string_2ecpp',['String.cpp',['../_string_8cpp.html',1,'']]],
   ['string_5ftype',['STRING_TYPE',['../namespace_ark_1_1internal.html#adebb9f0092e2413dc3f8407c5d42780fa8f0676c34d58346e3c9522c49a2a3bf0',1,'Ark::internal']]],
@@ -54,8 +55,8 @@ var searchData=
   ['symbolexecutor_2ecpp',['SymbolExecutor.cpp',['../_symbol_executor_8cpp.html',1,'']]],
   ['symbolexecutor_2ehpp',['SymbolExecutor.hpp',['../_symbol_executor_8hpp.html',1,'']]],
   ['symbols',['Symbols',['../namespace_ark.html#afa776c29439b830386e8220ccab402f4a5214a8a633c296d1d9d504fc54556692',1,'Ark']]],
-  ['syntaxerror',['SyntaxError',['../class_ark_1_1_syntax_error.html',1,'Ark']]],
   ['syntaxerror',['SyntaxError',['../class_ark_1_1_syntax_error.html#a59dc82fb880dd8e3a049cfdde7305d81',1,'Ark::SyntaxError']]],
+  ['syntaxerror',['SyntaxError',['../class_ark_1_1_syntax_error.html',1,'Ark']]],
   ['system_2ecpp',['System.cpp',['../_system_8cpp.html',1,'']]],
   ['system_5f',['system_',['../namespace_ark_1_1internal_1_1_builtins_1_1_system.html#a629e7c07ca9563c02f257c67306b526e',1,'Ark::internal::Builtins::System']]]
 ];
