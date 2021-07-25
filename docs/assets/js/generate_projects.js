@@ -1,20 +1,42 @@
+function createImg(alt, src) {
+    let img = document.createElement("img");
+    img.alt = alt;
+    img.src = src;
+    return img;
+}
+
+function createImgShield(platform, kind, author, repo) {
+    if (!["release", "stars"].includes(kind)) {
+        return null;
+    }
+
+    let slug = "";
+    let params = "";
+    if (kind === "release") {
+        slug = "v/release";
+        params = "include_prereleases&logo=github";
+    } else {
+        slug = kind;
+        params = "color=yellow&logo=github";
+    }
+
+    return createImg(
+        kind,
+        `https://img.shields.io/${platform}/${slug}/${author}/${repo}?${params}&style=flat-square`,
+    );
+}
+
+function createProfileLink(platform, author, repo, text) {
+    return `<a target="_blank" href="https://${platform}.com/${author}/${repo}">${text}</a>`;
+}
+
 (async function() {
     let data = await fetch("/projects.json");
     let projects = await data.json();
 
     projects.forEach(data => {
-        let a = document.createElement("a");
-        a.href = `https://${data.platform}.com/${data.author}/${data.name}`;
-        a.target="_blank";
-        a.textContent = data.name;
-
-        let img_release = document.createElement("img");
-        img_release.alt = "version";
-        img_release.src = `https://img.shields.io/${data.platform}/v/release/${data.author}/${data.name}?include_prereleases&style=flat-square&logo=github`;
-
-        let img_stars = document.createElement("img");
-        img_stars.alt = "${data.platform} Repo stars";
-        img_stars.src = `https://img.shields.io/${data.platform}/stars/${data.author}/${data.name}?include_prereleases&style=flat-square&logo=github`;
+        let img_release = createImgShield(data.platform, "release", data.author, data.name);
+        let img_stars = createImgShield(data.platform, "stars", data.author, data.name);
 
         let nbsp = document.createElement("span");
         nbsp.innerHTML = "&nbsp;";
@@ -25,10 +47,16 @@
         div.appendChild(img_stars);
 
         let h3 = document.createElement("h3");
-        h3.appendChild(a);
+        h3.innerHTML = createProfileLink(data.platform, data.author, data.name, data.name);
 
         let p = document.createElement("p");
-        p.innerHTML = `${data.description} By <a href="https://${data.platform}.com/${data.author}" target="_blank">@${data.author}</a>.`;
+        p.innerHTML = `${data.description} By `;
+        p.innerHTML += createProfileLink(data.platform, data.author, "", `@${data.author}`);
+        data.contributors.forEach((name) => {
+            p.innerHTML += ", ";
+            p.innerHTML += createProfileLink(data.platform, name, "", `@${name}`);
+        });
+        p.innerHTML += ".";
 
         let inner_section = document.createElement("div");
         inner_section.classList.add("inner-section");
