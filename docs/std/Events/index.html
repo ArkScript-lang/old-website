@@ -8,10 +8,10 @@
     
     
     
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="../img/favicon.ico">
 
     
-    <title>Range - ArkScript</title>
+    <title>Events - ArkScript</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="css/base.min.css" rel="stylesheet">
-    <link href="css/dark.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../css/base.min.css" rel="stylesheet">
+    <link href="../css/dark.min.css" rel="stylesheet">
 
     
         
@@ -59,7 +59,7 @@
             <!-- Main title -->
 
             
-              <a class="navbar-brand" href="index.html">ArkScript</a>
+              <a class="navbar-brand" href="..">ArkScript</a>
             
         </div>
 
@@ -70,61 +70,61 @@
                 
                 
                     <li >
-                        <a href="index.html">Home</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="Events.html">Events</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="Exceptions.html">Exceptions</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="Functional.html">Functional</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="List.html">List</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="Mathematics.html">Mathematics</a>
+                        <a href="..">Home</a>
                     </li>
                 
                 
                 
                     <li class="active">
-                        <a href="Range.html">Range</a>
+                        <a href="./">Events</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="String.html">String</a>
+                        <a href="../Exceptions/">Exceptions</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="Switch.html">Switch</a>
+                        <a href="../Functional/">Functional</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="os.html">Os</a>
+                        <a href="../List/">List</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../Mathematics/">Mathematics</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../Range/">Range</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../String/">String</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../Switch/">Switch</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../os/">Os</a>
                     </li>
                 
                 
@@ -137,12 +137,12 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="Mathematics.html">
+                        <a rel="prev" href="..">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="String.html">
+                        <a rel="next" href="../Exceptions/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -156,72 +156,70 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#range">Range</a></li>
-            <li class="second-level"><a href="#range-i-_b">(range  i _b)</a></li>
+        <li class="first-level active"><a href="#events">Events</a></li>
+            <li class="second-level"><a href="#eventsmanagermake">(events:manager:make)</a></li>
                 
-            <li class="second-level"><a href="#rangeforeach-_r-_f">(range:forEach  _r _f)</a></li>
+            <li class="second-level"><a href="#_check_valid-callback">(_check_valid  callback)</a></li>
                 
-            <li class="second-level"><a href="#rangefilter-range">(range:filter  range )</a></li>
+            <li class="second-level"><a href="#on-typ-callback">(on  typ callback)</a></li>
                 
-            <li class="second-level"><a href="#rangemap-range">(range:map  range )</a></li>
+            <li class="second-level"><a href="#emitwith-val-typ">(emitWith  val typ)</a></li>
                 
-            <li class="second-level"><a href="#rangereduce-range">(range:reduce  range )</a></li>
+            <li class="second-level"><a href="#emit-typ">(emit  typ)</a></li>
+                
+            <li class="second-level"><a href="#removelistenersoftype-typ">(removeListenersOfType  typ)</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h3 id="range">Range</h3>
-<h4 id="range-i-_b">(range  i _b)</h4>
-<p>Create a ranged closure in interval [a, b[</p>
-<p><strong>i</strong> the beginning of the range</p>
-<p><strong>_b</strong> the end of the range</p>
-<p><em>Has a field <code>asList</code> to compute a list from the current state of the range, and another one <code>reset</code>.</em></p>
-<pre><code>(let obj (range 1 10))
-(print (obj.asList))  # [1 2 3 4 5 6 7 8 9]
-(while (not (nil? (obj)))
-    (print obj.i))  # print the current element
-(print (obj.asList))  # [], the range has been used
-(obj.reset)  # the range is ready to be used again
-(print (obj.asList))  # [1 2 3 4 5 6 7 8 9]
+<h3 id="events">Events</h3>
+<h4 id="eventsmanagermake">(events:manager:make)</h4>
+<p>Allows to register events listeners and emit events</p>
+<pre><code>(let em (events:manager:make))
+(em.on &quot;myType&quot; (fun (value) (print &quot;This is a callback&quot;)))
+(em.emit &quot;myType&quot;)  # =&gt; prints &quot;This is a callback&quot; thanks to the registered listener
 </code></pre>
-<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
-<h4 id="rangeforeach-_r-_f">(range:forEach  _r _f)</h4>
-<p>Run a function on each element of the range</p>
-<p><strong>_r</strong> the range object</p>
-<p><strong>_f</strong> the function</p>
-<p><em>The range is unmodified.</em></p>
-<pre><code>(let obj (range 1 10))
-(range:forEach obj (fun (e) (print e)))
+<p>Author : <a href="https://github.com/fabien-zoccola">fabien-zoccola</a></p>
+<h4 id="_check_valid-callback">(_check_valid  callback)</h4>
+<p>Checks if a given callback is valid (is a function or a closure)</p>
+<p><strong>callback</strong> the callback to check</p>
+<p><em>Returns true if the callback is a function/closure, false otherwise</em></p>
+<pre><code>    # (closure._check_valid (fun (param) ()))  # =&gt; true
+    # (closure._check_valid (fun (param) {}))  # =&gt; true
+    # (closure._check_valid 5)  # =&gt; false
 </code></pre>
-<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
-<h4 id="rangefilter-range">(range:filter  <em>range </em>)</h4>
-<p>Create a list based on a range and a filter function</p>
-<p><strong>_range</strong> the range object</p>
-<p><strong>_fun</strong> the filter function</p>
-<p><em>The range is unmodified.</em></p>
-<pre><code>(let obj (range 1 10))
-(print (range:filter obj math:even))  # [2 4 6 8]
+<p>Author : <a href="https://github.com/fabien-zoccola">fabien-zoccola</a></p>
+<h4 id="on-typ-callback">(on  typ callback)</h4>
+<p>Registers an event listener</p>
+<p><strong>typ</strong> the type of the event to listen for</p>
+<p><strong>callback</strong> the function/closure that will be called when an event is emitted</p>
+<p><em>Adds a [type callback] list to the listeners list</em></p>
+<pre><code>    # (closure.on &quot;myType&quot; (fun (param) ())
 </code></pre>
-<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
-<h4 id="rangemap-range">(range:map  <em>range </em>)</h4>
-<p>Create a list based on a range and a function to apply to each elements</p>
-<p><strong>_range</strong> the range object</p>
-<p><strong>_fun</strong> the function to apply</p>
-<p><em>The range is unmodified.</em></p>
-<pre><code>(let obj (range 1 10))
-(print (range:map obj (fun (e) (* e e))))  # [1 4 9 16 25 36 49 64 81]
+<p>Author : <a href="https://github.com/fabien-zoccola">fabien-zoccola</a></p>
+<h4 id="emitwith-val-typ">(emitWith  val typ)</h4>
+<p>Emits an event with a value</p>
+<p><strong>val</strong> the emitted value</p>
+<p><strong>typ</strong> the type of the emitted event</p>
+<p><em>Makes a forEach on the listeners list, and calls the callback. Returns a boolean of whether we called at least one listener</em></p>
+<pre><code>    # (closure.emitWith 5 &quot;myType&quot;)
 </code></pre>
-<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
-<h4 id="rangereduce-range">(range:reduce  <em>range </em>)</h4>
-<p>Create a reduced list based on a range and a reduction function</p>
-<p><strong>_range</strong> the range object</p>
-<p><strong>_fun</strong> the reduction function</p>
-<p><em>The range is unmodified.</em></p>
-<pre><code>(let obj (range 1 10))
-(print (range:reduce obj (fun (e) (+ e e))))  # 45
+<p>Author : <a href="https://github.com/fabien-zoccola">fabien-zoccola</a></p>
+<h4 id="emit-typ">(emit  typ)</h4>
+<p>Emits an event with no value</p>
+<p><strong>typ</strong> the type of the emitted event</p>
+<p><em>Calls emitWith nil <typ></em></p>
+<pre><code>    # (closure.emit &quot;myType&quot;)
 </code></pre>
-<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p></div>
+<p>Author : <a href="https://github.com/fabien-zoccola">fabien-zoccola</a></p>
+<h4 id="removelistenersoftype-typ">(removeListenersOfType  typ)</h4>
+<p>Removes all listeners of a given type</p>
+<p><strong>typ</strong> the type of event to remove from the list</p>
+<p><em>Returns if at least one listener has been removed</em></p>
+<pre><code>    # (closure.remove_listeners_of_type &quot;myType&quot;)
+</code></pre>
+<p>Author : <a href="https://github.com/fabien-zoccola">fabien-zoccola</a></p></div>
         
         
     </div>
@@ -241,7 +239,7 @@
       </footer>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap-3.0.3.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
 
     
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
@@ -249,10 +247,10 @@
     <script>hljs.initHighlightingOnLoad();</script>
     
 
-    <script>var base_url = "."</script>
+    <script>var base_url = ".."</script>
     
-    <script src="js/base.js"></script>
-    <script src="search/main.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
