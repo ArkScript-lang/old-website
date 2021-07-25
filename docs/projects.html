@@ -21,7 +21,7 @@
         <section class="navbar-section show-on-focus hide-xl">
             <a href="/" class="navbar-brand mr-2 hide-xl">ArkScript</a>
             <a href="/" class="btn btn-link">Home</a>
-            <a href="/documentation.html" class="btn btn-link">Documentation</a>
+            <a href="/documentation.html" class="btn btn-link documentation">Documentation</a>
             <a href="/contributing.html" class="btn btn-link">Contributing</a>
             <a href="/projects.html" class="btn btn-link">Projects</a>
             <div class="dropdown">
@@ -50,18 +50,8 @@
 
             <!-- Actual content of the page-->
             <div class="col-8 col-md-12" id="content">
-                <section>
+                <section id="listing">
                     <h2>Projects using ArkScript</h2>
-
-                    <div class="inner-section">
-                        <h3>todo</h3>
-                        todo
-                    </div>
-
-                    <div class="inner-section">
-                        <h3>todo</h3>
-                        todo
-                    </div>
                 </section>
             </div>
             <!-- end of content -->
@@ -80,6 +70,8 @@
     <!-- Rainbow.js for syntax coloring -->
     <script src="/assets/js/rainbow.min.js"></script>
     <script src="/assets/js/languages/arkscript.js"></script>
+    <!-- Project listing generator -->
+    <script src="/assets/js/generate_projects.js" defer></script>
 </body>
 
 </html>
