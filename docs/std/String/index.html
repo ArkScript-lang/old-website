@@ -8,10 +8,10 @@
     
     
     
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="../img/favicon.ico">
 
     
-    <title>Events - ArkScript</title>
+    <title>String - ArkScript</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="css/base.min.css" rel="stylesheet">
-    <link href="css/dark.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../css/base.min.css" rel="stylesheet">
+    <link href="../css/dark.min.css" rel="stylesheet">
 
     
         
@@ -59,7 +59,7 @@
             <!-- Main title -->
 
             
-              <a class="navbar-brand" href="index.html">ArkScript</a>
+              <a class="navbar-brand" href="..">ArkScript</a>
             
         </div>
 
@@ -70,61 +70,61 @@
                 
                 
                     <li >
-                        <a href="index.html">Home</a>
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../Events/">Events</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../Exceptions/">Exceptions</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../Functional/">Functional</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../List/">List</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../Mathematics/">Mathematics</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../Range/">Range</a>
                     </li>
                 
                 
                 
                     <li class="active">
-                        <a href="Events.html">Events</a>
+                        <a href="./">String</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="Exceptions.html">Exceptions</a>
+                        <a href="../Switch/">Switch</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="Functional.html">Functional</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="List.html">List</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="Mathematics.html">Mathematics</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="Range.html">Range</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="String.html">String</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="Switch.html">Switch</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="os.html">Os</a>
+                        <a href="../os/">Os</a>
                     </li>
                 
                 
@@ -137,12 +137,12 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="index.html">
+                        <a rel="prev" href="../Range/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="Exceptions.html">
+                        <a rel="next" href="../Switch/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -156,70 +156,93 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#events">Events</a></li>
-            <li class="second-level"><a href="#eventsmanagermake">(events:manager:make)</a></li>
+        <li class="first-level active"><a href="#string">String</a></li>
+            <li class="second-level"><a href="#strtolower-text">(str:toLower  text)</a></li>
                 
-            <li class="second-level"><a href="#_check_valid-callback">(_check_valid  callback)</a></li>
+            <li class="second-level"><a href="#strtoupper-_string">(str:toUpper  _string)</a></li>
                 
-            <li class="second-level"><a href="#on-typ-callback">(on  typ callback)</a></li>
+            <li class="second-level"><a href="#strreverse-_string">(str:reverse  _string)</a></li>
                 
-            <li class="second-level"><a href="#emitwith-val-typ">(emitWith  val typ)</a></li>
+            <li class="second-level"><a href="#strslice-_string-_startingindex-_length">(str:slice  _string _startingIndex _length)</a></li>
                 
-            <li class="second-level"><a href="#emit-typ">(emit  typ)</a></li>
+            <li class="second-level"><a href="#strsplit-_string-_separator">(str:split  _string _separator)</a></li>
                 
-            <li class="second-level"><a href="#removelistenersoftype-typ">(removeListenersOfType  typ)</a></li>
+            <li class="second-level"><a href="#strreplace-_string-_pattern-_new">(str:replace  _string _pattern _new)</a></li>
+                
+            <li class="second-level"><a href="#strjoin-_list-_delim">(str:join  _list _delim)</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h3 id="events">Events</h3>
-<h4 id="eventsmanagermake">(events:manager:make)</h4>
-<p>Allows to register events listeners and emit events</p>
-<pre><code>(let em (events:manager:make))
-(em.on &quot;myType&quot; (fun (value) (print &quot;This is a callback&quot;)))
-(em.emit &quot;myType&quot;)  # =&gt; prints &quot;This is a callback&quot; thanks to the registered listener
+<h3 id="string">String</h3>
+<h4 id="strtolower-text">(str:toLower  text)</h4>
+<p>Converts the given character to lowercase.</p>
+<p><strong>_string</strong> the string to make lowercase</p>
+<p><em>The original string is left unmodified.</em></p>
+<pre><code>(import &quot;String.ark&quot;)
+(let message &quot;HeLLo World, I like cheese&quot;)
+(let new (str:toLower message))  # =&gt; hello world, i like cheese
 </code></pre>
-<p>Author : <a href="https://github.com/fabien-zoccola">fabien-zoccola</a></p>
-<h4 id="_check_valid-callback">(_check_valid  callback)</h4>
-<p>Checks if a given callback is valid (is a function or a closure)</p>
-<p><strong>callback</strong> the callback to check</p>
-<p><em>Returns true if the callback is a function/closure, false otherwise</em></p>
-<pre><code>    # (closure._check_valid (fun (param) ()))  # =&gt; true
-    # (closure._check_valid (fun (param) {}))  # =&gt; true
-    # (closure._check_valid 5)  # =&gt; false
+<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
+<h4 id="strtoupper-_string">(str:toUpper  _string)</h4>
+<p>Converts the given character to uppercase.</p>
+<p><strong>_string</strong> the string to make uppercase</p>
+<p><em>The original string is left unmodified.</em></p>
+<pre><code>(import &quot;String.ark&quot;)
+(let message &quot;hello world, I like cheese&quot;)
+(let new (str:toUpper message))  # =&gt; HELLO WORLD, I LIKE CHEESE
 </code></pre>
-<p>Author : <a href="https://github.com/fabien-zoccola">fabien-zoccola</a></p>
-<h4 id="on-typ-callback">(on  typ callback)</h4>
-<p>Registers an event listener</p>
-<p><strong>typ</strong> the type of the event to listen for</p>
-<p><strong>callback</strong> the function/closure that will be called when an event is emitted</p>
-<p><em>Adds a [type callback] list to the listeners list</em></p>
-<pre><code>    # (closure.on &quot;myType&quot; (fun (param) ())
+<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
+<h4 id="strreverse-_string">(str:reverse  _string)</h4>
+<p>Reverse a string.</p>
+<p><strong>_string</strong> the string to reverse</p>
+<p><em>The original string is left unmodified.</em></p>
+<pre><code>(import &quot;String.ark&quot;)
+(let message &quot;hello world, I like goats&quot;)
+(let reversed (str:reverse message))  # =&gt; staog ekil I ,dlrow olleh
 </code></pre>
-<p>Author : <a href="https://github.com/fabien-zoccola">fabien-zoccola</a></p>
-<h4 id="emitwith-val-typ">(emitWith  val typ)</h4>
-<p>Emits an event with a value</p>
-<p><strong>val</strong> the emitted value</p>
-<p><strong>typ</strong> the type of the emitted event</p>
-<p><em>Makes a forEach on the listeners list, and calls the callback. Returns a boolean of whether we called at least one listener</em></p>
-<pre><code>    # (closure.emitWith 5 &quot;myType&quot;)
+<p>Author : <a href="https://github.com/Natendrtfm">Natendrtfm</a></p>
+<h4 id="strslice-_string-_startingindex-_length">(str:slice  _string _startingIndex _length)</h4>
+<p>Get a slice of a given string, from a given index with a given length</p>
+<p><strong>_string</strong> the string to get a slice of</p>
+<p><strong>_startingIndex</strong> the index in the string where to start slicing</p>
+<p><strong>_length</strong> the length of the slice</p>
+<p><em>The original string is left unmodified. Example:</em></p>
+<pre><code>(import &quot;String.ark&quot;)
+(let message &quot;hello world, I like goats&quot;)
+(let slice (str:slice message 6 4))  # =&gt; worl
 </code></pre>
-<p>Author : <a href="https://github.com/fabien-zoccola">fabien-zoccola</a></p>
-<h4 id="emit-typ">(emit  typ)</h4>
-<p>Emits an event with no value</p>
-<p><strong>typ</strong> the type of the emitted event</p>
-<p><em>Calls emitWith nil <typ></em></p>
-<pre><code>    # (closure.emit &quot;myType&quot;)
+<p>Author : <a href="https://github.com/Natendrtfm">Natendrtfm</a></p>
+<h4 id="strsplit-_string-_separator">(str:split  _string _separator)</h4>
+<p>Split a string in multiple substrings in a list, given a separator</p>
+<p><strong>_string</strong> the string to split</p>
+<p><strong>_separator</strong> the separator to use for splitting</p>
+<p><em>Returns a list of strings. Example :</em></p>
+<pre><code>(import &quot;String.ark&quot;)
+(let message &quot;hello world, I like boats&quot;)
+(let splitted (str:split message &quot; &quot;))
 </code></pre>
-<p>Author : <a href="https://github.com/fabien-zoccola">fabien-zoccola</a></p>
-<h4 id="removelistenersoftype-typ">(removeListenersOfType  typ)</h4>
-<p>Removes all listeners of a given type</p>
-<p><strong>typ</strong> the type of event to remove from the list</p>
-<p><em>Returns if at least one listener has been removed</em></p>
-<pre><code>    # (closure.remove_listeners_of_type &quot;myType&quot;)
+<p>Author : <a href="https://github.com/Natendrtfm">Natendrtfm</a></p>
+<h4 id="strreplace-_string-_pattern-_new">(str:replace  _string _pattern _new)</h4>
+<p>Replace a substring in a given string</p>
+<p><strong>_string</strong> base string who contain pattern to replace by new sub string given</p>
+<p><strong>_pattern</strong> sub string pattern to replace</p>
+<p><strong>_new</strong> string who must replace the pattern</p>
+<p><em>The original string isn't modified.</em></p>
+<pre><code>(import &quot;String.ark&quot;)
+(let message &quot;hello XXX, do you like the name XXX?&quot;)
+(print (str:replace message &quot;XXX&quot; &quot;Harry&quot;))  # hello Harry, do you like the name Harry?
 </code></pre>
-<p>Author : <a href="https://github.com/fabien-zoccola">fabien-zoccola</a></p></div>
+<h4 id="strjoin-_list-_delim">(str:join  _list _delim)</h4>
+<p>Join a list of elements with a given string delimiter</p>
+<p><strong>_list</strong> host the elements to join</p>
+<p><strong>_delim</strong> a string delimiter to be put between each element</p>
+<p><em>The original list isn't modified</em></p>
+<pre><code>(import &quot;String.ark&quot;)
+(let data [1 &quot;hello&quot; 3.14 true &quot;world&quot;])
+(print (str:join data &quot;;&quot;)) # 1;hello;3.14;true;world
+</code></pre></div>
         
         
     </div>
@@ -239,7 +262,7 @@
       </footer>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap-3.0.3.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
 
     
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
@@ -247,10 +270,10 @@
     <script>hljs.initHighlightingOnLoad();</script>
     
 
-    <script>var base_url = "."</script>
+    <script>var base_url = ".."</script>
     
-    <script src="js/base.js"></script>
-    <script src="search/main.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

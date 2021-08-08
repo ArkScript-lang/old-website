@@ -8,10 +8,10 @@
     
     
     
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="../img/favicon.ico">
 
     
-    <title>List - ArkScript</title>
+    <title>Range - ArkScript</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="css/base.min.css" rel="stylesheet">
-    <link href="css/dark.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../css/base.min.css" rel="stylesheet">
+    <link href="../css/dark.min.css" rel="stylesheet">
 
     
         
@@ -59,7 +59,7 @@
             <!-- Main title -->
 
             
-              <a class="navbar-brand" href="index.html">ArkScript</a>
+              <a class="navbar-brand" href="..">ArkScript</a>
             
         </div>
 
@@ -70,61 +70,61 @@
                 
                 
                     <li >
-                        <a href="index.html">Home</a>
+                        <a href="..">Home</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="Events.html">Events</a>
+                        <a href="../Events/">Events</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="Exceptions.html">Exceptions</a>
+                        <a href="../Exceptions/">Exceptions</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="Functional.html">Functional</a>
+                        <a href="../Functional/">Functional</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../List/">List</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../Mathematics/">Mathematics</a>
                     </li>
                 
                 
                 
                     <li class="active">
-                        <a href="List.html">List</a>
+                        <a href="./">Range</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="Mathematics.html">Mathematics</a>
+                        <a href="../String/">String</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="Range.html">Range</a>
+                        <a href="../Switch/">Switch</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="String.html">String</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="Switch.html">Switch</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="os.html">Os</a>
+                        <a href="../os/">Os</a>
                     </li>
                 
                 
@@ -137,12 +137,12 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="Functional.html">
+                        <a rel="prev" href="../Mathematics/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="Mathematics.html">
+                        <a rel="next" href="../String/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -156,78 +156,72 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#list">List</a></li>
-            <li class="second-level"><a href="#listtake-_l-_n">(list:take  _L _n)</a></li>
+        <li class="first-level active"><a href="#range">Range</a></li>
+            <li class="second-level"><a href="#range-i-_b">(range  i _b)</a></li>
                 
-            <li class="second-level"><a href="#listunzip-_l">(list:unzip  _L)</a></li>
+            <li class="second-level"><a href="#rangeforeach-_r-_f">(range:forEach  _r _f)</a></li>
                 
-            <li class="second-level"><a href="#listzip-_a-_b">(list:zip  _a _b)</a></li>
+            <li class="second-level"><a href="#rangefilter-range">(range:filter  range )</a></li>
                 
-            <li class="second-level"><a href="#listfoldleft-_l-_init-_f">(list:foldLeft  _L _init _f)</a></li>
+            <li class="second-level"><a href="#rangemap-range">(range:map  range )</a></li>
                 
-            <li class="second-level"><a href="#listforall-a-f">(list:forAll  a f)</a></li>
-                
-            <li class="second-level"><a href="#listany-a-f">(list:any  a f)</a></li>
+            <li class="second-level"><a href="#rangereduce-range">(range:reduce  range )</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h3 id="list">List</h3>
-<h4 id="listtake-_l-_n">(list:take  _L _n)</h4>
-<p>Take the first n elements of</p>
-<p><strong>_L</strong> the list to work on</p>
-<p><strong>_n</strong> the number of elements to take</p>
-<p><em>The original list is left unmodified.</em></p>
-<pre><code>(print (list:take [1 2 3 4 5 6 7 8 9] 4))  # [1 2 3 4]
-</code></pre>
-<p>Author : <a href="https://github.com/rstefanic">rstefanic</a></p>
-<h4 id="listunzip-_l">(list:unzip  _L)</h4>
-<p>Unzip a list of [[a b] [c d]...] into [[a c ...] [b d ...]]</p>
-<p><strong>_L</strong> the list to work on</p>
-<p><em>The original list is left unmodified.</em></p>
-<pre><code>(let zipped [[1 5] [2 6] [3 7] [4 8]])
-(print (list:unzip zipped))  # [[1 2 3 4] [5 6 7 8]]
-</code></pre>
-<p>Author : <a href="https://github.com/FrenchMasterSword">FrenchMasterSword</a></p>
-<h4 id="listzip-_a-_b">(list:zip  _a _b)</h4>
-<p>Zip two lists into one: [1 2 3 4] and [5 6 7 8] will give [[1 5] [2 6] [3 7] [4 8]]</p>
-<p><strong>_a</strong> the first list to work on</p>
-<p><strong>_b</strong> the second list to work on</p>
-<p><em>The original lists are left unmodified.</em></p>
-<pre><code>(let a [1 2 3 4])
-(let b [5 6 7 8])
-(print (list:zip a b))  # [[1 5] [2 6] [3 7] [4 8]]
-</code></pre>
-<p>Author : <a href="https://github.com/FrenchMasterSword">FrenchMasterSword</a></p>
-<h4 id="listfoldleft-_l-_init-_f">(list:foldLeft  _L _init _f)</h4>
-<p>Fold a given list, starting from the left side</p>
-<p><strong>_L</strong> the list to work on</p>
-<p><strong>_init</strong> an init value</p>
-<p><strong>_f</strong> a function to apply to the list</p>
-<p><em>The original list is left unmodified.</em></p>
-<pre><code>(let a [1 2 3 4])
-(print (list:foldLeft a 0 (fun (a b) (+ a b))))  # 10
+<h3 id="range">Range</h3>
+<h4 id="range-i-_b">(range  i _b)</h4>
+<p>Create a ranged closure in interval [a, b[</p>
+<p><strong>i</strong> the beginning of the range</p>
+<p><strong>_b</strong> the end of the range</p>
+<p><em>Has a field <code>asList</code> to compute a list from the current state of the range, and another one <code>reset</code>.</em></p>
+<pre><code>(let obj (range 1 10))
+(print (obj.asList))  # [1 2 3 4 5 6 7 8 9]
+(while (not (nil? (obj)))
+    (print obj.i))  # print the current element
+(print (obj.asList))  # [], the range has been used
+(obj.reset)  # the range is ready to be used again
+(print (obj.asList))  # [1 2 3 4 5 6 7 8 9]
 </code></pre>
 <p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
-<h4 id="listforall-a-f">(list:forAll  a f)</h4>
-<p>Check if a condition is verified for all elements of a list</p>
-<p><strong>a</strong> the list to work on</p>
-<p><strong>f</strong> the conditon</p>
-<pre><code>(let a [1 2 3 4])
-(let f (fun(e)(&lt; e 5)))
-(print (list:forAll a f))  # true
+<h4 id="rangeforeach-_r-_f">(range:forEach  _r _f)</h4>
+<p>Run a function on each element of the range</p>
+<p><strong>_r</strong> the range object</p>
+<p><strong>_f</strong> the function</p>
+<p><em>The range is unmodified.</em></p>
+<pre><code>(let obj (range 1 10))
+(range:forEach obj (fun (e) (print e)))
 </code></pre>
-<p>Author : <a href="https://github.com/Gryfenfer97">Gryfenfer97</a></p>
-<h4 id="listany-a-f">(list:any  a f)</h4>
-<p>Check if a condition if verified for one or more elements of a list</p>
-<p><strong>a</strong> the list to work on</p>
-<p><strong>f</strong> the conditon</p>
-<pre><code>(let a [1 2 3 4])
-(let f (fun(e)(&lt; e 3)))
-(print (list:any a f))  # true
+<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
+<h4 id="rangefilter-range">(range:filter  <em>range </em>)</h4>
+<p>Create a list based on a range and a filter function</p>
+<p><strong>_range</strong> the range object</p>
+<p><strong>_fun</strong> the filter function</p>
+<p><em>The range is unmodified.</em></p>
+<pre><code>(let obj (range 1 10))
+(print (range:filter obj math:even))  # [2 4 6 8]
 </code></pre>
-<p>Author : <a href="https://github.com/Gryfenfer97">Gryfenfer97</a></p></div>
+<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
+<h4 id="rangemap-range">(range:map  <em>range </em>)</h4>
+<p>Create a list based on a range and a function to apply to each elements</p>
+<p><strong>_range</strong> the range object</p>
+<p><strong>_fun</strong> the function to apply</p>
+<p><em>The range is unmodified.</em></p>
+<pre><code>(let obj (range 1 10))
+(print (range:map obj (fun (e) (* e e))))  # [1 4 9 16 25 36 49 64 81]
+</code></pre>
+<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p>
+<h4 id="rangereduce-range">(range:reduce  <em>range </em>)</h4>
+<p>Create a reduced list based on a range and a reduction function</p>
+<p><strong>_range</strong> the range object</p>
+<p><strong>_fun</strong> the reduction function</p>
+<p><em>The range is unmodified.</em></p>
+<pre><code>(let obj (range 1 10))
+(print (range:reduce obj (fun (e) (+ e e))))  # 45
+</code></pre>
+<p>Author : <a href="https://github.com/SuperFola">SuperFola</a></p></div>
         
         
     </div>
@@ -247,7 +241,7 @@
       </footer>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap-3.0.3.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
 
     
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
@@ -255,10 +249,10 @@
     <script>hljs.initHighlightingOnLoad();</script>
     
 
-    <script>var base_url = "."</script>
+    <script>var base_url = ".."</script>
     
-    <script src="js/base.js"></script>
-    <script src="search/main.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
