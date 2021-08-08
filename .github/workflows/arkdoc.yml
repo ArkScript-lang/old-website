@@ -37,7 +37,9 @@ jobs:
           python-version: '3.9'
 
       - name: Pip install
-        run: pip install -r requirements.txt
+        run: |
+          cd arkdoc/
+          pip install -r requirements.txt
 
       - name: Generate documentation
         shell: bash
