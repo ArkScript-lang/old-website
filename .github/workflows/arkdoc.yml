@@ -51,7 +51,7 @@ jobs:
 
       - name: Files
         shell: bash
-        run: mv arkdoc/std/ docs/
+        run: cp -r arkdoc/std/ docs/
 
       - name: Commit
         uses: github-actions-x/commit@v2.8
