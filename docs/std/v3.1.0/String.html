@@ -62,6 +62,16 @@
     <a href="#str:replace">str:replace</a>
 </li><li class="nav-item">
     <a href="#str:join">str:join</a>
+</li><li class="nav-item">
+    <a href="#str:format">str:format</a>
+</li><li class="nav-item">
+    <a href="#str:find">str:find</a>
+</li><li class="nav-item">
+    <a href="#str:removeat">str:removeAt</a>
+</li><li class="nav-item">
+    <a href="#str:ord">str:ord</a>
+</li><li class="nav-item">
+    <a href="#str:chr">str:chr</a>
 </li>
                 </ul>
             </li>
@@ -229,6 +239,114 @@ The original list isn't modified</div>
 </code>
 </pre></div>
     </div>
+</section><section id="str:format">
+    <h2>str:format</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (str:format format values)</code>
+<br>
+<div>Format a String given replacements</div>
+<div><b>Note</b>
+: 
+The format is %% for anything, and %x for hex numbers</div>
+<div><h4>Parameters</h4>
+<ul><li><code>format</code>: the String to format</li><li><code>values</code>: as any argument as you need, of any valid ArkScript type</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(str:format "Hello %%, my name is %%" "world" "ArkScript")
+# Hello world, my name is ArkScript
+
+(str:format "Test %% with %%" "1")
+# Test 1 with %%
+</code>
+</pre></div>
+    </div>
+</section><section id="str:find">
+    <h2>str:find</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (str:find string substr)</code>
+<br>
+<div>Search a substring in a given String</div>
+<div><b>Note</b>
+: 
+The original String is not modified. Return -1 when not found</div>
+<div><h4>Parameters</h4>
+<ul><li><code>string</code>: the String to search in</li><li><code>substr</code>: the substring to search for</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(str:find "hello world" "hello")  # 0
+(str:find "hello world" "aworld")  # -1
+</code>
+</pre></div>
+    </div>
+</section><section id="str:removeat">
+    <h2>str:removeAt</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (str:removeAt string index)</code>
+<br>
+<div>Remove a character from a String given an index</div>
+<div><b>Note</b>
+: 
+The original String is not modified</div>
+<div><h4>Parameters</h4>
+<ul><li><code>string</code>: the String to modify</li><li><code>index</code>: the index of the character to remove (can be negative to search from the end)</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(str:removeAt "hello world" 0)  # "ello world"
+(str:removeAt "hello world" -1)  # "hello worl"
+</code>
+</pre></div>
+    </div>
+</section><section id="str:ord">
+    <h2>str:ord</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (str:ord char)</code>
+<br>
+<div>Get the ordinal of a given character</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>char</code>: a String with a single UTF8 character</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(str:ord "h")  # 104
+(str:ord "Ô")  # 212
+</code>
+</pre></div>
+    </div>
+</section><section id="str:chr">
+    <h2>str:chr</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (str:chr codepoint)</code>
+<br>
+<div>Create a character from an UTF8 codepoint</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>codepoint</code>: an UTF8 codepoint (Number)</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(str:chr 104)  # "h"
+(str:chr 212)  # "Ô"
+</code>
+</pre></div>
+    </div>
 </section>
             </div>
             <!-- end of content -->
@@ -241,7 +359,7 @@ The original list isn't modified</div>
     <footer id="page-footer">
         <p class="text-center">
             Copyright &copy; 2020-2021 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.<br>
-            <i>Last generation at 2021-08-30 09:26:17.433283</i>
+            <i>Last generation at 2021-09-05 02:26:15.777611</i>
         </p>
     </footer>
 
