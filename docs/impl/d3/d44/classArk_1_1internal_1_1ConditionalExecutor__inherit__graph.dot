@@ -1,0 +1,10 @@
+digraph "Ark::internal::ConditionalExecutor"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Ark::internal::Conditional\lExecutor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Handles Conditional macros."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Ark::internal::MacroExecutor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d8f/classArk_1_1internal_1_1MacroExecutor.html",tooltip="A class that applies macros in a Node."];
+}

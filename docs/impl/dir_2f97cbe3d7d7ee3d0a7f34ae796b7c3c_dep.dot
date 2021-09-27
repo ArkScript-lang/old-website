@@ -1,0 +1,16 @@
+digraph "C:/Users/folae/Documents/Code/Big-Projects/ArkScript/Ark/src/arkscript" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_68267d1309a1af8e8297ef4c3efbcdba {
+    graph [ bgcolor="#ddddee", pencolor="black", label="src" fontname="Helvetica", fontsize="10", URL="dir_68267d1309a1af8e8297ef4c3efbcdba.html"]
+  subgraph clusterdir_2f97cbe3d7d7ee3d0a7f34ae796b7c3c {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_2f97cbe3d7d7ee3d0a7f34ae796b7c3c.html"];
+    dir_2f97cbe3d7d7ee3d0a7f34ae796b7c3c [shape=plaintext label="arkscript"];
+  dir_b137344471615342cb36678e59bedd43 [shape=box label="REPL" fillcolor="white" style="filled" URL="dir_b137344471615342cb36678e59bedd43.html"];
+  }
+  }
+  dir_d44c64559bbebec7f509842c48db8b23 [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_d44c64559bbebec7f509842c48db8b23.html"];
+  dir_2f97cbe3d7d7ee3d0a7f34ae796b7c3c->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="6", labeldistance=1.5 headhref="dir_000012_000000.html"];
+  dir_b137344471615342cb36678e59bedd43->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="3", labeldistance=1.5 headhref="dir_000013_000000.html"];
+}

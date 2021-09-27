@@ -1,5 +1,22 @@
 var searchData=
 [
-  ['init_5fconst_5ftype',['init_const_type',['../_value_8cpp.html#a88143a99bed655da1f79c230ba9c9e30',1,'Value.cpp']]],
-  ['insert_5fpair',['insert_pair',['../_scope_8cpp.html#acf703166101a9a69806c5044f7c4248e',1,'Scope.cpp']]]
+  ['init_5fconst_5ftype_0',['init_const_type',['../_value_8cpp.html#a88143a99bed655da1f79c230ba9c9e30',1,'Value.cpp']]],
+  ['insert_5fpair_1',['insert_pair',['../_scope_8cpp.html#acf703166101a9a69806c5044f7c4248e',1,'Scope.cpp']]],
+  ['io_5fexists_5farity_2',['IO_EXISTS_ARITY',['../_builtins_errors_8inl.html#a883f4684f3ea0a40c58965d40cdbb149',1,'BuiltinsErrors.inl']]],
+  ['io_5fexists_5fte0_3',['IO_EXISTS_TE0',['../_builtins_errors_8inl.html#a27dc6ba381a062e6ccb0903b68626ba4',1,'BuiltinsErrors.inl']]],
+  ['io_5finput_5fte_4',['IO_INPUT_TE',['../_builtins_errors_8inl.html#aff35578a4eb213b5a7ca036682e22e98',1,'BuiltinsErrors.inl']]],
+  ['io_5fisdir_5farity_5',['IO_ISDIR_ARITY',['../_builtins_errors_8inl.html#ab65922ab1e8eea09190987b7049ef272',1,'BuiltinsErrors.inl']]],
+  ['io_5fisdir_5fte0_6',['IO_ISDIR_TE0',['../_builtins_errors_8inl.html#a30c53d53dedec4ae399852fdccc7f7cc',1,'BuiltinsErrors.inl']]],
+  ['io_5fls_5farity_7',['IO_LS_ARITY',['../_builtins_errors_8inl.html#ad6c52d8226d82c77e1c34e02cb51b897',1,'BuiltinsErrors.inl']]],
+  ['io_5fls_5fte0_8',['IO_LS_TE0',['../_builtins_errors_8inl.html#ae65b1ac79cd9071e93c95f453fb4694e',1,'BuiltinsErrors.inl']]],
+  ['io_5fmkd_5farity_9',['IO_MKD_ARITY',['../_builtins_errors_8inl.html#a8d5cb137786e5f2d47a3a7403168a0ba',1,'BuiltinsErrors.inl']]],
+  ['io_5fmkd_5fte0_10',['IO_MKD_TE0',['../_builtins_errors_8inl.html#a3d2b1a6ae16c35f3d6045f94e2a41746',1,'BuiltinsErrors.inl']]],
+  ['io_5fread_5farity_11',['IO_READ_ARITY',['../_builtins_errors_8inl.html#a375e62bfd3ee31e3e2762560e1a5524c',1,'BuiltinsErrors.inl']]],
+  ['io_5fread_5fte0_12',['IO_READ_TE0',['../_builtins_errors_8inl.html#aecf6593e04b423fa937ea3c6f7828f62',1,'BuiltinsErrors.inl']]],
+  ['io_5frm_5farity_13',['IO_RM_ARITY',['../_builtins_errors_8inl.html#a4b9fb23314f9391117a81f2c926a71b3',1,'BuiltinsErrors.inl']]],
+  ['io_5frm_5fte0_14',['IO_RM_TE0',['../_builtins_errors_8inl.html#a0c8a0640770c836eaa583495b5693ae6',1,'BuiltinsErrors.inl']]],
+  ['io_5fwrite_5farity_15',['IO_WRITE_ARITY',['../_builtins_errors_8inl.html#adb4aac92bbcf734c010839eba5731a21',1,'BuiltinsErrors.inl']]],
+  ['io_5fwrite_5fte0_16',['IO_WRITE_TE0',['../_builtins_errors_8inl.html#a76bb488b66c45ff99bc1f8ac96e6965a',1,'BuiltinsErrors.inl']]],
+  ['io_5fwrite_5fte1_17',['IO_WRITE_TE1',['../_builtins_errors_8inl.html#a6f95a6e41f0556f7a1595f10232f9dc7',1,'BuiltinsErrors.inl']]],
+  ['io_5fwrite_5fve_5f1_18',['IO_WRITE_VE_1',['../_builtins_errors_8inl.html#a79626f0a8f55a6b6b1f26cf7f560c7e7',1,'BuiltinsErrors.inl']]]
 ];

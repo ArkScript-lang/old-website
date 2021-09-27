@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['variant_5fget',['variant_get',['../_value_8hpp.html#af9cce6a839650d7dae599115a978bfb0',1,'Value.hpp']]],
-  ['variant_5ft',['variant_t',['../_value_8hpp.html#a6f97ef87ba50c690969338e4d43d3975',1,'Value.hpp']]]
+  ['resolveref_0',['resolveRef',['../_v_m_8inl.html#ae8c489810babd37ec90c49e238af48f7',1,'VM.inl']]],
+  ['resolverefinplace_1',['resolveRefInPlace',['../_v_m_8inl.html#a64ab3cc6dc11ea46697a7d695e9d9225',1,'VM.inl']]]
 ];
