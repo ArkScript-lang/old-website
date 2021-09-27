@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Functional - ArkScript v3.1.0 documentation</title>
+    <title>System - ArkScript v3.1.0 documentation</title>
     <link rel="stylesheet" href="/std/assets/css/spectre.min.css" type="text/css">
     <link rel="stylesheet" href="/std/assets/css/spectre-exp.min.css" type="text/css">
     <link rel="stylesheet" href="/std/assets/css/spectre-icons.min.css" type="text/css">
@@ -49,13 +49,11 @@
                 <a href="#">Table of contents</a>
                 <ul class="nav">
                     <li class="nav-item">
-    <a href="#compose">compose</a>
+    <a href="#sys:exec">sys:exec</a>
 </li><li class="nav-item">
-    <a href="#left">left</a>
+    <a href="#sys:sleep">sys:sleep</a>
 </li><li class="nav-item">
-    <a href="#right">right</a>
-</li><li class="nav-item">
-    <a href="#flip">flip</a>
+    <a href="#sys:exit">sys:exit</a>
 </li>
                 </ul>
             </li>
@@ -71,89 +69,63 @@
 
             <!-- Actual content of the page-->
             <div class="col-8" id="content">
-                <section id="compose">
-    <h2>compose</h2>
+                <section id="sys:exec">
+    <h2>sys:exec</h2>
 
     <div class="inner-section">
-        <div><code>(let compose (fun (_f _g) (...)))</code>
+        <div><code>Builtin (sys:exec command)</code>
 <br>
-<div>Compose function calls</div>
+<div>Execute a system specific command</div>
 <div><b>Note</b>
 : 
-</div>
-<div><h4>Parameters</h4>
-<ul><li><code>_f</code>: the first function</li><li><code>_g</code>: the second function</li></ul></div>
-<div><h4>Author</h4>
-<a href="https://github.com/rstefanic">@rstefanic</a></div></div><div><h4>Example</h4>
-<pre>
-<code class="rainbowjs" data-language="arkscript">
-(let foo (fun (a) (* a a)))
-(let bar (fun (b) (+ b b)))
-(let composed (compose foo bar))
-(print (composed 12))  # return value is (12 + 12) * (12 + 12)
-</code>
-</pre></div>
-    </div>
-</section><section id="left">
-    <h2>left</h2>
-
-    <div class="inner-section">
-        <div><code>(let left (fun (_x) (...)))</code>
-<br>
-<div>Take a value as its argument and return a function taking 2 arguments which will call the first function on the value</div>
-<div><b>Note</b>
-: 
-</div>
+Return the output of the command as a String, or nil if it was disabled in the ArkScript build</div>
 <div><h4>Parameter</h4>
-<ul><li><code>_x</code>: the value</li></ul></div>
+<ul><li><code>command</code>: the command to execute, as a String</li></ul></div>
 <div><h4>Author</h4>
 <a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
-(let val (left 12))
-(val (fun (x) (print x " i am called")) (fun (x) (print x " i am NOT called")))
+(sys:exec "echo hello")
 </code>
 </pre></div>
     </div>
-</section><section id="right">
-    <h2>right</h2>
+</section><section id="sys:sleep">
+    <h2>sys:sleep</h2>
 
     <div class="inner-section">
-        <div><code>(let right (fun (_y) (...)))</code>
+        <div><code>Builtin (sys:sleep duration)</code>
 <br>
-<div>Take a value as its argument and return a function taking 2 arguments which will call the second function on the value</div>
+<div>Sleep for a given duration (in milliseconds)</div>
 <div><b>Note</b>
 : 
-</div>
+Return nil</div>
 <div><h4>Parameter</h4>
-<ul><li><code>_y</code>: the value</li></ul></div>
+<ul><li><code>duration</code>: a Number representing a duration</li></ul></div>
 <div><h4>Author</h4>
 <a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
-(let val (right 12))
-(val (fun (x) (print x " i am NOT called")) (fun (x) (print x " i am called")))
+(sys:sleep 1000)  # sleep for 1 second
 </code>
 </pre></div>
     </div>
-</section><section id="flip">
-    <h2>flip</h2>
+</section><section id="sys:exit">
+    <h2>sys:exit</h2>
 
     <div class="inner-section">
-        <div><code>(let flip (fun (_f _a) (...)))</code>
+        <div><code>Builtin (sys:exit exit_code)</code>
 <br>
-<div>Flip the arguments of a function</div>
+<div>Reverse a given list and return a new one</div>
 <div><b>Note</b>
 : 
-Returns a function taking 1 argument: the second argument of the function to flip</div>
-<div><h4>Parameters</h4>
-<ul><li><code>_f</code>: the function</li><li><code>_a</code>: the first argument</li></ul></div>
+Any code after this function call won't be executed</div>
+<div><h4>Parameter</h4>
+<ul><li><code>exit_code</code>: usually 0 for success and 1 for errors</li></ul></div>
 <div><h4>Author</h4>
-<a href="https://github.com/rstefanic">@rstefanic</a></div></div><div><h4>Example</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
-(let foo (fun (a b) (- a b)))
-((flip foo 14) 12) # will call (foo 12 14) instead of (foo 14 12)
+(sys:exit 0)  # halt the virtual machine with given exit code (success)
 </code>
 </pre></div>
     </div>
