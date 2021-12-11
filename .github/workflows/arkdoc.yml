@@ -48,7 +48,9 @@ jobs:
           export ARKDOC_LOGLEVEL=DEBUG
           ark_version=$(curl -s https://github.com/ArkScript-lang/Ark/releases/latest | egrep -o "tag/(?[^\"]+)" | cut -c 5-)
           # update version
-          sed "s/let version = "'"'".\+"'"'";/let version = "'"'"${ark_version}"'"'"/g" ../docs/std/index.html > ../docs/std/index.html
+          sed "s/let version = "'"'".\+"'"'";/let version = "'"'"${ark_version}"'"'"/g" ../docs/std/index.html > temp_index.html
+          rm ../docs/std/index.html
+          mv temp_index.html ../docs/std/index.html
           # run arkdoc
           python -m arkdoc $ark_version ../std-latest/ ../ark-latest/src/arkreactor/Builtins/ --html std --root /std || exit 1
 
