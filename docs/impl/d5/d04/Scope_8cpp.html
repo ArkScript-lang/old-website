@@ -73,18 +73,19 @@ $(document).ready(function(){initNavTree('d5/d04/Scope_8cpp.html','../../'); ini
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle"><div class="title">Scope.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="../../d8/dcd/Scope_8hpp_source.html">Ark/VM/Scope.hpp</a>&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Include dependency graph for Scope.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/d58/Scope_8cpp__incl.svg" width="100%" height="574"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/d58/Scope_8cpp__incl.svg" width="100%" height="574"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 </div>
 <p><a href="../../d5/d04/Scope_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -95,88 +96,14 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:dc/d0e/namespaceArk_1_1internal"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html">Ark::internal</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a2271c7943ba8265357cc56c730ff3c84"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d04/Scope_8cpp.html#a2271c7943ba8265357cc56c730ff3c84">push_pair</a>(id,  val)&#160;&#160;&#160;m_data.emplace_back(std::pair&lt;uint16_t, Value&gt;(id, val))</td></tr>
-<tr class="separator:a2271c7943ba8265357cc56c730ff3c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf703166101a9a69806c5044f7c4248e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d04/Scope_8cpp.html#acf703166101a9a69806c5044f7c4248e">insert_pair</a>(place,  id,  val)&#160;&#160;&#160;m_data.insert(place, std::pair&lt;uint16_t, Value&gt;(id, val))</td></tr>
-<tr class="separator:acf703166101a9a69806c5044f7c4248e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="acf703166101a9a69806c5044f7c4248e" name="acf703166101a9a69806c5044f7c4248e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf703166101a9a69806c5044f7c4248e">&#9670;&nbsp;</a></span>insert_pair</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define insert_pair</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">place, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">id, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">val&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;m_data.insert(place, std::pair&lt;uint16_t, Value&gt;(id, val))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00004">4</a> of file <a class="el" href="../../d5/d04/Scope_8cpp_source.html">Scope.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a2271c7943ba8265357cc56c730ff3c84" name="a2271c7943ba8265357cc56c730ff3c84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2271c7943ba8265357cc56c730ff3c84">&#9670;&nbsp;</a></span>push_pair</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define push_pair</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">id, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">val&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;m_data.emplace_back(std::pair&lt;uint16_t, Value&gt;(id, val))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00003">3</a> of file <a class="el" href="../../d5/d04/Scope_8cpp_source.html">Scope.cpp</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_e0d450b481c7e7e5abacff9799e54b3d.html">arkreactor</a></li><li class="navelem"><a class="el" href="../../dir_9600556d5cc28570e4ccd195a3befa41.html">VM</a></li><li class="navelem"><a class="el" href="../../d5/d04/Scope_8cpp.html">Scope.cpp</a></li>
-    <li class="footer">Generated on Mon Sep 27 2021 17:53:47 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Sat Dec 11 2021 17:51:05 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>

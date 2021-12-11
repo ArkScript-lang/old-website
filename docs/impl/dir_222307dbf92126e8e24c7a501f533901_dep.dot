@@ -6,10 +6,14 @@ digraph "C:/Users/folae/Documents/Code/Big-Projects/ArkScript/Ark/include/Ark/VM
     graph [ bgcolor="#ddddee", pencolor="black", label="Ark" fontname="Helvetica", fontsize="10", URL="dir_a8b6c64285bf9ac60f50770eb2fc48b5.html"]
   dir_e4e3cacaa047e3554112dad79d53bc60 [shape=box label="Builtins" URL="dir_e4e3cacaa047e3554112dad79d53bc60.html"];
   dir_e4f19535f57335fb80a0267cec25bf70 [shape=box label="Compiler" fillcolor="white" style="filled" color="red" URL="dir_e4f19535f57335fb80a0267cec25bf70.html"];
-  dir_222307dbf92126e8e24c7a501f533901 [shape=box, label="VM", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_222307dbf92126e8e24c7a501f533901.html"];
+  subgraph clusterdir_222307dbf92126e8e24c7a501f533901 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_222307dbf92126e8e24c7a501f533901.html"];
+    dir_222307dbf92126e8e24c7a501f533901 [shape=plaintext label="VM"];
+  dir_8b24a7a1990a673376c80714d0238024 [shape=box label="Value" fillcolor="white" style="filled" URL="dir_8b24a7a1990a673376c80714d0238024.html"];
   }
-  dir_222307dbf92126e8e24c7a501f533901->dir_e4e3cacaa047e3554112dad79d53bc60 [headlabel="1", labeldistance=1.5 headhref="dir_000007_000002.html"];
-  dir_222307dbf92126e8e24c7a501f533901->dir_e4f19535f57335fb80a0267cec25bf70 [headlabel="2", labeldistance=1.5 headhref="dir_000007_000003.html"];
-  dir_e4e3cacaa047e3554112dad79d53bc60->dir_222307dbf92126e8e24c7a501f533901 [headlabel="1", labeldistance=1.5 headhref="dir_000002_000007.html"];
-  dir_e4f19535f57335fb80a0267cec25bf70->dir_e4e3cacaa047e3554112dad79d53bc60 [headlabel="2", labeldistance=1.5 headhref="dir_000003_000002.html"];
+  }
+  dir_222307dbf92126e8e24c7a501f533901->dir_8b24a7a1990a673376c80714d0238024 [headlabel="2", labeldistance=1.5 headhref="dir_000009_000010.html"];
+  dir_222307dbf92126e8e24c7a501f533901->dir_e4e3cacaa047e3554112dad79d53bc60 [headlabel="1", labeldistance=1.5 headhref="dir_000009_000002.html"];
+  dir_222307dbf92126e8e24c7a501f533901->dir_e4f19535f57335fb80a0267cec25bf70 [headlabel="2", labeldistance=1.5 headhref="dir_000009_000003.html"];
+  dir_e4e3cacaa047e3554112dad79d53bc60->dir_222307dbf92126e8e24c7a501f533901 [headlabel="1", labeldistance=1.5 headhref="dir_000002_000009.html"];
 }

@@ -75,7 +75,6 @@ $(document).ready(function(){initNavTree('d1/d84/BytecodeReader_8hpp.html','../.
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle"><div class="title">BytecodeReader.hpp File Reference</div></div>
 </div><!--header-->
@@ -90,19 +89,22 @@ $(document).ready(function(){initNavTree('d1/d84/BytecodeReader_8hpp.html','../.
 <code>#include &lt;cinttypes&gt;</code><br />
 <code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d5/d40/Platform_8hpp_source.html">Ark/Platform.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d8/ddd/Common_8hpp_source.html">Ark/Compiler/Common.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Include dependency graph for BytecodeReader.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d6b/BytecodeReader_8hpp__incl.svg" width="667" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/d6b/BytecodeReader_8hpp__incl.svg" width="100%" height="462"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d2/d4d/BytecodeReader_8hpp__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d2/d4d/BytecodeReader_8hpp__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 </div>
 <p><a href="../../d1/d84/BytecodeReader_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -117,11 +119,6 @@ Classes</h2></td></tr>
 Namespaces</h2></td></tr>
 <tr class="memitem:d9/de4/namespaceArk"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/de4/namespaceArk.html">Ark</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a120175e12d54ead9aa7559d2231af817"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/de4/namespaceArk.html#a120175e12d54ead9aa7559d2231af817">Ark::bytecode_t</a> = std::vector&lt; uint8_t &gt;</td></tr>
-<tr class="separator:a120175e12d54ead9aa7559d2231af817"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -139,7 +136,7 @@ Enumerations</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A bytecode disassembler for ArkScript. </p>
 <dl class="section author"><dt>Author</dt><dd>Alexandre Plateau (<a href="#" onclick="location.href='mai'+'lto:'+'lex'+'pl'+'t.d'+'ev'+'@gm'+'ai'+'l.c'+'om'; return false;">lexpl<span style="display: none;">.nosp@m.</span>t.de<span style="display: none;">.nosp@m.</span>v@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a>) </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.2 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.3 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2020-10-27</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2020-2021 </dd></dl>
 
@@ -150,7 +147,7 @@ Enumerations</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_a8b6c64285bf9ac60f50770eb2fc48b5.html">Ark</a></li><li class="navelem"><a class="el" href="../../dir_e4f19535f57335fb80a0267cec25bf70.html">Compiler</a></li><li class="navelem"><a class="el" href="../../d1/d84/BytecodeReader_8hpp.html">BytecodeReader.hpp</a></li>
-    <li class="footer">Generated on Mon Sep 27 2021 17:53:47 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Sat Dec 11 2021 17:51:05 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>

@@ -7,10 +7,11 @@ digraph "C:/Users/folae/Documents/Code/Big-Projects/ArkScript/Ark/src/arkreactor
   subgraph clusterdir_548d85becfdd8b4d1d64f6a452aea6ab {
     graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_548d85becfdd8b4d1d64f6a452aea6ab.html"];
     dir_548d85becfdd8b4d1d64f6a452aea6ab [shape=plaintext label="Compiler"];
-  dir_2e13baa5b347a6eb0d8f8b02a59f7787 [shape=box label="MacroExecutors" fillcolor="white" style="filled" URL="dir_2e13baa5b347a6eb0d8f8b02a59f7787.html"];
+  dir_60d9a1ba7355fd01e18353677e9347b6 [shape=box label="AST" fillcolor="white" style="filled" URL="dir_60d9a1ba7355fd01e18353677e9347b6.html"];
+  dir_b9cbe36700296659acef612d0d107ef6 [shape=box label="Macros" fillcolor="white" style="filled" color="red" URL="dir_b9cbe36700296659acef612d0d107ef6.html"];
   }
   }
   dir_d44c64559bbebec7f509842c48db8b23 [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_d44c64559bbebec7f509842c48db8b23.html"];
-  dir_2e13baa5b347a6eb0d8f8b02a59f7787->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="5", labeldistance=1.5 headhref="dir_000011_000000.html"];
-  dir_548d85becfdd8b4d1d64f6a452aea6ab->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="31", labeldistance=1.5 headhref="dir_000010_000000.html"];
+  dir_60d9a1ba7355fd01e18353677e9347b6->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="14", labeldistance=1.5 headhref="dir_000014_000000.html"];
+  dir_b9cbe36700296659acef612d0d107ef6->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="13", labeldistance=1.5 headhref="dir_000015_000000.html"];
 }

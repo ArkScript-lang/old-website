@@ -1,7 +1,6 @@
 var BytecodeReader_8hpp =
 [
     [ "Ark::BytecodeReader", "d8/d08/classArk_1_1BytecodeReader.html", "d8/d08/classArk_1_1BytecodeReader" ],
-    [ "bytecode_t", "d1/d84/BytecodeReader_8hpp.html#a120175e12d54ead9aa7559d2231af817", null ],
     [ "BytecodeSegment", "d1/d84/BytecodeReader_8hpp.html#afa776c29439b830386e8220ccab402f4", [
       [ "All", "d1/d84/BytecodeReader_8hpp.html#afa776c29439b830386e8220ccab402f4ab1c94ca2fbc3e78fc30069c8d0f01680", null ],
       [ "Symbols", "d1/d84/BytecodeReader_8hpp.html#afa776c29439b830386e8220ccab402f4a5214a8a633c296d1d9d504fc54556692", null ],

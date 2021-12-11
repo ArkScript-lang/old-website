@@ -82,19 +82,12 @@ $(document).ready(function(){initNavTree('de/d60/classArk_1_1Repl.html','../../'
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="../../d5/da5/Repl_8hpp_source.html">Repl.hpp</a>&gt;</code></p>
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Collaboration diagram for Ark::Repl:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d01/classArk_1_1Repl__coll__graph.svg" width="138" height="218"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5f86caf37532dcf6ec8b238010e3e766"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d60/classArk_1_1Repl.html#a5f86caf37532dcf6ec8b238010e3e766">Repl</a> (uint16_t options, const std::string &amp;lib_dir)</td></tr>
-<tr class="memdesc:a5f86caf37532dcf6ec8b238010e3e766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="../../de/d60/classArk_1_1Repl.html">Repl</a> object.  <a href="../../de/d60/classArk_1_1Repl.html#a5f86caf37532dcf6ec8b238010e3e766">More...</a><br /></td></tr>
-<tr class="separator:a5f86caf37532dcf6ec8b238010e3e766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49282d19d7bde213ea973a0d8351797b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d60/classArk_1_1Repl.html#a49282d19d7bde213ea973a0d8351797b">Repl</a> (uint16_t options, const std::vector&lt; std::string &gt; &amp;libenv)</td></tr>
+<tr class="memdesc:a49282d19d7bde213ea973a0d8351797b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="../../de/d60/classArk_1_1Repl.html">Repl</a> object.  <a href="../../de/d60/classArk_1_1Repl.html#a49282d19d7bde213ea973a0d8351797b">More...</a><br /></td></tr>
+<tr class="separator:a49282d19d7bde213ea973a0d8351797b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27884a932a9c4193e900ddd81960a737"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d60/classArk_1_1Repl.html#a27884a932a9c4193e900ddd81960a737">run</a> ()</td></tr>
 <tr class="memdesc:a27884a932a9c4193e900ddd81960a737"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the REPL.  <a href="../../de/d60/classArk_1_1Repl.html#a27884a932a9c4193e900ddd81960a737">More...</a><br /></td></tr>
 <tr class="separator:a27884a932a9c4193e900ddd81960a737"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -114,8 +107,6 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:af885195f6d803b0768fc793721502e19"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d60/classArk_1_1Repl.html#af885195f6d803b0768fc793721502e19">m_lib_dir</a></td></tr>
-<tr class="separator:af885195f6d803b0768fc793721502e19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab580778688efe8e28e831d63ad9843f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d60/classArk_1_1Repl.html#aab580778688efe8e28e831d63ad9843f">m_options</a></td></tr>
 <tr class="separator:aab580778688efe8e28e831d63ad9843f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1dc759ac0132b53c2c244f28f63b05b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d0a/ConsoleStyle_8hpp.html#a362bc7a2816fe6a0221748387af71066">Replxx</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d60/classArk_1_1Repl.html#ad1dc759ac0132b53c2c244f28f63b05b">m_repl</a></td></tr>
@@ -124,13 +115,15 @@ Private Attributes</h2></td></tr>
 <tr class="separator:adb838195096ce3d46143c7ca73aa864c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad042675ab12467a4ef6bffc1adcd1c12"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d60/classArk_1_1Repl.html#ad042675ab12467a4ef6bffc1adcd1c12">m_old_ip</a></td></tr>
 <tr class="separator:ad042675ab12467a4ef6bffc1adcd1c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52e4aab1f8627b5ebc7b72b7a5326929"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d60/classArk_1_1Repl.html#a52e4aab1f8627b5ebc7b72b7a5326929">m_libenv</a></td></tr>
+<tr class="separator:a52e4aab1f8627b5ebc7b72b7a5326929"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00025">25</a> of file <a class="el" href="../../d5/da5/Repl_8hpp_source.html">Repl.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a5f86caf37532dcf6ec8b238010e3e766" name="a5f86caf37532dcf6ec8b238010e3e766"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f86caf37532dcf6ec8b238010e3e766">&#9670;&nbsp;</a></span>Repl()</h2>
+<a id="a49282d19d7bde213ea973a0d8351797b" name="a49282d19d7bde213ea973a0d8351797b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49282d19d7bde213ea973a0d8351797b">&#9670;&nbsp;</a></span>Repl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -144,8 +137,8 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>lib_dir</em>&#160;</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>libenv</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -159,7 +152,7 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">options</td><td>the REPL options </td></tr>
-    <tr><td class="paramname">lib_dir</td><td>the path to the standard library </td></tr>
+    <tr><td class="paramname">libenv</td><td>search path for the std library </td></tr>
   </table>
   </dd>
 </dl>
@@ -193,7 +186,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00128">128</a> of file <a class="el" href="../../d7/d46/Repl_8cpp_source.html">Repl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00135">135</a> of file <a class="el" href="../../d7/d46/Repl_8cpp_source.html">Repl.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00015">run()</a>.</p>
 
@@ -223,7 +216,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00112">112</a> of file <a class="el" href="../../d7/d46/Repl_8cpp_source.html">Repl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00119">119</a> of file <a class="el" href="../../d7/d46/Repl_8cpp_source.html">Repl.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00015">run()</a>.</p>
 
@@ -252,9 +245,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00154">154</a> of file <a class="el" href="../../d7/d46/Repl_8cpp_source.html">Repl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00161">161</a> of file <a class="el" href="../../d7/d46/Repl_8cpp_source.html">Repl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../df/d0a/ConsoleStyle_8hpp_source.html#l00059">Ark::ColorsRegexDict</a>, <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00069">hook_color()</a>, <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00045">hook_completion()</a>, <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00094">hook_hint()</a>, <a class="el" href="../../df/d0a/ConsoleStyle_8hpp_source.html#l00021">Ark::KeywordsDict</a>, and <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00045">m_repl</a>.</p>
+<p class="reference">References <a class="el" href="../../df/d0a/ConsoleStyle_8hpp_source.html#l00059">Ark::ColorsRegexDict</a>, <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00069">hook_color()</a>, <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00045">hook_completion()</a>, <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00094">hook_hint()</a>, <a class="el" href="../../df/d0a/ConsoleStyle_8hpp_source.html#l00021">Ark::KeywordsDict</a>, and <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00044">m_repl</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00015">run()</a>.</p>
 
@@ -283,7 +276,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00102">102</a> of file <a class="el" href="../../d7/d46/Repl_8cpp_source.html">Repl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00109">109</a> of file <a class="el" href="../../d7/d46/Repl_8cpp_source.html">Repl.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00016">ARK_VERSION_MAJOR</a>, <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00017">ARK_VERSION_MINOR</a>, and <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00018">ARK_VERSION_PATCH</a>.</p>
 
@@ -310,9 +303,9 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00015">15</a> of file <a class="el" href="../../d7/d46/Repl_8cpp_source.html">Repl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00128">count_open_braces()</a>, <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00112">count_open_parentheses()</a>, <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00154">cui_setup()</a>, <a class="el" href="../../d0/da0/State_8cpp_source.html#l00153">Ark::State::doString()</a>, <a class="el" href="../../d2/d27/VM_8cpp_source.html#l00023">Ark::VM::init()</a>, <a class="el" href="../../d1/d91/VM_8hpp_source.html#l00125">Ark::VM::m_ip</a>, <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00043">m_lib_dir</a>, <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00046">m_lines</a>, <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00047">m_old_ip</a>, <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00044">m_options</a>, <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00045">m_repl</a>, <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00102">print_repl_header()</a>, <a class="el" href="../../d0/da0/State_8cpp_source.html#l00342">Ark::State::reset()</a>, <a class="el" href="../../d2/d27/VM_8cpp_source.html#l00174">Ark::VM::safeRun()</a>, <a class="el" href="../../d0/da0/State_8cpp_source.html#l00193">Ark::State::setDebug()</a>, and <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00144">trim_whitespace()</a>.</p>
+<p class="reference">References <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00135">count_open_braces()</a>, <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00119">count_open_parentheses()</a>, <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00161">cui_setup()</a>, <a class="el" href="../../d0/da0/State_8cpp_source.html#l00150">Ark::State::doString()</a>, <a class="el" href="../../d2/d27/VM_8cpp_source.html#l00029">Ark::VM::init()</a>, <a class="el" href="../../d1/d91/VM_8hpp_source.html#l00126">Ark::VM::m_execution_contexts</a>, <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00047">m_libenv</a>, <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00045">m_lines</a>, <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00046">m_old_ip</a>, <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00043">m_options</a>, <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00044">m_repl</a>, <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00109">print_repl_header()</a>, <a class="el" href="../../d0/da0/State_8cpp_source.html#l00339">Ark::State::reset()</a>, <a class="el" href="../../d2/d27/VM_8cpp_source.html#l00205">Ark::VM::safeRun()</a>, <a class="el" href="../../d0/da0/State_8cpp_source.html#l00190">Ark::State::setDebug()</a>, and <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00151">trim_whitespace()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../df/d0a/main_8cpp_source.html#l00013">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../df/d0a/main_8cpp_source.html#l00015">main()</a>.</p>
 
 </div>
 </div>
@@ -340,15 +333,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00144">144</a> of file <a class="el" href="../../d7/d46/Repl_8cpp_source.html">Repl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00151">151</a> of file <a class="el" href="../../d7/d46/Repl_8cpp_source.html">Repl.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00015">run()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="af885195f6d803b0768fc793721502e19" name="af885195f6d803b0768fc793721502e19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af885195f6d803b0768fc793721502e19">&#9670;&nbsp;</a></span>m_lib_dir</h2>
+<a id="a52e4aab1f8627b5ebc7b72b7a5326929" name="a52e4aab1f8627b5ebc7b72b7a5326929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52e4aab1f8627b5ebc7b72b7a5326929">&#9670;&nbsp;</a></span>m_libenv</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -357,7 +350,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string Ark::Repl::m_lib_dir</td>
+          <td class="memname">std::vector&lt;std::string&gt; Ark::Repl::m_libenv</td>
         </tr>
       </table>
   </td>
@@ -367,7 +360,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00043">43</a> of file <a class="el" href="../../d5/da5/Repl_8hpp_source.html">Repl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00047">47</a> of file <a class="el" href="../../d5/da5/Repl_8hpp_source.html">Repl.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00015">run()</a>.</p>
 
@@ -393,7 +386,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00046">46</a> of file <a class="el" href="../../d5/da5/Repl_8hpp_source.html">Repl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00045">45</a> of file <a class="el" href="../../d5/da5/Repl_8hpp_source.html">Repl.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00015">run()</a>.</p>
 
@@ -419,7 +412,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00047">47</a> of file <a class="el" href="../../d5/da5/Repl_8hpp_source.html">Repl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00046">46</a> of file <a class="el" href="../../d5/da5/Repl_8hpp_source.html">Repl.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00015">run()</a>.</p>
 
@@ -445,7 +438,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../d5/da5/Repl_8hpp_source.html">Repl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00043">43</a> of file <a class="el" href="../../d5/da5/Repl_8hpp_source.html">Repl.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00015">run()</a>.</p>
 
@@ -471,9 +464,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00045">45</a> of file <a class="el" href="../../d5/da5/Repl_8hpp_source.html">Repl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/da5/Repl_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../d5/da5/Repl_8hpp_source.html">Repl.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00154">cui_setup()</a>, and <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00015">run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00161">cui_setup()</a>, and <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00015">run()</a>.</p>
 
 </div>
 </div>
@@ -487,7 +480,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/de4/namespaceArk.html">Ark</a></li><li class="navelem"><a class="el" href="../../de/d60/classArk_1_1Repl.html">Repl</a></li>
-    <li class="footer">Generated on Mon Sep 27 2021 17:53:47 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Sat Dec 11 2021 17:51:05 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>

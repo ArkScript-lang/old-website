@@ -51,7 +51,6 @@ var Builtins_8hpp =
     [ "inf_", "da/d84/Builtins_8hpp.html#a7398662d9e3d1a1c2b9dfcf2640f59d6", null ],
     [ "nan_", "da/d84/Builtins_8hpp.html#a8a4385091c82692252ceab0f97c72a1e", null ],
     [ "nil", "da/d84/Builtins_8hpp.html#a0541c7c43175f68aca89a4c3a61fca12", null ],
-    [ "operators", "da/d84/Builtins_8hpp.html#a524d702628160018faf03f4f8e6c2850", null ],
     [ "pi_", "da/d84/Builtins_8hpp.html#aa80ff6fe9f7412c94798c61688caf6a2", null ],
     [ "tau_", "da/d84/Builtins_8hpp.html#a8ce8e0ebded8592d52db484cdff7a0f9", null ],
     [ "trueSym", "da/d84/Builtins_8hpp.html#ac42d5de362d48803ef2a49f7f1e21e98", null ]

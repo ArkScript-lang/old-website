@@ -1,6 +1,6 @@
 var classArk_1_1State =
 [
-    [ "State", "d1/d37/classArk_1_1State.html#a4ce60250b6ece57bea02fff82994ce0e", null ],
+    [ "State", "d1/d37/classArk_1_1State.html#a1e0d3a01f48cb497b9cafd7ffb3539c2", null ],
     [ "compile", "d1/d37/classArk_1_1State.html#abc0e65d92590b13faecb3c38a02dc7e3", null ],
     [ "configure", "d1/d37/classArk_1_1State.html#a0062ced9c5580ca5552e95bd777f721e", null ],
     [ "doFile", "d1/d37/classArk_1_1State.html#ad647def207227837eb23338fc6bed7f8", null ],
@@ -11,7 +11,7 @@ var classArk_1_1State =
     [ "reset", "d1/d37/classArk_1_1State.html#a877e05afb005b6b1cf580bd026892899", null ],
     [ "setArgs", "d1/d37/classArk_1_1State.html#aa852b784bc447702c336b05ffddcaa98", null ],
     [ "setDebug", "d1/d37/classArk_1_1State.html#ad1dbcc1d68374da8d09433aadb3a7b05", null ],
-    [ "setLibDir", "d1/d37/classArk_1_1State.html#a91a6395162c1ee277731c100a7513ddf", null ],
+    [ "setLibDirs", "d1/d37/classArk_1_1State.html#a7302086af256e600ee35bf8f4bcf65e7", null ],
     [ "throwStateError", "d1/d37/classArk_1_1State.html#a59464b5f49d5a34c59b57e69840618fd", null ],
     [ "Repl", "d1/d37/classArk_1_1State.html#abfb23f5bc3487de4b5ea564573046b78", null ],
     [ "VM", "d1/d37/classArk_1_1State.html#ac692204ff14b03296e5ff3cfc4a3b3d6", null ],
@@ -20,7 +20,7 @@ var classArk_1_1State =
     [ "m_constants", "d1/d37/classArk_1_1State.html#a4b5df7febb31b23bad6fee46c416f3a5", null ],
     [ "m_debug_level", "d1/d37/classArk_1_1State.html#ac612a46c05c538df07704fbd4edc3607", null ],
     [ "m_filename", "d1/d37/classArk_1_1State.html#a49ff30e9372a01fa115e1d473d78ff7d", null ],
-    [ "m_libdir", "d1/d37/classArk_1_1State.html#a1f74b3a2bdac7408bf696adc2c21d9fb", null ],
+    [ "m_libenv", "d1/d37/classArk_1_1State.html#aee99aa51275c8f7b8f9c23d4f649fe1f", null ],
     [ "m_options", "d1/d37/classArk_1_1State.html#a8c9748d6de5ac5e611b7690018c467cd", null ],
     [ "m_pages", "d1/d37/classArk_1_1State.html#ab30d0ca94fb2543fb073e5f66c074c37", null ],
     [ "m_symbols", "d1/d37/classArk_1_1State.html#a9b47055deafbe7eb0061c0b59fadab8b", null ]

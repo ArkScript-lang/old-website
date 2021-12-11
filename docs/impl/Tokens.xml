@@ -541,17 +541,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>operators</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::internal::Builtins</Scope>
-    </TokenIdentifier>
-    <Path>df/dda/namespaceArk_1_1internal_1_1Builtins.html</Path>
-    <Anchor>a524d702628160018faf03f4f8e6c2850</Anchor>
-    <DeclaredIn>Builtins.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>pi_</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
@@ -607,69 +596,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>bytecode_t</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>tdef</Type>
-      <Scope>Ark</Scope>
-    </TokenIdentifier>
-    <Path>d9/de4/namespaceArk.html</Path>
-    <Anchor>a120175e12d54ead9aa7559d2231af817</Anchor>
-    <DeclaredIn>BytecodeReader.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Inst_t</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>tdef</Type>
-      <Scope>Ark::internal</Scope>
-    </TokenIdentifier>
-    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>a68caa6f052dfff73a0362bb31078f045</Anchor>
-    <DeclaredIn>Instructions.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>tokentype_string</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::internal</Scope>
-    </TokenIdentifier>
-    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>af539f8120cb8faea3bf7d6a07ff0615e</Anchor>
-    <DeclaredIn>Lexer.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>keywords</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::internal</Scope>
-    </TokenIdentifier>
-    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>af0dd5b155b0cb906a87c5c28099dff98</Anchor>
-    <Abstract>List of available keywords in ArkScript.</Abstract>
-    <DeclaredIn>Lexer.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>operators</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::internal</Scope>
-    </TokenIdentifier>
-    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>a1b338d2bc2ab3f5f26cdfdb0a4d4ba70</Anchor>
-    <DeclaredIn>Lexer.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>makeNodeBasedErrorCtx</Name>
       <APILanguage>cpp</APILanguage>
       <Type>func</Type>
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>afd94fd5d6c6dadaff702d31594c85a9e</Anchor>
+    <Anchor>a94a3bdf6a4a21e11103336456203d33e</Anchor>
     <Abstract>Construct an error message based on a given node.</Abstract>
     <DeclaredIn>makeErrorCtx.hpp</DeclaredIn>
   </Token>
@@ -695,6 +628,106 @@
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
     <Anchor>a094277891f609486ba174a598eaefd9d</Anchor>
     <DeclaredIn>Node.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>make_node</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>a4c85a4205b0e3e491ad93b04b01ba4ac</Anchor>
+    <DeclaredIn>Node.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>make_node_list</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>ab45a8c201540edd0c56a2ddb31f401fb</Anchor>
+    <DeclaredIn>Node.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>typeToString</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>a0b9a75d4a5e9bcfcf7b21ddbfc0d6ea5</Anchor>
+    <DeclaredIn>Node.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>similarNodetypeFromTokentype</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>add0162f1355d885cbad47f63f43d8502</Anchor>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>tokentype_string</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>a11ff3493f9516a88ca69b4d707e8d10c</Anchor>
+    <DeclaredIn>Token.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>bytecode_t</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>tdef</Type>
+      <Scope>Ark</Scope>
+    </TokenIdentifier>
+    <Path>d9/de4/namespaceArk.html</Path>
+    <Anchor>a120175e12d54ead9aa7559d2231af817</Anchor>
+    <DeclaredIn>Common.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>nodeTypes</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>a1a137bdfc549299532813ba2c74d6a46</Anchor>
+    <DeclaredIn>Common.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>keywords</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>abff046039b95cc01207427720f7a0858</Anchor>
+    <Abstract>List of available keywords in ArkScript.</Abstract>
+    <DeclaredIn>Common.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>operators</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>a87d41522bc68604778076a01867585f7</Anchor>
+    <DeclaredIn>Common.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -793,7 +826,7 @@
       <Type>data</Type>
     </TokenIdentifier>
     <Path>d6/de9/Constants_8hpp.html</Path>
-    <Anchor>ac2a71a92e550ab32be24666563bd4428</Anchor>
+    <Anchor>af383c0a7d89264d7b27c2c06f465c770</Anchor>
     <DeclaredIn>Constants.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -820,6 +853,39 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>VMStackSize</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark</Scope>
+    </TokenIdentifier>
+    <Path>d9/de4/namespaceArk.html</Path>
+    <Anchor>a10c147f2df9516277811af7da43a250f</Anchor>
+    <DeclaredIn>Constants.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>operator&quot;&quot;_u8</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::literals</Scope>
+    </TokenIdentifier>
+    <Path>df/d62/namespaceArk_1_1literals.html</Path>
+    <Anchor>a66738ed46e8b711d19268cf8f02f6bbd</Anchor>
+    <DeclaredIn>Literals.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>operator&quot;&quot;_u16</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::literals</Scope>
+    </TokenIdentifier>
+    <Path>df/d62/namespaceArk_1_1literals.html</Path>
+    <Anchor>ab2168dd30b7ea60ecc06e49f59206791</Anchor>
+    <DeclaredIn>Literals.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>ARK_OS_LINUX</Name>
       <APILanguage>unknown</APILanguage>
       <Type>macro</Type>
@@ -836,6 +902,16 @@
     </TokenIdentifier>
     <Path>d5/d40/Platform_8hpp.html</Path>
     <Anchor>ac62a8551c675391a8cf01d112e42d755</Anchor>
+    <DeclaredIn>Platform.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ARK_API_INLINE</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>macro</Type>
+    </TokenIdentifier>
+    <Path>d5/d40/Platform_8hpp.html</Path>
+    <Anchor>ab9eb1f0ed13623268a893d305cdca578</Anchor>
     <DeclaredIn>Platform.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -1092,6 +1168,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>types_to_str</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark</Scope>
+    </TokenIdentifier>
+    <Path>d9/de4/namespaceArk.html</Path>
+    <Anchor>acda85568e0ab829ec4c303f1ac053759</Anchor>
+    <DeclaredIn>Value.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>Scope_t</Name>
       <APILanguage>cpp</APILanguage>
       <Type>tdef</Type>
@@ -1137,28 +1224,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>types_to_str</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark</Scope>
-    </TokenIdentifier>
-    <Path>d9/de4/namespaceArk.html</Path>
-    <Anchor>acda85568e0ab829ec4c303f1ac053759</Anchor>
-    <DeclaredIn>Value.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ArkVMStackSize</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark</Scope>
-    </TokenIdentifier>
-    <Path>d9/de4/namespaceArk.html</Path>
-    <Anchor>a0ca5a4b587da0ce80caa46d3487e7ac0</Anchor>
-    <DeclaredIn>VM.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>Nil</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
@@ -1195,36 +1260,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>GEN_NOT_BODY</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>dc/db7/MacroProcessor_8cpp.html</Path>
-    <Anchor>a0f3c7f623263a4a2cec9b4db777d413c</Anchor>
-    <DeclaredIn>MacroProcessor.cpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>GEN_COMPARATOR</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>dc/db7/MacroProcessor_8cpp.html</Path>
-    <Anchor>a870ad3e992f06ebee3bf0e8d391587a7</Anchor>
-    <DeclaredIn>MacroProcessor.cpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>GEN_OP</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>dc/db7/MacroProcessor_8cpp.html</Path>
-    <Anchor>a4fba6b380dc4af3c4f88311d61cfdde5</Anchor>
-    <DeclaredIn>MacroProcessor.cpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>makeContext</Name>
       <APILanguage>cpp</APILanguage>
       <Type>func</Type>
@@ -1242,7 +1277,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>afd94fd5d6c6dadaff702d31594c85a9e</Anchor>
+    <Anchor>a94a3bdf6a4a21e11103336456203d33e</Anchor>
     <Abstract>Construct an error message based on a given node.</Abstract>
     <DeclaredIn>makeErrorCtx.hpp</DeclaredIn>
   </Token>
@@ -1257,6 +1292,17 @@
     <Anchor>a526c6aaf72e7667dfe82729915479f70</Anchor>
     <Abstract>Construct an error message based on a given match in the code.</Abstract>
     <DeclaredIn>makeErrorCtx.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>swap</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>a281ee041a66e7ee29f732a3e72f938c1</Anchor>
+    <DeclaredIn>Node.cpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1282,6 +1328,39 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>operator==</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>a0f7d3921f94b4a6e7d531260cc09f953</Anchor>
+    <DeclaredIn>Node.cpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>operator&lt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>accf5c2ce7ad3cf2c587764159a3ce17f</Anchor>
+    <DeclaredIn>Node.cpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>operator!</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>a21c7a145c5bb92b688e2917bfeb99e6a</Anchor>
+    <DeclaredIn>Node.cpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>colors</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
@@ -1296,11 +1375,41 @@
       <Name>operator&lt;&lt;</Name>
       <APILanguage>cpp</APILanguage>
       <Type>func</Type>
-      <Scope>Ark</Scope>
+      <Scope>Ark::internal</Scope>
     </TokenIdentifier>
-    <Path>d9/de4/namespaceArk.html</Path>
-    <Anchor>aed8b7c31098bdb96e648231603364587</Anchor>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>a161e37cc98e7a579d434c70a1feed666</Anchor>
     <DeclaredIn>Parser.cpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>GEN_NOT_BODY</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>macro</Type>
+    </TokenIdentifier>
+    <Path>d6/d69/Processor_8cpp.html</Path>
+    <Anchor>a0f3c7f623263a4a2cec9b4db777d413c</Anchor>
+    <DeclaredIn>Processor.cpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>GEN_COMPARATOR</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>macro</Type>
+    </TokenIdentifier>
+    <Path>d6/d69/Processor_8cpp.html</Path>
+    <Anchor>a870ad3e992f06ebee3bf0e8d391587a7</Anchor>
+    <DeclaredIn>Processor.cpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>GEN_OP</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>macro</Type>
+    </TokenIdentifier>
+    <Path>d6/d69/Processor_8cpp.html</Path>
+    <Anchor>a4fba6b380dc4af3c4f88311d61cfdde5</Anchor>
+    <DeclaredIn>Processor.cpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1378,6 +1487,27 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>init_const_type</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>macro</Type>
+    </TokenIdentifier>
+    <Path>d1/d74/Value_8cpp.html</Path>
+    <Anchor>a88143a99bed655da1f79c230ba9c9e30</Anchor>
+    <DeclaredIn>Value.cpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>operator&lt;&lt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark</Scope>
+    </TokenIdentifier>
+    <Path>d9/de4/namespaceArk.html</Path>
+    <Anchor>a253764e61095f1053e52ee2d9928e530</Anchor>
+    <DeclaredIn>Value.cpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>operator&lt;&lt;</Name>
       <APILanguage>cpp</APILanguage>
       <Type>func</Type>
@@ -1386,26 +1516,6 @@
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
     <Anchor>ae9fd62fde7fc0892b2305cb16dd831a9</Anchor>
     <DeclaredIn>Closure.cpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>push_pair</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d5/d04/Scope_8cpp.html</Path>
-    <Anchor>a2271c7943ba8265357cc56c730ff3c84</Anchor>
-    <DeclaredIn>Scope.cpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>insert_pair</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>d5/d04/Scope_8cpp.html</Path>
-    <Anchor>acf703166101a9a69806c5044f7c4248e</Anchor>
-    <DeclaredIn>Scope.cpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1442,24 +1552,23 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>init_const_type</Name>
-      <APILanguage>unknown</APILanguage>
+      <Name>NOMINMAX</Name>
+      <APILanguage>c</APILanguage>
       <Type>macro</Type>
     </TokenIdentifier>
-    <Path>d1/d74/Value_8cpp.html</Path>
-    <Anchor>a88143a99bed655da1f79c230ba9c9e30</Anchor>
-    <DeclaredIn>Value.cpp</DeclaredIn>
+    <Path>d2/d27/VM_8cpp.html</Path>
+    <Anchor>a9f918755b601cf4bffca775992e6fb90</Anchor>
+    <DeclaredIn>VM.cpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>operator&lt;&lt;</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>func</Type>
-      <Scope>Ark</Scope>
+      <Name>NOMINMAX</Name>
+      <APILanguage>c</APILanguage>
+      <Type>macro</Type>
     </TokenIdentifier>
-    <Path>d9/de4/namespaceArk.html</Path>
-    <Anchor>a253764e61095f1053e52ee2d9928e530</Anchor>
-    <DeclaredIn>Value.cpp</DeclaredIn>
+    <Path>df/d0a/main_8cpp.html</Path>
+    <Anchor>a9f918755b601cf4bffca775992e6fb90</Anchor>
+    <DeclaredIn>main.cpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1553,7 +1662,7 @@
     </TokenIdentifier>
     <Path>d9/de4/namespaceArk.html</Path>
     <Anchor>a120175e12d54ead9aa7559d2231af817</Anchor>
-    <DeclaredIn>BytecodeReader.hpp</DeclaredIn>
+    <DeclaredIn>Common.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1563,8 +1672,8 @@
       <Scope>Ark</Scope>
     </TokenIdentifier>
     <Path>d9/de4/namespaceArk.html</Path>
-    <Anchor>aed8b7c31098bdb96e648231603364587</Anchor>
-    <DeclaredIn>Parser.cpp</DeclaredIn>
+    <Anchor>a253764e61095f1053e52ee2d9928e530</Anchor>
+    <DeclaredIn>Value.cpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1601,17 +1710,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>operator&lt;&lt;</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>func</Type>
-      <Scope>Ark</Scope>
-    </TokenIdentifier>
-    <Path>d9/de4/namespaceArk.html</Path>
-    <Anchor>a253764e61095f1053e52ee2d9928e530</Anchor>
-    <DeclaredIn>Value.cpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>FeatureRemoveUnusedVars</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
@@ -1630,6 +1728,17 @@
     </TokenIdentifier>
     <Path>d9/de4/namespaceArk.html</Path>
     <Anchor>a01bf99e888f59670c0508d83cc23ffd4</Anchor>
+    <DeclaredIn>Constants.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>VMStackSize</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark</Scope>
+    </TokenIdentifier>
+    <Path>d9/de4/namespaceArk.html</Path>
+    <Anchor>a10c147f2df9516277811af7da43a250f</Anchor>
     <DeclaredIn>Constants.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -1664,17 +1773,6 @@
     <Path>d9/de4/namespaceArk.html</Path>
     <Anchor>acda85568e0ab829ec4c303f1ac053759</Anchor>
     <DeclaredIn>Value.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ArkVMStackSize</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark</Scope>
-    </TokenIdentifier>
-    <Path>d9/de4/namespaceArk.html</Path>
-    <Anchor>a0ca5a4b587da0ce80caa46d3487e7ac0</Anchor>
-    <DeclaredIn>VM.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1916,24 +2014,98 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>what</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::AssertionFailed</Scope>
+      <Name>Ark::BetterTypeError</Name>
+      <APILanguage>c</APILanguage>
+      <Type>cl</Type>
+      <Scope>Ark::BetterTypeError</Scope>
     </TokenIdentifier>
-    <Path>d3/df9/classArk_1_1AssertionFailed.html</Path>
-    <Anchor>abbf7fe7a40c66e6d0052b01cda837642</Anchor>
+    <Path>d8/d25/classArk_1_1BetterTypeError.html</Path>
+    <Abstract>A type error triggered when types don&apos;t match.</Abstract>
     <DeclaredIn>Exceptions.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>m_msg</Name>
+      <Name>BetterTypeError</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::BetterTypeError</Scope>
+    </TokenIdentifier>
+    <Path>d8/d25/classArk_1_1BetterTypeError.html</Path>
+    <Anchor>a082aad01cad8e61e60f27fded6f7cb70</Anchor>
+    <DeclaredIn>Exceptions.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>withArg</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::BetterTypeError</Scope>
+    </TokenIdentifier>
+    <Path>d8/d25/classArk_1_1BetterTypeError.html</Path>
+    <Anchor>a2c8b20d456648bbebba60fc279d220a5</Anchor>
+    <DeclaredIn>Exceptions.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>withArg</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::BetterTypeError</Scope>
+    </TokenIdentifier>
+    <Path>d8/d25/classArk_1_1BetterTypeError.html</Path>
+    <Anchor>a33ed94547ce1efb4d6d7034023182f8f</Anchor>
+    <DeclaredIn>Exceptions.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Error</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::Error</Scope>
+    </TokenIdentifier>
+    <Path>d6/d43/classArk_1_1Error.html</Path>
+    <Anchor>a7abb3e46fd82ac1ded7a1c87dbb7db8d</Anchor>
+    <DeclaredIn>Exceptions.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>m_funcname</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>Ark::AssertionFailed</Scope>
+      <Scope>Ark::BetterTypeError</Scope>
     </TokenIdentifier>
-    <Path>d3/df9/classArk_1_1AssertionFailed.html</Path>
-    <Anchor>aa1ddab60f662337ae36b6aec3fca57fe</Anchor>
+    <Path>d8/d25/classArk_1_1BetterTypeError.html</Path>
+    <Anchor>a39b5d49016013ded0e7adb77e6b38b59</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>m_arg_index</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::BetterTypeError</Scope>
+    </TokenIdentifier>
+    <Path>d8/d25/classArk_1_1BetterTypeError.html</Path>
+    <Anchor>a86cbe1b13075eb7548349a8de32bedde</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>m_expected_argc</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::BetterTypeError</Scope>
+    </TokenIdentifier>
+    <Path>d8/d25/classArk_1_1BetterTypeError.html</Path>
+    <Anchor>ac3781e2121aab2281f0d49315022093c</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>m_args</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::BetterTypeError</Scope>
+    </TokenIdentifier>
+    <Path>d8/d25/classArk_1_1BetterTypeError.html</Path>
+    <Anchor>ab745ef9c3c8758105662bd573222694b</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2052,27 +2224,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>what</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::CompilationError</Scope>
-    </TokenIdentifier>
-    <Path>d4/d64/classArk_1_1CompilationError.html</Path>
-    <Anchor>a96c81753c3127ff2e7d7dc812526a41f</Anchor>
-    <DeclaredIn>Exceptions.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_msg</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::CompilationError</Scope>
-    </TokenIdentifier>
-    <Path>d4/d64/classArk_1_1CompilationError.html</Path>
-    <Anchor>a950a7ff4907b0f8a085ded23712b1b8e</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>Ark::Compiler</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
@@ -2090,7 +2241,7 @@
       <Scope>Ark::Compiler</Scope>
     </TokenIdentifier>
     <Path>d3/ddb/classArk_1_1Compiler.html</Path>
-    <Anchor>aa37d84a1452e8032b431b0afd5b6b289</Anchor>
+    <Anchor>a4c2d500494ef50ede6b37d28044affda</Anchor>
     <Abstract>Construct a new Compiler object.</Abstract>
     <DeclaredIn>Compiler.hpp</DeclaredIn>
   </Token>
@@ -2174,7 +2325,19 @@
       <Scope>Ark::Compiler</Scope>
     </TokenIdentifier>
     <Path>d3/ddb/classArk_1_1Compiler.html</Path>
-    <Anchor>a706f65362f64f30ae43a3eae23aa1c63</Anchor>
+    <Anchor>a7b6b7575baa3c1f8ace15de2ca690dd5</Anchor>
+    <Abstract>helper functions to get a temp or finalized code page</Abstract>
+    <DeclaredIn>Compiler.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>page_ptr</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::Compiler</Scope>
+    </TokenIdentifier>
+    <Path>d3/ddb/classArk_1_1Compiler.html</Path>
+    <Anchor>ab59ba4a4f4cf25964dfb966e682eaf4d</Anchor>
     <Abstract>helper functions to get a temp or finalized code page</Abstract>
     <DeclaredIn>Compiler.hpp</DeclaredIn>
   </Token>
@@ -2397,13 +2560,25 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>putValue</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::Compiler</Scope>
+    </TokenIdentifier>
+    <Path>d3/ddb/classArk_1_1Compiler.html</Path>
+    <Anchor>afa61e730d2833884324975ee223974e3</Anchor>
+    <Abstract>Put a value in the bytecode, handling the closures chains.</Abstract>
+    <DeclaredIn>Compiler.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>addSymbol</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
       <Scope>Ark::Compiler</Scope>
     </TokenIdentifier>
     <Path>d3/ddb/classArk_1_1Compiler.html</Path>
-    <Anchor>a3fc62e4c31f950a859ce9009532a6d78</Anchor>
+    <Anchor>aa14d4acf578002cc0f8a9703be73426d</Anchor>
     <Abstract>Register a given node in the symbol table.</Abstract>
     <DeclaredIn>Compiler.hpp</DeclaredIn>
   </Token>
@@ -2415,7 +2590,7 @@
       <Scope>Ark::Compiler</Scope>
     </TokenIdentifier>
     <Path>d3/ddb/classArk_1_1Compiler.html</Path>
-    <Anchor>a442e5b49aa02ef7295ce990f4ea81067</Anchor>
+    <Anchor>ab08eb7deaf1fe71f3a989d5e17eab9b6</Anchor>
     <Abstract>Register a given node in the value table.</Abstract>
     <DeclaredIn>Compiler.hpp</DeclaredIn>
   </Token>
@@ -2427,7 +2602,7 @@
       <Scope>Ark::Compiler</Scope>
     </TokenIdentifier>
     <Path>d3/ddb/classArk_1_1Compiler.html</Path>
-    <Anchor>a63719786e0571eb95b354788058698dc</Anchor>
+    <Anchor>a72f13cc4ef1304413e856ae8c1c74936</Anchor>
     <Abstract>Register a page id (function reference) in the value table.</Abstract>
     <DeclaredIn>Compiler.hpp</DeclaredIn>
   </Token>
@@ -2463,7 +2638,7 @@
       <Scope>Ark::Compiler</Scope>
     </TokenIdentifier>
     <Path>d3/ddb/classArk_1_1Compiler.html</Path>
-    <Anchor>a551bd5e32dfb746f3f373ccc9a542a73</Anchor>
+    <Anchor>a10ff4f2203b285731faba43ac22e72d4</Anchor>
     <Abstract>Push a number on stack (need 2 bytes)</Abstract>
     <DeclaredIn>Compiler.hpp</DeclaredIn>
   </Token>
@@ -2475,7 +2650,7 @@
       <Scope>Ark::Compiler</Scope>
     </TokenIdentifier>
     <Path>d3/ddb/classArk_1_1Compiler.html</Path>
-    <Anchor>a20dfa5ed88f75b4a993128965e4d00bb</Anchor>
+    <Anchor>a940f4858bd0be5683c1c0c7f842c3a1e</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2485,7 +2660,7 @@
       <Scope>Ark::Compiler</Scope>
     </TokenIdentifier>
     <Path>d3/ddb/classArk_1_1Compiler.html</Path>
-    <Anchor>a9d78cdfc4f5d6075fd0f50f7f6f8c4b7</Anchor>
+    <Anchor>a534fd619286c01b0cd1333d3dec552b8</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2535,7 +2710,7 @@
       <Scope>Ark::Compiler</Scope>
     </TokenIdentifier>
     <Path>d3/ddb/classArk_1_1Compiler.html</Path>
-    <Anchor>a438297e71f599a87ddf2eb5289aa474e</Anchor>
+    <Anchor>a8993f532d2f56fa35111e82327e2446a</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2545,7 +2720,7 @@
       <Scope>Ark::Compiler</Scope>
     </TokenIdentifier>
     <Path>d3/ddb/classArk_1_1Compiler.html</Path>
-    <Anchor>a7fef6f7acf8abcaf56295fbf60f21128</Anchor>
+    <Anchor>ad3b7883512766793a9eb1054ac560ba5</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2555,7 +2730,7 @@
       <Scope>Ark::Compiler</Scope>
     </TokenIdentifier>
     <Path>d3/ddb/classArk_1_1Compiler.html</Path>
-    <Anchor>a163a383730c183532cddc0cb1b9ec0b0</Anchor>
+    <Anchor>a2a4e596c058a1caea594a0d4344ade45</Anchor>
     <Abstract>we need temporary code pages for some compilations passes</Abstract>
   </Token>
   <Token>
@@ -2591,6 +2766,27 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>Ark::Error</Name>
+      <APILanguage>c</APILanguage>
+      <Type>cl</Type>
+      <Scope>Ark::Error</Scope>
+    </TokenIdentifier>
+    <Path>d6/d43/classArk_1_1Error.html</Path>
+    <DeclaredIn>Exceptions.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Error</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::Error</Scope>
+    </TokenIdentifier>
+    <Path>d6/d43/classArk_1_1Error.html</Path>
+    <Anchor>a7abb3e46fd82ac1ded7a1c87dbb7db8d</Anchor>
+    <DeclaredIn>Exceptions.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>Ark::MacroProcessingError</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
@@ -2610,152 +2806,6 @@
     <Path>d7/d7c/classArk_1_1MacroProcessingError.html</Path>
     <Anchor>a9335a0e1b35c729127d24b0dc23ddbea</Anchor>
     <DeclaredIn>Exceptions.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>what</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::MacroProcessingError</Scope>
-    </TokenIdentifier>
-    <Path>d7/d7c/classArk_1_1MacroProcessingError.html</Path>
-    <Anchor>a1b39e8adf1c87ad89ae67dc8fb331749</Anchor>
-    <DeclaredIn>Exceptions.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_msg</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::MacroProcessingError</Scope>
-    </TokenIdentifier>
-    <Path>d7/d7c/classArk_1_1MacroProcessingError.html</Path>
-    <Anchor>a93df6ba78a6128fdefae632dbb2c284d</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Ark::Optimizer</Name>
-      <APILanguage>c</APILanguage>
-      <Type>cl</Type>
-      <Scope>Ark::Optimizer</Scope>
-    </TokenIdentifier>
-    <Path>dc/d72/classArk_1_1Optimizer.html</Path>
-    <Abstract>The ArkScript AST optimizer.</Abstract>
-    <DeclaredIn>Optimizer.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Optimizer</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Optimizer</Scope>
-    </TokenIdentifier>
-    <Path>dc/d72/classArk_1_1Optimizer.html</Path>
-    <Anchor>a0a3c9ce6e2e3721fc033fa8ca2ef53c2</Anchor>
-    <Abstract>Construct a new Optimizer.</Abstract>
-    <DeclaredIn>Optimizer.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>feed</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Optimizer</Scope>
-    </TokenIdentifier>
-    <Path>dc/d72/classArk_1_1Optimizer.html</Path>
-    <Anchor>a5c3536afe79b07936479ee7716e7abe1</Anchor>
-    <Abstract>Send the AST to the optimizer, then run the different optimization strategies on it.</Abstract>
-    <DeclaredIn>Optimizer.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ast</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Optimizer</Scope>
-    </TokenIdentifier>
-    <Path>dc/d72/classArk_1_1Optimizer.html</Path>
-    <Anchor>adf07a88c6cb61dc77e8abd88aa3fa64c</Anchor>
-    <Abstract>Returns the modified AST.</Abstract>
-    <DeclaredIn>Optimizer.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>throwOptimizerError</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Optimizer</Scope>
-    </TokenIdentifier>
-    <Path>dc/d72/classArk_1_1Optimizer.html</Path>
-    <Anchor>a753252ac29d03ec1edc8133f81aae171</Anchor>
-    <Abstract>Generate a fancy error message.</Abstract>
-    <DeclaredIn>Optimizer.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>remove_unused</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Optimizer</Scope>
-    </TokenIdentifier>
-    <Path>dc/d72/classArk_1_1Optimizer.html</Path>
-    <Anchor>ad1a30323e90d937376dd38f1f7f94a1c</Anchor>
-    <Abstract>Iterate over the AST and remove unused top level functions and constants.</Abstract>
-    <DeclaredIn>Optimizer.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>runOnGlobalScopeVars</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Optimizer</Scope>
-    </TokenIdentifier>
-    <Path>dc/d72/classArk_1_1Optimizer.html</Path>
-    <Anchor>a6cad67f9f670afca4f204a48a37f7f04</Anchor>
-    <Abstract>Run a given functor on the global scope symbols.</Abstract>
-    <DeclaredIn>Optimizer.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>countOccurences</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Optimizer</Scope>
-    </TokenIdentifier>
-    <Path>dc/d72/classArk_1_1Optimizer.html</Path>
-    <Anchor>a31b9a9bb1602baaa872167f93ccf7aee</Anchor>
-    <Abstract>Count the occurences of each symbol in the AST, recursively.</Abstract>
-    <DeclaredIn>Optimizer.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_ast</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::Optimizer</Scope>
-    </TokenIdentifier>
-    <Path>dc/d72/classArk_1_1Optimizer.html</Path>
-    <Anchor>aa8b27d74a61b0cee727f4cf14efc0a9b</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_options</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::Optimizer</Scope>
-    </TokenIdentifier>
-    <Path>dc/d72/classArk_1_1Optimizer.html</Path>
-    <Anchor>aba47f9ac9fd0a8181d41a6210b930336</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_sym_appearances</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::Optimizer</Scope>
-    </TokenIdentifier>
-    <Path>dc/d72/classArk_1_1Optimizer.html</Path>
-    <Anchor>a17ea39d0db012b87121572cd9c72d7fb</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2781,27 +2831,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>what</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::OptimizerError</Scope>
-    </TokenIdentifier>
-    <Path>d6/d47/classArk_1_1OptimizerError.html</Path>
-    <Anchor>a58a00d8613abda50165f340c7abadabe</Anchor>
-    <DeclaredIn>Exceptions.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_msg</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::OptimizerError</Scope>
-    </TokenIdentifier>
-    <Path>d6/d47/classArk_1_1OptimizerError.html</Path>
-    <Anchor>a5730c62fc5e40854590209a572d6956a</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>Ark::ParseError</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
@@ -2824,416 +2853,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>what</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::ParseError</Scope>
-    </TokenIdentifier>
-    <Path>d9/d1a/classArk_1_1ParseError.html</Path>
-    <Anchor>a5c9b88099e0e81a515fd0c7a26007239</Anchor>
-    <DeclaredIn>Exceptions.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_msg</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::ParseError</Scope>
-    </TokenIdentifier>
-    <Path>d9/d1a/classArk_1_1ParseError.html</Path>
-    <Anchor>ad7198c18af1c0aa2b07588ef0c4eac7b</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Ark::Parser</Name>
-      <APILanguage>c</APILanguage>
-      <Type>cl</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Abstract>The parser is responsible of constructing the Abstract Syntax Tree from a token list.</Abstract>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Parser</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>aaa5af9b392c010b8c21786a1be773d46</Anchor>
-    <Abstract>Construct a new Parser object.</Abstract>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>feed</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>abe0a993565227bf89936a224876be61b</Anchor>
-    <Abstract>Give the code to parse.</Abstract>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ast</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>aed4ed1a46b2d109585787a568066457e</Anchor>
-    <Abstract>Return the generated AST.</Abstract>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>getImports</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a3eb830af92e17ad678867723aaa2f79e</Anchor>
-    <Abstract>Return the list of files imported by the code given to the parser.</Abstract>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>sugar</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a1f6e282dcbcb45f0f3b83c74693a9a07</Anchor>
-    <Abstract>Applying syntactic sugar: {...} =&gt; (begin...), [...] =&gt; (list ...)</Abstract>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>parse</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a000dc1aa2de44be2fcad897640ba2db6</Anchor>
-    <Abstract>Parse a list of tokens recursively.</Abstract>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>parseIf</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a8bece60f341d7d833d4cc251fc9db423</Anchor>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>parseLetMut</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a1ac282aaf60de6d125090eff1d87aa45</Anchor>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>parseSet</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a3274a6eb83281194ee702a98e960ddb0</Anchor>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>parseFun</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a5b6bc863b2eb2243837fc36baa0cc7e0</Anchor>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>parseWhile</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a864dfc6d4fd865d078b8a39a8fb1a7b4</Anchor>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>parseBegin</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a5eca8826410d6cff031f5c98b57abede</Anchor>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>parseImport</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a5155c4b1784b896764421719753598ce</Anchor>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>parseQuote</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>ac3257ae41d832c8adad591862c6de162</Anchor>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>parseDel</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a6350d4864bbf401ae5f2fa662fe8608d</Anchor>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>parseShorthand</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a16a3dad87d001155bb905bc7a7aafdff</Anchor>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>checkForInvalidTokens</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a2d90771dcec463b7ae2c418ec109efe0</Anchor>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>nextToken</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a42d2c3fad3fda69fc28e27d0deb8fca5</Anchor>
-    <Abstract>Get the next token if possible, from a list of tokens.</Abstract>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>atom</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>ac43e61abc0ed7aee78bc62526cceb28b</Anchor>
-    <Abstract>Convert a token to a node.</Abstract>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>checkForInclude</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>ab2a7d0dba0fb790ed48ef2dfc2b0e1d8</Anchor>
-    <Abstract>Search for all the includes in a given node, in its sub-nodes and replace them by the code of the inc...</Abstract>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>seekFile</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a60c38a43f1771b681dc5c6990b7a65d9</Anchor>
-    <Abstract>Seek a file in the lib folder and everywhere.</Abstract>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>expect</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>ad496cb08025df544dd1dd16b787bbf23</Anchor>
-    <Abstract>Throw a parse exception is the given predicated is false.</Abstract>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>throwParseError</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>ae33843e684469dd3e924fd991e36c773</Anchor>
-    <Abstract>Throw a parse error related to a token (seek it in the related file and highlight the error)</Abstract>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>throwParseError_</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a24a70912995817ba00a9b2e0aef053b7</Anchor>
-    <Abstract>Throw a parse error unrelated to any token.</Abstract>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_debug</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a9c05599489a99d9d8987c8149569f32b</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_libdir</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a383bd2412c68ecea0d598ac849f4fe2b</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_options</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a10cc11fef143c95678b9131b248c3c9b</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_lexer</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>ac084e3e70fa7e85989bda0a92c3c6f2f</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_ast</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a80f9e37fb3fd8ef69adaab25c9c1b5f3</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_last_token</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a1131a7a222f894d85d7afa6a5972747a</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_file</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a36268503a2ee8c4c1789213a095d9cfe</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_code</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a2d9d8b296d109be78fcbc2be41873f42</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_parent_include</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a0d5298010b9bd45ced8a5a5ff84ee95e</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>operator&lt;&lt;</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>ffunc</Type>
-      <Scope>Ark::Parser</Scope>
-    </TokenIdentifier>
-    <Path>d3/d71/classArk_1_1Parser.html</Path>
-    <Anchor>a7c20868578fe0d4db0f1a1e97af5c8db</Anchor>
-    <DeclaredIn>Parser.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>Ark::PowError</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
@@ -3245,13 +2864,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>what</Name>
+      <Name>PowError</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
       <Scope>Ark::PowError</Scope>
     </TokenIdentifier>
     <Path>d8/d05/classArk_1_1PowError.html</Path>
-    <Anchor>af3f7e6c8114b9c4260ae88f0149307c0</Anchor>
+    <Anchor>a071290d7940eb23dcc878ed0ab208e37</Anchor>
     <DeclaredIn>Exceptions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -3272,7 +2891,7 @@
       <Scope>Ark::Repl</Scope>
     </TokenIdentifier>
     <Path>de/d60/classArk_1_1Repl.html</Path>
-    <Anchor>a5f86caf37532dcf6ec8b238010e3e766</Anchor>
+    <Anchor>a49282d19d7bde213ea973a0d8351797b</Anchor>
     <Abstract>Construct a new Repl object.</Abstract>
     <DeclaredIn>Repl.hpp</DeclaredIn>
   </Token>
@@ -3345,16 +2964,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>m_lib_dir</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::Repl</Scope>
-    </TokenIdentifier>
-    <Path>de/d60/classArk_1_1Repl.html</Path>
-    <Anchor>af885195f6d803b0768fc793721502e19</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>m_options</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
@@ -3395,6 +3004,16 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>m_libenv</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::Repl</Scope>
+    </TokenIdentifier>
+    <Path>de/d60/classArk_1_1Repl.html</Path>
+    <Anchor>a52e4aab1f8627b5ebc7b72b7a5326929</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>Ark::State</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
@@ -3412,7 +3031,7 @@
       <Scope>Ark::State</Scope>
     </TokenIdentifier>
     <Path>d1/d37/classArk_1_1State.html</Path>
-    <Anchor>a4ce60250b6ece57bea02fff82994ce0e</Anchor>
+    <Anchor>a1e0d3a01f48cb497b9cafd7ffb3539c2</Anchor>
     <Abstract>Construct a new State object.</Abstract>
     <DeclaredIn>State.hpp</DeclaredIn>
   </Token>
@@ -3502,14 +3121,14 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>setLibDir</Name>
+      <Name>setLibDirs</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
       <Scope>Ark::State</Scope>
     </TokenIdentifier>
     <Path>d1/d37/classArk_1_1State.html</Path>
-    <Anchor>a91a6395162c1ee277731c100a7513ddf</Anchor>
-    <Abstract>Set the Lib Dir path.</Abstract>
+    <Anchor>a7302086af256e600ee35bf8f4bcf65e7</Anchor>
+    <Abstract>Set the std search paths.</Abstract>
     <DeclaredIn>State.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -3581,13 +3200,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>m_libdir</Name>
+      <Name>m_libenv</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
       <Scope>Ark::State</Scope>
     </TokenIdentifier>
     <Path>d1/d37/classArk_1_1State.html</Path>
-    <Anchor>a1f74b3a2bdac7408bf696adc2c21d9fb</Anchor>
+    <Anchor>aee99aa51275c8f7b8f9c23d4f649fe1f</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3693,27 +3312,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>what</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::SyntaxError</Scope>
-    </TokenIdentifier>
-    <Path>dd/d6d/classArk_1_1SyntaxError.html</Path>
-    <Anchor>a19e6eee050352c2bffbc6f0231cbec3a</Anchor>
-    <DeclaredIn>Exceptions.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_msg</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::SyntaxError</Scope>
-    </TokenIdentifier>
-    <Path>dd/d6d/classArk_1_1SyntaxError.html</Path>
-    <Anchor>a501ccd53dbe476117494a55b04b2236b</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>Ark::TypeError</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
@@ -3736,27 +3334,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>what</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::TypeError</Scope>
-    </TokenIdentifier>
-    <Path>d2/d26/classArk_1_1TypeError.html</Path>
-    <Anchor>ae03f4b213a3f0bad4099c6dd3795837f</Anchor>
-    <DeclaredIn>Exceptions.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_msg</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::TypeError</Scope>
-    </TokenIdentifier>
-    <Path>d2/d26/classArk_1_1TypeError.html</Path>
-    <Anchor>a0c795002023f8ad9fa512d5d7b2caaa0</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>Ark::UserType</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
@@ -3774,32 +3351,8 @@
       <Scope>Ark::UserType</Scope>
     </TokenIdentifier>
     <Path>d8/da6/classArk_1_1UserType.html</Path>
-    <Anchor>afb19a67a68908277c17e3d277230db96</Anchor>
+    <Anchor>a59f7185af84a48ccc1dc785eed46c745</Anchor>
     <Abstract>Construct a new User Type object.</Abstract>
-    <DeclaredIn>UserType.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>del</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::UserType</Scope>
-    </TokenIdentifier>
-    <Path>d8/da6/classArk_1_1UserType.html</Path>
-    <Anchor>a680d689670c641e333abf0c4c6bb586c</Anchor>
-    <Abstract>Destroy the User Type object.</Abstract>
-    <DeclaredIn>UserType.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>setControlFuncs</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::UserType</Scope>
-    </TokenIdentifier>
-    <Path>d8/da6/classArk_1_1UserType.html</Path>
-    <Anchor>aa6a3625b32722af12de75b7f0a669f31</Anchor>
-    <Abstract>Set the control functions structure.</Abstract>
     <DeclaredIn>UserType.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -3867,7 +3420,7 @@
       <Scope>Ark::UserType</Scope>
     </TokenIdentifier>
     <Path>d8/da6/classArk_1_1UserType.html</Path>
-    <Anchor>ad35883bb472e1edcae2cc28b63ad83e7</Anchor>
+    <Anchor>aacc43222c9c3b047e7487c505e600da0</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -4373,7 +3926,7 @@
       <Scope>Ark::Value</Scope>
     </TokenIdentifier>
     <Path>d3/d90/classArk_1_1Value.html</Path>
-    <Anchor>ac52bdcc04c598f30244ccd896afb47bf</Anchor>
+    <Anchor>a2aa225445da6a465197a45e4b6e3c668</Anchor>
     <Abstract>Check if the value is const or not.</Abstract>
     <DeclaredIn>Value.hpp</DeclaredIn>
   </Token>
@@ -4439,7 +3992,7 @@
       <Scope>Ark::Value</Scope>
     </TokenIdentifier>
     <Path>d3/d90/classArk_1_1Value.html</Path>
-    <Anchor>af46af5903db59927b644fccbfbb7f52b</Anchor>
+    <Anchor>a97a9525cdec85111998c742d86b3acb4</Anchor>
     <DeclaredIn>Value.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -4450,7 +4003,7 @@
       <Scope>Ark::Value</Scope>
     </TokenIdentifier>
     <Path>d3/d90/classArk_1_1Value.html</Path>
-    <Anchor>afc5c0f680795551cca7a64107e924ee0</Anchor>
+    <Anchor>ad232ee2f65c92539860af08abccbc5d3</Anchor>
     <DeclaredIn>Value.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -4461,7 +4014,7 @@
       <Scope>Ark::Value</Scope>
     </TokenIdentifier>
     <Path>d3/d90/classArk_1_1Value.html</Path>
-    <Anchor>a2c741915637c608c6dc4f79238828761</Anchor>
+    <Anchor>a5294e9ec2c8035f875ed289662673fda</Anchor>
     <DeclaredIn>Value.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -4483,8 +4036,19 @@
       <Scope>Ark::VM</Scope>
     </TokenIdentifier>
     <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>afa21a2be0d0166e38d89c9be9f703fbc</Anchor>
+    <Anchor>aed140907b66e25ea28372350c3587c1a</Anchor>
     <Abstract>Construct a new vm t object.</Abstract>
+    <DeclaredIn>VM.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>VM</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::VM</Scope>
+    </TokenIdentifier>
+    <Path>d2/d93/classArk_1_1VM.html</Path>
+    <Anchor>afa21a2be0d0166e38d89c9be9f703fbc</Anchor>
     <DeclaredIn>VM.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -4579,7 +4143,7 @@
       <Scope>Ark::VM</Scope>
     </TokenIdentifier>
     <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>a8c19cbd581697a9d7e4c7088fa35138c</Anchor>
+    <Anchor>ac7761be8d38757574734429e70634e88</Anchor>
     <Abstract>Run ArkScript bytecode inside a try catch to retrieve all the exceptions and display a stack trace if...</Abstract>
     <DeclaredIn>VM.hpp</DeclaredIn>
   </Token>
@@ -4603,7 +4167,7 @@
       <Scope>Ark::VM</Scope>
     </TokenIdentifier>
     <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>af4bd4c8a7a9a9479279570ca68aeaf20</Anchor>
+    <Anchor>af595eb099398c2439140ded780a4ff6b</Anchor>
     <Abstract>Read a 2 bytes number from the current bytecode page, starting at the current instruction.</Abstract>
     <DeclaredIn>VM.hpp</DeclaredIn>
   </Token>
@@ -4615,7 +4179,7 @@
       <Scope>Ark::VM</Scope>
     </TokenIdentifier>
     <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>aab8758b0282286685acb0e73b5f7aaf6</Anchor>
+    <Anchor>a9793d82e9100c6badd8fa9aa8d8bbbcb</Anchor>
     <Abstract>Pop a value from the stack.</Abstract>
     <DeclaredIn>VM.hpp</DeclaredIn>
   </Token>
@@ -4627,7 +4191,7 @@
       <Scope>Ark::VM</Scope>
     </TokenIdentifier>
     <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>ada3afbf4a670462e7a4a3df7845598b2</Anchor>
+    <Anchor>a8c24d53c485e156d932d05ff38972a52</Anchor>
     <Abstract>Push a value on the stack.</Abstract>
     <DeclaredIn>VM.hpp</DeclaredIn>
   </Token>
@@ -4639,7 +4203,7 @@
       <Scope>Ark::VM</Scope>
     </TokenIdentifier>
     <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>ac68413e3259345884b75b229a900b4cd</Anchor>
+    <Anchor>aee58de24d6f0469375c1a98f7671679e</Anchor>
     <Abstract>Push a value on the stack.</Abstract>
     <DeclaredIn>VM.hpp</DeclaredIn>
   </Token>
@@ -4651,7 +4215,7 @@
       <Scope>Ark::VM</Scope>
     </TokenIdentifier>
     <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>abc11640da9330ac6672de99027d16a10</Anchor>
+    <Anchor>a303ee23f56af521b5465fcfdd2acc6be</Anchor>
     <Abstract>Push a value on the stack as a reference.</Abstract>
     <DeclaredIn>VM.hpp</DeclaredIn>
   </Token>
@@ -4663,7 +4227,7 @@
       <Scope>Ark::VM</Scope>
     </TokenIdentifier>
     <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>abee64d896b91e91147a32fb25db37d06</Anchor>
+    <Anchor>a1f457f61486e2084b3e3538436852ead</Anchor>
     <Abstract>Pop a value from the stack and resolve it if possible, then return it.</Abstract>
     <DeclaredIn>VM.hpp</DeclaredIn>
   </Token>
@@ -4675,7 +4239,7 @@
       <Scope>Ark::VM</Scope>
     </TokenIdentifier>
     <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>a0752b3a390d8cb1bc774f64db19bcb69</Anchor>
+    <Anchor>ac7971b10b7ba473a2d311070dbf45fcf</Anchor>
     <Abstract>Move stack values around and invert them.</Abstract>
     <DeclaredIn>VM.hpp</DeclaredIn>
   </Token>
@@ -4687,7 +4251,7 @@
       <Scope>Ark::VM</Scope>
     </TokenIdentifier>
     <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>ab9f9c94b1df587eabeb5243307a3b875</Anchor>
+    <Anchor>aca699b529d181ef287ecc9df487fd750</Anchor>
     <DeclaredIn>VM.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -4698,7 +4262,7 @@
       <Scope>Ark::VM</Scope>
     </TokenIdentifier>
     <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>aadb37d6ed4fed06b1edc22d00ff9f0b2</Anchor>
+    <Anchor>ae08335c04b7993b243c0a19ced6f35d1</Anchor>
     <Abstract>Find the nearest variable of a given id.</Abstract>
     <DeclaredIn>VM.hpp</DeclaredIn>
   </Token>
@@ -4710,7 +4274,7 @@
       <Scope>Ark::VM</Scope>
     </TokenIdentifier>
     <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>afb9fe439f44179ebeafa78cd38a29b91</Anchor>
+    <Anchor>a9a834f79b1ed4b9e98c6f4d742b73e40</Anchor>
     <Abstract>Destroy the current frame and get back to the previous one, resuming execution.</Abstract>
     <DeclaredIn>VM.hpp</DeclaredIn>
   </Token>
@@ -4722,7 +4286,7 @@
       <Scope>Ark::VM</Scope>
     </TokenIdentifier>
     <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>ab777aabd06e8825d5c0251eea6f52017</Anchor>
+    <Anchor>a712a44477e64cc5aaf5f21c86fc2bd8b</Anchor>
     <Abstract>Load a plugin from a constant id.</Abstract>
     <DeclaredIn>VM.hpp</DeclaredIn>
   </Token>
@@ -4734,7 +4298,7 @@
       <Scope>Ark::VM</Scope>
     </TokenIdentifier>
     <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>ac3f48f2a3c2f330d0acd4afd9ab6077c</Anchor>
+    <Anchor>a582a18c3cba3db06a4253947c1219ab8</Anchor>
     <Abstract>Find the nearest variable id with a given value.</Abstract>
     <DeclaredIn>VM.hpp</DeclaredIn>
   </Token>
@@ -4758,7 +4322,7 @@
       <Scope>Ark::VM</Scope>
     </TokenIdentifier>
     <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>a9128d6b7ba084b47f0e1daf337155a8c</Anchor>
+    <Anchor>a9fde818f335f05116e80d07f3635e8c3</Anchor>
     <Abstract>Display a backtrace when the VM encounter an exception.</Abstract>
     <DeclaredIn>VM.hpp</DeclaredIn>
   </Token>
@@ -4770,7 +4334,7 @@
       <Scope>Ark::VM</Scope>
     </TokenIdentifier>
     <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>a4bee4b74523e3fe43c54944aae3831d7</Anchor>
+    <Anchor>adbd90c8ff1775b0350198cf59693751f</Anchor>
     <Abstract>Function called when the CALL instruction is met in the bytecode.</Abstract>
     <DeclaredIn>VM.hpp</DeclaredIn>
   </Token>
@@ -4782,7 +4346,17 @@
       <Scope>Ark::VM</Scope>
     </TokenIdentifier>
     <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>a597d67a33b2cf925c0a2e57eb8a94228</Anchor>
+    <Anchor>acce11c3fdd0c108aa3ebc934d9ee22cf</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>m_execution_contexts</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::VM</Scope>
+    </TokenIdentifier>
+    <Path>d2/d93/classArk_1_1VM.html</Path>
+    <Anchor>a244852e0abf13ee2492570c10e730903</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -4794,39 +4368,6 @@
     <Path>d2/d93/classArk_1_1VM.html</Path>
     <Anchor>a1c5da24d33fe12e43f09f0011b3ad0bc</Anchor>
     <Abstract>VM exit code, defaults to 0. Can be changed through sys:exit</Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_ip</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::VM</Scope>
-    </TokenIdentifier>
-    <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>a892cfa7b8f3b23622091ab5c0c192619</Anchor>
-    <Abstract>instruction pointer</Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_pp</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::VM</Scope>
-    </TokenIdentifier>
-    <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>a60123c1e7342a1c58a4c066499b3012a</Anchor>
-    <Abstract>page pointer</Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_sp</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::VM</Scope>
-    </TokenIdentifier>
-    <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>a518b5066a7e5ee7b82dda4b9b017de19</Anchor>
-    <Abstract>stack pointer</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -4851,16 +4392,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>m_last_sym_loaded</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::VM</Scope>
-    </TokenIdentifier>
-    <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>a358defab470981a23beb1543c2618075</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>m_until_frame_count</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
@@ -4878,46 +4409,6 @@
     </TokenIdentifier>
     <Path>d2/d93/classArk_1_1VM.html</Path>
     <Anchor>a6f2bf344a2ca2ba4dd5a0c5075e01dcd</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_stack</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::VM</Scope>
-    </TokenIdentifier>
-    <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>a427b3a90b23a9f9328f58db6dc4a5681</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_scope_count_to_delete</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::VM</Scope>
-    </TokenIdentifier>
-    <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>a316ed7a5ec895e90ce854728708267da</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_saved_scope</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::VM</Scope>
-    </TokenIdentifier>
-    <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>a4a24a01bdf19170426853b90d78a9929</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>m_locals</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::VM</Scope>
-    </TokenIdentifier>
-    <Path>d2/d93/classArk_1_1VM.html</Path>
-    <Anchor>a22c664ca4d7bd3223f7019715cfccebc</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -4983,13 +4474,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>what</Name>
+      <Name>ZeroDivisionError</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
       <Scope>Ark::ZeroDivisionError</Scope>
     </TokenIdentifier>
     <Path>da/d18/classArk_1_1ZeroDivisionError.html</Path>
-    <Anchor>a051984e62e39f148ebb300a168c4de67</Anchor>
+    <Anchor>a52255860ac5a47becbf6c28ffffc4490</Anchor>
     <DeclaredIn>Exceptions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5000,17 +4491,6 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Inst_t</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>tdef</Type>
-      <Scope>Ark::internal</Scope>
-    </TokenIdentifier>
-    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>a68caa6f052dfff73a0362bb31078f045</Anchor>
-    <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5043,7 +4523,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>afd94fd5d6c6dadaff702d31594c85a9e</Anchor>
+    <Anchor>a94a3bdf6a4a21e11103336456203d33e</Anchor>
     <Abstract>Construct an error message based on a given node.</Abstract>
     <DeclaredIn>makeErrorCtx.hpp</DeclaredIn>
   </Token>
@@ -5069,6 +4549,50 @@
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
     <Anchor>a094277891f609486ba174a598eaefd9d</Anchor>
     <DeclaredIn>Node.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>make_node</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>a4c85a4205b0e3e491ad93b04b01ba4ac</Anchor>
+    <DeclaredIn>Node.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>make_node_list</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>ab45a8c201540edd0c56a2ddb31f401fb</Anchor>
+    <DeclaredIn>Node.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>typeToString</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>a0b9a75d4a5e9bcfcf7b21ddbfc0d6ea5</Anchor>
+    <DeclaredIn>Node.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>similarNodetypeFromTokentype</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>add0162f1355d885cbad47f63f43d8502</Anchor>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5105,6 +4629,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>swap</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>a281ee041a66e7ee29f732a3e72f938c1</Anchor>
+    <DeclaredIn>Node.cpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>operator&lt;&lt;</Name>
       <APILanguage>cpp</APILanguage>
       <Type>func</Type>
@@ -5113,6 +4648,50 @@
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
     <Anchor>aca2011b4f533e68406301e82d75f5411</Anchor>
     <DeclaredIn>Node.cpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>operator==</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>a0f7d3921f94b4a6e7d531260cc09f953</Anchor>
+    <DeclaredIn>Node.cpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>operator&lt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>accf5c2ce7ad3cf2c587764159a3ce17f</Anchor>
+    <DeclaredIn>Node.cpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>operator!</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>a21c7a145c5bb92b688e2917bfeb99e6a</Anchor>
+    <DeclaredIn>Node.cpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>operator&lt;&lt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>a161e37cc98e7a579d434c70a1feed666</Anchor>
+    <DeclaredIn>Parser.cpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5133,8 +4712,19 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>af539f8120cb8faea3bf7d6a07ff0615e</Anchor>
-    <DeclaredIn>Lexer.hpp</DeclaredIn>
+    <Anchor>a11ff3493f9516a88ca69b4d707e8d10c</Anchor>
+    <DeclaredIn>Token.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>nodeTypes</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>a1a137bdfc549299532813ba2c74d6a46</Anchor>
+    <DeclaredIn>Common.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5144,9 +4734,9 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>af0dd5b155b0cb906a87c5c28099dff98</Anchor>
+    <Anchor>abff046039b95cc01207427720f7a0858</Anchor>
     <Abstract>List of available keywords in ArkScript.</Abstract>
-    <DeclaredIn>Lexer.hpp</DeclaredIn>
+    <DeclaredIn>Common.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5156,8 +4746,8 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>a1b338d2bc2ab3f5f26cdfdb0a4d4ba70</Anchor>
-    <DeclaredIn>Lexer.hpp</DeclaredIn>
+    <Anchor>a87d41522bc68604778076a01867585f7</Anchor>
+    <DeclaredIn>Common.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5172,43 +4762,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>Number</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>econst</Type>
-      <Scope>Ark::internal</Scope>
-    </TokenIdentifier>
-    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>abbd0e65f86a8884c76fdf41f5e1389d3ab2ee912b91d69b435159c7c3f6df7f5f</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>String</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>econst</Type>
-      <Scope>Ark::internal</Scope>
-    </TokenIdentifier>
-    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>abbd0e65f86a8884c76fdf41f5e1389d3a27118326006d3829667a400ad23d5d98</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>PageAddr</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>econst</Type>
-      <Scope>Ark::internal</Scope>
-    </TokenIdentifier>
-    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>abbd0e65f86a8884c76fdf41f5e1389d3a6666eaba81f13e74d10ac1a9c9d6d7b1</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>NOP</Name>
       <APILanguage>cpp</APILanguage>
       <Type>econst</Type>
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa8c1965164febc582c6c9e4864c4161b2</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a8c1965164febc582c6c9e4864c4161b2</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5219,7 +4779,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa234f75eef5509256c428275320794bb5</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a234f75eef5509256c428275320794bb5</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5230,7 +4790,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fad554aa28929f53168b0fdeb6909f85d0</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681ad554aa28929f53168b0fdeb6909f85d0</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5241,7 +4801,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fac8f4e572da4e97caba83c2c9da8aa89a</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681ac8f4e572da4e97caba83c2c9da8aa89a</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5252,7 +4812,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa8f0676c34d58346e3c9522c49a2a3bf0</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a8f0676c34d58346e3c9522c49a2a3bf0</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5263,7 +4823,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa63ed41d8ad730e44805a772821085cb1</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a63ed41d8ad730e44805a772821085cb1</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5274,7 +4834,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa0c2488987370416136cac91f311bfe1d</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a0c2488987370416136cac91f311bfe1d</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5285,7 +4845,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa05e52e2abdde5f0d40401842bf6e9e2b</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a05e52e2abdde5f0d40401842bf6e9e2b</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5296,7 +4856,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa5049ae9b03fcbcdc9a64b71d7350a5c4</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a5049ae9b03fcbcdc9a64b71d7350a5c4</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5307,7 +4867,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa37932d38ddaf88e6e1ec95c991d7b71e</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a37932d38ddaf88e6e1ec95c991d7b71e</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5318,7 +4878,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780faed44c268c1691e778abd7a0c79768324</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681aed44c268c1691e778abd7a0c79768324</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5329,7 +4889,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fae5df672f286a80479e2e02f33efdfd9a</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681ae5df672f286a80479e2e02f33efdfd9a</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5340,7 +4900,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa6d686fc33a15d61f6f726dfca9ab431d</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a6d686fc33a15d61f6f726dfca9ab431d</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5351,7 +4911,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa110cb00f3e3c816e4343e23e42248162</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a110cb00f3e3c816e4343e23e42248162</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5362,7 +4922,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fab00ade023344f58b3b50407a99501530</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681ab00ade023344f58b3b50407a99501530</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5373,7 +4933,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780faef302a6c551c3fbf8ff509fb935532a1</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681aef302a6c551c3fbf8ff509fb935532a1</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5384,7 +4944,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa254f8f6960d573d47acdc037946d8a48</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a254f8f6960d573d47acdc037946d8a48</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5395,7 +4955,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa0d19547973896db46706527300ba630d</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a0d19547973896db46706527300ba630d</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5406,7 +4966,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa68f8b0b3e523eb4ebcdb6057fd618ae4</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a68f8b0b3e523eb4ebcdb6057fd618ae4</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5417,7 +4977,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa32493ca580dc36eb98a8999fa065202c</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a32493ca580dc36eb98a8999fa065202c</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5428,7 +4988,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa2768a2b11527dab603c063b3e6fe4d39</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a2768a2b11527dab603c063b3e6fe4d39</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5439,7 +4999,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780faa2b29c169d008e65c9589eed1cb37fa2</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681aa2b29c169d008e65c9589eed1cb37fa2</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5450,7 +5010,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa68ca47ae541fba56f3093d9586333a7c</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a68ca47ae541fba56f3093d9586333a7c</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5461,7 +5021,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa923e5dd44bd23ed438b9bed2d26915ad</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a923e5dd44bd23ed438b9bed2d26915ad</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5472,7 +5032,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fafc29a3aa6e94ad8c002dfbd6859412e1</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681afc29a3aa6e94ad8c002dfbd6859412e1</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5483,7 +5043,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa132677dc55f09b1301e8222091fda0cb</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a132677dc55f09b1301e8222091fda0cb</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5494,7 +5054,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa2ab6f0eef84c58a4afa1584e608f2354</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a2ab6f0eef84c58a4afa1584e608f2354</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5505,7 +5065,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa84d95297ef6a04732ed50731d6564c0c</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a84d95297ef6a04732ed50731d6564c0c</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5516,7 +5076,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa7f1bcb6491da251b1c3836d7630926ef</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a7f1bcb6491da251b1c3836d7630926ef</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5527,7 +5087,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780faae0da9c8979cf536840021f73c610d09</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681aae0da9c8979cf536840021f73c610d09</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5538,7 +5098,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa231ed0c85ace21289c93ce2987ccc262</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a231ed0c85ace21289c93ce2987ccc262</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5549,7 +5109,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fadf1d9749a040a01202f92fc35622bb97</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681adf1d9749a040a01202f92fc35622bb97</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5560,7 +5120,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa500f8b8f821df5be0b94be749f94e904</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a500f8b8f821df5be0b94be749f94e904</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5571,7 +5131,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fae4911d30f6af4720da1c508316389364</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681ae4911d30f6af4720da1c508316389364</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5582,7 +5142,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa4c82ca0d18822806e36b58e49784eeb7</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a4c82ca0d18822806e36b58e49784eeb7</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5593,7 +5153,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa875b3b00ea3dca787fa1d457a7b04a4e</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a875b3b00ea3dca787fa1d457a7b04a4e</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5604,7 +5164,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa7de399f2b3d06857f17ec899b2b79bc5</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a7de399f2b3d06857f17ec899b2b79bc5</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5615,7 +5175,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa8f5fa19f71eccbad90e50c1c09cf6d02</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a8f5fa19f71eccbad90e50c1c09cf6d02</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5626,7 +5186,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa399244553d6b9528184b26186af53b65</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a399244553d6b9528184b26186af53b65</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5637,7 +5197,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780faa2d82ff6f76f2e85de6173283129cebd</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681aa2d82ff6f76f2e85de6173283129cebd</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5648,7 +5208,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa61f2ef3fae556eb742a4d384d2e1cd29</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a61f2ef3fae556eb742a4d384d2e1cd29</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5659,7 +5219,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fadd290418ff5144fe9abaf9192dfe45cb</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681add290418ff5144fe9abaf9192dfe45cb</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5670,7 +5230,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa3ebb92de7acdd11ba5d26f753e7aa0c5</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a3ebb92de7acdd11ba5d26f753e7aa0c5</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5681,7 +5241,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa1fe4d21856a954682e3f17393503e9f7</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a1fe4d21856a954682e3f17393503e9f7</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5692,7 +5252,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780faf4cacd2f72c74b6e5d6c555b2aad323b</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681af4cacd2f72c74b6e5d6c555b2aad323b</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5703,7 +5263,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa32d2237c0469bcdfd68f3baf5a4dab5d</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a32d2237c0469bcdfd68f3baf5a4dab5d</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5714,7 +5274,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780faba6b55e08dff6039159ac458b4ef458c</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681aba6b55e08dff6039159ac458b4ef458c</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5725,7 +5285,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780faa9a089e793f52b5e5421ee3f1558be5e</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681aa9a089e793f52b5e5421ee3f1558be5e</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5736,7 +5296,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa47216d8ba3f558c69fa591de825321d4</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a47216d8ba3f558c69fa591de825321d4</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5747,7 +5307,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa93d2be6a263e75b58af07e95b3f144dd</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a93d2be6a263e75b58af07e95b3f144dd</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5758,7 +5318,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa58510b4fd7d67a04b4b4b367ea095530</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a58510b4fd7d67a04b4b4b367ea095530</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5769,7 +5329,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fac5b48140324365f43e9cea1365a133c7</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681ac5b48140324365f43e9cea1365a133c7</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5780,7 +5340,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa93e267bca42261b1fbe76253840a662b</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a93e267bca42261b1fbe76253840a662b</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5791,7 +5351,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa1d20349c795671cc9732c4c4b0cf4dff</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a1d20349c795671cc9732c4c4b0cf4dff</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5802,7 +5362,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa75cbac1a69406e0997b0ab52a92bb36f</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a75cbac1a69406e0997b0ab52a92bb36f</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5813,7 +5373,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fad4e723e3676eda408b721f23ddf28424</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681ad4e723e3676eda408b721f23ddf28424</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5824,7 +5384,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa0abc5673fb17135485f15875ac434137</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a0abc5673fb17135485f15875ac434137</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5835,7 +5395,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fae77165cee499382d5098751b304e7cac</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681ae77165cee499382d5098751b304e7cac</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5846,7 +5406,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fa570dcd2373c0beb0f911c1fee99218a5</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681a570dcd2373c0beb0f911c1fee99218a5</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5857,7 +5417,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780fac4bf190b7b8b1cd91cc40bba17be1d72</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681ac4bf190b7b8b1cd91cc40bba17be1d72</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -5868,7 +5428,7 @@
       <Scope>Ark::internal</Scope>
     </TokenIdentifier>
     <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
-    <Anchor>adebb9f0092e2413dc3f8407c5d42780faeac3c0c45c46209061da8d5c3d940f7b</Anchor>
+    <Anchor>abcd166377fbe7dcd77e47ef80cee8681aeac3c0c45c46209061da8d5c3d940f7b</Anchor>
     <DeclaredIn>Instructions.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -6213,6 +5773,36 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>Number</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>econst</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>ab6df8fad6f59b570c0818eff53db655fab2ee912b91d69b435159c7c3f6df7f5f</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>String</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>econst</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>ab6df8fad6f59b570c0818eff53db655fa27118326006d3829667a400ad23d5d98</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>PageAddr</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>econst</Type>
+      <Scope>Ark::internal</Scope>
+    </TokenIdentifier>
+    <Path>dc/d0e/namespaceArk_1_1internal.html</Path>
+    <Anchor>ab6df8fad6f59b570c0818eff53db655fa6666eaba81f13e74d10ac1a9c9d6d7b1</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>Ark::internal::Closure</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
@@ -6322,7 +5912,7 @@
       <Scope>Ark::internal::Closure</Scope>
     </TokenIdentifier>
     <Path>d9/d4e/classArk_1_1internal_1_1Closure.html</Path>
-    <Anchor>aebab9fe5719dfe1bc3bc1bd16083588d</Anchor>
+    <Anchor>a3be03aaf57662a47bbbb599ce363c136</Anchor>
     <DeclaredIn>Closure.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -6333,7 +5923,7 @@
       <Scope>Ark::internal::Closure</Scope>
     </TokenIdentifier>
     <Path>d9/d4e/classArk_1_1internal_1_1Closure.html</Path>
-    <Anchor>aa11a949f20182e05d091fa15155114a9</Anchor>
+    <Anchor>ad478a4541f26baf2c94aa35316b009ce</Anchor>
     <DeclaredIn>Closure.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -6356,18 +5946,7 @@
     </TokenIdentifier>
     <Path>d1/dd3/classArk_1_1internal_1_1ConditionalExecutor.html</Path>
     <Abstract>Handles Conditional macros.</Abstract>
-    <DeclaredIn>ConditionalExecutor.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ConditionalExecutor</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::internal::ConditionalExecutor</Scope>
-    </TokenIdentifier>
-    <Path>d1/dd3/classArk_1_1internal_1_1ConditionalExecutor.html</Path>
-    <Anchor>ae213ee6ef649b4e3c27786eea0d01374</Anchor>
-    <DeclaredIn>ConditionalExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Conditional.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6379,7 +5958,7 @@
     <Path>d1/dd3/classArk_1_1internal_1_1ConditionalExecutor.html</Path>
     <Anchor>a201e15d780b0f2290ebb27c8c6134305</Anchor>
     <Abstract>Executes macros in the Node if the Executor can handle it.</Abstract>
-    <DeclaredIn>ConditionalExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Conditional.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6391,7 +5970,18 @@
     <Path>d1/dd3/classArk_1_1internal_1_1ConditionalExecutor.html</Path>
     <Anchor>af56d8634ccd0d291d6aae58a23dd4403</Anchor>
     <Abstract>Checks if the executor can apply a macro on the passed Node.</Abstract>
-    <DeclaredIn>ConditionalExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Conditional.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>MacroExecutor</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::ConditionalExecutor</Scope>
+    </TokenIdentifier>
+    <Path>d1/dd3/classArk_1_1internal_1_1ConditionalExecutor.html</Path>
+    <Anchor>a4dfafef3ba0d38602dd0c926374344d8</Anchor>
+    <Abstract>Construct a new Macro Executor object.</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6403,7 +5993,19 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>a4dfafef3ba0d38602dd0c926374344d8</Anchor>
     <Abstract>Construct a new Macro Executor object.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>~MacroExecutor</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::MacroExecutor</Scope>
+    </TokenIdentifier>
+    <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
+    <Anchor>a930cc4993acd0ed0117c8c257a2c13eb</Anchor>
+    <Abstract>Need a virtual destructor to correctly destory object.</Abstract>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6415,7 +6017,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>ac6badab5d969fa5e38a8c3a506d3354e</Anchor>
     <Abstract>Find the nearest macro matching a giving name.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6427,7 +6029,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>ab3864ba306ea433c82bf391a5a474ef8</Anchor>
     <Abstract>Registers macros based on their type.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6439,7 +6041,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>a84e42959721a5c84f6fae6bf572b11ad</Anchor>
     <Abstract>Check if a node can be evaluated to true.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6451,7 +6053,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>a0e38cdada243b3c3f45f21cceca95d83</Anchor>
     <Abstract>Evaluate only the macros.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6463,7 +6065,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>ad603ba31153b99e6f8cb8b99fcae4019</Anchor>
     <Abstract>Applies the spread operator.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6475,7 +6077,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>a8d482429d4abd29c3ea405bf506a92c5</Anchor>
     <Abstract>Throw a macro processing error.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6487,7 +6089,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>afebda0b9673520111fed413c2cfb69ac</Anchor>
     <Abstract>Execute a node, trying to emplace macros calls.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6499,7 +6101,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>add7338bad4db868807b2f9e9ca24d6e3</Anchor>
     <Abstract>Check if a given symbol is a predefined macro.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6523,100 +6125,128 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>Ark::internal::CValue</Name>
+      <Name>Ark::internal::ExecutionContext</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
-      <Scope>Ark::internal::CValue</Scope>
+      <Scope>Ark::internal::ExecutionContext</Scope>
     </TokenIdentifier>
-    <Path>d5/d53/structArk_1_1internal_1_1CValue.html</Path>
-    <Abstract>A Compiler Value class helper to handle multiple types.</Abstract>
-    <DeclaredIn>CValue.hpp</DeclaredIn>
+    <Path>d0/daf/structArk_1_1internal_1_1ExecutionContext.html</Path>
+    <DeclaredIn>ExecutionContext.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>CValue</Name>
+      <Name>ExecutionContext</Name>
       <APILanguage>cpp</APILanguage>
       <Type>func</Type>
-      <Scope>Ark::internal::CValue</Scope>
+      <Scope>Ark::internal::ExecutionContext</Scope>
     </TokenIdentifier>
-    <Path>d5/d53/structArk_1_1internal_1_1CValue.html</Path>
-    <Anchor>a41e2839881408a8d8e8d0b35dd0e20e6</Anchor>
-    <DeclaredIn>CValue.hpp</DeclaredIn>
+    <Path>d0/daf/structArk_1_1internal_1_1ExecutionContext.html</Path>
+    <Anchor>ae1812a825d8cc760e31653dba182ccb3</Anchor>
+    <DeclaredIn>ExecutionContext.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>CValue</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>func</Type>
-      <Scope>Ark::internal::CValue</Scope>
-    </TokenIdentifier>
-    <Path>d5/d53/structArk_1_1internal_1_1CValue.html</Path>
-    <Anchor>ac49e0488101825ac905fcc2530c90551</Anchor>
-    <DeclaredIn>CValue.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>CValue</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>func</Type>
-      <Scope>Ark::internal::CValue</Scope>
-    </TokenIdentifier>
-    <Path>d5/d53/structArk_1_1internal_1_1CValue.html</Path>
-    <Anchor>a626e1c2e877dc7aad3cbe08f2188df24</Anchor>
-    <DeclaredIn>CValue.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>CValue</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>func</Type>
-      <Scope>Ark::internal::CValue</Scope>
-    </TokenIdentifier>
-    <Path>d5/d53/structArk_1_1internal_1_1CValue.html</Path>
-    <Anchor>a517b81a292b59c3e15c88de21c6d5888</Anchor>
-    <DeclaredIn>CValue.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>CValue</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>func</Type>
-      <Scope>Ark::internal::CValue</Scope>
-    </TokenIdentifier>
-    <Path>d5/d53/structArk_1_1internal_1_1CValue.html</Path>
-    <Anchor>aef32ccd1fe8fa590f212f54bd0b52095</Anchor>
-    <DeclaredIn>CValue.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>operator==</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>func</Type>
-      <Scope>Ark::internal::CValue</Scope>
-    </TokenIdentifier>
-    <Path>d5/d53/structArk_1_1internal_1_1CValue.html</Path>
-    <Anchor>a88316d06f9a3fa88779bf95178344c52</Anchor>
-    <DeclaredIn>CValue.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>value</Name>
+      <Name>primary</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>Ark::internal::CValue</Scope>
+      <Scope>Ark::internal::ExecutionContext</Scope>
     </TokenIdentifier>
-    <Path>d5/d53/structArk_1_1internal_1_1CValue.html</Path>
-    <Anchor>adf1d2c70d742ceda3f5c020ab4b92b95</Anchor>
+    <Path>d0/daf/structArk_1_1internal_1_1ExecutionContext.html</Path>
+    <Anchor>ab9498d1663b45b7824981533132057dd</Anchor>
+    <Abstract>Tells if the current ExecutionContext is the primary one or not.</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>type</Name>
+      <Name>ip</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>Ark::internal::CValue</Scope>
+      <Scope>Ark::internal::ExecutionContext</Scope>
     </TokenIdentifier>
-    <Path>d5/d53/structArk_1_1internal_1_1CValue.html</Path>
-    <Anchor>adf6b92d0fb266c3203717f5528ddc147</Anchor>
+    <Path>d0/daf/structArk_1_1internal_1_1ExecutionContext.html</Path>
+    <Anchor>a461a1ba8cffdf24a2262547c47c6432a</Anchor>
+    <Abstract>Instruction pointer.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>pp</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::ExecutionContext</Scope>
+    </TokenIdentifier>
+    <Path>d0/daf/structArk_1_1internal_1_1ExecutionContext.html</Path>
+    <Anchor>a6a9149f42d991cb3d6ef3bcdaae71705</Anchor>
+    <Abstract>Page pointer.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>sp</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::ExecutionContext</Scope>
+    </TokenIdentifier>
+    <Path>d0/daf/structArk_1_1internal_1_1ExecutionContext.html</Path>
+    <Anchor>abb5c3c9c5d3910b3ad5b48dbf5374bf3</Anchor>
+    <Abstract>Stack pointer.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>last_symbol</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::ExecutionContext</Scope>
+    </TokenIdentifier>
+    <Path>d0/daf/structArk_1_1internal_1_1ExecutionContext.html</Path>
+    <Anchor>a14d20343cb45fd8173c8a00def30f962</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>stack</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::ExecutionContext</Scope>
+    </TokenIdentifier>
+    <Path>d0/daf/structArk_1_1internal_1_1ExecutionContext.html</Path>
+    <Anchor>a524fe003e66af3370c41ae9a598343cc</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>scope_count_to_delete</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::ExecutionContext</Scope>
+    </TokenIdentifier>
+    <Path>d0/daf/structArk_1_1internal_1_1ExecutionContext.html</Path>
+    <Anchor>adb0bafe9699c8dbd7400aaca6cfb8f9f</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>saved_scope</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::ExecutionContext</Scope>
+    </TokenIdentifier>
+    <Path>d0/daf/structArk_1_1internal_1_1ExecutionContext.html</Path>
+    <Anchor>aba9954d72972059ddd093531dcc0fd12</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>locals</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::ExecutionContext</Scope>
+    </TokenIdentifier>
+    <Path>d0/daf/structArk_1_1internal_1_1ExecutionContext.html</Path>
+    <Anchor>a04e7d040de79e80462e726ace046a1ed</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Count</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::ExecutionContext</Scope>
+    </TokenIdentifier>
+    <Path>d0/daf/structArk_1_1internal_1_1ExecutionContext.html</Path>
+    <Anchor>afe89e59eadf83203b290b5debc1d08ec</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6663,6 +6293,17 @@
     <Path>dd/dc4/classArk_1_1internal_1_1Lexer.html</Path>
     <Anchor>a5429dd76ebc94c37cb9a6aa5513b1868</Anchor>
     <Abstract>Return the list of tokens.</Abstract>
+    <DeclaredIn>Lexer.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>isHexChar</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Lexer</Scope>
+    </TokenIdentifier>
+    <Path>dd/dc4/classArk_1_1internal_1_1Lexer.html</Path>
+    <Anchor>a835ce33a68d4d27fddc529fc21de7f59</Anchor>
     <DeclaredIn>Lexer.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -6766,18 +6407,7 @@
     </TokenIdentifier>
     <Path>d8/d13/classArk_1_1internal_1_1ListExecutor.html</Path>
     <Abstract>Handles List macros.</Abstract>
-    <DeclaredIn>ListExecutor.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ListExecutor</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::internal::ListExecutor</Scope>
-    </TokenIdentifier>
-    <Path>d8/d13/classArk_1_1internal_1_1ListExecutor.html</Path>
-    <Anchor>a0865e4e36f8f32297c1706756aee99ed</Anchor>
-    <DeclaredIn>ListExecutor.hpp</DeclaredIn>
+    <DeclaredIn>List.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6789,7 +6419,7 @@
     <Path>d8/d13/classArk_1_1internal_1_1ListExecutor.html</Path>
     <Anchor>a89bf96b4c885f2398f70247604131fa9</Anchor>
     <Abstract>Executes macros in the Node if the Executor can handle it.</Abstract>
-    <DeclaredIn>ListExecutor.hpp</DeclaredIn>
+    <DeclaredIn>List.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6801,7 +6431,18 @@
     <Path>d8/d13/classArk_1_1internal_1_1ListExecutor.html</Path>
     <Anchor>ad98b015e928b4003852f1ea9a44e9616</Anchor>
     <Abstract>Checks if the executor can apply a macro on the passed Node.</Abstract>
-    <DeclaredIn>ListExecutor.hpp</DeclaredIn>
+    <DeclaredIn>List.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>MacroExecutor</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::ListExecutor</Scope>
+    </TokenIdentifier>
+    <Path>d8/d13/classArk_1_1internal_1_1ListExecutor.html</Path>
+    <Anchor>a4dfafef3ba0d38602dd0c926374344d8</Anchor>
+    <Abstract>Construct a new Macro Executor object.</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6813,7 +6454,19 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>a4dfafef3ba0d38602dd0c926374344d8</Anchor>
     <Abstract>Construct a new Macro Executor object.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>~MacroExecutor</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::MacroExecutor</Scope>
+    </TokenIdentifier>
+    <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
+    <Anchor>a930cc4993acd0ed0117c8c257a2c13eb</Anchor>
+    <Abstract>Need a virtual destructor to correctly destory object.</Abstract>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6825,7 +6478,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>ac6badab5d969fa5e38a8c3a506d3354e</Anchor>
     <Abstract>Find the nearest macro matching a giving name.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6837,7 +6490,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>ab3864ba306ea433c82bf391a5a474ef8</Anchor>
     <Abstract>Registers macros based on their type.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6849,7 +6502,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>a84e42959721a5c84f6fae6bf572b11ad</Anchor>
     <Abstract>Check if a node can be evaluated to true.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6861,7 +6514,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>a0e38cdada243b3c3f45f21cceca95d83</Anchor>
     <Abstract>Evaluate only the macros.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6873,7 +6526,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>ad603ba31153b99e6f8cb8b99fcae4019</Anchor>
     <Abstract>Applies the spread operator.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6885,7 +6538,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>a8d482429d4abd29c3ea405bf506a92c5</Anchor>
     <Abstract>Throw a macro processing error.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6897,7 +6550,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>afebda0b9673520111fed413c2cfb69ac</Anchor>
     <Abstract>Execute a node, trying to emplace macros calls.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6909,7 +6562,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>add7338bad4db868807b2f9e9ca24d6e3</Anchor>
     <Abstract>Check if a given symbol is a predefined macro.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6940,7 +6593,7 @@
     </TokenIdentifier>
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Abstract>A class that applies macros in a Node.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6952,7 +6605,19 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>a4dfafef3ba0d38602dd0c926374344d8</Anchor>
     <Abstract>Construct a new Macro Executor object.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>~MacroExecutor</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::MacroExecutor</Scope>
+    </TokenIdentifier>
+    <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
+    <Anchor>a930cc4993acd0ed0117c8c257a2c13eb</Anchor>
+    <Abstract>Need a virtual destructor to correctly destory object.</Abstract>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6964,7 +6629,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>a8f84d362c46b41a60176ffd95e363280</Anchor>
     <Abstract>Executes macros in the Node if the Executor can handle it.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6976,7 +6641,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>a52cdc7bf4d5089a68cbccb2310f0a159</Anchor>
     <Abstract>Checks if the executor can apply a macro on the passed Node.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6988,7 +6653,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>ac6badab5d969fa5e38a8c3a506d3354e</Anchor>
     <Abstract>Find the nearest macro matching a giving name.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7000,7 +6665,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>ab3864ba306ea433c82bf391a5a474ef8</Anchor>
     <Abstract>Registers macros based on their type.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7012,7 +6677,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>a84e42959721a5c84f6fae6bf572b11ad</Anchor>
     <Abstract>Check if a node can be evaluated to true.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7024,7 +6689,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>a0e38cdada243b3c3f45f21cceca95d83</Anchor>
     <Abstract>Evaluate only the macros.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7036,7 +6701,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>ad603ba31153b99e6f8cb8b99fcae4019</Anchor>
     <Abstract>Applies the spread operator.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7048,7 +6713,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>a8d482429d4abd29c3ea405bf506a92c5</Anchor>
     <Abstract>Throw a macro processing error.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7060,7 +6725,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>afebda0b9673520111fed413c2cfb69ac</Anchor>
     <Abstract>Execute a node, trying to emplace macros calls.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7072,7 +6737,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>add7338bad4db868807b2f9e9ca24d6e3</Anchor>
     <Abstract>Check if a given symbol is a predefined macro.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7103,7 +6768,18 @@
     </TokenIdentifier>
     <Path>d7/d22/classArk_1_1internal_1_1MacroExecutorPipeline.html</Path>
     <Abstract>The class that initializes the MacroExecutors.</Abstract>
-    <DeclaredIn>MacroExecutorPipeline.hpp</DeclaredIn>
+    <DeclaredIn>Pipeline.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>MacroExecutorPipeline</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::MacroExecutorPipeline</Scope>
+    </TokenIdentifier>
+    <Path>d7/d22/classArk_1_1internal_1_1MacroExecutorPipeline.html</Path>
+    <Anchor>a2c503ecb74a45fda27f2035e1bd2cc64</Anchor>
+    <DeclaredIn>Pipeline.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7115,7 +6791,7 @@
     <Path>d7/d22/classArk_1_1internal_1_1MacroExecutorPipeline.html</Path>
     <Anchor>aa984c3e2867567448108af5639c416b2</Anchor>
     <Abstract>Construct a new Macro Executor Pipeline object.</Abstract>
-    <DeclaredIn>MacroExecutorPipeline.hpp</DeclaredIn>
+    <DeclaredIn>Pipeline.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7127,7 +6803,7 @@
     <Path>d7/d22/classArk_1_1internal_1_1MacroExecutorPipeline.html</Path>
     <Anchor>a1f4d8647b945273be83e5734925a9799</Anchor>
     <Abstract>Passes node through all MacroExecutors sequentially.</Abstract>
-    <DeclaredIn>MacroExecutorPipeline.hpp</DeclaredIn>
+    <DeclaredIn>Pipeline.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7148,7 +6824,7 @@
     </TokenIdentifier>
     <Path>d5/db5/classArk_1_1internal_1_1MacroProcessor.html</Path>
     <Abstract>The class handling the macros definitions and calls, given an AST.</Abstract>
-    <DeclaredIn>MacroProcessor.hpp</DeclaredIn>
+    <DeclaredIn>Processor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7160,7 +6836,7 @@
     <Path>d5/db5/classArk_1_1internal_1_1MacroProcessor.html</Path>
     <Anchor>a1c2ceddaaa5aa089efd72b3d4acfc92f</Anchor>
     <Abstract>Construct a new Macro Processor object.</Abstract>
-    <DeclaredIn>MacroProcessor.hpp</DeclaredIn>
+    <DeclaredIn>Processor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7172,7 +6848,7 @@
     <Path>d5/db5/classArk_1_1internal_1_1MacroProcessor.html</Path>
     <Anchor>adefb3c96d1e15fbed63da17d06793660</Anchor>
     <Abstract>Send the complete AST (after the inclusions and stuff), and work on it.</Abstract>
-    <DeclaredIn>MacroProcessor.hpp</DeclaredIn>
+    <DeclaredIn>Processor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7184,7 +6860,7 @@
     <Path>d5/db5/classArk_1_1internal_1_1MacroProcessor.html</Path>
     <Anchor>a3b5adb1ac78f311b33108d495a397c3e</Anchor>
     <Abstract>Return the modified AST.</Abstract>
-    <DeclaredIn>MacroProcessor.hpp</DeclaredIn>
+    <DeclaredIn>Processor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7196,7 +6872,7 @@
     <Path>d5/db5/classArk_1_1internal_1_1MacroProcessor.html</Path>
     <Anchor>ae11cc58a08c549e72fdf3e1878846a70</Anchor>
     <Abstract>Find the nearest macro matching a given name.</Abstract>
-    <DeclaredIn>MacroProcessor.hpp</DeclaredIn>
+    <DeclaredIn>Processor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7208,7 +6884,7 @@
     <Path>d5/db5/classArk_1_1internal_1_1MacroProcessor.html</Path>
     <Anchor>af9e9839e37c2b896d45a79a3501059e9</Anchor>
     <Abstract>Find the nearest macro matching a given name and delete it.</Abstract>
-    <DeclaredIn>MacroProcessor.hpp</DeclaredIn>
+    <DeclaredIn>Processor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7220,7 +6896,7 @@
     <Path>d5/db5/classArk_1_1internal_1_1MacroProcessor.html</Path>
     <Anchor>abdc1384681bb70e9e53ea66b1f325063</Anchor>
     <Abstract>Check if a given symbol is a predefined macro or not.</Abstract>
-    <DeclaredIn>MacroProcessor.hpp</DeclaredIn>
+    <DeclaredIn>Processor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7232,7 +6908,7 @@
     <Path>d5/db5/classArk_1_1internal_1_1MacroProcessor.html</Path>
     <Anchor>a4583402299b71915e8bc258e36caff8c</Anchor>
     <Abstract>Recursively apply macros on a given node.</Abstract>
-    <DeclaredIn>MacroProcessor.hpp</DeclaredIn>
+    <DeclaredIn>Processor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7244,7 +6920,7 @@
     <Path>d5/db5/classArk_1_1internal_1_1MacroProcessor.html</Path>
     <Anchor>a9acf4a4aa1310ef38d7d0c46cea6fbde</Anchor>
     <Abstract>Check if a given node is a list node, and starts with a Begin.</Abstract>
-    <DeclaredIn>MacroProcessor.hpp</DeclaredIn>
+    <DeclaredIn>Processor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7256,19 +6932,19 @@
     <Path>d5/db5/classArk_1_1internal_1_1MacroProcessor.html</Path>
     <Anchor>a082eb1105482c8cd65bd9aeea7e9f841</Anchor>
     <Abstract>Remove a begin block added by a macro.</Abstract>
-    <DeclaredIn>MacroProcessor.hpp</DeclaredIn>
+    <DeclaredIn>Processor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>canBeCompileTimeEvaluated</Name>
+      <Name>isConstEval</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
       <Scope>Ark::internal::MacroProcessor</Scope>
     </TokenIdentifier>
     <Path>d5/db5/classArk_1_1internal_1_1MacroProcessor.html</Path>
-    <Anchor>abd4e2d921b98add8746257213d514ec8</Anchor>
+    <Anchor>ab4091ae0f5f2d6b842aaca081c4ea009</Anchor>
     <Abstract>Check if a node can be evaluated at compile time.</Abstract>
-    <DeclaredIn>MacroProcessor.hpp</DeclaredIn>
+    <DeclaredIn>Processor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7280,7 +6956,7 @@
     <Path>d5/db5/classArk_1_1internal_1_1MacroProcessor.html</Path>
     <Anchor>a5aecfdc38cf109dc22bb13f1fcc3bee4</Anchor>
     <Abstract>Registers macros based on their type.</Abstract>
-    <DeclaredIn>MacroProcessor.hpp</DeclaredIn>
+    <DeclaredIn>Processor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7292,7 +6968,7 @@
     <Path>d5/db5/classArk_1_1internal_1_1MacroProcessor.html</Path>
     <Anchor>aedc3172cda3c42a2083127af836eac81</Anchor>
     <Abstract>Registers a function definition node.</Abstract>
-    <DeclaredIn>MacroProcessor.hpp</DeclaredIn>
+    <DeclaredIn>Processor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7304,7 +6980,7 @@
     <Path>d5/db5/classArk_1_1internal_1_1MacroProcessor.html</Path>
     <Anchor>a1f216dd9aabfc722202a099aa64bc8be</Anchor>
     <Abstract>Register macros in scopes and apply them as needed.</Abstract>
-    <DeclaredIn>MacroProcessor.hpp</DeclaredIn>
+    <DeclaredIn>Processor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7316,7 +6992,7 @@
     <Path>d5/db5/classArk_1_1internal_1_1MacroProcessor.html</Path>
     <Anchor>ac2241cb1fecfe6202be52a2c21551107</Anchor>
     <Abstract>Apply a macro on a given node.</Abstract>
-    <DeclaredIn>MacroProcessor.hpp</DeclaredIn>
+    <DeclaredIn>Processor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7328,7 +7004,7 @@
     <Path>d5/db5/classArk_1_1internal_1_1MacroProcessor.html</Path>
     <Anchor>a291cc0dfe66420c6107b1c85aeb8969a</Anchor>
     <Abstract>Unify a target node with a given map symbol =&gt; replacement node, recursively.</Abstract>
-    <DeclaredIn>MacroProcessor.hpp</DeclaredIn>
+    <DeclaredIn>Processor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7340,7 +7016,7 @@
     <Path>d5/db5/classArk_1_1internal_1_1MacroProcessor.html</Path>
     <Anchor>a7cc3554bc9695d371ef9337ea1fcca3d</Anchor>
     <Abstract>Evaluate only the macros.</Abstract>
-    <DeclaredIn>MacroProcessor.hpp</DeclaredIn>
+    <DeclaredIn>Processor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7352,7 +7028,7 @@
     <Path>d5/db5/classArk_1_1internal_1_1MacroProcessor.html</Path>
     <Anchor>a9913e292f95d6211828e21b01e83d1aa</Anchor>
     <Abstract>Check if a node can be evaluated to true.</Abstract>
-    <DeclaredIn>MacroProcessor.hpp</DeclaredIn>
+    <DeclaredIn>Processor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7364,7 +7040,7 @@
     <Path>d5/db5/classArk_1_1internal_1_1MacroProcessor.html</Path>
     <Anchor>aa54ef47d50242ea4ab59a23669dd8399</Anchor>
     <Abstract>Throw a macro processing error.</Abstract>
-    <DeclaredIn>MacroProcessor.hpp</DeclaredIn>
+    <DeclaredIn>Processor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7417,7 +7093,7 @@
       <Scope>Ark::internal::MacroProcessor</Scope>
     </TokenIdentifier>
     <Path>d5/db5/classArk_1_1internal_1_1MacroProcessor.html</Path>
-    <Anchor>a742e2f56c5d928e661de262d0c22dd05</Anchor>
+    <Anchor>a4116c10bc756f4312beeadf290cad922</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7460,26 +7136,6 @@
     <Path>dc/d9e/classArk_1_1internal_1_1Node.html</Path>
     <Abstract>A node of an Abstract Syntax Tree for ArkScript.</Abstract>
     <DeclaredIn>Node.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Iterator</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>tdef</Type>
-      <Scope>Ark::internal::Node</Scope>
-    </TokenIdentifier>
-    <Path>dc/d9e/classArk_1_1internal_1_1Node.html</Path>
-    <Anchor>acb51b539cbe2a7e737e63f8b3a7da94a</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Map</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>tdef</Type>
-      <Scope>Ark::internal::Node</Scope>
-    </TokenIdentifier>
-    <Path>dc/d9e/classArk_1_1internal_1_1Node.html</Path>
-    <Anchor>accde98529d2367b1cafb23b1f87148fd</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7571,6 +7227,30 @@
     </TokenIdentifier>
     <Path>dc/d9e/classArk_1_1internal_1_1Node.html</Path>
     <Anchor>a14e15ff75dafca1ff786fe66ba37fb53</Anchor>
+    <Abstract>Construct a new Node object.</Abstract>
+    <DeclaredIn>Node.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>operator=</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Node</Scope>
+    </TokenIdentifier>
+    <Path>dc/d9e/classArk_1_1internal_1_1Node.html</Path>
+    <Anchor>a07ce4a0c9eae997b3236afd861931024</Anchor>
+    <Abstract>Construct a new Node object.</Abstract>
+    <DeclaredIn>Node.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>swap</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Node</Scope>
+    </TokenIdentifier>
+    <Path>dc/d9e/classArk_1_1internal_1_1Node.html</Path>
+    <Anchor>a3fb0d6852c94ab3436a3f4ab4afce79e</Anchor>
     <Abstract>Construct a new Node object.</Abstract>
     <DeclaredIn>Node.hpp</DeclaredIn>
   </Token>
@@ -7768,55 +7448,63 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>init</Name>
+      <Name>getTrueNode</Name>
       <APILanguage>cpp</APILanguage>
       <Type>clm</Type>
       <Scope>Ark::internal::Node</Scope>
     </TokenIdentifier>
     <Path>dc/d9e/classArk_1_1internal_1_1Node.html</Path>
-    <Anchor>a0af1d77329a4061a552a1e7ac478998c</Anchor>
-    <Abstract>Initialize static default nodes.</Abstract>
+    <Anchor>ac6304161d3f6aff06516a11d80f95772</Anchor>
+    <Abstract>Provide a statically initialized / correct and guaranteed to be initialized Node representing &quot;true&quot;.</Abstract>
     <DeclaredIn>Node.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>TrueNode</Name>
+      <Name>getFalseNode</Name>
       <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
+      <Type>clm</Type>
       <Scope>Ark::internal::Node</Scope>
     </TokenIdentifier>
     <Path>dc/d9e/classArk_1_1internal_1_1Node.html</Path>
-    <Anchor>a4693baae42900acb7d2511ea0c1b9d6a</Anchor>
+    <Anchor>ae07725a0d91536877f334909752f20d6</Anchor>
+    <Abstract>Provide a statically initialized / correct and guaranteed to be initialized Node representing &quot;false&quot;...</Abstract>
+    <DeclaredIn>Node.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>FalseNode</Name>
+      <Name>getNilNode</Name>
       <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
+      <Type>clm</Type>
       <Scope>Ark::internal::Node</Scope>
     </TokenIdentifier>
     <Path>dc/d9e/classArk_1_1internal_1_1Node.html</Path>
-    <Anchor>a4b264686bfe887d9f3f675cd0a9679c0</Anchor>
+    <Anchor>aaaa8950a9176bf28f1440facdc66e78f</Anchor>
+    <Abstract>Provide a statically initialized / correct and guaranteed to be initialized Node representing &quot;Nil&quot;.</Abstract>
+    <DeclaredIn>Node.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>NilNode</Name>
+      <Name>getListNode</Name>
       <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
+      <Type>clm</Type>
       <Scope>Ark::internal::Node</Scope>
     </TokenIdentifier>
     <Path>dc/d9e/classArk_1_1internal_1_1Node.html</Path>
-    <Anchor>a11848681f4a28449c1077ff99f3f9542</Anchor>
+    <Anchor>a17805d831c283b92cfa6d146dcce8710</Anchor>
+    <Abstract>Provide a statically initialized / correct and guaranteed to be initialized Node representing &quot;Empty ...</Abstract>
+    <DeclaredIn>Node.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>ListNode</Name>
+      <Name>Node</Name>
       <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
+      <Type>instm</Type>
       <Scope>Ark::internal::Node</Scope>
     </TokenIdentifier>
     <Path>dc/d9e/classArk_1_1internal_1_1Node.html</Path>
-    <Anchor>a73ea091e9978846ab32e1859cca26c5f</Anchor>
+    <Anchor>a65441e5147542b69f1f3922a39e2a8f8</Anchor>
+    <Abstract>Construct a new Node object.</Abstract>
+    <DeclaredIn>Node.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7886,7 +7574,18 @@
       <Scope>Ark::internal::Node</Scope>
     </TokenIdentifier>
     <Path>dc/d9e/classArk_1_1internal_1_1Node.html</Path>
-    <Anchor>a4200fe32c32d5727789a0f366b1a5319</Anchor>
+    <Anchor>aad6841e219e3c973ed3cee6f7aaaeaea</Anchor>
+    <DeclaredIn>Node.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>swap</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>ffunc</Type>
+      <Scope>Ark::internal::Node</Scope>
+    </TokenIdentifier>
+    <Path>dc/d9e/classArk_1_1internal_1_1Node.html</Path>
+    <Anchor>af64425b16845aa0f790ed71c16f323af</Anchor>
     <DeclaredIn>Node.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -7897,7 +7596,7 @@
       <Scope>Ark::internal::Node</Scope>
     </TokenIdentifier>
     <Path>dc/d9e/classArk_1_1internal_1_1Node.html</Path>
-    <Anchor>afe796c4422f9ba9b0d3f6c1441a3ab41</Anchor>
+    <Anchor>ac562303e969f463ea5681d21c26eadf4</Anchor>
     <DeclaredIn>Node.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -7908,7 +7607,7 @@
       <Scope>Ark::internal::Node</Scope>
     </TokenIdentifier>
     <Path>dc/d9e/classArk_1_1internal_1_1Node.html</Path>
-    <Anchor>a52cffc75d282500411463c8545871f44</Anchor>
+    <Anchor>a0cafe8248fe5776d770a71e0a3f7ac04</Anchor>
     <DeclaredIn>Node.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -7919,8 +7618,510 @@
       <Scope>Ark::internal::Node</Scope>
     </TokenIdentifier>
     <Path>dc/d9e/classArk_1_1internal_1_1Node.html</Path>
-    <Anchor>acbd984f2d86848eaf8a49d29f2e48830</Anchor>
+    <Anchor>a7beadea8fb11fb9c2b704713f7d5aa81</Anchor>
     <DeclaredIn>Node.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Ark::internal::Optimizer</Name>
+      <APILanguage>c</APILanguage>
+      <Type>cl</Type>
+      <Scope>Ark::internal::Optimizer</Scope>
+    </TokenIdentifier>
+    <Path>d7/da8/classArk_1_1internal_1_1Optimizer.html</Path>
+    <Abstract>The ArkScript AST optimizer.</Abstract>
+    <DeclaredIn>Optimizer.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Optimizer</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Optimizer</Scope>
+    </TokenIdentifier>
+    <Path>d7/da8/classArk_1_1internal_1_1Optimizer.html</Path>
+    <Anchor>a9ad7ccda8dae85ba90d0373f96e8556c</Anchor>
+    <Abstract>Construct a new Optimizer.</Abstract>
+    <DeclaredIn>Optimizer.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>feed</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Optimizer</Scope>
+    </TokenIdentifier>
+    <Path>d7/da8/classArk_1_1internal_1_1Optimizer.html</Path>
+    <Anchor>a4560d67d7b05259c14587844bc90849e</Anchor>
+    <Abstract>Send the AST to the optimizer, then run the different optimization strategies on it.</Abstract>
+    <DeclaredIn>Optimizer.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ast</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Optimizer</Scope>
+    </TokenIdentifier>
+    <Path>d7/da8/classArk_1_1internal_1_1Optimizer.html</Path>
+    <Anchor>a8be56090ec84e93dec37021817d0249e</Anchor>
+    <Abstract>Returns the modified AST.</Abstract>
+    <DeclaredIn>Optimizer.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>throwOptimizerError</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Optimizer</Scope>
+    </TokenIdentifier>
+    <Path>d7/da8/classArk_1_1internal_1_1Optimizer.html</Path>
+    <Anchor>a535511ab9273e2e2cab43f755f7cd05f</Anchor>
+    <Abstract>Generate a fancy error message.</Abstract>
+    <DeclaredIn>Optimizer.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>remove_unused</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Optimizer</Scope>
+    </TokenIdentifier>
+    <Path>d7/da8/classArk_1_1internal_1_1Optimizer.html</Path>
+    <Anchor>a641ce6f4b916c9e6cd7bf9688dc82515</Anchor>
+    <Abstract>Iterate over the AST and remove unused top level functions and constants.</Abstract>
+    <DeclaredIn>Optimizer.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>runOnGlobalScopeVars</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Optimizer</Scope>
+    </TokenIdentifier>
+    <Path>d7/da8/classArk_1_1internal_1_1Optimizer.html</Path>
+    <Anchor>ae4e2ab713300b30ffd69be86b114f43e</Anchor>
+    <Abstract>Run a given functor on the global scope symbols.</Abstract>
+    <DeclaredIn>Optimizer.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>countOccurences</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Optimizer</Scope>
+    </TokenIdentifier>
+    <Path>d7/da8/classArk_1_1internal_1_1Optimizer.html</Path>
+    <Anchor>ab296d25ceb7858bc9e2055116dc88554</Anchor>
+    <Abstract>Count the occurences of each symbol in the AST, recursively.</Abstract>
+    <DeclaredIn>Optimizer.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>m_ast</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::Optimizer</Scope>
+    </TokenIdentifier>
+    <Path>d7/da8/classArk_1_1internal_1_1Optimizer.html</Path>
+    <Anchor>af527ecf72bb077b3f43534742b5fd2a3</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>m_options</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::Optimizer</Scope>
+    </TokenIdentifier>
+    <Path>d7/da8/classArk_1_1internal_1_1Optimizer.html</Path>
+    <Anchor>a6cd7880cfedbb9f07850bdc5eb6d7224</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>m_sym_appearances</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::Optimizer</Scope>
+    </TokenIdentifier>
+    <Path>d7/da8/classArk_1_1internal_1_1Optimizer.html</Path>
+    <Anchor>aea100395cb6d3bd987ca751b054c40f8</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Ark::internal::Parser</Name>
+      <APILanguage>c</APILanguage>
+      <Type>cl</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Abstract>The parser is responsible of constructing the Abstract Syntax Tree from a token list.</Abstract>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Parser</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>aca21b7dee8764c0a9b6f2c43e067fdc1</Anchor>
+    <Abstract>Construct a new Parser object.</Abstract>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>feed</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>a620b43bba1055014b068b4c29a9cf33f</Anchor>
+    <Abstract>Give the code to parse.</Abstract>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ast</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>a50cba765e5c2b08dcda5fca3e1b3b874</Anchor>
+    <Abstract>Return the generated AST.</Abstract>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getImports</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>af9d75ba11e0856265017f0f182e22a11</Anchor>
+    <Abstract>Return the list of files imported by the code given to the parser.</Abstract>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>sugar</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>a3749e06e77a11e833bdb1dc37bc5b37e</Anchor>
+    <Abstract>Applying syntactic sugar: {...} =&gt; (begin...), [...] =&gt; (list ...)</Abstract>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parse</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>ac76f2d3acfe36bda7fac2a7fae44d0aa</Anchor>
+    <Abstract>Parse a list of tokens recursively.</Abstract>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseIf</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>a7450b6b4d326006966336058d2ba683d</Anchor>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseLetMut</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>aea73ec1504c01f4b2f68ec18a07356c5</Anchor>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseSet</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>a48d549358a779bfbc045f26906f0b457</Anchor>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseFun</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>a11accf4c6764047aa9844d0e963b77d3</Anchor>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseWhile</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>a8195ff6f2a4caded445459619a009e21</Anchor>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseBegin</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>a41122edb84408ed452d440402edd2428</Anchor>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseImport</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>aca08645d64bed39be975a138cdcc446c</Anchor>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseQuote</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>acfab95f1e4046326a37d30b058b75db9</Anchor>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseDel</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>ab73011c0e5453317258cc7b920adc947</Anchor>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseShorthand</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>abbf0184ea8377a60ac319927442646ff</Anchor>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>checkForInvalidTokens</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>ab05a1fab4e90d59554cfbbba574ff02f</Anchor>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>nextToken</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>ae13e6ffab33f28a562e5891465efd2ca</Anchor>
+    <Abstract>Get the next token if possible, from a list of tokens.</Abstract>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>atom</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>a2d68991df71a3e102a9e8a1c8d83f867</Anchor>
+    <Abstract>Convert a token to a node.</Abstract>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>checkForInclude</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>ad874715357cbab3cdc657ab1521181ef</Anchor>
+    <Abstract>Search for all the includes in a given node, in its sub-nodes and replace them by the code of the inc...</Abstract>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>seekFile</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>a71639df58afbcfd3a025533a83ff7c36</Anchor>
+    <Abstract>Seek a file in the lib folder and everywhere.</Abstract>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>expect</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>a4b13c86e5fbef815e7b3fb60b0c7074c</Anchor>
+    <Abstract>Throw a parse exception is the given predicated is false.</Abstract>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>throwParseError</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>a6fc0e2586b99983e76c97c212552ad42</Anchor>
+    <Abstract>Throw a parse error related to a token (seek it in the related file and highlight the error)</Abstract>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>m_debug</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>a35ae7ca69997a02cf3d531f12db97f65</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>m_libenv</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>a77ff614cf1f84fea017061b05cf51ce8</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>m_options</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>a2e78ab3b8cc6f2e77180190662092938</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>m_lexer</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>a7d665be047c3cfc8f7d1b2984143a54f</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>m_ast</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>af3374a8db9c9deb335fa17356de29e12</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>m_last_token</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>a47d6caa7d980e2ca6db5130d3abdd9b8</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>m_file</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>a7e9e7819d410f7464cfa1eacf038d758</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>m_code</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>a0dea1d8416649828d06b6cc85860dccd</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>m_parent_include</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>ad11b5653d6954b028dd2526f083e86fa</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>operator&lt;&lt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>ffunc</Type>
+      <Scope>Ark::internal::Parser</Scope>
+    </TokenIdentifier>
+    <Path>d9/d0c/classArk_1_1internal_1_1Parser.html</Path>
+    <Anchor>a409261c97856082468d2c92dbcc1c063</Anchor>
+    <DeclaredIn>Parser.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8001,7 +8202,7 @@
       <Scope>Ark::internal::Scope</Scope>
     </TokenIdentifier>
     <Path>d5/d74/classArk_1_1internal_1_1Scope.html</Path>
-    <Anchor>a39349a331b69333504f1c489ecee2d00</Anchor>
+    <Anchor>aa273c99ef0ce44bf96f7d52e59ec6298</Anchor>
     <Abstract>Get the id of a variable based on its value ; used for debug only.</Abstract>
     <DeclaredIn>Scope.hpp</DeclaredIn>
   </Token>
@@ -8013,7 +8214,7 @@
       <Scope>Ark::internal::Scope</Scope>
     </TokenIdentifier>
     <Path>d5/d74/classArk_1_1internal_1_1Scope.html</Path>
-    <Anchor>ad16445440b626135cdd3a432a19228cb</Anchor>
+    <Anchor>ad6804c8252c0fb5dab8d30107dbafeb3</Anchor>
     <Abstract>Return the size of the scope.</Abstract>
     <DeclaredIn>Scope.hpp</DeclaredIn>
   </Token>
@@ -8058,6 +8259,29 @@
     <Path>d0/d8a/classArk_1_1internal_1_1SharedLibrary.html</Path>
     <Anchor>a303d9b499a5e261c15a743d306cf2232</Anchor>
     <Abstract>Construct a new Shared Library object.</Abstract>
+    <DeclaredIn>Plugin.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>SharedLibrary</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::SharedLibrary</Scope>
+    </TokenIdentifier>
+    <Path>d0/d8a/classArk_1_1internal_1_1SharedLibrary.html</Path>
+    <Anchor>a78b2ba20dec442df60e3bafdcdb712a8</Anchor>
+    <Abstract>Disable copy semantics as this contains a pointer.</Abstract>
+    <DeclaredIn>Plugin.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>operator=</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::SharedLibrary</Scope>
+    </TokenIdentifier>
+    <Path>d0/d8a/classArk_1_1internal_1_1SharedLibrary.html</Path>
+    <Anchor>aa684bb1d043fa4fa295e79d5596a6185</Anchor>
     <DeclaredIn>Plugin.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -8160,18 +8384,7 @@
     </TokenIdentifier>
     <Path>d5/dae/classArk_1_1internal_1_1SymbolExecutor.html</Path>
     <Abstract>Handles Symbol macros.</Abstract>
-    <DeclaredIn>SymbolExecutor.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>SymbolExecutor</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Ark::internal::SymbolExecutor</Scope>
-    </TokenIdentifier>
-    <Path>d5/dae/classArk_1_1internal_1_1SymbolExecutor.html</Path>
-    <Anchor>adedecdaa6c93f60e601c4673bdaeceda</Anchor>
-    <DeclaredIn>SymbolExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Symbol.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8183,7 +8396,7 @@
     <Path>d5/dae/classArk_1_1internal_1_1SymbolExecutor.html</Path>
     <Anchor>a9c20036089ffd849113e31d753c96300</Anchor>
     <Abstract>Executes macros in the Node if the Executor can handle it.</Abstract>
-    <DeclaredIn>SymbolExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Symbol.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8195,7 +8408,18 @@
     <Path>d5/dae/classArk_1_1internal_1_1SymbolExecutor.html</Path>
     <Anchor>aa2804ae84834c9753c689322142fc86d</Anchor>
     <Abstract>Checks if the executor can apply a macro on the passed Node.</Abstract>
-    <DeclaredIn>SymbolExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Symbol.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>MacroExecutor</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::SymbolExecutor</Scope>
+    </TokenIdentifier>
+    <Path>d5/dae/classArk_1_1internal_1_1SymbolExecutor.html</Path>
+    <Anchor>a4dfafef3ba0d38602dd0c926374344d8</Anchor>
+    <Abstract>Construct a new Macro Executor object.</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8207,7 +8431,19 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>a4dfafef3ba0d38602dd0c926374344d8</Anchor>
     <Abstract>Construct a new Macro Executor object.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>~MacroExecutor</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Ark::internal::MacroExecutor</Scope>
+    </TokenIdentifier>
+    <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
+    <Anchor>a930cc4993acd0ed0117c8c257a2c13eb</Anchor>
+    <Abstract>Need a virtual destructor to correctly destory object.</Abstract>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8219,7 +8455,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>ac6badab5d969fa5e38a8c3a506d3354e</Anchor>
     <Abstract>Find the nearest macro matching a giving name.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8231,7 +8467,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>ab3864ba306ea433c82bf391a5a474ef8</Anchor>
     <Abstract>Registers macros based on their type.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8243,7 +8479,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>a84e42959721a5c84f6fae6bf572b11ad</Anchor>
     <Abstract>Check if a node can be evaluated to true.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8255,7 +8491,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>a0e38cdada243b3c3f45f21cceca95d83</Anchor>
     <Abstract>Evaluate only the macros.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8267,7 +8503,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>ad603ba31153b99e6f8cb8b99fcae4019</Anchor>
     <Abstract>Applies the spread operator.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8279,7 +8515,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>a8d482429d4abd29c3ea405bf506a92c5</Anchor>
     <Abstract>Throw a macro processing error.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8291,7 +8527,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>afebda0b9673520111fed413c2cfb69ac</Anchor>
     <Abstract>Execute a node, trying to emplace macros calls.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8303,7 +8539,7 @@
     <Path>d5/d8f/classArk_1_1internal_1_1MacroExecutor.html</Path>
     <Anchor>add7338bad4db868807b2f9e9ca24d6e3</Anchor>
     <Abstract>Check if a given symbol is a predefined macro.</Abstract>
-    <DeclaredIn>MacroExecutor.hpp</DeclaredIn>
+    <DeclaredIn>Executor.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8333,7 +8569,7 @@
       <Scope>Ark::internal::Token</Scope>
     </TokenIdentifier>
     <Path>d0/d98/structArk_1_1internal_1_1Token.html</Path>
-    <DeclaredIn>Lexer.hpp</DeclaredIn>
+    <DeclaredIn>Token.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8345,7 +8581,7 @@
     <Path>d0/d98/structArk_1_1internal_1_1Token.html</Path>
     <Anchor>a9323fd1112cd5f46dace3c0bbba1115f</Anchor>
     <Abstract>Construct a new Token object.</Abstract>
-    <DeclaredIn>Lexer.hpp</DeclaredIn>
+    <DeclaredIn>Token.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8357,19 +8593,7 @@
     <Path>d0/d98/structArk_1_1internal_1_1Token.html</Path>
     <Anchor>a4072984bc6f2746998ef49fe2b76cbde</Anchor>
     <Abstract>Construct a new Token object.</Abstract>
-    <DeclaredIn>Lexer.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Token</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>func</Type>
-      <Scope>Ark::internal::Token</Scope>
-    </TokenIdentifier>
-    <Path>d0/d98/structArk_1_1internal_1_1Token.html</Path>
-    <Anchor>ae91bd2e255ba33ebb8fb3afbce33f56f</Anchor>
-    <Abstract>Construct a new Token object from another one.</Abstract>
-    <DeclaredIn>Lexer.hpp</DeclaredIn>
+    <DeclaredIn>Token.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8464,6 +8688,103 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>Ark::internal::ValTableElem</Name>
+      <APILanguage>c</APILanguage>
+      <Type>cl</Type>
+      <Scope>Ark::internal::ValTableElem</Scope>
+    </TokenIdentifier>
+    <Path>d8/dc4/structArk_1_1internal_1_1ValTableElem.html</Path>
+    <Abstract>A Compiler Value class helper to handle multiple types.</Abstract>
+    <DeclaredIn>ValTableElem.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ValTableElem</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal::ValTableElem</Scope>
+    </TokenIdentifier>
+    <Path>d8/dc4/structArk_1_1internal_1_1ValTableElem.html</Path>
+    <Anchor>a650e0fd2edfbec6d05ed1a5bf3fb5b54</Anchor>
+    <DeclaredIn>ValTableElem.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ValTableElem</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal::ValTableElem</Scope>
+    </TokenIdentifier>
+    <Path>d8/dc4/structArk_1_1internal_1_1ValTableElem.html</Path>
+    <Anchor>a7d597c61ebc82f56fbd6428effbe4330</Anchor>
+    <DeclaredIn>ValTableElem.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ValTableElem</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal::ValTableElem</Scope>
+    </TokenIdentifier>
+    <Path>d8/dc4/structArk_1_1internal_1_1ValTableElem.html</Path>
+    <Anchor>ac5bb6a7a25b6f83cea785152ba094e05</Anchor>
+    <DeclaredIn>ValTableElem.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ValTableElem</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal::ValTableElem</Scope>
+    </TokenIdentifier>
+    <Path>d8/dc4/structArk_1_1internal_1_1ValTableElem.html</Path>
+    <Anchor>ac3306a9950de3425021d799a92f608f9</Anchor>
+    <DeclaredIn>ValTableElem.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ValTableElem</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal::ValTableElem</Scope>
+    </TokenIdentifier>
+    <Path>d8/dc4/structArk_1_1internal_1_1ValTableElem.html</Path>
+    <Anchor>ad274aaffdde5cc7e281ae38f79cca294</Anchor>
+    <DeclaredIn>ValTableElem.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>operator==</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::internal::ValTableElem</Scope>
+    </TokenIdentifier>
+    <Path>d8/dc4/structArk_1_1internal_1_1ValTableElem.html</Path>
+    <Anchor>acdffff4dccbe284beafd54f655789e26</Anchor>
+    <DeclaredIn>ValTableElem.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>value</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::ValTableElem</Scope>
+    </TokenIdentifier>
+    <Path>d8/dc4/structArk_1_1internal_1_1ValTableElem.html</Path>
+    <Anchor>a300c7288cce96a80bf9350e2d2c369cd</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>type</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Ark::internal::ValTableElem</Scope>
+    </TokenIdentifier>
+    <Path>d8/dc4/structArk_1_1internal_1_1ValTableElem.html</Path>
+    <Anchor>af03a20a9da2352855fdb79a637c88769</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>Ark::internal::Builtins</Name>
       <APILanguage>c</APILanguage>
       <Type>ns</Type>
@@ -8513,17 +8834,6 @@
     </TokenIdentifier>
     <Path>df/dda/namespaceArk_1_1internal_1_1Builtins.html</Path>
     <Anchor>ab8e5bf9492912eca99b228b661940d8c</Anchor>
-    <DeclaredIn>Builtins.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>operators</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>Ark::internal::Builtins</Scope>
-    </TokenIdentifier>
-    <Path>df/dda/namespaceArk_1_1internal_1_1Builtins.html</Path>
-    <Anchor>a524d702628160018faf03f4f8e6c2850</Anchor>
     <DeclaredIn>Builtins.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -9129,6 +9439,37 @@
     <Path>d5/d17/namespaceArk_1_1internal_1_1Builtins_1_1Time.html</Path>
     <Anchor>a3bd22991d4d91b9d9dd4601a060765f7</Anchor>
     <DeclaredIn>Builtins.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Ark::literals</Name>
+      <APILanguage>c</APILanguage>
+      <Type>ns</Type>
+      <Scope>Ark::literals</Scope>
+    </TokenIdentifier>
+    <Path>df/d62/namespaceArk_1_1literals.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>operator&quot;&quot;_u8</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::literals</Scope>
+    </TokenIdentifier>
+    <Path>df/d62/namespaceArk_1_1literals.html</Path>
+    <Anchor>a66738ed46e8b711d19268cf8f02f6bbd</Anchor>
+    <DeclaredIn>Literals.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>operator&quot;&quot;_u16</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Ark::literals</Scope>
+    </TokenIdentifier>
+    <Path>df/d62/namespaceArk_1_1literals.html</Path>
+    <Anchor>ab2168dd30b7ea60ecc06e49f59206791</Anchor>
+    <DeclaredIn>Literals.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>

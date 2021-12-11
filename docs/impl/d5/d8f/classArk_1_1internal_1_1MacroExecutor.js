@@ -1,6 +1,7 @@
 var classArk_1_1internal_1_1MacroExecutor =
 [
     [ "MacroExecutor", "d5/d8f/classArk_1_1internal_1_1MacroExecutor.html#a4dfafef3ba0d38602dd0c926374344d8", null ],
+    [ "~MacroExecutor", "d5/d8f/classArk_1_1internal_1_1MacroExecutor.html#a930cc4993acd0ed0117c8c257a2c13eb", null ],
     [ "applyMacro", "d5/d8f/classArk_1_1internal_1_1MacroExecutor.html#a8f84d362c46b41a60176ffd95e363280", null ],
     [ "applyMacroProxy", "d5/d8f/classArk_1_1internal_1_1MacroExecutor.html#afebda0b9673520111fed413c2cfb69ac", null ],
     [ "canHandle", "d5/d8f/classArk_1_1internal_1_1MacroExecutor.html#a52cdc7bf4d5089a68cbccb2310f0a159", null ],

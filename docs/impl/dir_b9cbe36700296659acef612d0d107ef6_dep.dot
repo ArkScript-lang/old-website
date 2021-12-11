@@ -1,0 +1,15 @@
+digraph "C:/Users/folae/Documents/Code/Big-Projects/ArkScript/Ark/src/arkreactor/Compiler/Macros" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_548d85becfdd8b4d1d64f6a452aea6ab {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Compiler" fontname="Helvetica", fontsize="10", URL="dir_548d85becfdd8b4d1d64f6a452aea6ab.html"]
+  subgraph clusterdir_b9cbe36700296659acef612d0d107ef6 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_b9cbe36700296659acef612d0d107ef6.html"];
+    dir_b9cbe36700296659acef612d0d107ef6 [shape=plaintext label="Macros"];
+  dir_cfa9778ddee3bfdde39b0361cb5ec6f6 [shape=box label="Executors" fillcolor="white" style="filled" URL="dir_cfa9778ddee3bfdde39b0361cb5ec6f6.html"];
+  }
+  }
+  dir_d44c64559bbebec7f509842c48db8b23 [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_d44c64559bbebec7f509842c48db8b23.html"];
+  dir_cfa9778ddee3bfdde39b0361cb5ec6f6->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="3", labeldistance=1.5 headhref="dir_000016_000000.html"];
+}

@@ -4,6 +4,7 @@ var classArk_1_1internal_1_1Lexer =
     [ "endOfControlChar", "dd/dc4/classArk_1_1internal_1_1Lexer.html#ae281f672659764d4fa09f922e797e3bd", null ],
     [ "feed", "dd/dc4/classArk_1_1internal_1_1Lexer.html#aaa639275bfcd4f899604c568b35510ae", null ],
     [ "guessType", "dd/dc4/classArk_1_1internal_1_1Lexer.html#a9baf9a01cdbcd627f5956296c5a104ee", null ],
+    [ "isHexChar", "dd/dc4/classArk_1_1internal_1_1Lexer.html#a835ce33a68d4d27fddc529fc21de7f59", null ],
     [ "isIdentifier", "dd/dc4/classArk_1_1internal_1_1Lexer.html#a7ceaf90e0bda25433487d1480feb7769", null ],
     [ "isKeyword", "dd/dc4/classArk_1_1internal_1_1Lexer.html#a8b1f8a519822d05fdc731b9a9c679f18", null ],
     [ "isOperator", "dd/dc4/classArk_1_1internal_1_1Lexer.html#ab0bd674e07ea972da9fdbee81112d7e4", null ],

@@ -65,6 +65,5 @@ var namespaceArk_1_1internal_1_1Builtins =
     [ "builtins", "df/dda/namespaceArk_1_1internal_1_1Builtins.html#ab8e5bf9492912eca99b228b661940d8c", null ],
     [ "falseSym", "df/dda/namespaceArk_1_1internal_1_1Builtins.html#a50c50c475a29822fe85e5c16b91c9015", null ],
     [ "nil", "df/dda/namespaceArk_1_1internal_1_1Builtins.html#a0541c7c43175f68aca89a4c3a61fca12", null ],
-    [ "operators", "df/dda/namespaceArk_1_1internal_1_1Builtins.html#a524d702628160018faf03f4f8e6c2850", null ],
     [ "trueSym", "df/dda/namespaceArk_1_1internal_1_1Builtins.html#ac42d5de362d48803ef2a49f7f1e21e98", null ]
 ];

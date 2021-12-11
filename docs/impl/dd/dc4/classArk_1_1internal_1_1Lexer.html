@@ -100,6 +100,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
+<tr class="memitem:a835ce33a68d4d27fddc529fc21de7f59"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc4/classArk_1_1internal_1_1Lexer.html#a835ce33a68d4d27fddc529fc21de7f59">isHexChar</a> (char chr)</td></tr>
+<tr class="separator:a835ce33a68d4d27fddc529fc21de7f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9baf9a01cdbcd627f5956296c5a104ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfb">TokenType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc4/classArk_1_1internal_1_1Lexer.html#a9baf9a01cdbcd627f5956296c5a104ee">guessType</a> (const std::string &amp;value) noexcept</td></tr>
 <tr class="memdesc:a9baf9a01cdbcd627f5956296c5a104ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to determine the type of a token.  <a href="../../dd/dc4/classArk_1_1internal_1_1Lexer.html#a9baf9a01cdbcd627f5956296c5a104ee">More...</a><br /></td></tr>
 <tr class="separator:a9baf9a01cdbcd627f5956296c5a104ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,7 +131,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The lexer, in charge of creating a list of tokens. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d79/Lexer_8hpp_source.html#l00099">99</a> of file <a class="el" href="../../da/d79/Lexer_8hpp_source.html">Lexer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d79/Lexer_8hpp_source.html#l00026">26</a> of file <a class="el" href="../../da/d79/Lexer_8hpp_source.html">Lexer.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2a7479b8ba8589d0f931c59f0bed2542" name="a2a7479b8ba8589d0f931c59f0bed2542"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2a7479b8ba8589d0f931c59f0bed2542">&#9670;&nbsp;</a></span>Lexer()</h2>
@@ -163,7 +165,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00009">9</a> of file <a class="el" href="../../d2/d15/Lexer_8cpp_source.html">Lexer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00015">15</a> of file <a class="el" href="../../d2/d15/Lexer_8cpp_source.html">Lexer.cpp</a>.</p>
 
 </div>
 </div>
@@ -197,7 +199,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -214,7 +216,9 @@ Private Attributes</h2></td></tr>
 <dd>
 false </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00013">feed()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00301">301</a> of file <a class="el" href="../../d2/d15/Lexer_8cpp_source.html">Lexer.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00019">feed()</a>.</p>
 
 </div>
 </div>
@@ -242,11 +246,11 @@ false </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00013">13</a> of file <a class="el" href="../../d2/d15/Lexer_8cpp_source.html">Lexer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00019">19</a> of file <a class="el" href="../../d2/d15/Lexer_8cpp_source.html">Lexer.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba44a50f07b4bdc57740901280f9eddaf5">Ark::internal::Capture</a>, <a class="el" href="../../dd/dc4/classArk_1_1internal_1_1Lexer.html#ae281f672659764d4fa09f922e797e3bd">endOfControlChar()</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfbad3e2f43779da90565fa9c24f9175dc04">Ark::internal::GetField</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba0940b48511da784b3c7213afa0c0eade">Ark::internal::Grouping</a>, <a class="el" href="../../dd/dc4/classArk_1_1internal_1_1Lexer.html#a9baf9a01cdbcd627f5956296c5a104ee">guessType()</a>, <a class="el" href="../../da/d79/Lexer_8hpp_source.html#l00124">m_debug</a>, <a class="el" href="../../da/d79/Lexer_8hpp_source.html#l00125">m_tokens</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba5b0a8637935072d1ec30e60bb2cae1e6">Ark::internal::Mismatch</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba7ef3835dfef7bf9d951ce6cbb8270e85">Ark::internal::Shorthand</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba27118326006d3829667a400ad23d5d98">Ark::internal::String</a>, <a class="el" href="../../dd/dc4/classArk_1_1internal_1_1Lexer.html#aef306f456235475da2a834a2eb0f7fed">throwTokenizingError()</a>, and <a class="el" href="../../da/d79/Lexer_8hpp_source.html#l00047">Ark::internal::tokentype_string</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba44a50f07b4bdc57740901280f9eddaf5">Ark::internal::Capture</a>, <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00301">endOfControlChar()</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfbad3e2f43779da90565fa9c24f9175dc04">Ark::internal::GetField</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba0940b48511da784b3c7213afa0c0eade">Ark::internal::Grouping</a>, <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00262">guessType()</a>, <a class="el" href="../../da/d79/Lexer_8hpp_source.html#l00051">m_debug</a>, <a class="el" href="../../da/d79/Lexer_8hpp_source.html#l00052">m_tokens</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba5b0a8637935072d1ec30e60bb2cae1e6">Ark::internal::Mismatch</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba7ef3835dfef7bf9d951ce6cbb8270e85">Ark::internal::Shorthand</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba27118326006d3829667a400ad23d5d98">Ark::internal::String</a>, <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00330">throwTokenizingError()</a>, and <a class="el" href="../../d3/d6e/Token_8hpp_source.html#l00039">Ark::internal::tokentype_string</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00021">Ark::Parser::feed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00021">Ark::internal::Parser::feed()</a>.</p>
 
 </div>
 </div>
@@ -269,7 +273,7 @@ false </dd></dl>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -283,7 +287,41 @@ false </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>TokenType </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00013">feed()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00262">262</a> of file <a class="el" href="../../d2/d15/Lexer_8cpp_source.html">Lexer.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba44a50f07b4bdc57740901280f9eddaf5">Ark::internal::Capture</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfbad3e2f43779da90565fa9c24f9175dc04">Ark::internal::GetField</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba29ee5d1ebcc033234938a5234f1f2075">Ark::internal::Identifier</a>, <a class="el" href="../../d7/d09/Utils_8hpp_source.html#l00087">Ark::Utils::isDouble()</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba220f3d3750583b9db48568a0b5b9a5f1">Ark::internal::Keyword</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba5b0a8637935072d1ec30e60bb2cae1e6">Ark::internal::Mismatch</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfbab2ee912b91d69b435159c7c3f6df7f5f">Ark::internal::Number</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfbae1b3ec89ead7f83a9245ed5c9cacfdbf">Ark::internal::Operator</a>, and <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfba180bc3b1c5619aaef40e803f49921012">Ark::internal::Spread</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00019">feed()</a>.</p>
+
+</div>
+</div>
+<a id="a835ce33a68d4d27fddc529fc21de7f59" name="a835ce33a68d4d27fddc529fc21de7f59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a835ce33a68d4d27fddc529fc21de7f59">&#9670;&nbsp;</a></span>isHexChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool Ark::internal::Lexer::isHexChar </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>chr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d79/Lexer_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../da/d79/Lexer_8hpp_source.html">Lexer.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="../../d9/ddd/namespaceArk_1_1internal_1_1Builtins_1_1String.html#a5aa32e7e6d5c6116e9249f2feab235ed">Ark::internal::Builtins::String::chr()</a>.</p>
 
 </div>
 </div>
@@ -306,7 +344,7 @@ false </dd></dl>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -321,6 +359,8 @@ false </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true </dd>
 <dd>
 false </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00291">291</a> of file <a class="el" href="../../d2/d15/Lexer_8cpp_source.html">Lexer.cpp</a>.</p>
 
 </div>
 </div>
@@ -343,7 +383,7 @@ false </dd></dl>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -358,6 +398,10 @@ false </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true </dd>
 <dd>
 false </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00286">286</a> of file <a class="el" href="../../d2/d15/Lexer_8cpp_source.html">Lexer.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00073">Ark::internal::keywords</a>.</p>
 
 </div>
 </div>
@@ -380,7 +424,7 @@ false </dd></dl>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -395,6 +439,10 @@ false </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true </dd>
 <dd>
 false </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00296">296</a> of file <a class="el" href="../../d2/d15/Lexer_8cpp_source.html">Lexer.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00089">Ark::internal::operators</a>.</p>
 
 </div>
 </div>
@@ -445,7 +493,7 @@ false </dd></dl>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -462,7 +510,11 @@ false </dd></dl>
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00013">feed()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00330">330</a> of file <a class="el" href="../../d2/d15/Lexer_8cpp_source.html">Lexer.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="../../d9/db7/makeErrorCtx_8cpp_source.html#l00057">Ark::internal::makeTokenBasedErrorCtx()</a>, and <a class="el" href="../../d7/d09/Utils_8hpp_source.html#l00063">Ark::Utils::splitString()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00019">feed()</a>.</p>
 
 </div>
 </div>
@@ -492,11 +544,11 @@ false </dd></dl>
 <p>Return the list of tokens. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;Token&gt;&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00252">252</a> of file <a class="el" href="../../d2/d15/Lexer_8cpp_source.html">Lexer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00257">257</a> of file <a class="el" href="../../d2/d15/Lexer_8cpp_source.html">Lexer.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../da/d79/Lexer_8hpp_source.html#l00125">m_tokens</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d79/Lexer_8hpp_source.html#l00052">m_tokens</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00021">Ark::Parser::feed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00021">Ark::internal::Parser::feed()</a>.</p>
 
 </div>
 </div>
@@ -521,9 +573,9 @@ false </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d79/Lexer_8hpp_source.html#l00124">124</a> of file <a class="el" href="../../da/d79/Lexer_8hpp_source.html">Lexer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d79/Lexer_8hpp_source.html#l00051">51</a> of file <a class="el" href="../../da/d79/Lexer_8hpp_source.html">Lexer.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00013">feed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00019">feed()</a>.</p>
 
 </div>
 </div>
@@ -547,15 +599,15 @@ false </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d79/Lexer_8hpp_source.html#l00125">125</a> of file <a class="el" href="../../da/d79/Lexer_8hpp_source.html">Lexer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d79/Lexer_8hpp_source.html#l00052">52</a> of file <a class="el" href="../../da/d79/Lexer_8hpp_source.html">Lexer.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00013">feed()</a>, and <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00252">tokens()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00019">feed()</a>, and <a class="el" href="../../d2/d15/Lexer_8cpp_source.html#l00257">tokens()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/folae/Documents/Code/Big-Projects/ArkScript/Ark/include/Ark/Compiler/<a class="el" href="../../da/d79/Lexer_8hpp_source.html">Lexer.hpp</a></li>
-<li>C:/Users/folae/Documents/Code/Big-Projects/ArkScript/Ark/src/arkreactor/Compiler/<a class="el" href="../../d2/d15/Lexer_8cpp_source.html">Lexer.cpp</a></li>
+<li>C:/Users/folae/Documents/Code/Big-Projects/ArkScript/Ark/include/Ark/Compiler/AST/<a class="el" href="../../da/d79/Lexer_8hpp_source.html">Lexer.hpp</a></li>
+<li>C:/Users/folae/Documents/Code/Big-Projects/ArkScript/Ark/src/arkreactor/Compiler/AST/<a class="el" href="../../d2/d15/Lexer_8cpp_source.html">Lexer.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -563,7 +615,7 @@ false </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/de4/namespaceArk.html">Ark</a></li><li class="navelem"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html">internal</a></li><li class="navelem"><a class="el" href="../../dd/dc4/classArk_1_1internal_1_1Lexer.html">Lexer</a></li>
-    <li class="footer">Generated on Mon Sep 27 2021 17:53:48 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Sat Dec 11 2021 17:51:05 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>
