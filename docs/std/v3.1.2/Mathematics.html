@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mathematics - ArkScript v3.1.2 documentation</title>
+    <link rel="stylesheet" href="/std/assets/css/spectre.min.css" type="text/css">
+    <link rel="stylesheet" href="/std/assets/css/spectre-exp.min.css" type="text/css">
+    <link rel="stylesheet" href="/std/assets/css/spectre-icons.min.css" type="text/css">
+    <link rel="stylesheet" href="/std/assets/css/rainbowjs-theme.css" type="text/css">
+    <link rel="stylesheet" href="/std/assets/css/main.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="navbar ">
+        <a href="#" class="btn btn-link show-xl" tabindex="0" id="menu-show"><i class="icon icon-menu"></i></a>
+        <section class="navbar-section hide-xl"></section>
+        <section class="navbar-center hide-xl">
+            <a href="/std/v3.1.2" class="btn btn-link">Home</a>
+            
+            <div class="divider half"></div>
+            <a href="https://github.com/ArkScript-lang/Ark" target="_blank" class="btn btn-link">Github</a>
+            <a href="https://discord.gg/YT5yDwn" target="_blank" class="btn btn-link">Discord</a>
+        </section>
+        <section class="navbar-section logo">
+            <a href="/std/" class="hide"><img src="/std/assets/images/Ark-slim.png" alt="ArkScript"></a>
+        </section>
+    </header>
+
+    
+
+    <!-- MAIN CONTENT -->
+    <div class="container" id="main">
+        <div class="off-canvas">
+
+    <!-- off-screen toggle button -->
+    <a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar">
+        <i class="icon icon-menu"></i>
+    </a>
+
+    <!-- table of content -->
+    <div id="sidebar" class="off-canvas-sidebar">
+        <ul class="nav">
+            <li class="nav-item active">
+                <a href="#">Table of contents</a>
+                <ul class="nav">
+                    <li class="nav-item">
+    <a href="#math:exp">math:exp</a>
+</li><li class="nav-item">
+    <a href="#math:ln">math:ln</a>
+</li><li class="nav-item">
+    <a href="#math:ceil">math:ceil</a>
+</li><li class="nav-item">
+    <a href="#math:floor">math:floor</a>
+</li><li class="nav-item">
+    <a href="#math:round">math:round</a>
+</li><li class="nav-item">
+    <a href="#math:nan?">math:NaN?</a>
+</li><li class="nav-item">
+    <a href="#math:inf?">math:Inf?</a>
+</li><li class="nav-item">
+    <a href="#math:cos">math:cos</a>
+</li><li class="nav-item">
+    <a href="#math:sin">math:sin</a>
+</li><li class="nav-item">
+    <a href="#math:tan">math:tan</a>
+</li><li class="nav-item">
+    <a href="#math:arccos">math:arccos</a>
+</li><li class="nav-item">
+    <a href="#math:arcsin">math:arcsin</a>
+</li><li class="nav-item">
+    <a href="#math:arctan">math:arctan</a>
+</li><li class="nav-item">
+    <a href="#math:cosh">math:cosh</a>
+</li><li class="nav-item">
+    <a href="#math:sinh">math:sinh</a>
+</li><li class="nav-item">
+    <a href="#math:tanh">math:tanh</a>
+</li><li class="nav-item">
+    <a href="#math:acosh">math:acosh</a>
+</li><li class="nav-item">
+    <a href="#math:asinh">math:asinh</a>
+</li><li class="nav-item">
+    <a href="#math:atanh">math:atanh</a>
+</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <a class="off-canvas-overlay" href="#close"></a>
+</div>
+
+        <div class="columns off-canvas-content">
+            <!-- The col-2 divs are an easy way to put some margin around the main content -->
+            <div class="col-2"></div>
+
+            <!-- Actual content of the page-->
+            <div class="col-8" id="content">
+                <section id="math:exp">
+    <h2>math:exp</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (math:exp n)</code>
+<br>
+<div>Calculate e^number</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>n</code>: the Number</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(math:exp 1)  # 2.7182...
+</code>
+</pre></div>
+    </div>
+</section><section id="math:ln">
+    <h2>math:ln</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (math:ln n)</code>
+<br>
+<div>Calculate the logarithm of a number</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>n</code>: the Number</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(math:ln 1)  # 0
+</code>
+</pre></div>
+    </div>
+</section><section id="math:ceil">
+    <h2>math:ceil</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (math:ceil n)</code>
+<br>
+<div>Get the smallest possible integer greater than the number</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>n</code>: the Number</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(math:ceil 0.2)  # 1
+</code>
+</pre></div>
+    </div>
+</section><section id="math:floor">
+    <h2>math:floor</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (math:floor n)</code>
+<br>
+<div>Get the smallest possible integer equal to the given number</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>n</code>: the Number</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(math:floor 1.7)  # 1
+</code>
+</pre></div>
+    </div>
+</section><section id="math:round">
+    <h2>math:round</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (math:round n)</code>
+<br>
+<div>Get the smallest possible integer equal to or greater than the given number</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>n</code>: the Number</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(math:round 0.2)  # 0
+(math:round 0.6)  # 1
+</code>
+</pre></div>
+    </div>
+</section><section id="math:nan?">
+    <h2>math:NaN?</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (math:NaN? n)</code>
+<br>
+<div>Check if a Number is NaN</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>n</code>: the Number</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(math:NaN? 2)  # false
+(math:NaN? nan)  # true
+</code>
+</pre></div>
+    </div>
+</section><section id="math:inf?">
+    <h2>math:Inf?</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (math:Inf? n)</code>
+<br>
+<div>Check if a Number if Inf</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>n</code>: the Number</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(math:Inf? 1)  # false
+(math:Inf? nan)  # false
+</code>
+</pre></div>
+    </div>
+</section><section id="math:cos">
+    <h2>math:cos</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (math:cos n)</code>
+<br>
+<div>Calculate the cosinus of a number</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>n</code>: the Number (radians)</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(math:cos 0)  # 1
+(math:cos math:pi)  # -1
+</code>
+</pre></div>
+    </div>
+</section><section id="math:sin">
+    <h2>math:sin</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (math:sin n)</code>
+<br>
+<div>Calculate the sinus of a number</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>n</code>: the Number (radians)</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(math:sin 0)  # 0
+(math:cos (/ math:pi 2))  # 1
+</code>
+</pre></div>
+    </div>
+</section><section id="math:tan">
+    <h2>math:tan</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (math:tan n)</code>
+<br>
+<div>Calculate the tangent of a number</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>n</code>: the Number (radians)</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(math:tan 0)  # 0
+(math:cos (/ math:pi 4))  # 1
+</code>
+</pre></div>
+    </div>
+</section><section id="math:arccos">
+    <h2>math:arccos</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (math:arccos n)</code>
+<br>
+<div>Calculate the arccosinus of a number</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>n</code>: the Number</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(math:arccos 1)  # 0
+</code>
+</pre></div>
+    </div>
+</section><section id="math:arcsin">
+    <h2>math:arcsin</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (math:arcsin n)</code>
+<br>
+<div>Calculate the arcsinus of a number</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>n</code>: the Number</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(math:arcsin 1)  # 1.570796326794897 (/ math:pi 2)
+</code>
+</pre></div>
+    </div>
+</section><section id="math:arctan">
+    <h2>math:arctan</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (math:arctan n)</code>
+<br>
+<div>Calculate the arctangent of a number</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>n</code>: the Number</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(math:arctan 0)  # 0
+</code>
+</pre></div>
+    </div>
+</section><section id="math:cosh">
+    <h2>math:cosh</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (math:cosh n)</code>
+<br>
+<div>Calculate the hyperbolic cosinus of a number</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>n</code>: the Number</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/Gryfenfer97">@Gryfenfer97</a></div></div>
+    </div>
+</section><section id="math:sinh">
+    <h2>math:sinh</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (math:sinh n)</code>
+<br>
+<div>Calculate the hyperbolic sinus of a number</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>n</code>: the Number</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/Gryfenfer97">@Gryfenfer97</a></div></div>
+    </div>
+</section><section id="math:tanh">
+    <h2>math:tanh</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (math:tanh n)</code>
+<br>
+<div>Calculate the hyperbolic tangent of a number</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>n</code>: the Number</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/Gryfenfer97">@Gryfenfer97</a></div></div>
+    </div>
+</section><section id="math:acosh">
+    <h2>math:acosh</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (math:acosh n)</code>
+<br>
+<div>Calculate the hyperbolic arccosinus of a number</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>n</code>: the Number</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/Gryfenfer97">@Gryfenfer97</a></div></div>
+    </div>
+</section><section id="math:asinh">
+    <h2>math:asinh</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (math:asinh n)</code>
+<br>
+<div>Calculate the hyperbolic arcsinus of a number</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>n</code>: the Number</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/Gryfenfer97">@Gryfenfer97</a></div></div>
+    </div>
+</section><section id="math:atanh">
+    <h2>math:atanh</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (math:atanh n)</code>
+<br>
+<div>Calculate the hyperbolic arctangent of a number</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>n</code>: the Number</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/Gryfenfer97">@Gryfenfer97</a></div></div>
+    </div>
+</section>
+            </div>
+            <!-- end of content -->
+
+            <!-- Margin again -->
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+    <footer id="page-footer">
+        <p class="text-center">
+            Copyright &copy; 2020-2021 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.<br>
+            <i>Last generation at 2021-12-11 16:24:58.346013</i>
+        </p>
+    </footer>
+
+    <!-- Rainbow.js for syntax coloring -->
+    <script src="/std/assets/js/rainbow.min.js"></script>
+    <script src="/std/assets/js/languages/arkscript.js"></script>
+</body>
+
+</html>
