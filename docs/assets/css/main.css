@@ -117,6 +117,11 @@ header.navbar .navbar-brand, #banner .navbar-brand {
   text-transform: uppercase;
   font-weight: bold;
   line-height: 5vh;
+  background: linear-gradient(to right, #00AAD4 0%, #FEDE6A 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 header.navbar .dropdown, #banner .dropdown {
   margin: 0;
