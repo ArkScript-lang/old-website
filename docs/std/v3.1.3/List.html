@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>List - ArkScript v3.1.3 documentation</title>
+    <link rel="stylesheet" href="/std/assets/css/spectre.min.css" type="text/css">
+    <link rel="stylesheet" href="/std/assets/css/spectre-exp.min.css" type="text/css">
+    <link rel="stylesheet" href="/std/assets/css/spectre-icons.min.css" type="text/css">
+    <link rel="stylesheet" href="/std/assets/css/rainbowjs-theme.css" type="text/css">
+    <link rel="stylesheet" href="/std/assets/css/main.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="navbar ">
+        <a href="#" class="btn btn-link show-xl" tabindex="0" id="menu-show"><i class="icon icon-menu"></i></a>
+        <section class="navbar-section hide-xl"></section>
+        <section class="navbar-center hide-xl">
+            <a href="/std/v3.1.3" class="btn btn-link">Home</a>
+            
+            <div class="divider half"></div>
+            <a href="https://github.com/ArkScript-lang/Ark" target="_blank" class="btn btn-link">Github</a>
+            <a href="https://discord.gg/YT5yDwn" target="_blank" class="btn btn-link">Discord</a>
+        </section>
+        <section class="navbar-section logo">
+            <a href="/std/" class="hide"><img src="/std/assets/images/Ark-slim.png" alt="ArkScript"></a>
+        </section>
+    </header>
+
+    
+
+    <!-- MAIN CONTENT -->
+    <div class="container" id="main">
+        <div class="off-canvas">
+
+    <!-- off-screen toggle button -->
+    <a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar">
+        <i class="icon icon-menu"></i>
+    </a>
+
+    <!-- table of content -->
+    <div id="sidebar" class="off-canvas-sidebar">
+        <ul class="nav">
+            <li class="nav-item active">
+                <a href="#">Table of contents</a>
+                <ul class="nav">
+                    <li class="nav-item">
+    <a href="#list:foreach">list:forEach</a>
+</li><li class="nav-item">
+    <a href="#list:product">list:product</a>
+</li><li class="nav-item">
+    <a href="#list:sum">list:sum</a>
+</li><li class="nav-item">
+    <a href="#list:drop">list:drop</a>
+</li><li class="nav-item">
+    <a href="#list:dropwhile">list:dropWhile</a>
+</li><li class="nav-item">
+    <a href="#list:filter">list:filter</a>
+</li><li class="nav-item">
+    <a href="#list:map">list:map</a>
+</li><li class="nav-item">
+    <a href="#list:reduce">list:reduce</a>
+</li><li class="nav-item">
+    <a href="#list:flatten">list:flatten</a>
+</li><li class="nav-item">
+    <a href="#list:flatmap">list:flatMap</a>
+</li><li class="nav-item">
+    <a href="#list:take">list:take</a>
+</li><li class="nav-item">
+    <a href="#list:unzip">list:unzip</a>
+</li><li class="nav-item">
+    <a href="#list:zip">list:zip</a>
+</li><li class="nav-item">
+    <a href="#list:foldleft">list:foldLeft</a>
+</li><li class="nav-item">
+    <a href="#list:forall">list:forAll</a>
+</li><li class="nav-item">
+    <a href="#list:any">list:any</a>
+</li><li class="nav-item">
+    <a href="#list:reverse">list:reverse</a>
+</li><li class="nav-item">
+    <a href="#list:find">list:find</a>
+</li><li class="nav-item">
+    <a href="#list:removeat">list:removeAt</a>
+</li><li class="nav-item">
+    <a href="#list:slice">list:slice</a>
+</li><li class="nav-item">
+    <a href="#list:sort">list:sort</a>
+</li><li class="nav-item">
+    <a href="#list:fill">list:fill</a>
+</li><li class="nav-item">
+    <a href="#list:setat">list:setAt</a>
+</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <a class="off-canvas-overlay" href="#close"></a>
+</div>
+
+        <div class="columns off-canvas-content">
+            <!-- The col-2 divs are an easy way to put some margin around the main content -->
+            <div class="col-2"></div>
+
+            <!-- Actual content of the page-->
+            <div class="col-8" id="content">
+                <section id="list:foreach">
+    <h2>list:forEach</h2>
+
+    <div class="inner-section">
+        <div><code>(let list:forEach (fun (_L _func) (...)))</code>
+<br>
+<div>Iterate over a given list and run a given function on every element.</div>
+<div><b>Note</b>
+: 
+The original list is left unmodified.</div>
+<div><h4>Parameters</h4>
+<ul><li><code>_L</code>: the list to iterate over</li><li><code>_func</code>: the function to call on each element</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(import "List.ark")
+(let collection [1 2 5 12])
+(list:forEach collection (fun (element) {
+    (print element)
+}))
+</code>
+</pre></div>
+    </div>
+</section><section id="list:product">
+    <h2>list:product</h2>
+
+    <div class="inner-section">
+        <div><code>(let list:product (fun (_L) (...)))</code>
+<br>
+<div>Iterate over a given list and multiply all the elements with the others.</div>
+<div><b>Note</b>
+: 
+The original list is left unmodified.</div>
+<div><h4>Parameter</h4>
+<ul><li><code>_L</code>: the list to iterate over</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/FrenchMasterSword">@FrenchMasterSword</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(import "List.ark")
+(let collection [1 2 5 12])
+(let p (list:product collection))  # => 120
+</code>
+</pre></div>
+    </div>
+</section><section id="list:sum">
+    <h2>list:sum</h2>
+
+    <div class="inner-section">
+        <div><code>(let list:sum (fun (_L) (...)))</code>
+<br>
+<div>Iterate over a given list and sum all the elements.</div>
+<div><b>Note</b>
+: 
+The original list is left unmodified.</div>
+<div><h4>Parameter</h4>
+<ul><li><code>_L</code>: the list to iterate over</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/FrenchMasterSword">@FrenchMasterSword</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(import "List.ark")
+(let collection [1 2 5 12])
+(let p (list:sum collection))  # => 20
+</code>
+</pre></div>
+    </div>
+</section><section id="list:drop">
+    <h2>list:drop</h2>
+
+    <div class="inner-section">
+        <div><code>(let list:drop (fun (_L _n) (...)))</code>
+<br>
+<div>Drop the first n elements of a list</div>
+<div><b>Note</b>
+: 
+The original list is left unmodified.</div>
+<div><h4>Parameters</h4>
+<ul><li><code>_L</code>: the list to work on</li><li><code>_n</code>: the number of elements to drop</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/rstefanic">@rstefanic</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(let cool-stuff [1 2 3 4 5 6 7 8 9])
+(print (list:drop cool-stuff 4))  # [5 6 7 8 9]
+</code>
+</pre></div>
+    </div>
+</section><section id="list:dropwhile">
+    <h2>list:dropWhile</h2>
+
+    <div class="inner-section">
+        <div><code>(let list:dropWhile (fun (_L _f) (...)))</code>
+<br>
+<div>Drop the first elements of a list, while they match a given predicate</div>
+<div><b>Note</b>
+: 
+The original list is left unmodified.</div>
+<div><h4>Parameters</h4>
+<ul><li><code>_L</code>: the list to work on</li><li><code>_f</code>: the predicate</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(let cool-stuff [1 2 3 4 5 6 7 8 9])
+(print (list:dropWhile cool-stuff (fun (a) (< a 4))))  # [4 5 6 7 8 9]
+</code>
+</pre></div>
+    </div>
+</section><section id="list:filter">
+    <h2>list:filter</h2>
+
+    <div class="inner-section">
+        <div><code>(let list:filter (fun (_L _f) (...)))</code>
+<br>
+<div>Keep elements in a given list if they follow a predicate</div>
+<div><b>Note</b>
+: 
+The original list is left unmodified.</div>
+<div><h4>Parameters</h4>
+<ul><li><code>_L</code>: the list to work on</li><li><code>_f</code>: the predicate</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/rstefanic">@rstefanic</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(import "Math.ark")
+(print (list:filter [1 2 3 4 5 6 7 8 9] math:even))  # [2 4 6 8]
+</code>
+</pre></div>
+    </div>
+</section><section id="list:map">
+    <h2>list:map</h2>
+
+    <div class="inner-section">
+        <div><code>(let list:map (fun (_L _f) (...)))</code>
+<br>
+<div>Apply a given function to each element of a list</div>
+<div><b>Note</b>
+: 
+The original list is left unmodified.</div>
+<div><h4>Parameters</h4>
+<ul><li><code>_L</code>: the list to work on</li><li><code>_f</code>: the function to apply to each element</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/rstefanic">@rstefanic</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(print (list:map [1 2 3 4 5 6 7 8 9] (fun (e) (* e e))))  # [1 4 9 25 36 49 64 81]
+</code>
+</pre></div>
+    </div>
+</section><section id="list:reduce">
+    <h2>list:reduce</h2>
+
+    <div class="inner-section">
+        <div><code>(let list:reduce (fun (_L _f) (...)))</code>
+<br>
+<div>Apply a function to the elements of a list to reduce it</div>
+<div><b>Note</b>
+: 
+The original list is left unmodified.</div>
+<div><h4>Parameters</h4>
+<ul><li><code>_L</code>: the list to work on</li><li><code>_f</code>: the function to apply</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/FrenchMasterSword">@FrenchMasterSword</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(let cool [1 2 3 4 5 6 7 8 9])
+(print (list:reduce cool (fun (a b) (+ a b))))  # 45
+</code>
+</pre></div>
+    </div>
+</section><section id="list:flatten">
+    <h2>list:flatten</h2>
+
+    <div class="inner-section">
+        <div><code>(let list:flatten (fun (_L) (...)))</code>
+<br>
+<div>Flatten a list</div>
+<div><b>Note</b>
+: 
+The original list is left unmodified.</div>
+<div><h4>Parameter</h4>
+<ul><li><code>_L</code>: the list to work on</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(let cool [[1 2 3] [4] 5 6 [7 8] 9])
+(print (list:flatten cool))  # [1 2 3 4 5 6 7 8 9]
+</code>
+</pre></div>
+    </div>
+</section><section id="list:flatmap">
+    <h2>list:flatMap</h2>
+
+    <div class="inner-section">
+        <div><code>(let list:flatMap (fun (_L _f) (...)))</code>
+<br>
+<div>Apply a given function to each element of a list and then flatten it</div>
+<div><b>Note</b>
+: 
+The original list is left unmodified.</div>
+<div><h4>Parameters</h4>
+<ul><li><code>_L</code>: the list to work on</li><li><code>_f</code>: the function to apply to each element</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(let cool [1 2 3 4])
+(print (list:flatMap cool (fun (a) [a a])))  # [1 1 2 2 3 3 4 4]
+</code>
+</pre></div>
+    </div>
+</section><section id="list:take">
+    <h2>list:take</h2>
+
+    <div class="inner-section">
+        <div><code>(let list:take (fun (_L _n) (...)))</code>
+<br>
+<div>Take the first n elements of</div>
+<div><b>Note</b>
+: 
+The original list is left unmodified.</div>
+<div><h4>Parameters</h4>
+<ul><li><code>_L</code>: the list to work on</li><li><code>_n</code>: the number of elements to take</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/rstefanic">@rstefanic</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(print (list:take [1 2 3 4 5 6 7 8 9] 4))  # [1 2 3 4]
+</code>
+</pre></div>
+    </div>
+</section><section id="list:unzip">
+    <h2>list:unzip</h2>
+
+    <div class="inner-section">
+        <div><code>(let list:unzip (fun (_L) (...)))</code>
+<br>
+<div>Unzip a list of [[a b] [c d]...] into [[a c ...] [b d ...]]</div>
+<div><b>Note</b>
+: 
+The original list is left unmodified.</div>
+<div><h4>Parameter</h4>
+<ul><li><code>_L</code>: the list to work on</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/FrenchMasterSword">@FrenchMasterSword</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(let zipped [[1 5] [2 6] [3 7] [4 8]])
+(print (list:unzip zipped))  # [[1 2 3 4] [5 6 7 8]]
+</code>
+</pre></div>
+    </div>
+</section><section id="list:zip">
+    <h2>list:zip</h2>
+
+    <div class="inner-section">
+        <div><code>(let list:zip (fun (_a _b) (...)))</code>
+<br>
+<div>Zip two lists into one: [1 2 3 4] and [5 6 7 8] will give [[1 5] [2 6] [3 7] [4 8]]</div>
+<div><b>Note</b>
+: 
+The original lists are left unmodified.</div>
+<div><h4>Parameters</h4>
+<ul><li><code>_a</code>: the first list to work on</li><li><code>_b</code>: the second list to work on</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/FrenchMasterSword">@FrenchMasterSword</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(let a [1 2 3 4])
+(let b [5 6 7 8])
+(print (list:zip a b))  # [[1 5] [2 6] [3 7] [4 8]]
+</code>
+</pre></div>
+    </div>
+</section><section id="list:foldleft">
+    <h2>list:foldLeft</h2>
+
+    <div class="inner-section">
+        <div><code>(let list:foldLeft (fun (_L _init _f) (...)))</code>
+<br>
+<div>Fold a given list, starting from the left side</div>
+<div><b>Note</b>
+: 
+The original list is left unmodified.</div>
+<div><h4>Parameters</h4>
+<ul><li><code>_L</code>: the list to work on</li><li><code>_init</code>: an init value</li><li><code>_f</code>: a function to apply to the list</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(let a [1 2 3 4])
+(print (list:foldLeft a 0 (fun (a b) (+ a b))))  # 10
+</code>
+</pre></div>
+    </div>
+</section><section id="list:forall">
+    <h2>list:forAll</h2>
+
+    <div class="inner-section">
+        <div><code>(let list:forAll (fun (_L _f) (...)))</code>
+<br>
+<div>Check if a condition is verified for all elements of a list</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameters</h4>
+<ul><li><code>_L</code>: the list to work on</li><li><code>_f</code>: the conditon</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/Gryfenfer97">@Gryfenfer97</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(let a [1 2 3 4])
+(let f (fun (e) (< e 5)))
+(print (list:forAll a f))  # true
+</code>
+</pre></div>
+    </div>
+</section><section id="list:any">
+    <h2>list:any</h2>
+
+    <div class="inner-section">
+        <div><code>(let list:any (fun (_L _f) (...)))</code>
+<br>
+<div>Check if a condition if verified for one or more elements of a list</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameters</h4>
+<ul><li><code>_L</code>: the list to work on</li><li><code>_f</code>: the conditon</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/Gryfenfer97">@Gryfenfer97</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(let a [1 2 3 4])
+(let f (fun (e) (< e 3)))
+(print (list:any a f))  # true
+</code>
+</pre></div>
+    </div>
+</section><section id="list:reverse">
+    <h2>list:reverse</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (list:reverse list)</code>
+<br>
+<div>Reverse a given list and return a new one</div>
+<div><b>Note</b>
+: 
+The original list is not modified</div>
+<div><h4>Parameter</h4>
+<ul><li><code>list</code>: the list to reverse</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(list:reverse [1 2 3])  # [3 2 1]
+</code>
+</pre></div>
+    </div>
+</section><section id="list:find">
+    <h2>list:find</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (list:find list value)</code>
+<br>
+<div>Search an element in a List</div>
+<div><b>Note</b>
+: 
+The original list is not modified</div>
+<div><h4>Parameters</h4>
+<ul><li><code>list</code>: the List to search in</li><li><code>value</code>: the element to search</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(list:find [1 2 3] 1)  # 0
+(list:find [1 2 3] 0)  # -1
+</code>
+</pre></div>
+    </div>
+</section><section id="list:removeat">
+    <h2>list:removeAt</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (list:removeAt list index)</code>
+<br>
+<div>Remove an element in a List and return a new one</div>
+<div><b>Note</b>
+: 
+The original list is not modified</div>
+<div><h4>Parameters</h4>
+<ul><li><code>list</code>: the list to remove an element from</li><li><code>index</code>: the index of the element to remove (can be negative to search from the end)</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(list:removeAt [1 2 3] 0)  # [2 3]
+(list:removeAt [1 2 3] -1)  # [1 2]
+</code>
+</pre></div>
+    </div>
+</section><section id="list:slice">
+    <h2>list:slice</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (list:slice list start end step)</code>
+<br>
+<div>Get a slice from a List</div>
+<div><b>Note</b>
+: 
+The original list is not modified</div>
+<div><h4>Parameters</h4>
+<ul><li><code>list</code>: the list to reverse</li><li><code>start</code>: included, must be positive</li><li><code>end</code>: not included, must be positive and smaller than the list</li><li><code>step</code>: must be greater than 0</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(list:reverse [1 2 3])  # [3 2 1]
+</code>
+</pre></div>
+    </div>
+</section><section id="list:sort">
+    <h2>list:sort</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (list:sort list)</code>
+<br>
+<div>Sort a List and return a new one</div>
+<div><b>Note</b>
+: 
+The original list is not modified</div>
+<div><h4>Parameter</h4>
+<ul><li><code>list</code>: the list to sort</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(list:sort [4 2 3])  # [1 2 4]
+</code>
+</pre></div>
+    </div>
+</section><section id="list:fill">
+    <h2>list:fill</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (list:fill count value)</code>
+<br>
+<div>Generate a List of n copies of an element</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameters</h4>
+<ul><li><code>count</code>: the number of copies</li><li><code>value</code>: the element to copy</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(list:fill 4 nil)  # [nil nil nil nil]
+</code>
+</pre></div>
+    </div>
+</section><section id="list:setat">
+    <h2>list:setAt</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (list:setAt list index value)</code>
+<br>
+<div>Modify a given list and return a new one</div>
+<div><b>Note</b>
+: 
+The original list is not modified</div>
+<div><h4>Parameters</h4>
+<ul><li><code>list</code>: the list to modify</li><li><code>index</code>: the index of the element to modify</li><li><code>value</code>: the new element</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(list:setAt [1 2 3] 0 5)  # [5 2 3]
+</code>
+</pre></div>
+    </div>
+</section>
+            </div>
+            <!-- end of content -->
+
+            <!-- Margin again -->
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+    <footer id="page-footer">
+        <p class="text-center">
+            Copyright &copy; 2020-2021 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.<br>
+            <i>Last generation at 2022-01-30 02:28:05.857864</i>
+        </p>
+    </footer>
+
+    <!-- Rainbow.js for syntax coloring -->
+    <script src="/std/assets/js/rainbow.min.js"></script>
+    <script src="/std/assets/js/languages/arkscript.js"></script>
+</body>
+
+</html>
