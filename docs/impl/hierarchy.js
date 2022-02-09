@@ -3,14 +3,12 @@ var hierarchy =
     [ "Ark::BytecodeReader", "d8/d08/classArk_1_1BytecodeReader.html", null ],
     [ "Ark::internal::Closure", "d9/d4e/classArk_1_1internal_1_1Closure.html", null ],
     [ "Ark::Compiler", "d3/ddb/classArk_1_1Compiler.html", null ],
+    [ "Ark::types::Contract", "d3/dfb/structArk_1_1types_1_1Contract.html", null ],
     [ "Ark::UserType::ControlFuncs", "d8/d70/structArk_1_1UserType_1_1ControlFuncs.html", null ],
     [ "std::exception", null, [
       [ "std::runtime_error", null, [
         [ "Ark::AssertionFailed", "d3/df9/classArk_1_1AssertionFailed.html", null ],
         [ "Ark::CompilationError", "d4/d64/classArk_1_1CompilationError.html", null ],
-        [ "Ark::Error", "d6/d43/classArk_1_1Error.html", [
-          [ "Ark::BetterTypeError", "d8/d25/classArk_1_1BetterTypeError.html", null ]
-        ] ],
         [ "Ark::MacroProcessingError", "d7/d7c/classArk_1_1MacroProcessingError.html", null ],
         [ "Ark::OptimizerError", "d6/d47/classArk_1_1OptimizerError.html", null ],
         [ "Ark::ParseError", "d9/d1a/classArk_1_1ParseError.html", null ],
@@ -40,6 +38,7 @@ var hierarchy =
     [ "Ark::internal::Token", "d0/d98/structArk_1_1internal_1_1Token.html", null ],
     [ "Ark::internal::type_uid< T >", "db/de1/structArk_1_1internal_1_1type__uid.html", null ],
     [ "Ark::internal::type_uid_impl", "d3/d7a/structArk_1_1internal_1_1type__uid__impl.html", null ],
+    [ "Ark::types::Typedef", "d9/dbf/structArk_1_1types_1_1Typedef.html", null ],
     [ "Ark::UserType", "d8/da6/classArk_1_1UserType.html", null ],
     [ "Ark::internal::ValTableElem", "d8/dc4/structArk_1_1internal_1_1ValTableElem.html", null ],
     [ "Ark::Value", "d3/d90/classArk_1_1Value.html", null ],

@@ -33,6 +33,7 @@ var Instructions_8hpp =
       [ "CONCAT_IN_PLACE", "d8/daa/Instructions_8hpp.html#abcd166377fbe7dcd77e47ef80cee8681aae0da9c8979cf536840021f73c610d09", null ],
       [ "POP_LIST", "d8/daa/Instructions_8hpp.html#abcd166377fbe7dcd77e47ef80cee8681a231ed0c85ace21289c93ce2987ccc262", null ],
       [ "POP_LIST_IN_PLACE", "d8/daa/Instructions_8hpp.html#abcd166377fbe7dcd77e47ef80cee8681adf1d9749a040a01202f92fc35622bb97", null ],
+      [ "POP", "d8/daa/Instructions_8hpp.html#abcd166377fbe7dcd77e47ef80cee8681a07bdaee9ad660de3c24cdcc66988619c", null ],
       [ "LAST_COMMAND", "d8/daa/Instructions_8hpp.html#abcd166377fbe7dcd77e47ef80cee8681a500f8b8f821df5be0b94be749f94e904", null ],
       [ "FIRST_OPERATOR", "d8/daa/Instructions_8hpp.html#abcd166377fbe7dcd77e47ef80cee8681ae4911d30f6af4720da1c508316389364", null ],
       [ "ADD", "d8/daa/Instructions_8hpp.html#abcd166377fbe7dcd77e47ef80cee8681a4c82ca0d18822806e36b58e49784eeb7", null ],

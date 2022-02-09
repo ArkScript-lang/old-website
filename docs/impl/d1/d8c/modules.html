@@ -83,7 +83,48 @@ Before starting</h1>
 <li>how to use the <code>UserType</code></li>
 </ul>
 <p >Also, read the <a href="https://github.com/ArkScript-lang/rfc/blob/master/004-module-error-handling.md">RFC 004</a> about module error handling to use the same conventions as the other modules, and the <a href="https://github.com/ArkScript-lang/rfc/blob/master/003-naming-convention.md">RFC 003</a> about naming conventions in ArkScript (specifically see the <em>Modules (C++)</em> section).</p>
-<p >TODO </p>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Creating a new module</h2>
+<p >In your <a href="https://github.com/ArkScript-lang/modules">ArkScript-lang/modules</a> fork, run the Python script as follows <code>python3 shell/createmodules/create.py module_name</code>. This will create a new folder <code>module_name/</code> for you, alongside a few folders and files needed to get you started.</p>
+<p >Create a <code>Main.cpp</code> file in <code>module_name/src/</code> with the following content:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;Ark/Module.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line">Value foo(std::vector&lt;Value&gt;&amp; n [[maybe_unused]], <a class="code hl_class" href="../../d2/d93/classArk_1_1VM.html">Ark::VM</a>* vm [[maybe_unused]])</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> Value(1);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_define" href="../../d5/d40/Platform_8hpp.html#ac62a8551c675391a8cf01d112e42d755">ARK_API</a> <a class="code hl_struct" href="../../d1/d5a/structmapping.html">mapping</a>* getFunctionsMapping()</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="../../d1/d5a/structmapping.html">mapping</a>* map = mapping_create(1);</div>
+<div class="line">    mapping_add(map[0], <span class="stringliteral">&quot;test:foo&quot;</span>, foo);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> map;</div>
+<div class="line">}</div>
+<div class="ttc" id="aPlatform_8hpp_html_ac62a8551c675391a8cf01d112e42d755"><div class="ttname"><a href="../../d5/d40/Platform_8hpp.html#ac62a8551c675391a8cf01d112e42d755">ARK_API</a></div><div class="ttdeci">#define ARK_API</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d40/Platform_8hpp_source.html#l00041">Platform.hpp:41</a></div></div>
+<div class="ttc" id="aclassArk_1_1VM_html"><div class="ttname"><a href="../../d2/d93/classArk_1_1VM.html">Ark::VM</a></div><div class="ttdoc">The ArkScript virtual machine, executing ArkScript bytecode.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d91/VM_8hpp_source.html#l00045">VM.hpp:46</a></div></div>
+<div class="ttc" id="astructmapping_html"><div class="ttname"><a href="../../d1/d5a/structmapping.html">mapping</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d27/VM_8cpp_source.html#l00017">VM.cpp:18</a></div></div>
+</div><!-- fragment --><p >Let's walk through this line by line:</p><ul>
+<li><code>#include &lt;Ark/Module.hpp&gt;</code> includes basic files from ArkScript to be able to use the VM, instanciate values, and generate the entry point of the module</li>
+<li><code>Value foo(std::vector&lt;Value&gt;&amp; n [[maybe_unused]], <a class="el" href="../../d2/d93/classArk_1_1VM.html" title="The ArkScript virtual machine, executing ArkScript bytecode.">Ark::VM</a>* vm [[maybe_unused]]) {...}</code> defines a function for our module, taking an argument list from the VM, and a non-owning pointer to the VM</li>
+<li><code>ARK_API mapping* getFunctionsMapping()</code> declares the entrypoint of our module</li>
+<li><code>mapping* map = mapping_create(1);</code> creates a mapping of a single element to hold the name -&gt; function pointer association, defining the module</li>
+<li><code>mapping_add(map[0], "test:foo", foo);</code> adds an element at position 0 in our mapping, using the previously defining function<ul>
+<li>note that the given name is <code>"test:foo"</code>: this is a convention in ArkScript, every module function must be prefixed by the module name's</li>
+</ul>
+</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md10"></a>
+Building your module</h2>
+<p >Clone ArkScript, then copy your modules fork to lib/modules. This is required for CMake to be able to find ArkScript headers.</p>
+<p >You will need to update <code>lib/modules/CMakeLists.txt</code> to add the following code:</p>
+<div class="fragment"><div class="line">{CMakeLists.txt} </div>
+<div class="line">set(ARK_MOD_MODULE_NAME Off CACHE BOOL &quot;Build the module_name module&quot;)</div>
+<div class="line"> </div>
+<div class="line">if (ARK_MOD_MODULE_NAME OR ARK_MOD_ALL)</div>
+<div class="line">    add_subdirectory(${PROJECT_SOURCE_DIR}/module_name)</div>
+<div class="line">endif()</div>
+</div><!-- fragment --><p >Then, run <code>cmake . -Build -DARK_BUILD_MODULES=On -DARK_MOD_MODULE_NAME=On</code>, and build only your module with <code>cmake --build build --target module_name</code>. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -91,7 +132,7 @@ Before starting</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">Tutorials</a></li>
-    <li class="footer">Generated on Sat Dec 11 2021 17:51:05 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Wed Feb 9 2022 17:53:22 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>

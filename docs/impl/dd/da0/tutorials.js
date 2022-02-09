@@ -7,7 +7,10 @@ var tutorials =
       [ "Adding your own types in ArkScript", "d5/dd1/embedding.html#autotoc_md5", null ]
     ] ],
     [ "Creating modules", "d1/d8c/modules.html", [
-      [ "Before starting", "d1/d8c/modules.html#autotoc_md8", null ]
+      [ "Before starting", "d1/d8c/modules.html#autotoc_md8", [
+        [ "Creating a new module", "d1/d8c/modules.html#autotoc_md9", null ],
+        [ "Building your module", "d1/d8c/modules.html#autotoc_md10", null ]
+      ] ]
     ] ],
     [ "The ArkScript builtins", "d6/d90/builtins.html", [
       [ "Basic template of a builtin", "d6/d90/builtins.html#autotoc_md0", null ],

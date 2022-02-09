@@ -5,6 +5,7 @@ var namespaceArk =
       [ "operator\"\"_u16", "df/d62/namespaceArk_1_1literals.html#ab2168dd30b7ea60ecc06e49f59206791", null ],
       [ "operator\"\"_u8", "df/d62/namespaceArk_1_1literals.html#a66738ed46e8b711d19268cf8f02f6bbd", null ]
     ] ],
+    [ "types", "d4/d7c/namespaceArk_1_1types.html", "d4/d7c/namespaceArk_1_1types" ],
     [ "Utils", "df/d16/namespaceArk_1_1Utils.html", [
       [ "canonicalRelPath", "df/d16/namespaceArk_1_1Utils.html#a3598d0ca35b3c7afd6183f2093807db3", null ],
       [ "decPlaces", "df/d16/namespaceArk_1_1Utils.html#aa50e900722d2e024cda404cddc368e60", null ],
@@ -14,15 +15,12 @@ var namespaceArk =
       [ "getFilenameFromPath", "df/d16/namespaceArk_1_1Utils.html#af03dab382269619376bd2de1c98d5a01", null ],
       [ "isDouble", "df/d16/namespaceArk_1_1Utils.html#afeaaabff8a0661920f770e2bab8a7eda", null ],
       [ "readFile", "df/d16/namespaceArk_1_1Utils.html#a08fab59297a574abc8a37a6d46eebacb", null ],
-      [ "splitString", "df/d16/namespaceArk_1_1Utils.html#a34a17326db4d9b45222830f3934d5508", null ],
-      [ "stringReplaceAll", "df/d16/namespaceArk_1_1Utils.html#a42d877db7a8408435fc4d1e09ae81972", null ]
+      [ "splitString", "df/d16/namespaceArk_1_1Utils.html#a34a17326db4d9b45222830f3934d5508", null ]
     ] ],
     [ "AssertionFailed", "d3/df9/classArk_1_1AssertionFailed.html", "d3/df9/classArk_1_1AssertionFailed" ],
-    [ "BetterTypeError", "d8/d25/classArk_1_1BetterTypeError.html", "d8/d25/classArk_1_1BetterTypeError" ],
     [ "BytecodeReader", "d8/d08/classArk_1_1BytecodeReader.html", "d8/d08/classArk_1_1BytecodeReader" ],
     [ "CompilationError", "d4/d64/classArk_1_1CompilationError.html", "d4/d64/classArk_1_1CompilationError" ],
     [ "Compiler", "d3/ddb/classArk_1_1Compiler.html", "d3/ddb/classArk_1_1Compiler" ],
-    [ "Error", "d6/d43/classArk_1_1Error.html", "d6/d43/classArk_1_1Error" ],
     [ "MacroProcessingError", "d7/d7c/classArk_1_1MacroProcessingError.html", "d7/d7c/classArk_1_1MacroProcessingError" ],
     [ "OptimizerError", "d6/d47/classArk_1_1OptimizerError.html", "d6/d47/classArk_1_1OptimizerError" ],
     [ "ParseError", "d9/d1a/classArk_1_1ParseError.html", "d9/d1a/classArk_1_1ParseError" ],
@@ -56,7 +54,8 @@ var namespaceArk =
       [ "False", "d9/de4/namespaceArk.html#a794d6cb0fd25e2dbc678c17ff605e159af8320b26d30ab433c5a54546d21f414c", null ],
       [ "Undefined", "d9/de4/namespaceArk.html#a794d6cb0fd25e2dbc678c17ff605e159aec0fc0100c4fc1ce4eea230c3dc10360", null ],
       [ "Reference", "d9/de4/namespaceArk.html#a794d6cb0fd25e2dbc678c17ff605e159a63d5049791d9d79d86e9a108b0a999ca", null ],
-      [ "InstPtr", "d9/de4/namespaceArk.html#a794d6cb0fd25e2dbc678c17ff605e159adf754f9ba8524ed3333ec938d0636862", null ]
+      [ "InstPtr", "d9/de4/namespaceArk.html#a794d6cb0fd25e2dbc678c17ff605e159adf754f9ba8524ed3333ec938d0636862", null ],
+      [ "Any", "d9/de4/namespaceArk.html#a794d6cb0fd25e2dbc678c17ff605e159aed36a1ef76a59ee3f15180e0441188ad", null ]
     ] ],
     [ "operator<", "d9/de4/namespaceArk.html#aca53d37b1c61260d7604ae196c5768bb", null ],
     [ "operator<<", "d9/de4/namespaceArk.html#a4cf62401fbb4b3075b391ccad2fa6b13", null ],

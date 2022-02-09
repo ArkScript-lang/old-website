@@ -21,12 +21,14 @@ var annotated_dup =
         [ "type_uid_impl", "d3/d7a/structArk_1_1internal_1_1type__uid__impl.html", "d3/d7a/structArk_1_1internal_1_1type__uid__impl" ],
         [ "ValTableElem", "d8/dc4/structArk_1_1internal_1_1ValTableElem.html", "d8/dc4/structArk_1_1internal_1_1ValTableElem" ]
       ] ],
+      [ "types", "d4/d7c/namespaceArk_1_1types.html", [
+        [ "Contract", "d3/dfb/structArk_1_1types_1_1Contract.html", "d3/dfb/structArk_1_1types_1_1Contract" ],
+        [ "Typedef", "d9/dbf/structArk_1_1types_1_1Typedef.html", "d9/dbf/structArk_1_1types_1_1Typedef" ]
+      ] ],
       [ "AssertionFailed", "d3/df9/classArk_1_1AssertionFailed.html", "d3/df9/classArk_1_1AssertionFailed" ],
-      [ "BetterTypeError", "d8/d25/classArk_1_1BetterTypeError.html", "d8/d25/classArk_1_1BetterTypeError" ],
       [ "BytecodeReader", "d8/d08/classArk_1_1BytecodeReader.html", "d8/d08/classArk_1_1BytecodeReader" ],
       [ "CompilationError", "d4/d64/classArk_1_1CompilationError.html", "d4/d64/classArk_1_1CompilationError" ],
       [ "Compiler", "d3/ddb/classArk_1_1Compiler.html", "d3/ddb/classArk_1_1Compiler" ],
-      [ "Error", "d6/d43/classArk_1_1Error.html", "d6/d43/classArk_1_1Error" ],
       [ "MacroProcessingError", "d7/d7c/classArk_1_1MacroProcessingError.html", "d7/d7c/classArk_1_1MacroProcessingError" ],
       [ "OptimizerError", "d6/d47/classArk_1_1OptimizerError.html", "d6/d47/classArk_1_1OptimizerError" ],
       [ "ParseError", "d9/d1a/classArk_1_1ParseError.html", "d9/d1a/classArk_1_1ParseError" ],

@@ -83,9 +83,7 @@ $(document).ready(function(){initNavTree('d7/d09/Utils_8hpp.html','../../'); ini
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;streambuf&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
-<code>#include &lt;filesystem&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d6/de9/Constants_8hpp_source.html">Ark/Constants.hpp</a>&gt;</code><br />
@@ -94,7 +92,7 @@ $(document).ready(function(){initNavTree('d7/d09/Utils_8hpp.html','../../'); ini
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/dda/Utils_8hpp__incl.svg" width="100%" height="462"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/dda/Utils_8hpp__incl.svg" width="584" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -117,30 +115,12 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a42d877db7a8408435fc4d1e09ae81972"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d16/namespaceArk_1_1Utils.html#a42d877db7a8408435fc4d1e09ae81972">Ark::Utils::stringReplaceAll</a> (std::string &amp;source, const std::string &amp;from, const std::string &amp;to)</td></tr>
-<tr class="memdesc:a42d877db7a8408435fc4d1e09ae81972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces all occurence of <code>from</code> to <code>to</code> in <code>source</code>  <a href="../../df/d16/namespaceArk_1_1Utils.html#a42d877db7a8408435fc4d1e09ae81972">More...</a><br /></td></tr>
-<tr class="separator:a42d877db7a8408435fc4d1e09ae81972"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34a17326db4d9b45222830f3934d5508"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d16/namespaceArk_1_1Utils.html#a34a17326db4d9b45222830f3934d5508">Ark::Utils::splitString</a> (const std::string &amp;source, char sep)</td></tr>
 <tr class="memdesc:a34a17326db4d9b45222830f3934d5508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cut a string into pieces, given a character separator.  <a href="../../df/d16/namespaceArk_1_1Utils.html#a34a17326db4d9b45222830f3934d5508">More...</a><br /></td></tr>
 <tr class="separator:a34a17326db4d9b45222830f3934d5508"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afeaaabff8a0661920f770e2bab8a7eda"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d16/namespaceArk_1_1Utils.html#afeaaabff8a0661920f770e2bab8a7eda">Ark::Utils::isDouble</a> (const std::string &amp;s, double *output=nullptr)</td></tr>
 <tr class="memdesc:afeaaabff8a0661920f770e2bab8a7eda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a string is a valid double.  <a href="../../df/d16/namespaceArk_1_1Utils.html#afeaaabff8a0661920f770e2bab8a7eda">More...</a><br /></td></tr>
 <tr class="separator:afeaaabff8a0661920f770e2bab8a7eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e2624f09a9e767e1792b69b879aa73f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d16/namespaceArk_1_1Utils.html#a1e2624f09a9e767e1792b69b879aa73f">Ark::Utils::fileExists</a> (const std::string &amp;name) noexcept</td></tr>
-<tr class="memdesc:a1e2624f09a9e767e1792b69b879aa73f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a file exists.  <a href="../../df/d16/namespaceArk_1_1Utils.html#a1e2624f09a9e767e1792b69b879aa73f">More...</a><br /></td></tr>
-<tr class="separator:a1e2624f09a9e767e1792b69b879aa73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08fab59297a574abc8a37a6d46eebacb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d16/namespaceArk_1_1Utils.html#a08fab59297a574abc8a37a6d46eebacb">Ark::Utils::readFile</a> (const std::string &amp;name)</td></tr>
-<tr class="memdesc:a08fab59297a574abc8a37a6d46eebacb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to read a file.  <a href="../../df/d16/namespaceArk_1_1Utils.html#a08fab59297a574abc8a37a6d46eebacb">More...</a><br /></td></tr>
-<tr class="separator:a08fab59297a574abc8a37a6d46eebacb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ba2f450a5866f29937342fe3fd0deda"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d16/namespaceArk_1_1Utils.html#a6ba2f450a5866f29937342fe3fd0deda">Ark::Utils::getDirectoryFromPath</a> (const std::string &amp;path)</td></tr>
-<tr class="memdesc:a6ba2f450a5866f29937342fe3fd0deda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the directory from a path.  <a href="../../df/d16/namespaceArk_1_1Utils.html#a6ba2f450a5866f29937342fe3fd0deda">More...</a><br /></td></tr>
-<tr class="separator:a6ba2f450a5866f29937342fe3fd0deda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af03dab382269619376bd2de1c98d5a01"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d16/namespaceArk_1_1Utils.html#af03dab382269619376bd2de1c98d5a01">Ark::Utils::getFilenameFromPath</a> (const std::string &amp;path)</td></tr>
-<tr class="memdesc:af03dab382269619376bd2de1c98d5a01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the filename from a path.  <a href="../../df/d16/namespaceArk_1_1Utils.html#af03dab382269619376bd2de1c98d5a01">More...</a><br /></td></tr>
-<tr class="separator:af03dab382269619376bd2de1c98d5a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3598d0ca35b3c7afd6183f2093807db3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d16/namespaceArk_1_1Utils.html#a3598d0ca35b3c7afd6183f2093807db3">Ark::Utils::canonicalRelPath</a> (const std::string &amp;path)</td></tr>
-<tr class="memdesc:a3598d0ca35b3c7afd6183f2093807db3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the canonical relative path from a path.  <a href="../../df/d16/namespaceArk_1_1Utils.html#a3598d0ca35b3c7afd6183f2093807db3">More...</a><br /></td></tr>
-<tr class="separator:a3598d0ca35b3c7afd6183f2093807db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa50e900722d2e024cda404cddc368e60"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d16/namespaceArk_1_1Utils.html#aa50e900722d2e024cda404cddc368e60">Ark::Utils::decPlaces</a> (double d)</td></tr>
 <tr class="memdesc:aa50e900722d2e024cda404cddc368e60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count the number of decimals for a double.  <a href="../../df/d16/namespaceArk_1_1Utils.html#aa50e900722d2e024cda404cddc368e60">More...</a><br /></td></tr>
 <tr class="separator:aa50e900722d2e024cda404cddc368e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,7 +142,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_a8b6c64285bf9ac60f50770eb2fc48b5.html">Ark</a></li><li class="navelem"><a class="el" href="../../d7/d09/Utils_8hpp.html">Utils.hpp</a></li>
-    <li class="footer">Generated on Sat Dec 11 2021 17:51:05 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Wed Feb 9 2022 17:53:22 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>

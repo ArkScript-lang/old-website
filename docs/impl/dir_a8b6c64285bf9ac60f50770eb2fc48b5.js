@@ -7,8 +7,6 @@ var dir_a8b6c64285bf9ac60f50770eb2fc48b5 =
     [ "Ark.hpp", "d3/d7e/Ark_8hpp.html", null ],
     [ "Constants.hpp", "d6/de9/Constants_8hpp.html", "d6/de9/Constants_8hpp" ],
     [ "Exceptions.hpp", "d2/de9/Exceptions_8hpp.html", [
-      [ "Ark::Error", "d6/d43/classArk_1_1Error.html", "d6/d43/classArk_1_1Error" ],
-      [ "Ark::BetterTypeError", "d8/d25/classArk_1_1BetterTypeError.html", "d8/d25/classArk_1_1BetterTypeError" ],
       [ "Ark::TypeError", "d2/d26/classArk_1_1TypeError.html", "d2/d26/classArk_1_1TypeError" ],
       [ "Ark::ZeroDivisionError", "da/d18/classArk_1_1ZeroDivisionError.html", "da/d18/classArk_1_1ZeroDivisionError" ],
       [ "Ark::PowError", "d8/d05/classArk_1_1PowError.html", "d8/d05/classArk_1_1PowError" ],
@@ -19,8 +17,10 @@ var dir_a8b6c64285bf9ac60f50770eb2fc48b5 =
       [ "Ark::MacroProcessingError", "d7/d7c/classArk_1_1MacroProcessingError.html", "d7/d7c/classArk_1_1MacroProcessingError" ],
       [ "Ark::CompilationError", "d4/d64/classArk_1_1CompilationError.html", "d4/d64/classArk_1_1CompilationError" ]
     ] ],
+    [ "Files.hpp", "d4/dc0/Files_8hpp.html", "d4/dc0/Files_8hpp" ],
     [ "Literals.hpp", "de/dee/Literals_8hpp.html", "de/dee/Literals_8hpp" ],
     [ "Platform.hpp", "d5/d40/Platform_8hpp.html", "d5/d40/Platform_8hpp" ],
     [ "Profiling.hpp", "d0/dd2/Profiling_8hpp.html", "d0/dd2/Profiling_8hpp" ],
+    [ "TypeChecker.hpp", "db/d5e/TypeChecker_8hpp.html", "db/d5e/TypeChecker_8hpp" ],
     [ "Utils.hpp", "d7/d09/Utils_8hpp.html", "d7/d09/Utils_8hpp" ]
 ];
