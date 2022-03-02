@@ -75,7 +75,7 @@ $(document).ready(function(){initNavTree('d7/d30/http_client.html','../../'); in
   <div class="headertitle"><div class="title">http Client </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2><a class="anchor" id="autotoc_md34"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md27"></a>
 http:headers:create</h2>
 <p >Create a header map to use with the http client.</p>
 <p ><b>Parameters</b> They work as pairs with:</p><ul>
@@ -92,7 +92,7 @@ http:headers:create</h2>
 <div class="line">    # pair 1</div>
 <div class="line">    &quot;Content-Type&quot; &quot;application/json&quot;</div>
 <div class="line">))</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md35"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md28"></a>
 http:client:create</h2>
 <p >Create an http client to query a server.</p>
 <p ><b>Parameters</b></p><ul>
@@ -104,7 +104,7 @@ http:client:create</h2>
 <li><a href="https://github.com/SuperFola">@SuperFola</a></li>
 </ul>
 <p ><b>Example</b> </p><div class="fragment"><div class="line">(let cli (http:client:create &quot;localhost&quot; 1234))</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md36"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md29"></a>
 http:client:get</h2>
 <p >Get content from an online ressource.</p>
 <p ><b>Parameters</b></p><ul>
@@ -125,7 +125,7 @@ http:client:get</h2>
 <div class="line">(if (nil? output)</div>
 <div class="line">    (print &quot;couldn&#39;t reach the server&quot;)</div>
 <div class="line">    (print (@ output 0)))  # print the status</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md37"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md30"></a>
 http:client:post</h2>
 <p >Make a POST request with either a String as the request's body or <code>httpParams</code> (request type would be <code>application/x-www-form-urlencoded</code>).</p>
 <p ><b>Parameters</b></p><ul>
@@ -156,7 +156,7 @@ http:client:post</h2>
 <div class="line">(if (nil? output)</div>
 <div class="line">    (print &quot;couldn&#39;t reach the server&quot;)</div>
 <div class="line">    (print (@ output 0)))  # prints status of the request</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md38"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md31"></a>
 http:client:put</h2>
 <p >Make a PUT request with either a String as the request's body or <code>httpParams</code> (request type would be <code>application/x-www-form-urlencoded</code>).</p>
 <p ><b>Parameters</b></p><ul>
@@ -171,7 +171,7 @@ http:client:put</h2>
 <li><a href="https://github.com/SuperFola">@SuperFola</a></li>
 </ul>
 <p >Works exactly like <code><a href="http:client:post">http:client:post</a></code>.</p>
-<h2><a class="anchor" id="autotoc_md39"></a>
+<h2><a class="anchor" id="autotoc_md32"></a>
 http:client:delete</h2>
 <p >Make a DELETE request with a String as the request's body.</p>
 <p ><b>Parameters</b></p><ul>
@@ -193,7 +193,7 @@ http:client:delete</h2>
 <div class="line">(if (nil? output)</div>
 <div class="line">    (print &quot;couldn&#39;t reach the server&quot;)</div>
 <div class="line">    (print (@ output 0)))  # prints status of the request</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md40"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md33"></a>
 http:params:create</h2>
 <p >Used to create a parameter list for a POST/PUT/DELETE request (<code>application/x-www-form-urlencoded</code>).</p>
 <p >It works like <code><a href="http:headers:create">http:headers:create</a></code>, you need to give an even number of Strings (key -&gt; value mapping).</p>
@@ -205,7 +205,7 @@ http:params:create</h2>
 <div class="line">    &quot;name&quot; &quot;john&quot;</div>
 <div class="line">    &quot;note&quot; &quot;coder&quot;</div>
 <div class="line">))</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md41"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md34"></a>
 http:params:toList</h2>
 <p >Convert an <code>httpParams</code> to an ArkScript readable list.</p>
 <p ><b>Parameters</b></p><ul>
@@ -215,7 +215,7 @@ http:params:toList</h2>
 <p ><b>Author</b></p><ul>
 <li><a href="https://github.com/SuperFola">@SuperFola</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md42"></a>
+<h2><a class="anchor" id="autotoc_md35"></a>
 http:client:setFollowLocation</h2>
 <p >Choose if the request should follow the redirection or not.</p>
 <p ><b>Parameters</b></p><ul>
@@ -233,7 +233,7 @@ http:client:setFollowLocation</h2>
 <div class="line">(http:client:setFollowLocation cli true)</div>
 <div class="line">(set output (http:client:get cli &quot;/&quot;))</div>
 <div class="line">(print (@ output 0))  # status: 200</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md43"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md36"></a>
 http:client:setConnectionTimeout</h2>
 <p >Set the connection timeout.</p>
 <p ><b>Parameters</b></p><ul>
@@ -244,7 +244,7 @@ http:client:setConnectionTimeout</h2>
 <p ><b>Author</b></p><ul>
 <li><a href="https://github.com/SuperFola">@SuperFola</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md44"></a>
+<h2><a class="anchor" id="autotoc_md37"></a>
 http:client:setReadTimeout</h2>
 <p >Set the read timeout.</p>
 <p ><b>Parameters</b></p><ul>
@@ -255,7 +255,7 @@ http:client:setReadTimeout</h2>
 <p ><b>Author</b></p><ul>
 <li><a href="https://github.com/SuperFola">@SuperFola</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md45"></a>
+<h2><a class="anchor" id="autotoc_md38"></a>
 http:client:setWriteTimeout</h2>
 <p >Set the write timeout.</p>
 <p ><b>Parameters</b></p><ul>
@@ -266,7 +266,7 @@ http:client:setWriteTimeout</h2>
 <p ><b>Author</b></p><ul>
 <li><a href="https://github.com/SuperFola">@SuperFola</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md46"></a>
+<h2><a class="anchor" id="autotoc_md39"></a>
 http:client:setBasicAuth</h2>
 <p >Set the basic authentification username and password for a client to use.</p>
 <p ><b>Parameters</b></p><ul>
@@ -277,7 +277,7 @@ http:client:setBasicAuth</h2>
 <p ><b>Author</b></p><ul>
 <li><a href="https://github.com/SuperFola">@SuperFola</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md47"></a>
+<h2><a class="anchor" id="autotoc_md40"></a>
 http:client:setBearerTokenAuth</h2>
 <p >Set the basic bearer token authentification for a client to use.</p>
 <p ><b>Parameters</b></p><ul>
@@ -287,7 +287,7 @@ http:client:setBearerTokenAuth</h2>
 <p ><b>Author</b></p><ul>
 <li><a href="https://github.com/SuperFola">@SuperFola</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md48"></a>
+<h2><a class="anchor" id="autotoc_md41"></a>
 http:client:setKeepAlive</h2>
 <p >Tell the server to keep the connection alive or not.</p>
 <p ><b>Parameters</b></p><ul>
@@ -297,7 +297,7 @@ http:client:setKeepAlive</h2>
 <p ><b>Author</b></p><ul>
 <li><a href="https://github.com/SuperFola">@SuperFola</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md49"></a>
+<h2><a class="anchor" id="autotoc_md42"></a>
 http:client:setProxy</h2>
 <p >Set the parameters (host and port) of a proxy, to be used by a client.</p>
 <p ><b>Parameters</b></p><ul>
@@ -308,7 +308,7 @@ http:client:setProxy</h2>
 <p ><b>Author</b></p><ul>
 <li><a href="https://github.com/SuperFola">@SuperFola</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md50"></a>
+<h2><a class="anchor" id="autotoc_md43"></a>
 http:client:setProxyBasicAuth</h2>
 <p >Set the basic proxy authentification username and password for a client to use.</p>
 <p ><b>Parameters</b></p><ul>
@@ -319,7 +319,7 @@ http:client:setProxyBasicAuth</h2>
 <p ><b>Author</b></p><ul>
 <li><a href="https://github.com/SuperFola">@SuperFola</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md51"></a>
+<h2><a class="anchor" id="autotoc_md44"></a>
 http:client:setProxyBearerTokenAuth</h2>
 <p >Set the basic proxy bearer token authentification for a client to use.</p>
 <p ><b>Parameters</b></p><ul>
@@ -336,7 +336,7 @@ http:client:setProxyBearerTokenAuth</h2>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">Tutorials</a></li><li class="navelem"><a class="el" href="../../db/d73/http_module.html">HTTP module</a></li>
-    <li class="footer">Generated on Wed Mar 2 2022 08:15:30 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Wed Mar 2 2022 08:30:11 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>

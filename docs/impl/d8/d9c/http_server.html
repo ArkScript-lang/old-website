@@ -76,7 +76,7 @@ $(document).ready(function(){initNavTree('d8/d9c/http_server.html','../../'); in
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p >Important note related to the routes: in case the given content argument doesn't return the wanted values, it will silently fail to avoid crashing the server.</p>
-<h2><a class="anchor" id="autotoc_md52"></a>
+<h2><a class="anchor" id="autotoc_md45"></a>
 http:server:create</h2>
 <p >Create the server (only one per VM may be instanciated).</p>
 <p ><b>Parameters</b></p><ul>
@@ -88,7 +88,7 @@ http:server:create</h2>
 </ul>
 <p ><b>Example</b> </p><div class="fragment"><div class="line">(import &quot;http.arkm&quot;)</div>
 <div class="line">(http:server:create)</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md53"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md46"></a>
 Route handlers</h2>
 <ul>
 <li><code><a href="http:server:get">http:server:get</a></code></li>
@@ -130,7 +130,7 @@ Route handlers</h2>
 <div class="line">    # (returned content must be a string)</div>
 <div class="line">    [200 (toString (+ 12 number)) &quot;text/plain&quot;]</div>
 <div class="line">}))</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md54"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md47"></a>
 http:server:stop</h2>
 <p >Stop a server.</p>
 <p ><b>Parameters</b></p><ul>
@@ -151,7 +151,7 @@ http:server:stop</h2>
 <div class="line">    # this will never be sent to the user be cause the server shut down before</div>
 <div class="line">    [200 &quot;Going down&quot; &quot;text/plain&quot;]</div>
 <div class="line">}))</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md55"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md48"></a>
 http:server:listen</h2>
 <p >Setup the server to listen forever. Should only be called once after having setup all the routes.</p>
 <p ><b>Parameters</b></p><ul>
@@ -170,7 +170,7 @@ http:server:listen</h2>
 <div class="line"># more routes</div>
 <div class="line"> </div>
 <div class="line">(http:server:listen &quot;localhost&quot; 1234)</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md56"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md49"></a>
 http:server:setMountPoint</h2>
 <p >Mount a given directory to a specific location. You can mount a directory to multiple locations, thus creating a search order.</p>
 <p ><b>Parameters</b></p><ul>
@@ -191,7 +191,7 @@ http:server:setMountPoint</h2>
 <div class="line"># mount /public to ./www1 and ./www2 directories</div>
 <div class="line">(http:server:setMountPoint &quot;/public&quot; &quot;/www1&quot;)  # 1st order to search</div>
 <div class="line">(http:server:setMountPoint &quot;/public&quot; &quot;/www2&quot;)  # 2nd order to search</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md57"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md50"></a>
 http:server:rmMountPoint</h2>
 <p >Remove a mount point.</p>
 <p ><b>Parameters</b></p><ul>
@@ -214,7 +214,7 @@ http:server:rmMountPoint</h2>
 <div class="line"> </div>
 <div class="line"># remove mount /</div>
 <div class="line">(http:server:rmMountPoint &quot;/&quot;)</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md58"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md51"></a>
 http:server:setFileExtAndMimetypeMapping</h2>
 <p >Map a file extension to a mimetype.</p>
 <p ><b>Return value</b> <code>nil</code></p>
@@ -259,7 +259,7 @@ http:server:setFileExtAndMimetypeMapping</h2>
 <li><a href="https://github.com/SuperFola">@SuperFola</a></li>
 </ul>
 <p ><b>Example</b> </p><div class="fragment"><div class="line">(http:server:setFileExtAndMimetypeMapping &quot;cc&quot; &quot;text/x-c&quot;)</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md59"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md52"></a>
 http:server:enableLogger</h2>
 <p >Set the logging level, by default 0.</p>
 <p ><b>Parameters</b></p><ul>
@@ -287,7 +287,7 @@ http:server:enableLogger</h2>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">Tutorials</a></li><li class="navelem"><a class="el" href="../../db/d73/http_module.html">HTTP module</a></li>
-    <li class="footer">Generated on Wed Mar 2 2022 08:15:30 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Wed Mar 2 2022 08:30:11 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>
