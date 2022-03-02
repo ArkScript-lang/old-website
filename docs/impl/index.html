@@ -76,35 +76,36 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p >This is the <b>implementation</b> documentation of the ArkScript programming language, if you want to contribute to it in any way.</p>
-<h1><a class="anchor" id="autotoc_md6"></a>
+<h1><a class="anchor" id="autotoc_md5"></a>
 Key features of the language</h1>
-<ul>
-<li>small: the compiler and the virtual machines fit under 8000 lines, but also small in terms of keywords (it has only 10)!</li>
-<li>a scripting language: it's very easy to embed it in your application. The builtin construction is quite easy to understand, so adding your own functions to the virtual machine is effortless</li>
-<li>portable: it produces a bytecode which is run by its virtual machine, the same way Java does it (with a smaller memory footprint)</li>
-<li>a functional language: every parameter is passed by value, everything is immutable unless you use <code>mut</code> to specify your need of mutability</li>
-<li>powerful: it can handle object-oriented programming in a very elegant way with its closures and explicit captures (see <code>examples/closures.ark</code>)</li>
-<li>promoting functionalities before performances: expressiveness often brings more productivity, even though performances aren't left behind</li>
-<li>easy to compile: it takes less than 200ms to compile and check a complex code with a lot of branches and sub-branches of 200 lines</li>
-<li>a Lisp-like, but with fewer parentheses: <code>[...]</code> is expanded to <code>(list ...)</code> and <code>{}</code> to <code>(begin ...)</code>. More shorthands will come in the future</li>
-<li>extensible: it is very easy to create a C++ module to use it in the language, adding functionalities</li>
+<p >ArkScript is</p><ul>
+<li><b>small</b>: the core fit under 8000 lines of code ; also small in terms of keywords (only 10)</li>
+<li><b>a scripting language</b>: very easy to embed it in your projects. Registering your own functions in the language is made easy</li>
+<li><b>portable</b>: a unique bytecode which can be run everywhere the virtual machine is</li>
+<li><b>a functional language</b>: every parameter is passed by value, everything is immutable unless specified</li>
+<li><b>powerful</b>: provides closures and explicit capture</li>
+<li><b>promoting functionalities before performances</b>: expressiveness often brings more productivity, though performances aren't left behind</li>
+<li><b>a Lisp inspired language</b>, with fewer parentheses: <code>[...]</code> is expanded to <code>(list ...)</code> and <code>{}</code> to <code>(begin ...)</code></li>
+<li><b>extensible</b>: supports C++ module to use it in the language, adding functionalities</li>
 </ul>
 <p >Also it has:</p><ul>
-<li>macros: if/else, values, and functions</li>
+<li><b>macros</b>: if/else, values, and functions</li>
+<li>tail call optimization</li>
 <li>a REPL with autocompletion and coloration</li>
 <li>a growing standard library, composed of ArkScript code (under <code>lib/std/</code>) and C++ (under <code>lib/ext/</code>)</li>
-<li>a lot of unit tests (but never enough), which are ran before every release to ensure everything work as intended</li>
-<li>docker images to try the language without compiling it:<ul>
-<li><a href="https://hub.docker.com/r/arkscript/stable">stable</a>, images built after each release</li>
-<li><a href="https://hub.docker.com/r/arkscript/nightly">nightly</a>, image built after each commit</li>
+<li>a lot of unit tests (but never enough), which are ran before every release to ensure everything works as expected</li>
+<li>docker images:<ul>
+<li><a href="https://hub.docker.com/r/arkscript/stable">stable</a>, built after each release</li>
+<li><a href="https://hub.docker.com/r/arkscript/nightly">nightly</a>, built after each commit</li>
 </ul>
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md7"></a>
+<h1><a class="anchor" id="autotoc_md6"></a>
 Links</h1>
 <ul>
 <li><a href="https://github.com/ArkScript-lang/Ark">Source code</a></li>
 <li><a class="el" href="dd/da0/tutorials.html">Tutorials</a></li>
+<li><a class="el" href="df/d0f/implementation.html">Implementation details</a></li>
 <li><a href="https://arkscript-lang.github.io">Main website</a> </li>
 </ul>
 </div></div><!-- PageDoc -->
@@ -113,7 +114,7 @@ Links</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 9 2022 17:53:23 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Wed Mar 2 2022 08:15:31 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>

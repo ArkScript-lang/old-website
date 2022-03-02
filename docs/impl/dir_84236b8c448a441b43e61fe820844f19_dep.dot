@@ -1,0 +1,11 @@
+digraph "C:/Users/folae/Documents/Code/Big-Projects/ArkScript/Ark/lib/modules/http/src" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_e5f0f663a6e316f61ceb4338dd986015 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="http" fontname="Helvetica", fontsize="10", URL="dir_e5f0f663a6e316f61ceb4338dd986015.html"]
+  dir_f0c1b3d277c8f45563387963caf000c5 [shape=box label="include" URL="dir_f0c1b3d277c8f45563387963caf000c5.html"];
+  dir_84236b8c448a441b43e61fe820844f19 [shape=box, label="src", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_84236b8c448a441b43e61fe820844f19.html"];
+  }
+  dir_84236b8c448a441b43e61fe820844f19->dir_f0c1b3d277c8f45563387963caf000c5 [headlabel="4", labeldistance=1.5 headhref="dir_000030_000029.html"];
+}

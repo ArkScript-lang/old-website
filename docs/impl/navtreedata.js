@@ -26,9 +26,11 @@ var NAVTREE =
 [
   [ "ArkScript", "index.html", [
     [ "Home", "index.html", [
-      [ "Key features of the language", "index.html#autotoc_md6", null ],
-      [ "Links", "index.html#autotoc_md7", null ]
+      [ "Key features of the language", "index.html#autotoc_md5", null ],
+      [ "Links", "index.html#autotoc_md6", null ]
     ] ],
+    [ "Implementation details", "df/d0f/implementation.html", "df/d0f/implementation" ],
+    [ "The standard library modules and how to use them", "d1/d8f/tutorial_ark_modules.html", null ],
     [ "Tutorials", "dd/da0/tutorials.html", "dd/da0/tutorials" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -69,12 +71,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d2/d93/classArk_1_1VM.html#a9a834f79b1ed4b9e98c6f4d742b73e40",
-"d3/ddb/classArk_1_1Compiler.html#aeb661cfc3f336a54bb71a43047ea33f8",
+"d2/d93/classArk_1_1VM.html#a9793d82e9100c6badd8fa9aa8d8bbbcb",
+"d3/ddb/classArk_1_1Compiler.html#adea9b690d084a306cd509213f792ca70",
 "d7/da8/classArk_1_1internal_1_1Optimizer.html#af527ecf72bb077b3f43534742b5fd2a3",
-"d9/d0c/classArk_1_1internal_1_1Parser.html#ae13e6ffab33f28a562e5891465efd2ca",
-"dc/d0e/namespaceArk_1_1internal.html#abcd166377fbe7dcd77e47ef80cee8681a68f8b0b3e523eb4ebcdb6057fd618ae4",
-"de/d60/classArk_1_1Repl.html#a52e4aab1f8627b5ebc7b72b7a5326929"
+"d9/d0c/classArk_1_1internal_1_1Parser.html#acfab95f1e4046326a37d30b058b75db9",
+"dc/d0e/namespaceArk_1_1internal.html#abcd166377fbe7dcd77e47ef80cee8681a32d2237c0469bcdfd68f3baf5a4dab5d",
+"de/d04/Conditional_8cpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
