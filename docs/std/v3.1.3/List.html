@@ -71,6 +71,8 @@
 </li><li class="nav-item">
     <a href="#list:take">list:take</a>
 </li><li class="nav-item">
+    <a href="#list:takewhile">list:takeWhile</a>
+</li><li class="nav-item">
     <a href="#list:unzip">list:unzip</a>
 </li><li class="nav-item">
     <a href="#list:zip">list:zip</a>
@@ -343,6 +345,26 @@ The original list is left unmodified.</div>
 </code>
 </pre></div>
     </div>
+</section><section id="list:takewhile">
+    <h2>list:takeWhile</h2>
+
+    <div class="inner-section">
+        <div><code>(let list:takeWhile (fun (_L _f) (...)))</code>
+<br>
+<div>Take the first n elements of a list, given a predicate</div>
+<div><b>Note</b>
+: 
+The original list is left unmodified.</div>
+<div><h4>Parameters</h4>
+<ul><li><code>_L</code>: the list to work on</li><li><code>_f</code>: the predicate</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/rakista112">@rakista112</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(print (takeWhile [1 2 3 4 5 6 7 8 9 10] (fun (a) (< a 4))))  # [1 2 3]
+</code>
+</pre></div>
+    </div>
 </section><section id="list:unzip">
     <h2>list:unzip</h2>
 
@@ -605,7 +627,7 @@ The original list is not modified</div>
     <footer id="page-footer">
         <p class="text-center">
             Copyright &copy; 2020-2021 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.<br>
-            <i>Last generation at 2022-02-27 02:32:25.746191</i>
+            <i>Last generation at 2022-03-06 02:33:35.588146</i>
         </p>
     </footer>
 
