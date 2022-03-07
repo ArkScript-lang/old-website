@@ -46,15 +46,16 @@ jobs:
         run: |
           ark_version=$((curl -s https://api.github.com/repos/ArkScript-lang/Ark/tags | head -n 3 | tail -n 1 | grep -Eo "[0-9]+\.[0-9]+\.[0-9]") 2>/dev/null)
           echo "New ArkScript tag: ${ark_version}"
-          # update version
-          sed "s/let version = "'"'".\+"'"'";/let version = "'"'"${ark_version}"'"'"/g" docs/std/index.html > temp_index.html
-          rm docs/std/index.html
-          mv temp_index.html docs/std/index.html
           # run arkdoc
           cd arkdoc
           export ARKDOC_LOGLEVEL=DEBUG
           python -m arkdoc $ark_version ../std-latest/ ../ark-latest/src/arkreactor/Builtins/ --html std --root /std || exit 1
-          cp -r std/ ../docs/
+          cd ..
+          cp -r arkdoc/std/ docs/
+          # update version
+          sed "s/let version = "'"'".\+"'"'";/let version = "'"'"${ark_version}"'"'"/g" docs/std/index.html > temp_index.html
+          rm docs/std/index.html
+          mv temp_index.html docs/std/index.html
 
       - name: Commit
         uses: github-actions-x/commit@v2.8
