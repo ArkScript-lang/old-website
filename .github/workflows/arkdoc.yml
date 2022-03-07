@@ -31,6 +31,8 @@ jobs:
         with:
           repository: ArkScript-lang/Ark
           path: './ark-latest'
+          # so that we can fetch tags
+          fetch-depth: 0
 
       - uses: actions/setup-python@v2
         with:
