@@ -53,7 +53,7 @@ jobs:
           cd ..
           cp -r arkdoc/std/ docs/
           # update version
-          sed "s/let version = "'"'".\+"'"'";/let version = "'"'"${ark_version}"'"'"/g" docs/std/index.html > temp_index.html
+          sed "s/let version = "'"'".\+"'"'"/let version = "'"'"${ark_version}"'"'"/g" docs/std/index.html > temp_index.html
           rm docs/std/index.html
           mv temp_index.html docs/std/index.html
 
