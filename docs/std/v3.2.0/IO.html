@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IO - ArkScript v3.2.0 documentation</title>
+    <link rel="stylesheet" href="/std/assets/css/spectre.min.css" type="text/css">
+    <link rel="stylesheet" href="/std/assets/css/spectre-exp.min.css" type="text/css">
+    <link rel="stylesheet" href="/std/assets/css/spectre-icons.min.css" type="text/css">
+    <link rel="stylesheet" href="/std/assets/css/rainbowjs-theme.css" type="text/css">
+    <link rel="stylesheet" href="/std/assets/css/main.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="navbar has-banner">
+        <a href="/std" class="btn btn-link show-xl" tabindex="0" id="menu-show"><i class="icon icon-menu"></i></a>
+        <section class="navbar-section hide-xl">
+            <a href="/std/v3.2.0" class="navbar-brand mr-2 hide-xl">ArkScript</a>
+        </section>
+        <section class="navbar-center hide-xl">
+            <a href="/std/v3.2.0" class="btn btn-link">Home</a>
+            
+            <div class="divider half"></div>
+            <a href="https://github.com/ArkScript-lang/Ark" target="_blank" class="btn btn-link">Github</a>
+            <a href="https://discord.gg/YT5yDwn" target="_blank" class="btn btn-link">Discord</a>
+        </section>
+        <section class="navbar-section logo">
+            <a href="/std/" class="hide"><img src="/std/assets/images/Ark-slim.png" alt="ArkScript"></a>
+        </section>
+    </header>
+
+    
+
+    <!-- MAIN CONTENT -->
+    <div class="container" id="main">
+        <div class="off-canvas">
+
+    <!-- off-screen toggle button -->
+    <a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar">
+        <i class="icon icon-menu"></i>
+    </a>
+
+    <!-- table of content -->
+    <div id="sidebar" class="off-canvas-sidebar">
+        <ul class="nav">
+            <li class="nav-item active">
+                <a href="#">Table of contents</a>
+                <ul class="nav">
+                    <li class="nav-item">
+    <a href="#print">print</a>
+</li><li class="nav-item">
+    <a href="#puts">puts</a>
+</li><li class="nav-item">
+    <a href="#input">input</a>
+</li><li class="nav-item">
+    <a href="#io:writefile">io:writeFile</a>
+</li><li class="nav-item">
+    <a href="#io:readfile">io:readFile</a>
+</li><li class="nav-item">
+    <a href="#io:fileexists?">io:fileExists?</a>
+</li><li class="nav-item">
+    <a href="#io:listfiles">io:listFiles</a>
+</li><li class="nav-item">
+    <a href="#io:dir?">io:dir?</a>
+</li><li class="nav-item">
+    <a href="#io:makedir">io:makeDir</a>
+</li><li class="nav-item">
+    <a href="#io:removefiles">io:removeFiles</a>
+</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <a class="off-canvas-overlay" href="#close"></a>
+</div>
+
+        <div class="columns off-canvas-content">
+            <!-- The col-2 divs are an easy way to put some margin around the main content -->
+            <div class="col-2"></div>
+
+            <!-- Actual content of the page-->
+            <div class="col-8" id="content">
+                <section id="print">
+    <h2>print</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (print values)</code>
+<br>
+<div>Print value(s) in the terminal</div>
+<div><b>Note</b>
+: 
+No separator is put between the values. Adds a \n at the end</div>
+<div><h4>Parameter</h4>
+<ul><li><code>values</code>: the values to print</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(print "hello")
+</code>
+</pre></div>
+    </div>
+</section><section id="puts">
+    <h2>puts</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (puts values)</code>
+<br>
+<div>Print value(s) in the terminal</div>
+<div><b>Note</b>
+: 
+No separator is put between the values, no \n at the end</div>
+<div><h4>Parameter</h4>
+<ul><li><code>values</code>: the values to print</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(puts "hello")
+</code>
+</pre></div>
+    </div>
+</section><section id="input">
+    <h2>input</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (input prompt)</code>
+<br>
+<div>Request a value from the user</div>
+<div><b>Note</b>
+: 
+Return the value as a string</div>
+<div><h4>Parameter</h4>
+<ul><li><code>prompt</code>: (optional) printed before asking for the user input</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(input "put a number> ")
+</code>
+</pre></div>
+    </div>
+</section><section id="io:writefile">
+    <h2>io:writeFile</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (io:writeFile filename mode content)</code>
+<br>
+<div>Write content to a file, given an optional mode (default: "w"). Return nil</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameters</h4>
+<ul><li><code>filename</code>: path to the file to open</li><li><code>mode</code>: (optional), either "a" (append) or "w" (write)</li><li><code>content</code>: can be any valid ArkScript value</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(io:writeFile "hello.json" "{\"key\": 12}")
+(io:writeFile "truc.txt" "a" 12)
+</code>
+</pre></div>
+    </div>
+</section><section id="io:readfile">
+    <h2>io:readFile</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (io:readFile filename)</code>
+<br>
+<div>Read the content from a file as a String</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>filename</code>: the path of the file to read</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(io:readFile "hello.json")
+</code>
+</pre></div>
+    </div>
+</section><section id="io:fileexists?">
+    <h2>io:fileExists?</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (io:fileExists? filename)</code>
+<br>
+<div>Check if a file exists, return True or False</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>filename</code>: the path of the file</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(io:fileExists? "hello.json")
+</code>
+</pre></div>
+    </div>
+</section><section id="io:listfiles">
+    <h2>io:listFiles</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (io:listFiles path)</code>
+<br>
+<div>List files in a folder, as a List of String</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>path</code>: A directory</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(io:listFiles "/tmp/hello")
+</code>
+</pre></div>
+    </div>
+</section><section id="io:dir?">
+    <h2>io:dir?</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (io:dir? path)</code>
+<br>
+<div>Check if a path represents a directory</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>path</code>: A directory</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(io:dir? "/tmp/hello")
+</code>
+</pre></div>
+    </div>
+</section><section id="io:makedir">
+    <h2>io:makeDir</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (io:makeDir path)</code>
+<br>
+<div>Create a directory</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>path</code>: A directory</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(io:makeDir "/tmp/myDir")
+</code>
+</pre></div>
+    </div>
+</section><section id="io:removefiles">
+    <h2>io:removeFiles</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (io:removeFiles filenames)</code>
+<br>
+<div>Delete files</div>
+<div><b>Note</b>
+: 
+Take multiple arguments, all String, each one representing a path to a file</div>
+<div><h4>Parameter</h4>
+<ul><li><code>filenames</code>: path to file</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(io:removeFiles "/tmp/test.ark" "hello.json")
+</code>
+</pre></div>
+    </div>
+</section>
+            </div>
+            <!-- end of content -->
+
+            <!-- Margin again -->
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+    <footer id="page-footer">
+        <p class="text-center">
+            Copyright &copy; 2020-2021 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.<br>
+            <i>Last generation at 2022-03-10 07:37:16.339794</i>
+        </p>
+    </footer>
+
+    <!-- Rainbow.js for syntax coloring -->
+    <script src="/std/assets/js/rainbow.min.js"></script>
+    <script src="/std/assets/js/languages/arkscript.js"></script>
+</body>
+
+</html>
