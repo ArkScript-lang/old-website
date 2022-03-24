@@ -5,6 +5,7 @@ var namespaceArk_1_1internal =
     [ "ConditionalExecutor", "d1/dd3/classArk_1_1internal_1_1ConditionalExecutor.html", "d1/dd3/classArk_1_1internal_1_1ConditionalExecutor" ],
     [ "ExecutionContext", "d0/daf/structArk_1_1internal_1_1ExecutionContext.html", "d0/daf/structArk_1_1internal_1_1ExecutionContext" ],
     [ "Lexer", "dd/dc4/classArk_1_1internal_1_1Lexer.html", "dd/dc4/classArk_1_1internal_1_1Lexer" ],
+    [ "LineColorContextCounts", "d8/d5a/structArk_1_1internal_1_1LineColorContextCounts.html", "d8/d5a/structArk_1_1internal_1_1LineColorContextCounts" ],
     [ "ListExecutor", "d8/d13/classArk_1_1internal_1_1ListExecutor.html", "d8/d13/classArk_1_1internal_1_1ListExecutor" ],
     [ "MacroExecutor", "d5/d8f/classArk_1_1internal_1_1MacroExecutor.html", "d5/d8f/classArk_1_1internal_1_1MacroExecutor" ],
     [ "MacroExecutorPipeline", "d7/d22/classArk_1_1internal_1_1MacroExecutorPipeline.html", "d7/d22/classArk_1_1internal_1_1MacroExecutorPipeline" ],
@@ -130,6 +131,8 @@ var namespaceArk_1_1internal =
       [ "String", "dc/d0e/namespaceArk_1_1internal.html#ab6df8fad6f59b570c0818eff53db655fa27118326006d3829667a400ad23d5d98", null ],
       [ "PageAddr", "dc/d0e/namespaceArk_1_1internal.html#ab6df8fad6f59b570c0818eff53db655fa6666eaba81f13e74d10ac1a9c9d6d7b1", null ]
     ] ],
+    [ "colorizeLine", "dc/d0e/namespaceArk_1_1internal.html#a365fbfc1398406a9db048f7d0a21dc23", null ],
+    [ "isPairableChar", "dc/d0e/namespaceArk_1_1internal.html#a2d8195d071f700d01699e42e4e452eb9", null ],
     [ "make_node", "dc/d0e/namespaceArk_1_1internal.html#a4c85a4205b0e3e491ad93b04b01ba4ac", null ],
     [ "make_node_list", "dc/d0e/namespaceArk_1_1internal.html#ab45a8c201540edd0c56a2ddb31f401fb", null ],
     [ "makeContext", "dc/d0e/namespaceArk_1_1internal.html#a44953e350ef7d459233e5151b86dedc6", null ],

@@ -75,7 +75,110 @@ $(document).ready(function(){initNavTree('d3/dee/impl_compiler.html','../../'); 
   <div class="headertitle"><div class="title">ArkScript's compiler implementation details </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p >TODO </p>
+<div class="textblock"><p >The compiler is divided in multiple parts, interacting with other in sequence:</p><ul>
+<li>the lexer, generating a list of tokens from source code</li>
+<li>the parser, generating the AST from tokens</li>
+<li>the macro processor, applying macros in the AST</li>
+<li>the optimizer, removing unused symbols from the AST</li>
+<li>the compiler, generating bytecode from the AST</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Lexer</h2>
+<p >Its role is quite simple: following a small set of rules, it will cut through a given input (the source code) in tokens:</p>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>Token</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_enumeration" href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfb">TokenType</a> type;</div>
+<div class="line">    std::string token;</div>
+<div class="line">    std::size_t line;</div>
+<div class="line">    std::size_t col;</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespaceArk_1_1internal_html_ac8f70ee0316f6d163228ed70ef976bfb"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#ac8f70ee0316f6d163228ed70ef976bfb">Ark::internal::TokenType</a></div><div class="ttdeci">TokenType</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d6e/Token_8hpp_source.html#l00021">Token.hpp:22</a></div></div>
+</div><!-- fragment --><p >A token has a type, to help the parser when generating the AST. the type can be one of</p><ul>
+<li>Grouping: <code>()[]{}</code></li>
+<li>String: <code>"..."</code></li>
+<li>Number</li>
+<li>Operator</li>
+<li>Identifier: a variable name</li>
+<li>Capture: a capture used in functions: <code>&amp;identifier</code></li>
+<li>GetField: a field reading operation: <code>.field</code> (prefixed by the closure which you are trying to read a field from)</li>
+<li>Keyword</li>
+<li>Skip: a space or newline character</li>
+<li>Comment: <code>#...\n</code></li>
+<li>Shorthand: &lsquo;&rsquo;<code>(quote)</code></li>
+<li><code>Spread:</code>...`, used by macros</li>
+<li>Mismatch: anything we couldn't put in a category</li>
+</ul>
+<p >The line and col values are here only for debugging purpose, when creating the error messages so that we know which line and word to point out to the user.</p>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Parser</h2>
+<p >It is generating the abstract syntax tree (AST) from the list of tokens, and importing files when it can, merging their AST with the AST it holds.</p>
+<p >It is recursive, quite complex, but gets the job done (I really hope no one wants to contribute to it because I may be the only one able to understand it, but it's really hard to explain). Basically, it will eat through the tokens, and try to match them with what it think the current node must be. For example, if the parser finds a <code>(</code>, then a keyword token with the value <code>if</code>, it will attempt to build a <code>if</code> node with a condition, an <code>ifTrue</code> node, and a potential <code>ifFalse</code> node, then return the node. To generate the subnodes, it's calling itself, and will expect to find a closing <code>)</code> after returning.</p>
+<h2><a class="anchor" id="autotoc_md7"></a>
+Macro processor</h2>
+<p >Once the AST has been built, the macro processor kicks into action and goes over the AST, trying to find any macro node to register them and apply them. Macros are registered by block, so if we are at a current depth of 0 in the AST, and found a macro, it will available in every node. If we find a macro in a node at depth 2, the macro will get registered in applied in all the potential subnodes of the current node, but once we leave the depth 2 node, the macro will be removed from memory and won't be accessible in the other part of the script.</p>
+<div class="fragment"><div class="line">!{macro 0}  # available everywhere</div>
+<div class="line"> </div>
+<div class="line">(begin</div>
+<div class="line">    # macro exists here in this depth 1 node</div>
+<div class="line"> </div>
+<div class="line">    !{a 2}  # a exists here in this depth 1 node</div>
+<div class="line">)</div>
+<div class="line"># a doesn&#39;t exist here in this depth 0 node</div>
+</div><!-- fragment --><p >It is composed of different pieces:</p><ul>
+<li>the processor, receiving the AST, keeping track of all the macros, and visiting every node, applying macros in them (it also does complex stuff with function macros like unifying the argument lists)</li>
+<li>the pipeline, holding all the different macro executors, trying to apply them one after another (until one matches) when the processor asks for a macro to be applied on a node</li>
+<li>the executors:<ul>
+<li>the conditionnal one works only with if macros and apply them regarding the value of the condition</li>
+<li>the symbol one applies the value held by the macro</li>
+<li>the list one applies predefined macros and user defined macros (function macros), it is arguably the most complex one but also the best one as well</li>
+</ul>
+</li>
+</ul>
+<p >Once it is done running, every macro definition and macro usage in the AST has been removed and/or replaced with the corresponding value, so we are left with an AST that the compiler could already work with.</p>
+<h2><a class="anchor" id="autotoc_md8"></a>
+AST optimizer</h2>
+<p >Though before being able to compile the AST, we can optimize it a bit, by removing unused variable definition. For simple variables, like <code>(let a 12)</code>, this isn't really a problem if we leave them, but for functions it would create separate pages of bytecode for them, and the resulting bytecode would be a lot longer than just a variable declaration and assignment. Having a long bytecode isn't a problem in term of computing power, as we are only computing what we are asked to, but we are limited to 65'534 functions as our code segment indexes are on 2 bytes, and we are limited to 65'536 different symbols (and values). Those symbols and values could be used only in those functions we want to delete, and use substantial space in the symbols and values table.</p>
+<p >So here comes the AST optimizer, reading only the first level of the AST, searching for variables and functions definition. Then, it visits the whole AST, counting how many times each gathered symbol has been used. In the end, if a symbol has been used only once (it correspond to its definition/declaration), then it gets removed from the AST.</p>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Compiler</h2>
+<p >The compiler's role is to take a tree-like structure, the AST, and flatten it, so that the virtual machine can just read one instruction after another, without having to dive in a nested structure (which is very inefficient).</p>
+<p >It works recursively on the nodes, and sometimes even I have some trouble understanding why something works and why something else doesn't. In the end, it all boils down to "the bytecode has been badly generated".</p>
+<ul>
+<li>The first step is to generate the file header: the string <code>ark\0</code>, followed by the version of the compiler (each number on two bytes), and then the timestamp (<code>Compiler::pushFileHeader</code>).</li>
+<li>Next step is to run through the AST, running each node in the <code>Compiler::compile</code> recursive method, in charge of generating the bytecode.</li>
+<li>Then we check for any undefined symbols and display an error to the user if we found any (alongside a suggestion) (<code>Compiler::checkForUndefinedSymbols</code>)</li>
+<li>We can continue to build our bytecode file header, with the symbols and the values table, respectively for a list of identifier used throughout the program, and for all the values used (a tag-value system is used here so that the VM knows what type the value is) (<code>Compiler::pushSymAndValTables</code>).</li>
+<li>Finally, we add the different code pages to the bytecode file, generated by the <code>Compiler::compile</code> method called earlier, and create the SHA256 used for integrity checking of the bytecode, in a spot in the file header.</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md10"></a>
+The compilation</h3>
+<p >Given an input node, we make a decision based on its type (<code>Compiler::_compile</code>):</p><ul>
+<li>if it's a symbol we will compile it to a <code>LOAD &lt;symbol&gt;</code></li>
+<li>"get field operation", <code>GET_FIELD &lt;symbol&gt;</code></li>
+<li>String, Number or nil, we push the value on the stack with <code>LOAD_CONST &lt;const&gt;</code><ul>
+<li>an additional step is done here to avoid pushing the value on the stack <b>if</b> the value isn't being used (eg in a function call, variable assignment)</li>
+</ul>
+</li>
+<li>Keywords:<ul>
+<li>If: first we compile the condition, then add a jump if true to go to the <code>ifTrue</code> branch. We compile the <code>ifFalse</code> branch, add a jump to the end of the if, and finally we compile the <code>ifTrue</code> branch.</li>
+<li>Let, Mut, Set: we register the symbol, compile the value, add the corresponding instruction after it: <code>LET</code>, <code>MUT</code>, <code>STORE</code></li>
+<li>Fun: TODO</li>
+<li>Begin: we take each node and compile them. An additional step is done here, to remove any unused value, except for the last node whose fate is decided by the caller (so that we don't always drop the last node in a begin, which may be the return value of a function).</li>
+<li>While: much like the if, we compile the condition, add a jump to the end of the while if the condition is false, compile the body and add a jump to the begining (right before the condition).</li>
+<li>Import: this is used only to import modules at runtime, we put the module name (a string) on the stack and then the <code>IMPORT</code> instruction. The VM will do what's needed for us.</li>
+<li>Quote: we create a separate code page (corresponding to a new function), we compile the value on this new page, and add a <code>RET</code> instruction. This is arguably not your typical <code>quote</code> and I'm very sorry for this.</li>
+<li>Del: this adds <code>DEL &lt;symbol&gt;</code> to the bytecode, to tell the virtual machine to remove <code>&lt;symbol&gt;</code> from memory.</li>
+</ul>
+</li>
+<li>if none the previous cases matched, then we most likely have a function call (<code>Compiler::handleCalls</code>)<ul>
+<li>we compile the expression on a temporary bytecode page, and check its length: if it's more than 1 instruction, this is a function call, otherwise it's an operator call (which we can optimize / unroll)</li>
+<li>then we compile the arguments on the current page, marking them as "no discard"</li>
+<li>the tail call optimization is handled here if applicable</li>
+<li>we push the computed expression for the function call and discard the temporary page</li>
+<li>we add the <code>CALL</code> instruction, the number of arguments </li>
+</ul>
+</li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -83,7 +186,7 @@ $(document).ready(function(){initNavTree('d3/dee/impl_compiler.html','../../'); 
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../df/d0f/implementation.html">Implementation details</a></li>
-    <li class="footer">Generated on Wed Mar 2 2022 08:30:11 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Thu Mar 24 2022 07:57:51 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>

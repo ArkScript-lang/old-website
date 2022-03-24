@@ -75,7 +75,20 @@ $(document).ready(function(){initNavTree('db/d79/impl_vm.html','../../'); initRe
   <div class="headertitle"><div class="title">Virtual Machine implementation details </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p >TODO </p>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md11"></a>
+Constructing a VM</h2>
+<p >This is done by calling the constructor of the VM, passing in a reference to an <code><a class="el" href="../../d1/d37/classArk_1_1State.html" title="Ark state to handle the dirty job of loading and compiling ArkScript code.">Ark::State</a></code>. It won't be modified, it was made this way to be able to share a single state between multiple independant virtual machines.</p>
+<h2><a class="anchor" id="autotoc_md12"></a>
+Running the VM (and consequently running ArkScript bytecode)</h2>
+<h3><a class="anchor" id="autotoc_md13"></a>
+Initializing the VM</h3>
+<p >The first step before running is to initialize the virtual machine state, this is done each time you call <code>VM::run</code> to reset its state (stack pointer, stack frame count, shared libs, locals, scopes) and reload the binded functions.</p>
+<h3><a class="anchor" id="autotoc_md14"></a>
+Running code while taking care of exceptions</h3>
+<p >This is the next function called by <code>VM::run</code>: <code>VM::safeRun</code>. As its name suggests, it runs bytecode in a safe manner, taking care of the potential exceptions. This is by far the longest method (952 lines at the time writing). It will go through every instruction, running them sequentially, and if an exception is thrown, it will be caught, the exit code of the VM will be set to 1, and a backtrace will be displayed.</p>
+<h3><a class="anchor" id="autotoc_md15"></a>
+Backtrace generation</h3>
+<p >This is done by <code>VM::backtrace</code> when an exception was thrown while the VM was running. It will display at most the last 7 elements in the call stack, with the function name (if any) and the arguments with their value. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -83,7 +96,7 @@ $(document).ready(function(){initNavTree('db/d79/impl_vm.html','../../'); initRe
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../df/d0f/implementation.html">Implementation details</a></li>
-    <li class="footer">Generated on Wed Mar 2 2022 08:30:11 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Thu Mar 24 2022 07:57:51 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>

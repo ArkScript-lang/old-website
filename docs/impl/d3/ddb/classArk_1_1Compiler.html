@@ -114,18 +114,20 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:ab1e2bb587be64f985df51dde49994198"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#ab1e2bb587be64f985df51dde49994198">pushHeadersPhase1</a> () noexcept</td></tr>
-<tr class="memdesc:ab1e2bb587be64f985df51dde49994198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push the first headers of the bytecode file.  <a href="../../d3/ddb/classArk_1_1Compiler.html#ab1e2bb587be64f985df51dde49994198">More...</a><br /></td></tr>
-<tr class="separator:ab1e2bb587be64f985df51dde49994198"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ed6dcde215bf4a0ad92b1f6f208ee73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#a4ed6dcde215bf4a0ad92b1f6f208ee73">pushHeadersPhase2</a> ()</td></tr>
-<tr class="memdesc:a4ed6dcde215bf4a0ad92b1f6f208ee73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push the other headers, after having compile the file (it's needed because we read the symbol/value tables, populated by compilation)  <a href="../../d3/ddb/classArk_1_1Compiler.html#a4ed6dcde215bf4a0ad92b1f6f208ee73">More...</a><br /></td></tr>
-<tr class="separator:a4ed6dcde215bf4a0ad92b1f6f208ee73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb679e939d386360d3717e21eccb152c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#aeb679e939d386360d3717e21eccb152c">pushFileHeader</a> () noexcept</td></tr>
+<tr class="memdesc:aeb679e939d386360d3717e21eccb152c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push the file headers (magic, version used, timestamp)  <a href="../../d3/ddb/classArk_1_1Compiler.html#aeb679e939d386360d3717e21eccb152c">More...</a><br /></td></tr>
+<tr class="separator:aeb679e939d386360d3717e21eccb152c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff74538d039a59dfb4dea3d019932505"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#aff74538d039a59dfb4dea3d019932505">pushSymAndValTables</a> ()</td></tr>
+<tr class="memdesc:aff74538d039a59dfb4dea3d019932505"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push the symbols and values tables.  <a href="../../d3/ddb/classArk_1_1Compiler.html#aff74538d039a59dfb4dea3d019932505">More...</a><br /></td></tr>
+<tr class="separator:aff74538d039a59dfb4dea3d019932505"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b6b7575baa3c1f8ace15de2ca690dd5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#a7b6b7575baa3c1f8ace15de2ca690dd5">page</a> (int i) noexcept</td></tr>
 <tr class="memdesc:a7b6b7575baa3c1f8ace15de2ca690dd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">helper functions to get a temp or finalized code page  <a href="../../d3/ddb/classArk_1_1Compiler.html#a7b6b7575baa3c1f8ace15de2ca690dd5">More...</a><br /></td></tr>
 <tr class="separator:a7b6b7575baa3c1f8ace15de2ca690dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab59ba4a4f4cf25964dfb966e682eaf4d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#ab59ba4a4f4cf25964dfb966e682eaf4d">page_ptr</a> (int i) noexcept</td></tr>
 <tr class="memdesc:ab59ba4a4f4cf25964dfb966e682eaf4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">helper functions to get a temp or finalized code page  <a href="../../d3/ddb/classArk_1_1Compiler.html#ab59ba4a4f4cf25964dfb966e682eaf4d">More...</a><br /></td></tr>
 <tr class="separator:ab59ba4a4f4cf25964dfb966e682eaf4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac41cd35fcb71d93634e70935502cb336"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#ac41cd35fcb71d93634e70935502cb336">setNumberAt</a> (int p, std::size_t at_inst, std::size_t number)</td></tr>
+<tr class="separator:ac41cd35fcb71d93634e70935502cb336"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb661cfc3f336a54bb71a43047ea33f8"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#aeb661cfc3f336a54bb71a43047ea33f8">countArkObjects</a> (const std::vector&lt; <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &gt; &amp;lst) noexcept</td></tr>
 <tr class="memdesc:aeb661cfc3f336a54bb71a43047ea33f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count the number of "valid" ark objects in a node.  <a href="../../d3/ddb/classArk_1_1Compiler.html#aeb661cfc3f336a54bb71a43047ea33f8">More...</a><br /></td></tr>
 <tr class="separator:aeb661cfc3f336a54bb71a43047ea33f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,31 +149,29 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:ac71ac4031b100fbcf9311ea89ad66930"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#ac71ac4031b100fbcf9311ea89ad66930">throwCompilerError</a> (const std::string &amp;message, const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;node)</td></tr>
 <tr class="memdesc:ac71ac4031b100fbcf9311ea89ad66930"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throw a nice error message.  <a href="../../d3/ddb/classArk_1_1Compiler.html#ac71ac4031b100fbcf9311ea89ad66930">More...</a><br /></td></tr>
 <tr class="separator:ac71ac4031b100fbcf9311ea89ad66930"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af692b8dcab3d6451e8683b1925c650c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#af692b8dcab3d6451e8683b1925c650c9">_compile</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;x, int p, bool produces_result)</td></tr>
-<tr class="memdesc:af692b8dcab3d6451e8683b1925c650c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a single node recursively.  <a href="../../d3/ddb/classArk_1_1Compiler.html#af692b8dcab3d6451e8683b1925c650c9">More...</a><br /></td></tr>
-<tr class="separator:af692b8dcab3d6451e8683b1925c650c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09d94161e8c789f35dd0bcde9c884bbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#a09d94161e8c789f35dd0bcde9c884bbc">_compile</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;x, int p, bool produces_result, bool is_terminal, const std::string &amp;var_name=&quot;&quot;)</td></tr>
+<tr class="memdesc:a09d94161e8c789f35dd0bcde9c884bbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a single node recursively.  <a href="../../d3/ddb/classArk_1_1Compiler.html#a09d94161e8c789f35dd0bcde9c884bbc">More...</a><br /></td></tr>
+<tr class="separator:a09d94161e8c789f35dd0bcde9c884bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2a3b85c400744f823179dee708ec03d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#ac2a3b85c400744f823179dee708ec03d">compileSymbol</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;x, int p, bool produces_result)</td></tr>
 <tr class="separator:ac2a3b85c400744f823179dee708ec03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa963bde1a86e7f685a25f129591f9d1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#aa963bde1a86e7f685a25f129591f9d1a">compileSpecific</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;c0, const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;x, int p, bool produces_result)</td></tr>
 <tr class="separator:aa963bde1a86e7f685a25f129591f9d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a791fb5d44a824f61cbad8715f646e72e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#a791fb5d44a824f61cbad8715f646e72e">compileIf</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;x, int p, bool produces_result)</td></tr>
-<tr class="separator:a791fb5d44a824f61cbad8715f646e72e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5cac20db1f466a22340898222c5255e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#ad5cac20db1f466a22340898222c5255e">compileFunction</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;x, int p, bool produces_result)</td></tr>
-<tr class="separator:ad5cac20db1f466a22340898222c5255e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c375044577a38f626d5986e61df4c68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#a2c375044577a38f626d5986e61df4c68">compileLetMut</a> (<a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">internal::Keyword</a> n, const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;x, int p)</td></tr>
-<tr class="separator:a2c375044577a38f626d5986e61df4c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2202d7b3e13682173cc9b72528be38e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#a2202d7b3e13682173cc9b72528be38e8">compileIf</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;x, int p, bool produces_result, bool is_terminal, const std::string &amp;var_name)</td></tr>
+<tr class="separator:a2202d7b3e13682173cc9b72528be38e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a812948affec8d06ae7fb1d9e109a64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#a6a812948affec8d06ae7fb1d9e109a64">compileFunction</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;x, int p, bool produces_result, const std::string &amp;var_name)</td></tr>
+<tr class="separator:a6a812948affec8d06ae7fb1d9e109a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a341749b3998d9299cc14d23f19ee48aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#a341749b3998d9299cc14d23f19ee48aa">compileLetMutSet</a> (<a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">internal::Keyword</a> n, const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;x, int p)</td></tr>
+<tr class="separator:a341749b3998d9299cc14d23f19ee48aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c3e8e2e5e6edf99d979425844c5f7c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#a8c3e8e2e5e6edf99d979425844c5f7c0">compileWhile</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;x, int p)</td></tr>
 <tr class="separator:a8c3e8e2e5e6edf99d979425844c5f7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a803c4a48d9a8fce07819b02bd621f83b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#a803c4a48d9a8fce07819b02bd621f83b">compileSet</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;x, int p)</td></tr>
-<tr class="separator:a803c4a48d9a8fce07819b02bd621f83b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32373cfa09e4bcdab38382e14fb112c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#a32373cfa09e4bcdab38382e14fb112c2">compileQuote</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;x, int p, bool produces_result)</td></tr>
-<tr class="separator:a32373cfa09e4bcdab38382e14fb112c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acec629b6288d130c4287a22d21df2aff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#acec629b6288d130c4287a22d21df2aff">compileQuote</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;x, int p, bool produces_result, bool is_terminal, const std::string &amp;var_name)</td></tr>
+<tr class="separator:acec629b6288d130c4287a22d21df2aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cd6dc481858df323639b3e148fa3dba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#a7cd6dc481858df323639b3e148fa3dba">compilePluginImport</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;x, int p)</td></tr>
 <tr class="separator:a7cd6dc481858df323639b3e148fa3dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bd595a5dac28bcb4a4b7ba5a2760063"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#a5bd595a5dac28bcb4a4b7ba5a2760063">compileDel</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;x, int p)</td></tr>
 <tr class="separator:a5bd595a5dac28bcb4a4b7ba5a2760063"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9941f4bd81790aeac4cac988689f49f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#ad9941f4bd81790aeac4cac988689f49f">handleCalls</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;x, int p, bool produces_result)</td></tr>
-<tr class="separator:ad9941f4bd81790aeac4cac988689f49f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9a3cbed1a139e24e77893e781a0edb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#ab9a3cbed1a139e24e77893e781a0edb1">handleCalls</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;x, int p, bool produces_result, bool is_terminal, const std::string &amp;var_name)</td></tr>
+<tr class="separator:ab9a3cbed1a139e24e77893e781a0edb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dd86a72d2479e69f1353e08c21edd09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#a0dd86a72d2479e69f1353e08c21edd09">putValue</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;x, int p, bool produces_result)</td></tr>
 <tr class="memdesc:a0dd86a72d2479e69f1353e08c21edd09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put a value in the bytecode, handling the closures chains.  <a href="../../d3/ddb/classArk_1_1Compiler.html#a0dd86a72d2479e69f1353e08c21edd09">More...</a><br /></td></tr>
 <tr class="separator:a0dd86a72d2479e69f1353e08c21edd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,6 +193,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a10ff4f2203b285731faba43ac22e72d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#a10ff4f2203b285731faba43ac22e72d4">pushNumber</a> (uint16_t n, std::vector&lt; uint8_t &gt; *<a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#a7b6b7575baa3c1f8ace15de2ca690dd5">page</a>=nullptr) noexcept</td></tr>
 <tr class="memdesc:a10ff4f2203b285731faba43ac22e72d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push a number on stack (need 2 bytes)  <a href="../../d3/ddb/classArk_1_1Compiler.html#a10ff4f2203b285731faba43ac22e72d4">More...</a><br /></td></tr>
 <tr class="separator:a10ff4f2203b285731faba43ac22e72d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f218176e0ab79eec9d9232cc2df16bc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html#a7f218176e0ab79eec9d9232cc2df16bc">offerSuggestion</a> (const std::string &amp;str)</td></tr>
+<tr class="memdesc:a7f218176e0ab79eec9d9232cc2df16bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suggest a symbol of what the user may have meant to input.  <a href="../../d3/ddb/classArk_1_1Compiler.html#a7f218176e0ab79eec9d9232cc2df16bc">More...</a><br /></td></tr>
+<tr class="separator:a7f218176e0ab79eec9d9232cc2df16bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -277,8 +280,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af692b8dcab3d6451e8683b1925c650c9" name="af692b8dcab3d6451e8683b1925c650c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af692b8dcab3d6451e8683b1925c650c9">&#9670;&nbsp;</a></span>_compile()</h2>
+<a id="a09d94161e8c789f35dd0bcde9c884bbc" name="a09d94161e8c789f35dd0bcde9c884bbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09d94161e8c789f35dd0bcde9c884bbc">&#9670;&nbsp;</a></span>_compile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -302,7 +305,19 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>produces_result</em>&#160;</td>
+          <td class="paramname"><em>produces_result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_terminal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>var_name</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -322,15 +337,18 @@ Friends</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">x</td><td>the <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html" title="A node of an Abstract Syntax Tree for ArkScript.">internal::Node</a> to compile </td></tr>
     <tr><td class="paramname">p</td><td>the current page number we're on </td></tr>
+    <tr><td class="paramname">produces_result</td><td></td></tr>
+    <tr><td class="paramname">is_terminal</td><td></td></tr>
+    <tr><td class="paramname">var_name</td><td></td></tr>
   </table>
   </dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">233</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00652">addSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00671">addValue()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00049">Ark::internal::BUILTIN</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00532">compileDel()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00412">compileFunction()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00386">compileIf()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00458">compileLetMut()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00521">compilePluginImport()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00504">compileQuote()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00493">compileSet()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00351">compileSpecific()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00328">compileSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00471">compileWhile()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00053">Ark::internal::GET_FIELD</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00541">handleCalls()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00198">isBuiltin()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00162">isSpecific()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00039">Ark::internal::LOAD_CONST</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00126">Ark::internal::Node::nodeType()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00110">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00123">page_ptr()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00726">pushNumber()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00092">Ark::internal::Node::string()</a>.</p>
+<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00676">addSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00695">addValue()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00049">Ark::internal::BUILTIN</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00536">compileDel()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00419">compileFunction()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00391">compileIf()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00469">compileLetMutSet()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00525">compilePluginImport()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00508">compileQuote()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00356">compileSpecific()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00333">compileSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00487">compileWhile()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00053">Ark::internal::GET_FIELD</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00545">handleCalls()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00198">isBuiltin()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00167">isSpecific()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00039">Ark::internal::LOAD_CONST</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00126">Ark::internal::Node::nodeType()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00109">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00122">page_ptr()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00775">pushNumber()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00092">Ark::internal::Node::string()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00033">compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00412">compileFunction()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00386">compileIf()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00504">compileQuote()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00351">compileSpecific()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00471">compileWhile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00541">handleCalls()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00645">putValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00033">compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00419">compileFunction()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00391">compileIf()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00508">compileQuote()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00356">compileSpecific()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00487">compileWhile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00545">handleCalls()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00667">putValue()</a>.</p>
 
 </div>
 </div>
@@ -366,11 +384,11 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00705">705</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00729">729</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00082">m_defined_symbols</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00412">compileFunction()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00458">compileLetMut()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00419">compileFunction()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00469">compileLetMutSet()</a>.</p>
 
 </div>
 </div>
@@ -408,11 +426,11 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>uint16_t </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00652">652</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00676">676</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00081">m_symbols</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00228">throwCompilerError()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00532">compileDel()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00412">compileFunction()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00458">compileLetMut()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00493">compileSet()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00328">compileSymbol()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00536">compileDel()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00419">compileFunction()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00469">compileLetMutSet()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00333">compileSymbol()</a>.</p>
 
 </div>
 </div>
@@ -450,11 +468,11 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>uint16_t </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00671">671</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00695">695</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00084">m_values</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00228">throwCompilerError()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00412">compileFunction()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00521">compilePluginImport()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00504">compileQuote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00419">compileFunction()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00525">compilePluginImport()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00508">compileQuote()</a>.</p>
 
 </div>
 </div>
@@ -503,7 +521,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::size_t </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00688">688</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00712">712</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00084">m_values</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00228">throwCompilerError()</a>.</p>
 
@@ -568,9 +586,9 @@ Friends</h2></td></tr>
 
 <p>Checks for undefined symbols, not present in the defined symbols table. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00713">713</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00737">737</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00082">m_defined_symbols</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00081">m_symbols</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00218">mayBeFromPlugin()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00228">throwCompilerError()</a>.</p>
+<p class="reference">References <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00082">m_defined_symbols</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00081">m_symbols</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00218">mayBeFromPlugin()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00756">offerSuggestion()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00228">throwCompilerError()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00033">compile()</a>.</p>
 
@@ -595,7 +613,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00033">33</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../d2/dc5/Optimizer_8cpp_source.html#l00017">Ark::internal::Optimizer::ast()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00713">checkForUndefinedSymbol()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00035">Ark::internal::CODE_SEGMENT_START</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00046">Ark::internal::HALT</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00088">m_bytecode</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00085">m_code_pages</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00078">m_optimizer</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00110">page()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00091">pushHeadersPhase1()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00123">pushHeadersPhase2()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00726">pushNumber()</a>.</p>
+<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../d2/dc5/Optimizer_8cpp_source.html#l00017">Ark::internal::Optimizer::ast()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00737">checkForUndefinedSymbol()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00035">Ark::internal::CODE_SEGMENT_START</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00046">Ark::internal::HALT</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00088">m_bytecode</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00085">m_code_pages</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00078">m_optimizer</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00109">page()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00091">pushFileHeader()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00775">pushNumber()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00123">pushSymAndValTables()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d0/da0/State_8cpp_source.html#l00080">Ark::State::compile()</a>, and <a class="el" href="../../d0/da0/State_8cpp_source.html#l00151">Ark::State::doString()</a>.</p>
 
@@ -635,16 +653,16 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00532">532</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00536">536</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00652">addSymbol()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00051">Ark::internal::DEL</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00110">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00123">page_ptr()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00726">pushNumber()</a>.</p>
+<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00676">addSymbol()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00051">Ark::internal::DEL</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00109">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00122">page_ptr()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00775">pushNumber()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>.</p>
 
 </div>
 </div>
-<a id="ad5cac20db1f466a22340898222c5255e" name="ad5cac20db1f466a22340898222c5255e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5cac20db1f466a22340898222c5255e">&#9670;&nbsp;</a></span>compileFunction()</h2>
+<a id="a6a812948affec8d06ae7fb1d9e109a64" name="a6a812948affec8d06ae7fb1d9e109a64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a812948affec8d06ae7fb1d9e109a64">&#9670;&nbsp;</a></span>compileFunction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -668,7 +686,13 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>produces_result</em>&#160;</td>
+          <td class="paramname"><em>produces_result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>var_name</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -683,16 +707,16 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00412">412</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00419">419</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00705">addDefinedSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00652">addSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00671">addValue()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00048">Ark::internal::CAPTURE</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00039">Ark::internal::LOAD_CONST</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00085">m_code_pages</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00082">m_defined_symbols</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00050">Ark::internal::MUT</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00110">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00123">page_ptr()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00062">Ark::internal::POP</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00726">pushNumber()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00045">Ark::internal::RET</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00228">throwCompilerError()</a>.</p>
+<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00729">addDefinedSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00676">addSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00695">addValue()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00048">Ark::internal::CAPTURE</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00039">Ark::internal::LOAD_CONST</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00085">m_code_pages</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00082">m_defined_symbols</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00050">Ark::internal::MUT</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00109">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00122">page_ptr()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00062">Ark::internal::POP</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00775">pushNumber()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00045">Ark::internal::RET</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00228">throwCompilerError()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>.</p>
 
 </div>
 </div>
-<a id="a791fb5d44a824f61cbad8715f646e72e" name="a791fb5d44a824f61cbad8715f646e72e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a791fb5d44a824f61cbad8715f646e72e">&#9670;&nbsp;</a></span>compileIf()</h2>
+<a id="a2202d7b3e13682173cc9b72528be38e8" name="a2202d7b3e13682173cc9b72528be38e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2202d7b3e13682173cc9b72528be38e8">&#9670;&nbsp;</a></span>compileIf()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -716,7 +740,19 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>produces_result</em>&#160;</td>
+          <td class="paramname"><em>produces_result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_terminal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>var_name</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -731,16 +767,16 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00386">386</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00391">391</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00044">Ark::internal::JUMP</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00110">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00123">page_ptr()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00040">Ark::internal::POP_JUMP_IF_TRUE</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00726">pushNumber()</a>.</p>
+<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00044">Ark::internal::JUMP</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00109">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00122">page_ptr()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00040">Ark::internal::POP_JUMP_IF_TRUE</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00775">pushNumber()</a>, and <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00129">setNumberAt()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>.</p>
 
 </div>
 </div>
-<a id="a2c375044577a38f626d5986e61df4c68" name="a2c375044577a38f626d5986e61df4c68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c375044577a38f626d5986e61df4c68">&#9670;&nbsp;</a></span>compileLetMut()</h2>
+<a id="a341749b3998d9299cc14d23f19ee48aa" name="a341749b3998d9299cc14d23f19ee48aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a341749b3998d9299cc14d23f19ee48aa">&#9670;&nbsp;</a></span>compileLetMutSet()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -749,7 +785,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Ark::Compiler::compileLetMut </td>
+          <td class="memname">void Ark::Compiler::compileLetMutSet </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">internal::Keyword</a>&#160;</td>
           <td class="paramname"><em>n</em>, </td>
@@ -779,9 +815,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00458">458</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00469">469</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00705">addDefinedSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00652">addSymbol()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00042">Ark::internal::LET</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00050">Ark::internal::MUT</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00110">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00123">page_ptr()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00726">pushNumber()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00645">putValue()</a>.</p>
+<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00729">addDefinedSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00676">addSymbol()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00042">Ark::internal::LET</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00050">Ark::internal::MUT</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00109">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00122">page_ptr()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00775">pushNumber()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00667">putValue()</a>, and <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00041">Ark::internal::STORE</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>.</p>
 
@@ -821,16 +857,16 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00521">521</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00525">525</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00671">addValue()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00083">m_plugins</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00110">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00123">page_ptr()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00054">Ark::internal::PLUGIN</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00726">pushNumber()</a>.</p>
+<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00695">addValue()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00083">m_plugins</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00109">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00122">page_ptr()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00054">Ark::internal::PLUGIN</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00775">pushNumber()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>.</p>
 
 </div>
 </div>
-<a id="a32373cfa09e4bcdab38382e14fb112c2" name="a32373cfa09e4bcdab38382e14fb112c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32373cfa09e4bcdab38382e14fb112c2">&#9670;&nbsp;</a></span>compileQuote()</h2>
+<a id="acec629b6288d130c4287a22d21df2aff" name="acec629b6288d130c4287a22d21df2aff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acec629b6288d130c4287a22d21df2aff">&#9670;&nbsp;</a></span>compileQuote()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -854,49 +890,19 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>produces_result</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00504">504</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00671">addValue()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00039">Ark::internal::LOAD_CONST</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00085">m_code_pages</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00110">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00123">page_ptr()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00062">Ark::internal::POP</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00726">pushNumber()</a>, and <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00045">Ark::internal::RET</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>.</p>
-
-</div>
-</div>
-<a id="a803c4a48d9a8fce07819b02bd621f83b" name="a803c4a48d9a8fce07819b02bd621f83b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a803c4a48d9a8fce07819b02bd621f83b">&#9670;&nbsp;</a></span>compileSet()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Ark::Compiler::compileSet </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramname"><em>produces_result</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>p</em>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_terminal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>var_name</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -911,9 +917,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00493">493</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00508">508</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00652">addSymbol()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00110">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00123">page_ptr()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00726">pushNumber()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00645">putValue()</a>, and <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00041">Ark::internal::STORE</a>.</p>
+<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00695">addValue()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00039">Ark::internal::LOAD_CONST</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00085">m_code_pages</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00109">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00122">page_ptr()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00062">Ark::internal::POP</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00775">pushNumber()</a>, and <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00045">Ark::internal::RET</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>.</p>
 
@@ -965,9 +971,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00351">351</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00356">356</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00179">countArkObjects()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00162">isSpecific()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00055">Ark::internal::LIST</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00110">page()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00062">Ark::internal::POP</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00209">pushSpecificInstArgc()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00092">Ark::internal::Node::string()</a>.</p>
+<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00179">countArkObjects()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00167">isSpecific()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00055">Ark::internal::LIST</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00109">page()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00062">Ark::internal::POP</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00209">pushSpecificInstArgc()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00092">Ark::internal::Node::string()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>.</p>
 
@@ -1013,9 +1019,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00328">328</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00333">333</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00652">addSymbol()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00049">Ark::internal::BUILTIN</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00065">Ark::internal::FIRST_OPERATOR</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00198">isBuiltin()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00190">isOperator()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00038">Ark::internal::LOAD_SYMBOL</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00110">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00123">page_ptr()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00062">Ark::internal::POP</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00726">pushNumber()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00092">Ark::internal::Node::string()</a>.</p>
+<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00676">addSymbol()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00049">Ark::internal::BUILTIN</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00065">Ark::internal::FIRST_OPERATOR</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00198">isBuiltin()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00190">isOperator()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00038">Ark::internal::LOAD_SYMBOL</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00109">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00122">page_ptr()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00062">Ark::internal::POP</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00775">pushNumber()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00092">Ark::internal::Node::string()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>.</p>
 
@@ -1055,9 +1061,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00471">471</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00487">487</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00044">Ark::internal::JUMP</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00110">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00123">page_ptr()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00043">Ark::internal::POP_JUMP_IF_FALSE</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00726">pushNumber()</a>.</p>
+<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00044">Ark::internal::JUMP</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00109">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00122">page_ptr()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00043">Ark::internal::POP_JUMP_IF_FALSE</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00775">pushNumber()</a>, and <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00129">setNumberAt()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>.</p>
 
@@ -1099,7 +1105,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00179">179</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00351">compileSpecific()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00356">compileSpecific()</a>.</p>
 
 </div>
 </div>
@@ -1146,8 +1152,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ad9941f4bd81790aeac4cac988689f49f" name="ad9941f4bd81790aeac4cac988689f49f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9941f4bd81790aeac4cac988689f49f">&#9670;&nbsp;</a></span>handleCalls()</h2>
+<a id="ab9a3cbed1a139e24e77893e781a0edb1" name="ab9a3cbed1a139e24e77893e781a0edb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9a3cbed1a139e24e77893e781a0edb1">&#9670;&nbsp;</a></span>handleCalls()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1171,7 +1177,19 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>produces_result</em>&#160;</td>
+          <td class="paramname"><em>produces_result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_terminal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>var_name</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1186,9 +1204,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00541">541</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00545">545</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00066">Ark::internal::ADD</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00085">Ark::internal::AND_</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00081">Ark::internal::ASSERT</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00047">Ark::internal::CALL</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00069">Ark::internal::DIV</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00065">Ark::internal::FIRST_OPERATOR</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00086">m_temp_pages</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00087">Ark::internal::MOD</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00068">Ark::internal::MUL</a>, <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00089">Ark::internal::operators</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00086">Ark::internal::OR_</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00110">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00123">page_ptr()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00062">Ark::internal::POP</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00726">pushNumber()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00067">Ark::internal::SUB</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00228">throwCompilerError()</a>.</p>
+<p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00066">Ark::internal::ADD</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00085">Ark::internal::AND_</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00081">Ark::internal::ASSERT</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00047">Ark::internal::CALL</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00069">Ark::internal::DIV</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00065">Ark::internal::FIRST_OPERATOR</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00044">Ark::internal::JUMP</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00086">m_temp_pages</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00087">Ark::internal::MOD</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00068">Ark::internal::MUL</a>, <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00089">Ark::internal::operators</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00086">Ark::internal::OR_</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00109">page()</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00122">page_ptr()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00062">Ark::internal::POP</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00775">pushNumber()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00067">Ark::internal::SUB</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00228">throwCompilerError()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>.</p>
 
@@ -1231,7 +1249,7 @@ Friends</h2></td></tr>
 
 <p class="reference">References <a class="el" href="../../df/dda/namespaceArk_1_1internal_1_1Builtins.html#ab8e5bf9492912eca99b228b661940d8c">Ark::internal::Builtins::builtins</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00328">compileSymbol()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00333">compileSymbol()</a>.</p>
 
 </div>
 </div>
@@ -1272,7 +1290,7 @@ Friends</h2></td></tr>
 
 <p class="reference">References <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00089">Ark::internal::operators</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00328">compileSymbol()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00333">compileSymbol()</a>.</p>
 
 </div>
 </div>
@@ -1309,11 +1327,11 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::optional&lt;internal::Instruction&gt; corresponding instruction if it exists </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00162">162</a> of file <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html">Compiler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00167">167</a> of file <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html">Compiler.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00056">Ark::internal::APPEND</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00058">Ark::internal::APPEND_IN_PLACE</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00057">Ark::internal::CONCAT</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00059">Ark::internal::CONCAT_IN_PLACE</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00055">Ark::internal::LIST</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00060">Ark::internal::POP_LIST</a>, and <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00061">Ark::internal::POP_LIST_IN_PLACE</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00351">compileSpecific()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00356">compileSpecific()</a>.</p>
 
 </div>
 </div>
@@ -1354,9 +1372,50 @@ false </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00218">218</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d7/d09/Utils_8hpp_source.html#l00033">Ark::Utils::splitString()</a>.</p>
+<p class="reference">References <a class="el" href="../../d7/d09/Utils_8hpp_source.html#l00034">Ark::Utils::splitString()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00713">checkForUndefinedSymbol()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00737">checkForUndefinedSymbol()</a>.</p>
+
+</div>
+</div>
+<a id="a7f218176e0ab79eec9d9232cc2df16bc" name="a7f218176e0ab79eec9d9232cc2df16bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f218176e0ab79eec9d9232cc2df16bc">&#9670;&nbsp;</a></span>offerSuggestion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Ark::Compiler::offerSuggestion </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Suggest a symbol of what the user may have meant to input. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>the string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00756">756</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="../../de/d06/arkreactor_2Utils_8cpp_source.html#l00033">Ark::Utils::levenshteinDistance()</a>, and <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00082">m_defined_symbols</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00737">checkForUndefinedSymbol()</a>.</p>
 
 </div>
 </div>
@@ -1393,9 +1452,9 @@ false </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;uint8_t&gt;&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00110">110</a> of file <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html">Compiler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00109">109</a> of file <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html">Compiler.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00033">compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00532">compileDel()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00412">compileFunction()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00386">compileIf()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00458">compileLetMut()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00521">compilePluginImport()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00504">compileQuote()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00493">compileSet()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00351">compileSpecific()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00328">compileSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00471">compileWhile()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00541">handleCalls()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00033">compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00536">compileDel()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00419">compileFunction()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00391">compileIf()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00469">compileLetMutSet()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00525">compilePluginImport()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00508">compileQuote()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00356">compileSpecific()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00333">compileSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00487">compileWhile()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00545">handleCalls()</a>.</p>
 
 </div>
 </div>
@@ -1432,14 +1491,14 @@ false </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;uint8_t&gt;* </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00123">123</a> of file <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html">Compiler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00122">122</a> of file <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html">Compiler.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00532">compileDel()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00412">compileFunction()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00386">compileIf()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00458">compileLetMut()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00521">compilePluginImport()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00504">compileQuote()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00493">compileSet()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00328">compileSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00471">compileWhile()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00541">handleCalls()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00536">compileDel()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00419">compileFunction()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00391">compileIf()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00469">compileLetMutSet()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00525">compilePluginImport()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00508">compileQuote()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00333">compileSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00487">compileWhile()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00545">handleCalls()</a>.</p>
 
 </div>
 </div>
-<a id="ab1e2bb587be64f985df51dde49994198" name="ab1e2bb587be64f985df51dde49994198"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1e2bb587be64f985df51dde49994198">&#9670;&nbsp;</a></span>pushHeadersPhase1()</h2>
+<a id="aeb679e939d386360d3717e21eccb152c" name="aeb679e939d386360d3717e21eccb152c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb679e939d386360d3717e21eccb152c">&#9670;&nbsp;</a></span>pushFileHeader()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1448,7 +1507,7 @@ false </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Ark::Compiler::pushHeadersPhase1 </td>
+          <td class="memname">void Ark::Compiler::pushFileHeader </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1461,44 +1520,11 @@ false </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Push the first headers of the bytecode file. </p>
+<p>Push the file headers (magic, version used, timestamp) </p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00091">91</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00016">ARK_VERSION_MAJOR</a>, <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00017">ARK_VERSION_MINOR</a>, <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00018">ARK_VERSION_PATCH</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00088">m_bytecode</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00726">pushNumber()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00033">compile()</a>.</p>
-
-</div>
-</div>
-<a id="a4ed6dcde215bf4a0ad92b1f6f208ee73" name="a4ed6dcde215bf4a0ad92b1f6f208ee73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ed6dcde215bf4a0ad92b1f6f208ee73">&#9670;&nbsp;</a></span>pushHeadersPhase2()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Ark::Compiler::pushHeadersPhase2 </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Push the other headers, after having compile the file (it's needed because we read the symbol/value tables, populated by compilation) </p>
-
-<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00123">123</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00034">Ark::internal::FUNC_TYPE</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00088">m_bytecode</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00081">m_symbols</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00084">m_values</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00032">Ark::internal::NUMBER_TYPE</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00726">pushNumber()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00033">Ark::internal::STRING_TYPE</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00030">Ark::internal::SYM_TABLE_START</a>, and <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00031">Ark::internal::VAL_TABLE_START</a>.</p>
+<p class="reference">References <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00016">ARK_VERSION_MAJOR</a>, <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00017">ARK_VERSION_MINOR</a>, <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00018">ARK_VERSION_PATCH</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00088">m_bytecode</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00775">pushNumber()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00033">compile()</a>.</p>
 
@@ -1547,9 +1573,9 @@ false </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00726">726</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00775">775</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00033">compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00532">compileDel()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00412">compileFunction()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00386">compileIf()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00458">compileLetMut()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00521">compilePluginImport()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00504">compileQuote()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00493">compileSet()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00328">compileSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00471">compileWhile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00541">handleCalls()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00091">pushHeadersPhase1()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00123">pushHeadersPhase2()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00033">compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00536">compileDel()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00419">compileFunction()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00391">compileIf()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00469">compileLetMutSet()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00525">compilePluginImport()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00508">compileQuote()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00333">compileSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00487">compileWhile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00545">handleCalls()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00091">pushFileHeader()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00123">pushSymAndValTables()</a>.</p>
 
 </div>
 </div>
@@ -1607,7 +1633,40 @@ false </dd></dl>
 
 <p class="reference">References <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00056">Ark::internal::APPEND</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00058">Ark::internal::APPEND_IN_PLACE</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00057">Ark::internal::CONCAT</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00059">Ark::internal::CONCAT_IN_PLACE</a>, and <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00055">Ark::internal::LIST</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00351">compileSpecific()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00356">compileSpecific()</a>.</p>
+
+</div>
+</div>
+<a id="aff74538d039a59dfb4dea3d019932505" name="aff74538d039a59dfb4dea3d019932505"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff74538d039a59dfb4dea3d019932505">&#9670;&nbsp;</a></span>pushSymAndValTables()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ark::Compiler::pushSymAndValTables </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Push the symbols and values tables. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00123">123</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00034">Ark::internal::FUNC_TYPE</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00088">m_bytecode</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00081">m_symbols</a>, <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00084">m_values</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00032">Ark::internal::NUMBER_TYPE</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00775">pushNumber()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00033">Ark::internal::STRING_TYPE</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00030">Ark::internal::SYM_TABLE_START</a>, and <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00031">Ark::internal::VAL_TABLE_START</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00033">compile()</a>.</p>
 
 </div>
 </div>
@@ -1654,17 +1713,18 @@ false </dd></dl>
 <p>Put a value in the bytecode, handling the closures chains. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td></td></tr>
-    <tr><td class="paramname">p</td><td></td></tr>
+    <tr><td class="paramname">x</td><td>value node </td></tr>
+    <tr><td class="paramname">p</td><td>current page index </td></tr>
+    <tr><td class="paramname">produces_result</td><td></td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00645">645</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00667">667</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00233">_compile()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00119">Ark::internal::Node::constList()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00458">compileLetMut()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00493">compileSet()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00469">compileLetMutSet()</a>.</p>
 
 </div>
 </div>
@@ -1697,6 +1757,52 @@ false </dd></dl>
 <p class="reference">References <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00088">m_bytecode</a>, and <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00089">m_debug</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d0/da0/State_8cpp_source.html#l00080">Ark::State::compile()</a>.</p>
+
+</div>
+</div>
+<a id="ac41cd35fcb71d93634e70935502cb336" name="ac41cd35fcb71d93634e70935502cb336"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac41cd35fcb71d93634e70935502cb336">&#9670;&nbsp;</a></span>setNumberAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ark::Compiler::setNumberAt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>at_inst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>number</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00129">129</a> of file <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html">Compiler.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00391">compileIf()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00487">compileWhile()</a>.</p>
 
 </div>
 </div>
@@ -1745,9 +1851,9 @@ false </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00228">228</a> of file <a class="el" href="../../de/dfa/Compiler_8cpp_source.html">Compiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d9/db7/makeErrorCtx_8cpp_source.html#l00040">Ark::internal::makeNodeBasedErrorCtx()</a>.</p>
+<p class="reference">References <a class="el" href="../../d9/db7/makeErrorCtx_8cpp_source.html#l00101">Ark::internal::makeNodeBasedErrorCtx()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00652">addSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00671">addValue()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00713">checkForUndefinedSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00412">compileFunction()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00541">handleCalls()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00676">addSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00695">addValue()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00737">checkForUndefinedSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00419">compileFunction()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00545">handleCalls()</a>.</p>
 
 </div>
 </div>
@@ -1799,7 +1905,7 @@ false </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00088">88</a> of file <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html">Compiler.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00086">bytecode()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00033">compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00091">pushHeadersPhase1()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00123">pushHeadersPhase2()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00076">saveTo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00086">bytecode()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00033">compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00091">pushFileHeader()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00123">pushSymAndValTables()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00076">saveTo()</a>.</p>
 
 </div>
 </div>
@@ -1825,7 +1931,7 @@ false </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00085">85</a> of file <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html">Compiler.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00033">compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00412">compileFunction()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00504">compileQuote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00033">compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00419">compileFunction()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00508">compileQuote()</a>.</p>
 
 </div>
 </div>
@@ -1879,7 +1985,7 @@ false </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00082">82</a> of file <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html">Compiler.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00705">addDefinedSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00713">checkForUndefinedSymbol()</a>, <a class="el" href="../../d0/da0/State_8cpp_source.html#l00080">Ark::State::compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00412">compileFunction()</a>, and <a class="el" href="../../d0/da0/State_8cpp_source.html#l00151">Ark::State::doString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00729">addDefinedSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00737">checkForUndefinedSymbol()</a>, <a class="el" href="../../d0/da0/State_8cpp_source.html#l00080">Ark::State::compile()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00419">compileFunction()</a>, <a class="el" href="../../d0/da0/State_8cpp_source.html#l00151">Ark::State::doString()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00756">offerSuggestion()</a>.</p>
 
 </div>
 </div>
@@ -1983,7 +2089,7 @@ false </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00083">83</a> of file <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html">Compiler.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00521">compilePluginImport()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00525">compilePluginImport()</a>.</p>
 
 </div>
 </div>
@@ -2009,7 +2115,7 @@ false </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00081">81</a> of file <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html">Compiler.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00652">addSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00713">checkForUndefinedSymbol()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00123">pushHeadersPhase2()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00676">addSymbol()</a>, <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00737">checkForUndefinedSymbol()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00123">pushSymAndValTables()</a>.</p>
 
 </div>
 </div>
@@ -2037,7 +2143,7 @@ false </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00086">86</a> of file <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html">Compiler.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00541">handleCalls()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00545">handleCalls()</a>.</p>
 
 </div>
 </div>
@@ -2063,7 +2169,7 @@ false </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html#l00084">84</a> of file <a class="el" href="../../d8/d0f/Compiler_8hpp_source.html">Compiler.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00671">addValue()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00123">pushHeadersPhase2()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00695">addValue()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00123">pushSymAndValTables()</a>.</p>
 
 </div>
 </div>
@@ -2077,7 +2183,7 @@ false </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/de4/namespaceArk.html">Ark</a></li><li class="navelem"><a class="el" href="../../d3/ddb/classArk_1_1Compiler.html">Compiler</a></li>
-    <li class="footer">Generated on Wed Mar 2 2022 08:30:11 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Thu Mar 24 2022 07:57:51 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>

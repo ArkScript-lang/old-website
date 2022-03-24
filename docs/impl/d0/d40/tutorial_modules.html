@@ -75,7 +75,7 @@ $(document).ready(function(){initNavTree('d0/d40/tutorial_modules.html','../../'
   <div class="headertitle"><div class="title">Creating modules </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md13"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md25"></a>
 Before starting</h1>
 <p >You will still need to dive a bit into the documentation of the project, to know how:</p><ul>
 <li>the VM API works, and what it provides</li>
@@ -83,7 +83,7 @@ Before starting</h1>
 <li>how to use the <code>UserType</code></li>
 </ul>
 <p >Also, read the <a href="https://github.com/ArkScript-lang/rfc/blob/master/004-module-error-handling.md">RFC 004</a> about module error handling to use the same conventions as the other modules, and the <a href="https://github.com/ArkScript-lang/rfc/blob/master/003-naming-convention.md">RFC 003</a> about naming conventions in ArkScript (specifically see the <em>Modules (C++)</em> section).</p>
-<h2><a class="anchor" id="autotoc_md14"></a>
+<h2><a class="anchor" id="autotoc_md26"></a>
 Creating a new module</h2>
 <p >In your <a href="https://github.com/ArkScript-lang/modules">ArkScript-lang/modules</a> fork, run the Python script as follows <code>python3 shell/createmodules/create.py module_name</code>. This will create a new folder <code>module_name/</code> for you, alongside a few folders and files needed to get you started.</p>
 <p >Create a <code>Main.cpp</code> file in <code>module_name/src/</code> with the following content:</p>
@@ -114,7 +114,7 @@ Creating a new module</h2>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md15"></a>
+<h2><a class="anchor" id="autotoc_md27"></a>
 Building your module</h2>
 <p >Clone ArkScript, then copy your modules fork to lib/modules. This is required for CMake to be able to find ArkScript headers.</p>
 <p >You will need to update <code>lib/modules/CMakeLists.txt</code> to add the following code:</p>
@@ -124,9 +124,9 @@ Building your module</h2>
 <div class="line">    add_subdirectory(${PROJECT_SOURCE_DIR}/module_name)</div>
 <div class="line">endif()</div>
 </div><!-- fragment --><p >Then, run <code>cmake . -Build -DARK_BUILD_MODULES=On -DARK_MOD_MODULE_NAME=On</code>, and build only your module with <code>cmake --build build --target module_name</code>.</p>
-<h2><a class="anchor" id="autotoc_md16"></a>
+<h2><a class="anchor" id="autotoc_md28"></a>
 Common problems</h2>
-<h3><a class="anchor" id="autotoc_md17"></a>
+<h3><a class="anchor" id="autotoc_md29"></a>
 Storing values in a C++ module</h3>
 <p >Lets say you are making a module to handle a window (to draw on it). You will open it with the API for your system, for example the WinAPI, and get an handle to it. Now you want to be able to modify this window in ArkScript, the solution is simple: creating an UserType holding your handle, and then getting this user type back in your functions and playing with the handle.</p>
 <p >If you try this as is, it won't work. Or at least, it won't work for more than a function call, because the UserType doesn't become the <em>owner of the handle</em>, it only holds a view (observer pointer) to your ressource. That means your ressource must continue to live on its own in your module. Because it's a dynamic library, making a global and storing your handle in it will be complicated and in a lot of cases it won't work at all.</p>
@@ -175,7 +175,7 @@ Storing values in a C++ module</h3>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">Tutorials</a></li>
-    <li class="footer">Generated on Wed Mar 2 2022 08:30:11 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Thu Mar 24 2022 07:57:51 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>

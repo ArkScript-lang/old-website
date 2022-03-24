@@ -14,6 +14,7 @@ var namespaceArk =
       [ "getDirectoryFromPath", "df/d16/namespaceArk_1_1Utils.html#a6ba2f450a5866f29937342fe3fd0deda", null ],
       [ "getFilenameFromPath", "df/d16/namespaceArk_1_1Utils.html#af03dab382269619376bd2de1c98d5a01", null ],
       [ "isDouble", "df/d16/namespaceArk_1_1Utils.html#afeaaabff8a0661920f770e2bab8a7eda", null ],
+      [ "levenshteinDistance", "df/d16/namespaceArk_1_1Utils.html#af0f051294fc44467a0323dd301728bdc", null ],
       [ "readFile", "df/d16/namespaceArk_1_1Utils.html#a08fab59297a574abc8a37a6d46eebacb", null ],
       [ "splitString", "df/d16/namespaceArk_1_1Utils.html#a34a17326db4d9b45222830f3934d5508", null ]
     ] ],

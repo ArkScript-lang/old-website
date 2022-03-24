@@ -6,6 +6,7 @@ var annotated_dup =
         [ "ConditionalExecutor", "d1/dd3/classArk_1_1internal_1_1ConditionalExecutor.html", "d1/dd3/classArk_1_1internal_1_1ConditionalExecutor" ],
         [ "ExecutionContext", "d0/daf/structArk_1_1internal_1_1ExecutionContext.html", "d0/daf/structArk_1_1internal_1_1ExecutionContext" ],
         [ "Lexer", "dd/dc4/classArk_1_1internal_1_1Lexer.html", "dd/dc4/classArk_1_1internal_1_1Lexer" ],
+        [ "LineColorContextCounts", "d8/d5a/structArk_1_1internal_1_1LineColorContextCounts.html", "d8/d5a/structArk_1_1internal_1_1LineColorContextCounts" ],
         [ "ListExecutor", "d8/d13/classArk_1_1internal_1_1ListExecutor.html", "d8/d13/classArk_1_1internal_1_1ListExecutor" ],
         [ "MacroExecutor", "d5/d8f/classArk_1_1internal_1_1MacroExecutor.html", "d5/d8f/classArk_1_1internal_1_1MacroExecutor" ],
         [ "MacroExecutorPipeline", "d7/d22/classArk_1_1internal_1_1MacroExecutorPipeline.html", "d7/d22/classArk_1_1internal_1_1MacroExecutorPipeline" ],

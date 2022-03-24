@@ -75,7 +75,33 @@ $(document).ready(function(){initNavTree('d7/dea/tutorial_embedding.html','../..
   <div class="headertitle"><div class="title">Embedding ArkScript in C++ code </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md10"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md21"></a>
+CMake setup</h1>
+<p >Here is a minimal CMakeLists.txt to integrate ArkScript in a project:</p>
+<div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.11)</div>
+<div class="line"> </div>
+<div class="line">project(IntegrateArk)</div>
+<div class="line"> </div>
+<div class="line"># setting flags to build only what we need in ArkScript</div>
+<div class="line">#  - no executable</div>
+<div class="line">#  - no modules (console, http, random...)</div>
+<div class="line">#  - disallowing access to the sys:exec command</div>
+<div class="line">set(ARK_BUILD_EXE       OFF)</div>
+<div class="line">set(ARK_BUILD_MODULES   OFF)</div>
+<div class="line">set(ARK_ENABLE_SYSTEM   OFF)</div>
+<div class="line"> </div>
+<div class="line">add_subdirectory(ArkScript)</div>
+<div class="line"> </div>
+<div class="line"># creating our executable</div>
+<div class="line">add_executable(${PROJECT_NAME} main.cpp)</div>
+<div class="line"> </div>
+<div class="line"># adding ArkScript includes to the executable,</div>
+<div class="line"># linking it to the dynamic library for the language</div>
+<div class="line">target_include_directories(${PROJECT_NAME} PUBLIC ArkScript/include)</div>
+<div class="line">target_link_libraries(${PROJECT_NAME} PUBLIC ArkReactor)</div>
+<div class="line"> </div>
+<div class="line">set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 17)</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md22"></a>
 Using ArkScript</h1>
 <p >An example is often worth a thousands words:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d3/d7e/Ark_8hpp.html">Ark/Ark.hpp</a>&gt;</span></div>
@@ -115,7 +141,7 @@ Using ArkScript</h1>
 <div class="ttc" id="aclassArk_1_1State_html_ae3fda5c7fbf90319871e4057b28f84c8"><div class="ttname"><a href="../../d1/d37/classArk_1_1State.html#ae3fda5c7fbf90319871e4057b28f84c8">Ark::State::doString</a></div><div class="ttdeci">bool doString(const std::string &amp;code)</div><div class="ttdoc">Compile a string (representing ArkScript code) and store resulting bytecode in m_bytecode.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/da0/State_8cpp_source.html#l00151">State.cpp:151</a></div></div>
 <div class="ttc" id="aclassArk_1_1VM_html"><div class="ttname"><a href="../../d2/d93/classArk_1_1VM.html">Ark::VM</a></div><div class="ttdoc">The ArkScript virtual machine, executing ArkScript bytecode.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d91/VM_8hpp_source.html#l00045">VM.hpp:46</a></div></div>
 <div class="ttc" id="amain_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d0a/main_8cpp_source.html#l00015">main.cpp:15</a></div></div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md11"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md23"></a>
 Adding your own functions</h1>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d3/d7e/Ark_8hpp.html">Ark/Ark.hpp</a>&gt;</span></div>
 <div class="line"> </div>
@@ -178,7 +204,7 @@ Adding your own functions</h1>
 <div class="ttc" id="anamespaceArk_html_a794d6cb0fd25e2dbc678c17ff605e159ab2ee912b91d69b435159c7c3f6df7f5f"><div class="ttname"><a href="../../d9/de4/namespaceArk.html#a794d6cb0fd25e2dbc678c17ff605e159ab2ee912b91d69b435159c7c3f6df7f5f">Ark::ValueType::Number</a></div><div class="ttdeci">@ Number</div></div>
 <div class="ttc" id="astructArk_1_1types_1_1Contract_html"><div class="ttname"><a href="../../d3/dfb/structArk_1_1types_1_1Contract.html">Ark::types::Contract</a></div><div class="ttdoc">A contract is a list of typed arguments that a function can follow.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d5e/TypeChecker_8hpp_source.html#l00089">TypeChecker.hpp:90</a></div></div>
 <div class="ttc" id="astructArk_1_1types_1_1Typedef_html"><div class="ttname"><a href="../../d9/dbf/structArk_1_1types_1_1Typedef.html">Ark::types::Typedef</a></div><div class="ttdoc">A type definition within a contract.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d5e/TypeChecker_8hpp_source.html#l00070">TypeChecker.hpp:71</a></div></div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md12"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md24"></a>
 Adding your own types in ArkScript</h1>
 <div class="fragment"><div class="line"><span class="keyword">enum class</span> Breakfast { Eggs, Bacon, Pizza };</div>
 <div class="line"> </div>
@@ -264,7 +290,7 @@ Adding your own types in ArkScript</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">Tutorials</a></li>
-    <li class="footer">Generated on Wed Mar 2 2022 08:30:11 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Thu Mar 24 2022 07:57:51 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>
