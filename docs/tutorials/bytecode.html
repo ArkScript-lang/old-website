@@ -135,7 +135,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <br> The other builtins are listed in <a class="btn-link" href="https://github.com/ArkScript-lang/Ark/blob/dev/src/Builtins/Builtins.cpp#L24">Builtins.cpp</a>.
+                        <br> The other builtins are listed in <a class="btn-link" href="https://github.com/ArkScript-lang/Ark/blob/dev/src/arkreactor/Builtins/Builtins.cpp#L24">Builtins.cpp</a>.
                     </div>
                 </section>
 
@@ -258,6 +258,32 @@
                                     <td>number of arguments (two bytes, big endian)</td>
                                     <td>Concatenate lists in reverse order</td>
                                 </tr>
+                                <tr>
+                                    <td><code>APPEND_IN_PLACE</code> (0x15)</td>
+                                    <td>number of arguments (two bytes, big endian)</td>
+                                    <td>Append elements to a reference to a list (TS) in reverse order (first the last element, then the other, then the list itself). Push <code>nil</code> on the stack</td>
+                                </tr>
+                                <tr>
+                                    <td><code>CONCAT_IN_PLACE</code> (0x16)</td>
+                                    <td>number of arguments (two bytes, big endian)</td>
+                                    <td>Concatenate lists in reverse order, to a reference to a list (TS). Push <code>nil</code> to the stack</td>
+                                </tr>
+                                <tr>
+                                    <td><code>POP_LIST</code> (0x17)</td>
+                                    <td></td>
+                                    <td>Remove an element from a list (TS), given an index (TS1). Push the modified list to the stack</td>
+                                </tr>
+                                <tr>
+                                    <td><code>POP_LIST_IN_PLACE</code> (0x18)</td>
+                                    <td></td>
+                                    <td>Remove an element from a reference to a list (TS), given an index (TS1). Push <code>nil</code> to the stack</td>
+                                </tr>
+                                <tr>
+                                    <td><code>POP</code> (0x19)</td>
+                                    <td></td>
+                                    <td>Remove the top of the stack</td>
+                                </tr>
+
                                 <tr>
                                     <td><code>ADD</code> (0x20)</td>
                                     <td></td>
