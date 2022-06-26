@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>ArkScript | Tutorials - Bytecode specification</title>
+    <title>ArkScript | Bytecode specification</title>
     <link rel="stylesheet" href="/assets/css/spectre.min.css" type="text/css">
     <link rel="stylesheet" href="/assets/css/spectre-icons.min.css" type="text/css">
     <link rel="stylesheet" href="/assets/css/rainbowjs-theme.css" type="text/css">
@@ -30,7 +30,6 @@
                     <li><a href="/tutorials/language.html" class="btn btn-link">The language</a></li>
                     <li><a href="/tutorials/building.html" class="btn btn-link">Building ArkScript</a></li>
                     <li><a href="/impl/d5/dd1/embedding.html" class="btn btn-link">Embedding</a></li>
-                    <li><a href="/tutorials/bytecode.html" class="btn btn-link">Bytecode specification</a></li>
                 </ul>
             </div>
             <div class="divider"></div>
@@ -50,62 +49,111 @@
 
             <!-- Actual content of the page-->
             <div class="col-8 col-md-12" id="content">
-                <h1 class="text-center">Tutorials - ArkScript bytecode specification</h1>
+                <h1 class="text-center">ArkScript bytecode specification</h1>
 
-                A basic file is composed of those headers:
-                <ul>
-                    <li>magic number, 6386283 ('ark'), then a zero padding (1 byte)</li>
-                    <li>
-                        ArkScript compiler version used
-                        <ul>
-                            <li>major on two bytes, big endian</li>
-                            <li>minor on two bytes, big endian</li>
-                            <li>patch on two bytes, big endian</li>
-                        </ul>
-                    </li>
-                    <li>timestamp (build date, 8 bytes, unix format)</li>
-                    <li>SHA256 of the tables + code segments (on 32 bytes)</li>
-                    <li>
-                        symbols table
-                        <ul>
-                            <li>number of elements (two bytes, big endian)</li>
-                            <li>strings, null terminated</li>
-                        </ul>
-                    </li>
-                    <li>
-                        values table (aka constants table)
-                        <ul>
-                            <li>
-                                number of elements (two bytes, big endian)
-                                <ul>
-                                    <li>
-                                        type (1 byte)
-                                        <ul>
-                                            <li>0x01 for number</li>
-                                            <li>0x02 for string</li>
-                                            <li>0x03 for function</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        value
-                                        <ul>
-                                            <li>number: represented in hexadecimal format (stored as a null terminated string), big endian</li>
-                                            <li>string: all the characters, plus a \0 at the end (aka null terminated string)</li>
-                                            <li>function: page number (two bytes, big endian)</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        code segments (can have multiple code segments)
-                        <ul>
-                            <li>number of elements (two bytes, big endian), can be equal to 0</li>
-                            <li>instructions</li>
-                        </ul>
-                    </li>
-                </ul>
+                <p>
+                    You will find ArkScript bytecode specification on page, if you are interested in implementing your own virtual machine, or just want to learn more.
+                </p>
+
+                <section id="bytecode-headers">
+                    <h2>ArkScript bytecode headers</h2>
+
+                    <table class="table dark table-striped">
+                        <thead>
+                            <tr>
+                                <th class="col-3">Name</th>
+                                <th class="col-3">Size</th>
+                                <th class="col-6">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Magic number</td>
+                                <td>4 bytes</td>
+                                <td>6386283, numeric version of <code>"ark\0"</code></td>
+                            </tr>
+                            <tr>
+                                <td>Compiler.Major</td>
+                                <td>2 bytes</td>
+                                <td>Big endian layout</td>
+                            </tr>
+                            <tr>
+                                <td>Compiler.Minor</td>
+                                <td>2 bytes</td>
+                                <td>Big endian layout</td>
+                            </tr>
+                            <tr>
+                                <td>Compiler.Patch</td>
+                                <td>2 bytes</td>
+                                <td>Big endian layout</td>
+                            </tr>
+                            <tr>
+                                <td>Timestamp</td>
+                                <td>8 bytes</td>
+                                <td>Build time (Unix format), Big endian layout</td>
+                            </tr>
+                            <tr>
+                                <td>SHA256</td>
+                                <td>32 bytes</td>
+                                <td>SHA256 of the tables and code segments for integrity check</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="text-center">Symbols table</td>
+                            </tr>
+                            <tr>
+                                <td>Symbols.count</td>
+                                <td>2 bytes</td>
+                                <td>Big endian layout</td>
+                            </tr>
+                            <tr>
+                                <td>Symbol.value</td>
+                                <td>Variable</td>
+                                <td>Null-terminated string</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="text-center">Values table</td>
+                            </tr>
+                            <tr>
+                                <td>Values.count</td>
+                                <td>2 bytes</td>
+                                <td>Big endian layout</td>
+                            </tr>
+                            <tr>
+                                <td>Symbol.type</td>
+                                <td>1 byte</td>
+                                <td><code>1</code> for number, <code>2</code> for string, <code>3</code> for function</td>
+                            </tr>
+                            <tr>
+                                <td>Number.value</td>
+                                <td>Variable</td>
+                                <td>Null-terminated string representation of the number</td>
+                            </tr>
+                            <tr>
+                                <td>String.value</td>
+                                <td>Variable</td>
+                                <td>Null-terminated string</td>
+                            </tr>
+                            <tr>
+                                <td>Function.value</td>
+                                <td>2 bytes</td>
+                                <td>Big endian layout</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="text-center">Code segments</td>
+                            </tr>
+                            <tr>
+                                <td>Instruction count</td>
+                                <td>2 bytes</td>
+                                <td>Big endian layout, can be <code>0</code></td>
+                            </tr>
+                            <tr>
+                                <td>Instruction</td>
+                                <td>1-3 bytes</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
 
                 <section id="note-on-builtins">
                     <h2>Note on builtins</h2>
@@ -113,11 +161,11 @@
                     <div class="inner-section">
                         Builtins are handled with <code>BUILTIN id</code>, with <code>id</code> being the id of the builtin function object. The ids of the builtins are listed below.
                         <br>
-                        <table class="table dark table-hover">
+                        <table class="table dark table-hover col-6">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>ID</th>
+                                    <th class="col-3">Name</th>
+                                    <th class="col-3">ID</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -146,9 +194,9 @@
                         <table class="table table-striped dark">
                             <thead>
                                 <tr>
-                                    <th>Code</th>
-                                    <th>Argument(s)</th>
-                                    <th>Job</th>
+                                    <th class="col-3">Code</th>
+                                    <th class="col-3">Argument(s)</th>
+                                    <th class="col-6">Job</th>
                                 </tr>
                             </thead>
                             <tbody>
