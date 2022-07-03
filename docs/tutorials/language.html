@@ -556,10 +556,10 @@
                     <p>Here is a more complex example implementing the <em>thread macro</em>. The first argument is the data, then each function is applied onto it, one after another. It allows us to write more readable code, instead of the ugly <code>(read-string (slurp (io:file (io:resource filename))))</code>.</p>
                     <pre>
 <code class="rainbowjs" data-language="arkscript">
-!{-> (first ...args) {
-    !{if (> (len args) 0)
-        ((-> ...args) first)
-        first
+!{-> (arg fn1 ...fn) {
+    !{if (> (len fn) 0)
+        (-> (fn1 arg) ...fn)
+        (fn1 arg)
     }
 }}
 
@@ -583,10 +583,10 @@
 
 (print (-> filename io:resource io:file slurp read-string))
 # it will print:
-#   read-string
-#   io:slurp
-#   io:file
 #   io:resource
+#   io:file
+#   io:slurp
+#   read-string
 #   hello.json
 </code>
                     </pre>
@@ -608,7 +608,8 @@
                         </li>
                         <li>
                             <code>argcount</code>: retrieve at compile time the number of arguments taken by a given function.
-                            The function must have been defined <i>before</i> using <code>argcount</code>.
+                            The function must have been defined <i>before</i> using <code>argcount</code>, or must be an anonymous function:
+                            <code>(argcount (fun (a b c) ()))</code>, <code>(argcount my-function)</code>.
                         </li>
                     </ul>
                 </div>
