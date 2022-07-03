@@ -41,6 +41,6 @@ Rainbow.extend('arkscript', [
         matches: {
             1: 'entity.function'
         },
-        pattern: /\(\s*(=|<|>|<=|>=|!=|@|\^|\+|\-|\*|\/|tailOf|headOf|nil\?|list|len|append|concat|print|puts|input|time|empty\?|firstOf|assert|toNumber|toString|and|or|mod|type|hasField|not)(?=[\]()\s#])/g
+        pattern: /\(\s*(=|<|>|<=|>=|!=|@|\^|\+|\-|\*|\/|tailOf|headOf|nil\?|list|len|append|concat|print|puts|input|time|empty\?|firstOf|assert|toNumber|toString|and|or|mod|type|hasField|not|async|await)(?=[\]()\s#])/g
     }
 ]);
