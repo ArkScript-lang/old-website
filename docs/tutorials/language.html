@@ -386,6 +386,9 @@
 (print closure.age)  # 42
 (print closure.coolness_factor)  # 12
 
+# we can print closures and have their fields and values displayed
+(print closure)  # prints (.name=Pietro .age=42 .coolness_factor=12)
+
 (let make (fun (a)
     (fun (&a) ())))
 
