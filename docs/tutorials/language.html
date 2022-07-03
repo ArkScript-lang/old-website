@@ -86,6 +86,9 @@
                         <li class="nav-item">
                             <a href="#import">Importing code</a>
                         </li>
+                        <li class="async">
+                            <a href="#async">Running functions asynchronously</a>
+                        </li>
                         <li class="nav-item">
                             <a href="#macros">Using macros to manipulate code at compile time</a>
                         </li>
@@ -109,7 +112,7 @@
                 <div class="inner-section">
                     In ArkScript, there are two main rules:
                     <ul>
-                        <li>The first rule is that <code>(a b c ...)</code> is a function call, <code>a</code> is the function and <code>b c ...</code> being the arguments.</li>
+                        <li>The first rule is that <code>(a b c ...)</code> is a function call, <code>a</code> is the function with <code>b c ...</code> being the arguments.</li>
                         <li>
                             The second rule is the <em class="text-bold">only</em> exception to the first rule: when declaring functions like <code>(fun (arg1 arg2 ...) body)</code>,
                             the definition of the argument block <em class="text-bold">isn't</em> considered as a function call.
@@ -130,7 +133,7 @@
                     <ul>
                         <li><code>let</code> <em>defines</em> an <code class="error">immutable</code> variable</li>
                         <li><code>mut</code> <em>defines</em> a <code class="error">mutable</code> variable</li>
-                        <li><code>set</code> changes the value of a given mutable variable (trying on an immutable variable will throw an error)</li>
+                        <li><code>set</code> changes the value of a given mutable variable (will throw an error on immutable variables)</li>
                     </ul>
                     <br><br>
                     Example:
@@ -425,6 +428,45 @@
                     <p>Files are imported by doing so: <code>(import "myfile.ark")</code>. The path to the target file is <strong>relative to the source file</strong>, not to the main executed file.</p>
                     <p>The only exception about paths in <code>import</code>s is when you import an ArkScript module, ending in <code>.arkm</code>. Those files are either in the standard library, thus you can just write their name and ArkScript will find them, or they <strong>must be alongside the final executed file</strong>.</p>
                     <p>When importing files from the standard library, you don't need to write the path to the library folder, just the path of the file in it. For example: <code>(import "String.ark")</code> will work without problems.</p>
+                </div>
+            </section>
+
+            <section id="async">
+                <h2>Running functions asynchronously</h2>
+                <h6><em>Available in ArkScript v3.4.0</em></h6>
+
+                <div class="inner-section">
+                    <p>
+                        Functions can be pretty useful to define tasks, but sometimes we don't want to block our program to wait for a task to finish, for example fetching an HTML page.
+                        With ArkScript async/await you can submit the request and do other work that's waiting while the HTTP request is being processed.
+                    </p>
+                    <p>For a simpler example, let's calculate the sum of numbers in a list:</p>
+                    <pre>
+<code class="rainbowjs" data-language="arkscript">
+(let size 1000)
+(let data (list:fill size 1))  # create a list of a thousand 1's
+
+(let sum (fun (a b src) {
+    (mut acc 0)
+    (while (< a b) {
+        (set acc (+ acc (@ src a)))
+        (set a (+ 1 a))
+    })
+    acc
+}))
+
+(let task (async sum 0 size data))
+
+# do something else...
+
+# now we need the result, let's retrieve it
+(print (await task))
+</code>
+                    </pre>
+                    <p>
+                        <code>async</code> can launch any function in a separate thread, given a set of arguments for the functions. Then it will work without you having to do anything,
+                        and you can retrieve the result by using <code>await</code>. It will check if the function is done, otherwise wait for it (blocking the thread of the caller) and return its result.
+                    </p>
                 </div>
             </section>
 
