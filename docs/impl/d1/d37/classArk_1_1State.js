@@ -13,6 +13,7 @@ var classArk_1_1State =
     [ "setDebug", "d1/d37/classArk_1_1State.html#ad1dbcc1d68374da8d09433aadb3a7b05", null ],
     [ "setLibDirs", "d1/d37/classArk_1_1State.html#a7302086af256e600ee35bf8f4bcf65e7", null ],
     [ "throwStateError", "d1/d37/classArk_1_1State.html#a59464b5f49d5a34c59b57e69840618fd", null ],
+    [ "internal::Closure", "d1/d37/classArk_1_1State.html#ac706af3cf4252b86572ac42ea6989d3a", null ],
     [ "Repl", "d1/d37/classArk_1_1State.html#abfb23f5bc3487de4b5ea564573046b78", null ],
     [ "VM", "d1/d37/classArk_1_1State.html#ac692204ff14b03296e5ff3cfc4a3b3d6", null ],
     [ "m_binded", "d1/d37/classArk_1_1State.html#a9628e06b3fd719747d96a44194bbe5e1", null ],

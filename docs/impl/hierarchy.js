@@ -19,6 +19,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "Ark::internal::ExecutionContext", "d0/daf/structArk_1_1internal_1_1ExecutionContext.html", null ],
+    [ "Ark::internal::Future", "d4/d6d/classArk_1_1internal_1_1Future.html", null ],
     [ "Ark::internal::Lexer", "dd/dc4/classArk_1_1internal_1_1Lexer.html", null ],
     [ "Ark::internal::LineColorContextCounts", "d8/d5a/structArk_1_1internal_1_1LineColorContextCounts.html", null ],
     [ "Ark::internal::MacroExecutor", "d5/d8f/classArk_1_1internal_1_1MacroExecutor.html", [

@@ -1,5 +1,9 @@
 var namespaceArk_1_1internal_1_1Builtins =
 [
+    [ "Async", "de/d5a/namespaceArk_1_1internal_1_1Builtins_1_1Async.html", [
+      [ "async", "de/d5a/namespaceArk_1_1internal_1_1Builtins_1_1Async.html#a31643a11f47feb782db353337dbf755d", null ],
+      [ "await", "de/d5a/namespaceArk_1_1internal_1_1Builtins_1_1Async.html#a7ce117913ca010559fb55f9aa8103487", null ]
+    ] ],
     [ "IO", "dc/d9d/namespaceArk_1_1internal_1_1Builtins_1_1IO.html", [
       [ "fileExists", "dc/d9d/namespaceArk_1_1internal_1_1Builtins_1_1IO.html#a992d265e2fafe1bf22ff89767c6e8a48", null ],
       [ "input", "dc/d9d/namespaceArk_1_1internal_1_1Builtins_1_1IO.html#a3a406388e3d975e255207abdafbae03a", null ],

@@ -1,4 +1,4 @@
-digraph "C:/Users/folae/Documents/Code/Big-Projects/ArkScript/Ark/include/Ark" {
+digraph "/home/fola/code/Ark/include/Ark" {
   compound=true
   node [ fontsize="10", fontname="Helvetica"];
   edge [ labelfontsize="10", labelfontname="Helvetica"];
@@ -13,11 +13,11 @@ digraph "C:/Users/folae/Documents/Code/Big-Projects/ArkScript/Ark/include/Ark" {
   dir_222307dbf92126e8e24c7a501f533901 [shape=box label="VM" fillcolor="white" style="filled" color="red" URL="dir_222307dbf92126e8e24c7a501f533901.html"];
   }
   }
+  dir_fcfe4316a8cc31a1cf70428f9403b478->dir_222307dbf92126e8e24c7a501f533901 [headlabel="2", labeldistance=1.5 headhref="dir_000007_000009.html"];
+  dir_fcfe4316a8cc31a1cf70428f9403b478->dir_e4f19535f57335fb80a0267cec25bf70 [headlabel="1", labeldistance=1.5 headhref="dir_000007_000003.html"];
   dir_222307dbf92126e8e24c7a501f533901->dir_e4e3cacaa047e3554112dad79d53bc60 [headlabel="1", labeldistance=1.5 headhref="dir_000009_000002.html"];
   dir_222307dbf92126e8e24c7a501f533901->dir_e4f19535f57335fb80a0267cec25bf70 [headlabel="2", labeldistance=1.5 headhref="dir_000009_000003.html"];
   dir_a8b6c64285bf9ac60f50770eb2fc48b5->dir_222307dbf92126e8e24c7a501f533901 [headlabel="8", labeldistance=1.5 headhref="dir_000001_000009.html"];
   dir_a8b6c64285bf9ac60f50770eb2fc48b5->dir_e4f19535f57335fb80a0267cec25bf70 [headlabel="13", labeldistance=1.5 headhref="dir_000001_000003.html"];
   dir_e4e3cacaa047e3554112dad79d53bc60->dir_222307dbf92126e8e24c7a501f533901 [headlabel="1", labeldistance=1.5 headhref="dir_000002_000009.html"];
-  dir_fcfe4316a8cc31a1cf70428f9403b478->dir_222307dbf92126e8e24c7a501f533901 [headlabel="2", labeldistance=1.5 headhref="dir_000007_000009.html"];
-  dir_fcfe4316a8cc31a1cf70428f9403b478->dir_e4f19535f57335fb80a0267cec25bf70 [headlabel="1", labeldistance=1.5 headhref="dir_000007_000003.html"];
 }

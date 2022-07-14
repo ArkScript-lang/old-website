@@ -1,30 +1,37 @@
-digraph "C:/Users/folae/Documents/Code/Big-Projects/ArkScript/Ark/include/Ark/VM/Scope.hpp"
+digraph "/home/fola/code/Ark/include/Ark/VM/Scope.hpp"
 {
  // INTERACTIVE_SVG=YES
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="C:/Users/folae/Documents\l/Code/Big-Projects/ArkScript\l/Ark/include/Ark/VM/Scope.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The virtual machine scope system."];
+  Node1 [label="/home/fola/code/Ark\l/include/Ark/VM/Scope.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The virtual machine scope system."];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="C:/Users/folae/Documents\l/Code/Big-Projects/ArkScript\l/Ark/include/Ark/VM/ExecutionContext.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/df6/ExecutionContext_8hpp.html",tooltip="Keeping track of the internal data needed by the VM."];
+  Node2 [label="/home/fola/code/Ark\l/include/Ark/VM/ExecutionContext.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/df6/ExecutionContext_8hpp.html",tooltip="Keeping track of the internal data needed by the VM."];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="C:/Users/folae/Documents\l/Code/Big-Projects/ArkScript\l/Ark/include/Ark/VM/VM.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d91/VM_8hpp.html",tooltip="The ArkScript virtual machine."];
+  Node3 [label="/home/fola/code/Ark\l/include/Ark/VM/Future.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dda/Future_8hpp.html",tooltip=" "];
   Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="C:/Users/folae/Documents\l/Code/Big-Projects/ArkScript\l/Ark/include/Ark/Ark.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d7e/Ark_8hpp.html",tooltip="Includes the needed files to start using ArkScript."];
+  Node4 [label="/home/fola/code/Ark\l/include/Ark/VM/VM.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d91/VM_8hpp.html",tooltip="The ArkScript virtual machine."];
   Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="C:/Users/folae/Documents\l/Code/Big-Projects/ArkScript\l/Ark/src/arkreactor/Ark.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d32/Ark_8cpp.html",tooltip=" "];
-  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node6 [label="C:/Users/folae/Documents\l/Code/Big-Projects/ArkScript\l/Ark/src/arkscript/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d0a/main_8cpp.html",tooltip=" "];
-  Node3 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node7 [label="C:/Users/folae/Documents\l/Code/Big-Projects/ArkScript\l/Ark/include/Ark/REPL/Repl.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da5/Repl_8hpp.html",tooltip="ArkScript REPL - Read Eval Print Loop."];
-  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node8 [label="C:/Users/folae/Documents\l/Code/Big-Projects/ArkScript\l/Ark/src/arkscript/REPL/Repl.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d46/Repl_8cpp.html",tooltip=" "];
-  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node9 [label="C:/Users/folae/Documents\l/Code/Big-Projects/ArkScript\l/Ark/src/arkreactor/VM/VM.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d27/VM_8cpp.html",tooltip=" "];
-  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node10 [label="C:/Users/folae/Documents\l/Code/Big-Projects/ArkScript\l/Ark/src/arkreactor/VM/Scope.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d04/Scope_8cpp.html",tooltip=" "];
+  Node5 [label="/home/fola/code/Ark\l/include/Ark/Ark.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d7e/Ark_8hpp.html",tooltip="Includes the needed files to start using ArkScript."];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="/home/fola/code/Ark\l/src/arkreactor/Ark.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d32/Ark_8cpp.html",tooltip=" "];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="/home/fola/code/Ark\l/src/arkscript/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d0a/main_8cpp.html",tooltip=" "];
+  Node4 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="/home/fola/code/Ark\l/include/Ark/REPL/Repl.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da5/Repl_8hpp.html",tooltip="ArkScript REPL - Read Eval Print Loop."];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="/home/fola/code/Ark\l/src/arkscript/REPL\l/Repl.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d46/Repl_8cpp.html",tooltip=" "];
+  Node4 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="/home/fola/code/Ark\l/src/arkreactor/VM/Future.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dc9/Future_8cpp.html",tooltip=" "];
+  Node4 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="/home/fola/code/Ark\l/src/arkreactor/VM/Value\l/Closure.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/db2/Closure_8cpp.html",tooltip=" "];
+  Node4 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="/home/fola/code/Ark\l/src/arkreactor/VM/VM.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d27/VM_8cpp.html",tooltip=" "];
+  Node3 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="/home/fola/code/Ark\l/src/arkreactor/VM/Scope.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d04/Scope_8cpp.html",tooltip=" "];
   Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node11 [label="C:/Users/folae/Documents\l/Code/Big-Projects/ArkScript\l/Ark/src/arkreactor/VM/Value\l/Closure.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/db2/Closure_8cpp.html",tooltip=" "];
 }

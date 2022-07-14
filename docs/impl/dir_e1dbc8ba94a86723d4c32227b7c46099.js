@@ -2,6 +2,7 @@ var dir_e1dbc8ba94a86723d4c32227b7c46099 =
 [
     [ "bitwise", "dir_8584310505afb75ac10a7b4b1675b0ac.html", "dir_8584310505afb75ac10a7b4b1675b0ac" ],
     [ "console", "dir_95a261deb93739da6a240249275cc0ab.html", "dir_95a261deb93739da6a240249275cc0ab" ],
+    [ "database", "dir_5c05270cea261a52755753310e7173e9.html", "dir_5c05270cea261a52755753310e7173e9" ],
     [ "hash", "dir_579fba70baf66c8a598cfe6e4ebfcadd.html", "dir_579fba70baf66c8a598cfe6e4ebfcadd" ],
     [ "http", "dir_e5f0f663a6e316f61ceb4338dd986015.html", "dir_e5f0f663a6e316f61ceb4338dd986015" ],
     [ "json", "dir_1eebd4f5aeacda96ea69bb718c6307df.html", "dir_1eebd4f5aeacda96ea69bb718c6307df" ],

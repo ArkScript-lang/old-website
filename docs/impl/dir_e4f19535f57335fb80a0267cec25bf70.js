@@ -5,7 +5,7 @@ var dir_e4f19535f57335fb80a0267cec25bf70 =
     [ "BytecodeReader.hpp", "d1/d84/BytecodeReader_8hpp.html", "d1/d84/BytecodeReader_8hpp" ],
     [ "Common.hpp", "d8/ddd/Common_8hpp.html", "d8/ddd/Common_8hpp" ],
     [ "Compiler.hpp", "d8/d0f/Compiler_8hpp.html", [
-      [ "Ark::Compiler", "d3/ddb/classArk_1_1Compiler.html", "d3/ddb/classArk_1_1Compiler" ]
+      [ "Compiler", "d3/ddb/classArk_1_1Compiler.html", "d3/ddb/classArk_1_1Compiler" ]
     ] ],
     [ "Instructions.hpp", "d8/daa/Instructions_8hpp.html", "d8/daa/Instructions_8hpp" ],
     [ "ValTableElem.hpp", "dd/de7/ValTableElem_8hpp.html", "dd/de7/ValTableElem_8hpp" ]

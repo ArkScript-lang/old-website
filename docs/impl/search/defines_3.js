@@ -1,6 +1,0 @@
-var searchData=
-[
-  ['gen_5fcomparator_0',['GEN_COMPARATOR',['../_macro_processor_8cpp.html#a870ad3e992f06ebee3bf0e8d391587a7',1,'MacroProcessor.cpp']]],
-  ['gen_5fnot_5fbody_1',['GEN_NOT_BODY',['../_macro_processor_8cpp.html#a0f3c7f623263a4a2cec9b4db777d413c',1,'MacroProcessor.cpp']]],
-  ['gen_5fop_2',['GEN_OP',['../_macro_processor_8cpp.html#a4fba6b380dc4af3c4f88311d61cfdde5',1,'MacroProcessor.cpp']]]
-];

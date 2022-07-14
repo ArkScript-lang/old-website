@@ -1,0 +1,23 @@
+digraph "Ark::types::Contract"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Ark::types::Contract",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="A contract is a list of typed arguments that a function can follow."];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" arguments" ,fontname="Helvetica"];
+  Node2 [label="std::vector\< Ark::types\l::Typedef \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node3 [label="Ark::types::Typedef",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dbf/structArk_1_1types_1_1Typedef.html",tooltip="A type definition within a contract."];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" types" ,fontname="Helvetica"];
+  Node4 [label="std::vector\< ValueType \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< ValueType \>" ,fontname="Helvetica"];
+  Node5 [label="std::vector\< T \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node6 [label="T",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" name" ,fontname="Helvetica"];
+  Node7 [label="std::string_view",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="std::basic_string_view\l\< Char \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node2 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< Ark::types::Typedef \>" ,fontname="Helvetica"];
+}

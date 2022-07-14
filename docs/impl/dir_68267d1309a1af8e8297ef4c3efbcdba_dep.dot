@@ -1,4 +1,4 @@
-digraph "C:/Users/folae/Documents/Code/Big-Projects/ArkScript/Ark/src" {
+digraph "/home/fola/code/Ark/src" {
   compound=true
   node [ fontsize="10", fontname="Helvetica"];
   edge [ labelfontsize="10", labelfontname="Helvetica"];
@@ -9,6 +9,6 @@ digraph "C:/Users/folae/Documents/Code/Big-Projects/ArkScript/Ark/src" {
   dir_2f97cbe3d7d7ee3d0a7f34ae796b7c3c [shape=box label="arkscript" fillcolor="white" style="filled" color="red" URL="dir_2f97cbe3d7d7ee3d0a7f34ae796b7c3c.html"];
   }
   dir_d44c64559bbebec7f509842c48db8b23 [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_d44c64559bbebec7f509842c48db8b23.html"];
-  dir_2f97cbe3d7d7ee3d0a7f34ae796b7c3c->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="6", labeldistance=1.5 headhref="dir_000033_000000.html"];
-  dir_e0d450b481c7e7e5abacff9799e54b3d->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="57", labeldistance=1.5 headhref="dir_000028_000000.html"];
+  dir_e0d450b481c7e7e5abacff9799e54b3d->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="61", labeldistance=1.5 headhref="dir_000030_000000.html"];
+  dir_2f97cbe3d7d7ee3d0a7f34ae796b7c3c->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="6", labeldistance=1.5 headhref="dir_000035_000000.html"];
 }

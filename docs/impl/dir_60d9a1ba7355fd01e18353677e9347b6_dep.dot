@@ -1,4 +1,4 @@
-digraph "C:/Users/folae/Documents/Code/Big-Projects/ArkScript/Ark/src/arkreactor/Compiler/AST" {
+digraph "/home/fola/code/Ark/src/arkreactor/Compiler/AST" {
   compound=true
   node [ fontsize="10", fontname="Helvetica"];
   edge [ labelfontsize="10", labelfontname="Helvetica"];
@@ -7,5 +7,5 @@ digraph "C:/Users/folae/Documents/Code/Big-Projects/ArkScript/Ark/src/arkreactor
   dir_60d9a1ba7355fd01e18353677e9347b6 [shape=box, label="AST", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_60d9a1ba7355fd01e18353677e9347b6.html"];
   }
   dir_d44c64559bbebec7f509842c48db8b23 [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_d44c64559bbebec7f509842c48db8b23.html"];
-  dir_60d9a1ba7355fd01e18353677e9347b6->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="15", labeldistance=1.5 headhref="dir_000030_000000.html"];
+  dir_60d9a1ba7355fd01e18353677e9347b6->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="15", labeldistance=1.5 headhref="dir_000032_000000.html"];
 }

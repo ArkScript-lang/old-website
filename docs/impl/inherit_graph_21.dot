@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="Ark::types::Contract",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/dfb/structArk_1_1types_1_1Contract.html",tooltip="A contract is a list of typed arguments that a function can follow."];
+  Node0 [label="Ark::State",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d37/classArk_1_1State.html",tooltip="Ark state to handle the dirty job of loading and compiling ArkScript code."];
 }

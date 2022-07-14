@@ -1,6 +1,6 @@
 var Value_8hpp =
 [
-    [ "Ark::Value", "d3/d90/classArk_1_1Value.html", "d3/d90/classArk_1_1Value" ],
+    [ "Value", "d3/d90/classArk_1_1Value.html", "d3/d90/classArk_1_1Value" ],
     [ "ValueType", "de/dfd/Value_8hpp.html#a794d6cb0fd25e2dbc678c17ff605e159", [
       [ "List", "de/dfd/Value_8hpp.html#a794d6cb0fd25e2dbc678c17ff605e159a4ee29ca12c7d126654bd0e5275de6135", null ],
       [ "Number", "de/dfd/Value_8hpp.html#a794d6cb0fd25e2dbc678c17ff605e159ab2ee912b91d69b435159c7c3f6df7f5f", null ],
