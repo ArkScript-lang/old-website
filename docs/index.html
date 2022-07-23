@@ -27,7 +27,8 @@
             <a href="/contributing.html" class="btn btn-link">Contributing</a>
             <a href="/projects.html" class="btn btn-link">Projects</a>
             <div class="dropdown">
-                <a href="#" class="btn btn-link dropdown-toggle" tabindex="0">Tutorials <i class="icon icon-caret"></i></a>
+                <a href="#" class="btn btn-link dropdown-toggle" tabindex="0">Tutorials <i
+                        class="icon icon-caret"></i></a>
                 <ul class="menu">
                     <li><a href="/tutorials/language.html" class="btn btn-link">The language</a></li>
                     <li><a href="/tutorials/building.html" class="btn btn-link">Building ArkScript</a></li>
@@ -63,343 +64,204 @@
     <!-- MAIN CONTENT -->
     <div class="container" id="main">
         <div class="columns">
-            <!-- The col-2 divs are an easy way to put some margin around the main content -->
             <div class="col-2 hide-md"></div>
-
-            <!-- Actual content of the page-->
-            <div class="col-8 col-md-12" id="content">
-                <img alt="ArkScript version" src="https://img.shields.io/github/v/release/arkscript-lang/ark?include_prereleases&style=for-the-badge&logo=github">
-                <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/ArkScript-lang/Ark?color=yellow&logo=github&style=for-the-badge">
-                <img alt="ArkScript total downloads" src="https://img.shields.io/github/downloads/arkscript-lang/ark/total?color=%2324cc24&style=for-the-badge&logo=github">
-                <img alt="ArkScript Docker Pulls" src="https://img.shields.io/docker/pulls/arkscript/nightly?logo=docker&style=for-the-badge">
-
-                <div class="text-center" id="nota-bene"><em>Nota bene:</em> the project is referred as "Ark" and as "ArkScript". The official public name is "ArkScript" since "Ark" is already being used by
-                    <a class="btn-link" href="https://github.com/ark-lang/ark">another project</a>
+            <!-- Key features -->
+            <div class="panel col-4 col-lg-6">
+                <div class="panel-header">
+                    <div class="panel-title">Key features</div>
                 </div>
+                <div class="panel-body">
+                    ArkScript is
+                    <ul>
+                        <li>small (less than 10'000 lines of idiomatic C++17)</li>
+                        <li>a scripting language</li>
+                        <li>portable, compile once, run your bytecode anywhere</li>
+                        <li>functional, every argument is passed by copy</li>
+                        <li><a href="/tutorials/language.html#macros">homoiconic</a>, you can manipulate code with macros</li>
+                        <li><a href="/impl/d7/dea/tutorial_embedding.html">extensible</a>, through C++ plugins</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- More features -->
+            <div class="panel col-4 col-lg-5">
+                <div class="panel-header">
+                    <div class="panel-title">More features</div>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><code>async</code>/<code>await</code> on any function</li>
+                        <li>no hidden references</li>
+                        <li>tail call and unused variable optimization</li>
+                        <li>a REPL with autocompletion and coloration</li>
+                        <li>a <a href="/std/">standard library</a> in ArkScript and C++</li>
+                        <li>only need to learn <a href="/tutorials/language.html">10 keywords</a></li>
+                        <li>
+                            docker images: <a class="btn-link" href="https://hub.docker.com/r/arkscript/stable">stable</a>, <a class="btn-link" href="https://hub.docker.com/r/arkscript/nightly">nightly</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-                <!-- Key features -->
-                <section id="key-features">
-                    <h2>Key features</h2>
-
-                    <div class="inner-section">
-                        ArkScript is:
-                        <ul>
-                            <li>
-                                small: the compiler and the virtual machines fit under 8000 lines, but also small in terms of keywords (it has only 10)!
-                            </li>
-                            <li>
-                                a scripting language: it's very easy to embed it in your application. The builtin construction is quite easy to understand, so adding your own functions to the virtual machine is effortless
-                            </li>
-                            <li>
-                                portable: it produces a bytecode which is run by its virtual machine, the same way Java does it (with a smaller memory footprint)
-                            </li>
-                            <li>
-                                a functional language: every parameter is passed by value, everything is immutable unless you use <code>mut</code> to specify your need of mutability
-                            </li>
-                            <li>
-                                powerful: it can handle object-oriented programming in a very elegant way with its closures and explicit captures (see <code>examples/closures.ark</code>)
-                            </li>
-                            <li>
-                                promoting functionalities before performances: expressiveness often brings more productivity, even though performances aren't left behind
-                            </li>
-                            <li>
-                                easy to compile: it takes less than 200ms to compile and check a complex code with a lot of branches and sub-branches of 200 lines.
-                            </li>
-                            <li>
-                                a Lisp-like, but with less parentheses:
-                                <code>[...]</code> is expanded to <code>(list ...)</code> and <code>{}</code> to <code>(begin ...)</code>. More shorthands will come in the future.
-                            </li>
-                            <li>
-                                extensible: it is very easy to create a C++ module to use it in the language, adding functionalities
-                            </li>
-                        </ul>
-
-                        <br> It also has:
-                        <ul>
-                            <li>macros: if/else, values, and functions</li>
-                            <li>a REPL with autocompletion and coloration</li>
-                            <li>
-                                a growing standard library, composed of ArkScript (under <code>lib/std/</code>) and C++ (under <code>lib/ext/</code>)
-                            </li>
-                            <li>a lot of unit tests (but never enough), which are ran before every release to ensure everything work as intended</li>
-                            <li>
-                                docker images:
-                                <ul>
-                                    <li><a class="btn-link" href="https://hub.docker.com/r/arkscript/stable">stable</a></li>
-                                    <li><a class="btn-link" href="https://hub.docker.com/r/arkscript/nightly">nightly</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-
-                <!-- Examples -->
-                <section id="examples">
-                    <h2>Examples</h2>
-
-                    <div class="inner-section">
-                        <h3>Fibonacci suite</h3>
-                        <pre>
+            <div class="col-2 hide-md"></div>
+            <!-- Example fibonacci -->
+            <div class="panel col-3 col-lg-5">
+                <div class="panel-header">
+                    <div class="panel-title">Fibonacci suite</div>
+                </div>
+                <div class="panel-body">
+                    <pre>
 <code class="rainbowjs" data-language="arkscript">
 (let fibo (fun (n)
-    (if (< n 2)
-        n
-        (+ (fibo (- n 1)) (fibo (- n 2))))))
+  (if (< n 2)
+    n
+    (+ (fibo (- n 1)) (fibo (- n 2))))))
 
 (print (fibo 28))  # display 317811
 </code>
                         </pre>
-
-                        <h3>More or less game</h3>
-                        <pre>
-<code class="rainbowjs" data-language="arkscript">
-(import "random.arkm")
-(import "Math.ark")
-
-(let number (mod (abs (random)) 10000))
-
-(mut value 0)
-(mut tries 0)
-(mut continue true)
-
-(while continue {
-    (set value (toNumber (input "Input a numeric value: ")))
-
-    (if (< value number)
-        # then
-        (print "More!")
-        # else
-        (if (= value number)
-            # then
-            {
-                (print "Bingo!")
-                (set continue false)
-            }
-            # else
-            (print "Less!")))
-
-    (set tries (+ 1 tries))
-})
-
-(print "You won in " tries " tries")
-</code>
-                        </pre>
-
-                        <p>More examples are available in the <code>examples/</code> folder.</p>
-                    </div>
-                </section>
-
-                <section id="contributing">
-                    <h2>Contributing</h2>
-
-                    <div class="inner-section">
-                        <section>
-                            Check <a class="btn-link" href="/contributing.html">our guide</a>!
-                        </section>
-
-                        <section id="related">
-                            <h5>Related projects</h5>
-
-                            <div>
-                                We have other projects tightly related to ArkScript, which aren't necessarily C++ oriented:
-
-                                <ul>
-                                    <li>the <a href="https://github.com/ArkScript-lang/rfc">Request For Comments</a>, where we discuss new features for the language</li>
-                                    <li>the <a href="https://github.com/ArkScript-lang/std">standard library</a>, written in ArkScript itself</li>
-                                    <li>the <a href="https://github.com/ArkScript-lang/modules">standard library modules</a>, extending the capacities of the language, written in C++</li>
-                                    <li><a href="https://github.com/ArkScript-lang/ArkDoc">ArkDoc</a>, a documentation generator à la doxygen, for ArkScript, written in Ruby</li>
-                                    <li>our <a href="https://github.com/ArkScript-lang/arkscript-lang.github.io">website</a> written in HTML, CSS and JavaScript</li>
-                                </ul>
-                            </div>
-                        </section>
-
-                        <section id="contributors">
-                            <h5>Our beloved contributors</h5>
-
-                            <div>
-                                Who worked on
-
-                                <ul>
-                                    <li>
-                                        The standard library:
-                                        <ul class="no-dot">
-                                            <li><a class="btn-link" href="https://github.com/SuperFola">@SuperFola</a></li>
-                                            <li><a class="btn-link" href="https://github.com/Natendrtfm">@Natendrtfm</a></li>
-                                            <li><a class="btn-link" href="https://github.com/rinz13r">@rinz13r</a></li>
-                                            <li><a class="btn-link" href="https://github.com/FrenchMasterSword">@FrenchMasterSword</a></li>
-                                            <li><a class="btn-link" href="https://github.com/rstefanic">@rstefanic</a></li>
-                                            <li><a class="btn-link" href="https://github.com/PierrePharel">@PierrePharel</a></li>
-                                            <li><a class="btn-link" href="https://gitlab.com/Wafelack">@Wafelack</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li>
-                                        The builtins
-                                        <ul class="no-dot">
-                                            <li><a class="btn-link" href="https://github.com/SuperFola">@SuperFola</a></li>
-                                            <li><a class="btn-link" href="https://github.com/rinz13r">@rinz13r</a></li>
-                                            <li><a class="btn-link" href="https://github.com/PierrePharel">@PierrePharel</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li>
-                                        The REPL
-                                        <ul class="no-dot">
-                                            <li><a class="btn-link" href="https://github.com/rstefanic">@rstefanic</a></li>
-                                            <li><a class="btn-link" href="https://github.com/PierrePharel">@PierrePharel</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li>
-                                        The CLI
-                                        <ul class="no-dot">
-                                            <li><a class="btn-link" href="https://github.com/SuperFola">@SuperFola</a></li>
-                                            <li><a class="btn-link" href="https://github.com/DontBelieveMe">@DontBelieveMe</a></li>
-                                            <li><a class="btn-link" href="https://github.com/PierrePharel">@PierrePharel</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li>
-                                        The documentation
-                                        <ul class="no-dot">
-                                            <li><a class="btn-link" href="https://github.com/SuperFola">@SuperFola</a></li>
-                                            <li><a class="btn-link" href="https://github.com/OfficePop">@OfficePop</a></li>
-                                            <li><a class="btn-link" href="https://github.com/PierrePharel">@PierrePharel</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li>
-                                        The language specification
-                                        <ul class="no-dot">
-                                            <li><a class="btn-link" href="https://github.com/SuperFola">@SuperFola</a></li>
-                                            <li><a class="btn-link" href="https://github.com/FrenchMasterSword">@FrenchMasterSword</a></li>
-                                            <li><a class="btn-link" href="https://github.com/PierrePharel">@PierrePharel</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li>
-                                        The logo
-                                        <ul class="no-dot">
-                                            <li><a class="btn-link" href="https://github.com/mazzlabs">@mazzdevs</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li>
-                                        The docker integration
-                                        <ul class="no-dot">
-                                            <li><a class="btn-link" href="https://github.com/yardenshoham">@yardenshoham</a></li>
-                                            <li><a class="btn-link" href="https://github.com/SuperFola">@SuperFola</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li>
-                                        The website
-                                        <ul class="no-dot">
-                                            <li><a class="btn-link" href="https://github.com/fabien-zoccola">@fabien-zoccola</a></li>
-                                            <li><a class="btn-link" href="https://github.com/SuperFola">@SuperFola</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </section>
-
-                        <section id="contributing-stdlib">
-                            <h5>Contributing to the ArkScript standard library</h5>
-
-                            <p>
-                                See <a class="btn-link" href="https://github.com/ArkScript-lang/rfc/blob/master/001-coding-guidelines.md">Coding guidelines</a> if you want to write ArkScript for the library (see folder `lib/std/`).
-                                <br> For performance reasons, some functions might be written in C++, in
-                                <code>include/Ark/Builtins/Builtins.hpp</code> and <code>src/Builtins/</code>.
-                            </p>
-                        </section>
-
-                        <section id="code-structure">
-                            <h5>Code structure</h5>
-
-                            <img src="/assets/images/arkscript-code-structure-transparent.png" alt="Code structure" class="three-quarters">
-                        </section>
-                    </div>
-
-                </section>
-
-                <section id="building">
-                    <h2>Building ArkScript</h2>
-
-                    Check out <a href="/tutorials/building.html">our guide</a>!
-                </section>
-
-                <section id="performances">
-                    <h2>Performances</h2>
-
-                    <div>
-                        We run <a class="btn-link" href="https://github.com/ArkScript-lang/benchmarks/blob/master/README.md">benchmarks</a> periodically, check them out!
-                    </div>
-                </section>
-
-                <section id="games">
-                    <h2>Games</h2>
-
-                    <div class="inner-section">
-                        <p>
-                            You can find a snake created in ArkScript in the folder examples/games/snake (run it from there, otherwise it won't find the font and the sprites ; you won't need to install the SFML).
-                        </p>
-
-                        <img class="three-quarters" src="/assets/images/ArkSnake.png" alt="The snake game in ArkScript">
-
-                        <p>
-                            Controls are the arrows (left, right, up and down), the game closes itself when you successfully collect the 3 apples.
-                        </p>
-                    </div>
-                </section>
-
-                <section id="donators">
-                    <h2>The donators</h2>
-
-                    Huge thanks to those people for their donation to support the project:
-                    <ul>
-                        <li><a class="btn-link" href="https://github.com/TheCountVEVO">TheCountVEVO</a></li>
-                        <li><a class="btn-link" href="https://github.com/llexto">llexto</a></li>
-                    </ul>
-
-                    <em>
-                        If your name doesn't appear here but you donated, please contact Superfola or BioTheWolff
-                        on discord to get your name to appear in this section!
-                    </em>
-                </section>
-
-                <section id="credits">
-                    <h2>Credits</h2>
-
-                    <p>
-                        This project was inspired by <a class="btn-link" href="http://gameprogrammingpatterns.com/bytecode.html">gameprogramingpatterns</a> and <a class="btn-link" href="https://gist.github.com/ofan/721464">ofan lisp.cpp</a>
-                    </p>
-                </section>
-
-                <section id="copyright">
-                    <h2>Copyright and Licence information</h2>
-
-                    <div class="inner-section">
-                        Copyright &copy 2019-2021 Alexandre Plateau. All rights reserved.
-                        <br><br> This ArkScript distribution contains no GNU GPL code, which means it can be used in proprietary projects.
-                    </div>
-                </section>
+                </div>
+                <div class="panel-footer">
+                    <a href="https://github.com/ArkScript-lang/Ark/tree/dev/examples">More examples</a>
+                </div>
             </div>
-            <!-- end of content -->
+            <!-- Error messages to help you -->
+            <div class="panel col-5 col-lg-6">
+                <div class="panel-header">
+                    <div class="panel-title">Error messages to help you</div>
+                </div>
+                <div class="panel-body">
+                    <pre>
+<code class="rainbowjs">
+CompilationError: Unbound variable error "fib" (did you mean "fibo"?)
+In file fibonacci.ark
+On line 7:12, got `(Symbol) fib'
+   4 |     n
+   5 |     (+ (fibo (- n 1)) (fibo (- n 2))))))
+   6 | (while continue {
+   7 |   (print (fib 28))
+     |           ^^^
+   8 |   (if (< (/ (random) 32768) 0.1)
+   9 |     (set continue false))
+</code></pre>
+                </div>
+            </div>
 
-            <!-- Margin again -->
             <div class="col-2 hide-md"></div>
+            <!-- Bytecode explorer -->
+            <div class="panel col-3 col-lg-5">
+                <div class="panel-header">
+                    <div class="panel-title">Bytecode explorer</div>
+                </div>
+                <div class="panel-body">
+                    <pre>
+<code class="rainbowjs" data-language="arkscript-bytecode">
+Version:   3.3.0
+Timestamp: 1656877870
+SHA256:    75614d8475c826d88f4a9f11aeaf5f9d3a296fbf544c2b4eca2d0834f1fec
+
+Symbols table (length: 3)
+0) foo
+1) a
+2) b
+
+Constants table (length: 2)
+0) (PageAddr) 1
+1) (Number) 3.000000
+
+Code segment 0 (length: 16)
+0 LOAD_CONST (PageAddr) 1
+3 LET foo
+6 LOAD_CONST (Number) 3.000000
+9 BUILTIN print
+12 CALL (1)
+15 HALT
+
+Code segment 1 (length: 11)
+0 MUT a
+3 MUT b
+6 BUILTIN nil
+9 RET
+10 HALT</code></pre>
+                </div>
+            </div>
+            <!-- Straightforward embedding -->
+            <div class="panel col-5 col-lg-6">
+                <div class="panel-header">
+                    <div class="panel-title">Straightforward embedding</div>
+                </div>
+                <div class="panel-body">
+                    <pre>
+<code class="rainbowjs" data-language="cpp">
+#include &lt;Ark/Ark.hpp&gt;
+
+int main()
+{
+    // A state can be shared by multiple VM ; they can't overwrite it
+    Ark::State state;
+
+    // This will compile the code, but you can also give a file with state.doFile()
+    state.doString("(let foo (fun (x y) (+ x y 2)))");
+    // You can register C++ function (only before calling vm.run())
+    state.loadFunction("cpp_foo", [](std::vector&lt;Ark::Value&gt;& args, Ark::VM* vm) {
+        return Ark::Value(static_cast&lt;int&gt;(args.size()));
+    });
+
+    Ark::VM vm(state);
+    vm.run();
+
+    auto value = vm.call("foo", 5, 6.0);
+    // displays 13
+    std::cout << value << "\n";
+
+    return 0;
+}</code></pre>
+                </div>
+                <div class="panel-footer">
+                    <a href="/impl/d7/dea/tutorial_embedding.html">Documentation on embedding</a>
+                </div>
+            </div>
+
+            <div class="col-2 hide-md"></div>
+            <!-- Sponsors -->
+            <div class="panel col-5 col-lg-6">
+                <div class="panel-header">
+                    <div class="panel-title">Sponsors & donators</div>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="https://github.com/TheCountVEVO">TheCountVEVO</a></li>
+                        <li><a href="https://github.com/llexto">llexto</a></li>
+                        <li>COUR Eloïse</li>
+                        <li><a href="https://github.com/DylanAkp">AKPINAR Dylan</a></li>
+                        <li><a href="https://icculus.org" rel="nofollow">Ryan C. Gordon</a> through his <a href="https://twitter.com/icculus/status/1534552918317318144" rel="nofollow">2022 Microgrant</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Bugs -->
+            <div class="panel col-3 col-lg-5">
+                <div class="panel-header">
+                    <div class="panel-title">Found a bug, need help with the language?</div>
+                </div>
+                <div class="panel-body">
+                    We have a <a href="https://github.com/ArkScript-lang/Ark/issues">bug tracker</a> where you can report bugs and feature requests.<br>
+                    Head to the <a href="https://github.com/ArkScript-lang/Ark/discussions">discussions</a> if your problem / suggestion doesn't fit or if you need help with the language! We also have a <a href="https://discord.gg/YT5yDwn">Discord server</a>.
+                </div>
+            </div>
+
         </div>
     </div>
 
     <footer id="page-footer">
         <p class="text-center">
-            Copyright &copy; 2020-2021 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.
+            Project copyright &copy; 2019-2022 Alexandre Plateau. All rights reserved.<br>
+            Website copyright &copy; 2020-2022 Alexandre Plateau & Fabien Zoccola. All rights reserved.
         </p>
     </footer>
 
     <!-- Rainbow.js for syntax coloring -->
     <script src="/assets/js/rainbow.min.js"></script>
     <script src="/assets/js/languages/arkscript.js"></script>
+    <script src="/assets/js/languages/cpp.js"></script>
 </body>
 
 </html>

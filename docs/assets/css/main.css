@@ -86,6 +86,20 @@ pre code.rainbowjs span.label {
   background-color: #0665e0;
 }
 
+.panel {
+  border: none !important;
+  margin: 16px !important;
+  /* padding: 4px !important; */
+  background-color: #343434;
+}
+.panel + .panel {
+  margin-left: 0px !important;
+}
+.panel .panel-title {
+  font-size: large;
+  font-weight: 600;
+}
+
 @keyframes slide-left {
   0% {
     opacity: 0;
@@ -369,6 +383,11 @@ pre.rainbow-show {
     padding: 0;
     border: none;
   }
+}
+
+pre > code {
+  word-break: break-word;
+  white-space: break-spaces;
 }
 
 /*# sourceMappingURL=main.css.map */

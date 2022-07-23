@@ -44,3 +44,27 @@ Rainbow.extend('arkscript', [
         pattern: /\(\s*(=|<|>|<=|>=|!=|@|\^|\+|\-|\*|\/|tailOf|headOf|nil\?|list|len|append|concat|print|puts|input|time|empty\?|firstOf|assert|toNumber|toString|and|or|mod|type|hasField|not|async|await)(?=[\]()\s#])/g
     }
 ]);
+
+Rainbow.extend('arkscript-bytecode', [
+    {
+        /* making peace with HTML */
+        name: 'plain',
+        pattern: /&gt;|&lt;/g
+    },
+    {
+        name: 'constant.symbol',
+        pattern: /(Version|Timestamp|SHA256)/g
+    },
+    {
+        name: 'constant.number',
+        pattern: /\n\d+/g
+    },
+    {
+        name: 'storage.function',
+        pattern: /(Symbols table|Constants table|Code segment).+/g
+    },
+    {
+        name: 'entity.function',
+        pattern: /[A-Z_]{2,}/g
+    }
+]);
