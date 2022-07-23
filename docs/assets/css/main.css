@@ -92,12 +92,14 @@ pre code.rainbowjs span.label {
   /* padding: 4px !important; */
   background-color: #343434;
 }
-.panel + .panel {
-  margin-left: 0px !important;
-}
 .panel .panel-title {
   font-size: large;
   font-weight: 600;
+}
+@media screen and (min-width: 960px) {
+  .panel + .panel {
+    margin-left: 0px !important;
+  }
 }
 
 @keyframes slide-left {
@@ -186,14 +188,17 @@ header.navbar:not(.has-banner) img, header.navbar:not(.has-banner) .navbar-cente
 
 footer#page-footer {
   bottom: 0;
-  width: 100vw;
+  width: 90vw;
   min-height: 9vh;
   background-color: #161616;
   padding: 2vh;
+  margin: 0 !important;
 }
 footer#page-footer p {
   margin: 0;
   padding: 0;
+  word-break: break-word;
+  white-space: break-spaces;
 }
 
 .btn.btn-link.dropdown-toggle:focus {
