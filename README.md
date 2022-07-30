@@ -4,13 +4,15 @@ This repository is hosting the presentation and documentation of the language.
 
 ## A brief tour
 
-Every path listed in this section are relative to `docs/`.
+The website is generated in root folder through Pug, allowing us to easily split the code for each pages and reuse components.
+
+Install NodeJS avec then Pug with `npm i`. The run `node main.js` to generate the HTML files. You can start a webserver with `python3 -m http.server`.
 
 ### Language presentation
 
-This is located in `index.html` + every root HTML files.
+This is located in `views/index.pug` + every root Pug files.
 
-The tutorials (understanding the language, embedding it in C++, the specification of the bytecode, how to build the language...) are under the folder `tutorials/`.
+The tutorials (understanding the language, and how to build the language) are under the folder `views/tutorials/`.
 
 ### ArkScript source code documentation
 
