@@ -1,0 +1,62 @@
+extends layout.pug
+
+block header
+    include headers/generic.pug
+
+block content
+    div#content.col-8.col-md-12
+        h1.text-center Documentation
+
+        section#building-and-installing
+            h2 Building and installing
+            div.inner-section
+                ul
+                    li: a.btn-link(href="/tutorials/building.html#from-a-release") Installing from a release
+                    li: a.btn-link(href="/tutorials/building.html#from-docker") Installing through Docker
+                    li: a.btn-link(href="/tutorials/building.html#from-source") Building and installing ArkScript
+
+                details.
+                    #[summary Note on 64 bits architecture]
+                    The project was made to work only on 64 bits computers, meaning that it can not (and will never) work on 32 bits computers. 64 bits CPU appeared in the 1990s and allow developpers to use more RAM (from a few
+                    GB to thousands of TB), while 32 bits CPU appeared in 1960s, they shall now be replaced.
+
+        section#tutorials
+            h2 Tutorials
+            div.inner-section
+                ul
+                    li: a.btn-link(href="/tutorials/language.html") Learning ArkScript
+                    li
+                        | Embedding
+                        ul
+                            li: a.btn-link(href="/impl/d7/dea/tutorial_embedding.html") Embedding ArkScript in a C++ project
+                            li: a.btn-link(href="/impl/d1/d8c/modules.html") Creating C++ modules for ArkScript
+                            li: a.btn-link(href="/impl/d6/d90/builtins.html") Creating builtins in C++
+
+        section#std-lib-doc
+            h2 Standard Library Documentation
+
+            div.inner-section
+                a(href="/std/index.html") The documentation of the ArkScript Standard Library.
+            div.inner-section
+                h3 Modules documentation
+
+                ul
+                    li #[a.btn-link(href="/impl/d5/df5/bitwise_module.html") Bitwise], to do bit manipulation
+                    li #[a.btn-link(href="/impl/d8/d74/console_module.html") Console], to play with colors in the console
+                    li #[a.btn-link(href="/impl/db/d2b/hash_module.html") Hash], to generate hash (sha256, md5...)
+                    li #[a.btn-link(href="/impl/db/d73/http_module.html") HTTP], to make HTTP servers and clients
+                    li #[a.btn-link(href="/impl/d3/d94/json_module.html") JSON], to load, save, and use JSON
+                    li #[a.btn-link(href="/impl/d5/deb/msgpack_module.html") MsgPack]
+                    li #[a.btn-link(href="/impl/d5/d68/random_module.html") Random], to generate random numbers
+
+        section#impl-details
+            h2 ArkScript C++ API documentation
+
+            div.inner-section
+                a.btn-link(href="/impl/index.html") The complete documentation of the implementation and API.
+
+        section#bytecode-doc
+            h2 Virtual Machine related documentation
+
+            div.inner-section
+                a.btn-link(href="/bytecode.html") How our bytecode is designed

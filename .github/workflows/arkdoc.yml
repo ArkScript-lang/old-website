@@ -53,11 +53,12 @@ jobs:
           export ARKDOC_LOGLEVEL=DEBUG
           python -m arkdoc $ark_version ../std-latest/ ../ark-latest/src/arkreactor/Builtins/ --html std --root /std || exit 1
           cd ..
-          cp -r arkdoc/std/ docs/
+          cp -r arkdoc/std/ ./
           # update version
-          sed "s/let version = "'"'".\+"'"'"/let version = "'"'"${ark_version}"'"'"/g" docs/std/index.html > temp_index.html
-          rm docs/std/index.html
-          mv temp_index.html docs/std/index.html
+          sed "s/let version = "'"'".\+"'"'"/let version = "'"'"${ark_version}"'"'"/g" ./std/index.html > temp_index.html
+          rm ./std/index.html
+          mv temp_index.html ./std/index.html
+          git config --global --add safe.directory /github/workspace
 
       - name: Commit
         uses: github-actions-x/commit@v2.8
@@ -66,6 +67,6 @@ jobs:
           push-branch: 'master'
           commit-message: 'Updating ArkScript std documentation'
           force-add: 'true'
-          files: docs/std/
+          files: ./std/
           name: Alexandre Plateau through GitHub Action
           email: lexplt.dev@gmail.com

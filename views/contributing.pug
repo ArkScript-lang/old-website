@@ -1,0 +1,61 @@
+extends layout.pug
+
+block header
+    include headers/generic.pug
+
+block content
+    div#content.col-8.col-md-12
+        h1.text-center Contributing
+
+        p.
+            Hi there, fellow coder!
+            #[br]
+            If you are here, it means that you are interested in contributing to this project, and we are happy about it!
+            You will find a collections of useful ressources to get started, whatever you would like to contribute.
+            #[br]
+            Don't know what to work on? No worries, we have a
+            #[a.btn-link(href="https://github.com/orgs/ArkScript-lang/projects?type=new") list of things to do]!
+
+        section#project-organisation
+            h2 The project organisation
+
+            div.inner-section
+                p.
+                    The project is organised in multiple repositories for us to be able to work on a project
+                    (eg the standard library) and update it multiple times without having to roll X different
+                    updates for the main repository, the language itself.
+
+                ul
+                    li
+                        | #[a.btn-link(href="https://github.com/ArkScript-lang/Ark") ArkScript], the language
+                        ul
+                            li: a.btn-link(href="https://github.com/ArkScript-lang/std") The standard library
+                            li: a.btn-link(href="https://github.com/ArkScript-lang/modules") The modules
+                    li: a.btn-link(href="https://github.com/ArkScript-lang/website") The website
+                    li: a.btn-link(href="https://github.com/ArkScript-lang/benchmarks") The benchmarks
+                    li: a.btn-link(href="https://github.com/ArkScript-lang/ArkScript-VSC") The VSC extension (coloration)
+                    li: a.btn-link(href="https://github.com/ArkScript-lang/ArkDoc") A documentation tool for ArkScript code
+
+        section#contributing-to-arkscript
+            h2 Contributing to the language, ArkScript
+
+            div.inner-section.
+                Clone #[code https://github.com/ArkScript-lang/Ark.git] and run #[code git submodule update --init --recursive] to clone all the submodules used by the project.
+                #[br]
+                #[em.text-bold It is advised to do this even if you want to contribute to a subproject used by ArkScript, so that you can modify the project and test it directly]
+                #[br]#[br]
+                Then check that everything #[a.btn-link(href="/tutorials/building.html") builds fine], and you're good to go.
+                #[br]#[br]
+                #[em.text-bold If you are modifying a subproject, cd in it and change its git remote to point to your fork, then make a PR for your fork, not for the whole ArkScript repository]
+
+        section#adding-external-lib
+            h2 Adding an external C or C++ library to a project
+
+            div.inner-section.
+                Use git submodules instead of copying and pasting the code somewhere: #[code git submodule add https://github.com/user/name.git submodules/name] and add it to the needed CMakeLists.
+
+        section#ideas-questions
+            h2 An idea, a question, a proposition or a problem?
+
+            div.inner-section
+                | Just create an issue in the appropriate repository, we look at them every day.

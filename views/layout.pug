@@ -1,0 +1,31 @@
+html(lang="en")
+    head
+        meta(name="google-site-verification", content="gXbITmlhbvLO1TWvX5IR9EjjZliC0eV7QFGNx0UmPfo")
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        link(rel="stylesheet", href="/assets/css/spectre.min.css", type="text/css")
+        link(rel="stylesheet", href="/assets/css/spectre-icons.min.css", type="text/css")
+        link(rel="stylesheet", href="/assets/css/rainbowjs-theme.css", type="text/css")
+        link(rel="stylesheet", href="/assets/css/main.css", type="text/css")
+        link(rel="shortcut icon" ,href="/favicon.ico," type="image/x-icon")
+        link(rel="icon", href="/favicon.ico", type="image/x-icon")
+
+        title ArkScript
+    body
+        block header
+
+        div#main.container
+            div.columns
+                div.col-2.hide-md
+                block content
+                div.col-2.hide-md
+
+        footer#page-footer
+            p.text-center
+                | Copyright &copy; 2020-2022 Alexandre Plateau & Fabien Zoccola.#[br]All rights reserved.
+
+        block scripts
+            script(src="/assets/js/rainbow.min.js")
+            script(src="/assets/js/languages/arkscript.js")
+            script(src="/assets/js/languages/cpp.js")

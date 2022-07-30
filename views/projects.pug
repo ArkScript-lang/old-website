@@ -1,0 +1,12 @@
+extends layout
+
+block header
+    include headers/generic.pug
+
+block content
+    div#content.col-8.col-md-12
+        section#listing
+            h2 Projects using ArkScript
+
+append scripts
+    script(src="/assets/js/generate_projects.js", defer)

@@ -1,0 +1,405 @@
+extends ../layout.pug
+
+block header
+    include ../headers/generic.pug
+
+block content
+    div.off-canvas
+        //- off-screen toggle button
+        a.off-canvas-toggle.btn.btn-primary.btn-action(href="#sidebar"): i.icon.icon-menu
+
+        //- table of content
+        div#sidebar.off-canvas-sidebar
+            ul.nav
+                li.nav-item.active
+                    a(href="#") Table of contents
+                    ul.nav
+                        li.nav-item: a(href="#learning-arkscript") Learning ArkScript
+                        li.nav-item: a(href="#creating-variables") Creating variables
+                        li.nav-item: a(href="#comments") Comments
+                        li.nav-item: a(href="#program-structure") Program structure
+                        li.nav-item: a(href="#io") Basic Input/Output
+                        li.nav-item: a(href="#conditions") Conditions
+                        li.nav-item: a(href="#loops") Loops
+                        li.nav-item: a(href="#functions") Functions
+                        li.nav-item: a(href="#closures") Closures
+                        li.nav-item: a(href="#import") Importing code
+                        li.nav-item: a(href="#async") Running functions asynchronously
+                        li.nav-item: a(href="#macros") Using macros to manipulate code at compile time
+        a.off-canvas-overlay(href="#close")
+
+    div.columns.off-canvas-content
+        div.col-2
+
+        div#content.col-8
+            h1.text-center Tutorials - The language
+
+            section#learning-arkscript
+                h2 Learning ArkScript: the basics
+                div.inner-section
+                    p In ArkScript, there are two main rules:
+                    ul
+                        li The first rule is that #[code (a b c ...)] is a function call, #[code a] is the function with #[code b c ...] being the arguments.
+                        li
+                            | The second rule is the #[em.text-bold only] exception to the first rule: when declaring functions like #[code (fun (arg1 arg2 ...) body)],
+                            | the definition of the argument block #[em.text-bold isn't] considered as a function call.
+                    p To sum it up: everything is a function call, except the definition of the arguments block of a function.
+
+            section#creating-variables
+                h2 Creating variables
+                div.inner-section
+                    | In ArkScript, there are 2 types of #[em variables]: #[code.error mutables] and #[code.error immutables].
+                    | The #[em immutable] variables can't be modified or redefined, while #[em mutable] variables can.
+                    br
+                    | The following three keywords are important when talking about variables:
+                    ul
+                        li #[code let] #[em defines] an #[code.error immutable] variable
+                        li #[code mut] #[em defines] a #[code.error mutable] variable
+                        li #[code set] changes the value of a given mutable variable (will throw an error on immutable variables)
+                    br
+                    br
+                    | Example:
+                    pre: code.rainbowjs(data-language="arkscript")
+                        | (let a 12)  # immutable variable
+                        | (let a "hello")  # cannot redefine constant
+                        | (set a "world")  # cannot modify constant, will throw an error
+                        | 
+                        | (mut b [12 42 64])  # mutable variable
+                        | (mut b "hello")  # no problem, the operation is allowed
+                        | (set b "ArkScript is cool!")  # no problem, operation is allowed on mutables
+
+            section#comments
+                h2 Comments
+                div.inner-section.
+                    As you have seen in the example above, we can write code that won't be executed, using #[code # text].
+                    This is a comment, only for the developer, and will be totally ignored when compiling and executing.
+
+            section#program-structure
+                h2 Program structure
+                div.inner-section
+                    p An ArkScript program is a collection of blocks. A block #[code (function arguments...)], thus, those are valid programs:
+                    pre: code.rainbowjs(data-language="arkscript")
+                        | (print "hello world")
+                    pre: code.rainbowjs(data-language="arkscript")
+                        | (let a 12)
+                        | (let foo (fun (a b)
+                        |     (+ a b)))
+                        | (print (foo a a))
+                    p Multiple blocks can be put into one by using the #[strong begin construction]:
+                    pre: code.rainbowjs(data-language="arkscript")
+                        | (begin
+                        |     (let a 12)
+                        |     (print a)
+                        |     (let b (* a 2))
+                        |     (print b))
+                        | 
+                        | # and can be accessed from outside, begin doesn't create a scope
+                        | (print a " " b)
+                    p #[code (begin)] and #[code {}] are synonyms.
+
+            section#io
+                h2 Basic Input/Output
+                div.inner-section
+                    p User interactions are a must have in a programming language. To achieve such interaction in a shell (the big black windows where our code is running), we have what we call #[i IO] or #[i input/output], through #[code print] and #[code input]. One can write text to the shell, the other can prompt the user and retrieve what they wrote.
+                    p #[strong Example:] #[code (print "hello" " world")], will print #[code hello world].
+                    p The print function won't put spaces between each element printed, thus we have to do it ourselves.
+                    pre: code.rainbowjs(data-language="arkscript")
+                        | (let a (input "what is your name?"))  # will print what the user wrote,
+                        | (print a)                             # after having validated by pressing Enter
+                        |                                       # The prompt is optionnal, (input) will
+                        |                                       # also work on its own.
+
+            section#conditions
+                h2 Conditions
+                div.inner-section
+                    p In any programming language, it's useful to control the program flow, to be able to give the user multiple choices (attacking an ennemy, befriending it, spying on it...) and those things are achieved through conditions.
+                    p Constructing a condition is done like so:
+                    pre: code.rainbowjs(data-language="arkscript")
+                        | (if condition then else)
+                    p The else bloc is optionnal.
+                    p: strong Examples:
+                    pre: code.rainbowjs(data-language="arkscript")
+                        | (if (= a 12)
+                        |     # then
+                        |     (print "a is 12")
+                        |     # else
+                        |     (print "a is not 12"))
+                        | 
+                        | (if (and (< a 12) (> b 14))
+                        |     (print "a is < 12 AND b is > 14"))
+                    p The then and the else parts can be composed of multiple functions by using the begin construction.
+
+            section#loops
+                h2 Loops
+                div.inner-section
+                    p Giving the user a choice is a thing, but repeating an action is another that is very useful in a program as well. For example, if we need to compute the sum of values in a list, we would need to loop over the values of the list. In video games, we would need loops to generate waves of ennemies.
+                    p Loops in ArkScript are created by using the keyword while.
+                    p: strong Example:
+                    pre: code.rainbowjs(data-language="arkscript")
+                        | (import "random.arkm")
+                        | 
+                        | # continue must be a mutable for us the be able to modify it
+                        | (mut continue true)
+                        | (while continue {
+                        |     (print "hello")
+                        | 
+                        |     # 10% chance of stopping the loop
+                        |     # random returns a number in range [0, 32768[
+                        |     (if (< (/ (random) 32768) 0.1)
+                        |         (set continue false))
+                        | })
+                        | 
+                        | # another example using conditions
+                        | (mut i 0)
+                        | (while (< i 10) {
+                        |     (puts i " ")  # won't put a \n at the end of the content
+                        |     (set i (+ 1 i))
+                        | })
+
+            section#functions
+                h2 Functions
+                div.inner-section
+                    p Functions are a tool to factorize code, to follow the DRY (don't repeat yourself) principle. Who would want to write 10 times the same 100 lines when they can use a function and call it 10 times inside a loop?
+                    p Note: ArkScript was particularly optimized to deal with function using few arguments, thus encouraging code reuse and code split into functions.
+                    p A function is composed of 2 parts: the argument lists and the body:
+                    pre: code.rainbowjs(data-language="arkscript")
+                        | (fun (a b c) (print a b c))
+                    p #[code (a b c)] is the argument list, the print bloc is the body.
+                    p The value returned by a function is the last evaluated value in the body, if none, nil is returned.
+                    p: strong Example:
+                    pre: code.rainbowjs(data-language="arkscript")
+                        | (let foo (fun (a b) (begin
+                        |     (print "function got: " a " " b)
+                        |     # return value:
+                        |     (+ a b))))
+                        | 
+                        | (print (foo 12 14))  # 26
+                    p You can also use #[i quoting] to quickly create anonymous functions taking 0 arguments, useful to make callbacks on the run:
+                    pre: code.rainbowjs(data-language="arkscript")
+                        | (let i_want_a_callback (fun (cb) {
+                        |     (print "I am a function")
+                        |     (cb)
+                        |     (print "I am still here")
+                        | }))
+                        | 
+                        | # would work, but a bit long to write
+                        | (i_want_a_callback (fun () (print "hello world")))
+                        | 
+                        | # using the quote shorthand '
+                        | (i_want_a_callback '(print "hello world"))
+                        | # or by using the keyword
+                        | (i_want_a_callback (quote (print "hello world")))
+                    p Also, we have a set of builtins functions in the language, available without importing anything ; for example #[code print] or #[code input], which we used before. Note that builtins #[strong must be called], you can't do things like #[code (let my_print print)], or #[code (let my_tail tail)], otherwise it will result in an error because those functions are special.
+
+            section#closures
+                h2 Closures
+                div.inner-section
+                    p Closure, or function closure, is a way to implementing lexically scoped name binding#[a(href="https://en.wikipedia.org/wiki/Closure_(computer_programming)"): sup 1]. It stores a function along with an environment, explicitly mapped with specified variables. This allows to reuse and modify captured variables each time the closure is called.
+                    pre: code.rainbowjs(data-language="arkscript")
+                        | (let make_closure (fun (name age) {
+                        |     (let coolness_factor 12)
+                        | 
+                        |     # here, we return a closure!
+                        |     (fun (&name &age &coolness_factor)
+                        |         # each time it will be called, it will display the captured variables
+                        |         (print name " " age " " coolness_factor))
+                        | }))
+                        | 
+                        | (let closure (make_closure "Pietro" 42))
+                        | (closure)  # prints Pietro 42 12
+                    p Closures capture variables explicitly in their arguments' list, by prefixing them with #[code &]. We can access the captured fields through the #[code closure.field] notation, in a read only way:
+                    pre: code.rainbowjs(data-language="arkscript")
+                        | (print closure.age)  # 42
+                        | (print closure.coolness_factor)  # 12
+                        | 
+                        | # we can print closures and have their fields and values displayed
+                        | (print closure)  # prints (.name=Pietro .age=42 .coolness_factor=12)
+                        | 
+                        | (let make (fun (a)
+                        |     (fun (&a) ())))
+                        | 
+                        | (let foo (fun () (print "bar")))
+                        | 
+                        | (let closure_bis (make foo))
+                        | # we can also call captured functions
+                        | (closure_bis.a)  # prints bar
+                    p Finally, you can modify the closure content when using it from the inside, through itself or its captured functions:
+                    pre: code.rainbowjs(data-language="arkscript")
+                        | (let make (fun (name age) {
+                        |     (let set-age (fun (new)
+                        |         (set age new)))
+                        | 
+                        |     (fun (new-name &name &age &set-age)
+                        |         (if (not (nil? new-name))
+                        |             (set name new-name)))
+                        | }))
+                        | 
+                        | (let egg (make "egg" 1))
+                        | (print egg.age)  # 1
+                        | (egg.set-age 2)
+                        | (print egg.age " " egg.name)  # 2 egg
+                        | (egg "not an egg")
+                        | (print egg.name " " egg.age)  # not an egg 2
+
+            section#import
+                h2 Importing code
+                div.inner-section
+                    p Putting code in multiple files is pretty to make it reusable and more maintainable.
+                    p In ArkScript, imported code is copied from the specified file into the current one, with a guarantee: circular includes are detected and prevented, making execution always possible even if you include a lot of files.
+                    p Files are imported by doing so: #[code (import "myfile.ark")]. The path to the target file is #[strong relative to the source file], not to the main executed file.
+                    p The only exception about paths in #[code import]s is when you import an ArkScript module, ending in #[code .arkm]. Those files are either in the standard library, thus you can just write their name and ArkScript will find them, or they #[strong must be alongside the final executed file].
+                    p When importing files from the standard library, you don't need to write the path to the library folder, just the path of the file in it. For example: #[code (import "String.ark")] will work without problems.
+
+            section#async
+                h2 Running functions asynchronously
+                h6: em Available in ArkScript v3.4.0
+                div.inner-section
+                    p
+                        | Functions can be pretty useful to define tasks, but sometimes we don't want to block our program to wait for a task to finish, for example fetching an HTML page.
+                        | With ArkScript async/await you can submit the request and do other work that's waiting while the HTTP request is being processed.
+                    p For a simpler example, let's calculate the sum of numbers in a list:
+                    pre: code.rainbowjs(data-language="arkscript")
+                        | (let size 1000)
+                        | (let data (list:fill size 1))  # create a list of a thousand 1's
+                        | 
+                        | (let sum (fun (a b src) {
+                        |     (mut acc 0)
+                        |     (while (< a b) {
+                        |         (set acc (+ acc (@ src a)))
+                        |         (set a (+ 1 a))
+                        |     })
+                        |     acc
+                        | }))
+                        | 
+                        | (let task (async sum 0 size data))
+                        | 
+                        | # do something else...
+                        | 
+                        | # now we need the result, let's retrieve it
+                        | (print (await task))
+                    p.
+                        #[code async] can launch any function in a separate thread, given a set of arguments for the functions. Then it will work without you having to do anything,
+                        and you can retrieve the result by using #[code await]. It will check if the function is done, otherwise wait for it (blocking the thread of the caller) and return its result.
+
+            section#macros
+                h2 Using macros to manipulate code at compile time
+                h6: em Available in ArkScript 3.1.0
+
+                div.inner-section
+                    p A macro is a rule or pattern that specifies how a certain input should be mapped to a replacement output. Applying a macro to an input is name #[em macro expansion]#[a(href="https://en.wikipedia.org/wiki/Macro_(computer_science)"): sup 2].
+                    p In ArkScript, there are 3 different types of macros:
+                    ul
+                        li conditions: #[code \!{if condition then else}]
+                        li constants: #[code \!{my_const value}]
+                        li functions: #[code \!{my_function (foo bar) body}]
+                    p #[strong Constant macros] are just associations #[code identifier to value], the value being whatever you want (even another bloc of code, for example #[code (let b 12)]). The code is scanned and when such macro is found, it's applied wherever possible.
+                    p #[strong Macros' scopes] are tied to the bloc in which they are defined. At the end of said bloc, the macros defined in it are destroyed. Note that a macro defined a in bloc, which includes other blocs, will be available in all the other sub-blocs.
+                    p Named macros can be undefined by using #[code \!{undef name}].
+                    pre: code.rainbowjs(data-language="arkscript")
+                        | \!{a 12}
+                        | 
+                        | {
+                        |     (print a)  # will print 12, it works!
+                        | 
+                        |     \!{a 1}  # we can shadow macros by defining other macros with the
+                        |             # same name in sub-blocs
+                        |     (print a)  # 1
+                        | 
+                        |     \!{undef a}
+                        |     (print a)  # 12, because we undefined the nearest version of a
+                        | }
+                        | 
+                        | (print a)  # a is still 12 here
+                    p #[strong Condition macros] may only work on compile time expressions, using only other macros. For example:
+                    pre: code.rainbowjs(data-language="arkscript")
+                        | \!{foo 12}
+                        | \!{bar 14}
+                        | 
+                        | # the condition being true will result in the print being inserted in the program
+                        | # while the (let a) will be deleted
+                        | \!{if (and (= foo 12) (= bar 14))
+                        |     (print "foo is 12 and bar is 14")
+                        |     (let a (+ 12 14))}
+                    p In a #[em condition macro] we can define other macros and use other conditions macros:
+                    pre: code.rainbowjs(data-language="arkscript")
+                        | \!{a 12}
+                        | \!{if (= a 12)
+                        |     \!{b 14}
+                        |     \!{c 13}
+                        | }
+                        | 
+                        | (print b)  # prints 14
+                        | (print c)  # compilation error: unbound variable c
+                        |            # c is unavailable here because it was never defined
+                    p #[strong Function macros] are evaluated recursively, thus they can call themselves or other macros, and use #[em condition macros]. A particularity is that their arguments can ArkScript code blocs, such as a #[code (let a 12)] or even complexe code blocs like #[code { (mut i 0) (while continue { (print "hello") (set i (+ 1 i)) (if (> i 12) (set continue false)) }) }].
+                    p Those macros can use a magic pattern #[code ...args] (args being the name of the argument, you can use whatever you want) as the last argument to tell the compiler that the macros can take any number of arguments. This is called #[em varargs] or #[em variadic arguments].
+                    pre: code.rainbowjs(data-language="arkscript")
+                        | \!{foo (a b) {
+                        |     (print a " " b)
+                        |     (let c (+ a b))
+                        | }}
+                        | 
+                        | (foo 1 2)
+                        | (print c)  # prints 3
+                        | 
+                        | \!{bar (a ...args)
+                        |     (print a " " args)}
+                        | 
+                        | (bar 1)  # prints 1
+                        | (bar 1 2)  # prints 1 [2]
+                        | (bar 1 2 3)  # prints 1 [2 3]
+                    p Here is a more complex example implementing the #[em thread macro]. The first argument is the data, then each function is applied onto it, one after another. It allows us to write more readable code, instead of the ugly #[code (read-string (slurp (io:file (io:resource filename))))].
+                    pre: code.rainbowjs(data-language="arkscript")
+                        | \!{-> (arg fn1 ...fn) {
+                        |     \!{if (> (len fn) 0)
+                        |         (-> (fn1 arg) ...fn)
+                        |         (fn1 arg)
+                        |     }
+                        | }}
+                        | 
+                        | (let filename "hello.json")
+                        | (let io:resource (fun (file) {
+                        |     (print "io:resource")
+                        |     file
+                        | }))
+                        | (let io:file (fun (name) {
+                        |     (print "io:file")
+                        |     name
+                        | }))
+                        | (let slurp (fun (a) {
+                        |     (print "io:slurp")
+                        |     a
+                        | }))
+                        | (let read-string (fun (a) {
+                        |     (print "read-string")
+                        |     a
+                        | }))
+                        | 
+                        | (print (-> filename io:resource io:file slurp read-string))
+                        | # it will print:
+                        | #   io:resource
+                        | #   io:file
+                        | #   io:slurp
+                        | #   read-string
+                        | #   hello.json
+                    p Here is the list of the available compile time functions, to work with macros (in macros):
+                    ul
+                        li Comparison operators: #[code &equals;], #[code !&equals;], #[code &lt;], #[code &lt;=], #[code &gt;], #[code &gt;=]
+                        li Chaining conditions / inverting them: #[code not], #[code and], #[code or]
+                        li Working on lists: #[code len], #[code @], #[code head], #[code tail]
+
+                    p.
+                        We also have a few predefined macros to work on ArkScript code and ease code generation. For example, one
+                        can generate a new symbol using #[code (symcat symbol value-or-expression)], or count the number of arguments of a function with
+                        #[code (argcount function-name)].
+
+                    ul
+                        li.
+                            #[code symcat]: generate a new symbol from a given symbol and a value or expression.
+                            #[code (- a 1)] with #[code a] a constant macro (or macro argument) is valid.
+                        li.
+                            #[code argcount]: retrieve at compile time the number of arguments taken by a given function.
+                            The function must have been defined #[i before] using #[code argcount], or must be an anonymous function:
+                            #[code (argcount (fun (a b c) ()))], #[code (argcount my-function)].
+
+        div.col-2

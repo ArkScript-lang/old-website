@@ -1,0 +1,330 @@
+extends layout.pug
+
+block header
+    include headers/generic.pug
+
+block content
+    div#content.col-8.col-md-12
+        h1.text-center ArkScript bytecode specification
+
+        p
+            | You will find ArkScript bytecode specification on page, if you are interested in implementing your own virtual machine, or just want to learn more.
+
+        section#bytecode-headers
+            h2 ArkScript bytecode headers
+
+            table.table.dark.table-striped
+                thead
+                    tr
+                        th.col-3 Name
+                        th.col-3 Size
+                        th.col-6 Description
+                tbody
+                    tr
+                        td Magic number
+                        td 4 bytes
+                        td 6386283, numeric version of <code>"ark\0"</code>
+                    tr
+                        td Compiler.Major
+                        td 2 bytes
+                        td Big endian layout
+                    tr
+                        td Compiler.Minor
+                        td 2 bytes
+                        td Big endian layout
+                    tr
+                        td Compiler.Patch
+                        td 2 bytes
+                        td Big endian layout
+                    tr
+                        td Timestamp
+                        td 8 bytes
+                        td Build time (Unix format), Big endian layout
+                    tr
+                        td SHA256
+                        td 32 bytes
+                        td SHA256 of the tables and code segments for integrity check
+
+                    tr: td.text-center(colspan="3") Symbols table
+                    tr
+                        td Symbols.count
+                        td 2 bytes
+                        td Big endian layout
+                    tr
+                        td Symbol.value
+                        td Variable
+                        td Null-terminated string
+
+                    tr: td.text-center(colspan="3") Values table
+                    tr
+                        td Values.count
+                        td 2 bytes
+                        td Big endian layout
+                    tr
+                        td Symbol.type
+                        td 1 byte
+                        td <code>1</code> for number, <code>2</code> for string, <code>3</code> for function
+                    tr
+                        td Number.value
+                        td Variable
+                        td Null-terminated string representation of the number
+                    tr
+                        td String.value
+                        td Variable
+                        td Null-terminated string
+                    tr
+                        td Function.value
+                        td 2 bytes
+                        td Big endian layout
+
+                    tr: td.text-center(colspan="3") Code segments
+                    tr
+                        td Instruction count
+                        td 2 bytes
+                        td Big endian layout, can be <code>0</code>
+                    tr
+                        td Instruction
+                        td 1-3 bytes
+                        td
+
+        section#note-on-builtins
+            h2 Note on builtins
+
+            div.inner-section
+                p.
+                    Builtins are handled with #[code BUILTIN id], with #[code id] being the id of the builtin function object. The ids of the builtins are listed below.
+                br
+                table.table.dark.table-hover.col-6
+                    thead
+                        tr
+                            th.col-3 Name
+                            th.col-3 ID
+                    tbody
+                        tr
+                            td: code false
+                            td 0
+                        tr
+                            td: code true
+                            td 1
+                        tr
+                            td: code nil
+                            td 2
+                br
+                p.
+                    The other builtins are listed in #[a.btn-link(href="https://github.com/ArkScript-lang/Ark/blob/dev/src/arkreactor/Builtins/Builtins.cpp#L24") Builtins.cpp].
+
+        section#instructions
+            h2 Instructions
+
+            div.inner-section
+                table.table.table-striped.dark
+                    thead
+                        tr
+                            th.col-3 Code
+                            th.col-3 Argument(s)
+                            th.col-6 Job
+                    tbody
+                        tr
+                            td #[code NOP] (0x00)
+                            td 
+                            td Does Nothing
+                        tr
+                            td #[code LOAD_SYMBOL] (0x01)
+                            td symbol id (two bytes, big endian)
+                            td Load a symbol from its id onto the stack
+                        tr
+                            td #[code LOAD_CONST] (0x02)
+                            td constant id (two bytes, big endian)
+                            td Load a constant from its id onto the stack. Should check for a saved environment and push a Closure with the page address + environment instead of the constant
+                        tr
+                            td #[code POP_JUMP_IF_TRUE] (0x03)
+                            td absolute address to jump to (two bytes, big endian)
+                            td Jump to the provided address if the last value on the stack was equal to true. Remove the value from the stack no matter what it is
+                        tr
+                            td #[code STORE] (0x04)
+                            td symbol id (two bytes, big endian)
+                            td Take the value on top of the stack and put it inside a variable named following the symbol id (cf symbols table), in the nearest scope. Raise an error if it couldn't find a scope where the variable exists
+                        tr
+                            td #[code LET] (0x05)
+                            td symbol id (two bytes, big endian)
+                            td Take the value on top of the stack and create a constant in the current scope, named following the given symbol id (cf symbols table)
+                        tr
+                            td #[code POP_JUMP_IF_FALSE] (0x06)
+                            td absolute address to jump to (two bytes, big endian)
+                            td Jump to the provided address if the last value on the stack was equal to false. Remove the value from the stack no matter what it is
+                        tr
+                            td #[code JUMP] (0x07)
+                            td absolute address to jump to (two byte, big endian)
+                            td Jump to the provided address
+                        tr
+                            td #[code RET] (0x08)
+                            td 
+                            td If in a code segment other than the main one, quit it, and push the value on top of the stack to the new stack; should as well delete the current environment. Otherwise, acts as a #[code HALT]
+                        tr
+                            td #[code HALT] (0x09)
+                            td 
+                            td Stop the Virtual Machine
+                        tr
+                            td #[code CALL] (0x0a)
+                            td number of arguments when calling the function
+                            td Call function from its symbol id located on top of the stack. Take the given number of arguments from the top of stack and give them to the function (the first argument taken from the stack will be the last one of the function). The stack of the function is now composed of its arguments, from the first to the last one
+                        tr
+                            td #[code CAPTURE] (0x0b)
+                            td symbol id (two bytes, big endian)
+                            td Used to tell the Virtual Machine to capture the variable from the current environment. Main goal is to be able to handle closures, which need to save the environment in which they were created
+                        tr
+                            td #[code BUILTIN] (0x0c)
+                            td id of builtin (two bytes, big endian)
+                            td Push the builtin function object on the stack
+                        tr
+                            td #[code MUT] (0x0d)
+                            td symbol id (two bytes, big endian)
+                            td Take the value on top of the stack and create a variable in the current scope, named following the given symbol id (cf symbols table)
+                        tr
+                            td #[code DEL] (0x0e)
+                            td symbol id (two bytes, big endian)
+                            td Remove a variable/constant named following the given symbol id (cf symbols table)
+                        tr
+                            td #[code SAVE_ENV] (0x0f)
+                            td 
+                            td Save the current environment, useful for quoted code
+                        tr
+                            td #[code GET_FIELD] (0x10)
+                            td symbol id (two bytes, big endian)
+                            td Used to read the field named following the given symbol id (cf symbols table) of a #[code Closure] stored in TS. Pop TS and push the value of field read on the stack
+                        tr
+                            td #[code PLUGIN] (0x11)
+                            td constant id (two bytes, big endian)
+                            td Used to load a plugin dynamically, plugin name is stored as a string in the constants table
+                        tr
+                            td #[code LIST] (0x12)
+                            td number of arguments (two bytes, big endian)
+                            td Create a list from the elements pushed on the stack in reverse order
+                        tr
+                            td #[code APPEND] (0x13)
+                            td number of arguments (two bytes, big endian)
+                            td Append elements to a list in reverse order (first the last element, then the other, then the list itself)
+                        tr
+                            td #[code CONCAT] (0x14)
+                            td number of arguments (two bytes, big endian)
+                            td Concatenate lists in reverse order
+                        tr
+                            td #[code APPEND_IN_PLACE] (0x15)
+                            td number of arguments (two bytes, big endian)
+                            td Append elements to a reference to a list (TS) in reverse order (first the last element, then the other, then the list itself). Push #[code nil] on the stack
+                        tr
+                            td #[code CONCAT_IN_PLACE] (0x16)
+                            td number of arguments (two bytes, big endian)
+                            td Concatenate lists in reverse order, to a reference to a list (TS). Push #[code nil] to the stack
+                        tr
+                            td #[code POP_LIST] (0x17)
+                            td 
+                            td Remove an element from a list (TS), given an index (TS1). Push the modified list to the stack
+                        tr
+                            td #[code POP_LIST_IN_PLACE] (0x18)
+                            td 
+                            td Remove an element from a reference to a list (TS), given an index (TS1). Push #[code nil] to the stack
+                        tr
+                            td #[code POP] (0x19)
+                            td 
+                            td Remove the top of the stack
+                        tr
+                            td #[code ADD] (0x20)
+                            td 
+                            td Push #[code TS1 + TS]
+                        tr
+                            td #[code SUB] (0x21)
+                            td 
+                            td Push #[code TS1 - TS]
+                        tr
+                            td #[code MUL] (0x22)
+                            td 
+                            td Push #[code TS1 * TS]
+                        tr
+                            td #[code DIV] (0x23)
+                            td 
+                            td Push #[code TS1 / TS]
+                        tr
+                            td #[code GT] (0x24)
+                            td 
+                            td Push #[code TS1 > TS]
+                        tr
+                            td #[code LT] (0x25)
+                            td 
+                            td Push #[code TS1 < TS]
+                        tr
+                            td #[code LE] (0x26)
+                            td 
+                            td Push #[code TS1 <= TS]
+                        tr
+                            td #[code GE] (0x27)
+                            td 
+                            td Push #[code TS1 >= TS]
+                        tr
+                            td #[code NEQ] (0x28)
+                            td 
+                            td Push #[code TS1 != TS]
+                        tr
+                            td #[code EQ] (0x29)
+                            td 
+                            td Push #[code TS1 == TS]
+                        tr
+                            td #[code LEN] (0x2a)
+                            td 
+                            td Push #[code len(TS)], TS must be a list
+                        tr
+                            td #[code EMPTY] (0x2b)
+                            td 
+                            td Push #[code empty?(TS)], TS must be a list
+                        tr
+                            td #[code TAIL] (0x2c)
+                            td 
+                            td Push #[code tail(TS)], all the elements of TS except the first one (TS must be a list)
+                        tr
+                            td #[code HEAD] (0x2d)
+                            td 
+                            td Push #[code head(TS)], the first element of TS or nil if empty (TS must be a list)
+                        tr
+                            td #[code ISNIL] (0x2e)
+                            td 
+                            td Push true if TS is nil, false otherwise
+                        tr
+                            td #[code ASSERT] (0x2f)
+                            td 
+                            td Throw an exception if TS1 is false, and display TS (must be a string). Otherwise, push nil
+                        tr
+                            td #[code TO_NUM] (0x30)
+                            td 
+                            td Convert TS to number (must be a string)
+                        tr
+                            td #[code TO_STR] (0x31)
+                            td 
+                            td Convert TS to string (must be a number)
+                        tr
+                            td #[code AT] (0x32)
+                            td 
+                            td Push the value at index TS (must be a number) in TS1 (must be a list)
+                        tr
+                            td #[code AND_] (0x33)
+                            td 
+                            td Push true if TS and TS1 are true, false otherwise
+                        tr
+                            td #[code OR_] (0x34)
+                            td 
+                            td Push true if TS or TS1 is true, false otherwise
+                        tr
+                            td #[code MOD] (0x35)
+                            td 
+                            td Push #[code TS1 % TS]
+                        tr
+                            td #[code TYPE] (0x36)
+                            td 
+                            td Push the type of TS as a string
+                        tr
+                            td #[code HASFIELD] (0x37)
+                            td 
+                            td Check if TS1 is a closure field of TS. TS must be a Closure and TS1 a String
+                        tr
+                            td #[code NOT] (0x38)
+                            td 
+                            td Push #[code !TS]
