@@ -5,10 +5,11 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
         link(rel="stylesheet", href="/assets/css/spectre.min.css", type="text/css")
+        link(rel="stylesheet", href="/assets/css/spectre-exp.min.css", type="text/css")
         link(rel="stylesheet", href="/assets/css/spectre-icons.min.css", type="text/css")
         link(rel="stylesheet", href="/assets/css/rainbowjs-theme.css", type="text/css")
         link(rel="stylesheet", href="/assets/css/main.css", type="text/css")
-        link(rel="shortcut icon" ,href="/favicon.ico," type="image/x-icon")
+        link(rel="shortcut icon" ,href="/favicon.ico" type="image/x-icon")
         link(rel="icon", href="/favicon.ico", type="image/x-icon")
 
         title ArkScript
@@ -16,10 +17,7 @@ html(lang="en")
         block header
 
         div#main.container
-            div.columns
-                div.col-2.hide-md
-                block content
-                div.col-2.hide-md
+            block content
 
         footer#page-footer
             p.text-center
