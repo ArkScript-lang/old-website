@@ -23,7 +23,7 @@ block inner_content
                     tr
                         td Magic number
                         td 4 bytes
-                        td 6386283, numeric version of <code>"ark\0"</code>
+                        td 6386283, numeric version of #[code "ark\0"]
                     tr
                         td Compiler.Major
                         td 2 bytes
@@ -63,7 +63,7 @@ block inner_content
                     tr
                         td Symbol.type
                         td 1 byte
-                        td <code>1</code> for number, <code>2</code> for string, <code>3</code> for function
+                        td #[code 1] for number, #[code 2] for string, #[code 3] for function
                     tr
                         td Number.value
                         td Variable
@@ -81,11 +81,11 @@ block inner_content
                     tr
                         td Instruction count
                         td 2 bytes
-                        td Big endian layout, can be <code>0</code>
+                        td Big endian layout, can be #[code 0]
                     tr
                         td Instruction
-                        td 1-3 bytes
-                        td
+                        td 4 bytes
+                        td Instructions follow this layout: #[code pppppppp iiiiiiii dddddddd dddddddd] ; #[code p] for padding (always ignored), #[code i] for the instruction, #[code d] for the immediate argument
 
         section#note-on-builtins
             h2 Note on builtins
@@ -141,27 +141,27 @@ block inner_content
                             td Does Nothing
                         tr
                             td #[code LOAD_SYMBOL] (0x01)
-                            td symbol id (two bytes, big endian)
+                            td symbol id
                             td Load a symbol from its id onto the stack
                         tr
                             td #[code LOAD_CONST] (0x02)
-                            td constant id (two bytes, big endian)
+                            td constant id
                             td Load a constant from its id onto the stack. Should check for a saved environment and push a Closure with the page address + environment instead of the constant
                         tr
                             td #[code POP_JUMP_IF_TRUE] (0x03)
-                            td absolute address to jump to (two bytes, big endian)
+                            td absolute address to jump to
                             td Jump to the provided address if the last value on the stack was equal to true. Remove the value from the stack no matter what it is
                         tr
                             td #[code STORE] (0x04)
-                            td symbol id (two bytes, big endian)
+                            td symbol id
                             td Take the value on top of the stack and put it inside a variable named following the symbol id (cf symbols table), in the nearest scope. Raise an error if it couldn't find a scope where the variable exists
                         tr
                             td #[code LET] (0x05)
-                            td symbol id (two bytes, big endian)
+                            td symbol id
                             td Take the value on top of the stack and create a constant in the current scope, named following the given symbol id (cf symbols table)
                         tr
                             td #[code POP_JUMP_IF_FALSE] (0x06)
-                            td absolute address to jump to (two bytes, big endian)
+                            td absolute address to jump to
                             td Jump to the provided address if the last value on the stack was equal to false. Remove the value from the stack no matter what it is
                         tr
                             td #[code JUMP] (0x07)
@@ -181,19 +181,19 @@ block inner_content
                             td Call function from its symbol id located on top of the stack. Take the given number of arguments from the top of stack and give them to the function (the first argument taken from the stack will be the last one of the function). The stack of the function is now composed of its arguments, from the first to the last one
                         tr
                             td #[code CAPTURE] (0x0b)
-                            td symbol id (two bytes, big endian)
+                            td symbol id
                             td Used to tell the Virtual Machine to capture the variable from the current environment. Main goal is to be able to handle closures, which need to save the environment in which they were created
                         tr
                             td #[code BUILTIN] (0x0c)
-                            td id of builtin (two bytes, big endian)
+                            td id of builtin
                             td Push the builtin function object on the stack
                         tr
                             td #[code MUT] (0x0d)
-                            td symbol id (two bytes, big endian)
+                            td symbol id
                             td Take the value on top of the stack and create a variable in the current scope, named following the given symbol id (cf symbols table)
                         tr
                             td #[code DEL] (0x0e)
-                            td symbol id (two bytes, big endian)
+                            td symbol id
                             td Remove a variable/constant named following the given symbol id (cf symbols table)
                         tr
                             td #[code SAVE_ENV] (0x0f)
@@ -201,31 +201,31 @@ block inner_content
                             td Save the current environment, useful for quoted code
                         tr
                             td #[code GET_FIELD] (0x10)
-                            td symbol id (two bytes, big endian)
+                            td symbol id
                             td Used to read the field named following the given symbol id (cf symbols table) of a #[code Closure] stored in TS. Pop TS and push the value of field read on the stack
                         tr
                             td #[code PLUGIN] (0x11)
-                            td constant id (two bytes, big endian)
+                            td constant id
                             td Used to load a plugin dynamically, plugin name is stored as a string in the constants table
                         tr
                             td #[code LIST] (0x12)
-                            td number of arguments (two bytes, big endian)
+                            td number of arguments
                             td Create a list from the elements pushed on the stack in reverse order
                         tr
                             td #[code APPEND] (0x13)
-                            td number of arguments (two bytes, big endian)
+                            td number of arguments
                             td Append elements to a list in reverse order (first the last element, then the other, then the list itself)
                         tr
                             td #[code CONCAT] (0x14)
-                            td number of arguments (two bytes, big endian)
+                            td number of arguments
                             td Concatenate lists in reverse order
                         tr
                             td #[code APPEND_IN_PLACE] (0x15)
-                            td number of arguments (two bytes, big endian)
+                            td number of arguments
                             td Append elements to a reference to a list (TS) in reverse order (first the last element, then the other, then the list itself). Push #[code nil] on the stack
                         tr
                             td #[code CONCAT_IN_PLACE] (0x16)
-                            td number of arguments (two bytes, big endian)
+                            td number of arguments
                             td Concatenate lists in reverse order, to a reference to a list (TS). Push #[code nil] to the stack
                         tr
                             td #[code POP_LIST] (0x17)
