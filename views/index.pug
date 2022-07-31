@@ -1,8 +1,8 @@
 extends layout_columns
 
 block header
-    include headers/index.pug
-    include headers/banner.pug
+    include headers/index
+    include headers/banner
 
 block inner_content
     //- Key features
@@ -56,7 +56,7 @@ block inner_content
         div.panel-header
             div.panel-title Error messages to help you
         div.panel-body
-            pre: code.rainbowjs
+            pre: code.rainbowjs(data-language="shell")
                 | CompilationError: Unbound variable error "fib" (did you mean "fibo"?)
                 | In file fibonacci.ark
                 | On line 7:12, got `(Symbol) fib'

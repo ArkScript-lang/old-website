@@ -12,6 +12,7 @@ const views = [
     'documentation',
     'index',
     'projects',
+//    'blog',
     'tutorials/building',
     'tutorials/language',
 ]

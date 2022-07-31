@@ -1,0 +1,15 @@
+extends layout_columns
+
+block header
+    include headers/generic
+
+mixin make_article(title, date)
+    section
+        h2.text-center #{title} - #{date}
+        div.inner-section
+            block
+
+block inner_content
+    div#content.col-8.col-md-12
+        +make_article("Test", "12/12/2022")
+            div omega
