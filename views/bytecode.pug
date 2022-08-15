@@ -113,8 +113,19 @@ block inner_content
                 p.
                     The other builtins are listed in #[a.btn-link(href="https://github.com/ArkScript-lang/Ark/blob/dev/src/arkreactor/Builtins/Builtins.cpp#L24") Builtins.cpp].
 
+        section#the-stack-and-locales
+            h2 The stack and the locales
+
+            div.inner-section
+                p.
+                    The stack is used for passing temporary values around, for example the arguments of a function. On the other end the locales are there to store long term values, the variables.
+                    They are stored in a LIFO stack and should be referenced by there identifier (index in the symbols table, also used by instructions like #[code LOAD_SYMBOL]).
+                img(src="assets/images/scopes.png")
+
         section#instructions
             h2 Instructions
+
+            p #[code TS] represents the element at the top of the stack, #[code TS1] represents the element below it, and so on.
 
             div.inner-section
                 table.table.table-striped.dark
