@@ -58,10 +58,9 @@ jobs:
           sed "s/let version = "'"'".\+"'"'"/let version = "'"'"${ark_version}"'"'"/g" ./std/index.html > temp_index.html
           rm ./std/index.html
           mv temp_index.html ./std/index.html
-          git config --global --add safe.directory /github/workspace
 
       - name: Commit
-        uses: github-actions-x/commit@v2.8
+        uses: github-actions-x/commit@v2.9
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           push-branch: 'master'
