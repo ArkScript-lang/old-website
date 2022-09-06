@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Time - ArkScript v3.2.0 documentation</title>
+    <title>Async - ArkScript v3.2.0 documentation</title>
     <link rel="stylesheet" href="/std/assets/css/spectre.min.css" type="text/css">
     <link rel="stylesheet" href="/std/assets/css/spectre-exp.min.css" type="text/css">
     <link rel="stylesheet" href="/std/assets/css/spectre-icons.min.css" type="text/css">
@@ -51,7 +51,9 @@
                 <a href="#">Table of contents</a>
                 <ul class="nav">
                     <li class="nav-item">
-    <a href="#time">time</a>
+    <a href="#async">async</a>
+</li><li class="nav-item">
+    <a href="#await">await</a>
 </li>
                 </ul>
             </li>
@@ -67,22 +69,46 @@
 
             <!-- Actual content of the page-->
             <div class="col-8" id="content">
-                <section id="time">
-    <h2>time</h2>
+                <section id="async">
+    <h2>async</h2>
 
     <div class="inner-section">
-        <div><code>Builtin (time )</code>
+        <div><code>Builtin (async func args...)</code>
 <br>
-<div>Return the time of the computer since epoch, in seconds, with at least milliseconds precision</div>
+<div>Calls a function asynchronously with a given set of arguments</div>
 <div><b>Note</b>
 : 
-</div>
-
+The function is started in a separate context, with no access to the others, preventing any concurrency problems.</div>
+<div><h4>Parameters</h4>
+<ul><li><code>func</code>: the function to call</li><li><code>args...</code>: the arguments of the function</li></ul></div>
 <div><h4>Author</h4>
 <a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
-(time)  # 1627134107.837558031082153
+(let foo (fun (a b) (+ a b)))
+(async foo 1 2)
+</code>
+</pre></div>
+    </div>
+</section><section id="await">
+    <h2>await</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (await future)</code>
+<br>
+<div>Blocks until the result becomes available</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>future</code>: the future to wait for its result to be avaible</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(let foo (fun (a b) (+ a b)))
+(let async-foo (async foo 1 2))
+(print (await async-foo))
 </code>
 </pre></div>
     </div>
