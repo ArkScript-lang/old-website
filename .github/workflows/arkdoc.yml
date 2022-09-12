@@ -46,7 +46,7 @@ jobs:
       - name: Generate documentation
         shell: bash
         run: |
-          ark_version=$(cd ark-latest; git describe --abbrev=0)
+          ark_version=$(cd ark-latest; git describe --tags)
           echo "New ArkScript tag: ${ark_version}"
           # run arkdoc
           cd arkdoc
