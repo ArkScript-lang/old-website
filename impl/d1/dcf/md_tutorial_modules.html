@@ -76,15 +76,15 @@ $(document).ready(function(){initNavTree('d1/dcf/md_tutorial_modules.html','../.
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="tutorial_modules"></a> </p>
-<h1><a class="anchor" id="autotoc_md39"></a>
+<h1><a class="anchor" id="autotoc_md40"></a>
 Before starting</h1>
 <p>You will still need to dive a bit into the documentation of the project, to know how:</p><ul>
 <li>the VM API works, and what it provides</li>
 <li>the possibilities of the Value type (comparisons, creations)</li>
 <li>how to use the <code>UserType</code></li>
 </ul>
-<p>Also, read the <a class="el" href="../../de/d55/md_guidelines_moduleserrorhandling.html#guidelines_moduleserrorhandling">guidelines_moduleserrorhandling</a> about module error handling to use the same conventions as the other modules, and the <a class="el" href="../../d1/de7/md_guidelines_naming.html#guidelines_naming">guidelines_naming</a> about naming conventions in ArkScript (specifically see the <em>Modules (C++)</em> section).</p>
-<h2><a class="anchor" id="autotoc_md40"></a>
+<p>Also, read <a class="el" href="../../de/d55/md_guidelines_moduleserrorhandling.html#guidelines_moduleserrorhandling">the guidelines about module error handling</a> to use the same conventions as the other modules, and <a class="el" href="../../d1/de7/md_guidelines_naming.html#guidelines_naming">the guidlines about naming conventions</a> in ArkScript (specifically see the <em>Modules (C++)</em> section).</p>
+<h2><a class="anchor" id="autotoc_md41"></a>
 Creating a new module</h2>
 <p>In your <a href="https://github.com/ArkScript-lang/modules">ArkScript-lang/modules</a> fork, run the Python script as follows <code>python3 shell/createmodules/create.py module_name</code>. This will create a new folder <code>module_name/</code> for you, alongside a few folders and files needed to get you started.</p>
 <p>Create a <code>Main.cpp</code> file in <code>module_name/src/</code> with the following content:</p>
@@ -122,14 +122,14 @@ Creating a new module</h2>
 </li>
 <li><code>{ nullptr, nullptr }</code>: a sentinel so that the virtual machine where the end of mapping is</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md41"></a>
+<h2><a class="anchor" id="autotoc_md42"></a>
 Building your module</h2>
 <p>Clone ArkScript wherever you like. Then, you will need to update your CMakeLists.txt to add the following code:</p>
 <div class="fragment"><div class="line">add_subdirectory(path/to/arkscript/ Ark)</div>
 </div><!-- fragment --><p>Then, run <code>cmake . -Build</code>, and build your module with <code>cmake --build build</code>. It should output a <code>.arkm</code> file in the current working directory.</p>
-<h2><a class="anchor" id="autotoc_md42"></a>
+<h2><a class="anchor" id="autotoc_md43"></a>
 Common problems</h2>
-<h3><a class="anchor" id="autotoc_md43"></a>
+<h3><a class="anchor" id="autotoc_md44"></a>
 Storing values in a C++ module</h3>
 <p>Lets say you are making a module to handle a window (to draw on it). You will open it with the API for your system, for example the WinAPI, and get an handle to it. Now you want to be able to modify this window in ArkScript, the solution is simple: creating an UserType holding your handle, and then getting this user type back in your functions and playing with the handle.</p>
 <p>If you try this as is, it won't work. Or at least, it won't work for more than a function call, because the UserType doesn't become the <em>owner of the handle</em>, it only holds a view (observer pointer) to your ressource. That means your ressource must continue to live on its own in your module. Because it's a dynamic library, making a global and storing your handle in it will be complicated and in a lot of cases it won't work at all.</p>
@@ -176,7 +176,7 @@ Storing values in a C++ module</h3>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Apr 23 2023 19:10:35 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Sun Apr 23 2023 20:17:28 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

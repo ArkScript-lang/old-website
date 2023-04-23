@@ -25,46 +25,32 @@
 var NAVTREE =
 [
   [ "ArkScript", "index.html", [
-    [ "Home", "index.html", "index" ],
-    [ "Coding guidelines", "dc/dca/md_guidelines_coding.html", null ],
-    [ "Module error handling", "de/d55/md_guidelines_moduleserrorhandling.html", null ],
-    [ "Naming convention in ArkScript", "d1/de7/md_guidelines_naming.html", null ],
-    [ "Understanding the project architecture", "dd/d4a/md_impl_architecture.html", null ],
-    [ "ArkScript's compiler implementation details", "d1/db1/md_impl_compiler.html", null ],
-    [ "Virtual Machine implementation details", "db/d6c/md_impl_vm.html", null ],
-    [ "Implementation details", "d7/d68/md_implementation.html", null ],
-    [ "ArkScript modules", "db/d5b/md_modules.html", null ],
-    [ "The ArkScript builtins", "d2/daa/md_tutorial_builtins.html", [
-      [ "Basic template of a builtin", "d2/daa/md_tutorial_builtins.html#autotoc_md32", null ],
-      [ "Builtins category", "d2/daa/md_tutorial_builtins.html#autotoc_md33", null ],
-      [ "Adding a builtin", "d2/daa/md_tutorial_builtins.html#autotoc_md34", null ]
+    [ "Home", "index.html", null ],
+    [ "Tutorials", "usergroup0.html", [
+      [ "The ArkScript builtins", "d2/daa/md_tutorial_builtins.html#tutorial_builtins", null ],
+      [ "Embedding ArkScript in C++ code", "d7/d11/md_tutorial_embedding.html#tutorial_embedding", null ],
+      [ "Creating modules", "d1/dcf/md_tutorial_modules.html#tutorial_modules", null ]
     ] ],
-    [ "Embedding ArkScript in C++ code", "d7/d11/md_tutorial_embedding.html", [
-      [ "CMake setup", "d7/d11/md_tutorial_embedding.html#autotoc_md35", null ],
-      [ "Using ArkScript", "d7/d11/md_tutorial_embedding.html#autotoc_md36", null ],
-      [ "Adding your own functions", "d7/d11/md_tutorial_embedding.html#autotoc_md37", null ],
-      [ "Adding your own types in ArkScript", "d7/d11/md_tutorial_embedding.html#autotoc_md38", null ]
+    [ "ArkScript modules", "usergroup1.html", [
+      [ "Bitwise", "d7/d7d/md__Users_fola_Documents_ArkScript_Ark_lib_modules_bitwise_documentation_README.html#bitwise_module", null ],
+      [ "Console", "df/d21/md__Users_fola_Documents_ArkScript_Ark_lib_modules_console_documentation_README.html#console_module", null ],
+      [ "Database", "d7/dee/md__Users_fola_Documents_ArkScript_Ark_lib_modules_database_documentation_README.html#database_module", null ],
+      [ "Hash", "d5/d1e/md__Users_fola_Documents_ArkScript_Ark_lib_modules_hash_documentation_README.html#hash_module", null ],
+      [ "HTTP", "d5/d18/md__Users_fola_Documents_ArkScript_Ark_lib_modules_http_documentation_README.html#http_module", null ],
+      [ "JSON", "d2/dcd/md__Users_fola_Documents_ArkScript_Ark_lib_modules_json_documentation_README.html#json_module", null ],
+      [ "MsgPack", "d2/d0b/md__Users_fola_Documents_ArkScript_Ark_lib_modules_msgpack_documentation_Readme.html#msgpack_module", null ],
+      [ "Random", "d0/d6a/md__Users_fola_Documents_ArkScript_Ark_lib_modules_random_documentation_README.html#random_module", null ]
     ] ],
-    [ "Creating modules", "d1/dcf/md_tutorial_modules.html", [
-      [ "Before starting", "d1/dcf/md_tutorial_modules.html#autotoc_md39", [
-        [ "Creating a new module", "d1/dcf/md_tutorial_modules.html#autotoc_md40", null ],
-        [ "Building your module", "d1/dcf/md_tutorial_modules.html#autotoc_md41", null ],
-        [ "Common problems", "d1/dcf/md_tutorial_modules.html#autotoc_md42", [
-          [ "Storing values in a C++ module", "d1/dcf/md_tutorial_modules.html#autotoc_md43", null ]
-        ] ]
-      ] ]
+    [ "Guidelines", "usergroup2.html", [
+      [ "Coding guidelines", "dc/dca/md_guidelines_coding.html#guidelines_coding", null ],
+      [ "Naming guidelines", "d1/de7/md_guidelines_naming.html#guidelines_naming", null ],
+      [ "Error handling in modules", "de/d55/md_guidelines_moduleserrorhandling.html#guidelines_moduleserrorhandling", null ]
     ] ],
-    [ "Tutorials", "db/d1e/md_tutorials.html", null ],
-    [ "Bitwise module", "d7/d7d/md__Users_fola_Documents_ArkScript_Ark_lib_modules_bitwise_documentation_README.html", null ],
-    [ "Console module", "df/d21/md__Users_fola_Documents_ArkScript_Ark_lib_modules_console_documentation_README.html", null ],
-    [ "DATABASE module", "d7/dee/md__Users_fola_Documents_ArkScript_Ark_lib_modules_database_documentation_README.html", null ],
-    [ "Hash module", "d5/d1e/md__Users_fola_Documents_ArkScript_Ark_lib_modules_hash_documentation_README.html", null ],
-    [ "http Client", "db/d24/md__Users_fola_Documents_ArkScript_Ark_lib_modules_http_documentation_client.html", null ],
-    [ "HTTP module", "d5/d18/md__Users_fola_Documents_ArkScript_Ark_lib_modules_http_documentation_README.html", null ],
-    [ "http Server", "d0/d41/md__Users_fola_Documents_ArkScript_Ark_lib_modules_http_documentation_server.html", null ],
-    [ "JSON module", "d2/dcd/md__Users_fola_Documents_ArkScript_Ark_lib_modules_json_documentation_README.html", null ],
-    [ "MsgPack module", "d2/d0b/md__Users_fola_Documents_ArkScript_Ark_lib_modules_msgpack_documentation_Readme.html", null ],
-    [ "Random module", "d0/d6a/md__Users_fola_Documents_ArkScript_Ark_lib_modules_random_documentation_README.html", null ],
+    [ "Implementation details", "usergroup3.html", [
+      [ "The project architecture", "dd/d4a/md_impl_architecture.html#impl_architecture", null ],
+      [ "Compiler implementation details", "d1/db1/md_impl_compiler.html#impl_compiler", null ],
+      [ "Virtual Machine implementation details", "db/d6c/md_impl_vm.html#impl_vm", null ]
+    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -104,13 +90,13 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d2/d93/classArk_1_1VM.html#a88a0e03526e62bd069d4ad0f19641f9d",
-"d3/ddb/classArk_1_1Compiler.html#abfdfc008ed93c99d92347039d419c817",
-"d6/de9/Constants_8hpp.html",
-"d8/ddd/Common_8hpp.html#a5300c6c0596db0a5a8f5b62d4d42ce4cad3e2f43779da90565fa9c24f9175dc04",
-"db/d5e/TypeChecker_8hpp.html#ad033eeaf83713fbbe45ee5e0695ee75f",
-"dc/d9e/classArk_1_1internal_1_1Node.html#a4bb33ec1d08b011cb4df29e9ec41405e",
-"dir_b9cbe36700296659acef612d0d107ef6.html"
+"d2/d93/classArk_1_1VM.html#a9793d82e9100c6badd8fa9aa8d8bbbcb",
+"d3/ddb/classArk_1_1Compiler.html#ac9a930200959e58c46c5bf8bb4d16bb8",
+"d6/de9/Constants_8hpp.html#ae92e5cb7f969a516e5ad53ff6c0b9800",
+"d8/ddd/Common_8hpp_source.html",
+"dc/d0e/namespaceArk_1_1internal.html#a0b9a75d4a5e9bcfcf7b21ddbfc0d6ea5",
+"dc/d9e/classArk_1_1internal_1_1Node.html#a9820c1bc45286e101b003a1c45c6aaac",
+"functions_d.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

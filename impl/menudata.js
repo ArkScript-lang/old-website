@@ -24,7 +24,27 @@
 */
 var menudata={children:[
 {text:"Main Page",url:"index.html"},
-{text:"Related Pages",url:"pages.html"},
+{text:"Tutorials",url:"usergroup0.html",children:[
+{text:"The ArkScript builtins",url:"d2/daa/md_tutorial_builtins.html#tutorial_builtins"},
+{text:"Embedding ArkScript in C++ code",url:"d7/d11/md_tutorial_embedding.html#tutorial_embedding"},
+{text:"Creating modules",url:"d1/dcf/md_tutorial_modules.html#tutorial_modules"}]},
+{text:"ArkScript modules",url:"usergroup1.html",children:[
+{text:"Bitwise",url:"d7/d7d/md__Users_fola_Documents_ArkScript_Ark_lib_modules_bitwise_documentation_README.html#bitwise_module"},
+{text:"Console",url:"df/d21/md__Users_fola_Documents_ArkScript_Ark_lib_modules_console_documentation_README.html#console_module"},
+{text:"Database",url:"d7/dee/md__Users_fola_Documents_ArkScript_Ark_lib_modules_database_documentation_README.html#database_module"},
+{text:"Hash",url:"d5/d1e/md__Users_fola_Documents_ArkScript_Ark_lib_modules_hash_documentation_README.html#hash_module"},
+{text:"HTTP",url:"d5/d18/md__Users_fola_Documents_ArkScript_Ark_lib_modules_http_documentation_README.html#http_module"},
+{text:"JSON",url:"d2/dcd/md__Users_fola_Documents_ArkScript_Ark_lib_modules_json_documentation_README.html#json_module"},
+{text:"MsgPack",url:"d2/d0b/md__Users_fola_Documents_ArkScript_Ark_lib_modules_msgpack_documentation_Readme.html#msgpack_module"},
+{text:"Random",url:"d0/d6a/md__Users_fola_Documents_ArkScript_Ark_lib_modules_random_documentation_README.html#random_module"}]},
+{text:"Guidelines",url:"usergroup2.html",children:[
+{text:"Coding guidelines",url:"dc/dca/md_guidelines_coding.html#guidelines_coding"},
+{text:"Naming guidelines",url:"d1/de7/md_guidelines_naming.html#guidelines_naming"},
+{text:"Error handling in modules",url:"de/d55/md_guidelines_moduleserrorhandling.html#guidelines_moduleserrorhandling"}]},
+{text:"Implementation details",url:"usergroup3.html",children:[
+{text:"The project architecture",url:"dd/d4a/md_impl_architecture.html#impl_architecture"},
+{text:"Compiler implementation details",url:"d1/db1/md_impl_compiler.html#impl_compiler"},
+{text:"Virtual Machine implementation details",url:"db/d6c/md_impl_vm.html#impl_vm"}]},
 {text:"Namespaces",url:"namespaces.html",children:[
 {text:"Namespace List",url:"namespaces.html"},
 {text:"Namespace Members",url:"namespacemembers.html",children:[
