@@ -1,6 +1,6 @@
 var Token_8hpp =
 [
-    [ "Token", "d0/d98/structArk_1_1internal_1_1Token.html", "d0/d98/structArk_1_1internal_1_1Token" ],
+    [ "Ark::internal::Token", "d0/d98/structArk_1_1internal_1_1Token.html", "d0/d98/structArk_1_1internal_1_1Token" ],
     [ "TokenType", "d3/d6e/Token_8hpp.html#ac8f70ee0316f6d163228ed70ef976bfb", [
       [ "Grouping", "d3/d6e/Token_8hpp.html#ac8f70ee0316f6d163228ed70ef976bfba0940b48511da784b3c7213afa0c0eade", null ],
       [ "String", "d3/d6e/Token_8hpp.html#ac8f70ee0316f6d163228ed70ef976bfba27118326006d3829667a400ad23d5d98", null ],

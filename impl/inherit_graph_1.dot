@@ -2,8 +2,9 @@ digraph "Graphical Class Hierarchy"
 {
  // INTERACTIVE_SVG=YES
  // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [label="Ark::BytecodeReader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d08/classArk_1_1BytecodeReader.html",tooltip="This class is just a helper to."];
+  Node0 [label="Ark::Compiler",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d3/ddb/classArk_1_1Compiler.html",tooltip="The ArkScript bytecode compiler."];
 }

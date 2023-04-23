@@ -2,8 +2,15 @@ digraph "Graphical Class Hierarchy"
 {
  // INTERACTIVE_SVG=YES
  // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [label="Ark::internal::LineColor\lContextCounts",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d5a/structArk_1_1internal_1_1LineColorContextCounts.html",tooltip=" "];
+  Node0 [label="Ark::internal::MacroExecutor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d5/d8f/classArk_1_1internal_1_1MacroExecutor.html",tooltip="A class that applies macros in a Node."];
+  Node0 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node1 [label="Ark::internal::Conditional\lExecutor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d1/dd3/classArk_1_1internal_1_1ConditionalExecutor.html",tooltip="Handles Conditional macros."];
+  Node0 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="Ark::internal::FunctionExecutor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$dc/d2c/classArk_1_1internal_1_1FunctionExecutor.html",tooltip="Handles function macros."];
+  Node0 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="Ark::internal::SymbolExecutor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d5/dae/classArk_1_1internal_1_1SymbolExecutor.html",tooltip="Handles Symbol macros."];
 }

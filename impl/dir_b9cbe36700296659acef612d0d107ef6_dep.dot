@@ -1,15 +1,20 @@
-digraph "/home/fola/code/Ark/src/arkreactor/Compiler/Macros" {
+digraph "/Users/fola/Documents/ArkScript/Ark/src/arkreactor/Compiler/Macros"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
   subgraph clusterdir_548d85becfdd8b4d1d64f6a452aea6ab {
-    graph [ bgcolor="#ddddee", pencolor="black", label="Compiler" fontname="Helvetica", fontsize="10", URL="dir_548d85becfdd8b4d1d64f6a452aea6ab.html"]
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Compiler", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_548d85becfdd8b4d1d64f6a452aea6ab.html",tooltip=""]
   subgraph clusterdir_b9cbe36700296659acef612d0d107ef6 {
-    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_b9cbe36700296659acef612d0d107ef6.html"];
-    dir_b9cbe36700296659acef612d0d107ef6 [shape=plaintext label="Macros"];
-  dir_cfa9778ddee3bfdde39b0361cb5ec6f6 [shape=box label="Executors" fillcolor="white" style="filled" URL="dir_cfa9778ddee3bfdde39b0361cb5ec6f6.html"];
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_b9cbe36700296659acef612d0d107ef6.html",tooltip=""]
+    dir_b9cbe36700296659acef612d0d107ef6 [shape=plaintext, label="Macros"];
+  dir_cfa9778ddee3bfdde39b0361cb5ec6f6 [label="Executors", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_cfa9778ddee3bfdde39b0361cb5ec6f6.html",tooltip=""];
   }
   }
-  dir_d44c64559bbebec7f509842c48db8b23 [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_d44c64559bbebec7f509842c48db8b23.html"];
-  dir_cfa9778ddee3bfdde39b0361cb5ec6f6->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="3", labeldistance=1.5 headhref="dir_000034_000000.html"];
+  dir_d44c64559bbebec7f509842c48db8b23 [label="include", fillcolor="#edf0f7", color="red", style="filled", URL="dir_d44c64559bbebec7f509842c48db8b23.html",tooltip=""];
+  dir_b9cbe36700296659acef612d0d107ef6->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="14", labeldistance=1.5 headhref="dir_000027_000023.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_cfa9778ddee3bfdde39b0361cb5ec6f6->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="3", labeldistance=1.5 headhref="dir_000020_000023.html" color="steelblue1" fontcolor="steelblue1"];
 }

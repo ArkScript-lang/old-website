@@ -4,5 +4,6 @@ var dir_548d85becfdd8b4d1d64f6a452aea6ab =
     [ "Macros", "dir_b9cbe36700296659acef612d0d107ef6.html", "dir_b9cbe36700296659acef612d0d107ef6" ],
     [ "BytecodeReader.cpp", "d5/d36/BytecodeReader_8cpp.html", null ],
     [ "Compiler.cpp", "de/dfa/Compiler_8cpp.html", null ],
+    [ "JsonCompiler.cpp", "db/d71/JsonCompiler_8cpp.html", "db/d71/JsonCompiler_8cpp" ],
     [ "ValTableElem.cpp", "d9/d93/ValTableElem_8cpp.html", null ]
 ];

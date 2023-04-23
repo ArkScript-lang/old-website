@@ -1,11 +1,15 @@
-digraph "/home/fola/code/Ark/include/Ark/Compiler/Macros/Executors" {
+digraph "/Users/fola/Documents/ArkScript/Ark/include/Ark/Compiler/Macros/Executors"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
   subgraph clusterdir_54ed949f9e2ebe39c7d7ae9210877b49 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="Macros" fontname="Helvetica", fontsize="10", URL="dir_54ed949f9e2ebe39c7d7ae9210877b49.html"]
-  dir_1b1d215ac859be8e3351abc97240522b [shape=box, label="Executors", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_1b1d215ac859be8e3351abc97240522b.html"];
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Macros", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_54ed949f9e2ebe39c7d7ae9210877b49.html",tooltip=""]
+  dir_1b1d215ac859be8e3351abc97240522b [label="Executors", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_1b1d215ac859be8e3351abc97240522b.html",tooltip=""];
   }
-  dir_100d7a05404dd55ce1a106aad5a3b28c [shape=box label="AST" URL="dir_100d7a05404dd55ce1a106aad5a3b28c.html"];
-  dir_1b1d215ac859be8e3351abc97240522b->dir_100d7a05404dd55ce1a106aad5a3b28c [headlabel="3", labeldistance=1.5 headhref="dir_000006_000004.html"];
+  dir_100d7a05404dd55ce1a106aad5a3b28c [label="AST", fillcolor="#edf0f7", color="grey50", style="filled", URL="dir_100d7a05404dd55ce1a106aad5a3b28c.html",tooltip=""];
+  dir_1b1d215ac859be8e3351abc97240522b->dir_100d7a05404dd55ce1a106aad5a3b28c [headlabel="3", labeldistance=1.5 headhref="dir_000019_000003.html" color="steelblue1" fontcolor="steelblue1"];
 }

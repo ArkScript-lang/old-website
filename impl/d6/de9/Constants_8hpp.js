@@ -12,5 +12,6 @@ var Constants_8hpp =
     [ "ARK_VERSION_STR", "d6/de9/Constants_8hpp.html#af383c0a7d89264d7b27c2c06f465c770", null ],
     [ "DefaultFeatures", "d6/de9/Constants_8hpp.html#a01bf99e888f59670c0508d83cc23ffd4", null ],
     [ "FeatureRemoveUnusedVars", "d6/de9/Constants_8hpp.html#aed352fcea78905393d0edd9e1ae1423d", null ],
+    [ "FeatureShowWarnings", "d6/de9/Constants_8hpp.html#ae34e72be816cd85292979aa1126ddf2e", null ],
     [ "VMStackSize", "d6/de9/Constants_8hpp.html#a10c147f2df9516277811af7da43a250f", null ]
 ];

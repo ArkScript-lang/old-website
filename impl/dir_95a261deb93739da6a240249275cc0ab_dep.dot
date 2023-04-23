@@ -1,0 +1,17 @@
+digraph "/Users/fola/Documents/ArkScript/Ark/lib/modules/console"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_e1dbc8ba94a86723d4c32227b7c46099 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="modules", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_e1dbc8ba94a86723d4c32227b7c46099.html",tooltip=""]
+  subgraph clusterdir_95a261deb93739da6a240249275cc0ab {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_95a261deb93739da6a240249275cc0ab.html",tooltip=""]
+    dir_95a261deb93739da6a240249275cc0ab [shape=plaintext, label="console"];
+  dir_4a9dc23bdd2dde7fc5b71b391fae8cd1 [label="documentation", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_4a9dc23bdd2dde7fc5b71b391fae8cd1.html",tooltip=""];
+  }
+  }
+}

@@ -1,0 +1,31 @@
+digraph "/Users/fola/Documents/ArkScript/Ark/include/Ark/Compiler/Macros/MacroScope.hpp"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="/Users/fola/Documents\l/ArkScript/Ark/include\l/Ark/Compiler/Macros/MacroScope.hpp",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Defines tools to handle macro definitions."];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="Ark/Compiler/AST/Node.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d7/dc6/Node_8hpp.html",tooltip="AST node used by the parser, optimizer and compiler."];
+  Node2 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="variant",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node2 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="ostream",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node2 -> Node5 [color="steelblue1",style="solid"];
+  Node5 [label="string",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node2 -> Node6 [color="steelblue1",style="solid"];
+  Node6 [label="vector",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node2 -> Node7 [color="steelblue1",style="solid"];
+  Node7 [label="Ark/Compiler/Common.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d8/ddd/Common_8hpp.html",tooltip="Common code for the compiler."];
+  Node7 -> Node8 [color="steelblue1",style="solid"];
+  Node8 [label="array",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node7 -> Node9 [color="steelblue1",style="solid"];
+  Node9 [label="string_view",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node7 -> Node6 [color="steelblue1",style="solid"];
+  Node7 -> Node10 [color="steelblue1",style="solid"];
+  Node10 [label="cinttypes",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node1 -> Node11 [color="steelblue1",style="solid"];
+  Node11 [label="unordered_map",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node1 -> Node5 [color="steelblue1",style="solid"];
+}
