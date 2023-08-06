@@ -18,7 +18,7 @@ jobs:
         with:
           repository: ArkScript-lang/ArkDoc
           path: './arkdoc'
-          ref: 'v0.2.0'
+          ref: 'v0.2.1'
 
       - name: Checkout std
         uses: actions/checkout@v2
@@ -31,6 +31,7 @@ jobs:
         with:
           repository: ArkScript-lang/Ark
           path: './ark-latest'
+          ref: 'master'
           # so that we can fetch tags
           fetch-depth: 0
 
