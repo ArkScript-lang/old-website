@@ -2,7 +2,7 @@ name: Update ArkDoc documentation
 
 on:
   schedule:
-    - cron: "0 2 * * sun"
+    - cron: "0 0 1 * *"
   workflow_dispatch:
 
 jobs:
