@@ -289,44 +289,43 @@ block content
                     p A macro is a rule or pattern that specifies how a certain input should be mapped to a replacement output. Applying a macro to an input is name #[em macro expansion]#[a(href="https://en.wikipedia.org/wiki/Macro_(computer_science)"): sup 2].
                     p In ArkScript, there are 3 different types of macros:
                     ul
-                        li conditions: #[code \!{if condition then else}]
-                        li constants: #[code \!{my_const value}]
-                        li functions: #[code \!{my_function (foo bar) body}]
+                        li conditions: #[code ($if condition then else)]
+                        li constants: #[code ($ my_const value)]
+                        li functions: #[code ($ my_function (foo bar) body)]
                     p #[strong Constant macros] are just associations #[code identifier to value], the value being whatever you want (even another bloc of code, for example #[code (let b 12)]). The code is scanned and when such macro is found, it's applied wherever possible.
                     p #[strong Macros' scopes] are tied to the bloc in which they are defined. At the end of said bloc, the macros defined in it are destroyed. Note that a macro defined a in bloc, which includes other blocs, will be available in all the other sub-blocs.
-                    p Named macros can be undefined by using #[code \!{undef name}].
+                    p Named macros can be undefined by using #[code ($undef name)].
                     pre: code.rainbowjs(data-language="arkscript")
-                        | \!{a 12}
+                        | ($ a 12)
                         | 
                         | {
                         |     (print a)  # will print 12, it works!
                         | 
-                        |     \!{a 1}  # we can shadow macros by defining other macros with the
-                        |             # same name in sub-blocs
+                        |     ($ a 1)  # we can shadow macros by defining other macros with the
+                        |              # same name in sub-blocs
                         |     (print a)  # 1
                         | 
-                        |     \!{undef a}
+                        |     ($undef a)
                         |     (print a)  # 12, because we undefined the nearest version of a
                         | }
                         | 
                         | (print a)  # a is still 12 here
                     p #[strong Condition macros] may only work on compile time expressions, using only other macros. For example:
                     pre: code.rainbowjs(data-language="arkscript")
-                        | \!{foo 12}
-                        | \!{bar 14}
+                        | ($ foo 12)
+                        | ($ bar 14)
                         | 
                         | # the condition being true will result in the print being inserted in the program
                         | # while the (let a) will be deleted
-                        | \!{if (and (= foo 12) (= bar 14))
+                        | ($if (and (= foo 12) (= bar 14))
                         |     (print "foo is 12 and bar is 14")
-                        |     (let a (+ 12 14))}
+                        |     (let a (+ 12 14)))
                     p In a #[em condition macro] we can define other macros and use other conditions macros:
                     pre: code.rainbowjs(data-language="arkscript")
-                        | \!{a 12}
-                        | \!{if (= a 12)
-                        |     \!{b 14}
-                        |     \!{c 13}
-                        | }
+                        | ($ a 12)
+                        | ($if (= a 12)
+                        |     ($ b 14)
+                        |     ($ c 13))
                         | 
                         | (print b)  # prints 14
                         | (print c)  # compilation error: unbound variable c
@@ -334,46 +333,39 @@ block content
                     p #[strong Function macros] are evaluated recursively, thus they can call themselves or other macros, and use #[em condition macros]. A particularity is that their arguments can ArkScript code blocs, such as a #[code (let a 12)] or even complexe code blocs like #[code { (mut i 0) (while continue { (print "hello") (set i (+ 1 i)) (if (> i 12) (set continue false)) }) }].
                     p Those macros can use a magic pattern #[code ...args] (args being the name of the argument, you can use whatever you want) as the last argument to tell the compiler that the macros can take any number of arguments. This is called #[em varargs] or #[em variadic arguments].
                     pre: code.rainbowjs(data-language="arkscript")
-                        | \!{foo (a b) {
+                        | ($ foo (a b) {
                         |     (print a " " b)
-                        |     (let c (+ a b))
-                        | }}
+                        |     (let c (+ a b))})
                         | 
                         | (foo 1 2)
                         | (print c)  # prints 3
                         | 
-                        | \!{bar (a ...args)
-                        |     (print a " " args)}
+                        | ($ bar (a ...args)
+                        |     (print a " " args))
                         | 
                         | (bar 1)  # prints 1
                         | (bar 1 2)  # prints 1 [2]
                         | (bar 1 2 3)  # prints 1 [2 3]
                     p Here is a more complex example implementing the #[em thread macro]. The first argument is the data, then each function is applied onto it, one after another. It allows us to write more readable code, instead of the ugly #[code (read-string (slurp (io:file (io:resource filename))))].
                     pre: code.rainbowjs(data-language="arkscript")
-                        | \!{-> (arg fn1 ...fn) {
-                        |     \!{if (> (len fn) 0)
+                        | ($ -> (arg fn1 ...fn) {
+                        |     ($if (> (len fn) 0)
                         |         (-> (fn1 arg) ...fn)
-                        |         (fn1 arg)
-                        |     }
-                        | }}
+                        |         (fn1 arg))})
                         | 
                         | (let filename "hello.json")
                         | (let io:resource (fun (file) {
                         |     (print "io:resource")
-                        |     file
-                        | }))
+                        |     file }))
                         | (let io:file (fun (name) {
                         |     (print "io:file")
-                        |     name
-                        | }))
+                        |     name }))
                         | (let slurp (fun (a) {
                         |     (print "io:slurp")
-                        |     a
-                        | }))
+                        |     a }))
                         | (let read-string (fun (a) {
                         |     (print "read-string")
-                        |     a
-                        | }))
+                        |     a }))
                         | 
                         | (print (-> filename io:resource io:file slurp read-string))
                         | # it will print:
@@ -395,11 +387,14 @@ block content
 
                     ul
                         li.
-                            #[code symcat]: generate a new symbol from a given symbol and a value or expression.
+                            #[code $symcat]: generate a new symbol from a given symbol and a value or expression.
                             #[code (- a 1)] with #[code a] a constant macro (or macro argument) is valid.
                         li.
-                            #[code argcount]: retrieve at compile time the number of arguments taken by a given function.
-                            The function must have been defined #[i before] using #[code argcount], or must be an anonymous function:
-                            #[code (argcount (fun (a b c) ()))], #[code (argcount my-function)].
+                            #[code $argcount]: retrieve at compile time the number of arguments taken by a given function.
+                            The function must have been defined #[i before] using #[code $argcount], or must be an anonymous function:
+                            #[code ($argcount (fun (a b c) ()))], #[code ($argcount my-function)].
+                        li.
+                            #[code $repr]: return the AST representation of a given node, as a string.
+                            #[code ($repr foobar)] will return #[code "foobar"], #[code ($repr (fun   ()    (+ 1 2 3)))] will return #[code "(fun () (+ 1 2 3))"]. Indentation, newlines and comments are not preserved.
 
         div.col-2
