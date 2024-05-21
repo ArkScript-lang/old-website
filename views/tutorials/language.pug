@@ -3,6 +3,12 @@ extends ../layout
 block header
     include ../headers/generic
 
+mixin playground(content)
+    pre: code.rainbowjs(data-language="arkscript")
+        | !{content}
+    - var b64 = btoa(content)
+    iframe.playground(scrolling="no", src="https://playground.arkscript-lang.dev/#/?termRight&code=" + b64)
+
 block content
     div.off-canvas
         //- off-screen toggle button
@@ -59,14 +65,14 @@ block content
                     br
                     br
                     | Example:
-                    pre: code.rainbowjs(data-language="arkscript")
-                        | (let a 12)  # immutable variable
-                        | (let a "hello")  # cannot redefine constant
-                        | (set a "world")  # cannot modify constant, will throw an error
-                        | 
-                        | (mut b [12 42 64])  # mutable variable
-                        | (mut b "hello")  # no problem, the operation is allowed
-                        | (set b "ArkScript is cool!")  # no problem, operation is allowed on mutables
+                    - var example = "(let a 12)  # immutable variable\n"
+                    - example += "(let a \"hello\")  # cannot redefine constant\n"
+                    - example += "(set a \"world\")  # cannot modify constant, will throw an error\n"
+                    - example += "\n"
+                    - example += "(mut b [12 42 64])  # mutable variable\n"
+                    - example += "(mut b \"hello\")  # no problem, the operation is allowed\n"
+                    - example += "(set b \"ArkScript is cool!\")  # no problem, operation is allowed on mutables"
+                    +playground(example)
 
             section#comments
                 h2 Comments

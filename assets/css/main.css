@@ -363,6 +363,15 @@ table.table.dark {
   background-color: #070707;
 }
 
+iframe.playground {
+    margin: 0;
+    padding: 0;
+    border: unset;
+    display: block;
+    position: initial;
+    width: 100%;
+}
+
 code.rainbowjs {
   display: block;
   overflow-x: auto;
