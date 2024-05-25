@@ -1,0 +1,59 @@
+extends ../layout_columns
+
+block header
+    include ../headers/generic
+
+block inner_content
+    div#content.col-8
+        h1.text-center The ArkScript builtins
+        p Those are C++ functions, using the ArkScript virtual machine API to communicate with it. They can be used as any other function in ArkScript code.
+
+        section#basics
+            h2 Basic template of a builtin
+            div.inner-section
+                pre: code.rainbowjs(data-language="cpp")
+                    | #include &lt;Ark/VM/VM.hpp&gt;
+                    | #include &lt;Ark/VM/Value.hpp&gt;
+                    |
+                    | Ark::Value myBuiltin(std::vector&lt;Ark::Value&gt;& parameters, Ark::VM* vm)
+                    | {
+                    |     return Ark::Nil;
+                    | }
+                p See #[a(href="/tutorials/embedding.html") the tutorial on embedding] for more details on how to use them.
+
+        section#categories
+            h2 Builtins category
+            div.inner-section
+                p We currently have a few categories for our builtins:
+                    ul
+                        li IO, prefixed by `io:` in ArkScript
+                        li List, prefixed by `list:` in ArkScript
+                        li Mathematics, prefixed by `math:` in ArkScript
+                        li String, prefixed by `str:` in ArkScript
+                        li System, prefixed by `sys:` in ArkScript
+                        li Time, prefixed by nothing in ArkScript
+
+        section#adding-a-builtin
+            h2 Adding a builtin
+            div.inner-section
+                ol
+                    li You need to identify the category it belongs to
+                    li Then add its prototype in `include/Ark/Builtins/Builtins.hpp` under the right namespace
+                    li Add it to the builtins list in `src/arkreactor/Builtins/Builtins.cpp`, as follows: `{ "name", Value(category::functionName) }`
+                    li The implementation will have to be done in `src/arkreactor/Builtins/{category}.cpp`
+                    li Don't forget to document the new function, using the following snippet:
+                pre: code.rainbowjs(data-language="cpp")
+                    | /**
+                    |  * @name {function name}
+                    |  * @brief {description}
+                    |  * @details {optional, more details}
+                    |  * @param {name1} {description}
+                    |  * @param {name2} {description}
+                    |  * =begin
+                    |  * optional code sample to show how to use it
+                    |  * =end
+                    |  * @author {link to the author profile on github}
+                    |  */
+
+append scripts
+    script(src="/assets/js/languages/cpp.js")

@@ -1,0 +1,214 @@
+extends ../layout_columns
+
+block header
+    include ../headers/generic
+
+block inner_content
+    div#content.col-8
+        h1.text-center Embedding ArkScript in C++ code
+
+        section#cmake
+            h2 Cmake setup
+            div.inner-section
+                p Here is a minimal CMakeLists.txt to integrate ArkScript in a project:
+                pre: code.rainbowjs(data-language="cmake")
+                    | cmake_minimum_required(VERSION 3.11)
+                    |
+                    | project(IntegrateArk)
+                    |
+                    | # setting flags to build only what we need in ArkScript
+                    | #  - no executable
+                    | #  - no modules (console, http, random...)
+                    | #  - disallowing access to the sys:exec command
+                    | set(ARK_BUILD_EXE     OFF)
+                    | set(ARK_BUILD_MODULES OFF)
+                    | set(ARK_ENABLE_SYSTEM OFF)
+                    |
+                    | add_subdirectory(ArkScript)
+                    |
+                    | # creating our executable
+                    | add_executable(${PROJECT_NAME} main.cpp)
+                    |
+                    | # adding ArkScript includes to the executable,
+                    | # linking it to the dynamic library for the language
+                    | target_include_directories(${PROJECT_NAME} PUBLIC ArkScript/include)
+                    | target_link_libraries(${PROJECT_NAME} PUBLIC ArkReactor)
+                    |
+                    | target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
+
+        section#arkscript
+            h2 Using ArkScript
+            div.inner-section
+                p An example is often worth a thousands words:
+                pre: code.rainbowjs(data-language="cpp")
+                    | #include &lt;Ark/Ark.hpp&gt;
+                    |
+                    | int main()
+                    | {
+                    |     // A state can be shared by multiple virtual machines (note that they will NEVER modify it)
+                    |     // leave constructor empty to select the default standard library (loaded from an environment variable $ARKSCRIPT_PATH/lib)
+                    |     Ark::State state;
+                    |
+                    |     // Will automatically compile the file if needed (if not, will take it from the ark cache)
+                    |     state.doString("(let foo (fun (x y) (+ x y 2)))");
+                    |
+                    |     Ark::VM vm(state);
+                    |     vm.run();
+                    |
+                    |     /*
+                    |         If you just want to run a precompiled bytecode file:
+                    |
+                    |         Ark::State state;
+                    |         state.feed("mybytecode.arkc");
+                    |         Ark::VM vm(state);
+                    |         vm.run();
+                    |     */
+                    |
+                    |     /*
+                    |         To run an ArkScript function from C++ code and retrieve the result:
+                    |         we will say the code is (let foo (fun (x y) (+ x y 2)))
+                    |     */
+                    |     auto value = vm.call("foo", 5, 6.0);
+                    |     std::cout &lt;&lt; value &lt;&lt; "\n";  // displays 13
+                    |
+                    |     return 0;
+                    | }
+
+        section#custom-functions
+            h2 Adding your own functions
+            div.inner-section
+                pre: code.rainbowjs(data-language="cpp")
+                    | #include &lt;Ark/Ark.hpp&gt;
+                    |
+                    | Ark::Value my_function(std::vector&lt;Ark::Value&gt;& args, Ark::VM* vm)
+                    | {
+                    |     // checking argument number
+                    |     if (args.size() != 4)
+                    |         throw std::runtime_error("my_function needs 4 arguments!");
+                    |
+                    |     if (!types::check(args, Ark::ValueType::Number, Ark::ValueType::Number, Ark::ValueType::Number, Ark::ValueType::Number))
+                    |         Ark::types::generateError(
+                    |             "my_function",
+                    |             { { Ark::types::Contract { {
+                    |                 Ark::types::Typedef("a", ValueType::Number),
+                    |                 Ark::types::Typedef("b", ValueType::Number),
+                    |                 Ark::types::Typedef("c", ValueType::Number),
+                    |                 Ark::types::Typedef("d", ValueType::Number)
+                    |                 } } } },
+                    |             args);
+                    |
+                    |     auto a = args[0],
+                    |         b = args[1],
+                    |         c = args[2],
+                    |         d = args[3];
+                    |
+                    |     // type is automatically deducted from the argument
+                    |     return Ark::Value(a.number() * b.number() - c.number() / d.number());
+                    | }
+                    |
+                    | int main()
+                    | {
+                    |     Ark::State state;
+                    |
+                    |     state.loadFunction("my_function", my_function);
+                    |     // we can also load C++ lambdas
+                    |     // we could have done this after creating the VM, it would still works
+                    |     // we just need to do that BEFORE we call vm.run()
+                    |     state.loadFunction("foo", [](std::vector&lt;Ark::Value&gt;& args, Ark::VM* vm) {
+                    |         return Ark::Value(static_cast&lt;int&gt;(args.size()));
+                    |     });
+                    |     // we can call state.doFile() before or after state.loadFunction()
+                    |     state.doString("(let bar (my_function 1 2 3 1)) (let egg (foo 1 2 3))");
+                    |
+                    |     Ark::VM vm(state);
+                    |     vm.run();
+                    |
+                    |     auto bar = vm["bar"];
+                    |     std::cout &lt;&lt; bar &lt;&lt; "\n";
+                    |
+                    |     auto egg = vm["egg"];
+                    |     std::cout &lt;&lt; egg &lt;&lt; "\n";
+                    |
+                    |     return 0;
+                    | }
+
+        section#custom-types
+            h2 Adding your own types in ArkScript
+            div.inner-section
+                pre: code.rainbowjs(data-language="cpp")
+                    | enum class Breakfast { Eggs, Bacon, Pizza };
+                    |
+                    | Breakfast& getBreakfast()
+                    | {
+                    |     static Breakfast bf = Breakfast::Pizza;
+                    |     return bf;
+                    | }
+                    |
+                    | UserType::ControlFuncs* get_cfs()
+                    | {
+                    |     static UserType::ControlFuncs cfs;
+                    |
+                    |     cfs.ostream_func = [](std::ostream& os, const UserType& a) -&gt; std::ostream& {
+                    |         os &lt;&lt; "Breakfast::";
+                    |         switch (a.as&lt;Breakfast&gt;())
+                    |         {
+                    |             case Breakfast::Eggs:  os &lt;&lt; "Eggs";    break;
+                    |             case Breakfast::Bacon: os &lt;&lt; "Bacon";   break;
+                    |             case Breakfast::Pizza: os &lt;&lt; "Pizza";   break;
+                    |             default:               os &lt;&lt; "Unknown"; break;
+                    |         }
+                    |         return os;
+                    |     };
+                    |
+                    |     return &cfs;
+                    | }
+                    |
+                    | int main()
+                    | {
+                    |     Ark::State state;
+                    |
+                    |     state.loadFunction("getBreakfast", [](std::vector&lt;Ark::Value&gt;& n, Ark::VM* vm) -&gt; Ark::Value {
+                    |         // we need to send the address of the object, which will be casted
+                    |         // to void* internally
+                    |         Ark::Value v = Ark::Value(Ark::UserType(&getBreakfast()));
+                    |
+                    |         // register the unique control functions block for this usertype
+                    |         // this cfs block can be shared between multiple usertype to reduce memory usage
+                    |         v.usertypeRef().setControlFuncs(get_cfs());
+                    |
+                    |         return v;
+                    |     });
+                    |
+                    |     state.loadFunction("useBreakfast", [](std::vector&lt;Ark::Value&gt;& n, Ark::VM* vm) -&gt; Ark::Value {
+                    |         if (n[0].valueType() == Ark::ValueType::User && n[0].usertype().is&lt;Breakfast&gt;())
+                    |         {
+                    |             std::cout &lt;&lt; "UserType detected as an enum class Breakfast" &lt;&lt; std::endl;
+                    |             Breakfast& bf = n[0].usertype().as&lt;Breakfast&gt;();
+                    |             std::cout &lt;&lt; "Got " &lt;&lt; n[0].usertype() &lt;&lt; "\n";
+                    |             if (bf == Breakfast::Pizza)
+                    |                 std::cout &lt;&lt; "Good choice! Have a nice breakfast ;)" &lt;&lt; std::endl;
+                    |         }
+                    |
+                    |         return Ark::Nil;
+                    |     });
+                    |
+                    |     state.doString("(begin (let a (getBreakfast)) (print a) (useBreakfast a))");
+                    |     Ark::VM vm(&state);
+                    |     vm.run();
+                    |
+                    |     /*
+                    |         Will print
+                    |
+                    |         Breakfast::Pizza
+                    |         UserType detected as an enum class Breakfast
+                    |         Got Breakfast::Pizza
+                    |         Good choice! Have a nice breakfast ;)
+                    |     */
+                    |
+                    |     return 0;
+                    | }
+
+append scripts
+    script(src="/assets/js/languages/shell.js")
+    script(src="/assets/js/languages/cmake.js")
+    script(src="/assets/js/languages/cpp.js")

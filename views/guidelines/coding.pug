@@ -1,0 +1,63 @@
+extends ../layout_columns
+
+block header
+    include ../headers/generic
+
+block inner_content
+    div#content.col-8
+        h1.text-center Coding guidelines
+
+        section#definitions
+            h2 Definitions
+            div.inner-section: ul
+                li #[em guideline]: general rule applying to ArkScript code, which must be followed when contributing to the standard library and examples of the main repository
+                li #[em standard library (aka lib)]: the files and functions in the #[code lib] folder
+                li #[em builtins]: functions and constants defined through C++ code, available without having to import anything
+                li #[em module]: C++ plugin for the ArkScript virtual machine, allowing use of C++ code (eg: the SFML)
+
+        section#precisions
+            h2 Precisions
+            div.inner-section
+                p Indentation matters to us, programmers (but not to the compiler): 4 spaces or a single tab, but it should stay consistent across a project/file.
+                p
+                    | The general rule of thumb is that a closing parenthesis should never be to the left of its matching opening parenthesis. All new lines
+                    | should be a couple of spaces to the right of the opening parenthesis of the list they're in.
+
+        section#naming-convention
+            h2 Naming convention
+            div.inner-section
+                p
+                    | Functions and constants (the ones in the lib and in the builtins) are named following the
+                    | #[code first:second] convention, described in #[a(href="/guidelines/naming.html") the naming guidelines].
+
+        section#formatting
+            h2 Code formatting
+            div.inner-section
+                ul
+                    li Indent the content of every #[code begin] block
+                    li When using begin blocks in if (then, else), they should appear clearly as a block, each opening brace on its own line
+                    li
+                        | When using begin blocks in functions (body), they can appear as an independent block (initial #[code (begin] or #[code {] on its own line)
+                        | or not (initial #[code (begin] or #[code {] on the same line as the #[code fun] keyword)
+                    li
+                        | closing braces are stacked together, and never preceded by a newline
+                        ul: li if the last instruction wasn't a function call but a variable, a space should be put between those two
+                p Complete example:
+                pre: code.rainbowjs(data-language="arkscript")
+                    | (let foo (fun (a) {
+                    |     (if (= a 2)
+                    |         {
+                    |             (print "a = 2")
+                    |             (egg (* 2 a))}
+                    |         {
+                    |             (print "a != 2")
+                    |             (egg 0)})}))
+                    |
+                    | (let bar (fun (b c) {
+                    |     (let boop (+ b c))
+                    |     boop })
+
+        section#documentation
+            h2 Standard library functions and constants' documentation
+            div.inner-section
+                p Each function and constant defined in the standard library should be documented, using #[a(href="https://github.com/ArkScript-lang/ArkDoc") ArkDoc] format.

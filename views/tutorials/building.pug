@@ -57,11 +57,9 @@ block inner_content
                 ul
                     li #[code -DARK_BUILD_EXE] to generate an executable, defaults to Off, building a shared library
                     li #[code -DARK_ENABLE_SYSTEM] to enable `sys:exec` (execute shell commands without restrictions), defaults to On
-                    li #[code -DARK_PROFILER_COUNT] to count every creation/copy/move of the internal value type, defaults to Off
                     li #[code -DARK_PROFILER_MIPS] to enable the MIPS counting, defaults to Off
                     li #[code -DARK_BUILD_MODULES] to build the modules, defaults to Off
                     li #[code -DARK_NO_STDLIB] to avoid the installation of the ArkScript standard library
-                    li #[code -DARK_BUILD_MODULES] to trigger the modules build
                     li #[code -DARK_SANITIZERS] to enable ASAN and UBSAN
 
                 h3 Windows
@@ -79,7 +77,7 @@ block inner_content
                 h3 Linux
                 p Requirements:
                 ul
-                    li g++ 9
+                    li g++ 14
                     li 64 bits computer
                     li cmake >= 3.9
                 p Commands:
@@ -91,7 +89,7 @@ block inner_content
                 h3 MacOS
                 p Requirements:
                 ul
-                    li g++ 9
+                    li g++ 14
                     li cmake >= 3.9
                 p.
                     On MacOS versions prior to 10.15, #[code libc++] lacks #[code filesystem] in the standard library.
@@ -100,10 +98,10 @@ block inner_content
                     You will need to :
                 ul
                     li Install a newer compiler using #[a.btn-link(href="https://docs.brew.sh/") Homebrew]: #[code brew install gcc && brew link gcc]
-                    li Pass compiler path to #[code cmake] in the build step: #[code -DCMAKE_CXX_COMPILER=/usr/local/bin/g++-9]
+                    li Pass compiler path to #[code cmake] in the build step: #[code -DCMAKE_CXX_COMPILER=/usr/local/bin/g++-14]
                 p Commands:
                 pre: code.rainbowjs(data-language="shell")
-                    | ~/ark$ cmake . -Bbuild -DARK_BUILD_EXE=On -DCMAKE_CXX_COMPILER=/usr/local/bin/g++-9
+                    | ~/ark$ cmake . -Bbuild -DARK_BUILD_EXE=On -DCMAKE_CXX_COMPILER=/usr/local/bin/g++-14
                     | ~/ark$ cmake --build build --config Release
                     | ~/ark$ cmake --install build --config Release  # might need administrator rights
 

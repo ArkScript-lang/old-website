@@ -1,0 +1,62 @@
+extends ../layout_columns
+
+block header
+    include ../headers/generic
+
+block inner_content
+    div#content.col-8
+        h1.text-center Naming convention in ArkScript
+
+        section#definitions
+            h2 Definitions
+            div.inner-section: ul
+                li #[em guideline]: general rule applying to ArkScript code, which must be followed when contributing to the standard library and examples of the main repository
+                li #[em standard library (aka lib)]: the files and functions in the #[code lib] folder
+                li #[em builtins]: functions and constants defined through C++ code, available without having to import anything
+                li #[em module]: C++ plugin for the ArkScript virtual machine, allowing use of C++ code (eg: the SFML)
+
+        section#naming
+            h2 Naming
+            div.inner-section
+                h3 ArkScript
+                p It should follow #[code first:second], where #[code first] is related to the module, builtin or lib function area of effect. #[code second] should be the name of the function itself.
+                p We can see this kind of method as #[em namespacing] in other languages such as C++.
+                p Example:
+                pre: code.rainbowjs(data-language="arkscript")
+                    | # for math functions
+                    | (math:sin 0.5421)
+                    | 
+                    | # for list functions
+                    | (list:forEach the-list (fun (element) (...)))
+                    | 
+                    | # for a console module
+                    | (console:color "red")
+                p
+                    | #[strong Mutation]: if a function does explicit mutation of a state (eg in a closure) instead of returning a new value and being pure,
+                    | it should be suffixed with #[code !], eg #[code append!] for in place mutations on lists.
+                
+                hr
+                
+                h3 Modules (C++)
+                p
+                    | It must follow #[code snake_case] naming convention like: #[code name_operation_...] where #[code name] is the name of module, #[code operation] what the function does
+                    | and #[code ...] means the rest of name of function, but the recommended keyword limit in name of a function is four.
+                p Avoid C++'s namespacing
+                p Example:
+                pre: code.rainbowjs(data-language="cpp")
+                    | #include &lt;ark_msgpack.hpp&gt;
+                    | 
+                    | ARK_API Ark::mapping* getFunctionsMapping()
+                    | {
+                    |     static Ark::mapping[] map = {
+                    |         { "msgPack", ArkMsgpack::pack },
+                    |         { "msgUnpack", ArkMsgpack::unpack },
+                    |         { "msgObjectStr", ArkMsgpack::object_str }
+                    |     };
+                    | 
+                    |     return map;
+                    | }
+
+append scripts
+    script(src="/assets/js/languages/cpp.js")
+    script(src="/assets/js/languages/arkscript.js")

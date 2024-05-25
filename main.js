@@ -12,9 +12,20 @@ const views = [
     'documentation',
     'index',
     'projects',
-//    'blog',
+    // tutorials
     'tutorials/building',
     'tutorials/language',
+    'tutorials/embedding',
+    'tutorials/builtins',
+    'tutorials/modules',
+    // guidelines
+    'guidelines/naming',
+    'guidelines/modules_error_handling',
+    'guidelines/coding',
+    // implementation
+    'implementation/architecture',
+    'implementation/compiler',
+    'implementation/vm',
 ]
 
 views.forEach((name) => {

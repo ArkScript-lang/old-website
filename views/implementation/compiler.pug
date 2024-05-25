@@ -1,0 +1,152 @@
+extends ../layout_columns
+
+block header
+    include ../headers/generic
+
+block inner_content
+    div#content.col-8
+        h1.text-center ArkScript's compiler implementation details
+        p The compiler is divided in multiple parts, interacting with other in sequence:
+        ul
+            li the parser, generating the AST from char predicates
+            li the import solver, calling the parser as many times as needed to get all the files AST's and piece them together
+            li the macro processor, applying macros in the AST
+            li the optimizer, removing unused symbols from the AST
+            li the compiler, generating bytecode from the AST
+        p.
+            There exists another compiler, the json compiler, converting a given code to JSON by iterating through the AST.
+            It follows the same process as the compiler to generate the AST.
+
+        section#parser
+            h2 Parser
+            div.inner-section
+                p It is generating the abstract syntax tree (AST) using character predicates in a "parser combinator" fashion.
+                
+        section#import-solver
+            h2 Import solver
+            div.inner-section
+                p TODO
+                
+        section#macro-processor
+            h2 Macro processor
+            div.inner-section
+                p.
+                    Once the AST has been built, the macro processor kicks into action and goes over the AST, trying to find any macro
+                    node to register them and apply them. Macros are registered by block, so if we are at a current depth of 0 in the
+                    AST, and found a macro, it will available in every node. If we find a macro in a node at depth 2, the macro will
+                    get registered in applied in all the potential sub-nodes of the current node, but once we leave the depth 2 node,
+                    the macro will be removed from memory and won't be accessible in the other part of the script.
+                p It is composed of different pieces:
+                ul
+                    li the processor, receiving the AST, keeping track of all the macros, and visiting every node, applying macros in them (it also does complex stuff with function macros like unifying the argument lists)
+                    li the pipeline, holding all the different macro executors, trying to apply them one after another (until one matches) when the processor asks for a macro to be applied on a node
+                    li the executors:
+                        ul
+                            li the conditional one works only with if macros and apply them regarding the value of the condition
+                            li the symbol one applies the value held by the macro
+                            li the list one applies predefined macros and user defined macros (function macros), it is arguably the most complex one but also the best one as well
+                p.
+                    Once it is done running, every macro definition and macro usage in the AST has been removed and/or replaced with the
+                    corresponding value, so we are left with an AST that the compiler could already work with.
+        
+        section#ast-optimizer
+            h2 AST optimizer
+            div.inner-section
+                p.
+                    Though before being able to compile the AST, we can optimize it a bit, by removing unused variable definition. For
+                    simple variables, like #[code (let a 12)], this isn't really a problem if we leave them, but for functions it would create
+                    separate pages of bytecode for them, and the resulting bytecode would be a lot longer than just a variable declaration
+                    and assignment. Having a long bytecode isn't a problem in term of computing power, as we are only computing what we
+                    are asked to, but we are limited to 65'534 functions as our code segment indexes are on 2 bytes, and we are limited
+                    to 65'536 different symbols (and values). Those symbols and values could be used only in those functions we want
+                    to delete, and use substantial space in the symbols and values table.
+                p.
+                    So here comes the AST optimizer, reading only the first level of the AST, searching for variables and functions definition.
+                    Then, it visits the whole AST, counting how many times each gathered symbol has been used. In the end, if a symbol has
+                    been used only once (it correspond to its definition/declaration), then it gets removed from the AST.
+        
+        section#compiler
+            h2 Compiler
+            div.inner-section
+                p.
+                    The compiler's role is to take a tree-like structure, the AST, and flatten it, so that the virtual machine can just read
+                    one instruction after another, without having to dive in a nested structure (which is very inefficient).
+                p.
+                    It works recursively on the nodes, and sometimes even I have some trouble understanding why something works and why
+                    something else doesn't. In the end, it all boils down to "the bytecode has been badly generated".
+                ul
+                    li The first step is to generate the file header: the string #[code ark\0], followed by the version of the compiler (each number on two bytes), and then the timestamp (#[code Compiler::pushFileHeader]).
+                    li Next step is to run through the AST, running each node in the #[code Compiler::compile] recursive method, in charge of generating the bytecode.
+                    li Then we check for any undefined symbols and display an error to the user if we found any (alongside a suggestion) (#[code Compiler::checkForUndefinedSymbols])
+                    li We can continue to build our bytecode file header, with the symbols and the values table, respectively for a list of identifier used throughout the program, and for all the values used (a tag-value system is used here so that the VM knows what type the value is) (#[code Compiler::pushSymAndValTables]).
+                    li Finally, we add the different code pages to the bytecode file, generated by the #[code Compiler::compile] method called earlier, and create the SHA256 used for integrity checking of the bytecode, in a spot in the file header.
+                h3 The compilation
+                p Given an input node, we make a decision based on its type (#[code Compiler::_compile]):
+                ul
+                    li if it's a symbol we will compile it to a #[code LOAD &lt;symbol&gt;]
+                    li "get field operation", #[code GET_FIELD &lt;symbol&gt;]
+                    li String, Number or nil, we push the value on the stack with #[code LOAD_CONST &lt;const&gt;]
+                        ul: li an additional step is done here to avoid pushing the value on the stack #[strong if] the value isn't being used (eg in a function call, variable assignment)
+                    li Keywords:
+                        ul
+                            li If: first we compile the condition, then add a jump if true to go to the #[code ifTrue] branch. We compile the #[code ifFalse] branch, add a jump to the end of the if, and finally we compile the #[code ifTrue] branch.
+                            li Let, Mut, Set: we register the symbol, compile the value, add the corresponding instruction after it: #[code LET], #[code MUT], #[code STORE]
+                            li Fun: TODO
+                            li Begin: we take each node and compile them. An additional step is done here, to remove any unused value, except for the last node whose fate is decided by the caller (so that we don't always drop the last node in a begin, which may be the return value of a function).
+                            li While: much like the if, we compile the condition, add a jump to the end of the while if the condition is false, compile the body and add a jump to the beginning (right before the condition).
+                            li Import: this is used only to import modules at runtime, we put the module name (a string) on the stack and then the #[code IMPORT] instruction. The VM will do what's needed for us.
+                            li Del: this adds #[code DEL &lt;symbol&gt;] to the bytecode, to tell the virtual machine to remove #[code &lt;symbol&gt;] from memory.
+                    li if none the previous cases matched, then we most likely have a function call (#[code Compiler::handleCalls])
+                        ul
+                            li we compile the expression on a temporary bytecode page, and check its length: if it's more than 1 instruction, this is a function call, otherwise it's an operator call (which we can optimize / unroll)
+                            li then we compile the arguments on the current page, marking them as "no discard"
+                            li the tail call optimization is handled here if applicable
+                            li we push the computed expression for the function call and discard the temporary page
+                            li we add the #[code CALL] instruction, the number of arguments
+
+        section#json-compiler
+            h2 JSON Compiler
+            div.inner-section
+                p Given an input node, we generate the corresponding JSON structure:
+                ul
+                    li Symbol: #[code {"type": "Symbol", "name": "..."}]
+                    li Capture: #[code {"type": "Capture", "name": "..."}]
+                    li GetField: #[code {"type": "GetField", "name": "..."}]
+                    li String: #[code {"type": "String", "value": "..."}]
+                    li Number: #[code {"type": "Number", "value": ...}]
+                    li
+                        | Function call:&nbsp;
+                        code {"type": "FunctionCall", "name": "...", "args": [{"type": "Symbol", "name": "..."} ...]}
+                    li Keywords:
+                        ul
+                            li
+                                | Function declaration:&nbsp;
+                                code {"type": "Fun", "args": [{"type": "Symbol", "name": "..."} ...], "body": [...] | {...}}
+                            li Variable declaration/modification: #[code {"type": "Let|Mut|Set", "name": {"type": "Symbol", "name": "..."}, "value": {...}}]
+                            li
+                                | Condition:&nbsp;
+                                code {"type": "If", "condition": [...], "then": [...] | {}, "else": [...] | {}}]
+                            li
+                                | While loop:&nbsp;
+                                code {"type": "While", "condition": [...], "body": [...] | {}}]
+                            li
+                                | Begin:&nbsp;
+                                code {"type": "Begin", "children": [...]}]
+                            li Import: #[code {"type": "Import", "value": {"type": "String", "value": "..."}}]
+                            li Del: #[code {"type": "Del", "value": {"type": "Symbol", "name": "..."}}]
+                p.
+                    Some fields have been filled to give you an idea of what the #[code value] should look like in most cases. One
+                    should note that function arguments can have #[code Capture] nodes as well as #[code Symbol] nodes.
+                p Generic structure:
+                pre: code.rainbowjs
+                    | {
+                    |     "type": "&lt;name&gt;",
+                    |     "value": ... || "..." || {...},  // optional
+                    |     "name": "...",  // optional
+                    |     "args": [{...}, ...],  // optional
+                    |     "condition": [{...}, ...] || {...},  // optional
+                    |     "then": [{...}, ...] || {...},  // optional
+                    |     "else": [{...}, ...] || {...},  // optional
+                    |     "body": [{...}, ...] || {...},  // optional
+                    |     "children": [{...}, ...]  // optional
+                    | }

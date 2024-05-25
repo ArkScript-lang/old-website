@@ -1,0 +1,47 @@
+extends ../layout_columns
+
+block header
+    include ../headers/generic
+
+block inner_content
+    div#content.col-8
+        h1.text-center Module error handling
+
+        section#definitions
+            h2 Definitions
+            div.inner-section: ul
+                li #[em error]: a C++ exception, #[code std::runtime_error] or #[code Ark::TypeError] in this project
+
+        section#precisions
+            h2 Precisions
+            div.inner-section
+                p We need to have something uniform between all the modules to avoid inconsistencies.
+
+        section#arguments
+            h2 Handling wrong arguments count
+            div.inner-section
+                p
+                    | We should use #[code n.size()] (n the vector of arguments passed to the module's function) to
+                    | check if we had everything we needed.
+                p The message needs to be as follows: #[code function name need &lt;argument count&gt;, &lt;description of each of the argument&gt;].
+                p Example for the function #[code (console:color "red")], taking a string to change the color of the text in the terminal:
+                pre: code.rainbowjs(data-language="cpp")
+                    | if (n.size() != 1)
+                    |     throw std::runtime_error("console:color need a single argument, a string representing the color to apply");
+
+        section#type-errors
+            h2 Handling type errors
+            div.inner-section
+                p We should compare every value type of each value in the vector of arguments with the expected type to check we had what we wanted.
+                p Example for the function #[code (console:color "red")]:
+                pre: code.rainbowjs(data-language="cpp")
+                    | if (n[0].valueType() != ValueType::String)
+                    |     throw Ark::TypeError("console:color need a single argument, a string representing the color to apply");
+                p In case of an UserType, two checks need to be done, in this particular order (we are using boolean short circuit on the or operator):
+                pre: code.rainbowjs(data-language="cpp")
+                    | if (n[0].valueType() != ValueType::User || !n[0].usertypeRef().is&lt;Wanted C++ Type&gt;())
+                    |     throw Ark::TypeError("my:function need a single argument, a Wanted C++ Type representing &lt;something&gt;");
+
+append scripts
+    script(src="/assets/js/languages/cpp.js")
+    script(src="/assets/js/languages/arkscript.js")

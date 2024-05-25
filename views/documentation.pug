@@ -25,12 +25,11 @@ block inner_content
             div.inner-section
                 ul
                     li: a.btn-link(href="/tutorials/language.html") Learning ArkScript
-                    li
-                        | Embedding
+                    li Embedding
                         ul
-                            li: a.btn-link(href="/impl/d7/dea/tutorial_embedding.html") Embedding ArkScript in a C++ project
-                            li: a.btn-link(href="/impl/d1/d8c/modules.html") Creating C++ modules for ArkScript
-                            li: a.btn-link(href="/impl/d6/d90/builtins.html") Creating builtins in C++
+                            li: a.btn-link(href="/tutorials/embedding.html") Embedding ArkScript in a C++ project
+                            li: a.btn-link(href="/tutorials/modules.html") Creating C++ modules for ArkScript
+                            li: a.btn-link(href="/tutorials/builtins.html") Creating builtins in C++
 
         section#std-lib-doc
             h2 Standard Library Documentation
@@ -53,8 +52,11 @@ block inner_content
             h2 ArkScript C++ API documentation
 
             div.inner-section
-                a.btn-link(href="/impl/index.html") The complete documentation of the implementation and API.
-
+                ul
+                    li: a.btn-link(href="/impl/index.html") The complete documentation of the implementation and API.
+                    li: a.btn-link(href="/implementation/architecture.html") Project architecture
+                    li: a.btn-link(href="/implementation/compiler.html") Compiler implementation details
+                    li: a.btn-link(href="/implementation/vm.html") VM implementation details
         section#language-spec
             h2 Language specification
 
