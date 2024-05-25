@@ -8,17 +8,15 @@ mixin playground(id, content)
     - const codeTabId = "tabCode" + id
     - const runTabId = "tabRun" + id
     div
-        input(type="radio", name="tabs", id=codeTabId, hidden, checked).tab-locator
-        input(type="radio", name="tabs", id=runTabId, hidden).tab-locator
         ul.tab.tab-block
-            li.tab-item: label(for=codeTabId): a Code
-            li.tab-item: label(for=runTabId): a Try it out
+            li.tab-item: label(for=codeTabId, onclick="showTab('" + codeTabId + "', '" + runTabId + "')"): a Code
+            li.tab-item: label(for=runTabId, onclick="showTab('" + runTabId + "', '" + codeTabId + "')"): a Try it out
         div.tabs
-            div.tab-content
+            div(id=codeTabId).code-tab.tab-content
                 pre: code.rainbowjs(data-language="arkscript")
                     | !{content}
-            div.tab-content
-                iframe.playground(scrolling="no", src="http://playground.arkscript-lang.dev/#/?termRight&code=" + b64)
+            div(id=runTabId).playground-tab.tab-content
+                iframe.playground(scrolling="no", src="http://locaLhost:8080/#/?termRight&code=" + b64)
 
 block content
     div.off-canvas
@@ -423,3 +421,6 @@ block content
                             #[code ($repr foobar)] will return #[code "foobar"], #[code ($repr (fun   ()    (+ 1 2 3)))] will return #[code "(fun () (+ 1 2 3))"]. Indentation, newlines and comments are not preserved.
 
         div.col-2
+
+append scripts
+    script(src="/assets/js/tabs.js")
