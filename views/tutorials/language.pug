@@ -242,6 +242,21 @@ block content
                     - example9 += "(egg \"not an egg\")\n"
                     - example9 += "(print egg.name \" \" egg.age)  # not an egg 2\n"
                     +playground("closures-3", example9)
+                    p Closures can also be compared, the same way you would want to compare structs in C or C++:
+                    - let closure_cmp = ""
+                    - closure_cmp += "(let make (fun (name age)\n"
+                    - closure_cmp += "    (fun (&name &age) ())))\n\n"
+                    - closure_cmp += "(let egg (make \"egg\" 1))\n"
+                    - closure_cmp += "(let bacon (make \"bacon\" 1))\n"
+                    - closure_cmp += "(print (= egg bacon))  # false, egg and bacon share the same fields but their values are different\n\n"
+                    - closure_cmp += "(let make_other (fun (a b c)\n"
+                    - closure_cmp += "    (fun (&a &b &c) ())))\n\n"
+                    - closure_cmp += "(let next (make_other 1 2 3))\n"
+                    - closure_cmp += "(let bis  (make_other 1 2 3))\n"
+                    - closure_cmp += "(print (= next egg))  # false, next and egg do not share the same fields\n"
+                    - closure_cmp += "(print (= next bis))  # true, next and bis have the same fields and values\n"
+                    - closure_cmp += "(print (= bis bis))   # true, bis is bis\n"
+                    +playground("closures-4", closure_cmp)
 
             section#import
                 h2 Importing code
