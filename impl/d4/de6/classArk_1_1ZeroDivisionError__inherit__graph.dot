@@ -7,7 +7,9 @@ digraph "Ark::ZeroDivisionError"
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   Node1 [label="Ark::ZeroDivisionError",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="A special zero division error triggered when a number is divided by 0."];
   Node2 -> Node1 [dir="back",color="steelblue1",style="solid"];
-  Node2 [label="std::runtime_error",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node2 [label="Ark::Error",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$d6/d43/classArk_1_1Error.html",tooltip=" "];
   Node3 -> Node2 [dir="back",color="steelblue1",style="solid"];
-  Node3 [label="std::exception",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node3 [label="std::runtime_error",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="std::exception",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
 }

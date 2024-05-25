@@ -79,13 +79,15 @@ $(document).ready(function(){initNavTree('d1/d74/Value_8cpp.html','../../'); ini
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="../../de/dfd/Value_8hpp_source.html">Ark/VM/Value.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../d7/d09/Utils_8hpp_source.html">Ark/Utils.hpp</a>&gt;</code><br />
+<code>#include &lt;fmt/format.h&gt;</code><br />
+<code>#include &lt;fmt/ostream.h&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Include dependency graph for Value.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d6/d0f/Value_8cpp__incl.svg" width="100%" height="514"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d6/d0f/Value_8cpp__incl.svg" width="100%" height="516"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 </div>
 <p><a href="../../d1/d74/Value_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -97,7 +99,7 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a88143a99bed655da1f79c230ba9c9e30"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d74/Value_8cpp.html#a88143a99bed655da1f79c230ba9c9e30">init_const_type</a>(is_const,  type)&#160;&#160;&#160;((is_const ? (1 &lt;&lt; 7) : 0) | static_cast&lt;uint8_t&gt;(type))</td></tr>
+<tr class="memitem:a88143a99bed655da1f79c230ba9c9e30"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d74/Value_8cpp.html#a88143a99bed655da1f79c230ba9c9e30">init_const_type</a>(is_const,  type)&#160;&#160;&#160;(((is_const) ? (1 &lt;&lt; 7) : 0) | static_cast&lt;uint8_t&gt;(type))</td></tr>
 <tr class="separator:a88143a99bed655da1f79c230ba9c9e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -122,12 +124,12 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;((is_const ? (1 &lt;&lt; 7) : 0) | static_cast&lt;uint8_t&gt;(type))</td>
+          <td></td><td>&#160;&#160;&#160;(((is_const) ? (1 &lt;&lt; 7) : 0) | static_cast&lt;uint8_t&gt;(type))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d74/Value_8cpp_source.html#l00005">5</a> of file <a class="el" href="../../d1/d74/Value_8cpp_source.html">Value.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d74/Value_8cpp_source.html#l00006">6</a> of file <a class="el" href="../../d1/d74/Value_8cpp_source.html">Value.cpp</a>.</p>
 
 </div>
 </div>
@@ -137,7 +139,7 @@ Macros</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_e0d450b481c7e7e5abacff9799e54b3d.html">arkreactor</a></li><li class="navelem"><a class="el" href="../../dir_9600556d5cc28570e4ccd195a3befa41.html">VM</a></li><li class="navelem"><a class="el" href="../../d1/d74/Value_8cpp.html">Value.cpp</a></li>
-    <li class="footer">Generated on Sun Apr 23 2023 20:17:28 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Sat May 25 2024 22:44:26 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

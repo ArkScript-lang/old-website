@@ -98,6 +98,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae29d1667b0da6e9749abd541cbd9d65e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html#ae29d1667b0da6e9749abd541cbd9d65e">Scope</a> () noexcept</td></tr>
 <tr class="memdesc:ae29d1667b0da6e9749abd541cbd9d65e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html" title="A class to handle the VM scope more efficiently.">Scope</a> object.  <br /></td></tr>
 <tr class="separator:ae29d1667b0da6e9749abd541cbd9d65e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a504cf964036b25b2355286b9f9d176c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html#a504cf964036b25b2355286b9f9d176c4">mergeRefInto</a> (<a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html">Scope</a> &amp;other)</td></tr>
+<tr class="memdesc:a504cf964036b25b2355286b9f9d176c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge values from this scope as refs in the other scope.  <br /></td></tr>
+<tr class="separator:a504cf964036b25b2355286b9f9d176c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa04908a6a894cb99558d47a8a2411726"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html#aa04908a6a894cb99558d47a8a2411726">push_back</a> (uint16_t id, <a class="el" href="../../d3/d90/classArk_1_1Value.html">Value</a> &amp;&amp;val) noexcept</td></tr>
 <tr class="memdesc:aa04908a6a894cb99558d47a8a2411726"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put a value in the scope.  <br /></td></tr>
 <tr class="separator:aa04908a6a894cb99558d47a8a2411726"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,9 +110,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6b53c13cc93ed329f3b6dc274b331bc3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html#a6b53c13cc93ed329f3b6dc274b331bc3">has</a> (uint16_t id) noexcept</td></tr>
 <tr class="memdesc:a6b53c13cc93ed329f3b6dc274b331bc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the scope has a specific symbol in memory.  <br /></td></tr>
 <tr class="separator:a6b53c13cc93ed329f3b6dc274b331bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4699a37b43de871b6e45b8417a54d04e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d90/classArk_1_1Value.html">Value</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html#a4699a37b43de871b6e45b8417a54d04e">operator[]</a> (uint16_t id) noexcept</td></tr>
-<tr class="memdesc:a4699a37b43de871b6e45b8417a54d04e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a value from its symbol id.  <br /></td></tr>
-<tr class="separator:a4699a37b43de871b6e45b8417a54d04e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa71659f30b33beeb14a93d12893fdb51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d90/classArk_1_1Value.html">Value</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html#aa71659f30b33beeb14a93d12893fdb51">operator[]</a> (uint16_t id_to_look_for) noexcept</td></tr>
+<tr class="memdesc:aa71659f30b33beeb14a93d12893fdb51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a value from its symbol id.  <br /></td></tr>
+<tr class="separator:aa71659f30b33beeb14a93d12893fdb51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7156694cdf203a92808ac9678fc3f1eb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d3/d90/classArk_1_1Value.html">Value</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html#a7156694cdf203a92808ac9678fc3f1eb">operator[]</a> (uint16_t id_to_look_for) const noexcept</td></tr>
+<tr class="memdesc:a7156694cdf203a92808ac9678fc3f1eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a value from its symbol id.  <br /></td></tr>
+<tr class="separator:a7156694cdf203a92808ac9678fc3f1eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa273c99ef0ce44bf96f7d52e59ec6298"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html#aa273c99ef0ce44bf96f7d52e59ec6298">idFromValue</a> (const <a class="el" href="../../d3/d90/classArk_1_1Value.html">Value</a> &amp;val) const noexcept</td></tr>
 <tr class="memdesc:aa273c99ef0ce44bf96f7d52e59ec6298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the id of a variable based on its value ; used for debug only.  <br /></td></tr>
 <tr class="separator:aa273c99ef0ce44bf96f7d52e59ec6298"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,6 +127,10 @@ Public Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a7b23fd2be84afd89f624557155c15fe2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; uint16_t, <a class="el" href="../../d3/d90/classArk_1_1Value.html">Value</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html#a7b23fd2be84afd89f624557155c15fe2">m_data</a></td></tr>
 <tr class="separator:a7b23fd2be84afd89f624557155c15fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a978139403ad247591fc567170aff6302"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html#a978139403ad247591fc567170aff6302">m_min_id</a></td></tr>
+<tr class="separator:a978139403ad247591fc567170aff6302"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35f2ce2dc58e471cf4756d5182bfcc98"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html#a35f2ce2dc58e471cf4756d5182bfcc98">m_max_id</a></td></tr>
+<tr class="separator:a35f2ce2dc58e471cf4756d5182bfcc98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -128,6 +138,8 @@ Friends</h2></td></tr>
 <tr class="separator:af87a0b637b3d1bef0deaebc4bdd4c777"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01900dd7c0567c138aacc498e6d0bdf9"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html#a01900dd7c0567c138aacc498e6d0bdf9">Ark::internal::Closure</a></td></tr>
 <tr class="separator:a01900dd7c0567c138aacc498e6d0bdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2456fee58a881cf0be6a4970d21de01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d44/Module_8hpp.html#ac62a8551c675391a8cf01d112e42d755">ARK_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html#af2456fee58a881cf0be6a4970d21de01">operator==</a> (const <a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html">Scope</a> &amp;A, const <a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html">Scope</a> &amp;B) noexcept</td></tr>
+<tr class="separator:af2456fee58a881cf0be6a4970d21de01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class to handle the <a class="el" href="../../d2/d93/classArk_1_1VM.html" title="The ArkScript virtual machine, executing ArkScript bytecode.">VM</a> scope more efficiently. </p>
@@ -161,7 +173,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00007">7</a> of file <a class="el" href="../../d5/d04/Scope_8cpp_source.html">Scope.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d8/dcd/Scope_8hpp_source.html#l00088">m_data</a>.</p>
+<p class="reference">References <a class="el" href="../../d8/dcd/Scope_8hpp_source.html#l00105">m_data</a>.</p>
 
 </div>
 </div>
@@ -201,7 +213,7 @@ Friends</h2></td></tr>
 <dd>
 false Otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00022">22</a> of file <a class="el" href="../../d5/d04/Scope_8cpp_source.html">Scope.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00044">44</a> of file <a class="el" href="../../d5/d04/Scope_8cpp_source.html">Scope.cpp</a>.</p>
 
 </div>
 </div>
@@ -238,12 +250,79 @@ false Otherwise </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>uint16_t </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00037">37</a> of file <a class="el" href="../../d5/d04/Scope_8cpp_source.html">Scope.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00069">69</a> of file <a class="el" href="../../d5/d04/Scope_8cpp_source.html">Scope.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a4699a37b43de871b6e45b8417a54d04e" name="a4699a37b43de871b6e45b8417a54d04e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4699a37b43de871b6e45b8417a54d04e">&#9670;&#160;</a></span>operator[]()</h2>
+<a id="a504cf964036b25b2355286b9f9d176c4" name="a504cf964036b25b2355286b9f9d176c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a504cf964036b25b2355286b9f9d176c4">&#9670;&#160;</a></span>mergeRefInto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ark::internal::Scope::mergeRefInto </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html">Scope</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Merge values from this scope as refs in the other scope. </p>
+<p>This scope must be kept alive for the ref to be used </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00013">13</a> of file <a class="el" href="../../d5/d04/Scope_8cpp_source.html">Scope.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="../../d8/dcd/Scope_8hpp_source.html#l00105">m_data</a>, <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00024">push_back()</a>, and <a class="el" href="../../d9/de4/namespaceArk.html#a794d6cb0fd25e2dbc678c17ff605e159a63d5049791d9d79d86e9a108b0a999ca">Ark::Reference</a>.</p>
+
+</div>
+</div>
+<a id="a7156694cdf203a92808ac9678fc3f1eb" name="a7156694cdf203a92808ac9678fc3f1eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7156694cdf203a92808ac9678fc3f1eb">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d3/d90/classArk_1_1Value.html">Value</a> * Ark::internal::Scope::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>id_to_look_for</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a value from its symbol id. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id_to_look_for</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>const Value* Returns nullptr if the value can not be found </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00059">59</a> of file <a class="el" href="../../d5/d04/Scope_8cpp_source.html">Scope.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa71659f30b33beeb14a93d12893fdb51" name="aa71659f30b33beeb14a93d12893fdb51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa71659f30b33beeb14a93d12893fdb51">&#9670;&#160;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -255,7 +334,7 @@ false Otherwise </dd></dl>
           <td class="memname"><a class="el" href="../../d3/d90/classArk_1_1Value.html">Value</a> * Ark::internal::Scope::operator[] </td>
           <td>(</td>
           <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
+          <td class="paramname"><em>id_to_look_for</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -269,13 +348,13 @@ false Otherwise </dd></dl>
 <p>Get a value from its symbol id. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td></td></tr>
+    <tr><td class="paramname">id_to_look_for</td><td></td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Value* Returns nullptr if the value can not be found </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00027">27</a> of file <a class="el" href="../../d5/d04/Scope_8cpp_source.html">Scope.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00049">49</a> of file <a class="el" href="../../d5/d04/Scope_8cpp_source.html">Scope.cpp</a>.</p>
 
 </div>
 </div>
@@ -322,7 +401,7 @@ false Otherwise </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00017">17</a> of file <a class="el" href="../../d5/d04/Scope_8cpp_source.html">Scope.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00034">34</a> of file <a class="el" href="../../d5/d04/Scope_8cpp_source.html">Scope.cpp</a>.</p>
 
 </div>
 </div>
@@ -369,7 +448,9 @@ false Otherwise </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00012">12</a> of file <a class="el" href="../../d5/d04/Scope_8cpp_source.html">Scope.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00024">24</a> of file <a class="el" href="../../d5/d04/Scope_8cpp_source.html">Scope.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00013">mergeRefInto()</a>.</p>
 
 </div>
 </div>
@@ -399,11 +480,11 @@ false Otherwise </dd></dl>
 <p>Return the size of the scope. </p>
 <dl class="section return"><dt>Returns</dt><dd>const std::size_t </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00047">47</a> of file <a class="el" href="../../d5/d04/Scope_8cpp_source.html">Scope.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00079">79</a> of file <a class="el" href="../../d5/d04/Scope_8cpp_source.html">Scope.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d8/dcd/Scope_8hpp_source.html#l00088">m_data</a>.</p>
+<p class="reference">References <a class="el" href="../../d8/dcd/Scope_8hpp_source.html#l00105">m_data</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d27/VM_8cpp_source.html#l01227">Ark::VM::backtrace()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d27/VM_8cpp_source.html#l01083">Ark::VM::backtrace()</a>.</p>
 
 </div>
 </div>
@@ -428,7 +509,7 @@ false Otherwise </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/dcd/Scope_8hpp_source.html#l00085">85</a> of file <a class="el" href="../../d8/dcd/Scope_8hpp_source.html">Scope.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/dcd/Scope_8hpp_source.html#l00102">102</a> of file <a class="el" href="../../d8/dcd/Scope_8hpp_source.html">Scope.hpp</a>.</p>
 
 </div>
 </div>
@@ -452,7 +533,45 @@ false Otherwise </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/dcd/Scope_8hpp_source.html#l00084">84</a> of file <a class="el" href="../../d8/dcd/Scope_8hpp_source.html">Scope.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/dcd/Scope_8hpp_source.html#l00101">101</a> of file <a class="el" href="../../d8/dcd/Scope_8hpp_source.html">Scope.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af2456fee58a881cf0be6a4970d21de01" name="af2456fee58a881cf0be6a4970d21de01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2456fee58a881cf0be6a4970d21de01">&#9670;&#160;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d44/Module_8hpp.html#ac62a8551c675391a8cf01d112e42d755">ARK_API</a> bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html">Scope</a> &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html">Scope</a> &amp;&#160;</td>
+          <td class="paramname"><em>B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00084">84</a> of file <a class="el" href="../../d5/d04/Scope_8cpp_source.html">Scope.cpp</a>.</p>
 
 </div>
 </div>
@@ -477,9 +596,57 @@ false Otherwise </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/dcd/Scope_8hpp_source.html#l00088">88</a> of file <a class="el" href="../../d8/dcd/Scope_8hpp_source.html">Scope.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/dcd/Scope_8hpp_source.html#l00105">105</a> of file <a class="el" href="../../d8/dcd/Scope_8hpp_source.html">Scope.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d27/VM_8cpp_source.html#l01227">Ark::VM::backtrace()</a>, <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00007">Scope()</a>, and <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00047">size()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d27/VM_8cpp_source.html#l01083">Ark::VM::backtrace()</a>, <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00013">mergeRefInto()</a>, <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00007">Scope()</a>, and <a class="el" href="../../d5/d04/Scope_8cpp_source.html#l00079">size()</a>.</p>
+
+</div>
+</div>
+<a id="a35f2ce2dc58e471cf4756d5182bfcc98" name="a35f2ce2dc58e471cf4756d5182bfcc98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35f2ce2dc58e471cf4756d5182bfcc98">&#9670;&#160;</a></span>m_max_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Ark::internal::Scope::m_max_id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/dcd/Scope_8hpp_source.html#l00107">107</a> of file <a class="el" href="../../d8/dcd/Scope_8hpp_source.html">Scope.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a978139403ad247591fc567170aff6302" name="a978139403ad247591fc567170aff6302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a978139403ad247591fc567170aff6302">&#9670;&#160;</a></span>m_min_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Ark::internal::Scope::m_min_id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/dcd/Scope_8hpp_source.html#l00106">106</a> of file <a class="el" href="../../d8/dcd/Scope_8hpp_source.html">Scope.hpp</a>.</p>
 
 </div>
 </div>
@@ -493,7 +660,7 @@ false Otherwise </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/de4/namespaceArk.html">Ark</a></li><li class="navelem"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html">internal</a></li><li class="navelem"><a class="el" href="../../d5/d74/classArk_1_1internal_1_1Scope.html">Scope</a></li>
-    <li class="footer">Generated on Sun Apr 23 2023 20:17:28 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Sat May 25 2024 22:44:26 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

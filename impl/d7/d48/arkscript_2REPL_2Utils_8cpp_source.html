@@ -75,136 +75,145 @@ $(document).ready(function(){initNavTree('d7/d48/arkscript_2REPL_2Utils_8cpp_sou
   <div class="headertitle"><div class="title">Utils.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/d3e/Util_8hpp.html">Ark/REPL/replxx/Util.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<a href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d85/CLI_2REPL_2Utils_8hpp.html">CLI/REPL/Utils.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;regex&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="../../dc/d3e/Util_8hpp.html#a0c8262d34abfafe28351abc072c3e91b">    5</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#a0c8262d34abfafe28351abc072c3e91b">utf8str_codepoint_len</a>(<span class="keywordtype">char</span> <span class="keyword">const</span>* s, <span class="keywordtype">int</span> utf8len)</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d0e/namespaceArk_1_1internal.html">Ark::internal</a></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keywordtype">int</span> codepointLen = 0;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m4 = 128 + 64 + 32 + 16;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m3 = 128 + 64 + 32;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m2 = 128 + 64;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceArk_1_1internal.html#a6146cb020fc99ea827febe76168c020f">    7</a></span>    <span class="keywordtype">long</span> <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a6146cb020fc99ea827febe76168c020f">countOpenEnclosures</a>(<span class="keyword">const</span> std::string&amp; line, <span class="keyword">const</span> <span class="keywordtype">char</span> open, <span class="keyword">const</span> <span class="keywordtype">char</span> close)</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keywordflow">return</span> std::ranges::count(line, open) - std::ranges::count(line, close);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    }</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; utf8len; ++i, ++codepointLen)</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceArk_1_1internal.html#ad95f4c191466c48c5b0d8ef5b6c26a1b">   12</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#ad95f4c191466c48c5b0d8ef5b6c26a1b">trimWhitespace</a>(std::string&amp; line)</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordtype">char</span> c = s[i];</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordflow">if</span> ((c &amp; m4) == m4)</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            i += 3;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((c &amp; m3) == m3)</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            i += 2;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((c &amp; m2) == m2)</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            i += 1;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    }</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">return</span> codepointLen;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../dc/d3e/Util_8hpp.html#aea1c73842f42185ee352b27e4518b944">   27</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#aea1c73842f42185ee352b27e4518b944">context_len</a>(<span class="keywordtype">char</span> <span class="keyword">const</span>* prefix)</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">char</span> <span class="keyword">const</span> wb[] = <span class="stringliteral">&quot; \t\n\r\v\f-=+*&amp;^%$#@!,./?&lt;&gt;;:`~&#39;\&quot;[]{}()\\|&quot;</span>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">int</span> i = std::strlen(prefix) - 1;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">int</span> cl = 0;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">while</span> (i &gt;= 0)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">if</span> (std::strchr(wb, prefix[i]) != NULL)</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        ++cl;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        --i;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">return</span> cl;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">const</span> std::size_t string_begin = line.find_first_not_of(<span class="stringliteral">&quot; \t&quot;</span>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordflow">if</span> (std::string::npos != string_begin)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="keyword">const</span> std::size_t string_end = line.find_last_not_of(<span class="stringliteral">&quot; \t&quot;</span>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            line = line.substr(string_begin, string_end - string_begin + 1);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceArk_1_1internal.html#a3bd3b3636182456691fede1fb1604da5">   22</a></span>    std::size_t <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a3bd3b3636182456691fede1fb1604da5">codepointLength</a>(<span class="keyword">const</span> std::string&amp; str)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        std::size_t len = 0;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> c : str)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            len += (c &amp; 0xc0) != 0x80;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">return</span> len;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceArk_1_1internal.html#a4c781b2c862e05711632d9a2df5c355e">   30</a></span>    std::size_t <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a4c781b2c862e05711632d9a2df5c355e">contextLen</a>(<span class="keyword">const</span> std::string&amp; prefix)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">const</span> std::string word_break = <span class="stringliteral">&quot; \t\n\r\v\f=+*&amp;^%$#@!,./?&lt;&gt;;`~&#39;\&quot;[]{}()\\|&quot;</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordtype">int</span> i = prefix.size() - 1;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        std::size_t count = 0;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">while</span> (i &gt;= 0)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">if</span> (word_break.find(prefix[i]) != std::string::npos)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            ++count;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            --i;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../dc/d3e/Util_8hpp.html#a45cc3fbbd53aa60d6f49bddd7685c5ab">   45</a></span>Replxx::completions_t <a class="code hl_function" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#acd76803225b075870b092cddca28c682">hook_completion</a>(std::string <span class="keyword">const</span>&amp; context, <span class="keywordtype">int</span>&amp; contextLen, std::vector&lt;std::string&gt; <span class="keyword">const</span>&amp; examples)</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    Replxx::completions_t completions;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">int</span> utf8ContextLen = <a class="code hl_function" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#aea1c73842f42185ee352b27e4518b944">context_len</a>(context.c_str());</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">int</span> prefixLen = context.length() - utf8ContextLen;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">if</span> ((prefixLen &gt; 0) &amp;&amp; (context[prefixLen - 1] == <span class="charliteral">&#39;\\&#39;</span>))</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        --prefixLen;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        ++utf8ContextLen;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    contextLen = <a class="code hl_function" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#a0c8262d34abfafe28351abc072c3e91b">utf8str_codepoint_len</a>(context.c_str() + prefixLen, utf8ContextLen);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    std::string prefix = context.substr(prefixLen);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span>&amp; e : examples)</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">if</span> (e.compare(0, prefix.size(), prefix) == 0)</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            completions.emplace_back(e.c_str());</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">return</span> completions;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">return</span> count;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceArk_1_1internal.html#ab83aa7f91a1a6b0b8068635a8a11aa8d">   48</a></span>    replxx::Replxx::completions_t <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#ab83aa7f91a1a6b0b8068635a8a11aa8d">hookCompletion</a>(<span class="keyword">const</span> std::string&amp; context, <span class="keywordtype">int</span>&amp; length)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        replxx::Replxx::completions_t completions;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        std::size_t utf8_context_len = <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a4c781b2c862e05711632d9a2df5c355e">contextLen</a>(context);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        std::size_t prefix_len = context.size() - utf8_context_len;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">if</span> (prefix_len &gt; 0 &amp;&amp; context[prefix_len - 1] == <span class="charliteral">&#39;\\&#39;</span>)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            --prefix_len;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            ++utf8_context_len;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        length = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a3bd3b3636182456691fede1fb1604da5">codepointLength</a>(context.substr(prefix_len, utf8_context_len)));</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">const</span> std::string prefix = context.substr(prefix_len);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : <a class="code hl_variable" href="../../dc/d0e/namespaceArk_1_1internal.html#a3f10d4bafadea181cb23fde3b076de65">KeywordsDict</a>)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">if</span> (e.starts_with(prefix) == 0)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                completions.emplace_back(e.c_str());</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../dc/d3e/Util_8hpp.html#a681264c821c2a71566e2d6e57629e0fc">   69</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#ad7bcc8b41688595c8e7049ea2d3c3b98">hook_color</a>(std::string <span class="keyword">const</span>&amp; context, Replxx::colors_t&amp; colors, std::vector&lt;std::pair&lt;std::string, Replxx::Color&gt;&gt; <span class="keyword">const</span>&amp; regex_color)</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">// highlight matching regex sequences</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span>&amp; e : regex_color)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">return</span> completions;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceArk_1_1internal.html#a9ca5c521c176dd24a2fc807602767eab">   72</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a9ca5c521c176dd24a2fc807602767eab">hookColor</a>(<span class="keyword">const</span> std::string&amp; context, replxx::Replxx::colors_t&amp; colors)</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        std::size_t pos = 0;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        std::string str = context;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        std::smatch match;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">while</span> (std::regex_search(str, match, std::regex(e.first)))</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            std::string c = match[0];</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            std::string prefix = match.prefix().str();</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            pos += <a class="code hl_function" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#a0c8262d34abfafe28351abc072c3e91b">utf8str_codepoint_len</a>(prefix.c_str(), <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(prefix.length()));</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keywordtype">int</span> len = <a class="code hl_function" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#a0c8262d34abfafe28351abc072c3e91b">utf8str_codepoint_len</a>(c.c_str(), <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(c.length()));</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; len; ++i)</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                colors.at(pos + i) = e.second;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            pos += len;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            str = match.suffix();</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        }</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>}</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="../../dc/d3e/Util_8hpp.html#acd8a71e02f566f17518ba0bc05e47d4b">   94</a></span>Replxx::hints_t <a class="code hl_function" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#acd8a71e02f566f17518ba0bc05e47d4b">hook_hint</a>(std::string <span class="keyword">const</span>&amp; context, <span class="keywordtype">int</span>&amp; contextLen, Replxx::Color&amp; color, std::vector&lt;std::string&gt; <span class="keyword">const</span>&amp; examples)</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>{</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    Replxx::hints_t hints;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="comment">// only show hint if prefix is at least &#39;n&#39; chars long</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="comment">// or if prefix begins with a specific character</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">int</span> utf8ContextLen = <a class="code hl_function" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#aea1c73842f42185ee352b27e4518b944">context_len</a>(context.c_str());</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">int</span> prefixLen = context.length() - utf8ContextLen;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    contextLen = <a class="code hl_function" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#a0c8262d34abfafe28351abc072c3e91b">utf8str_codepoint_len</a>(context.c_str() + prefixLen, utf8ContextLen);</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    std::string prefix = context.substr(prefixLen);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">if</span> (prefix.size() &gt;= 2 || (!prefix.empty() &amp;&amp; prefix.at(0) == <span class="charliteral">&#39;.&#39;</span>))</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    {</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span>&amp; e : examples)</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        {</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keywordflow">if</span> (e.compare(0, prefix.size(), prefix) == 0)</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                hints.emplace_back(e.c_str());</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        }</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">if</span> (hints.size() == 1)</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        color = Replxx::Color::GREEN;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="comment">// highlight matching regex sequences</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [regex, color] : <a class="code hl_variable" href="../../dc/d0e/namespaceArk_1_1internal.html#ae2f019589b52a422550ffec8959a2177">ColorsRegexDict</a>)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            std::size_t pos = 0;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            std::string str = context;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            std::smatch match;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordflow">while</span> (std::regex_search(str, match, std::regex(regex)))</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                std::string c = match[0];</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                std::string prefix = match.prefix().str();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                <span class="keyword">const</span> std::size_t len = <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a3bd3b3636182456691fede1fb1604da5">codepointLength</a>(c);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                pos += <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a3bd3b3636182456691fede1fb1604da5">codepointLength</a>(prefix);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; len; ++i)</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                    colors.at(pos + i) = color;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                pos += len;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                str = match.suffix();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceArk_1_1internal.html#a7f5008602a073d4a759788eac6b1581f">   97</a></span>    replxx::Replxx::hints_t <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a7f5008602a073d4a759788eac6b1581f">hookHint</a>(<span class="keyword">const</span> std::string&amp; context, <span class="keywordtype">int</span>&amp; length, replxx::Replxx::Color&amp; color)</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        replxx::Replxx::hints_t hints;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="comment">// only show hint if prefix is at least &#39;n&#39; chars long</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="comment">// or if prefix begins with a specific character</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keyword">const</span> std::size_t utf8_context_len = <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a4c781b2c862e05711632d9a2df5c355e">contextLen</a>(context);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keyword">const</span> std::size_t prefix_len = context.size() - utf8_context_len;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        length = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a3bd3b3636182456691fede1fb1604da5">codepointLength</a>(context.substr(prefix_len, utf8_context_len)));</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keyword">const</span> std::string prefix = context.substr(prefix_len);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">if</span> (prefix.size() &gt;= 2 || (!prefix.empty() &amp;&amp; prefix.at(0) == <span class="charliteral">&#39;.&#39;</span>))</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : <a class="code hl_variable" href="../../dc/d0e/namespaceArk_1_1internal.html#a3f10d4bafadea181cb23fde3b076de65">KeywordsDict</a>)</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                <span class="keywordflow">if</span> (e.compare(0, prefix.size(), prefix) == 0)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                    hints.emplace_back(e.c_str());</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        }</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordflow">return</span> hints;</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>}</div>
-<div class="ttc" id="aUtil_8hpp_html"><div class="ttname"><a href="../../dc/d3e/Util_8hpp.html">Util.hpp</a></div><div class="ttdoc">replxx utilities</div></div>
-<div class="ttc" id="aarkscript_2REPL_2Utils_8cpp_html_a0c8262d34abfafe28351abc072c3e91b"><div class="ttname"><a href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#a0c8262d34abfafe28351abc072c3e91b">utf8str_codepoint_len</a></div><div class="ttdeci">int utf8str_codepoint_len(char const *s, int utf8len)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00005">Utils.cpp:5</a></div></div>
-<div class="ttc" id="aarkscript_2REPL_2Utils_8cpp_html_acd76803225b075870b092cddca28c682"><div class="ttname"><a href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#acd76803225b075870b092cddca28c682">hook_completion</a></div><div class="ttdeci">Replxx::completions_t hook_completion(std::string const &amp;context, int &amp;contextLen, std::vector&lt; std::string &gt; const &amp;examples)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00045">Utils.cpp:45</a></div></div>
-<div class="ttc" id="aarkscript_2REPL_2Utils_8cpp_html_acd8a71e02f566f17518ba0bc05e47d4b"><div class="ttname"><a href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#acd8a71e02f566f17518ba0bc05e47d4b">hook_hint</a></div><div class="ttdeci">Replxx::hints_t hook_hint(std::string const &amp;context, int &amp;contextLen, Replxx::Color &amp;color, std::vector&lt; std::string &gt; const &amp;examples)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00094">Utils.cpp:94</a></div></div>
-<div class="ttc" id="aarkscript_2REPL_2Utils_8cpp_html_ad7bcc8b41688595c8e7049ea2d3c3b98"><div class="ttname"><a href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#ad7bcc8b41688595c8e7049ea2d3c3b98">hook_color</a></div><div class="ttdeci">void hook_color(std::string const &amp;context, Replxx::colors_t &amp;colors, std::vector&lt; std::pair&lt; std::string, Replxx::Color &gt; &gt; const &amp;regex_color)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00069">Utils.cpp:69</a></div></div>
-<div class="ttc" id="aarkscript_2REPL_2Utils_8cpp_html_aea1c73842f42185ee352b27e4518b944"><div class="ttname"><a href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#aea1c73842f42185ee352b27e4518b944">context_len</a></div><div class="ttdeci">int context_len(char const *prefix)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00027">Utils.cpp:27</a></div></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">if</span> (hints.size() == 1)</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            color = replxx::Replxx::Color::GREEN;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">return</span> hints;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
+<div class="ttc" id="aCLI_2REPL_2Utils_8hpp_html"><div class="ttname"><a href="../../df/d85/CLI_2REPL_2Utils_8hpp.html">Utils.hpp</a></div><div class="ttdoc">replxx utilities</div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_html"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html">Ark::internal</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d84/Builtins_8hpp_source.html#l00025">Builtins.hpp:26</a></div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_html_a3bd3b3636182456691fede1fb1604da5"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#a3bd3b3636182456691fede1fb1604da5">Ark::internal::codepointLength</a></div><div class="ttdeci">std::size_t codepointLength(const std::string &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00022">Utils.cpp:22</a></div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_html_a3f10d4bafadea181cb23fde3b076de65"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#a3f10d4bafadea181cb23fde3b076de65">Ark::internal::KeywordsDict</a></div><div class="ttdeci">const std::vector&lt; std::string &gt; KeywordsDict</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d85/CLI_2REPL_2Utils_8hpp_source.html#l00022">Utils.hpp:22</a></div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_html_a4c781b2c862e05711632d9a2df5c355e"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#a4c781b2c862e05711632d9a2df5c355e">Ark::internal::contextLen</a></div><div class="ttdeci">std::size_t contextLen(const std::string &amp;prefix)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00030">Utils.cpp:30</a></div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_html_a6146cb020fc99ea827febe76168c020f"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#a6146cb020fc99ea827febe76168c020f">Ark::internal::countOpenEnclosures</a></div><div class="ttdeci">long countOpenEnclosures(const std::string &amp;line, char open, char close)</div><div class="ttdoc">Count the open enclosure and its counterpart: (), {}, [].</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00007">Utils.cpp:7</a></div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_html_a7f5008602a073d4a759788eac6b1581f"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#a7f5008602a073d4a759788eac6b1581f">Ark::internal::hookHint</a></div><div class="ttdeci">replxx::Replxx::hints_t hookHint(const std::string &amp;context, int &amp;length, replxx::Replxx::Color &amp;color)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00097">Utils.cpp:97</a></div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_html_a9ca5c521c176dd24a2fc807602767eab"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#a9ca5c521c176dd24a2fc807602767eab">Ark::internal::hookColor</a></div><div class="ttdeci">void hookColor(const std::string &amp;context, replxx::Replxx::colors_t &amp;colors)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00072">Utils.cpp:72</a></div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_html_ab83aa7f91a1a6b0b8068635a8a11aa8d"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#ab83aa7f91a1a6b0b8068635a8a11aa8d">Ark::internal::hookCompletion</a></div><div class="ttdeci">replxx::Replxx::completions_t hookCompletion(const std::string &amp;context, int &amp;length)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00048">Utils.cpp:48</a></div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_html_ad95f4c191466c48c5b0d8ef5b6c26a1b"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#ad95f4c191466c48c5b0d8ef5b6c26a1b">Ark::internal::trimWhitespace</a></div><div class="ttdeci">void trimWhitespace(std::string &amp;line)</div><div class="ttdoc">Remove whitespaces at the start and end of a string.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00012">Utils.cpp:12</a></div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_html_ae2f019589b52a422550ffec8959a2177"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#ae2f019589b52a422550ffec8959a2177">Ark::internal::ColorsRegexDict</a></div><div class="ttdeci">const std::vector&lt; std::pair&lt; std::string, replxx::Replxx::Color &gt; &gt; ColorsRegexDict</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d85/CLI_2REPL_2Utils_8hpp_source.html#l00056">Utils.hpp:56</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_2f97cbe3d7d7ee3d0a7f34ae796b7c3c.html">arkscript</a></li><li class="navelem"><a class="el" href="../../dir_b137344471615342cb36678e59bedd43.html">REPL</a></li><li class="navelem"><a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html">Utils.cpp</a></li>
-    <li class="footer">Generated on Sun Apr 23 2023 20:17:28 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Sat May 25 2024 22:44:26 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

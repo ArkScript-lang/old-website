@@ -89,7 +89,8 @@ $(document).ready(function(){initNavTree('d7/d22/classArk_1_1internal_1_1MacroEx
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d5/d8e/classArk_1_1internal_1_1MacroExecutorPipeline__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d5/d8e/classArk_1_1internal_1_1MacroExecutorPipeline__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -99,9 +100,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa984c3e2867567448108af5639c416b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classArk_1_1internal_1_1MacroExecutorPipeline.html#aa984c3e2867567448108af5639c416b2">MacroExecutorPipeline</a> (const std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../d5/d8f/classArk_1_1internal_1_1MacroExecutor.html">MacroExecutor</a> &gt; &gt; &amp;executors)</td></tr>
 <tr class="memdesc:aa984c3e2867567448108af5639c416b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Macro Executor Pipeline object.  <br /></td></tr>
 <tr class="separator:aa984c3e2867567448108af5639c416b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f4d8647b945273be83e5734925a9799"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classArk_1_1internal_1_1MacroExecutorPipeline.html#a1f4d8647b945273be83e5734925a9799">applyMacro</a> (<a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;node)</td></tr>
-<tr class="memdesc:a1f4d8647b945273be83e5734925a9799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes node through all MacroExecutors sequentially.  <br /></td></tr>
-<tr class="separator:a1f4d8647b945273be83e5734925a9799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae62299885394b1fc0439570252ed565a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classArk_1_1internal_1_1MacroExecutorPipeline.html#ae62299885394b1fc0439570252ed565a">applyMacro</a> (<a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;node) const</td></tr>
+<tr class="memdesc:ae62299885394b1fc0439570252ed565a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes node through all MacroExecutors sequentially.  <br /></td></tr>
+<tr class="separator:ae62299885394b1fc0439570252ed565a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -111,7 +112,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The class that initializes the MacroExecutors. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/daa/Pipeline_8hpp_source.html#l00028">28</a> of file <a class="el" href="../../d4/daa/Pipeline_8hpp_source.html">Pipeline.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/daa/Pipeline_8hpp_source.html#l00027">27</a> of file <a class="el" href="../../d4/daa/Pipeline_8hpp_source.html">Pipeline.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2c503ecb74a45fda27f2035e1bd2cc64" name="a2c503ecb74a45fda27f2035e1bd2cc64"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2c503ecb74a45fda27f2035e1bd2cc64">&#9670;&#160;</a></span>MacroExecutorPipeline() <span class="overload">[1/2]</span></h2>
@@ -143,6 +144,9 @@ Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Ark::internal::MacroExecutorPipeline::MacroExecutorPipeline </td>
@@ -152,6 +156,11 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Construct a new Macro Executor Pipeline object. </p>
@@ -167,8 +176,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1f4d8647b945273be83e5734925a9799" name="a1f4d8647b945273be83e5734925a9799"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f4d8647b945273be83e5734925a9799">&#9670;&#160;</a></span>applyMacro()</h2>
+<a id="ae62299885394b1fc0439570252ed565a" name="ae62299885394b1fc0439570252ed565a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae62299885394b1fc0439570252ed565a">&#9670;&#160;</a></span>applyMacro()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -178,7 +187,7 @@ Private Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;&#160;</td>
           <td class="paramname"><em>node</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -196,9 +205,9 @@ false </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d19/Pipeline_8cpp_source.html#l00009">9</a> of file <a class="el" href="../../dd/d19/Pipeline_8cpp_source.html">Pipeline.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d4/daa/Pipeline_8hpp_source.html#l00050">m_executors</a>.</p>
+<p class="reference">References <a class="el" href="../../d4/daa/Pipeline_8hpp_source.html#l00049">m_executors</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00213">Ark::internal::MacroProcessor::applyMacro()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00183">Ark::internal::MacroProcessor::applyMacro()</a>.</p>
 
 </div>
 </div>
@@ -223,7 +232,7 @@ false </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/daa/Pipeline_8hpp_source.html#l00050">50</a> of file <a class="el" href="../../d4/daa/Pipeline_8hpp_source.html">Pipeline.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/daa/Pipeline_8hpp_source.html#l00049">49</a> of file <a class="el" href="../../d4/daa/Pipeline_8hpp_source.html">Pipeline.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../dd/d19/Pipeline_8cpp_source.html#l00009">applyMacro()</a>.</p>
 
@@ -239,7 +248,7 @@ false </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/de4/namespaceArk.html">Ark</a></li><li class="navelem"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html">internal</a></li><li class="navelem"><a class="el" href="../../d7/d22/classArk_1_1internal_1_1MacroExecutorPipeline.html">MacroExecutorPipeline</a></li>
-    <li class="footer">Generated on Sun Apr 23 2023 20:17:28 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Sat May 25 2024 22:44:26 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

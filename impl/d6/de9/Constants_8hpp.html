@@ -82,21 +82,24 @@ $(document).ready(function(){initNavTree('d6/de9/Constants_8hpp.html','../../');
 
 <p>Constants used by ArkScript.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;cinttypes&gt;</code><br />
+<div class="textblock"><code>#include &lt;string_view&gt;</code><br />
+<code>#include &lt;cinttypes&gt;</code><br />
 <code>#include &lt;cstddef&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Include dependency graph for Constants.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d9c/Constants_8hpp__incl.svg" width="176" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d9c/Constants_8hpp__incl.svg" width="286" height="140"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/d09/Constants_8hpp__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/d09/Constants_8hpp__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 </div>
 <p><a href="../../d6/de9/Constants_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -108,8 +111,6 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:abdfb061c37bb03ce7d33cea01c70a64d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/Constants_8hpp.html#abdfb061c37bb03ce7d33cea01c70a64d">ARK_COMPILATION_OPTIONS</a>&#160;&#160;&#160;&quot;&quot;</td></tr>
-<tr class="separator:abdfb061c37bb03ce7d33cea01c70a64d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1117e7a814daf74a4935079b9b29ab84"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/Constants_8hpp.html#a1117e7a814daf74a4935079b9b29ab84">ARK_COMPILER</a>&#160;&#160;&#160;&quot;AppleClang&quot;</td></tr>
 <tr class="separator:a1117e7a814daf74a4935079b9b29ab84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af90a944d153c7ebc6603779c1438c80f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/Constants_8hpp.html#af90a944d153c7ebc6603779c1438c80f">ARK_CACHE_DIRNAME</a>&#160;&#160;&#160;&quot;__arkscript__&quot;</td></tr>
@@ -127,10 +128,10 @@ Variables</h2></td></tr>
 <tr class="separator:ae92e5cb7f969a516e5ad53ff6c0b9800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b54f548bc7ddf5e0833bd12e4b65635"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/Constants_8hpp.html#a8b54f548bc7ddf5e0833bd12e4b65635">ARK_VERSION_PATCH</a> = 0</td></tr>
 <tr class="separator:a8b54f548bc7ddf5e0833bd12e4b65635"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afceb83565468f28ce4348246564e8549"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/Constants_8hpp.html#afceb83565468f28ce4348246564e8549">ARK_VERSION</a> = (<a class="el" href="../../d6/de9/Constants_8hpp.html#a4c94ae2a54ca868cb8971136188976e3">ARK_VERSION_MAJOR</a> &lt;&lt; 16) + (<a class="el" href="../../d6/de9/Constants_8hpp.html#ae92e5cb7f969a516e5ad53ff6c0b9800">ARK_VERSION_MINOR</a> &lt;&lt; 8) + <a class="el" href="../../d6/de9/Constants_8hpp.html#a8b54f548bc7ddf5e0833bd12e4b65635">ARK_VERSION_PATCH</a></td></tr>
-<tr class="separator:afceb83565468f28ce4348246564e8549"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af383c0a7d89264d7b27c2c06f465c770"><td class="memItemLeft" align="right" valign="top">constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/Constants_8hpp.html#af383c0a7d89264d7b27c2c06f465c770">ARK_VERSION_STR</a> [4] = { <a class="el" href="../../d6/de9/Constants_8hpp.html#a4c94ae2a54ca868cb8971136188976e3">ARK_VERSION_MAJOR</a> + '0', <a class="el" href="../../d6/de9/Constants_8hpp.html#ae92e5cb7f969a516e5ad53ff6c0b9800">ARK_VERSION_MINOR</a> + '0', <a class="el" href="../../d6/de9/Constants_8hpp.html#a8b54f548bc7ddf5e0833bd12e4b65635">ARK_VERSION_PATCH</a> + '0', 0x00 }</td></tr>
-<tr class="separator:af383c0a7d89264d7b27c2c06f465c770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f21f9f02fb2ab49de7188d2d5df9247"><td class="memItemLeft" align="right" valign="top">constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/Constants_8hpp.html#a3f21f9f02fb2ab49de7188d2d5df9247">ARK_VERSION</a> { &quot;4.0.0&quot; }</td></tr>
+<tr class="separator:a3f21f9f02fb2ab49de7188d2d5df9247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae5b2ed191faeb9565a4c721fd906eb2"><td class="memItemLeft" align="right" valign="top">constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/Constants_8hpp.html#aae5b2ed191faeb9565a4c721fd906eb2">ARK_FULL_VERSION</a> { &quot;4.0.0-e10c086c&quot; }</td></tr>
+<tr class="separator:aae5b2ed191faeb9565a4c721fd906eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed352fcea78905393d0edd9e1ae1423d"><td class="memItemLeft" align="right" valign="top">constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/de4/namespaceArk.html#aed352fcea78905393d0edd9e1ae1423d">Ark::FeatureRemoveUnusedVars</a> = 1 &lt;&lt; 4</td></tr>
 <tr class="separator:aed352fcea78905393d0edd9e1ae1423d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae34e72be816cd85292979aa1126ddf2e"><td class="memItemLeft" align="right" valign="top">constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/de4/namespaceArk.html#ae34e72be816cd85292979aa1126ddf2e">Ark::FeatureShowWarnings</a> = 1 &lt;&lt; 5</td></tr>
@@ -143,9 +144,9 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Constants used by ArkScript. </p>
 <dl class="section author"><dt>Author</dt><dd>Alexandre Plateau (<a href="#" onclick="location.href='mai'+'lto:'+'lex'+'pl'+'t.d'+'ev'+'@gm'+'ai'+'l.c'+'om'; return false;">lexpl<span class="obfuscator">.nosp@m.</span>t.de<span class="obfuscator">.nosp@m.</span>v@gma<span class="obfuscator">.nosp@m.</span>il.c<span class="obfuscator">.nosp@m.</span>om</a>) </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.2 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2020-10-27</dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2020 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2020-2024 </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -161,23 +162,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00025">25</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
-
-</div>
-</div>
-<a id="abdfb061c37bb03ce7d33cea01c70a64d" name="abdfb061c37bb03ce7d33cea01c70a64d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdfb061c37bb03ce7d33cea01c70a64d">&#9670;&#160;</a></span>ARK_COMPILATION_OPTIONS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define ARK_COMPILATION_OPTIONS&#160;&#160;&#160;&quot;&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00023">23</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00026">26</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -193,7 +178,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00024">24</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00025">25</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -209,7 +194,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00026">26</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00027">27</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -225,13 +210,13 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00039">39</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00040">40</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="afceb83565468f28ce4348246564e8549" name="afceb83565468f28ce4348246564e8549"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afceb83565468f28ce4348246564e8549">&#9670;&#160;</a></span>ARK_VERSION</h2>
+<a id="aae5b2ed191faeb9565a4c721fd906eb2" name="aae5b2ed191faeb9565a4c721fd906eb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae5b2ed191faeb9565a4c721fd906eb2">&#9670;&#160;</a></span>ARK_FULL_VERSION</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,7 +225,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr int ARK_VERSION = (<a class="el" href="../../d6/de9/Constants_8hpp.html#a4c94ae2a54ca868cb8971136188976e3">ARK_VERSION_MAJOR</a> &lt;&lt; 16) + (<a class="el" href="../../d6/de9/Constants_8hpp.html#ae92e5cb7f969a516e5ad53ff6c0b9800">ARK_VERSION_MINOR</a> &lt;&lt; 8) + <a class="el" href="../../d6/de9/Constants_8hpp.html#a8b54f548bc7ddf5e0833bd12e4b65635">ARK_VERSION_PATCH</a></td>
+          <td class="memname">constexpr std::string_view ARK_FULL_VERSION { &quot;4.0.0-e10c086c&quot; }</td>
         </tr>
       </table>
   </td>
@@ -250,7 +235,35 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00020">20</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00023">23</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../df/d0a/main_8cpp_source.html#l00017">main()</a>, and <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00019">Ark::Repl::run()</a>.</p>
+
+</div>
+</div>
+<a id="a3f21f9f02fb2ab49de7188d2d5df9247" name="a3f21f9f02fb2ab49de7188d2d5df9247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f21f9f02fb2ab49de7188d2d5df9247">&#9670;&#160;</a></span>ARK_VERSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::string_view ARK_VERSION { &quot;4.0.0&quot; }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00022">22</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d0/da0/State_8cpp_source.html#l00147">Ark::State::configure()</a>.</p>
 
 </div>
 </div>
@@ -274,9 +287,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00016">16</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00018">18</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d0/da0/State_8cpp_source.html#l00201">Ark::State::configure()</a>, <a class="el" href="../../df/d0a/main_8cpp_source.html#l00016">main()</a>, <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00109">Ark::Repl::print_repl_header()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00093">Ark::Compiler::pushFileHeader()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d0/da0/State_8cpp_source.html#l00147">Ark::State::configure()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00090">Ark::Compiler::pushFileHeader()</a>.</p>
 
 </div>
 </div>
@@ -300,9 +313,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00017">17</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00019">19</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../df/d0a/main_8cpp_source.html#l00016">main()</a>, <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00109">Ark::Repl::print_repl_header()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00093">Ark::Compiler::pushFileHeader()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00090">Ark::Compiler::pushFileHeader()</a>.</p>
 
 </div>
 </div>
@@ -326,35 +339,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00018">18</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00020">20</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../df/d0a/main_8cpp_source.html#l00016">main()</a>, <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00109">Ark::Repl::print_repl_header()</a>, and <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00093">Ark::Compiler::pushFileHeader()</a>.</p>
-
-</div>
-</div>
-<a id="af383c0a7d89264d7b27c2c06f465c770" name="af383c0a7d89264d7b27c2c06f465c770"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af383c0a7d89264d7b27c2c06f465c770">&#9670;&#160;</a></span>ARK_VERSION_STR</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr char ARK_VERSION_STR[4] = { <a class="el" href="../../d6/de9/Constants_8hpp.html#a4c94ae2a54ca868cb8971136188976e3">ARK_VERSION_MAJOR</a> + '0', <a class="el" href="../../d6/de9/Constants_8hpp.html#ae92e5cb7f969a516e5ad53ff6c0b9800">ARK_VERSION_MINOR</a> + '0', <a class="el" href="../../d6/de9/Constants_8hpp.html#a8b54f548bc7ddf5e0833bd12e4b65635">ARK_VERSION_PATCH</a> + '0', 0x00 }</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00021">21</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../d0/da0/State_8cpp_source.html#l00201">Ark::State::configure()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dfa/Compiler_8cpp_source.html#l00090">Ark::Compiler::pushFileHeader()</a>.</p>
 
 </div>
 </div>
@@ -364,7 +351,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_a8b6c64285bf9ac60f50770eb2fc48b5.html">Ark</a></li><li class="navelem"><a class="el" href="../../d6/de9/Constants_8hpp.html">Constants.hpp</a></li>
-    <li class="footer">Generated on Sun Apr 23 2023 20:17:28 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Sat May 25 2024 22:44:26 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

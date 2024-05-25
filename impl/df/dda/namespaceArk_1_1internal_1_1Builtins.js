@@ -19,7 +19,6 @@ var namespaceArk_1_1internal_1_1Builtins =
     [ "List", "d0/d7b/namespaceArk_1_1internal_1_1Builtins_1_1List.html", [
       [ "fill", "d0/d7b/namespaceArk_1_1internal_1_1Builtins_1_1List.html#a87e837e499a183369bd87bf4070be8a4", null ],
       [ "findInList", "d0/d7b/namespaceArk_1_1internal_1_1Builtins_1_1List.html#aee1c6ccdc5b5a6587f408882d2446916", null ],
-      [ "removeAtList", "d0/d7b/namespaceArk_1_1internal_1_1Builtins_1_1List.html#a323d6d8dfc4077dca04d99294f25edf5", null ],
       [ "reverseList", "d0/d7b/namespaceArk_1_1internal_1_1Builtins_1_1List.html#a9c95b27ac4ea35c3334bf8eab3ac2c53", null ],
       [ "setListAt", "d0/d7b/namespaceArk_1_1internal_1_1Builtins_1_1List.html#acc5f6d22a17a9be1a4266bffd6687b69", null ],
       [ "sliceList", "d0/d7b/namespaceArk_1_1internal_1_1Builtins_1_1List.html#affe9845d93258e00778ad150063c53ef", null ],

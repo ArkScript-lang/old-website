@@ -7,17 +7,13 @@ digraph "/Users/fola/Documents/ArkScript/Ark/src/arkscript/REPL/Utils.cpp"
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   Node1 [label="/Users/fola/Documents\l/ArkScript/Ark/src/arkscript\l/REPL/Utils.cpp",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="steelblue1",style="solid"];
-  Node2 [label="Ark/REPL/replxx/Util.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$dc/d3e/Util_8hpp.html",tooltip="replxx utilities"];
+  Node2 [label="CLI/REPL/Utils.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$df/d85/CLI_2REPL_2Utils_8hpp.html",tooltip="replxx utilities"];
   Node2 -> Node3 [color="steelblue1",style="solid"];
   Node3 [label="vector",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node2 -> Node4 [color="steelblue1",style="solid"];
-  Node4 [label="utility",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node4 [label="string",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node2 -> Node5 [color="steelblue1",style="solid"];
-  Node5 [label="string",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
-  Node2 -> Node6 [color="steelblue1",style="solid"];
-  Node6 [label="replxx.hxx",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
-  Node1 -> Node7 [color="steelblue1",style="solid"];
-  Node7 [label="cstring",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
-  Node1 -> Node8 [color="steelblue1",style="solid"];
-  Node8 [label="regex",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node5 [label="replxx.hxx",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node1 -> Node6 [color="steelblue1",style="solid"];
+  Node6 [label="regex",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
 }

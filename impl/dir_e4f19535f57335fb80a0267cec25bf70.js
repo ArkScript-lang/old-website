@@ -5,7 +5,9 @@ var dir_e4f19535f57335fb80a0267cec25bf70 =
     [ "BytecodeReader.hpp", "d1/d84/BytecodeReader_8hpp.html", "d1/d84/BytecodeReader_8hpp" ],
     [ "Common.hpp", "d8/ddd/Common_8hpp.html", "d8/ddd/Common_8hpp" ],
     [ "Compiler.hpp", "d8/d0f/Compiler_8hpp.html", "d8/d0f/Compiler_8hpp" ],
+    [ "ImportSolver.hpp", "d1/db0/ImportSolver_8hpp.html", "d1/db0/ImportSolver_8hpp" ],
     [ "Instructions.hpp", "d8/daa/Instructions_8hpp.html", "d8/daa/Instructions_8hpp" ],
-    [ "JsonCompiler.hpp", "dc/dfd/JsonCompiler_8hpp.html", "dc/dfd/JsonCompiler_8hpp" ],
-    [ "ValTableElem.hpp", "dd/de7/ValTableElem_8hpp.html", "dd/de7/ValTableElem_8hpp" ]
+    [ "ValTableElem.hpp", "dd/de7/ValTableElem_8hpp.html", "dd/de7/ValTableElem_8hpp" ],
+    [ "Welder.hpp", "de/d8e/Welder_8hpp.html", "de/d8e/Welder_8hpp" ],
+    [ "Word.hpp", "db/d53/Word_8hpp.html", "db/d53/Word_8hpp" ]
 ];

@@ -87,19 +87,22 @@ $(document).ready(function(){initNavTree('d7/dc6/Node_8hpp.html','../../'); init
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d8/ddd/Common_8hpp_source.html">Ark/Compiler/Common.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d5/d40/Platform_8hpp_source.html">Ark/Platform.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Include dependency graph for Node.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/dc1/Node_8hpp__incl.svg" width="598" height="212"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/dc1/Node_8hpp__incl.svg" width="638" height="214"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d1/d5b/Node_8hpp__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d1/d5b/Node_8hpp__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 </div>
 <p><a href="../../d7/dc6/Node_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -119,20 +122,21 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a094277891f609486ba174a598eaefd9d"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a094277891f609486ba174a598eaefd9d">Ark::internal::operator&lt;&lt;</a> (std::ostream &amp;os, const std::vector&lt; Node &gt; &amp;N) noexcept</td></tr>
-<tr class="separator:a094277891f609486ba174a598eaefd9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c85a4205b0e3e491ad93b04b01ba4ac"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a4c85a4205b0e3e491ad93b04b01ba4ac"><td class="memTemplItemLeft" align="right" valign="top">Node&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a4c85a4205b0e3e491ad93b04b01ba4ac">Ark::internal::make_node</a> (T &amp;&amp;value, std::size_t line, std::size_t col, const std::string &amp;file)</td></tr>
-<tr class="separator:a4c85a4205b0e3e491ad93b04b01ba4ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab45a8c201540edd0c56a2ddb31f401fb"><td class="memItemLeft" align="right" valign="top">Node&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ab45a8c201540edd0c56a2ddb31f401fb">Ark::internal::make_node_list</a> (std::size_t line, std::size_t col, const std::string &amp;file)</td></tr>
-<tr class="separator:ab45a8c201540edd0c56a2ddb31f401fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afee79a2c7474000bc3f36e2860c4ed90"><td class="memItemLeft" align="right" valign="top">const Node &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#afee79a2c7474000bc3f36e2860c4ed90">Ark::internal::getTrueNode</a> ()</td></tr>
+<tr class="separator:afee79a2c7474000bc3f36e2860c4ed90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae222ef6c9be7460c2bf1c64ac9dc97a1"><td class="memItemLeft" align="right" valign="top">const Node &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ae222ef6c9be7460c2bf1c64ac9dc97a1">Ark::internal::getFalseNode</a> ()</td></tr>
+<tr class="separator:ae222ef6c9be7460c2bf1c64ac9dc97a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8819886538ddc9eccfbc6183e0d4af9f"><td class="memItemLeft" align="right" valign="top">const Node &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a8819886538ddc9eccfbc6183e0d4af9f">Ark::internal::getNilNode</a> ()</td></tr>
+<tr class="separator:a8819886538ddc9eccfbc6183e0d4af9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6b4c82b30920b2365347e5beb1587d2"><td class="memItemLeft" align="right" valign="top">const Node &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ae6b4c82b30920b2365347e5beb1587d2">Ark::internal::getListNode</a> ()</td></tr>
+<tr class="separator:ae6b4c82b30920b2365347e5beb1587d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b9a75d4a5e9bcfcf7b21ddbfc0d6ea5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a0b9a75d4a5e9bcfcf7b21ddbfc0d6ea5">Ark::internal::typeToString</a> (const Node &amp;node) noexcept</td></tr>
 <tr class="separator:a0b9a75d4a5e9bcfcf7b21ddbfc0d6ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>AST node used by the parser, optimizer and compiler. </p>
 <dl class="section author"><dt>Author</dt><dd>Alexandre Plateau (<a href="#" onclick="location.href='mai'+'lto:'+'lex'+'pl'+'t.d'+'ev'+'@gm'+'ai'+'l.c'+'om'; return false;">lexpl<span class="obfuscator">.nosp@m.</span>t.de<span class="obfuscator">.nosp@m.</span>v@gma<span class="obfuscator">.nosp@m.</span>il.c<span class="obfuscator">.nosp@m.</span>om</a>) </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.3 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.4 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2020-10-27</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2020-2021 </dd></dl>
 
@@ -143,7 +147,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_a8b6c64285bf9ac60f50770eb2fc48b5.html">Ark</a></li><li class="navelem"><a class="el" href="../../dir_e4f19535f57335fb80a0267cec25bf70.html">Compiler</a></li><li class="navelem"><a class="el" href="../../dir_100d7a05404dd55ce1a106aad5a3b28c.html">AST</a></li><li class="navelem"><a class="el" href="../../d7/dc6/Node_8hpp.html">Node.hpp</a></li>
-    <li class="footer">Generated on Sun Apr 23 2023 20:17:28 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Sat May 25 2024 22:44:26 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

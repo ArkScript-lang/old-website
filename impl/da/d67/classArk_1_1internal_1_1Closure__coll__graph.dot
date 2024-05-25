@@ -7,7 +7,7 @@ digraph "Ark::internal::Closure"
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   Node1 [label="Ark::internal::Closure",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Closure management."];
   Node2 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" m_scope" ];
-  Node2 [label="std::shared_ptr\< Scope \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node2 [label="std::shared_ptr\< Ark\l::internal::Scope \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
   Node3 -> Node2 [dir="back",color="darkorchid3",style="dashed",label=" ptr" ];
   Node3 [label="Ark::internal::Scope",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$d5/d74/classArk_1_1internal_1_1Scope.html",tooltip="A class to handle the VM scope more efficiently."];
   Node4 -> Node3 [dir="back",color="darkorchid3",style="dashed",label=" m_data" ];
@@ -16,7 +16,7 @@ digraph "Ark::internal::Closure"
   Node5 [label="std::vector\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
   Node6 -> Node5 [dir="back",color="darkorchid3",style="dashed",label=" elements" ];
   Node6 [label="T",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
-  Node7 -> Node2 [dir="back",color="orange",style="dashed",label=" \< Scope \>" ];
+  Node7 -> Node2 [dir="back",color="orange",style="dashed",label=" \< Ark::internal::Scope \>" ];
   Node7 [label="std::shared_ptr\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
   Node6 -> Node7 [dir="back",color="darkorchid3",style="dashed",label=" ptr" ];
 }

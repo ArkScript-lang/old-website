@@ -6,5 +6,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [label="Ark::internal::Scope",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d5/d74/classArk_1_1internal_1_1Scope.html",tooltip="A class to handle the VM scope more efficiently."];
+  Node0 [label="Ark::internal::MacroProcessor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d5/db5/classArk_1_1internal_1_1MacroProcessor.html",tooltip="The class handling the macros definitions and calls, given an AST."];
 }

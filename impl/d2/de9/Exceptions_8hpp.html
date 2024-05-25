@@ -74,76 +74,85 @@ $(document).ready(function(){initNavTree('d2/de9/Exceptions_8hpp.html','../../')
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Exceptions.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>ArkScript homemade exceptions.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;exception&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;stdexcept&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../de/dfd/Value_8hpp_source.html">Ark/VM/Value.hpp</a>&gt;</code><br />
+<code>#include &lt;optional&gt;</code><br />
+<code>#include &lt;ostream&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../db/d4e/utf8__char_8hpp_source.html">Ark/Compiler/AST/utf8_char.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d5/d40/Platform_8hpp_source.html">Ark/Platform.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Include dependency graph for Exceptions.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/dce/Exceptions_8hpp__incl.svg" width="100%" height="514"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/dce/Exceptions_8hpp__incl.svg" width="100%" height="472"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d6/d29/Exceptions_8hpp__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d6/d29/Exceptions_8hpp__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 </div>
 <p><a href="../../d2/de9/Exceptions_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/classArk_1_1Error.html">Ark::Error</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d26/classArk_1_1TypeError.html">Ark::TypeError</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A type error triggered when types don't match.  <a href="../../d2/d26/classArk_1_1TypeError.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d18/classArk_1_1ZeroDivisionError.html">Ark::ZeroDivisionError</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A special zero division error triggered when a number is divided by 0.  <a href="../../da/d18/classArk_1_1ZeroDivisionError.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d05/classArk_1_1PowError.html">Ark::PowError</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pow error triggered when we can't do a pow b.  <a href="../../d8/d05/classArk_1_1PowError.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df9/classArk_1_1AssertionFailed.html">Ark::AssertionFailed</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An assertion error, only triggered from ArkScript code through (assert expr error-message)  <a href="../../d3/df9/classArk_1_1AssertionFailed.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d6d/classArk_1_1SyntaxError.html">Ark::SyntaxError</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../dd/d6d/classArk_1_1SyntaxError.html" title="SyntaxError thrown by the lexer.">SyntaxError</a> thrown by the lexer.  <a href="../../dd/d6d/classArk_1_1SyntaxError.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d1a/classArk_1_1ParseError.html">Ark::ParseError</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d9/d1a/classArk_1_1ParseError.html" title="ParseError thrown by the parser.">ParseError</a> thrown by the parser.  <a href="../../d9/d1a/classArk_1_1ParseError.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/classArk_1_1OptimizerError.html">Ark::OptimizerError</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d6/d47/classArk_1_1OptimizerError.html" title="OptimizerError thrown by the AST optimizer.">OptimizerError</a> thrown by the AST optimizer.  <a href="../../d6/d47/classArk_1_1OptimizerError.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/classArk_1_1MacroProcessingError.html">Ark::MacroProcessingError</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d7/d7c/classArk_1_1MacroProcessingError.html" title="MacroProcessingError thrown by the compiler.">MacroProcessingError</a> thrown by the compiler.  <a href="../../d7/d7c/classArk_1_1MacroProcessingError.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d64/classArk_1_1CompilationError.html">Ark::CompilationError</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d4/d64/classArk_1_1CompilationError.html" title="CompilationError thrown by the compiler.">CompilationError</a> thrown by the compiler.  <a href="../../d4/d64/classArk_1_1CompilationError.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0b/structArk_1_1CodeError.html">Ark::CodeError</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d4/d0b/structArk_1_1CodeError.html" title="CodeError thrown by the compiler (parser, macro processor, optimizer, and compiler itself)">CodeError</a> thrown by the compiler (parser, macro processor, optimizer, and compiler itself)  <a href="../../d4/d0b/structArk_1_1CodeError.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:d9/de4/namespaceArk"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/de4/namespaceArk.html">Ark</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/d0e/namespaceArk_1_1internal"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html">Ark::internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:db/da6/namespaceArk_1_1Diagnostics"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da6/namespaceArk_1_1Diagnostics.html">Ark::Diagnostics</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:acc56d82c2fa05c7841634e61997a0e30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d44/Module_8hpp.html#ac62a8551c675391a8cf01d112e42d755">ARK_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da6/namespaceArk_1_1Diagnostics.html#acc56d82c2fa05c7841634e61997a0e30">Ark::Diagnostics::makeContext</a> (std::ostream &amp;os, const std::string &amp;code, std::size_t target_line, std::size_t col_start, std::size_t sym_size)</td></tr>
+<tr class="memdesc:acc56d82c2fa05c7841634e61997a0e30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to create a colorized context to report errors to the user.  <br /></td></tr>
+<tr class="separator:acc56d82c2fa05c7841634e61997a0e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94bf29cfdd0884c99ddc707cd4b0e4ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d44/Module_8hpp.html#ac62a8551c675391a8cf01d112e42d755">ARK_API</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da6/namespaceArk_1_1Diagnostics.html#a94bf29cfdd0884c99ddc707cd4b0e4ad">Ark::Diagnostics::makeContextWithNode</a> (const std::string &amp;message, const internal::Node &amp;node)</td></tr>
+<tr class="memdesc:a94bf29cfdd0884c99ddc707cd4b0e4ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper used by the compiler to generate a colorized context from a node.  <br /></td></tr>
+<tr class="separator:a94bf29cfdd0884c99ddc707cd4b0e4ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a441621b8cc620cb5f0d9edd647725c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d44/Module_8hpp.html#ac62a8551c675391a8cf01d112e42d755">ARK_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da6/namespaceArk_1_1Diagnostics.html#a7a441621b8cc620cb5f0d9edd647725c">Ark::Diagnostics::generate</a> (const CodeError &amp;e, std::string code=&quot;&quot;, std::ostream &amp;os=std::cout)</td></tr>
+<tr class="memdesc:a7a441621b8cc620cb5f0d9edd647725c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a diagnostic from an error and print it to the standard output.  <br /></td></tr>
+<tr class="separator:a7a441621b8cc620cb5f0d9edd647725c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>ArkScript homemade exceptions. </p>
 <dl class="section author"><dt>Author</dt><dd>Alexandre Plateau (<a href="#" onclick="location.href='mai'+'lto:'+'lex'+'pl'+'t.d'+'ev'+'@gm'+'ai'+'l.c'+'om'; return false;">lexpl<span class="obfuscator">.nosp@m.</span>t.de<span class="obfuscator">.nosp@m.</span>v@gma<span class="obfuscator">.nosp@m.</span>il.c<span class="obfuscator">.nosp@m.</span>om</a>), Max (<a href="#" onclick="location.href='mai'+'lto:'+'mad'+'st'+'k1@'+'pm'+'.me'; return false;">madst<span class="obfuscator">.nosp@m.</span>k1@p<span class="obfuscator">.nosp@m.</span>m.me</a>) </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.2 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.2 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2020-10-27</dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2020-2021 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2020-2024 </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../d2/de9/Exceptions_8hpp_source.html">Exceptions.hpp</a>.</p>
 </div></div><!-- contents -->
@@ -152,7 +161,7 @@ Namespaces</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_a8b6c64285bf9ac60f50770eb2fc48b5.html">Ark</a></li><li class="navelem"><a class="el" href="../../d2/de9/Exceptions_8hpp.html">Exceptions.hpp</a></li>
-    <li class="footer">Generated on Sun Apr 23 2023 20:17:28 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Sat May 25 2024 22:44:26 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

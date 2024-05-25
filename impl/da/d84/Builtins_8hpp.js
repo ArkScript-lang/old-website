@@ -31,7 +31,6 @@ var Builtins_8hpp =
     [ "print", "da/d84/Builtins_8hpp.html#a83ec7c81fb958b782a4298ef6d06defd", null ],
     [ "puts_", "da/d84/Builtins_8hpp.html#a5f4cc90463dd51cfeb185935326c3d17", null ],
     [ "readFile", "da/d84/Builtins_8hpp.html#a42b2f57b800c7c60281b6b0cc59f0067", null ],
-    [ "removeAtList", "da/d84/Builtins_8hpp.html#a323d6d8dfc4077dca04d99294f25edf5", null ],
     [ "removeAtStr", "da/d84/Builtins_8hpp.html#a5b7072a6c442f24b36d1d833170184b6", null ],
     [ "removeFiles", "da/d84/Builtins_8hpp.html#ae39387ef342532a538ea1536f29f0903", null ],
     [ "reverseList", "da/d84/Builtins_8hpp.html#a9c95b27ac4ea35c3334bf8eab3ac2c53", null ],

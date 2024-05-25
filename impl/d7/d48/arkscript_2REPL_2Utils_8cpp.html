@@ -73,224 +73,57 @@ $(document).ready(function(){initNavTree('d7/d48/arkscript_2REPL_2Utils_8cpp.htm
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Utils.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="../../dc/d3e/Util_8hpp_source.html">Ark/REPL/replxx/Util.hpp</a>&gt;</code><br />
-<code>#include &lt;cstring&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="../../df/d85/CLI_2REPL_2Utils_8hpp_source.html">CLI/REPL/Utils.hpp</a>&gt;</code><br />
 <code>#include &lt;regex&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Include dependency graph for Utils.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/dad/arkscript_2REPL_2Utils_8cpp__incl.svg" width="410" height="212"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/dad/arkscript_2REPL_2Utils_8cpp__incl.svg" width="270" height="214"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 </div>
 <p><a href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:d9/de4/namespaceArk"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/de4/namespaceArk.html">Ark</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/d0e/namespaceArk_1_1internal"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html">Ark::internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0c8262d34abfafe28351abc072c3e91b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#a0c8262d34abfafe28351abc072c3e91b">utf8str_codepoint_len</a> (char const *s, int utf8len)</td></tr>
-<tr class="separator:a0c8262d34abfafe28351abc072c3e91b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea1c73842f42185ee352b27e4518b944"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#aea1c73842f42185ee352b27e4518b944">context_len</a> (char const *prefix)</td></tr>
-<tr class="separator:aea1c73842f42185ee352b27e4518b944"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd76803225b075870b092cddca28c682"><td class="memItemLeft" align="right" valign="top">Replxx::completions_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#acd76803225b075870b092cddca28c682">hook_completion</a> (std::string const &amp;context, int &amp;contextLen, std::vector&lt; std::string &gt; const &amp;examples)</td></tr>
-<tr class="separator:acd76803225b075870b092cddca28c682"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7bcc8b41688595c8e7049ea2d3c3b98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#ad7bcc8b41688595c8e7049ea2d3c3b98">hook_color</a> (std::string const &amp;context, Replxx::colors_t &amp;colors, std::vector&lt; std::pair&lt; std::string, Replxx::Color &gt; &gt; const &amp;regex_color)</td></tr>
-<tr class="separator:ad7bcc8b41688595c8e7049ea2d3c3b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd8a71e02f566f17518ba0bc05e47d4b"><td class="memItemLeft" align="right" valign="top">Replxx::hints_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html#acd8a71e02f566f17518ba0bc05e47d4b">hook_hint</a> (std::string const &amp;context, int &amp;contextLen, Replxx::Color &amp;color, std::vector&lt; std::string &gt; const &amp;examples)</td></tr>
-<tr class="separator:acd8a71e02f566f17518ba0bc05e47d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6146cb020fc99ea827febe76168c020f"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a6146cb020fc99ea827febe76168c020f">Ark::internal::countOpenEnclosures</a> (const std::string &amp;line, char open, char close)</td></tr>
+<tr class="memdesc:a6146cb020fc99ea827febe76168c020f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count the open enclosure and its counterpart: (), {}, [].  <br /></td></tr>
+<tr class="separator:a6146cb020fc99ea827febe76168c020f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad95f4c191466c48c5b0d8ef5b6c26a1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ad95f4c191466c48c5b0d8ef5b6c26a1b">Ark::internal::trimWhitespace</a> (std::string &amp;line)</td></tr>
+<tr class="memdesc:ad95f4c191466c48c5b0d8ef5b6c26a1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove whitespaces at the start and end of a string.  <br /></td></tr>
+<tr class="separator:ad95f4c191466c48c5b0d8ef5b6c26a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bd3b3636182456691fede1fb1604da5"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a3bd3b3636182456691fede1fb1604da5">Ark::internal::codepointLength</a> (const std::string &amp;str)</td></tr>
+<tr class="separator:a3bd3b3636182456691fede1fb1604da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c781b2c862e05711632d9a2df5c355e"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a4c781b2c862e05711632d9a2df5c355e">Ark::internal::contextLen</a> (const std::string &amp;prefix)</td></tr>
+<tr class="separator:a4c781b2c862e05711632d9a2df5c355e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab83aa7f91a1a6b0b8068635a8a11aa8d"><td class="memItemLeft" align="right" valign="top">replxx::Replxx::completions_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ab83aa7f91a1a6b0b8068635a8a11aa8d">Ark::internal::hookCompletion</a> (const std::string &amp;context, int &amp;length)</td></tr>
+<tr class="separator:ab83aa7f91a1a6b0b8068635a8a11aa8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ca5c521c176dd24a2fc807602767eab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a9ca5c521c176dd24a2fc807602767eab">Ark::internal::hookColor</a> (const std::string &amp;context, replxx::Replxx::colors_t &amp;colors)</td></tr>
+<tr class="separator:a9ca5c521c176dd24a2fc807602767eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f5008602a073d4a759788eac6b1581f"><td class="memItemLeft" align="right" valign="top">replxx::Replxx::hints_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a7f5008602a073d4a759788eac6b1581f">Ark::internal::hookHint</a> (const std::string &amp;context, int &amp;length, replxx::Replxx::Color &amp;color)</td></tr>
+<tr class="separator:a7f5008602a073d4a759788eac6b1581f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="aea1c73842f42185ee352b27e4518b944" name="aea1c73842f42185ee352b27e4518b944"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea1c73842f42185ee352b27e4518b944">&#9670;&#160;</a></span>context_len()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int context_len </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>prefix</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00027">27</a> of file <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html">Utils.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00045">hook_completion()</a>, and <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00094">hook_hint()</a>.</p>
-
-</div>
-</div>
-<a id="ad7bcc8b41688595c8e7049ea2d3c3b98" name="ad7bcc8b41688595c8e7049ea2d3c3b98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7bcc8b41688595c8e7049ea2d3c3b98">&#9670;&#160;</a></span>hook_color()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void hook_color </td>
-          <td>(</td>
-          <td class="paramtype">std::string const &amp;&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Replxx::colors_t &amp;&#160;</td>
-          <td class="paramname"><em>colors</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; std::pair&lt; std::string, Replxx::Color &gt; &gt; const &amp;&#160;</td>
-          <td class="paramname"><em>regex_color</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00069">69</a> of file <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html">Utils.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00005">utf8str_codepoint_len()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00161">Ark::Repl::cui_setup()</a>.</p>
-
-</div>
-</div>
-<a id="acd76803225b075870b092cddca28c682" name="acd76803225b075870b092cddca28c682"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd76803225b075870b092cddca28c682">&#9670;&#160;</a></span>hook_completion()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Replxx::completions_t hook_completion </td>
-          <td>(</td>
-          <td class="paramtype">std::string const &amp;&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int &amp;&#160;</td>
-          <td class="paramname"><em>contextLen</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; std::string &gt; const &amp;&#160;</td>
-          <td class="paramname"><em>examples</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00045">45</a> of file <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html">Utils.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00027">context_len()</a>, and <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00005">utf8str_codepoint_len()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00161">Ark::Repl::cui_setup()</a>.</p>
-
-</div>
-</div>
-<a id="acd8a71e02f566f17518ba0bc05e47d4b" name="acd8a71e02f566f17518ba0bc05e47d4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd8a71e02f566f17518ba0bc05e47d4b">&#9670;&#160;</a></span>hook_hint()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Replxx::hints_t hook_hint </td>
-          <td>(</td>
-          <td class="paramtype">std::string const &amp;&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int &amp;&#160;</td>
-          <td class="paramname"><em>contextLen</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Replxx::Color &amp;&#160;</td>
-          <td class="paramname"><em>color</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; std::string &gt; const &amp;&#160;</td>
-          <td class="paramname"><em>examples</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00094">94</a> of file <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html">Utils.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00027">context_len()</a>, and <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00005">utf8str_codepoint_len()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../d7/d46/Repl_8cpp_source.html#l00161">Ark::Repl::cui_setup()</a>.</p>
-
-</div>
-</div>
-<a id="a0c8262d34abfafe28351abc072c3e91b" name="a0c8262d34abfafe28351abc072c3e91b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c8262d34abfafe28351abc072c3e91b">&#9670;&#160;</a></span>utf8str_codepoint_len()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int utf8str_codepoint_len </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>s</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>utf8len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00005">5</a> of file <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html">Utils.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00069">hook_color()</a>, <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00045">hook_completion()</a>, and <a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp_source.html#l00094">hook_hint()</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_2f97cbe3d7d7ee3d0a7f34ae796b7c3c.html">arkscript</a></li><li class="navelem"><a class="el" href="../../dir_b137344471615342cb36678e59bedd43.html">REPL</a></li><li class="navelem"><a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html">Utils.cpp</a></li>
-    <li class="footer">Generated on Sun Apr 23 2023 20:17:28 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Sat May 25 2024 22:44:26 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

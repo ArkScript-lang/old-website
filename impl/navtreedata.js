@@ -26,35 +26,20 @@ var NAVTREE =
 [
   [ "ArkScript", "index.html", [
     [ "Home", "index.html", null ],
-    [ "Tutorials", "usergroup0.html", [
-      [ "The ArkScript builtins", "d2/daa/md_tutorial_builtins.html#tutorial_builtins", null ],
-      [ "Embedding ArkScript in C++ code", "d7/d11/md_tutorial_embedding.html#tutorial_embedding", null ],
-      [ "Creating modules", "d1/dcf/md_tutorial_modules.html#tutorial_modules", null ]
-    ] ],
-    [ "ArkScript modules", "usergroup1.html", [
-      [ "Bitwise", "d7/d7d/md__Users_fola_Documents_ArkScript_Ark_lib_modules_bitwise_documentation_README.html#bitwise_module", null ],
-      [ "Console", "df/d21/md__Users_fola_Documents_ArkScript_Ark_lib_modules_console_documentation_README.html#console_module", null ],
-      [ "Database", "d7/dee/md__Users_fola_Documents_ArkScript_Ark_lib_modules_database_documentation_README.html#database_module", null ],
-      [ "Hash", "d5/d1e/md__Users_fola_Documents_ArkScript_Ark_lib_modules_hash_documentation_README.html#hash_module", null ],
-      [ "HTTP", "d5/d18/md__Users_fola_Documents_ArkScript_Ark_lib_modules_http_documentation_README.html#http_module", null ],
-      [ "JSON", "d2/dcd/md__Users_fola_Documents_ArkScript_Ark_lib_modules_json_documentation_README.html#json_module", null ],
-      [ "MsgPack", "d2/d0b/md__Users_fola_Documents_ArkScript_Ark_lib_modules_msgpack_documentation_Readme.html#msgpack_module", null ],
-      [ "Random", "d0/d6a/md__Users_fola_Documents_ArkScript_Ark_lib_modules_random_documentation_README.html#random_module", null ]
-    ] ],
-    [ "Guidelines", "usergroup2.html", [
-      [ "Coding guidelines", "dc/dca/md_guidelines_coding.html#guidelines_coding", null ],
-      [ "Naming guidelines", "d1/de7/md_guidelines_naming.html#guidelines_naming", null ],
-      [ "Error handling in modules", "de/d55/md_guidelines_moduleserrorhandling.html#guidelines_moduleserrorhandling", null ]
-    ] ],
-    [ "Implementation details", "usergroup3.html", [
-      [ "The project architecture", "dd/d4a/md_impl_architecture.html#impl_architecture", null ],
-      [ "Compiler implementation details", "d1/db1/md_impl_compiler.html#impl_compiler", null ],
-      [ "Virtual Machine implementation details", "db/d6c/md_impl_vm.html#impl_vm", null ]
+    [ "ArkScript modules", "usergroup0.html", [
+      [ "Bitwise", "@ref bitwise_module", null ],
+      [ "Console", "@ref console_module", null ],
+      [ "Database", "@ref database_module", null ],
+      [ "Hash", "@ref hash_module", null ],
+      [ "HTTP", "@ref http_module", null ],
+      [ "JSON", "@ref json_module", null ],
+      [ "MsgPack", "@ref msgpack_module", null ],
+      [ "Random", "@ref random_module", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
+        [ "All", "namespacemembers.html", "namespacemembers_dup" ],
         [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ],
@@ -80,7 +65,6 @@ var NAVTREE =
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
-        [ "Typedefs", "globals_type.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -89,14 +73,15 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"d2/d93/classArk_1_1VM.html#a9793d82e9100c6badd8fa9aa8d8bbbcb",
-"d3/ddb/classArk_1_1Compiler.html#ac9a930200959e58c46c5bf8bb4d16bb8",
-"d6/de9/Constants_8hpp.html#ae92e5cb7f969a516e5ad53ff6c0b9800",
-"d8/ddd/Common_8hpp_source.html",
-"dc/d0e/namespaceArk_1_1internal.html#a0b9a75d4a5e9bcfcf7b21ddbfc0d6ea5",
-"dc/d9e/classArk_1_1internal_1_1Node.html#a9820c1bc45286e101b003a1c45c6aaac",
-"functions_d.html"
+"@ref bitwise_module",
+"d2/d90/classArk_1_1internal_1_1ImportSolver.html#a430e9731fa7ee02dc3fdd9ea61167ae2",
+"d3/ddb/classArk_1_1Compiler.html#a76d50d9410aec683a38624d1f0af7ae6",
+"d5/db5/classArk_1_1internal_1_1MacroProcessor.html#ae22ffc46ad62546c54fec40d03834e08",
+"d8/d00/classArk_1_1internal_1_1BaseParser.html#ab9b87ddb0169629c458216078d9b28cc",
+"d9/d0c/classArk_1_1internal_1_1Parser.html#acd6e64c114ab6a164729bf7843076afd",
+"db/d71/JsonCompiler_8cpp_source.html",
+"dc/d9e/classArk_1_1internal_1_1Node.html#a6713fdb750d1405359b6669eb1ded279",
+"df/d85/CLI_2REPL_2Utils_8hpp.html#ae2f019589b52a422550ffec8959a2177"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -21,6 +21,6 @@ digraph "/Users/fola/Documents/ArkScript/Ark/include/Ark/Compiler/AST/Node.hpp"
   Node6 -> Node8 [color="steelblue1",style="solid"];
   Node8 [label="string_view",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node6 -> Node5 [color="steelblue1",style="solid"];
-  Node6 -> Node9 [color="steelblue1",style="solid"];
-  Node9 [label="cinttypes",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node1 -> Node9 [color="steelblue1",style="solid"];
+  Node9 [label="Ark/Platform.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d5/d40/Platform_8hpp.html",tooltip="ArkScript configuration macros."];
 }

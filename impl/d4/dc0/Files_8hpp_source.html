@@ -79,31 +79,31 @@ $(document).ready(function(){initNavTree('d4/dc0/Files_8hpp_source.html','../../
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * @file Files.hpp</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * @author Alexandre Plateau (lexplt.dev@gmail.com)</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * @brief Lots of utilities about the filesystem</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * @version 0.1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * @version 0.2</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * @date 2021-11-25</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * </span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * @copyright Copyright (c) 2021</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * </span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * @copyright Copyright (c) 2021-2024</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef INCLUDE_ARK_FILES_HPP</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define INCLUDE_ARK_FILES_HPP</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;streambuf&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;filesystem&gt;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../df/d16/namespaceArk_1_1Utils.html">   20</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../df/d16/namespaceArk_1_1Utils.html">Ark::Utils</a></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{<span class="comment"></span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    /**</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">     * @brief Checks if a file exists</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">     * </span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">     *</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">     * @param name the file name</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">     * @return true on success</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">     * @return false on failure</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">     */</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../df/d16/namespaceArk_1_1Utils.html#a1e2624f09a9e767e1792b69b879aa73f">   29</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../df/d16/namespaceArk_1_1Utils.html#a1e2624f09a9e767e1792b69b879aa73f">fileExists</a>(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">noexcept</span>  <span class="comment">// 11</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../df/d16/namespaceArk_1_1Utils.html#a1e2624f09a9e767e1792b69b879aa73f">   29</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../df/d16/namespaceArk_1_1Utils.html#a1e2624f09a9e767e1792b69b879aa73f">fileExists</a>(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">try</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {</div>
@@ -118,50 +118,50 @@ $(document).ready(function(){initNavTree('d4/dc0/Files_8hpp_source.html','../../
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment"></span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">    /**</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">     * @brief Helper to read a file</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">     * </span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">     *</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">     * @param name the file name</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">     * @return std::string </span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">     * @return std::string</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">     */</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../df/d16/namespaceArk_1_1Utils.html#a08fab59297a574abc8a37a6d46eebacb">   48</a></span>    <span class="keyword">inline</span> std::string <a class="code hl_function" href="../../df/d16/namespaceArk_1_1Utils.html#a08fab59297a574abc8a37a6d46eebacb">readFile</a>(<span class="keyword">const</span> std::string&amp; name)</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        std::ifstream f(name.c_str());</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        std::ifstream f(name);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="comment">// admitting the file exists</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">return</span> std::string(</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">return</span> {</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            (std::istreambuf_iterator&lt;char&gt;(f)),</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            std::istreambuf_iterator&lt;char&gt;());</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment"></span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">    /**</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">     * @brief Get the directory from a path</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">     * </span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">     * @param path </span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">     * @return std::string </span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">     */</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../df/d16/namespaceArk_1_1Utils.html#a6ba2f450a5866f29937342fe3fd0deda">   63</a></span>    <span class="keyword">inline</span> std::string <a class="code hl_function" href="../../df/d16/namespaceArk_1_1Utils.html#a6ba2f450a5866f29937342fe3fd0deda">getDirectoryFromPath</a>(<span class="keyword">const</span> std::string&amp; path)</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    {</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">return</span> (std::filesystem::path(path)).parent_path().string();</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment"></span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">    /**</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">     * @brief Get the filename from a path</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">     * </span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">     * @param path </span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">     * @return std::string </span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">     */</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="../../df/d16/namespaceArk_1_1Utils.html#af03dab382269619376bd2de1c98d5a01">   74</a></span>    <span class="keyword">inline</span> std::string <a class="code hl_function" href="../../df/d16/namespaceArk_1_1Utils.html#af03dab382269619376bd2de1c98d5a01">getFilenameFromPath</a>(<span class="keyword">const</span> std::string&amp; path)</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> (std::filesystem::path(path)).filename().string();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            std::istreambuf_iterator&lt;char&gt;()</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        };</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="../../df/d16/namespaceArk_1_1Utils.html#a9f569f15da3036cc8f5ec6d1708a4887">   58</a></span>    <span class="keyword">inline</span> std::vector&lt;uint8_t&gt; <a class="code hl_function" href="../../df/d16/namespaceArk_1_1Utils.html#a9f569f15da3036cc8f5ec6d1708a4887">readFileAsBytes</a>(<span class="keyword">const</span> std::string&amp; name)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="comment">// admitting the file exists</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        std::ifstream ifs(name, std::ios::binary | std::ios::ate);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">if</span> (!ifs.good())</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">return</span> std::vector&lt;uint8_t&gt; {};</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keyword">const</span> std::size_t pos = ifs.tellg();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="comment">// reserve appropriate number of bytes</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        std::vector&lt;char&gt; temp(pos);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        ifs.seekg(0, std::ios::beg);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        ifs.read(&amp;temp[0], pos);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        ifs.close();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keyword">auto</span> bytecode = std::vector&lt;uint8_t&gt;(pos);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="comment">// TODO would it be faster to memcpy?</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; pos; ++i)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            bytecode[i] = <span class="keyword">static_cast&lt;</span>uint8_t<span class="keyword">&gt;</span>(temp[i]);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> bytecode;</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment"></span> </div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">    /**</span></div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">     * @brief Get the canonical relative path from a path</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">     * </span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">     * @param path </span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">     * @return std::string </span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">     *</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">     * @param path</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">     * @return std::string</span></div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">     */</span></div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="../../df/d16/namespaceArk_1_1Utils.html#a3598d0ca35b3c7afd6183f2093807db3">   85</a></span>    <span class="keyword">inline</span> std::string <a class="code hl_function" href="../../df/d16/namespaceArk_1_1Utils.html#a3598d0ca35b3c7afd6183f2093807db3">canonicalRelPath</a>(<span class="keyword">const</span> std::string&amp; path)</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    {</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">return</span> std::filesystem::relative(std::filesystem::path(path)).generic_string();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">return</span> relative(std::filesystem::path(path)).generic_string();</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
@@ -170,15 +170,14 @@ $(document).ready(function(){initNavTree('d4/dc0/Files_8hpp_source.html','../../
 <div class="ttc" id="anamespaceArk_1_1Utils_html_a08fab59297a574abc8a37a6d46eebacb"><div class="ttname"><a href="../../df/d16/namespaceArk_1_1Utils.html#a08fab59297a574abc8a37a6d46eebacb">Ark::Utils::readFile</a></div><div class="ttdeci">std::string readFile(const std::string &amp;name)</div><div class="ttdoc">Helper to read a file.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dc0/Files_8hpp_source.html#l00048">Files.hpp:48</a></div></div>
 <div class="ttc" id="anamespaceArk_1_1Utils_html_a1e2624f09a9e767e1792b69b879aa73f"><div class="ttname"><a href="../../df/d16/namespaceArk_1_1Utils.html#a1e2624f09a9e767e1792b69b879aa73f">Ark::Utils::fileExists</a></div><div class="ttdeci">bool fileExists(const std::string &amp;name) noexcept</div><div class="ttdoc">Checks if a file exists.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dc0/Files_8hpp_source.html#l00029">Files.hpp:29</a></div></div>
 <div class="ttc" id="anamespaceArk_1_1Utils_html_a3598d0ca35b3c7afd6183f2093807db3"><div class="ttname"><a href="../../df/d16/namespaceArk_1_1Utils.html#a3598d0ca35b3c7afd6183f2093807db3">Ark::Utils::canonicalRelPath</a></div><div class="ttdeci">std::string canonicalRelPath(const std::string &amp;path)</div><div class="ttdoc">Get the canonical relative path from a path.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dc0/Files_8hpp_source.html#l00085">Files.hpp:85</a></div></div>
-<div class="ttc" id="anamespaceArk_1_1Utils_html_a6ba2f450a5866f29937342fe3fd0deda"><div class="ttname"><a href="../../df/d16/namespaceArk_1_1Utils.html#a6ba2f450a5866f29937342fe3fd0deda">Ark::Utils::getDirectoryFromPath</a></div><div class="ttdeci">std::string getDirectoryFromPath(const std::string &amp;path)</div><div class="ttdoc">Get the directory from a path.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dc0/Files_8hpp_source.html#l00063">Files.hpp:63</a></div></div>
-<div class="ttc" id="anamespaceArk_1_1Utils_html_af03dab382269619376bd2de1c98d5a01"><div class="ttname"><a href="../../df/d16/namespaceArk_1_1Utils.html#af03dab382269619376bd2de1c98d5a01">Ark::Utils::getFilenameFromPath</a></div><div class="ttdeci">std::string getFilenameFromPath(const std::string &amp;path)</div><div class="ttdoc">Get the filename from a path.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dc0/Files_8hpp_source.html#l00074">Files.hpp:74</a></div></div>
+<div class="ttc" id="anamespaceArk_1_1Utils_html_a9f569f15da3036cc8f5ec6d1708a4887"><div class="ttname"><a href="../../df/d16/namespaceArk_1_1Utils.html#a9f569f15da3036cc8f5ec6d1708a4887">Ark::Utils::readFileAsBytes</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; readFileAsBytes(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dc0/Files_8hpp_source.html#l00058">Files.hpp:58</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_a8b6c64285bf9ac60f50770eb2fc48b5.html">Ark</a></li><li class="navelem"><a class="el" href="../../d4/dc0/Files_8hpp.html">Files.hpp</a></li>
-    <li class="footer">Generated on Sun Apr 23 2023 20:17:28 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Sat May 25 2024 22:44:26 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>
