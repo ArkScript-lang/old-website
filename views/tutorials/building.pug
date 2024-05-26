@@ -66,11 +66,11 @@ block inner_content
                 p Requirements:
                 ul
                     li Windows 10 x64
-                    li Visual Studio 15 2017
-                    li cmake >= 3.9
+                    li Visual Studio 17 2022
+                    li cmake >= 3.11
                 p Commands:
                 pre: code.rainbowjs(data-language="shell")
-                    | PS> cmake . -Bbuild -DARK_BUILD_EXE=On -G "Visual Studio 15 Win64"
+                    | PS> cmake . -Bbuild -DARK_BUILD_EXE=On -G "Visual Studio 17 Win64"
                     | PS> cmake --build build --config Release
                     | PS> cmake --install build --config Release  # might need administrator rights
 
@@ -79,7 +79,7 @@ block inner_content
                 ul
                     li g++ 14
                     li 64 bits computer
-                    li cmake >= 3.9
+                    li cmake >= 3.11
                 p Commands:
                 pre: code.rainbowjs(data-language="shell")
                     | ~/ark$ cmake . -Bbuild -DARK_BUILD_EXE=On
@@ -89,8 +89,8 @@ block inner_content
                 h3 MacOS
                 p Requirements:
                 ul
-                    li g++ 14
-                    li cmake >= 3.9
+                    li g++ 14 or clang 16
+                    li cmake >= 3.11
                 p.
                     On MacOS versions prior to 10.15, #[code libc++] lacks #[code filesystem] in the standard library.
                     #[br]
