@@ -16,7 +16,7 @@ mixin playground(id, content)
                 pre: code.rainbowjs(data-language="arkscript")
                     | !{content}
             div(id=runTabId).playground-tab.tab-content
-                iframe.playground(scrolling="no", src="http://playground.arkscript-lang.dev/#/?termRight&code=" + b64)
+                iframe.playground(scrolling="no", loading="lazy", src="http://playground.arkscript-lang.dev/#/?termRight&code=" + b64)
 
 block content
     div.off-canvas
