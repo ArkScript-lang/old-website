@@ -31,7 +31,7 @@ jobs:
         with:
           repository: ArkScript-lang/Ark
           path: './ark-latest'
-          ref: 'master'
+          ref: 'dev'
           # so that we can fetch tags
           fetch-depth: 0
 
@@ -47,7 +47,7 @@ jobs:
       - name: Generate documentation
         shell: bash
         run: |
-          ark_version=$(cd ark-latest; git describe --tags)
+          ark_version=$(cd ark-latest; git describe --tags | cut -f1 -d-)
           echo "New ArkScript tag: ${ark_version}"
           # run arkdoc
           cd arkdoc
