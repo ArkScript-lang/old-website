@@ -1,12 +1,16 @@
 a.btn.btn-link(href="/") Home
 div.dropdown
-    a.btn.btn-link.dropdown-toggle(href="#", tabindex="0") #[i.fa.fa-book(aria-hidden="true")] Documentation #[i.icon.icon-caret]
+    a.btn.btn-link.dropdown-toggle(href="#docs", tabindex="0") #[i.fa.fa-book(aria-hidden="true")] Documentation #[i.icon.icon-caret]
     ul.menu
         li: a.btn.btn-link(href="/std/index.html") #[i.fa.fa-book(aria-hidden="true")] Standard library
         li: a.btn.btn-link(href="/tutorials/language.html") #[i.fa.fa-graduation-cap(aria-hidden="true")] Learning the language
         li: a.btn.btn-link(href="/tutorials/building.html") #[i.fa.fa-cogs(aria-hidden="true")] Building ArkScript
         hr
         li: a.btn.btn-link(href="/documentation.html") #[i.fa.fa-link(aria-hidden="true")] All the links
+div.dropdown
+    a.btn.btn-link.dropdown-toggle(href="#tools", tabindex="1") #[i.fa.fa-cogs(aria-hidden="true")] Tools #[i.icon.icon-caret]
+    ul.menu
+        li: a.btn.btn-link(href="/benchmarks.html") #[i.fa.fa-fast-forward(aria-hidden="true")] Benchmarks
 a.btn.btn-link(href="/contributing.html") #[i.fa.fa-code-fork(aria-hidden="true")] Contributing
 a.btn.btn-link(href="/projects.html") Projects
 div.divider.half
