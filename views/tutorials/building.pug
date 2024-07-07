@@ -104,6 +104,15 @@ block inner_content
                     | ~/ark$ cmake . -Bbuild -DARK_BUILD_EXE=On -DCMAKE_CXX_COMPILER=/usr/local/bin/g++-14
                     | ~/ark$ cmake --build build --config Release
                     | ~/ark$ cmake --install build --config Release  # might need administrator rights
+                
+                h3 Running the tests
+                p To check that everything works, it is important to run the tests for the projects, and we have a multitude of them:
+                ul
+                    li #[code tests/arkscript]: tests written in ArkScript itself, testing the builtins, operators and keywords (language unit tests)
+                    li #[code tests/benchmarks]: benchmarks for the parser and VM with a few scripts to help identifying regressions
+                    li #[code tests/errors]: every subfolder is a category of errors we are trying to detect, with #[code a.ark] and #[code a.expected] making a pair of #[em a snippet that should produce an error] and #[em the expected error]
+                    li #[code tests/fuzzing]: a collection of scripts (in #[code tests/fuzzing/docker/]) and ArkScript source files under the different #[code corpus] / #[code corpus-cmin] / #[code corpus-cmin-tmin] directories (only the #[code corpus] directory is managed by us, the two others are generated automatically through scripts and AFL++). Fuzzers can be run automatically using the #[code start-afl-docker.sh] script, that starts a docker image, compile ArkScript and run the fuzzers inside tmux sessions. An #[code output/] folder is created at the root of the project with the fuzzers output
+                    li #[code tests/unittests]: C++ unit tests for the project using #[a(href="https://github.com/boost-ext/ut") boost/ut], testing different utilities of the project
 
 append scripts
     script(src="/assets/js/languages/shell.js")
