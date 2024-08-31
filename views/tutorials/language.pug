@@ -419,6 +419,8 @@ block content
                         li.
                             #[code $repr]: return the AST representation of a given node, as a string.
                             #[code ($repr foobar)] will return #[code "foobar"], #[code ($repr (fun   ()    (+ 1 2 3)))] will return #[code "(fun () (+ 1 2 3))"]. Indentation, newlines and comments are not preserved.
+                        li.
+                            #[code $paste]: paste a given node without evaluating it any further. Useful to stop the evaluation of arguments passed to a function macro.
 
         div.col-2
 
