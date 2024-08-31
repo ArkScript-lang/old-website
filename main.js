@@ -33,3 +33,5 @@ views.forEach((name) => {
     const html = pug.compileFile(`${viewsDir}/${name}.pug`, options)({})
     fs.writeFileSync(`${name}.html`, html)
 })
+
+module.exports = {};
