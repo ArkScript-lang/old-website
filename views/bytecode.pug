@@ -240,6 +240,10 @@ block inner_content
                             td 
                             td Remove the top of the stack
                         tr
+                            td #[code DUP] (0x1a)
+                            td 
+                            td Duplicate the top of the stack
+                        tr
                             td #[code ADD] (0x20)
                             td 
                             td Push #[code TS1 + TS]
@@ -316,26 +320,18 @@ block inner_content
                             td 
                             td Push the value at index TS (must be a number) in TS1 (must be a list)
                         tr
-                            td #[code AND_] (0x33)
-                            td 
-                            td Push true if TS and TS1 are true, false otherwise
-                        tr
-                            td #[code OR_] (0x34)
-                            td 
-                            td Push true if TS or TS1 is true, false otherwise
-                        tr
-                            td #[code MOD] (0x35)
+                            td #[code MOD] (0x33)
                             td 
                             td Push #[code TS1 % TS]
                         tr
-                            td #[code TYPE] (0x36)
+                            td #[code TYPE] (0x34)
                             td 
                             td Push the type of TS as a string
                         tr
-                            td #[code HASFIELD] (0x37)
+                            td #[code HASFIELD] (0x35)
                             td 
                             td Check if TS1 is a closure field of TS. TS must be a Closure and TS1 a String
                         tr
-                            td #[code NOT] (0x38)
+                            td #[code NOT] (0x36)
                             td 
                             td Push #[code !TS]
