@@ -71,23 +71,24 @@
     <h2>switch</h2>
 
     <div class="inner-section">
-        <div><code>(let switch (fun (_value _tests) (...)))</code>
+        <div><code>($ switch (fun (case) (...)))</code>
 <br>
-<div>Takes a value to match against a list of [possible values, function to run if it matched]</div>
+<div>Takes a value to match against a list of (possible value, code to run)...</div>
 <div><b>Note</b>
 : 
 Once the value is matched, it stops and doesn't try any other values.</div>
 <div><h4>Parameters</h4>
-<ul><li><code>_value</code>: value to match</li><li><code>_test</code>: list for test value, composed by sub lists who contained possible value and function to run if matched</li></ul></div>
+<ul><li><code>value</code>: value to match</li><li><code>case</code>: first case</li><li><code>then</code>: value when first case matches</li><li><code>...cases</code>: more (case, then)</li></ul></div>
 <div><h4>Author</h4>
 <a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
-(switch 12 [
-    [1 (fun () (print "the value is one"))]
-    [12 '(print "quoted code blocks also works")]
-    [12 '{ (let b "ok") (print b ", quoted begin blocks work as well") }]
-])
+(switch 4
+    1 (print "hello")
+    2 (print "bye")
+    12 (print "jackpot")
+    (+ 1 4) (print "computation")
+    _ (print "default"))
 </code>
 </pre></div>
     </div>
@@ -103,7 +104,7 @@ Once the value is matched, it stops and doesn't try any other values.</div>
     <footer id="page-footer">
         <p class="text-center">
             Copyright &copy; 2020-2024 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.<br>
-            <i>Last generation at 2024-08-01 01:38:56.440047</i>
+            <i>Last generation at 2024-09-01 01:50:25.190454</i>
         </p>
     </footer>
 
