@@ -146,7 +146,7 @@ block inner_content
                         tr
                             td #[code LOAD_CONST] (0x02)
                             td constant id
-                            td Load a constant from its id onto the stack. Should check for a saved environment and push a Closure with the page address + environment instead of the constant
+                            td Load a constant from its id onto the stack
                         tr
                             td #[code POP_JUMP_IF_TRUE] (0x03)
                             td absolute address to jump to
@@ -154,11 +154,11 @@ block inner_content
                         tr
                             td #[code STORE] (0x04)
                             td symbol id
-                            td Take the value on top of the stack and put it inside a variable named following the symbol id (cf symbols table), in the nearest scope. Raise an error if it couldn't find a scope where the variable exists
+                            td Take the value on top of the stack and create a variable in the current scope, named following the given symbol id (cf symbols table)
                         tr
-                            td #[code LET] (0x05)
+                            td #[code SET_VAL] (0x05)
                             td symbol id
-                            td Take the value on top of the stack and create a constant in the current scope, named following the given symbol id (cf symbols table)
+                            td Take the value on top of the stack and put it inside a variable named following the symbol id (cf symbols table), in the nearest scope. Raise an error if it couldn't find a scope where the variable exists
                         tr
                             td #[code POP_JUMP_IF_FALSE] (0x06)
                             td absolute address to jump to
@@ -188,150 +188,146 @@ block inner_content
                             td id of builtin
                             td Push the builtin function object on the stack
                         tr
-                            td #[code MUT] (0x0d)
-                            td symbol id
-                            td Take the value on top of the stack and create a variable in the current scope, named following the given symbol id (cf symbols table)
-                        tr
-                            td #[code DEL] (0x0e)
+                            td #[code DEL] (0x0d)
                             td symbol id
                             td Remove a variable/constant named following the given symbol id (cf symbols table)
                         tr
-                            td #[code SAVE_ENV] (0x0f)
-                            td 
-                            td Save the current environment, useful for quoted code
+                            td #[code MAKE_CLOSURE] (0x0e)
+                            td constant id
+                            td Push a Closure with the page address + saved scope onto the stack
                         tr
-                            td #[code GET_FIELD] (0x10)
+                            td #[code GET_FIELD] (0x0f)
                             td symbol id
                             td Used to read the field named following the given symbol id (cf symbols table) of a #[code Closure] stored in TS. Pop TS and push the value of field read on the stack
                         tr
-                            td #[code PLUGIN] (0x11)
+                            td #[code PLUGIN] (0x10)
                             td constant id
                             td Used to load a plugin dynamically, plugin name is stored as a string in the constants table
                         tr
-                            td #[code LIST] (0x12)
+                            td #[code LIST] (0x11)
                             td number of arguments
                             td Create a list from the elements pushed on the stack in reverse order
                         tr
-                            td #[code APPEND] (0x13)
+                            td #[code APPEND] (0x12)
                             td number of arguments
                             td Append elements to a list in reverse order (first the last element, then the other, then the list itself)
                         tr
-                            td #[code CONCAT] (0x14)
+                            td #[code CONCAT] (0x13)
                             td number of arguments
                             td Concatenate lists in reverse order
                         tr
-                            td #[code APPEND_IN_PLACE] (0x15)
+                            td #[code APPEND_IN_PLACE] (0x14)
                             td number of arguments
                             td Append elements to a reference to a list (TS) in reverse order (first the last element, then the other, then the list itself). Push #[code nil] on the stack
                         tr
-                            td #[code CONCAT_IN_PLACE] (0x16)
+                            td #[code CONCAT_IN_PLACE] (0x15)
                             td number of arguments
                             td Concatenate lists in reverse order, to a reference to a list (TS). Push #[code nil] to the stack
                         tr
-                            td #[code POP_LIST] (0x17)
+                            td #[code POP_LIST] (0x16)
                             td 
                             td Remove an element from a list (TS), given an index (TS1). Push the modified list to the stack
                         tr
-                            td #[code POP_LIST_IN_PLACE] (0x18)
+                            td #[code POP_LIST_IN_PLACE] (0x17)
                             td 
                             td Remove an element from a reference to a list (TS), given an index (TS1). Push #[code nil] to the stack
                         tr
-                            td #[code POP] (0x19)
+                            td #[code POP] (0x18)
                             td 
                             td Remove the top of the stack
                         tr
-                            td #[code DUP] (0x1a)
+                            td #[code DUP] (0x19)
                             td 
                             td Duplicate the top of the stack
                         tr
-                            td #[code ADD] (0x20)
+                            td #[code ADD] (0x1a)
                             td 
                             td Push #[code TS1 + TS]
                         tr
-                            td #[code SUB] (0x21)
+                            td #[code SUB] (0x1b)
                             td 
                             td Push #[code TS1 - TS]
                         tr
-                            td #[code MUL] (0x22)
+                            td #[code MUL] (0x1c)
                             td 
                             td Push #[code TS1 * TS]
                         tr
-                            td #[code DIV] (0x23)
+                            td #[code DIV] (0x1d)
                             td 
                             td Push #[code TS1 / TS]
                         tr
-                            td #[code GT] (0x24)
+                            td #[code GT] (0x1e)
                             td 
                             td Push #[code TS1 > TS]
                         tr
-                            td #[code LT] (0x25)
+                            td #[code LT] (0x1f)
                             td 
                             td Push #[code TS1 < TS]
                         tr
-                            td #[code LE] (0x26)
+                            td #[code LE] (0x20)
                             td 
                             td Push #[code TS1 <= TS]
                         tr
-                            td #[code GE] (0x27)
+                            td #[code GE] (0x21)
                             td 
                             td Push #[code TS1 >= TS]
                         tr
-                            td #[code NEQ] (0x28)
+                            td #[code NEQ] (0x22)
                             td 
                             td Push #[code TS1 != TS]
                         tr
-                            td #[code EQ] (0x29)
+                            td #[code EQ] (0x23)
                             td 
                             td Push #[code TS1 == TS]
                         tr
-                            td #[code LEN] (0x2a)
+                            td #[code LEN] (0x24)
                             td 
                             td Push #[code len(TS)], TS must be a list
                         tr
-                            td #[code EMPTY] (0x2b)
+                            td #[code EMPTY] (0x25)
                             td 
                             td Push #[code empty?(TS)], TS must be a list
                         tr
-                            td #[code TAIL] (0x2c)
+                            td #[code TAIL] (0x26)
                             td 
                             td Push #[code tail(TS)], all the elements of TS except the first one (TS must be a list)
                         tr
-                            td #[code HEAD] (0x2d)
+                            td #[code HEAD] (0x27)
                             td 
                             td Push #[code head(TS)], the first element of TS or nil if empty (TS must be a list)
                         tr
-                            td #[code ISNIL] (0x2e)
+                            td #[code ISNIL] (0x28)
                             td 
                             td Push true if TS is nil, false otherwise
                         tr
-                            td #[code ASSERT] (0x2f)
+                            td #[code ASSERT] (0x29)
                             td 
                             td Throw an exception if TS1 is false, and display TS (must be a string). Otherwise, push nil
                         tr
-                            td #[code TO_NUM] (0x30)
+                            td #[code TO_NUM] (0x2a)
                             td 
                             td Convert TS to number (must be a string)
                         tr
-                            td #[code TO_STR] (0x31)
+                            td #[code TO_STR] (0x2b)
                             td 
-                            td Convert TS to string (must be a number)
+                            td Convert TS to string
                         tr
-                            td #[code AT] (0x32)
+                            td #[code AT] (0x2c)
                             td 
                             td Push the value at index TS (must be a number) in TS1 (must be a list)
                         tr
-                            td #[code MOD] (0x33)
+                            td #[code MOD] (0x2d)
                             td 
                             td Push #[code TS1 % TS]
                         tr
-                            td #[code TYPE] (0x34)
+                            td #[code TYPE] (0x2e)
                             td 
                             td Push the type of TS as a string
                         tr
-                            td #[code HASFIELD] (0x35)
+                            td #[code HASFIELD] (0x2f)
                             td 
                             td Check if TS1 is a closure field of TS. TS must be a Closure and TS1 a String
                         tr
-                            td #[code NOT] (0x36)
+                            td #[code NOT] (0x30)
                             td 
                             td Push #[code !TS]

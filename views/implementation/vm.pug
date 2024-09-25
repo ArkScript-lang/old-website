@@ -25,9 +25,12 @@ block inner_content
                 h3 Running code while taking care of exceptions
                 p.
                     This is the next function called by #[code VM::run]: #[code VM::safeRun]. As its name suggests, it runs bytecode in a
-                    safe manner, taking care of the potential exceptions. This is by far the longest method (952 lines at the time writing).
+                    safe manner, taking care of the potential exceptions. This is by far the longest method (914 lines at the time writing).
                     It will go through every instruction, running them sequentially, and if an exception is thrown, it will be caught, the
                     exit code of the VM will be set to 1, and a backtrace will be displayed.
+                p.
+                    Additionally, computed gotos are used here as an optimization, on compilers that support it (Clang and GCC). On other
+                    compilers, a normal loop with a switch case is used.
                 hr
                 h3 Backtrace generation
                 p.
