@@ -59,6 +59,8 @@
 </li><li class="nav-item">
     <a href="#io:writefile">io:writeFile</a>
 </li><li class="nav-item">
+    <a href="#io:appendtofile">io:appendToFile</a>
+</li><li class="nav-item">
     <a href="#io:readfile">io:readFile</a>
 </li><li class="nav-item">
     <a href="#io:fileexists?">io:fileExists?</a>
@@ -149,20 +151,39 @@ Return the value as a string</div>
     <h2>io:writeFile</h2>
 
     <div class="inner-section">
-        <div><code>Builtin (io:writeFile filename mode content)</code>
+        <div><code>Builtin (io:writeFile filename content)</code>
 <br>
-<div>Write content to a file, given an optional mode (default: "w"). Return nil</div>
+<div>Write content to a file. Return nil</div>
 <div><b>Note</b>
 : 
 </div>
 <div><h4>Parameters</h4>
-<ul><li><code>filename</code>: path to the file to open</li><li><code>mode</code>: (optional), either "a" (append) or "w" (write)</li><li><code>content</code>: can be any valid ArkScript value</li></ul></div>
+<ul><li><code>filename</code>: path to the file to write to (will be overwritten if it exists)</li><li><code>content</code>: can be any valid ArkScript value</li></ul></div>
 <div><h4>Author</h4>
 <a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
 (io:writeFile "hello.json" "{\"key\": 12}")
-(io:writeFile "truc.txt" "a" 12)
+</code>
+</pre></div>
+    </div>
+</section><section id="io:appendtofile">
+    <h2>io:appendToFile</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (io:appendToFile filename content)</code>
+<br>
+<div>Append content to a file. Return nil</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameters</h4>
+<ul><li><code>filename</code>: path to the file to append to</li><li><code>content</code>: can be any valid ArkScript value</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(io:writeFile "hello.json" "{\"key\": 12}")
 </code>
 </pre></div>
     </div>
@@ -298,7 +319,7 @@ Take multiple arguments, all String, each one representing a path to a file</div
     <footer id="page-footer">
         <p class="text-center">
             Copyright &copy; 2020-2024 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.<br>
-            <i>Last generation at 2024-09-01 01:50:25.190454</i>
+            <i>Last generation at 2024-10-01 01:51:56.810042</i>
         </p>
     </footer>
 
