@@ -85,7 +85,15 @@ block inner_content
                     tr
                         td Instruction
                         td 4 bytes
-                        td Instructions follow this layout: #[code pppppppp iiiiiiii dddddddd dddddddd] ; #[code p] for padding (always ignored), #[code i] for the instruction, #[code d] for the immediate argument
+                        td
+            div
+                p Instructions with a single immediate arguments follow this layout: #[code iiiiiiii pppppppp dddddddd dddddddd].
+                p #[code p] for padding (ignored), #[code i] for the instruction, #[code d] for the immediate argument.
+                p Super Instructions, with two immediate arguments, follow this layout: #[code iiiiiiii ssssssss ssssxxxx xxxxxxxx].
+                p.
+                    #[code s] for the second argument (on 12 bits), #[code x] for the primary argument (on 12 bits as well).
+                    Using this representation, computing the primary argument is as easy as #[code arg_16_bits & 0x0fff], with
+                    #[code arg_16_bits] the primary argument for instructions with a single argument.
 
         section#note-on-builtins
             h2 Note on builtins
@@ -331,3 +339,47 @@ block inner_content
                             td #[code NOT] (0x30)
                             td 
                             td Push #[code !TS]
+                        tr
+                            td #[code LOAD_CONST_LOAD_CONST] (0x31)
+                            td constant id, constant id
+                            td Load two consts (#[code primary] then #[code secondary]) on the stack in one instruction
+                        tr
+                            td #[code LOAD_CONST_STORE] (0x32)
+                            td constant id, symbol id
+                            td Load const #[code primary] into the symbol #[code secondary] (create a variable)
+                        tr
+                            td #[code LOAD_CONST_SET_VAL] (0x33)
+                            td constant id, symbol id
+                            td Load const #[code primary] into the symbol #[code secondary] (search for the variable with the given symbol id)
+                        tr
+                            td #[code STORE_FROM] (0x34)
+                            td symbol id, symbol id
+                            td Store the value of the symbol #[code primary] into a new variable #[code secondary]
+                        tr
+                            td #[code SET_VAL_FROM] (0x35)
+                            td symbol id, symbol id
+                            td Store the value of the symbol #[code primary] into an existing variable #[code secondary]
+                        tr
+                            td #[code INCREMENT] (0x36)
+                            td symbol id, nothing
+                            td Increment the variable #[code primary] and push its value on the stack
+                        tr
+                            td #[code DECREMENT] (0x37)
+                            td symbol id, nothing
+                            td Decrement the variable #[code primary] and push its value on the stack
+                        tr
+                            td #[code STORE_TAIL] (0x38)
+                            td symbol id, symbol id
+                            td Load the symbol #[code primary], compute its tail, store it in a new variable #[code secondary]
+                        tr
+                            td #[code STORE_HEAD] (0x39)
+                            td symbol id, symbol id
+                            td Load the symbol #[code primary], compute its head, store it in a new variable #[code secondary]
+                        tr
+                            td #[code SET_VAL_TAIL] (0x3a)
+                            td symbol id, symbol id
+                            td Load the symbol #[code primary], compute its tail, store it in an existing variable #[code secondary]
+                        tr
+                            td #[code SET_VAL_HEAD] (0x3b)
+                            td symbol id, symbol id
+                            td Load the symbol #[code primary], compute its head, store it in an existing variable #[code secondary]
