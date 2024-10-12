@@ -1,14 +1,33 @@
 <map id="/Users/fola/Documents/ArkScript/Ark/include/Ark/VM/Scope.hpp" name="/Users/fola/Documents/ArkScript/Ark/include/Ark/VM/Scope.hpp">
-<area shape="rect" id="node1" title="The virtual machine scope system." alt="" coords="166,5,323,61"/>
-<area shape="rect" id="node2" title=" " alt="" coords="787,256,844,282"/>
-<area shape="rect" id="node3" title=" " alt="" coords="31,183,106,208"/>
-<area shape="rect" id="node4" href="$d5/d40/Platform_8hpp.html" title="ArkScript configuration macros." alt="" coords="244,256,363,282"/>
-<area shape="rect" id="node5" href="$de/dfd/Value_8hpp.html" title=" " alt="" coords="240,109,366,135"/>
-<area shape="rect" id="node6" title=" " alt="" coords="130,183,191,208"/>
-<area shape="rect" id="node7" title=" " alt="" coords="387,256,441,282"/>
-<area shape="rect" id="node8" title=" " alt="" coords="215,183,266,208"/>
-<area shape="rect" id="node9" href="$dc/dd5/Closure_8hpp.html" title="Subtype of the value type, handling closures." alt="" coords="392,183,567,208"/>
-<area shape="rect" id="node12" href="$dc/d3d/UserType_8hpp.html" title="Subtype of the value, capable of handling any C++ type." alt="" coords="591,183,778,208"/>
-<area shape="rect" id="node10" title=" " alt="" coords="465,256,533,282"/>
-<area shape="rect" id="node11" title=" " alt="" coords="604,256,675,282"/>
+<area shape="rect" id="Node000001" title="The virtual machine scope system." alt="" coords="542,5,699,61"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,183,63,208"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="543,58,345,112,78,185,77,180,344,106,541,53"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="736,256,810,282"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="692,59,725,80,753,107,771,140,779,176,781,211,779,241,774,241,776,211,774,177,766,142,749,111,722,84,690,64"/>
+<area shape="rect" id="Node000004" href="$d5/d40/Platform_8hpp.html" title="ArkScript configuration macros." alt="" coords="532,256,651,282"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="666,59,706,89,740,126,753,147,759,168,759,189,750,210,733,228,713,242,667,260,665,255,710,238,729,224,745,207,754,188,754,168,748,149,736,130,702,93,663,64"/>
+<area shape="rect" id="Node000005" href="$de/dfd/Value_8hpp.html" title=" " alt="" coords="356,109,482,135"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="559,64,463,105,460,100,556,59"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="356,136,83,185,78,186,77,181,81,180,355,131"/>
+<area shape="poly" id="edge8_Node000005_Node000003" title=" " alt="" coords="483,124,555,131,633,142,703,158,730,168,749,181,760,194,767,209,774,240,769,242,762,211,756,197,746,185,727,173,701,163,632,147,554,136,483,130"/>
+<area shape="poly" id="edge19_Node000005_Node000004" title=" " alt="" coords="407,137,393,152,380,170,374,189,379,207,399,222,433,235,517,254,516,259,432,240,397,226,374,210,368,189,375,168,389,149,404,133"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="389,183,450,208"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="422,135,422,167,417,167,417,135"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="94,256,147,282"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="356,130,292,136,224,147,164,163,143,173,128,184,121,197,117,211,117,241,112,241,112,211,116,195,124,181,140,169,163,158,223,142,291,131,356,125"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="474,183,524,208"/>
+<area shape="poly" id="edge9_Node000005_Node000008" title=" " alt="" coords="435,133,477,170,473,174,431,137"/>
+<area shape="rect" id="Node000009" href="$dc/dd5/Closure_8hpp.html" title="Subtype of the value type, handling closures." alt="" coords="138,183,314,208"/>
+<area shape="poly" id="edge10_Node000005_Node000009" title=" " alt="" coords="387,138,274,179,272,174,386,133"/>
+<area shape="rect" id="Node000012" href="$dc/d3d/UserType_8hpp.html" title="Subtype of the value, capable of handling any C++ type." alt="" coords="549,183,735,208"/>
+<area shape="poly" id="edge15_Node000005_Node000012" title=" " alt="" coords="458,133,591,175,589,180,456,138"/>
+<area shape="poly" id="edge14_Node000009_Node000004" title=" " alt="" coords="289,206,517,251,516,256,288,212"/>
+<area shape="poly" id="edge13_Node000009_Node000007" title=" " alt="" coords="210,211,153,250,150,245,207,207"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="192,256,260,282"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="229,209,229,241,223,241,223,209"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="334,256,406,282"/>
+<area shape="poly" id="edge12_Node000009_Node000011" title=" " alt="" coords="252,206,333,247,331,251,249,211"/>
+<area shape="poly" id="edge17_Node000012_Node000003" title=" " alt="" coords="665,207,739,246,736,251,663,211"/>
+<area shape="poly" id="edge18_Node000012_Node000004" title=" " alt="" coords="636,210,611,245,606,242,631,207"/>
+<area shape="poly" id="edge16_Node000012_Node000011" title=" " alt="" coords="597,211,421,257,420,252,595,206"/>
 </map>

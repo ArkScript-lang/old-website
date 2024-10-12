@@ -1,8 +1,8 @@
 var classArk_1_1internal_1_1Parser =
 [
-    [ "Parser", "d9/d0c/classArk_1_1internal_1_1Parser.html#abdcc5d76d2b4849bc2371a301ba1d420", null ],
+    [ "Parser", "d9/d0c/classArk_1_1internal_1_1Parser.html#a306dc6b9d001d9f8b0082befdfa5aca0", null ],
     [ "anyAtomOf", "d9/d0c/classArk_1_1internal_1_1Parser.html#ac6fcc27dc1839bbffd68dede5fdb11b2", null ],
-    [ "ast", "d9/d0c/classArk_1_1internal_1_1Parser.html#ad439560cc38a98754e14c375d663c0b2", null ],
+    [ "ast", "d9/d0c/classArk_1_1internal_1_1Parser.html#a50cba765e5c2b08dcda5fca3e1b3b874", null ],
     [ "atom", "d9/d0c/classArk_1_1internal_1_1Parser.html#a2a6c9389e2d31f2f0cdb475fc37a88d7", null ],
     [ "block", "d9/d0c/classArk_1_1internal_1_1Parser.html#ad266bbbd0bfc32958f84420a46698db8", null ],
     [ "condition", "d9/d0c/classArk_1_1internal_1_1Parser.html#a741392b2a49a8591aef7f5bc76e4583a", null ],
@@ -24,8 +24,7 @@ var classArk_1_1internal_1_1Parser =
     [ "nodeOrValue", "d9/d0c/classArk_1_1internal_1_1Parser.html#a53611218dda2ae271ac54eef2c09ec20", null ],
     [ "number", "d9/d0c/classArk_1_1internal_1_1Parser.html#a3b24d809e84b1c35d61824b6d9a50758", null ],
     [ "process", "d9/d0c/classArk_1_1internal_1_1Parser.html#a2d8485903ad694eab54b0e377ddfaf9c", null ],
-    [ "run", "d9/d0c/classArk_1_1internal_1_1Parser.html#a0a25e2e00dab8976c688f06734afc9ae", null ],
-    [ "setNodePosAndFilename", "d9/d0c/classArk_1_1internal_1_1Parser.html#adf6a562c4a2546cda3b63e272a4f77de", null ],
+    [ "setNodePosAndFilename", "d9/d0c/classArk_1_1internal_1_1Parser.html#a8299b12ad050e0c54e7222eebe8623f2", null ],
     [ "spread", "d9/d0c/classArk_1_1internal_1_1Parser.html#a72075c75e03d30a88dbdfd7c5767c0f1", null ],
     [ "string", "d9/d0c/classArk_1_1internal_1_1Parser.html#a642553e0fa3cd197c69af9b3fdec99ca", null ],
     [ "symbol", "d9/d0c/classArk_1_1internal_1_1Parser.html#a363f897aad4152cf215be8c4be79ffcc", null ],
@@ -33,5 +32,6 @@ var classArk_1_1internal_1_1Parser =
     [ "m_allow_macro_behavior", "d9/d0c/classArk_1_1internal_1_1Parser.html#a98f551a306ecd7be96a7b0e6d4301269", null ],
     [ "m_ast", "d9/d0c/classArk_1_1internal_1_1Parser.html#af3374a8db9c9deb335fa17356de29e12", null ],
     [ "m_imports", "d9/d0c/classArk_1_1internal_1_1Parser.html#ac8541c7bb044ba8ff2056461c206c672", null ],
-    [ "m_interpret", "d9/d0c/classArk_1_1internal_1_1Parser.html#a023379e05461a34443c0465d71ff1115", null ]
+    [ "m_interpret", "d9/d0c/classArk_1_1internal_1_1Parser.html#a023379e05461a34443c0465d71ff1115", null ],
+    [ "m_logger", "d9/d0c/classArk_1_1internal_1_1Parser.html#ab44309720db51fdee758c351f7c899ef", null ]
 ];

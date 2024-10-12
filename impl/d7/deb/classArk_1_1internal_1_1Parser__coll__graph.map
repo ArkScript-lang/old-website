@@ -1,18 +1,51 @@
 <map id="Ark::internal::Parser" name="Ark::internal::Parser">
-<area shape="rect" id="node1" title=" " alt="" coords="1450,166,1588,191"/>
-<area shape="rect" id="node2" href="$d8/d00/classArk_1_1internal_1_1BaseParser.html" title=" " alt="" coords="1170,320,1337,346"/>
-<area shape="rect" id="node3" title=" " alt="" coords="254,110,333,135"/>
-<area shape="rect" id="node13" href="$dc/d9e/classArk_1_1internal_1_1Node.html" title="A node of an Abstract Syntax Tree for ArkScript." alt="" coords="734,39,865,65"/>
-<area shape="rect" id="node15" href="$da/d03/structArk_1_1internal_1_1Import.html" title=" " alt="" coords="910,132,1047,158"/>
-<area shape="rect" id="node16" title=" " alt="" coords="539,143,704,169"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,102,131,143"/>
-<area shape="rect" id="node5" title=" " alt="" coords="728,313,871,369"/>
-<area shape="rect" id="node6" title=" " alt="" coords="236,284,351,310"/>
-<area shape="rect" id="node14" title=" " alt="" coords="1172,158,1336,199"/>
-<area shape="rect" id="node7" title=" " alt="" coords="49,308,87,334"/>
-<area shape="rect" id="node11" title=" " alt="" coords="239,346,348,371"/>
-<area shape="rect" id="node8" title=" " alt="" coords="915,472,1042,498"/>
-<area shape="rect" id="node9" href="$df/d83/classArk_1_1internal_1_1utf8__char__t.html" title=" " alt="" coords="918,407,1039,448"/>
-<area shape="rect" id="node10" title=" " alt="" coords="552,369,692,409"/>
-<area shape="rect" id="node12" href="$dd/d0e/structArk_1_1internal_1_1FilePosition.html" title=" " alt="" coords="895,295,1062,321"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="1549,490,1687,516"/>
+<area shape="rect" id="Node000002" href="$d8/d00/classArk_1_1internal_1_1BaseParser.html" title=" " alt="" coords="1269,241,1436,267"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1381,276,1604,488,1601,492,1377,280"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="282,488,362,513"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="349,476,378,457,410,442,451,430,484,426,560,423,653,417,726,416,799,412,891,398,1016,368,1138,331,1318,265,1319,270,1140,336,1018,373,892,404,799,417,727,421,653,422,560,428,484,432,452,436,412,447,380,462,352,481"/>
+<area shape="rect" id="Node000017" href="$d6/d2f/classArk_1_1internal_1_1Logger.html" title=" " alt="" coords="1107,600,1245,625"/>
+<area shape="poly" id="edge19_Node000017_Node000003" title=" " alt="" coords="342,524,372,559,391,576,412,589,458,608,506,625,605,647,705,658,805,660,899,655,985,646,1117,623,1118,629,986,651,900,661,805,665,705,663,604,652,504,630,456,613,410,593,388,580,368,563,338,528"/>
+<area shape="rect" id="Node000018" href="$dc/d9e/classArk_1_1internal_1_1Node.html" title="A node of an Abstract Syntax Tree for ArkScript." alt="" coords="755,538,886,564"/>
+<area shape="poly" id="edge21_Node000018_Node000003" title=" " alt="" coords="349,522,378,544,412,562,458,573,506,580,602,583,691,574,763,562,764,567,692,580,602,588,505,586,457,579,410,567,375,549,345,526"/>
+<area shape="rect" id="Node000020" href="$da/d03/structArk_1_1internal_1_1Import.html" title=" " alt="" coords="931,449,1067,475"/>
+<area shape="poly" id="edge24_Node000020_Node000003" title=" " alt="" coords="377,498,533,496,725,489,930,468,931,473,726,494,533,502,377,503"/>
+<area shape="rect" id="Node000021" title=" " alt="" coords="560,438,725,464"/>
+<area shape="poly" id="edge26_Node000021_Node000003" title=" " alt="" coords="376,487,411,480,559,459,560,464,411,486,377,492"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,480,131,521"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="146,498,282,498,282,503,146,503"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="928,190,1070,246"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="1086,224,1269,243,1269,248,1085,229"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="568,115,717,155"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="733,153,928,199,927,204,732,158"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="258,82,386,108"/>
+<area shape="poly" id="edge12_Node000002_Node000007" title=" " alt="" coords="401,92,536,94,739,101,896,117,971,131,1051,149,1246,206,1325,238,1323,243,1244,211,1050,154,970,136,895,122,738,106,536,99,401,98"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="401,107,411,109,568,126,567,132,411,114,401,113"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="257,161,387,187"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="402,176,468,176,536,169,591,153,593,159,536,174,468,181,402,182"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="49,188,87,213"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="102,195,232,183,256,181,257,186,233,189,103,201"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="49,138,87,164"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="103,151,257,165,256,171,103,157"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="264,304,380,329"/>
+<area shape="poly" id="edge10_Node000005_Node000011" title=" " alt="" coords="394,305,725,260,927,227,928,233,726,265,395,310"/>
+<area shape="rect" id="Node000019" title=" " alt="" coords="1270,441,1435,482"/>
+<area shape="poly" id="edge28_Node000019_Node000011" title=" " alt="" coords="395,317,617,333,754,346,892,363,1097,400,1271,439,1269,444,1096,406,891,368,754,351,617,338,395,323"/>
+<area shape="poly" id="edge27_Node000021_Node000011" title=" " alt="" coords="362,335,412,360,515,403,604,435,602,440,513,407,410,365,359,339"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="49,260,87,285"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="103,276,264,304,263,309,102,281"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="268,221,376,247"/>
+<area shape="poly" id="edge16_Node000015_Node000012" title=" " alt="" coords="102,265,267,239,268,245,103,270"/>
+<area shape="rect" id="Node000013" href="$df/d83/classArk_1_1internal_1_1utf8__char__t.html" title=" " alt="" coords="938,269,1060,310"/>
+<area shape="poly" id="edge13_Node000002_Node000013" title=" " alt="" coords="1075,279,1268,260,1269,265,1076,285"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="572,180,713,221"/>
+<area shape="poly" id="edge14_Node000013_Node000014" title=" " alt="" coords="729,219,938,272,937,277,727,224"/>
+<area shape="poly" id="edge15_Node000014_Node000015" title=" " alt="" coords="391,228,536,215,572,210,573,216,536,221,392,233"/>
+<area shape="rect" id="Node000016" href="$dd/d0e/structArk_1_1internal_1_1FilePosition.html" title="Describe a position in a given file ; handled by the BaseParser." alt="" coords="915,14,1083,40"/>
+<area shape="poly" id="edge17_Node000002_Node000016" title=" " alt="" coords="1098,17,1136,20,1174,27,1212,38,1246,57,1270,77,1290,100,1321,152,1341,203,1351,240,1346,241,1335,204,1316,154,1286,103,1266,80,1244,61,1210,43,1173,32,1135,25,1098,23"/>
+<area shape="poly" id="edge18_Node000001_Node000017" title=" " alt="" coords="1260,598,1386,576,1524,541,1589,514,1591,519,1526,546,1387,581,1261,604"/>
+<area shape="poly" id="edge20_Node000001_Node000018" title=" " alt="" coords="901,544,1549,505,1549,510,901,549"/>
+<area shape="poly" id="edge22_Node000001_Node000019" title=" " alt="" coords="1451,474,1549,490,1549,495,1450,480"/>
+<area shape="poly" id="edge23_Node000019_Node000020" title=" " alt="" coords="1083,459,1270,459,1270,464,1083,464"/>
+<area shape="poly" id="edge25_Node000020_Node000021" title=" " alt="" coords="741,454,749,454,930,459,930,464,749,460,741,459"/>
 </map>

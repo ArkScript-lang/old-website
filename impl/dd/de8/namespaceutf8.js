@@ -1,7 +1,8 @@
 var namespaceutf8 =
 [
     [ "details", "dc/d3b/namespaceutf8_1_1details.html", [
-      [ "ASCIIHexToInt", "dc/d3b/namespaceutf8_1_1details.html#ae7ea143681a4f21f0958f10d59c5e72b", null ]
+      [ "ASCIIHexToInt", "dc/d3b/namespaceutf8_1_1details.html#ae7ea143681a4f21f0958f10d59c5e72b", null ],
+      [ "no", "dc/d3b/namespaceutf8_1_1details.html#a9659766b9a41ed0e007bb644875beade", null ]
     ] ],
     [ "Utf8Type", "dd/de8/namespaceutf8.html#a4e67677ede3203d6d958f6163d594c8b", [
       [ "Ascii", "dd/de8/namespaceutf8.html#a4e67677ede3203d6d958f6163d594c8ba76b8d0dcd02ccaf203c167ced6d7ef31", null ],

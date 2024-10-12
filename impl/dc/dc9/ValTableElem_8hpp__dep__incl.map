@@ -1,14 +1,35 @@
 <map id="/Users/fola/Documents/ArkScript/Ark/include/Ark/Compiler/ValTableElem.hpp" name="/Users/fola/Documents/ArkScript/Ark/include/Ark/Compiler/ValTableElem.hpp">
-<area shape="rect" id="node1" title="The basic value type handled by the compiler." alt="" coords="392,5,601,61"/>
-<area shape="rect" id="node2" href="$d8/d0f/Compiler_8hpp.html" title="ArkScript compiler is in charge of transforming the AST into bytecode." alt="" coords="302,109,483,165"/>
-<area shape="rect" id="node12" href="$d9/d93/ValTableElem_8cpp.html" title=" " alt="" coords="507,109,694,165"/>
-<area shape="rect" id="node3" href="$d3/d7e/Ark_8hpp.html" title="Includes the needed files to start using ArkScript." alt="" coords="124,213,280,268"/>
-<area shape="rect" id="node5" href="$de/d8e/Welder_8hpp.html" title="In charge of welding everything needed to compile code." alt="" coords="308,213,477,268"/>
-<area shape="rect" id="node11" href="$de/dfa/Compiler_8cpp.html" title=" " alt="" coords="501,213,689,268"/>
-<area shape="rect" id="node4" href="$dc/d32/Ark_8cpp.html" title=" " alt="" coords="5,316,193,372"/>
-<area shape="rect" id="node6" href="$dc/dfd/JsonCompiler_8hpp.html" title=" " alt="" coords="217,316,373,372"/>
-<area shape="rect" id="node9" href="$d3/df1/Welder_8cpp.html" title=" " alt="" coords="397,316,585,372"/>
-<area shape="rect" id="node10" href="$d0/da0/State_8cpp.html" title=" " alt="" coords="609,316,797,372"/>
-<area shape="rect" id="node7" href="$db/d71/JsonCompiler_8cpp.html" title=" " alt="" coords="103,420,282,476"/>
-<area shape="rect" id="node8" href="$df/d0a/main_8cpp.html" title=" " alt="" coords="307,420,486,476"/>
+<area shape="rect" id="Node000001" title="The basic value type handled by the compiler." alt="" coords="582,5,792,61"/>
+<area shape="rect" id="Node000002" href="$d8/d0f/Compiler_8hpp.html" title="ArkScript compiler is in charge of transforming the AST into bytecode." alt="" coords="204,116,386,172"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="568,66,400,112,377,119,375,113,398,106,566,61"/>
+<area shape="rect" id="Node000012" href="$df/d86/IRCompiler_8hpp.html" title="Compile the intermediate representation to bytecode." alt="" coords="410,109,676,180"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="641,73,590,111,587,106,637,68"/>
+<area shape="rect" id="Node000014" href="$d0/de2/IROptimizer_8hpp.html" title="Optimize IR based on IR entity grouped by 2 (or more)" alt="" coords="700,109,965,180"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="737,68,788,106,784,111,734,73"/>
+<area shape="rect" id="Node000016" href="$d9/d93/ValTableElem_8cpp.html" title=" " alt="" coords="989,116,1177,172"/>
+<area shape="poly" id="edge17_Node000001_Node000016" title=" " alt="" coords="807,61,978,106,1002,113,1000,119,977,112,806,66"/>
+<area shape="rect" id="Node000003" href="$d3/d7e/Ark_8hpp.html" title="Includes the needed files to start using ArkScript." alt="" coords="217,235,373,291"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="298,187,298,235,292,235,292,187"/>
+<area shape="rect" id="Node000005" href="$de/d8e/Welder_8hpp.html" title="In charge of welding everything needed to compile code." alt="" coords="662,235,832,291"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="389,174,400,177,470,192,526,201,581,209,652,225,675,232,673,237,650,230,580,214,525,206,469,198,398,182,388,179"/>
+<area shape="rect" id="Node000011" href="$de/dfa/Compiler_8cpp.html" title=" " alt="" coords="5,235,193,291"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="238,183,146,237,144,232,235,178"/>
+<area shape="rect" id="Node000004" href="$dc/d32/Ark_8cpp.html" title=" " alt="" coords="201,346,389,402"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="298,306,298,346,292,346,292,306"/>
+<area shape="rect" id="Node000006" href="$dc/dfd/JsonCompiler_8hpp.html" title=" " alt="" coords="473,346,629,402"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="686,301,601,348,599,343,684,296"/>
+<area shape="rect" id="Node000009" href="$d3/df1/Welder_8cpp.html" title=" " alt="" coords="653,346,841,402"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="750,306,750,346,744,346,744,306"/>
+<area shape="rect" id="Node000010" href="$d0/da0/State_8cpp.html" title=" " alt="" coords="865,346,1053,402"/>
+<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="814,296,907,343,905,348,812,301"/>
+<area shape="rect" id="Node000007" href="$db/d71/JsonCompiler_8cpp.html" title=" " alt="" coords="359,450,538,506"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="515,415,478,451,474,447,511,411"/>
+<area shape="rect" id="Node000008" href="$df/d0a/main_8cpp.html" title=" " alt="" coords="563,450,742,506"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="591,411,627,447,623,451,587,415"/>
+<area shape="poly" id="edge12_Node000012_Node000005" title=" " alt="" coords="618,185,701,233,699,237,616,190"/>
+<area shape="rect" id="Node000013" href="$d1/dfa/IRCompiler_8cpp.html" title=" " alt="" coords="397,228,638,298"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="535,195,528,228,523,227,530,194"/>
+<area shape="poly" id="edge15_Node000014_Node000005" title=" " alt="" coords="800,194,769,236,765,233,796,191"/>
+<area shape="rect" id="Node000015" href="$d0/da9/IROptimizer_8cpp.html" title=" " alt="" coords="856,228,1097,298"/>
+<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="888,187,935,225,932,229,885,192"/>
 </map>

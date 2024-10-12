@@ -5,6 +5,7 @@ var namespaceArk_1_1internal_1_1Builtins =
       [ "await", "de/d5a/namespaceArk_1_1internal_1_1Builtins_1_1Async.html#a7ce117913ca010559fb55f9aa8103487", null ]
     ] ],
     [ "IO", "dc/d9d/namespaceArk_1_1internal_1_1Builtins_1_1IO.html", [
+      [ "appendToFile", "dc/d9d/namespaceArk_1_1internal_1_1Builtins_1_1IO.html#a08c2d5450a20230b83cba73838d1c3c4", null ],
       [ "fileExists", "dc/d9d/namespaceArk_1_1internal_1_1Builtins_1_1IO.html#a992d265e2fafe1bf22ff89767c6e8a48", null ],
       [ "input", "dc/d9d/namespaceArk_1_1internal_1_1Builtins_1_1IO.html#a3a406388e3d975e255207abdafbae03a", null ],
       [ "isDirectory", "dc/d9d/namespaceArk_1_1internal_1_1Builtins_1_1IO.html#af5c5aed2f585f92776abbab916bcbd42", null ],
@@ -65,7 +66,7 @@ var namespaceArk_1_1internal_1_1Builtins =
     [ "Time", "d5/d17/namespaceArk_1_1internal_1_1Builtins_1_1Time.html", [
       [ "timeSinceEpoch", "d5/d17/namespaceArk_1_1internal_1_1Builtins_1_1Time.html#adea5fb6221e30990a496abb47e520b30", null ]
     ] ],
-    [ "builtins", "df/dda/namespaceArk_1_1internal_1_1Builtins.html#ab8e5bf9492912eca99b228b661940d8c", null ],
+    [ "builtins", "df/dda/namespaceArk_1_1internal_1_1Builtins.html#ae99a104c484192543989515d4eda8a5a", null ],
     [ "falseSym", "df/dda/namespaceArk_1_1internal_1_1Builtins.html#a50c50c475a29822fe85e5c16b91c9015", null ],
     [ "nil", "df/dda/namespaceArk_1_1internal_1_1Builtins.html#a0541c7c43175f68aca89a4c3a61fca12", null ],
     [ "trueSym", "df/dda/namespaceArk_1_1internal_1_1Builtins.html#ac42d5de362d48803ef2a49f7f1e21e98", null ]

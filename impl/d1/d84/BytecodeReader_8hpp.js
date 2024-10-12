@@ -1,5 +1,9 @@
 var BytecodeReader_8hpp =
 [
+    [ "Ark::Version", "d6/dab/structArk_1_1Version.html", "d6/dab/structArk_1_1Version" ],
+    [ "Ark::Symbols", "d9/dba/structArk_1_1Symbols.html", "d9/dba/structArk_1_1Symbols" ],
+    [ "Ark::Values", "d0/d56/structArk_1_1Values.html", "d0/d56/structArk_1_1Values" ],
+    [ "Ark::Code", "d4/dd5/structArk_1_1Code.html", "d4/dd5/structArk_1_1Code" ],
     [ "Ark::BytecodeReader", "d8/d08/classArk_1_1BytecodeReader.html", "d8/d08/classArk_1_1BytecodeReader" ],
     [ "BytecodeSegment", "d1/d84/BytecodeReader_8hpp.html#afa776c29439b830386e8220ccab402f4", [
       [ "All", "d1/d84/BytecodeReader_8hpp.html#afa776c29439b830386e8220ccab402f4ab1c94ca2fbc3e78fc30069c8d0f01680", null ],

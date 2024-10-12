@@ -10,7 +10,13 @@ var Constants_8hpp =
     [ "ARK_VERSION_MINOR", "d6/de9/Constants_8hpp.html#ae92e5cb7f969a516e5ad53ff6c0b9800", null ],
     [ "ARK_VERSION_PATCH", "d6/de9/Constants_8hpp.html#a8b54f548bc7ddf5e0833bd12e4b65635", null ],
     [ "DefaultFeatures", "d6/de9/Constants_8hpp.html#a01bf99e888f59670c0508d83cc23ffd4", null ],
-    [ "FeatureRemoveUnusedVars", "d6/de9/Constants_8hpp.html#aed352fcea78905393d0edd9e1ae1423d", null ],
-    [ "FeatureShowWarnings", "d6/de9/Constants_8hpp.html#ae34e72be816cd85292979aa1126ddf2e", null ],
+    [ "FeatureASTOptimizer", "d6/de9/Constants_8hpp.html#ac3db2ac8dce7f6dc63d01048eaaea2cc", null ],
+    [ "FeatureDumpIR", "d6/de9/Constants_8hpp.html#aca8e167cdb15794066ffc3254580fa5a", null ],
+    [ "FeatureImportSolver", "d6/de9/Constants_8hpp.html#a0dd1d59c1673ce87c62416819b5604b4", null ],
+    [ "FeatureIROptimizer", "d6/de9/Constants_8hpp.html#a19addc1833d2f8b7f039660b23482d8e", null ],
+    [ "FeatureMacroProcessor", "d6/de9/Constants_8hpp.html#a5aa16adc97211d2f076390efbc996f63", null ],
+    [ "FeatureTestFailOnException", "d6/de9/Constants_8hpp.html#a69c882fe0668cb21166e4616104c0480", null ],
+    [ "MaxMacroProcessingDepth", "d6/de9/Constants_8hpp.html#a601127fdf466d46ddcc7d061bd4f7a34", null ],
+    [ "MaxMacroUnificationDepth", "d6/de9/Constants_8hpp.html#a9bfec7edeabdb42ddee1327daa3ee186", null ],
     [ "VMStackSize", "d6/de9/Constants_8hpp.html#a10c147f2df9516277811af7da43a250f", null ]
 ];

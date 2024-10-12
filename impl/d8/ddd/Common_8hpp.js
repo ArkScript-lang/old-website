@@ -1,6 +1,6 @@
 var Common_8hpp =
 [
-    [ "bytecode_t", "d8/ddd/Common_8hpp.html#a120175e12d54ead9aa7559d2231af817", null ],
+    [ "bytecode_t", "d8/ddd/Common_8hpp.html#abc8e737d05c4d6d46b653459516be329", null ],
     [ "Keyword", "d8/ddd/Common_8hpp.html#a9a844cdbff6d30f493cb3044c72128f1", [
       [ "Fun", "d8/ddd/Common_8hpp.html#a9a844cdbff6d30f493cb3044c72128f1a46d6d315bea88efbf048125d2ec444b4", null ],
       [ "Let", "d8/ddd/Common_8hpp.html#a9a844cdbff6d30f493cb3044c72128f1acae6404c4aecf46684930fe2a86676a6", null ],
@@ -24,7 +24,21 @@ var Common_8hpp =
       [ "Macro", "d8/ddd/Common_8hpp.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca4374cf34c5d58482ffae982196bd2114", null ],
       [ "Unused", "d8/ddd/Common_8hpp.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca92e592d90b9548016776a6fb68dccded", null ]
     ] ],
+    [ "And", "d8/ddd/Common_8hpp.html#ac2099221eb58924b2d0beaf69c6b3b0c", null ],
+    [ "AppendInPlace", "d8/ddd/Common_8hpp.html#a261f7519f76556d78c0cfd7d68a5f15d", null ],
+    [ "Argcount", "d8/ddd/Common_8hpp.html#a47632dc40a1524d59c1c93523fe99ca1", null ],
+    [ "ConcatInPlace", "d8/ddd/Common_8hpp.html#a53541dc64aaadfdf194a564ef444012b", null ],
     [ "keywords", "d8/ddd/Common_8hpp.html#af04674c421b375325c6ef8261578b7b8", null ],
+    [ "listInstructions", "d8/ddd/Common_8hpp.html#a4555cf39dc44e0efef073598f7686004", null ],
+    [ "macros", "d8/ddd/Common_8hpp.html#a64e92df774e5d9cc529b334c0b3ccad6", null ],
     [ "nodeTypes", "d8/ddd/Common_8hpp.html#ad78e3f7607c25c474f84746c59ca66f9", null ],
-    [ "operators", "d8/ddd/Common_8hpp.html#a87d41522bc68604778076a01867585f7", null ]
+    [ "operators", "d8/ddd/Common_8hpp.html#ac8dbb3a9557f304ab0e82241d9c61328", null ],
+    [ "Or", "d8/ddd/Common_8hpp.html#adc099a6d7e2ea25553535012c6fd235d", null ],
+    [ "Paste", "d8/ddd/Common_8hpp.html#a8252d8ef28672e44e520cfd3d22aa942", null ],
+    [ "PopInPlace", "d8/ddd/Common_8hpp.html#a625a21cf63c0bd98ddbd9dc0f5cb41d3", null ],
+    [ "Repr", "d8/ddd/Common_8hpp.html#ac7e0fe3f47cbfcbfd8c9f9c7122c57b3", null ],
+    [ "Symcat", "d8/ddd/Common_8hpp.html#adec1abdb389d377b54021dfc0504f27d", null ],
+    [ "SysArgs", "d8/ddd/Common_8hpp.html#abad6b061b9b0c47ae5bd12515beb6141", null ],
+    [ "SysPlatform", "d8/ddd/Common_8hpp.html#a6151f85a34bd00a79841da5e93283d23", null ],
+    [ "UpdateRef", "d8/ddd/Common_8hpp.html#adb20c20c3929d45340f09a05550d3a9d", null ]
 ];

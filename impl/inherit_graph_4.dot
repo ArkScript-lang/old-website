@@ -6,5 +6,25 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [label="Ark::internal::bytes_t",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$df/d2a/structArk_1_1internal_1_1bytes__t.html",tooltip=" "];
+  Node0 [id="Node000000",label="Ark::internal::CharPred",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d0/d86/structArk_1_1internal_1_1CharPred.html",tooltip=" "];
+  Node0 -> Node1 [id="edge2_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 [id="Node000001",label="Ark::internal::IsAlnum",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d6/dd4/structArk_1_1internal_1_1IsAlnum.html",tooltip=" "];
+  Node0 -> Node2 [id="edge3_Node000000_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Ark::internal::IsAlpha",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d1/d0f/structArk_1_1internal_1_1IsAlpha.html",tooltip=" "];
+  Node0 -> Node3 [id="edge4_Node000000_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Ark::internal::IsChar",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d1/daf/structArk_1_1internal_1_1IsChar.html",tooltip=" "];
+  Node0 -> Node4 [id="edge5_Node000000_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Ark::internal::IsDigit",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$da/d0d/structArk_1_1internal_1_1IsDigit.html",tooltip=" "];
+  Node0 -> Node5 [id="edge6_Node000000_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="Ark::internal::IsEither",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$da/d07/structArk_1_1internal_1_1IsEither.html",tooltip=" "];
+  Node0 -> Node6 [id="edge7_Node000000_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="Ark::internal::IsHex",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$da/dbf/structArk_1_1internal_1_1IsHex.html",tooltip=" "];
+  Node0 -> Node7 [id="edge8_Node000000_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="Ark::internal::IsInlineSpace",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d7/dc3/structArk_1_1internal_1_1IsInlineSpace.html",tooltip=" "];
+  Node0 -> Node8 [id="edge9_Node000000_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="Ark::internal::IsNot",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$dd/d27/structArk_1_1internal_1_1IsNot.html",tooltip=" "];
+  Node0 -> Node9 [id="edge10_Node000000_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="Ark::internal::IsSpace",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$dc/df7/structArk_1_1internal_1_1IsSpace.html",tooltip=" "];
+  Node0 -> Node10 [id="edge11_Node000000_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="Ark::internal::IsSymbol",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$de/d0c/structArk_1_1internal_1_1IsSymbol.html",tooltip=" "];
 }

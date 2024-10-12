@@ -2,6 +2,7 @@ var Builtins_8hpp =
 [
     [ "acos_", "da/d84/Builtins_8hpp.html#a5fdaf93c086a8e8446901884d4878554", null ],
     [ "acosh_", "da/d84/Builtins_8hpp.html#ad992e35fa6dadafd59d7e0acee2cfb39", null ],
+    [ "appendToFile", "da/d84/Builtins_8hpp.html#a08c2d5450a20230b83cba73838d1c3c4", null ],
     [ "asin_", "da/d84/Builtins_8hpp.html#a67286cb331f1239793adc98787bb51f8", null ],
     [ "asinh_", "da/d84/Builtins_8hpp.html#aeed6055dceb05952b0b5216df8f5878d", null ],
     [ "async", "da/d84/Builtins_8hpp.html#a31643a11f47feb782db353337dbf755d", null ],
@@ -46,7 +47,7 @@ var Builtins_8hpp =
     [ "tanh_", "da/d84/Builtins_8hpp.html#ad7ddb5827f457e683015cf6793fe971b", null ],
     [ "timeSinceEpoch", "da/d84/Builtins_8hpp.html#adea5fb6221e30990a496abb47e520b30", null ],
     [ "writeFile", "da/d84/Builtins_8hpp.html#a9683992f0c1efdb5a2eab4d93469a5ba", null ],
-    [ "builtins", "da/d84/Builtins_8hpp.html#ab8e5bf9492912eca99b228b661940d8c", null ],
+    [ "builtins", "da/d84/Builtins_8hpp.html#ae99a104c484192543989515d4eda8a5a", null ],
     [ "e_", "da/d84/Builtins_8hpp.html#a984bb75ee1edd7d6ba902ceb2b485291", null ],
     [ "falseSym", "da/d84/Builtins_8hpp.html#a50c50c475a29822fe85e5c16b91c9015", null ],
     [ "inf_", "da/d84/Builtins_8hpp.html#a7398662d9e3d1a1c2b9dfcf2640f59d6", null ],

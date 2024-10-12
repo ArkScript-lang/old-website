@@ -8,6 +8,7 @@ var dir_a8b6c64285bf9ac60f50770eb2fc48b5 =
     [ "Exceptions.hpp", "d2/de9/Exceptions_8hpp.html", "d2/de9/Exceptions_8hpp" ],
     [ "Files.hpp", "d4/dc0/Files_8hpp.html", "d4/dc0/Files_8hpp" ],
     [ "Literals.hpp", "de/dee/Literals_8hpp.html", "de/dee/Literals_8hpp" ],
+    [ "Logger.hpp", "d9/d11/Logger_8hpp.html", "d9/d11/Logger_8hpp" ],
     [ "Module.hpp", "d5/d44/Module_8hpp.html", "d5/d44/Module_8hpp" ],
     [ "Platform.hpp", "d5/d40/Platform_8hpp.html", "d5/d40/Platform_8hpp" ],
     [ "TypeChecker.hpp", "db/d5e/TypeChecker_8hpp.html", "db/d5e/TypeChecker_8hpp" ],

@@ -54,9 +54,9 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
-        [ "Variables", "functions_vars.html", null ],
+        [ "Variables", "functions_vars.html", "functions_vars" ],
         [ "Typedefs", "functions_type.html", null ],
-        [ "Related Functions", "functions_rela.html", null ]
+        [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -74,14 +74,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "@ref bitwise_module",
-"d2/d90/classArk_1_1internal_1_1ImportSolver.html#a430e9731fa7ee02dc3fdd9ea61167ae2",
-"d3/ddb/classArk_1_1Compiler.html#a76d50d9410aec683a38624d1f0af7ae6",
-"d5/db5/classArk_1_1internal_1_1MacroProcessor.html#ae22ffc46ad62546c54fec40d03834e08",
-"d8/d00/classArk_1_1internal_1_1BaseParser.html#ab9b87ddb0169629c458216078d9b28cc",
-"d9/d0c/classArk_1_1internal_1_1Parser.html#acd6e64c114ab6a164729bf7843076afd",
-"db/d71/JsonCompiler_8cpp_source.html",
-"dc/d9e/classArk_1_1internal_1_1Node.html#a6713fdb750d1405359b6669eb1ded279",
-"df/d85/CLI_2REPL_2Utils_8hpp.html#ae2f019589b52a422550ffec8959a2177"
+"d1/daf/structArk_1_1internal_1_1IsChar.html#ad146910ebe68309c59e5440c7895fb2c",
+"d3/d90/classArk_1_1Value.html#ad70885fdf6c2fe12d106d2991393373f",
+"d6/d2f/classArk_1_1internal_1_1Logger.html#a7bf27754b61f116e83a307e344ba84cb",
+"d8/d00/classArk_1_1internal_1_1BaseParser.html#a2cd6008d806adecfc73259fc25055714",
+"d8/ddd/Common_8hpp.html#abad6b061b9b0c47ae5bd12515beb6141",
+"da/d07/structArk_1_1internal_1_1IsEither.html",
+"dc/d0e/namespaceArk_1_1internal.html#a8819886538ddc9eccfbc6183e0d4af9f",
+"dc/d9e/classArk_1_1internal_1_1Node.html#aac5ce6a894036c51c529faede3b1d575",
+"df/d5f/Pass_8hpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

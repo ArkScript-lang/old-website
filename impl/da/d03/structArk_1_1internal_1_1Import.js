@@ -4,6 +4,8 @@ var structArk_1_1internal_1_1Import =
     [ "isGlob", "da/d03/structArk_1_1internal_1_1Import.html#a99dbcd640219a56fd66690cb85121d1c", null ],
     [ "packageToPath", "da/d03/structArk_1_1internal_1_1Import.html#ac1a3286f4f308e7500ce703af8074508", null ],
     [ "toPackageString", "da/d03/structArk_1_1internal_1_1Import.html#aee0df36f184ffddd37cc1eb7906d1783", null ],
+    [ "col", "da/d03/structArk_1_1internal_1_1Import.html#a80377a09f62c3867ac99dfd5aabb8ba5", null ],
+    [ "line", "da/d03/structArk_1_1internal_1_1Import.html#a309061ced55dcc01334f03f491bfbf38", null ],
     [ "package", "da/d03/structArk_1_1internal_1_1Import.html#af706f226d6f9d55809c2746405daebe7", null ],
     [ "prefix", "da/d03/structArk_1_1internal_1_1Import.html#a8bc3b43df97014361cf06f6d6099c310", null ],
     [ "symbols", "da/d03/structArk_1_1internal_1_1Import.html#a478530b4d048ccc6f8eb66448d745388", null ],

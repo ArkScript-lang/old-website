@@ -1,6 +1,8 @@
 var classFormatter =
 [
+    [ "Formatter", "d9/d43/classFormatter.html#aa75353ee18fb8492f1ef6f2cfc895741", null ],
     [ "Formatter", "d9/d43/classFormatter.html#a5e98361e4e698ac6cfa5ca88e304b0d9", null ],
+    [ "codeModified", "d9/d43/classFormatter.html#a1b058d5359e05fc3621d81745d973784", null ],
     [ "format", "d9/d43/classFormatter.html#ae95cac6b97ed445bea8addd1a4cb941a", null ],
     [ "formatBegin", "d9/d43/classFormatter.html#a740efe80bcf1e025fb7b4e917988e518", null ],
     [ "formatBlock", "d9/d43/classFormatter.html#a3e6e27277d2c847e30ce4a4087f3332a", null ],
@@ -20,11 +22,15 @@ var classFormatter =
     [ "isPlainValue", "d9/d43/classFormatter.html#a8c4ecff80a8ed33d9654ef8a547e042f", null ],
     [ "lineOfLastNodeIn", "d9/d43/classFormatter.html#ae8381afeb6fa8eef18a75336623af342", null ],
     [ "output", "d9/d43/classFormatter.html#ace1f7a12494a6243cff21a6c8762a9d6", null ],
-    [ "prefix", "d9/d43/classFormatter.html#a358ba9f625d78c42e13d21f669bcd424", null ],
+    [ "prefix", "d9/d43/classFormatter.html#a4b67aff64c164c0cc753ea7fcb4df36a", null ],
+    [ "processAst", "d9/d43/classFormatter.html#a49233dea5ef0ad723d4abadce2c357b8", null ],
     [ "run", "d9/d43/classFormatter.html#a0dfd8759479435dc8a0580c0891e70e5", null ],
-    [ "should_split_on_newline", "d9/d43/classFormatter.html#aada277cf39d003f9e0f55a206f8d1eda", null ],
+    [ "runWithString", "d9/d43/classFormatter.html#ae3f7b2d51ad152abac642c7a416ec1e0", null ],
+    [ "shouldSplitOnNewline", "d9/d43/classFormatter.html#a05984227397d145da78b0ab6fd410f64", null ],
+    [ "warnIfCommentsWereRemoved", "d9/d43/classFormatter.html#ae722f662cf5a04df8696928d3c7a60d6", null ],
     [ "m_dry_run", "d9/d43/classFormatter.html#a62c7a819b8a96ac6663f245f3cf48156", null ],
     [ "m_filename", "d9/d43/classFormatter.html#adde3885c3c26f054a0039360e0c19a3d", null ],
     [ "m_output", "d9/d43/classFormatter.html#ac635c5e08f2d9fa6a711b32687a4d926", null ],
-    [ "m_parser", "d9/d43/classFormatter.html#a710f4582c5aed1fb3d345213351f9510", null ]
+    [ "m_parser", "d9/d43/classFormatter.html#a710f4582c5aed1fb3d345213351f9510", null ],
+    [ "m_updated", "d9/d43/classFormatter.html#a79ba1b10f9b2ac56a88e63add5e6c3a2", null ]
 ];

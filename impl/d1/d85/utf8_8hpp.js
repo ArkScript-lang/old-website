@@ -12,5 +12,6 @@ var utf8_8hpp =
     [ "decode", "d1/d85/utf8_8hpp.html#ae7c37039b1bf8a9c744ee701a83eae83", null ],
     [ "isValid", "d1/d85/utf8_8hpp.html#aa16ef5ad4e5c7d825aac60379f7f6400", null ],
     [ "utf8type", "d1/d85/utf8_8hpp.html#a5ae86af09e8ae7dd21156b86d78ac5af", null ],
-    [ "ASCIIHexToInt", "d1/d85/utf8_8hpp.html#ae7ea143681a4f21f0958f10d59c5e72b", null ]
+    [ "ASCIIHexToInt", "d1/d85/utf8_8hpp.html#ae7ea143681a4f21f0958f10d59c5e72b", null ],
+    [ "no", "d1/d85/utf8_8hpp.html#a9659766b9a41ed0e007bb644875beade", null ]
 ];
