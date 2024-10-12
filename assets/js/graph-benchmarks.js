@@ -12,7 +12,7 @@ async function fetchLanguage(language, transform) {
     return output
 }
 
-function computeDatasets() {
+function computeDatasets(quantity) {
     let competing = Object.keys(languages)
     competing.splice(competing.indexOf("arkscript"), 1)
 
@@ -47,9 +47,10 @@ function computeDatasets() {
         )
 
         for (let test in dataset) {
+            let data = quantity !== null ? dataset[test].slice(-quantity) : dataset[test]
             relative_datasets.push({
                 label: `ArkScript / ${lang} - ${test.split("-")[0]}`,
-                data: dataset[test],
+                data: data,
                 showLine: true,
             })
         }
@@ -58,14 +59,14 @@ function computeDatasets() {
     return relative_datasets
 }
 
-async function showGraph() {
+async function showGraph(quantity = null) {
     if (lineChart !== null)
         lineChart.destroy()
 
     lineChart = new Chart("linechart", {
         type: "line",
         data: {
-            datasets: computeDatasets(),
+            datasets: computeDatasets(quantity),
         },
         options: {
             responsive: true,
@@ -97,4 +98,16 @@ window.onload =  async () => {
     languages["ruby"] = await fetchLanguage("ruby", x => x)
     languages["wren"] = await fetchLanguage("wren", x => x)
     showGraph()
+
+    document.getElementById("data-quantity").addEventListener('change', function() {
+        if (this.value === 'all') {
+            showGraph()
+        } else if (this.value === '100elem') {
+            showGraph(100)
+        } else if (this.value === '30elem') {
+            showGraph(30)
+        } else if (this.value === '10elem') {
+            showGraph(10)
+        }
+    })
 }
