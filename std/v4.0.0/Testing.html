@@ -181,7 +181,7 @@ Create two variables: _name-output (a list: [successes, failures]) and _name-sta
 <pre>
 <code class="rainbowjs" data-language="arkscript">
 (test:suite name {
-    (set display_cases_success true)  # default: false, when true, display all the cases names on success and failures
+    (_suite.toggle_display_cases_success true)  # default: false, when true, display all the cases names on success and failures
     (test:eq 6 (my_function 1 2 3))
     (test:eq 128 (* 8 16))})
 </code>
@@ -199,7 +199,7 @@ Create two variables: _name-output (a list: [successes, failures]) and _name-sta
     <footer id="page-footer">
         <p class="text-center">
             Copyright &copy; 2020-2024 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.<br>
-            <i>Last generation at 2024-10-01 01:51:56.810042</i>
+            <i>Last generation at 2024-11-01 01:51:32.696555</i>
         </p>
     </footer>
 

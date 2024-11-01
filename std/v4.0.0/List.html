@@ -85,6 +85,8 @@
 </li><li class="nav-item">
     <a href="#list:any">list:any</a>
 </li><li class="nav-item">
+    <a href="#list:countif">list:countIf</a>
+</li><li class="nav-item">
     <a href="#list:reverse">list:reverse</a>
 </li><li class="nav-item">
     <a href="#list:find">list:find</a>
@@ -462,7 +464,7 @@ The original list is left unmodified.</div>
 : 
 </div>
 <div><h4>Parameters</h4>
-<ul><li><code>_L</code>: the list to work on</li><li><code>_f</code>: the conditon</li></ul></div>
+<ul><li><code>_L</code>: the list to work on</li><li><code>_f</code>: the condition</li></ul></div>
 <div><h4>Author</h4>
 <a href="https://github.com/Gryfenfer97">@Gryfenfer97</a></div></div><div><h4>Example</h4>
 <pre>
@@ -470,6 +472,28 @@ The original list is left unmodified.</div>
 (let a [1 2 3 4])
 (let f (fun (e) (< e 3)))
 (print (list:any a f))  # true
+</code>
+</pre></div>
+    </div>
+</section><section id="list:countif">
+    <h2>list:countIf</h2>
+
+    <div class="inner-section">
+        <div><code>(let list:countIf (fun (_L _f) (...)))</code>
+<br>
+<div>Count the number of elements in a list that match a condition</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameters</h4>
+<ul><li><code>_L</code>: the list to work on</li><li><code>_f</code>: the condition</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(let lst [1 2 3 4 5 6 7 8 9])
+(let is_even (fun (e) (= 0 (mod e 2))))
+(print (count_if lst is_even))  # 4
 </code>
 </pre></div>
     </div>
@@ -606,7 +630,7 @@ The original list is not modified</div>
     <footer id="page-footer">
         <p class="text-center">
             Copyright &copy; 2020-2024 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.<br>
-            <i>Last generation at 2024-10-01 01:51:56.810042</i>
+            <i>Last generation at 2024-11-01 01:51:32.696555</i>
         </p>
     </footer>
 
