@@ -272,6 +272,9 @@ block content
                     p
                         | When importing files from the standard library, you don't need to write the path to the library folder, just the path of the file in it prefixed by #[code std].
                         | For example: #[code (import std.String)] will work without problems.
+                    p
+                        | When importing code like #[code (import file)], every symbol defined in #[code file] will have to prefixed by #[code file:] to be used. Those are prefixed imports.
+                        | You can also import code without the prefix: #[code (import file:*)] (glob imports), or just a few symbols: #[code (import file :foo :bar)] that can be used without the prefix.
 
             section#async
                 h2 Running functions asynchronously
