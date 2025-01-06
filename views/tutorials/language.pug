@@ -38,6 +38,7 @@ block content
                         li.nav-item: a(href="#loops") Loops
                         li.nav-item: a(href="#functions") Functions
                         li.nav-item: a(href="#closures") Closures
+                        li.nav-item: a(href="#vm-builtins") VM builtins
                         li.nav-item: a(href="#import") Importing code
                         li.nav-item: a(href="#async") Running functions asynchronously
                         li.nav-item: a(href="#macros") Using macros to manipulate code at compile time
@@ -74,14 +75,14 @@ block content
                     br
                     br
                     | Example:
-                    - let example = "(let a 12)  # immutable variable\n"
-                    - example += "(let a \"hello\")  # cannot redefine constant\n"
-                    - example += "(set a \"world\")  # cannot modify constant, will throw an error\n"
-                    - example += "\n"
-                    - example += "(mut b [12 42 64])  # mutable variable\n"
-                    - example += "(mut b \"hello\")  # no problem, the operation is allowed\n"
-                    - example += "(set b \"ArkScript is cool!\")  # no problem, operation is allowed on mutables"
-                    +playground("creating-variables", example)
+                    - let ex_vars = "(let a 12)  # immutable variable\n"
+                    - ex_vars += "(let a \"hello\")  # cannot redefine constant\n"
+                    - ex_vars += "(set a \"world\")  # cannot modify constant, will throw an error\n"
+                    - ex_vars += "\n"
+                    - ex_vars += "(mut b [12 42 64])  # mutable variable\n"
+                    - ex_vars += "(mut b \"hello\")  # no problem, the operation is allowed\n"
+                    - ex_vars += "(set b \"ArkScript is cool!\")  # no problem, operation is allowed on mutables"
+                    +playground("creating-variables", ex_vars)
 
             section#comments
                 h2 Comments
@@ -95,21 +96,21 @@ block content
                     p An ArkScript program is a collection of blocks. A block #[code (function arguments...)], thus, those are valid programs:
                     pre: code.rainbowjs(data-language="arkscript")
                         | (print "hello world")
-                    - let example2 = "(let a 12)\n"
-                    - example2 += "(let foo (fun (a b)\n"
-                    - example2 += "    (+ a b)))\n"
-                    - example2 += "(print (foo a a))"
-                    +playground("program-structure-print", example2)
+                    - let ex_print = "(let a 12)\n"
+                    - ex_print += "(let foo (fun (a b)\n"
+                    - ex_print += "    (+ a b)))\n"
+                    - ex_print += "(print (foo a a))"
+                    +playground("program-structure-print", ex_print)
 
                     p Multiple blocks can be put into one by using the #[strong begin construction]:
-                    - let example3 = "(begin\n"
-                    - example3 += "    (let a 12)\n"
-                    - example3 += "    (print a)\n"
-                    - example3 += "    (let b (* a 2))\n"
-                    - example3 += "    (print b))\n\n"
-                    - example3 += "# and can be accessed from outside, begin doesn't create a scope"
-                    - example3 += "(print a \" \" b)"
-                    +playground("program-structure-blocks", example3)
+                    - let ex_blocks = "(begin\n"
+                    - ex_blocks += "    (let a 12)\n"
+                    - ex_blocks += "    (print a)\n"
+                    - ex_blocks += "    (let b (* a 2))\n"
+                    - ex_blocks += "    (print b))\n\n"
+                    - ex_blocks += "# and can be accessed from outside, begin doesn't create a scope\n"
+                    - ex_blocks += "(print a \" \" b)"
+                    +playground("program-structure-blocks", ex_blocks)
                     p #[code (begin)] and #[code {}] are synonyms.
 
             section#io
@@ -118,11 +119,11 @@ block content
                     p User interactions are a must have in a programming language. To achieve such interaction in a shell (the big black windows where our code is running), we have what we call #[i IO] or #[i input/output], through #[code print] and #[code input]. One can write text to the shell, the other can prompt the user and retrieve what they wrote.
                     p #[strong Example:] #[code (print "hello" " world")], will print #[code hello world].
                     p The print function won't put spaces between each element printed, thus we have to do it ourselves.
-                    - let example4 = "(let a (input \"what is your name?\"))  # will print what the user wrote,\n"
-                    - example4 += "(print a)                             # after having validated by pressing Enter\n"
-                    - example4 += "                                      # The prompt is optional, (input) will\n"
-                    - example4 += "                                      # also work on its own."
-                    +playground("io", example4)
+                    - let ex_io = "(let a (input \"what is your name?\"))  # will print what the user wrote,\n"
+                    - ex_io += "(print a)                             # after having validated by pressing Enter\n"
+                    - ex_io += "                                      # The prompt is optional, (input) will\n"
+                    - ex_io += "                                      # also work on its own."
+                    +playground("io", ex_io)
 
             section#conditions
                 h2 Conditions
@@ -133,16 +134,16 @@ block content
                         | (if condition then else)
                     p The else bloc is optional.
                     p: strong Examples:
-                    - let example5 = "(let a 11)\n"
-                    - example5 += "(let b 15)\n\n"
-                    - example5 += "(if (= a 12)\n"
-                    - example5 += "    # then\n"
-                    - example5 += "    (print \"a is 12\")\n"
-                    - example5 += "    # else\n"
-                    - example5 += "    (print \"a is not 12\"))\n\n"
-                    - example5 += "(if (and (< a 12) (> b 14))\n"
-                    - example5 += "    (print \"a is < 12 AND b is > 14\"))\n"
-                    +playground("conditions", example5)
+                    - let ex_conditions = "(let a 11)\n"
+                    - ex_conditions += "(let b 15)\n\n"
+                    - ex_conditions += "(if (= a 12)\n"
+                    - ex_conditions += "    # then\n"
+                    - ex_conditions += "    (print \"a is 12\")\n"
+                    - ex_conditions += "    # else\n"
+                    - ex_conditions += "    (print \"a is not 12\"))\n\n"
+                    - ex_conditions += "(if (and (< a 12) (> b 14))\n"
+                    - ex_conditions += "    (print \"a is < 12 AND b is > 14\"))\n"
+                    +playground("conditions", ex_conditions)
                     p The then and the else parts can be composed of multiple functions by using the begin construction.
 
             section#loops
@@ -151,7 +152,7 @@ block content
                     p
                         | Giving the user a choice is a thing, but repeating an action is another that is very useful in a program as well. For example, if we need to
                         | compute the sum of values in a list, we would need to loop over the values of the list. In video games, we would need loops to generate waves of enemies.
-                    p Loops in ArkScript are created by using the keyword while.
+                    p Loops in ArkScript are created by using the keyword #[code while], they create their own scope too, so any variable created in a loop is destroyed when exiting it.
                     p: strong Example:
                     pre: code.rainbowjs(data-language="arkscript")
                         | (import std.random)
@@ -185,12 +186,12 @@ block content
                     p #[code (a b c)] is the argument list, the print bloc is the body.
                     p The value returned by a function is the last evaluated value in the body, if none, nil is returned.
                     p: strong Example:
-                    - let example6 = "(let foo (fun (a b) (begin\n"
-                    - example6 += "    (print \"function got: \" a \" \" b)\n"
-                    - example6 += "    # return value:\n"
-                    - example6 += "    (+ a b))))\n\n"
-                    - example6 += "(print (foo 12 14))  # 26\n"
-                    +playground("functions", example6)
+                    - let ex_function = "(let foo (fun (a b) (begin\n"
+                    - ex_function += "    (print \"function got: \" a \" \" b)\n"
+                    - ex_function += "    # return value:\n"
+                    - ex_function += "    (+ a b))))\n\n"
+                    - ex_function += "(print (foo 12 14))  # 26\n"
+                    +playground("functions", ex_function)
                     p
                         | Also, we have a set of builtins functions in the language, available without importing anything ; for example #[code print] or #[code input], which we used before.
                         | Note that builtins #[strong must be called], you can't do things like #[code (let my_print print)], or #[code (let my_tail tail)], otherwise it will result in an
@@ -202,79 +203,132 @@ block content
                     p
                         | Closure, or function closure, is a way to implementing lexically scoped name binding#[a(href="https://en.wikipedia.org/wiki/Closure_(computer_programming)"): sup 1].
                         | It stores a function along with an environment, explicitly mapped with specified variables. This allows to reuse and modify captured variables each time the closure is called.
-                    - let example7 = "(let make_closure (fun (name age) {\n"
-                    - example7 += "    (let coolness_factor 12)\n"
-                    - example7 += "\n"
-                    - example7 += "    # here, we return a closure!\n"
-                    - example7 += "    (fun (&name &age &coolness_factor)\n"
-                    - example7 += "        # each time it will be called, it will display the captured variables\n"
-                    - example7 += "        (print name \" \" age \" \" coolness_factor)) }))\n\n"
-                    - example7 += "(let closure (make_closure \"Pietro\" 42))\n"
-                    - example7 += "(closure)  # prints Pietro 42 12\n"
-                    +playground("closures-1", example7)
+                    - let ex_closure = "(let make_closure (fun (name age) {\n"
+                    - ex_closure += "    (let coolness_factor 12)\n"
+                    - ex_closure += "\n"
+                    - ex_closure += "    # here, we return a closure!\n"
+                    - ex_closure += "    (fun (&name &age &coolness_factor)\n"
+                    - ex_closure += "        # each time it will be called, it will display the captured variables\n"
+                    - ex_closure += "        (print name \" \" age \" \" coolness_factor)) }))\n\n"
+                    - ex_closure += "(let closure (make_closure \"Pietro\" 42))\n"
+                    - ex_closure += "(closure)  # prints Pietro 42 12\n"
+                    +playground("closures-1", ex_closure)
                     p
                         | Closures capture variables explicitly in their arguments' list, by prefixing them with #[code &]. We can access the captured fields through the #[code closure.field]
                         | notation, in a read only way:
-                    - let example8 = "(print closure.age)  # 42\n"
-                    - example8 += "(print closure.coolness_factor)  # 12\n\n"
-                    - example8 += "# we can print closures and have their fields and values displayed\n"
-                    - example8 += "(print closure)  # prints (.name=Pietro .age=42 .coolness_factor=12)\n\n"
-                    - example8 += "(let make (fun (a)\n"
-                    - example8 += "    (fun (&a) ())))\n\n"
-                    - example8 += "(let foo (fun () (print \"bar\")))\n\n"
-                    - example8 += "(let closure_bis (make foo))\n"
-                    - example8 += "# we can also call captured functions\n"
-                    - example8 += "(closure_bis.a)  # prints bar\n"
-                    +playground("closures-2", example7 + "\n" + example8)
+                    - let ex_closure_bis = "(print closure.age)  # 42\n"
+                    - ex_closure_bis += "(print closure.coolness_factor)  # 12\n\n"
+                    - ex_closure_bis += "# we can print closures and have their fields and values displayed\n"
+                    - ex_closure_bis += "(print closure)  # prints (.name=Pietro .age=42 .coolness_factor=12)\n\n"
+                    - ex_closure_bis += "(let make (fun (a)\n"
+                    - ex_closure_bis += "    (fun (&a) ())))\n\n"
+                    - ex_closure_bis += "(let foo (fun () (print \"bar\")))\n\n"
+                    - ex_closure_bis += "(let closure_bis (make foo))\n"
+                    - ex_closure_bis += "# we can also call captured functions\n"
+                    - ex_closure_bis += "(closure_bis.a)  # prints bar\n"
+                    +playground("closures-2", ex_closure + "\n" + ex_closure_bis)
                     p Finally, you can modify the closure content when using it from the inside, through itself or its captured functions:
-                    - let example9 = "(let make (fun (name age) {\n"
-                    - example9 += "    (let set-age (fun (new)\n"
-                    - example9 += "        (set age new)))\n\n"
-                    - example9 += "    (fun (new-name &name &age &set-age)\n"
-                    - example9 += "        (if (not (nil? new-name))\n"
-                    - example9 += "            (set name new-name))) }))\n\n"
-                    - example9 += "(let egg (make \"egg\" 1))\n"
-                    - example9 += "(print egg.age)  # 1\n"
-                    - example9 += "(egg.set-age 2)\n"
-                    - example9 += "(print egg.age \" \" egg.name)  # 2 egg\n"
-                    - example9 += "(egg \"not an egg\")\n"
-                    - example9 += "(print egg.name \" \" egg.age)  # not an egg 2\n"
-                    +playground("closures-3", example9)
+                    - let ex_closure_ter = "(let make (fun (name age) {\n"
+                    - ex_closure_ter += "    (let set-age (fun (new)\n"
+                    - ex_closure_ter += "        (set age new)))\n\n"
+                    - ex_closure_ter += "    (fun (new-name &name &age &set-age)\n"
+                    - ex_closure_ter += "        (if (not (nil? new-name))\n"
+                    - ex_closure_ter += "            (set name new-name))) }))\n\n"
+                    - ex_closure_ter += "(let egg (make \"egg\" 1))\n"
+                    - ex_closure_ter += "(print egg.age)  # 1\n"
+                    - ex_closure_ter += "(egg.set-age 2)\n"
+                    - ex_closure_ter += "(print egg.age \" \" egg.name)  # 2 egg\n"
+                    - ex_closure_ter += "(egg \"not an egg\")\n"
+                    - ex_closure_ter += "(print egg.name \" \" egg.age)  # not an egg 2\n"
+                    +playground("closures-3", ex_closure_ter)
                     p Closures can also be compared, the same way you would want to compare structs in C or C++:
-                    - let closure_cmp = ""
-                    - closure_cmp += "(let make (fun (name age)\n"
-                    - closure_cmp += "    (fun (&name &age) ())))\n\n"
-                    - closure_cmp += "(let egg (make \"egg\" 1))\n"
-                    - closure_cmp += "(let bacon (make \"bacon\" 1))\n"
-                    - closure_cmp += "(print (= egg bacon))  # false, egg and bacon share the same fields but their values are different\n\n"
-                    - closure_cmp += "(let make_other (fun (a b c)\n"
-                    - closure_cmp += "    (fun (&a &b &c) ())))\n\n"
-                    - closure_cmp += "(let next (make_other 1 2 3))\n"
-                    - closure_cmp += "(let bis  (make_other 1 2 3))\n"
-                    - closure_cmp += "(print (= next egg))  # false, next and egg do not share the same fields\n"
-                    - closure_cmp += "(print (= next bis))  # true, next and bis have the same fields and values\n"
-                    - closure_cmp += "(print (= bis bis))   # true, bis is bis\n"
-                    +playground("closures-4", closure_cmp)
+                    - let ex_closure_cmp = ""
+                    - ex_closure_cmp += "(let make (fun (name age)\n"
+                    - ex_closure_cmp += "    (fun (&name &age) ())))\n\n"
+                    - ex_closure_cmp += "(let egg (make \"egg\" 1))\n"
+                    - ex_closure_cmp += "(let bacon (make \"bacon\" 1))\n"
+                    - ex_closure_cmp += "(print (= egg bacon))  # false, egg and bacon share the same fields but their values are different\n\n"
+                    - ex_closure_cmp += "(let make_other (fun (a b c)\n"
+                    - ex_closure_cmp += "    (fun (&a &b &c) ())))\n\n"
+                    - ex_closure_cmp += "(let next (make_other 1 2 3))\n"
+                    - ex_closure_cmp += "(let bis  (make_other 1 2 3))\n"
+                    - ex_closure_cmp += "(print (= next egg))  # false, next and egg do not share the same fields\n"
+                    - ex_closure_cmp += "(print (= next bis))  # true, next and bis have the same fields and values\n"
+                    - ex_closure_cmp += "(print (= bis bis))   # true, bis is bis\n"
+                    +playground("closures-4", ex_closure_cmp)
+
+            section#vm-builtins
+                h2 VM builtins
+                div.inner-section
+                    p Some primitives are directly implemented in the VM, and are often referred to as #[i operators]. Those are the following:
+                    ul
+                        li Arithmetic operators: #[code +], #[code -], #[code *], #[code /], #[code mod]
+                        li Comparison operators: #[code &equals;], #[code !&equals;], #[code &lt;], #[code &lt;=], #[code &gt;], #[code &gt;=]
+                        li Condition operators: #[code and], #[code or], #[code not]
+                        li
+                            | List operators: #[code len], #[code empty?], #[code tail], #[code head], #[code nil?], #[code @], #[code @@],
+                            | #[code append], #[code append!], #[code concat], #[code concat!], #[code pop], #[code pop!], #[code @&equals;], #[code @@&equals;]
+                        li Conversion operators: #[code toNumber], #[code toString]
+                        li Test operator: #[code assert]
+                        li Type operators: #[code type], #[code hasField]
+                    p Here we'll explain the non-obvious ones:
+
+                    h3 List operators
+                    p #[code (tail a-list)] will return the last elements of a list as a new list: #[code #{'[] -> []'}], #[code #{'[1] -> []'}], #[code #{'[1 2 3] -> [2 3]'}]
+                    p #[code (head a-list)] will return the first element of a list, or #[code nil] if the list is empty
+                    p #[code (empty? a-list)] returns true if the list (or string) is empty, false otherwise
+                    p #[code (nil? a-list)] will always return false as a list isn't nil (which is the void value, returned by #[code head])
+                    p #[code (@ a-list index)] gets the element at #[code index] inside the list. Negative indices are supported, with #[code -1] being the last element
+                    p #[code (@@ a-2d-list i j)] is equivalent to #[code #{'a-2d-list[i][j]'}] in Python: it gets the element at position #[code j] in the sublist #[code (@ a-2d-list i)]. It's a shortcut for #[code (@ (@ a-2d-list i) j)]
+                    p #[code (append a-list 5)] returns a new list with 5 added at the end, while #[code (append! a-list 5)] will add 5 in-place to a-list, without returning a new list
+                    p #[code #{'(concat a-list [5 6])'}] returns a new list with 5 and 6 added at the end, while #[code #{'(concat! a-list [5 6])'}] will add 5 and 6 in-place to a-list, without returning a new list
+                    p #[code (pop a-list index)] returns a new list without the element at #[code index] (supports negative indices, -1 being the end), while #[code (pop a-list index)] will remove the element at #[code index] in-place, without returning a new list
+                    p #[code (@&equals; a-list index value)] updates #[code a-list] in-place by replacing the element at #[code index] by #[code value] (supports negative indices, -1 being the end)
+                    p
+                        | Akin to #[code @&equals;], #[code @@&equals;] can update lists in-place, but this version works on 2D list (list of lists, or list of strings). Eg #[code (@@&equals; a-2d-list i j value)] will replace
+                        | the element at #[code #{'a-2d-list[i][j]'}] by #[code value]. If the sublist is a string, #[code value] needs to be a single char, eg #[code (@@&equals; a-list-of-strings i j "b")]
+
+                    hr
+                    h3 Test operator
+                    p #[code (assert condition message)] will interrupt the execution if #[code condition] is false, and display the given message
+
+                    hr
+                    h3 Type operators
+                    p
+                        | #[code (type value)] returns the type of the given value (or variable) as a string: #[code "List"], #[code "Number"], #[code "String"],
+                        | #[code "Function"], #[code "CProc"], #[code "Closure"], #[code "UserType"], #[code "Nil"], #[code "Bool"], #[code "Undefined"].
+                    p #[code (hasField closure "a")] returns true if the given closure has a field named #[code a], false otherwise.
 
             section#import
                 h2 Importing code
                 div.inner-section
-                    p Putting code in multiple files is pretty to make it reusable and more maintainable.
+                    p Putting code in multiple files is pretty easy to make it reusable and more maintainable.
                     p
                         | In ArkScript, imported code is copied from the specified file into the current one, with a guarantee: circular includes are detected and prevented,
                         | making execution always possible even if you include a lot of files.
                     p
                         | Files are imported as follows: #[code (import myfile)]. The path to the target file is #[strong relative to the source file], not to the main executed file.
                         | #[code (import package.sub.folder.file)] will import #[code package/sub/folder/file.ark].
+                    pre: code.rainbowjs
+                        | myfile.ark
+                        | package/
+                        |     sub/
+                        |         folder/
+                        |             file.ark
+                    hr
+
                     p
-                        | The only exception about paths in #[code import]s is when you import an ArkScript module, ending in #[code .arkm]. Those files are either in the standard
-                        | library, thus you can just write their name and ArkScript will find them, or they #[strong must be alongside the final executed file].
+                        | When importing a #[code .arkm] module, you need to keep in mind that those are looked up #[strong at runtime], not compile time. Thus, their path must not
+                        | change between compilation and execution (eg if you ship your project to a friend, you will need to ship the modules too). It's easier to have them in the
+                        | the standard library, to import them with #[code (import std.my-module)], or along your main script (in the same folder).
                     p
                         | When importing files from the standard library, you don't need to write the path to the library folder, just the path of the file in it prefixed by #[code std].
-                        | For example: #[code (import std.String)] will work without problems.
+                        | For example: #[code (import std.String)] will import #[code ARKSCRIPT_PATH/lib/std/String].
                     p
-                        | When importing code like #[code (import file)], every symbol defined in #[code file] will have to prefixed by #[code file:] to be used. Those are prefixed imports.
-                        | You can also import code without the prefix: #[code (import file:*)] (glob imports), or just a few symbols: #[code (import file :foo :bar)] that can be used without the prefix.
+                        | When importing code like #[code (import file)], every symbol defined in #[code file] will be automatically prefixed by #[code file:]. Those are prefixed imports.
+                        | To use a function defined in #[code file] you will have to write #[code (file:my-function args...)].
+                    p
+                        | You can also import code without the prefix by using a glob import: #[code (import file:*)], or just a few symbols: #[code (import file :foo :bar)] that can be used without the prefix.
 
             section#async
                 h2 Running functions asynchronously
@@ -284,19 +338,19 @@ block content
                         | Functions can be pretty useful to define tasks, but sometimes we don't want to block our program to wait for a task to finish, for example fetching an HTML page.
                         | With ArkScript async/await you can submit the request and do other work that's waiting while the HTTP request is being processed.
                     p For a simpler example, let's calculate the sum of numbers in a list:
-                    - let example10 = "(let size 1000)\n"
-                    - example10 += "(let data (list:fill size 1))  # create a list of a thousand 1's\n\n"
-                    - example10 += "(let sum (fun (a b src) {\n"
-                    - example10 += "    (mut acc 0)\n"
-                    - example10 += "    (while (< a b) {\n"
-                    - example10 += "        (set acc (+ acc (@ src a)))\n"
-                    - example10 += "        (set a (+ 1 a)) })\n"
-                    - example10 += "    acc }))\n\n"
-                    - example10 += "(let task (async sum 0 size data))\n\n"
-                    - example10 += "# do something else...\n\n"
-                    - example10 += "# now we need the result, let's retrieve it\n"
-                    - example10 += "(print (await task))\n"
-                    +playground("async", example10)
+                    - let ex_async = "(let size 1000)\n"
+                    - ex_async += "(let data (list:fill size 1))  # create a list of a thousand 1's\n\n"
+                    - ex_async += "(let sum (fun (a b src) {\n"
+                    - ex_async += "    (mut acc 0)\n"
+                    - ex_async += "    (while (< a b) {\n"
+                    - ex_async += "        (set acc (+ acc (@ src a)))\n"
+                    - ex_async += "        (set a (+ 1 a)) })\n"
+                    - ex_async += "    acc }))\n\n"
+                    - ex_async += "(let task (async sum 0 size data))\n\n"
+                    - ex_async += "# do something else...\n\n"
+                    - ex_async += "# now we need the result, let's retrieve it\n"
+                    - ex_async += "(print (await task))\n"
+                    +playground("async", ex_async)
                     p.
                         #[code async] can launch any function in a separate thread, given a set of arguments for the functions. Then it will work without you having to do anything,
                         and you can retrieve the result by using #[code await]. It will check if the function is done, otherwise wait for it (blocking the thread of the caller) and return its result.
@@ -319,38 +373,38 @@ block content
                         | #[strong Macros' scopes] are tied to the bloc in which they are defined. At the end of said bloc, the macros defined in it are destroyed. Note that a
                         | macro defined a in bloc, which includes other blocs, will be available in all the other sub-blocs.
                     p Named macros can be undefined by using #[code ($undef name)].
-                    - let example11 = "($ a 12)\n\n"
-                    - example11 += "{\n"
-                    - example11 += "    (print a)  # will print 12, it works!\n\n"
-                    - example11 += "    ($ a 1)  # we can shadow macros by defining other macros with the\n"
-                    - example11 += "             # same name in sub-blocs\n"
-                    - example11 += "    (print a)  # 1\n\n"
-                    - example11 += "    ($undef a)\n"
-                    - example11 += "    (print a)  # 12, because we undefined the nearest version of a\n"
-                    - example11 += "}\n\n"
-                    - example11 += "(print a)  # a is still 12 here\n"
-                    +playground("macros-1", example11)
+                    - let ex_macros = "($ a 12)\n\n"
+                    - ex_macros += "{\n"
+                    - ex_macros += "    (print a)  # will print 12, it works!\n\n"
+                    - ex_macros += "    ($ a 1)  # we can shadow macros by defining other macros with the\n"
+                    - ex_macros += "             # same name in sub-blocs\n"
+                    - ex_macros += "    (print a)  # 1\n\n"
+                    - ex_macros += "    ($undef a)\n"
+                    - ex_macros += "    (print a)  # 12, because we undefined the nearest version of a\n"
+                    - ex_macros += "}\n\n"
+                    - ex_macros += "(print a)  # a is still 12 here\n"
+                    +playground("macros-1", ex_macros)
 
                     p #[strong Condition macros] may only work on compile time expressions, using only other macros. For example:
-                    - let example12 = "($ foo 12)\n"
-                    - example12 += "($ bar 14)\n"
-                    - example12 += "\n"
-                    - example12 += "# the condition being true will result in the print being inserted in the program\n"
-                    - example12 += "# while the (let a) will be deleted\n"
-                    - example12 += "($if (and (= foo 12) (= bar 14))\n"
-                    - example12 += "    (print \"foo is 12 and bar is 14\")\n"
-                    - example12 += "    (let a (+ 12 14)))\n"
-                    +playground("macros-2", example12)
+                    - let ex_macros_bis = "($ foo 12)\n"
+                    - ex_macros_bis += "($ bar 14)\n"
+                    - ex_macros_bis += "\n"
+                    - ex_macros_bis += "# the condition being true will result in the print being inserted in the program\n"
+                    - ex_macros_bis += "# while the (let a) will be deleted\n"
+                    - ex_macros_bis += "($if (and (= foo 12) (= bar 14))\n"
+                    - ex_macros_bis += "    (print \"foo is 12 and bar is 14\")\n"
+                    - ex_macros_bis += "    (let a (+ 12 14)))\n"
+                    +playground("macros-2", ex_macros_bis)
 
                     p In a #[em condition macro] we can define other macros and use other conditions macros:
-                    - let example13 = "($ a 12)\n"
-                    - example13 += "($if (= a 12)\n"
-                    - example13 += "    ($ b 14)\n"
-                    - example13 += "    ($ c 13))\n\n"
-                    - example13 += "(print b)  # prints 14\n"
-                    - example13 += "(print c)  # compilation error: unbound variable c\n"
-                    - example13 += "           # c is unavailable here because it was never defined\n"
-                    +playground("macros-3", example13)
+                    - let ex_macros_ter = "($ a 12)\n"
+                    - ex_macros_ter += "($if (= a 12)\n"
+                    - ex_macros_ter += "    ($ b 14)\n"
+                    - ex_macros_ter += "    ($ c 13))\n\n"
+                    - ex_macros_ter += "(print b)  # prints 14\n"
+                    - ex_macros_ter += "(print c)  # compilation error: unbound variable c\n"
+                    - ex_macros_ter += "           # c is unavailable here because it was never defined\n"
+                    +playground("macros-3", ex_macros_ter)
 
                     p
                         | #[strong Function macros] are evaluated recursively, thus they can call themselves or other macros, and use #[em condition macros]. A particularity is that
@@ -359,52 +413,53 @@ block content
                     p
                         | Those macros can use a magic pattern #[code ...args] (args being the name of the argument, you can use whatever you want) as the last argument to tell the
                         | compiler that the macros can take any number of arguments. This is called #[em varargs] or #[em variadic arguments].
-                    - let example14 = "($ foo (a b) {\n"
-                    - example14 += "    (print a \" \" b)\n"
-                    - example14 += "    (let c (+ a b))})\n\n"
-                    - example14 += "(foo 1 2)\n"
-                    - example14 += "(print c)  # prints 3\n\n"
-                    - example14 += "($ bar (a ...args)\n"
-                    - example14 += "    (print a \" \" args))\n\n"
-                    - example14 += "(bar 1)  # prints 1\n"
-                    - example14 += "(bar 1 2)  # prints 1 [2]\n"
-                    - example14 += "(bar 1 2 3)  # prints 1 [2 3]\n"
-                    +playground("macros-4", example14)
+                    - let ex_macros_variadic = "($ foo (a b) {\n"
+                    - ex_macros_variadic += "    (print a \" \" b)\n"
+                    - ex_macros_variadic += "    (let c (+ a b))})\n\n"
+                    - ex_macros_variadic += "(foo 1 2)\n"
+                    - ex_macros_variadic += "(print c)  # prints 3\n\n"
+                    - ex_macros_variadic += "($ bar (a ...args)\n"
+                    - ex_macros_variadic += "    (print a \" \" args))\n\n"
+                    - ex_macros_variadic += "(bar 1)  # prints 1\n"
+                    - ex_macros_variadic += "(bar 1 2)  # prints 1 [2]\n"
+                    - ex_macros_variadic += "(bar 1 2 3)  # prints 1 [2 3]\n"
+                    +playground("macros-4", ex_macros_variadic)
 
                     p
                         | Here is a more complex example implementing the #[em thread macro]. The first argument is the data, then each function is applied onto it, one after another.
                         | It allows us to write more readable code, instead of the ugly #[code (read-string (slurp (io:file (io:resource filename))))].
-                    - let example15 = "($ -> (arg fn1 ...fn) {\n"
-                    - example15 += "    ($if (> (len fn) 0)\n"
-                    - example15 += "        (-> (fn1 arg) ...fn)\n"
-                    - example15 += "        (fn1 arg))})\n\n"
-                    - example15 += "(let filename \"hello.json\")\n"
-                    - example15 += "(let io:resource (fun (file) {\n"
-                    - example15 += "    (print \"io:resource\")\n"
-                    - example15 += "    file }))\n"
-                    - example15 += "(let io:file (fun (name) {\n"
-                    - example15 += "    (print \"io:file\")\n"
-                    - example15 += "    name }))\n"
-                    - example15 += "(let slurp (fun (a) {\n"
-                    - example15 += "    (print \"io:slurp\")\n"
-                    - example15 += "    a }))\n"
-                    - example15 += "(let read-string (fun (a) {\n"
-                    - example15 += "    (print \"read-string\")\n"
-                    - example15 += "    a }))\n\n"
-                    - example15 += "(print (-> filename io:resource io:file slurp read-string))\n"
-                    - example15 += "# it will print:\n"
-                    - example15 += "#   io:resource\n"
-                    - example15 += "#   io:file\n"
-                    - example15 += "#   io:slurp\n"
-                    - example15 += "#   read-string\n"
-                    - example15 += "#   hello.json\n"
-                    +playground("macros-5", example15)
+                    - let ex_macros_recur = "($ -> (arg fn1 ...fn) {\n"
+                    - ex_macros_recur += "    ($if (> (len fn) 0)\n"
+                    - ex_macros_recur += "        (-> (fn1 arg) ...fn)\n"
+                    - ex_macros_recur += "        (fn1 arg))})\n\n"
+                    - ex_macros_recur += "(let filename \"hello.json\")\n"
+                    - ex_macros_recur += "(let io:resource (fun (file) {\n"
+                    - ex_macros_recur += "    (print \"io:resource\")\n"
+                    - ex_macros_recur += "    file }))\n"
+                    - ex_macros_recur += "(let io:file (fun (name) {\n"
+                    - ex_macros_recur += "    (print \"io:file\")\n"
+                    - ex_macros_recur += "    name }))\n"
+                    - ex_macros_recur += "(let slurp (fun (a) {\n"
+                    - ex_macros_recur += "    (print \"io:slurp\")\n"
+                    - ex_macros_recur += "    a }))\n"
+                    - ex_macros_recur += "(let read-string (fun (a) {\n"
+                    - ex_macros_recur += "    (print \"read-string\")\n"
+                    - ex_macros_recur += "    a }))\n\n"
+                    - ex_macros_recur += "(print (-> filename io:resource io:file slurp read-string))\n"
+                    - ex_macros_recur += "# it will print:\n"
+                    - ex_macros_recur += "#   io:resource\n"
+                    - ex_macros_recur += "#   io:file\n"
+                    - ex_macros_recur += "#   io:slurp\n"
+                    - ex_macros_recur += "#   read-string\n"
+                    - ex_macros_recur += "#   hello.json\n"
+                    +playground("macros-5", ex_macros_recur)
 
                     p Here is the list of the available compile time functions, to work with macros (in macros):
                     ul
                         li Comparison operators: #[code &equals;], #[code !&equals;], #[code &lt;], #[code &lt;=], #[code &gt;], #[code &gt;=]
                         li Chaining conditions / inverting them: #[code not], #[code and], #[code or]
-                        li Working on lists: #[code len], #[code @], #[code head], #[code tail]
+                        li Working on lists: #[code len], #[code @], #[code head], #[code tail], #[code empty?]
+                        li Arithmetic: #[code +], #[code -], #[code *], #[code /]
 
                     p.
                         We also have a few predefined macros to work on ArkScript code and ease code generation. For example, one
@@ -412,6 +467,9 @@ block content
                         #[code ($argcount function-name)].
 
                     ul
+                        li.
+                            #[code $undef]: delete a given macro.
+                            #[code ($undef a)] will delete the macro #[code a], making unusable past this point
                         li.
                             #[code $symcat]: generate a new symbol from a given symbol and a value or expression.
                             #[code (- a 1)] with #[code a] a constant macro (or macro argument) is valid.
