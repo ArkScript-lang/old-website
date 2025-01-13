@@ -28,7 +28,7 @@ block inner_content
         section#compiler
             h2 Compiler
             div.inner-section
-                p AST optimizer and Compiler are located under #[code include/Ark/Compiler/]. This includes the Parser, AST generation (using Nodes).
+                p All the compiler passes are located under #[code include/Ark/Compiler/].
                 ul
                     li the Welder calls the Parser on a given piece of code
                         ul: li the Parser returns an AST
@@ -36,9 +36,12 @@ block inner_content
                         ul
                             li the Parser returns an AST for each file
                             li the AST are aggregated into one
-                    li the Welder calls the Macro Processor on the ImportSolver final's AST
-                    li the Welder calls the AST optimizer on the Macro Processor's AST
-                    li the Compiler generates bytecode, which can be used as is by the virtual machine, or be saved to a file
+                    li the Welder calls the Macro Processor on the ImportSolver final's AST, to process and remove macros from the AST
+                    li the Welder calls the Name Resolver on the Macro Processor final's AST, to resolve names, prefixes and packages. It also checks for undefined symbols, constness violations and constant redefinitions
+                    li the Welder calls the AST optimizer on the Name Resolver's AST to remove dead code
+                    li the Compiler generates IR for the IR Optimizer from the modified AST
+                    li the IR Optimizer replaces some groups of 2 or more instructions with super instructions (one instruction doing specialized work)
+                    li the IR Compiler compiles the modified IR to bytecode, which can be used as is by the virtual machine, or be saved to a file
                 p For more details on how it works, see #[a(href="/implementation/compiler.html") the implementation details].
 
         section#repl
@@ -60,14 +63,15 @@ block inner_content
                         ul
                             li reading bytecode
                             li decoding it
-                            li filling multiple tables with it (symbol table, value table, code pages), which are then used by the virtual machine. It allows us to load a single ArkScript bytecode file and use it in multiple virtual machines.
+                            li.
+                                filling multiple tables with it (symbol table, value table, code pages), which are then used by the virtual machine. It allows us to load a single ArkScript bytecode file
+                                and use it in multiple virtual machines.
                             li the State retains tables which are #[strong never altered] by the virtual machines
                             li it can also compile ArkScript code and files on the go, and run them right away
                     li the UserType is how we store C++ types unknown to our virtual machine, to use them in ArkScript code
-                    li the Value is a very big proxy class to a #[code variant] to store our types (std::string, double, Closure, UserType and more), thus #[strong it must stay small] because it's the primitive type of the virtual machine and the language
-                        ul
-                            li it handles constness and type through a tag, alongside the value
-                            li it provides proxy functions to the underlying #[code variant]
+                    li.
+                        the Value is a very big proxy class to a #[code variant] to store our types (std::string, double, Closure, UserType and more), thus #[strong it must stay small] because it's the
+                        primitive type of the virtual machine and the language. It provides proxy functions to the underlying #[code variant].
                     li the virtual machine handles:
                         ul
                             li the stack, a single #[code array<Value, 8192>] (the stack size is a constexpr value, thus it can be changed at compile time only)
