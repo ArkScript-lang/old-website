@@ -4,6 +4,7 @@ var classArk_1_1VM =
     [ "backtrace", "d2/d93/classArk_1_1VM.html#a9fde818f335f05116e80d07f3635e8c3", null ],
     [ "call", "d2/d93/classArk_1_1VM.html#a8ff9788c87903a066e1851fdb23470b0", null ],
     [ "call", "d2/d93/classArk_1_1VM.html#a8909c9a42cb77b1a2d9b886ed3025409", null ],
+    [ "callBuiltin", "d2/d93/classArk_1_1VM.html#ad7ac70e2cac46eafe57e5aa1bc0c4416", null ],
     [ "createAndGetContext", "d2/d93/classArk_1_1VM.html#a6d551a823c5aaf8ddab9b8771901815b", null ],
     [ "createFuture", "d2/d93/classArk_1_1VM.html#af411514f16af34a308007e5beb0d96bb", null ],
     [ "deleteContext", "d2/d93/classArk_1_1VM.html#a090b9c6faa413f643d6fad39056674de", null ],

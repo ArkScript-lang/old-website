@@ -10,5 +10,6 @@ var Entity_8hpp =
       [ "GotoIfFalse", "de/da6/Entity_8hpp.html#a3ff6aca07d6f0bf01495d0325ceb428dac721a5338f2233539d0ad1974dc6d60a", null ],
       [ "Opcode", "de/da6/Entity_8hpp.html#a3ff6aca07d6f0bf01495d0325ceb428da5782f6bdd633ac305e1e625779f96a77", null ],
       [ "Opcode2Args", "de/da6/Entity_8hpp.html#a3ff6aca07d6f0bf01495d0325ceb428dae41e6561ce156ae3f69d536110106750", null ]
-    ] ]
+    ] ],
+    [ "MaxValueForDualArg", "de/da6/Entity_8hpp.html#a9a2ed84ef6832b5642b934f61195dbed", null ]
 ];

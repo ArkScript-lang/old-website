@@ -6,11 +6,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="Ark::internal::MacroExecutor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d5/d8f/classArk_1_1internal_1_1MacroExecutor.html",tooltip="A class that applies macros in a Node."];
-  Node0 -> Node1 [id="edge12_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node1 [id="Node000001",label="Ark::internal::Conditional\lExecutor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d1/dd3/classArk_1_1internal_1_1ConditionalExecutor.html",tooltip="Handles Conditional macros."];
-  Node0 -> Node2 [id="edge13_Node000000_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="Ark::internal::FunctionExecutor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$dc/d2c/classArk_1_1internal_1_1FunctionExecutor.html",tooltip="Handles function macros."];
-  Node0 -> Node3 [id="edge14_Node000000_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="Ark::internal::SymbolExecutor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d5/dae/classArk_1_1internal_1_1SymbolExecutor.html",tooltip="Handles Symbol macros."];
+  Node0 [id="Node000000",label="Ark::internal::IROptimizer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$da/d85/classArk_1_1internal_1_1IROptimizer.html",tooltip=" "];
 }

@@ -82,8 +82,8 @@ $(function(){initNavTree('d4/d32/Import_8hpp_source.html','../../'); initResizab
   <div class="headertitle"><div class="title">Import.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d4/d32/Import_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef COMPILER_AST_IMPORT_HPP</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define COMPILER_AST_IMPORT_HPP</span></div>
+<a href="../../d4/d32/Import_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef ARK_COMPILER_AST_IMPORT_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define ARK_COMPILER_AST_IMPORT_HPP</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
@@ -116,88 +116,79 @@ $(function(){initNavTree('d4/d32/Import_8hpp_source.html','../../'); initResizab
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../da/d03/structArk_1_1internal_1_1Import.html#af706f226d6f9d55809c2746405daebe7">   31</a></span>        std::vector&lt;std::string&gt; <a class="code hl_variable" href="../../da/d03/structArk_1_1internal_1_1Import.html#af706f226d6f9d55809c2746405daebe7">package</a>;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"></span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">        /**</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">         * @brief Import with prefix (the package) or not</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">         * @brief Import with prefix (import package)</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">         *</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">         */</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../da/d03/structArk_1_1internal_1_1Import.html#afe3d58514a5e49eb964b92dffcbfd239">   37</a></span>        <span class="keywordtype">bool</span> with_prefix = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment"></span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">        /**</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">         * @brief List of symbols to import, can be empty if none provided</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">         *</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">         */</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../da/d03/structArk_1_1internal_1_1Import.html#a478530b4d048ccc6f8eb66448d745388">   43</a></span>        std::vector&lt;std::string&gt; <a class="code hl_variable" href="../../da/d03/structArk_1_1internal_1_1Import.html#a478530b4d048ccc6f8eb66448d745388">symbols</a>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"></span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">        /**</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">         * @brief Import as glob (import package:*)</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">         */</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../da/d03/structArk_1_1internal_1_1Import.html#aed20a273d778cdfebf458307a05756f5">   42</a></span>        <span class="keywordtype">bool</span> is_glob = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment"></span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">        /**</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">         * @brief List of symbols to import, can be empty if none provided. (import package :a :b)</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">         *</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">         * @return a package string, eg a.b.c</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">         */</span></div>
-<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../da/d03/structArk_1_1internal_1_1Import.html#aee0df36f184ffddd37cc1eb7906d1783">   49</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="../../da/d03/structArk_1_1internal_1_1Import.html#aee0df36f184ffddd37cc1eb7906d1783">toPackageString</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">return</span> std::accumulate(package.begin() + 1, package.end(), package.front(), [](<span class="keyword">const</span> std::string&amp; left, <span class="keyword">const</span> std::string&amp; right) {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                return left + <span class="stringliteral">&quot;.&quot;</span> + right;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            });</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">         */</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../da/d03/structArk_1_1internal_1_1Import.html#a478530b4d048ccc6f8eb66448d745388">   48</a></span>        std::vector&lt;std::string&gt; <a class="code hl_variable" href="../../da/d03/structArk_1_1internal_1_1Import.html#a478530b4d048ccc6f8eb66448d745388">symbols</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment"></span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">        /**</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">         *</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">         * @return a package string, eg a.b.c</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">         */</span></div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../da/d03/structArk_1_1internal_1_1Import.html#aee0df36f184ffddd37cc1eb7906d1783">   54</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="../../da/d03/structArk_1_1internal_1_1Import.html#aee0df36f184ffddd37cc1eb7906d1783">toPackageString</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">return</span> std::accumulate(package.begin() + 1, package.end(), package.front(), [](<span class="keyword">const</span> std::string&amp; left, <span class="keyword">const</span> std::string&amp; right) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                return left + <span class="stringliteral">&quot;.&quot;</span> + right;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            });</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
 </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment"></span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">        /**</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">         *</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">         * @return a package as a path, eg a/b/c</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">         */</span></div>
-<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="../../da/d03/structArk_1_1internal_1_1Import.html#ac1a3286f4f308e7500ce703af8074508">   60</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="../../da/d03/structArk_1_1internal_1_1Import.html#ac1a3286f4f308e7500ce703af8074508">packageToPath</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">return</span> std::accumulate(</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                std::next(package.begin()),</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                package.end(),</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                package[0],</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                [](<span class="keyword">const</span> std::string&amp; a, <span class="keyword">const</span> std::string&amp; b) {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    return a + <span class="stringliteral">&quot;/&quot;</span> + b;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                });</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment"></span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">        /**</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">         *</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">         * @return a package as a path, eg a/b/c</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">         */</span></div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../da/d03/structArk_1_1internal_1_1Import.html#ac1a3286f4f308e7500ce703af8074508">   65</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="../../da/d03/structArk_1_1internal_1_1Import.html#ac1a3286f4f308e7500ce703af8074508">packageToPath</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">return</span> std::accumulate(</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                std::next(package.begin()),</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                package.end(),</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                package[0],</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                [](<span class="keyword">const</span> std::string&amp; a, <span class="keyword">const</span> std::string&amp; b) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                    return a + <span class="stringliteral">&quot;/&quot;</span> + b;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                });</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
 </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment"></span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">        /**</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">         * @brief Check if we should import everything, given something like `(import foo.bar.egg:*)`</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">         *</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">         * @return true if all symbols of the file should be imported in the importer scope</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">         * @return false otherwise</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">         */</span></div>
-<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="../../da/d03/structArk_1_1internal_1_1Import.html#a99dbcd640219a56fd66690cb85121d1c">   77</a></span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="../../da/d03/structArk_1_1internal_1_1Import.html#a99dbcd640219a56fd66690cb85121d1c">isGlob</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordflow">return</span> !with_prefix &amp;&amp; symbols.empty();</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment"></span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">        /**</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">         * @brief Check if we should import everything with a prefix, given a `(import foo.bar.egg)`</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">         *</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">         * @return true</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">         * @return false</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">         */</span></div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="../../da/d03/structArk_1_1internal_1_1Import.html#a02a680f3aa378f8acd3936794fb43401">   82</a></span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="../../da/d03/structArk_1_1internal_1_1Import.html#a02a680f3aa378f8acd3936794fb43401">isBasic</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordflow">return</span> with_prefix &amp;&amp; symbols.empty();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
 </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment"></span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">        /**</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">         * @brief Check if we should import everything with a prefix, given a `(import foo.bar.egg)`</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">         *</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">         * @return true</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">         * @return false</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">         */</span></div>
-<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="../../da/d03/structArk_1_1internal_1_1Import.html#a02a680f3aa378f8acd3936794fb43401">   88</a></span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="../../da/d03/structArk_1_1internal_1_1Import.html#a02a680f3aa378f8acd3936794fb43401">isBasic</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <span class="keywordflow">return</span> with_prefix &amp;&amp; symbols.empty();</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    };</div>
 </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    };</div>
-</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>}</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aModule_8hpp_html_ac62a8551c675391a8cf01d112e42d755"><div class="ttname"><a href="../../d5/d44/Module_8hpp.html#ac62a8551c675391a8cf01d112e42d755">ARK_API</a></div><div class="ttdeci">#define ARK_API</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d44/Module_8hpp_source.html#l00028">Module.hpp:28</a></div></div>
 <div class="ttc" id="aPlatform_8hpp_html"><div class="ttname"><a href="../../d5/d40/Platform_8hpp.html">Platform.hpp</a></div><div class="ttdoc">ArkScript configuration macros.</div></div>
 <div class="ttc" id="anamespaceArk_1_1internal_html"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html">Ark::internal</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/d84/Builtins_8hpp_source.html#l00025">Builtins.hpp:26</a></div></div>
 <div class="ttc" id="astructArk_1_1internal_1_1Import_html"><div class="ttname"><a href="../../da/d03/structArk_1_1internal_1_1Import.html">Ark::internal::Import</a></div><div class="ttdef"><b>Definition</b> <a href="#l00012">Import.hpp:13</a></div></div>
-<div class="ttc" id="astructArk_1_1internal_1_1Import_html_a02a680f3aa378f8acd3936794fb43401"><div class="ttname"><a href="../../da/d03/structArk_1_1internal_1_1Import.html#a02a680f3aa378f8acd3936794fb43401">Ark::internal::Import::isBasic</a></div><div class="ttdeci">bool isBasic() const</div><div class="ttdoc">Check if we should import everything with a prefix, given a (import foo.bar.egg)</div><div class="ttdef"><b>Definition</b> <a href="#l00088">Import.hpp:88</a></div></div>
-<div class="ttc" id="astructArk_1_1internal_1_1Import_html_a478530b4d048ccc6f8eb66448d745388"><div class="ttname"><a href="../../da/d03/structArk_1_1internal_1_1Import.html#a478530b4d048ccc6f8eb66448d745388">Ark::internal::Import::symbols</a></div><div class="ttdeci">std::vector&lt; std::string &gt; symbols</div><div class="ttdoc">List of symbols to import, can be empty if none provided.</div><div class="ttdef"><b>Definition</b> <a href="#l00043">Import.hpp:43</a></div></div>
+<div class="ttc" id="astructArk_1_1internal_1_1Import_html_a02a680f3aa378f8acd3936794fb43401"><div class="ttname"><a href="../../da/d03/structArk_1_1internal_1_1Import.html#a02a680f3aa378f8acd3936794fb43401">Ark::internal::Import::isBasic</a></div><div class="ttdeci">bool isBasic() const</div><div class="ttdoc">Check if we should import everything with a prefix, given a (import foo.bar.egg)</div><div class="ttdef"><b>Definition</b> <a href="#l00082">Import.hpp:82</a></div></div>
+<div class="ttc" id="astructArk_1_1internal_1_1Import_html_a478530b4d048ccc6f8eb66448d745388"><div class="ttname"><a href="../../da/d03/structArk_1_1internal_1_1Import.html#a478530b4d048ccc6f8eb66448d745388">Ark::internal::Import::symbols</a></div><div class="ttdeci">std::vector&lt; std::string &gt; symbols</div><div class="ttdoc">List of symbols to import, can be empty if none provided. (import package :a :b)</div><div class="ttdef"><b>Definition</b> <a href="#l00048">Import.hpp:48</a></div></div>
 <div class="ttc" id="astructArk_1_1internal_1_1Import_html_a80377a09f62c3867ac99dfd5aabb8ba5"><div class="ttname"><a href="../../da/d03/structArk_1_1internal_1_1Import.html#a80377a09f62c3867ac99dfd5aabb8ba5">Ark::internal::Import::col</a></div><div class="ttdeci">std::size_t col</div><div class="ttdoc">Position in the source file.</div><div class="ttdef"><b>Definition</b> <a href="#l00014">Import.hpp:14</a></div></div>
 <div class="ttc" id="astructArk_1_1internal_1_1Import_html_a8bc3b43df97014361cf06f6d6099c310"><div class="ttname"><a href="../../da/d03/structArk_1_1internal_1_1Import.html#a8bc3b43df97014361cf06f6d6099c310">Ark::internal::Import::prefix</a></div><div class="ttdeci">std::string prefix</div><div class="ttdoc">The filename without the extension.</div><div class="ttdef"><b>Definition</b> <a href="#l00023">Import.hpp:23</a></div></div>
-<div class="ttc" id="astructArk_1_1internal_1_1Import_html_a99dbcd640219a56fd66690cb85121d1c"><div class="ttname"><a href="../../da/d03/structArk_1_1internal_1_1Import.html#a99dbcd640219a56fd66690cb85121d1c">Ark::internal::Import::isGlob</a></div><div class="ttdeci">bool isGlob() const</div><div class="ttdoc">Check if we should import everything, given something like (import foo.bar.egg:*)</div><div class="ttdef"><b>Definition</b> <a href="#l00077">Import.hpp:77</a></div></div>
-<div class="ttc" id="astructArk_1_1internal_1_1Import_html_ac1a3286f4f308e7500ce703af8074508"><div class="ttname"><a href="../../da/d03/structArk_1_1internal_1_1Import.html#ac1a3286f4f308e7500ce703af8074508">Ark::internal::Import::packageToPath</a></div><div class="ttdeci">std::string packageToPath() const</div><div class="ttdef"><b>Definition</b> <a href="#l00060">Import.hpp:60</a></div></div>
-<div class="ttc" id="astructArk_1_1internal_1_1Import_html_aee0df36f184ffddd37cc1eb7906d1783"><div class="ttname"><a href="../../da/d03/structArk_1_1internal_1_1Import.html#aee0df36f184ffddd37cc1eb7906d1783">Ark::internal::Import::toPackageString</a></div><div class="ttdeci">std::string toPackageString() const</div><div class="ttdef"><b>Definition</b> <a href="#l00049">Import.hpp:49</a></div></div>
+<div class="ttc" id="astructArk_1_1internal_1_1Import_html_ac1a3286f4f308e7500ce703af8074508"><div class="ttname"><a href="../../da/d03/structArk_1_1internal_1_1Import.html#ac1a3286f4f308e7500ce703af8074508">Ark::internal::Import::packageToPath</a></div><div class="ttdeci">std::string packageToPath() const</div><div class="ttdef"><b>Definition</b> <a href="#l00065">Import.hpp:65</a></div></div>
+<div class="ttc" id="astructArk_1_1internal_1_1Import_html_aee0df36f184ffddd37cc1eb7906d1783"><div class="ttname"><a href="../../da/d03/structArk_1_1internal_1_1Import.html#aee0df36f184ffddd37cc1eb7906d1783">Ark::internal::Import::toPackageString</a></div><div class="ttdeci">std::string toPackageString() const</div><div class="ttdef"><b>Definition</b> <a href="#l00054">Import.hpp:54</a></div></div>
 <div class="ttc" id="astructArk_1_1internal_1_1Import_html_af706f226d6f9d55809c2746405daebe7"><div class="ttname"><a href="../../da/d03/structArk_1_1internal_1_1Import.html#af706f226d6f9d55809c2746405daebe7">Ark::internal::Import::package</a></div><div class="ttdeci">std::vector&lt; std::string &gt; package</div><div class="ttdoc">Package with all the segments.</div><div class="ttdef"><b>Definition</b> <a href="#l00031">Import.hpp:31</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -205,7 +196,7 @@ $(function(){initNavTree('d4/d32/Import_8hpp_source.html','../../'); initResizab
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_a8b6c64285bf9ac60f50770eb2fc48b5.html">Ark</a></li><li class="navelem"><a class="el" href="../../dir_e4f19535f57335fb80a0267cec25bf70.html">Compiler</a></li><li class="navelem"><a class="el" href="../../dir_100d7a05404dd55ce1a106aad5a3b28c.html">AST</a></li><li class="navelem"><a class="el" href="../../d4/d32/Import_8hpp.html">Import.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 12 2024 14:46:45 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Jan 15 2025 19:51:44 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

@@ -3,6 +3,7 @@ var classArk_1_1internal_1_1IRCompiler =
     [ "IRCompiler", "d0/da1/classArk_1_1internal_1_1IRCompiler.html#a385ddd671b3b345c04419606f4850d67", null ],
     [ "bytecode", "d0/da1/classArk_1_1internal_1_1IRCompiler.html#a691d5d6c4fa1bb878aab9d9642351176", null ],
     [ "compile", "d0/da1/classArk_1_1internal_1_1IRCompiler.html#a90b929692a2653574c45576b2300baa5", null ],
+    [ "dumpToStream", "d0/da1/classArk_1_1internal_1_1IRCompiler.html#a68a9e580f471f075202889c573d24581", null ],
     [ "process", "d0/da1/classArk_1_1internal_1_1IRCompiler.html#ac3a804048ec9487feac5e41c3135cd27", null ],
     [ "pushFileHeader", "d0/da1/classArk_1_1internal_1_1IRCompiler.html#ab48455619e696f3c1dd63d6e097b83a8", null ],
     [ "pushSymAndValTables", "d0/da1/classArk_1_1internal_1_1IRCompiler.html#affc37c953c296fd002aee02d668fcf03", null ],

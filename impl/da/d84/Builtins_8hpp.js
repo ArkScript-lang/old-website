@@ -37,6 +37,7 @@ var Builtins_8hpp =
     [ "reverseList", "da/d84/Builtins_8hpp.html#a9c95b27ac4ea35c3334bf8eab3ac2c53", null ],
     [ "round_", "da/d84/Builtins_8hpp.html#af23f9708b373b5bead1058f84e65d5fe", null ],
     [ "setListAt", "da/d84/Builtins_8hpp.html#acc5f6d22a17a9be1a4266bffd6687b69", null ],
+    [ "setStringAt", "da/d84/Builtins_8hpp.html#a2bc9605d53cfdfacbeb52321e3577de0", null ],
     [ "sin_", "da/d84/Builtins_8hpp.html#af33a69e64116b6d92468930f30264b00", null ],
     [ "sinh_", "da/d84/Builtins_8hpp.html#ae3f52af87b45a4dd8b3f15a4cb2f013e", null ],
     [ "sleep", "da/d84/Builtins_8hpp.html#aa30624b0b089d65850c2eb9398ec4356", null ],

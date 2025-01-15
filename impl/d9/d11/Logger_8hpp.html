@@ -81,8 +81,7 @@ $(function(){initNavTree('d9/d11/Logger_8hpp.html','../../'); initResizable(true
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle"><div class="title">Logger.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -92,10 +91,14 @@ $(function(){initNavTree('d9/d11/Logger_8hpp.html','../../'); initResizable(true
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;fmt/format.h&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &lt;fmt/color.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Logger.hpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/d9d/Logger_8hpp__incl.svg" width="276" height="140"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d6/d9d/Logger_8hpp__incl.svg" width="100%" height="405"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -116,24 +119,11 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html">Ark::internal</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a0c95dcc78c8ee1942162c50a8ed399c7" id="r_a0c95dcc78c8ee1942162c50a8ed399c7"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a0c95dcc78c8ee1942162c50a8ed399c7">Ark::internal::LogLevel</a> { <br />
-&#160;&#160;<a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a0c95dcc78c8ee1942162c50a8ed399c7a6adf97f83acf6453d4a6a4b1070f3754">Ark::internal::None</a>
-, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a0c95dcc78c8ee1942162c50a8ed399c7a4059b0251f66a18cb56f544728796875">Ark::internal::Info</a>
-, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a0c95dcc78c8ee1942162c50a8ed399c7aa603905470e2a5b8c13e96b579ef0dba">Ark::internal::Debug</a>
-, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a0c95dcc78c8ee1942162c50a8ed399c7add4ec0ac4e58f7c32a01244ae91150b1">Ark::internal::Trace</a>
-, <br />
-&#160;&#160;<a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a0c95dcc78c8ee1942162c50a8ed399c7a6311ae17c1ee52b36e68aaf4ad066387">Ark::internal::Other</a>
-<br />
- }</td></tr>
-<tr class="separator:a0c95dcc78c8ee1942162c50a8ed399c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Internal logger. </p>
 <dl class="section author"><dt>Author</dt><dd>Alexandre Plateau (<a href="#" onclick="location.href='mai'+'lto:'+'lex'+'pl'+'t@g'+'ma'+'il.'+'co'+'mhf'; return false;">lexpl<span class="obfuscator">.nosp@m.</span>t@gm<span class="obfuscator">.nosp@m.</span>ail.c<span class="obfuscator">.nosp@m.</span>omhf</a> </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-08-30</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
 
@@ -144,7 +134,7 @@ Enumerations</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_a8b6c64285bf9ac60f50770eb2fc48b5.html">Ark</a></li><li class="navelem"><a class="el" href="../../d9/d11/Logger_8hpp.html">Logger.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 12 2024 14:46:45 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Jan 15 2025 19:51:44 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

@@ -1,6 +1,5 @@
 var classArk_1_1internal_1_1MacroScope =
 [
-    [ "MacroScope", "d6/d42/classArk_1_1internal_1_1MacroScope.html#ad98668a12caf729a148be8f51daee59b", null ],
     [ "MacroScope", "d6/d42/classArk_1_1internal_1_1MacroScope.html#a4f88535b346607fbcd4c7728842c17f3", null ],
     [ "add", "d6/d42/classArk_1_1internal_1_1MacroScope.html#a8486c57958176a63c91bc49cf853c9c7", null ],
     [ "depth", "d6/d42/classArk_1_1internal_1_1MacroScope.html#a6a2b4fc9f062c697cba045b8e7b98cdb", null ],

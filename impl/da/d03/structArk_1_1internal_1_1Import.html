@@ -100,9 +100,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aee0df36f184ffddd37cc1eb7906d1783"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1a3286f4f308e7500ce703af8074508" id="r_ac1a3286f4f308e7500ce703af8074508"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1a3286f4f308e7500ce703af8074508">packageToPath</a> () const</td></tr>
 <tr class="separator:ac1a3286f4f308e7500ce703af8074508"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99dbcd640219a56fd66690cb85121d1c" id="r_a99dbcd640219a56fd66690cb85121d1c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99dbcd640219a56fd66690cb85121d1c">isGlob</a> () const</td></tr>
-<tr class="memdesc:a99dbcd640219a56fd66690cb85121d1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if we should import everything, given something like <code>(import foo.bar.egg:*)</code>  <br /></td></tr>
-<tr class="separator:a99dbcd640219a56fd66690cb85121d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02a680f3aa378f8acd3936794fb43401" id="r_a02a680f3aa378f8acd3936794fb43401"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02a680f3aa378f8acd3936794fb43401">isBasic</a> () const</td></tr>
 <tr class="memdesc:a02a680f3aa378f8acd3936794fb43401"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if we should import everything with a prefix, given a <code>(import foo.bar.egg)</code>  <br /></td></tr>
 <tr class="separator:a02a680f3aa378f8acd3936794fb43401"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,13 +115,16 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a8bc3b43df97014361cf06f6d6099c310"><td class="mdescLeft">&#160;</td><td class="mdescRight">The filename without the extension.  <br /></td></tr>
 <tr class="separator:a8bc3b43df97014361cf06f6d6099c310"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af706f226d6f9d55809c2746405daebe7" id="r_af706f226d6f9d55809c2746405daebe7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af706f226d6f9d55809c2746405daebe7">package</a></td></tr>
-<tr class="memdesc:af706f226d6f9d55809c2746405daebe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Package with all the segments.  <br /></td></tr>
+<tr class="memdesc:af706f226d6f9d55809c2746405daebe7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../dd/d76/structArk_1_1internal_1_1Package.html">Package</a> with all the segments.  <br /></td></tr>
 <tr class="separator:af706f226d6f9d55809c2746405daebe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe3d58514a5e49eb964b92dffcbfd239" id="r_afe3d58514a5e49eb964b92dffcbfd239"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe3d58514a5e49eb964b92dffcbfd239">with_prefix</a> = true</td></tr>
-<tr class="memdesc:afe3d58514a5e49eb964b92dffcbfd239"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d03/structArk_1_1internal_1_1Import.html">Import</a> with prefix (the package) or not.  <br /></td></tr>
+<tr class="memdesc:afe3d58514a5e49eb964b92dffcbfd239"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d03/structArk_1_1internal_1_1Import.html">Import</a> with prefix (import package)  <br /></td></tr>
 <tr class="separator:afe3d58514a5e49eb964b92dffcbfd239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed20a273d778cdfebf458307a05756f5" id="r_aed20a273d778cdfebf458307a05756f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed20a273d778cdfebf458307a05756f5">is_glob</a> = false</td></tr>
+<tr class="memdesc:aed20a273d778cdfebf458307a05756f5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d03/structArk_1_1internal_1_1Import.html">Import</a> as glob (import package:*)  <br /></td></tr>
+<tr class="separator:aed20a273d778cdfebf458307a05756f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a478530b4d048ccc6f8eb66448d745388" id="r_a478530b4d048ccc6f8eb66448d745388"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a478530b4d048ccc6f8eb66448d745388">symbols</a></td></tr>
-<tr class="memdesc:a478530b4d048ccc6f8eb66448d745388"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of symbols to import, can be empty if none provided.  <br /></td></tr>
+<tr class="memdesc:a478530b4d048ccc6f8eb66448d745388"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of symbols to import, can be empty if none provided. (import package :a :b)  <br /></td></tr>
 <tr class="separator:a478530b4d048ccc6f8eb66448d745388"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -159,39 +159,7 @@ Public Attributes</h2></td></tr>
 <dd>
 false </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d32/Import_8hpp_source.html#l00088">88</a> of file <a class="el" href="../../d4/d32/Import_8hpp_source.html">Import.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a99dbcd640219a56fd66690cb85121d1c" name="a99dbcd640219a56fd66690cb85121d1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99dbcd640219a56fd66690cb85121d1c">&#9670;&#160;</a></span>isGlob()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Ark::internal::Import::isGlob </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Check if we should import everything, given something like <code>(import foo.bar.egg:*)</code> </p>
-<dl class="section return"><dt>Returns</dt><dd>true if all symbols of the file should be imported in the importer scope </dd>
-<dd>
-false otherwise </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d4/d32/Import_8hpp_source.html#l00077">77</a> of file <a class="el" href="../../d4/d32/Import_8hpp_source.html">Import.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d32/Import_8hpp_source.html#l00082">82</a> of file <a class="el" href="../../d4/d32/Import_8hpp_source.html">Import.hpp</a>.</p>
 
 </div>
 </div>
@@ -219,7 +187,7 @@ false otherwise </dd></dl>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>a package as a path, eg a/b/c </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d32/Import_8hpp_source.html#l00060">60</a> of file <a class="el" href="../../d4/d32/Import_8hpp_source.html">Import.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d32/Import_8hpp_source.html#l00065">65</a> of file <a class="el" href="../../d4/d32/Import_8hpp_source.html">Import.hpp</a>.</p>
 
 </div>
 </div>
@@ -247,9 +215,9 @@ false otherwise </dd></dl>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>a package string, eg a.b.c </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d32/Import_8hpp_source.html#l00049">49</a> of file <a class="el" href="../../d4/d32/Import_8hpp_source.html">Import.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d32/Import_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../d4/d32/Import_8hpp_source.html">Import.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00266">Ark::internal::Parser::import_()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00272">Ark::internal::Parser::import_()</a>.</p>
 
 </div>
 </div>
@@ -270,7 +238,27 @@ false otherwise </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d32/Import_8hpp_source.html#l00014">14</a> of file <a class="el" href="../../d4/d32/Import_8hpp_source.html">Import.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00266">Ark::internal::Parser::import_()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00272">Ark::internal::Parser::import_()</a>.</p>
+
+</div>
+</div>
+<a id="aed20a273d778cdfebf458307a05756f5" name="aed20a273d778cdfebf458307a05756f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed20a273d778cdfebf458307a05756f5">&#9670;&#160;</a></span>is_glob</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ark::internal::Import::is_glob = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../da/d03/structArk_1_1internal_1_1Import.html">Import</a> as glob (import package:*) </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d32/Import_8hpp_source.html#l00042">42</a> of file <a class="el" href="../../d4/d32/Import_8hpp_source.html">Import.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00272">Ark::internal::Parser::import_()</a>.</p>
 
 </div>
 </div>
@@ -288,7 +276,7 @@ false otherwise </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d32/Import_8hpp_source.html#l00014">14</a> of file <a class="el" href="../../d4/d32/Import_8hpp_source.html">Import.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00266">Ark::internal::Parser::import_()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00272">Ark::internal::Parser::import_()</a>.</p>
 
 </div>
 </div>
@@ -304,12 +292,12 @@ false otherwise </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Package with all the segments. </p>
+<p><a class="el" href="../../dd/d76/structArk_1_1internal_1_1Package.html">Package</a> with all the segments. </p>
 <p>Example: <code>(import foo.bar)</code> =&gt; <code>{foo, bar}</code> <code>(import foo.bar.egg:*)</code> =&gt; <code>{foo, bar, egg}</code> <code>(import foo :a :b :c)</code> =&gt; <code>{foo}</code> </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d32/Import_8hpp_source.html#l00031">31</a> of file <a class="el" href="../../d4/d32/Import_8hpp_source.html">Import.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00266">Ark::internal::Parser::import_()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00272">Ark::internal::Parser::import_()</a>.</p>
 
 </div>
 </div>
@@ -330,7 +318,7 @@ false otherwise </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d32/Import_8hpp_source.html#l00023">23</a> of file <a class="el" href="../../d4/d32/Import_8hpp_source.html">Import.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00266">Ark::internal::Parser::import_()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00272">Ark::internal::Parser::import_()</a>.</p>
 
 </div>
 </div>
@@ -346,11 +334,11 @@ false otherwise </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>List of symbols to import, can be empty if none provided. </p>
+<p>List of symbols to import, can be empty if none provided. (import package :a :b) </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d32/Import_8hpp_source.html#l00043">43</a> of file <a class="el" href="../../d4/d32/Import_8hpp_source.html">Import.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d32/Import_8hpp_source.html#l00048">48</a> of file <a class="el" href="../../d4/d32/Import_8hpp_source.html">Import.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00266">Ark::internal::Parser::import_()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00272">Ark::internal::Parser::import_()</a>.</p>
 
 </div>
 </div>
@@ -366,11 +354,11 @@ false otherwise </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="../../da/d03/structArk_1_1internal_1_1Import.html">Import</a> with prefix (the package) or not. </p>
+<p><a class="el" href="../../da/d03/structArk_1_1internal_1_1Import.html">Import</a> with prefix (import package) </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d32/Import_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../d4/d32/Import_8hpp_source.html">Import.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00266">Ark::internal::Parser::import_()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00272">Ark::internal::Parser::import_()</a>.</p>
 
 </div>
 </div>
@@ -383,7 +371,7 @@ false otherwise </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/de4/namespaceArk.html">Ark</a></li><li class="navelem"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html">internal</a></li><li class="navelem"><a class="el" href="../../da/d03/structArk_1_1internal_1_1Import.html">Import</a></li>
-    <li class="footer">Generated on Sat Oct 12 2024 14:46:45 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Jan 15 2025 19:51:44 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

@@ -21,7 +21,9 @@ var hierarchy =
     [ "Ark::internal::Compiler", "db/de9/classArk_1_1internal_1_1Compiler.html", null ],
     [ "Ark::types::Contract", "d3/dfb/structArk_1_1types_1_1Contract.html", null ],
     [ "Ark::UserType::ControlFuncs", "d8/d70/structArk_1_1UserType_1_1ControlFuncs.html", null ],
+    [ "Ark::internal::Declaration", "d1/dcf/structArk_1_1internal_1_1Declaration.html", null ],
     [ "Ark::internal::IR::Entity", "dc/d35/classArk_1_1internal_1_1IR_1_1Entity.html", null ],
+    [ "Ark::internal::EntityWithOffset", "d9/dd9/structArk_1_1internal_1_1EntityWithOffset.html", null ],
     [ "std::exception", null, [
       [ "std::runtime_error", null, [
         [ "Ark::Error", "d6/d43/classArk_1_1Error.html", [
@@ -37,7 +39,7 @@ var hierarchy =
     [ "Formatter", "d9/d43/classFormatter.html", null ],
     [ "FormatterConfig", "dd/dcc/structFormatterConfig.html", null ],
     [ "Ark::internal::Future", "d4/d6d/classArk_1_1internal_1_1Future.html", null ],
-    [ "std::hash< Ark::internal::Variable >", "d9/dfb/structstd_1_1hash_3_01Ark_1_1internal_1_1Variable_01_4.html", null ],
+    [ "std::hash< Ark::internal::Declaration >", "d5/d2b/structstd_1_1hash_3_01Ark_1_1internal_1_1Declaration_01_4.html", null ],
     [ "Ark::internal::Import", "da/d03/structArk_1_1internal_1_1Import.html", null ],
     [ "Ark::internal::IRCompiler", "d0/da1/classArk_1_1internal_1_1IRCompiler.html", null ],
     [ "Ark::internal::IROptimizer", "da/d85/classArk_1_1internal_1_1IROptimizer.html", null ],
@@ -52,8 +54,9 @@ var hierarchy =
     [ "Ark::internal::MacroScope", "d6/d42/classArk_1_1internal_1_1MacroScope.html", null ],
     [ "Ark::mapping", "d4/dd8/structArk_1_1mapping.html", null ],
     [ "mapping", "d1/d5a/structmapping.html", null ],
-    [ "Ark::internal::Module", "d6/d3c/structArk_1_1internal_1_1Module.html", null ],
+    [ "Ark::internal::Namespace", "d0/d57/structArk_1_1internal_1_1Namespace.html", null ],
     [ "Ark::internal::Node", "dc/d9e/classArk_1_1internal_1_1Node.html", null ],
+    [ "Ark::internal::Package", "dd/d76/structArk_1_1internal_1_1Package.html", null ],
     [ "Ark::internal::Compiler::Page", "dd/df4/structArk_1_1internal_1_1Compiler_1_1Page.html", null ],
     [ "Ark::internal::Pass", "da/d7b/classArk_1_1internal_1_1Pass.html", [
       [ "Ark::internal::ImportSolver", "d2/d90/classArk_1_1internal_1_1ImportSolver.html", null ],
@@ -63,10 +66,12 @@ var hierarchy =
     ] ],
     [ "Ark::Repl", "de/d60/classArk_1_1Repl.html", null ],
     [ "Ark::internal::Scope", "d5/d74/classArk_1_1internal_1_1Scope.html", null ],
-    [ "Ark::internal::ScopeResolver::Scope", "df/d51/classArk_1_1internal_1_1ScopeResolver_1_1Scope.html", null ],
     [ "Ark::internal::ScopeResolver", "dd/d92/classArk_1_1internal_1_1ScopeResolver.html", null ],
     [ "Ark::internal::SharedLibrary", "d0/d8a/classArk_1_1internal_1_1SharedLibrary.html", null ],
     [ "Ark::State", "d1/d37/classArk_1_1State.html", null ],
+    [ "Ark::internal::StaticScope", "d3/d8e/classArk_1_1internal_1_1StaticScope.html", [
+      [ "Ark::internal::NamespaceScope", "d9/d4a/classArk_1_1internal_1_1NamespaceScope.html", null ]
+    ] ],
     [ "Ark::Symbols", "d9/dba/structArk_1_1Symbols.html", null ],
     [ "Ark::internal::type_uid< T >", "db/de1/structArk_1_1internal_1_1type__uid.html", null ],
     [ "Ark::internal::type_uid_impl", "d3/d7a/structArk_1_1internal_1_1type__uid__impl.html", null ],
@@ -76,7 +81,6 @@ var hierarchy =
     [ "Ark::internal::ValTableElem", "d8/dc4/structArk_1_1internal_1_1ValTableElem.html", null ],
     [ "Ark::Value", "d3/d90/classArk_1_1Value.html", null ],
     [ "Ark::Values", "d0/d56/structArk_1_1Values.html", null ],
-    [ "Ark::internal::Variable", "df/da2/structArk_1_1internal_1_1Variable.html", null ],
     [ "Ark::Version", "d6/dab/structArk_1_1Version.html", null ],
     [ "Ark::VM", "d2/d93/classArk_1_1VM.html", null ],
     [ "Ark::Welder", "d7/da8/classArk_1_1Welder.html", null ],

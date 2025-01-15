@@ -97,9 +97,9 @@ Collaboration diagram for JsonCompiler:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6bdf6f3a1ab2c1c5cc9c5ed5e716cee3" id="r_a6bdf6f3a1ab2c1c5cc9c5ed5e716cee3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bdf6f3a1ab2c1c5cc9c5ed5e716cee3">JsonCompiler</a> (unsigned debug, const std::vector&lt; std::filesystem::path &gt; &amp;lib_env)</td></tr>
-<tr class="memdesc:a6bdf6f3a1ab2c1c5cc9c5ed5e716cee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="../../d6/d2d/classJsonCompiler.html">JsonCompiler</a> object.  <br /></td></tr>
-<tr class="separator:a6bdf6f3a1ab2c1c5cc9c5ed5e716cee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29569477147f3f5cb3e233f7ae40c9c2" id="r_a29569477147f3f5cb3e233f7ae40c9c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29569477147f3f5cb3e233f7ae40c9c2">JsonCompiler</a> (unsigned debug, const std::vector&lt; std::filesystem::path &gt; &amp;lib_env, uint16_t features=0)</td></tr>
+<tr class="memdesc:a29569477147f3f5cb3e233f7ae40c9c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="../../d6/d2d/classJsonCompiler.html">JsonCompiler</a> object.  <br /></td></tr>
+<tr class="separator:a29569477147f3f5cb3e233f7ae40c9c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a054c0aa4fb71bf3119c81130ba0339d8" id="r_a054c0aa4fb71bf3119c81130ba0339d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a054c0aa4fb71bf3119c81130ba0339d8">feed</a> (const std::string &amp;filename)</td></tr>
 <tr class="memdesc:a054c0aa4fb71bf3119c81130ba0339d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Feed the different variables with information taken from the given source code file.  <br /></td></tr>
 <tr class="separator:a054c0aa4fb71bf3119c81130ba0339d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,8 +125,8 @@ Private Attributes</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="../../dc/dfd/JsonCompiler_8hpp_source.html#l00011">11</a> of file <a class="el" href="../../dc/dfd/JsonCompiler_8hpp_source.html">JsonCompiler.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a6bdf6f3a1ab2c1c5cc9c5ed5e716cee3" name="a6bdf6f3a1ab2c1c5cc9c5ed5e716cee3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6bdf6f3a1ab2c1c5cc9c5ed5e716cee3">&#9670;&#160;</a></span>JsonCompiler()</h2>
+<a id="a29569477147f3f5cb3e233f7ae40c9c2" name="a29569477147f3f5cb3e233f7ae40c9c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29569477147f3f5cb3e233f7ae40c9c2">&#9670;&#160;</a></span>JsonCompiler()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -139,7 +139,12 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; std::filesystem::path &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lib_env</em></span>&#160;)</td>
+          <td class="paramtype">const std::vector&lt; std::filesystem::path &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lib_env</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>features</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -149,11 +154,12 @@ Private Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">debug</td><td>the debug level </td></tr>
     <tr><td class="paramname">lib_env</td><td>list of path to the directories of the std lib </td></tr>
+    <tr><td class="paramname">features</td><td>compiler features to enable. By default, none are active to be able to dump a file AST without any processing </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00012">12</a> of file <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html">JsonCompiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00013">13</a> of file <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html">JsonCompiler.cpp</a>.</p>
 
 </div>
 </div>
@@ -190,11 +196,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>const std::string&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00026">26</a> of file <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html">JsonCompiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00027">27</a> of file <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html">JsonCompiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00026">_compile()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00115">Ark::internal::Node::col()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00058">Ark::internal::Node::constList()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00120">Ark::internal::Node::filename()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00043">Ark::internal::Node::keyword()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00110">Ark::internal::Node::line()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00063">Ark::internal::Node::nodeType()</a>, <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00043">Ark::internal::nodeTypes</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00038">Ark::internal::Node::number()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00033">Ark::internal::Node::string()</a>, and <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00208">toJsonList()</a>.</p>
+<p class="reference">References <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00027">_compile()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00140">Ark::internal::Node::col()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00145">Ark::internal::Node::filename()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00047">Ark::internal::Node::keyword()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00135">Ark::internal::Node::line()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00077">Ark::internal::Node::nodeType()</a>, <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00044">Ark::internal::nodeTypes</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00042">Ark::internal::Node::number()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00037">Ark::internal::Node::string()</a>, and <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00259">toJsonList()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00026">_compile()</a>, <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00021">compile()</a>, and <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00208">toJsonList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00027">_compile()</a>, <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00022">compile()</a>, and <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00259">toJsonList()</a>.</p>
 
 </div>
 </div>
@@ -216,9 +222,9 @@ Private Attributes</h2></td></tr>
 <p>Start the compilation. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00021">21</a> of file <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html">JsonCompiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00022">22</a> of file <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html">JsonCompiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00026">_compile()</a>, <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00095">Ark::Welder::ast()</a>, and <a class="el" href="../../dc/dfd/JsonCompiler_8hpp_source.html#l00037">m_welder</a>.</p>
+<p class="reference">References <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00027">_compile()</a>, <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00096">Ark::Welder::ast()</a>, and <a class="el" href="../../dc/dfd/JsonCompiler_8hpp_source.html#l00038">m_welder</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../df/d0a/main_8cpp_source.html#l00017">main()</a>.</p>
 
@@ -247,9 +253,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00016">16</a> of file <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html">JsonCompiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00017">17</a> of file <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html">JsonCompiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00034">Ark::Welder::computeASTFromFile()</a>, and <a class="el" href="../../dc/dfd/JsonCompiler_8hpp_source.html#l00037">m_welder</a>.</p>
+<p class="reference">References <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00035">Ark::Welder::computeASTFromFile()</a>, and <a class="el" href="../../dc/dfd/JsonCompiler_8hpp_source.html#l00038">m_welder</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../df/d0a/main_8cpp_source.html#l00017">main()</a>.</p>
 
@@ -292,11 +298,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00208">208</a> of file <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html">JsonCompiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00259">259</a> of file <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html">JsonCompiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00026">_compile()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00058">Ark::internal::Node::constList()</a>.</p>
+<p class="reference">References <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00027">_compile()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00026">_compile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00027">_compile()</a>.</p>
 
 </div>
 </div>
@@ -321,9 +327,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/dfd/JsonCompiler_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../dc/dfd/JsonCompiler_8hpp_source.html">JsonCompiler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/dfd/JsonCompiler_8hpp_source.html#l00038">38</a> of file <a class="el" href="../../dc/dfd/JsonCompiler_8hpp_source.html">JsonCompiler.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00021">compile()</a>, and <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00016">feed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00022">compile()</a>, and <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00017">feed()</a>.</p>
 
 </div>
 </div>
@@ -337,7 +343,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/d2d/classJsonCompiler.html">JsonCompiler</a></li>
-    <li class="footer">Generated on Sat Oct 12 2024 14:46:45 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Jan 15 2025 19:51:44 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

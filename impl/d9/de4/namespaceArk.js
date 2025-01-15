@@ -13,7 +13,6 @@ var namespaceArk =
     ] ],
     [ "types", "d4/d7c/namespaceArk_1_1types.html", "d4/d7c/namespaceArk_1_1types" ],
     [ "Utils", "df/d16/namespaceArk_1_1Utils.html", [
-      [ "canonicalRelPath", "df/d16/namespaceArk_1_1Utils.html#a3598d0ca35b3c7afd6183f2093807db3", null ],
       [ "fileExists", "df/d16/namespaceArk_1_1Utils.html#a1e2624f09a9e767e1792b69b879aa73f", null ],
       [ "isDouble", "df/d16/namespaceArk_1_1Utils.html#afeaaabff8a0661920f770e2bab8a7eda", null ],
       [ "levenshteinDistance", "df/d16/namespaceArk_1_1Utils.html#a8f9326e745dc008df3527a447eeb0788", null ],
@@ -76,11 +75,12 @@ var namespaceArk =
     [ "FeatureImportSolver", "d9/de4/namespaceArk.html#a0dd1d59c1673ce87c62416819b5604b4", null ],
     [ "FeatureIROptimizer", "d9/de4/namespaceArk.html#a19addc1833d2f8b7f039660b23482d8e", null ],
     [ "FeatureMacroProcessor", "d9/de4/namespaceArk.html#a5aa16adc97211d2f076390efbc996f63", null ],
+    [ "FeatureNameResolver", "d9/de4/namespaceArk.html#afeb889bdcb25a5cd5baa7f8316fccb49", null ],
     [ "FeatureTestFailOnException", "d9/de4/namespaceArk.html#a69c882fe0668cb21166e4616104c0480", null ],
     [ "MaxMacroProcessingDepth", "d9/de4/namespaceArk.html#a601127fdf466d46ddcc7d061bd4f7a34", null ],
     [ "MaxMacroUnificationDepth", "d9/de4/namespaceArk.html#a9bfec7edeabdb42ddee1327daa3ee186", null ],
     [ "Nil", "d9/de4/namespaceArk.html#a5b4d87e9947b24bc4202530daf34c8b3", null ],
     [ "True", "d9/de4/namespaceArk.html#a7b98e35d4b546b9f5faab289a857051b", null ],
-    [ "types_to_str", "d9/de4/namespaceArk.html#acda85568e0ab829ec4c303f1ac053759", null ],
+    [ "types_to_str", "d9/de4/namespaceArk.html#a09c7d272cc09841b4feefc1eea1aad25", null ],
     [ "VMStackSize", "d9/de4/namespaceArk.html#a10c147f2df9516277811af7da43a250f", null ]
 ];

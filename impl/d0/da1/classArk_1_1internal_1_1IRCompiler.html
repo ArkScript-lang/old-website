@@ -92,7 +92,7 @@ $(function(){initNavTree('d0/da1/classArk_1_1internal_1_1IRCompiler.html','../..
 <div class="dynheader">
 Collaboration diagram for Ark::internal::IRCompiler:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d30/classArk_1_1internal_1_1IRCompiler__coll__graph.svg" width="507" height="318"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dc/d30/classArk_1_1internal_1_1IRCompiler__coll__graph.svg" width="100%" height="572"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -103,6 +103,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac3a804048ec9487feac5e41c3135cd27" id="r_ac3a804048ec9487feac5e41c3135cd27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3a804048ec9487feac5e41c3135cd27">process</a> (const std::vector&lt; <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html#a8eb76fcb4f2f3d8d86f7bbabd233e6f2">IR::Block</a> &gt; &amp;pages, const std::vector&lt; std::string &gt; &amp;symbols, const std::vector&lt; <a class="el" href="../../d8/dc4/structArk_1_1internal_1_1ValTableElem.html">ValTableElem</a> &gt; &amp;values)</td></tr>
 <tr class="memdesc:ac3a804048ec9487feac5e41c3135cd27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn a given <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html">IR</a> into bytecode.  <br /></td></tr>
 <tr class="separator:ac3a804048ec9487feac5e41c3135cd27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68a9e580f471f075202889c573d24581" id="r_a68a9e580f471f075202889c573d24581"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68a9e580f471f075202889c573d24581">dumpToStream</a> (std::ostream &amp;stream) const</td></tr>
+<tr class="memdesc:a68a9e580f471f075202889c573d24581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump the <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html">IR</a> given to <code>process</code> to an output stream.  <br /></td></tr>
+<tr class="separator:a68a9e580f471f075202889c573d24581"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a691d5d6c4fa1bb878aab9d9642351176" id="r_a691d5d6c4fa1bb878aab9d9642351176"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d9/de4/namespaceArk.html#abc8e737d05c4d6d46b653459516be329">bytecode_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a691d5d6c4fa1bb878aab9d9642351176">bytecode</a> () const noexcept</td></tr>
 <tr class="memdesc:a691d5d6c4fa1bb878aab9d9642351176"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the constructed bytecode object.  <br /></td></tr>
 <tr class="separator:a691d5d6c4fa1bb878aab9d9642351176"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,7 +168,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00015">15</a> of file <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html">IRCompiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00016">16</a> of file <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html">IRCompiler.cpp</a>.</p>
 
 </div>
 </div>
@@ -196,11 +199,11 @@ Private Attributes</h2></td></tr>
 <p>Return the constructed bytecode object. </p>
 <dl class="section return"><dt>Returns</dt><dd>const bytecode_t&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00048">48</a> of file <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html">IRCompiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00093">93</a> of file <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html">IRCompiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00054">m_bytecode</a>.</p>
+<p class="reference">References <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00061">m_bytecode</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00049">Ark::Welder::generateBytecode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00050">Ark::Welder::generateBytecode()</a>.</p>
 
 </div>
 </div>
@@ -227,11 +230,42 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00053">53</a> of file <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html">IRCompiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00098">98</a> of file <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html">IRCompiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00035">Ark::internal::CODE_SEGMENT_START</a>, <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html#a3ff6aca07d6f0bf01495d0325ceb428daae8fae3d74fdc80ef40995c3c6ca152e">Ark::internal::IR::Goto</a>, <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html#a3ff6aca07d6f0bf01495d0325ceb428dac721a5338f2233539d0ad1974dc6d60a">Ark::internal::IR::GotoIfFalse</a>, <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html#a3ff6aca07d6f0bf01495d0325ceb428da0852a04e1ab34a1608cd8d67049256fb">Ark::internal::IR::GotoIfTrue</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00046">Ark::internal::HALT</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00044">Ark::internal::JUMP</a>, <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html#a3ff6aca07d6f0bf01495d0325ceb428dab021df6aac4654c454f46c77646e745f">Ark::internal::IR::Label</a>, <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00054">m_bytecode</a>, <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00055">m_ir</a>, <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html#a3ff6aca07d6f0bf01495d0325ceb428da5782f6bdd633ac305e1e625779f96a77">Ark::internal::IR::Opcode</a>, <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html#a3ff6aca07d6f0bf01495d0325ceb428dae41e6561ce156ae3f69d536110106750">Ark::internal::IR::Opcode2Args</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00043">Ark::internal::POP_JUMP_IF_FALSE</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00040">Ark::internal::POP_JUMP_IF_TRUE</a>, and <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00119">pushWord()</a>.</p>
+<p class="reference">References <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00036">Ark::internal::CODE_SEGMENT_START</a>, <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html#a3ff6aca07d6f0bf01495d0325ceb428daae8fae3d74fdc80ef40995c3c6ca152e">Ark::internal::IR::Goto</a>, <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html#a3ff6aca07d6f0bf01495d0325ceb428dac721a5338f2233539d0ad1974dc6d60a">Ark::internal::IR::GotoIfFalse</a>, <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html#a3ff6aca07d6f0bf01495d0325ceb428da0852a04e1ab34a1608cd8d67049256fb">Ark::internal::IR::GotoIfTrue</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00070">Ark::internal::HALT</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00064">Ark::internal::JUMP</a>, <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html#a3ff6aca07d6f0bf01495d0325ceb428dab021df6aac4654c454f46c77646e745f">Ark::internal::IR::Label</a>, <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00061">m_bytecode</a>, <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00062">m_ir</a>, <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html#a3ff6aca07d6f0bf01495d0325ceb428da5782f6bdd633ac305e1e625779f96a77">Ark::internal::IR::Opcode</a>, <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html#a3ff6aca07d6f0bf01495d0325ceb428dae41e6561ce156ae3f69d536110106750">Ark::internal::IR::Opcode2Args</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00060">Ark::internal::POP_JUMP_IF_FALSE</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00048">Ark::internal::POP_JUMP_IF_TRUE</a>, and <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00164">pushWord()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00019">process()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00020">process()</a>.</p>
+
+</div>
+</div>
+<a id="a68a9e580f471f075202889c573d24581" name="a68a9e580f471f075202889c573d24581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68a9e580f471f075202889c573d24581">&#9670;&#160;</a></span>dumpToStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ark::internal::IRCompiler::dumpToStream </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dump the <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html">IR</a> given to <code>process</code> to an output stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>output stream </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00052">52</a> of file <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html">IRCompiler.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html#a3ff6aca07d6f0bf01495d0325ceb428daae8fae3d74fdc80ef40995c3c6ca152e">Ark::internal::IR::Goto</a>, <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html#a3ff6aca07d6f0bf01495d0325ceb428dac721a5338f2233539d0ad1974dc6d60a">Ark::internal::IR::GotoIfFalse</a>, <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html#a3ff6aca07d6f0bf01495d0325ceb428da0852a04e1ab34a1608cd8d67049256fb">Ark::internal::IR::GotoIfTrue</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00267">Ark::internal::InstructionNames</a>, <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html#a3ff6aca07d6f0bf01495d0325ceb428dab021df6aac4654c454f46c77646e745f">Ark::internal::IR::Label</a>, <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00062">m_ir</a>, <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html#a3ff6aca07d6f0bf01495d0325ceb428da5782f6bdd633ac305e1e625779f96a77">Ark::internal::IR::Opcode</a>, and <a class="el" href="../../dc/d02/namespaceArk_1_1internal_1_1IR.html#a3ff6aca07d6f0bf01495d0325ceb428dae41e6561ce156ae3f69d536110106750">Ark::internal::IR::Opcode2Args</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00113">Ark::Welder::dumpIRToFile()</a>, and <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00101">Ark::Welder::textualIR()</a>.</p>
 
 </div>
 </div>
@@ -269,11 +303,11 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00019">19</a> of file <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html">IRCompiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00020">20</a> of file <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html">IRCompiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00035">Ark::internal::CODE_SEGMENT_START</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00053">compile()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00046">Ark::internal::HALT</a>, <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00054">m_bytecode</a>, <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00055">m_ir</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00127">pushFileHeader()</a>, and <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00161">pushSymAndValTables()</a>.</p>
+<p class="reference">References <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00036">Ark::internal::CODE_SEGMENT_START</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00098">compile()</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00070">Ark::internal::HALT</a>, <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00061">m_bytecode</a>, <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00062">m_ir</a>, <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00060">m_logger</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00172">pushFileHeader()</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00206">pushSymAndValTables()</a>, <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00081">Ark::internal::Logger::traceEnd()</a>, and <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00075">Ark::internal::Logger::traceStart()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00049">Ark::Welder::generateBytecode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00050">Ark::Welder::generateBytecode()</a>.</p>
 
 </div>
 </div>
@@ -302,11 +336,11 @@ Private Attributes</h2></td></tr>
 
 <p>Push the file headers (magic, version used, timestamp) </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00127">127</a> of file <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html">IRCompiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00172">172</a> of file <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html">IRCompiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00018">ARK_VERSION_MAJOR</a>, <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00019">ARK_VERSION_MINOR</a>, <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00020">ARK_VERSION_PATCH</a>, and <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00054">m_bytecode</a>.</p>
+<p class="reference">References <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00018">ARK_VERSION_MAJOR</a>, <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00019">ARK_VERSION_MINOR</a>, <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00020">ARK_VERSION_PATCH</a>, and <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00061">m_bytecode</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00019">process()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00020">process()</a>.</p>
 
 </div>
 </div>
@@ -339,11 +373,11 @@ Private Attributes</h2></td></tr>
 
 <p>Push the symbols and values tables. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00161">161</a> of file <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html">IRCompiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00206">206</a> of file <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html">IRCompiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00034">Ark::internal::FUNC_TYPE</a>, <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00054">m_bytecode</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ab6df8fad6f59b570c0818eff53db655fab2ee912b91d69b435159c7c3f6df7f5f">Ark::internal::Number</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00032">Ark::internal::NUMBER_TYPE</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ab6df8fad6f59b570c0818eff53db655fa6666eaba81f13e74d10ac1a9c9d6d7b1">Ark::internal::PageAddr</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ab6df8fad6f59b570c0818eff53db655fa27118326006d3829667a400ad23d5d98">Ark::internal::String</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00033">Ark::internal::STRING_TYPE</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00030">Ark::internal::SYM_TABLE_START</a>, and <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00031">Ark::internal::VAL_TABLE_START</a>.</p>
+<p class="reference">References <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00035">Ark::internal::FUNC_TYPE</a>, <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00061">m_bytecode</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ab6df8fad6f59b570c0818eff53db655fab2ee912b91d69b435159c7c3f6df7f5f">Ark::internal::Number</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00033">Ark::internal::NUMBER_TYPE</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ab6df8fad6f59b570c0818eff53db655fa6666eaba81f13e74d10ac1a9c9d6d7b1">Ark::internal::PageAddr</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#ab6df8fad6f59b570c0818eff53db655fa27118326006d3829667a400ad23d5d98">Ark::internal::String</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00034">Ark::internal::STRING_TYPE</a>, <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00031">Ark::internal::SYM_TABLE_START</a>, and <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00032">Ark::internal::VAL_TABLE_START</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00019">process()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00020">process()</a>.</p>
 
 </div>
 </div>
@@ -378,11 +412,11 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00119">119</a> of file <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html">IRCompiler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00164">164</a> of file <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html">IRCompiler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../db/d53/Word_8hpp_source.html#l00020">Ark::internal::Word::byte_1</a>, <a class="el" href="../../db/d53/Word_8hpp_source.html#l00021">Ark::internal::Word::byte_2</a>, <a class="el" href="../../db/d53/Word_8hpp_source.html#l00022">Ark::internal::Word::byte_3</a>, <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00054">m_bytecode</a>, and <a class="el" href="../../db/d53/Word_8hpp_source.html#l00019">Ark::internal::Word::opcode</a>.</p>
+<p class="reference">References <a class="el" href="../../db/d53/Word_8hpp_source.html#l00020">Ark::internal::Word::byte_1</a>, <a class="el" href="../../db/d53/Word_8hpp_source.html#l00021">Ark::internal::Word::byte_2</a>, <a class="el" href="../../db/d53/Word_8hpp_source.html#l00022">Ark::internal::Word::byte_3</a>, <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00061">m_bytecode</a>, and <a class="el" href="../../db/d53/Word_8hpp_source.html#l00019">Ark::internal::Word::opcode</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00053">compile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00098">compile()</a>.</p>
 
 </div>
 </div>
@@ -407,9 +441,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html">IRCompiler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00061">61</a> of file <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html">IRCompiler.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00048">bytecode()</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00053">compile()</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00019">process()</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00127">pushFileHeader()</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00161">pushSymAndValTables()</a>, and <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00119">pushWord()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00093">bytecode()</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00098">compile()</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00020">process()</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00172">pushFileHeader()</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00206">pushSymAndValTables()</a>, and <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00164">pushWord()</a>.</p>
 
 </div>
 </div>
@@ -433,9 +467,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00055">55</a> of file <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html">IRCompiler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00062">62</a> of file <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html">IRCompiler.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00053">compile()</a>, and <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00019">process()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00098">compile()</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00052">dumpToStream()</a>, and <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00020">process()</a>.</p>
 
 </div>
 </div>
@@ -459,7 +493,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00053">53</a> of file <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html">IRCompiler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html#l00060">60</a> of file <a class="el" href="../../df/d86/IRCompiler_8hpp_source.html">IRCompiler.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00020">process()</a>.</p>
 
 </div>
 </div>
@@ -473,7 +509,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/de4/namespaceArk.html">Ark</a></li><li class="navelem"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html">internal</a></li><li class="navelem"><a class="el" href="../../d0/da1/classArk_1_1internal_1_1IRCompiler.html">IRCompiler</a></li>
-    <li class="footer">Generated on Sat Oct 12 2024 14:46:45 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Jan 15 2025 19:51:44 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

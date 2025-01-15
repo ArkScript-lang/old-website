@@ -128,41 +128,48 @@ $(function(){initNavTree('df/d86/IRCompiler_8hpp_source.html','../../'); initRes
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">void</span> process(<span class="keyword">const</span> std::vector&lt;IR::Block&gt;&amp; pages, <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; symbols, <span class="keyword">const</span> std::vector&lt;ValTableElem&gt;&amp; values);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"></span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">        /**</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">         * @brief Return the constructed bytecode object</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">         * @brief Dump the IR given to `process` to an output stream</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">         *</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">         * @return const bytecode_t&amp;</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">         * @param stream output stream</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">         */</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        [[nodiscard]] <span class="keyword">const</span> <a class="code hl_typedef" href="../../d9/de4/namespaceArk.html#abc8e737d05c4d6d46b653459516be329">bytecode_t</a>&amp; bytecode() <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../d0/da1/classArk_1_1internal_1_1IRCompiler.html#af21980d47cbd965d190dd938264387c6">   53</a></span>        <a class="code hl_class" href="../../d6/d2f/classArk_1_1internal_1_1Logger.html">Logger</a> <a class="code hl_variable" href="../../d0/da1/classArk_1_1internal_1_1IRCompiler.html#af21980d47cbd965d190dd938264387c6">m_logger</a>;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../d0/da1/classArk_1_1internal_1_1IRCompiler.html#a79f08b96258f3fb1c7d784dffe0054c9">   54</a></span>        <a class="code hl_typedef" href="../../d9/de4/namespaceArk.html#abc8e737d05c4d6d46b653459516be329">bytecode_t</a> <a class="code hl_variable" href="../../d0/da1/classArk_1_1internal_1_1IRCompiler.html#a79f08b96258f3fb1c7d784dffe0054c9">m_bytecode</a>;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../d0/da1/classArk_1_1internal_1_1IRCompiler.html#aa6aaf9dfa70ae49a2ea5619e8f112ee4">   55</a></span>        std::vector&lt;IR::Block&gt; <a class="code hl_variable" href="../../d0/da1/classArk_1_1internal_1_1IRCompiler.html#aa6aaf9dfa70ae49a2ea5619e8f112ee4">m_ir</a>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordtype">void</span> compile();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment"></span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">        /**</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">         * @brief Push a word to the m_bytecode</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">         * @param word</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">         */</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordtype">void</span> pushWord(<span class="keyword">const</span> <a class="code hl_struct" href="../../d3/d52/structArk_1_1internal_1_1Word.html">Word</a>&amp; word);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment"></span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">        /**</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">         * @brief Push the file headers (magic, version used, timestamp)</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">         *</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">         */</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordtype">void</span> pushFileHeader() noexcept;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment"></span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">        /**</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">         * @brief Push the symbols and values tables</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">         *</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">         */</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordtype">void</span> pushSymAndValTables(const std::vector&lt;std::<span class="keywordtype">string</span>&gt;&amp; symbols, const std::vector&lt;<a class="code hl_struct" href="../../d8/dc4/structArk_1_1internal_1_1ValTableElem.html">ValTableElem</a>&gt;&amp; values);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    };</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">void</span> dumpToStream(std::ostream&amp; stream) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment"></span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">        /**</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">         * @brief Return the constructed bytecode object</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">         *</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">         * @return const bytecode_t&amp;</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">         */</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        [[nodiscard]] <span class="keyword">const</span> <a class="code hl_typedef" href="../../d9/de4/namespaceArk.html#abc8e737d05c4d6d46b653459516be329">bytecode_t</a>&amp; bytecode() <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="../../d0/da1/classArk_1_1internal_1_1IRCompiler.html#af21980d47cbd965d190dd938264387c6">   60</a></span>        <a class="code hl_class" href="../../d6/d2f/classArk_1_1internal_1_1Logger.html">Logger</a> <a class="code hl_variable" href="../../d0/da1/classArk_1_1internal_1_1IRCompiler.html#af21980d47cbd965d190dd938264387c6">m_logger</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../d0/da1/classArk_1_1internal_1_1IRCompiler.html#a79f08b96258f3fb1c7d784dffe0054c9">   61</a></span>        <a class="code hl_typedef" href="../../d9/de4/namespaceArk.html#abc8e737d05c4d6d46b653459516be329">bytecode_t</a> <a class="code hl_variable" href="../../d0/da1/classArk_1_1internal_1_1IRCompiler.html#a79f08b96258f3fb1c7d784dffe0054c9">m_bytecode</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../d0/da1/classArk_1_1internal_1_1IRCompiler.html#aa6aaf9dfa70ae49a2ea5619e8f112ee4">   62</a></span>        std::vector&lt;IR::Block&gt; <a class="code hl_variable" href="../../d0/da1/classArk_1_1internal_1_1IRCompiler.html#aa6aaf9dfa70ae49a2ea5619e8f112ee4">m_ir</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordtype">void</span> compile();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment"></span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">        /**</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">         * @brief Push a word to the m_bytecode</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">         * @param word</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">         */</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordtype">void</span> pushWord(<span class="keyword">const</span> <a class="code hl_struct" href="../../d3/d52/structArk_1_1internal_1_1Word.html">Word</a>&amp; word);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment"></span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">        /**</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">         * @brief Push the file headers (magic, version used, timestamp)</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">         *</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">         */</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordtype">void</span> pushFileHeader() noexcept;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment"></span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">        /**</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">         * @brief Push the symbols and values tables</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">         *</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">         */</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordtype">void</span> pushSymAndValTables(const std::vector&lt;std::<span class="keywordtype">string</span>&gt;&amp; symbols, const std::vector&lt;<a class="code hl_struct" href="../../d8/dc4/structArk_1_1internal_1_1ValTableElem.html">ValTableElem</a>&gt;&amp; values);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    };</div>
 </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#endif  </span><span class="comment">// ARK_COMPILER_INTERMEDIATEREPRESENTATION_IRCOMPILER_HPP</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>}</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#endif  </span><span class="comment">// ARK_COMPILER_INTERMEDIATEREPRESENTATION_IRCOMPILER_HPP</span></div>
 <div class="ttc" id="aCommon_8hpp_html"><div class="ttname"><a href="../../d8/ddd/Common_8hpp.html">Common.hpp</a></div><div class="ttdoc">Common code for the compiler.</div></div>
 <div class="ttc" id="aEntity_8hpp_html"><div class="ttname"><a href="../../de/da6/Entity_8hpp.html">Entity.hpp</a></div><div class="ttdoc">An entity in the IR is a bundle of information.</div></div>
 <div class="ttc" id="aLogger_8hpp_html"><div class="ttname"><a href="../../d9/d11/Logger_8hpp.html">Logger.hpp</a></div><div class="ttdoc">Internal logger.</div></div>
@@ -170,10 +177,10 @@ $(function(){initNavTree('df/d86/IRCompiler_8hpp_source.html','../../'); initRes
 <div class="ttc" id="aPlatform_8hpp_html"><div class="ttname"><a href="../../d5/d40/Platform_8hpp.html">Platform.hpp</a></div><div class="ttdoc">ArkScript configuration macros.</div></div>
 <div class="ttc" id="aValTableElem_8hpp_html"><div class="ttname"><a href="../../dd/de7/ValTableElem_8hpp.html">ValTableElem.hpp</a></div><div class="ttdoc">The basic value type handled by the compiler.</div></div>
 <div class="ttc" id="aclassArk_1_1internal_1_1IRCompiler_html"><div class="ttname"><a href="../../d0/da1/classArk_1_1internal_1_1IRCompiler.html">Ark::internal::IRCompiler</a></div><div class="ttdef"><b>Definition</b> <a href="#l00026">IRCompiler.hpp:27</a></div></div>
-<div class="ttc" id="aclassArk_1_1internal_1_1IRCompiler_html_a79f08b96258f3fb1c7d784dffe0054c9"><div class="ttname"><a href="../../d0/da1/classArk_1_1internal_1_1IRCompiler.html#a79f08b96258f3fb1c7d784dffe0054c9">Ark::internal::IRCompiler::m_bytecode</a></div><div class="ttdeci">bytecode_t m_bytecode</div><div class="ttdef"><b>Definition</b> <a href="#l00054">IRCompiler.hpp:54</a></div></div>
-<div class="ttc" id="aclassArk_1_1internal_1_1IRCompiler_html_aa6aaf9dfa70ae49a2ea5619e8f112ee4"><div class="ttname"><a href="../../d0/da1/classArk_1_1internal_1_1IRCompiler.html#aa6aaf9dfa70ae49a2ea5619e8f112ee4">Ark::internal::IRCompiler::m_ir</a></div><div class="ttdeci">std::vector&lt; IR::Block &gt; m_ir</div><div class="ttdef"><b>Definition</b> <a href="#l00055">IRCompiler.hpp:55</a></div></div>
-<div class="ttc" id="aclassArk_1_1internal_1_1IRCompiler_html_af21980d47cbd965d190dd938264387c6"><div class="ttname"><a href="../../d0/da1/classArk_1_1internal_1_1IRCompiler.html#af21980d47cbd965d190dd938264387c6">Ark::internal::IRCompiler::m_logger</a></div><div class="ttdeci">Logger m_logger</div><div class="ttdef"><b>Definition</b> <a href="#l00053">IRCompiler.hpp:53</a></div></div>
-<div class="ttc" id="aclassArk_1_1internal_1_1Logger_html"><div class="ttname"><a href="../../d6/d2f/classArk_1_1internal_1_1Logger.html">Ark::internal::Logger</a></div><div class="ttdef"><b>Definition</b> <a href="../../d9/d11/Logger_8hpp_source.html#l00029">Logger.hpp:30</a></div></div>
+<div class="ttc" id="aclassArk_1_1internal_1_1IRCompiler_html_a79f08b96258f3fb1c7d784dffe0054c9"><div class="ttname"><a href="../../d0/da1/classArk_1_1internal_1_1IRCompiler.html#a79f08b96258f3fb1c7d784dffe0054c9">Ark::internal::IRCompiler::m_bytecode</a></div><div class="ttdeci">bytecode_t m_bytecode</div><div class="ttdef"><b>Definition</b> <a href="#l00061">IRCompiler.hpp:61</a></div></div>
+<div class="ttc" id="aclassArk_1_1internal_1_1IRCompiler_html_aa6aaf9dfa70ae49a2ea5619e8f112ee4"><div class="ttname"><a href="../../d0/da1/classArk_1_1internal_1_1IRCompiler.html#aa6aaf9dfa70ae49a2ea5619e8f112ee4">Ark::internal::IRCompiler::m_ir</a></div><div class="ttdeci">std::vector&lt; IR::Block &gt; m_ir</div><div class="ttdef"><b>Definition</b> <a href="#l00062">IRCompiler.hpp:62</a></div></div>
+<div class="ttc" id="aclassArk_1_1internal_1_1IRCompiler_html_af21980d47cbd965d190dd938264387c6"><div class="ttname"><a href="../../d0/da1/classArk_1_1internal_1_1IRCompiler.html#af21980d47cbd965d190dd938264387c6">Ark::internal::IRCompiler::m_logger</a></div><div class="ttdeci">Logger m_logger</div><div class="ttdef"><b>Definition</b> <a href="#l00060">IRCompiler.hpp:60</a></div></div>
+<div class="ttc" id="aclassArk_1_1internal_1_1Logger_html"><div class="ttname"><a href="../../d6/d2f/classArk_1_1internal_1_1Logger.html">Ark::internal::Logger</a></div><div class="ttdef"><b>Definition</b> <a href="../../d9/d11/Logger_8hpp_source.html#l00024">Logger.hpp:25</a></div></div>
 <div class="ttc" id="anamespaceArk_1_1internal_html"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html">Ark::internal</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/d84/Builtins_8hpp_source.html#l00025">Builtins.hpp:26</a></div></div>
 <div class="ttc" id="anamespaceArk_html_abc8e737d05c4d6d46b653459516be329"><div class="ttname"><a href="../../d9/de4/namespaceArk.html#abc8e737d05c4d6d46b653459516be329">Ark::bytecode_t</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; bytecode_t</div><div class="ttdef"><b>Definition</b> <a href="../../d8/ddd/Common_8hpp_source.html#l00022">Common.hpp:22</a></div></div>
 <div class="ttc" id="astructArk_1_1internal_1_1ValTableElem_html"><div class="ttname"><a href="../../d8/dc4/structArk_1_1internal_1_1ValTableElem.html">Ark::internal::ValTableElem</a></div><div class="ttdoc">A Compiler Value class helper to handle multiple types.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/de7/ValTableElem_8hpp_source.html#l00037">ValTableElem.hpp:38</a></div></div>
@@ -184,7 +191,7 @@ $(function(){initNavTree('df/d86/IRCompiler_8hpp_source.html','../../'); initRes
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_a8b6c64285bf9ac60f50770eb2fc48b5.html">Ark</a></li><li class="navelem"><a class="el" href="../../dir_e4f19535f57335fb80a0267cec25bf70.html">Compiler</a></li><li class="navelem"><a class="el" href="../../dir_ad45c69e33d564afb397466bf2d991f2.html">IntermediateRepresentation</a></li><li class="navelem"><a class="el" href="../../df/d86/IRCompiler_8hpp.html">IRCompiler.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 12 2024 14:46:45 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Jan 15 2025 19:51:44 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

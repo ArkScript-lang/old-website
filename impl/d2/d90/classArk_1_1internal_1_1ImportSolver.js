@@ -12,6 +12,6 @@ var classArk_1_1internal_1_1ImportSolver =
     [ "m_imported", "d2/d90/classArk_1_1internal_1_1ImportSolver.html#ad5a2a9dce5036fc96b27c9165224e614", null ],
     [ "m_imports", "d2/d90/classArk_1_1internal_1_1ImportSolver.html#a745c3f2f5529d11d4b899cd87d9ee368", null ],
     [ "m_libenv", "d2/d90/classArk_1_1internal_1_1ImportSolver.html#a721da709e0c96fab29bafe28a2088f1a", null ],
-    [ "m_modules", "d2/d90/classArk_1_1internal_1_1ImportSolver.html#a430e9731fa7ee02dc3fdd9ea61167ae2", null ],
+    [ "m_packages", "d2/d90/classArk_1_1internal_1_1ImportSolver.html#a2ab508657366cdd8976a65cff727f8e4", null ],
     [ "m_root", "d2/d90/classArk_1_1internal_1_1ImportSolver.html#a1fbbaf1ac962e1a32b7669d25d5e4127", null ]
 ];

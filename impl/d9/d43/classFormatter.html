@@ -122,6 +122,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a05984227397d145da78b0ab6fd410f64" id="r_a05984227397d145da78b0ab6fd410f64"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05984227397d145da78b0ab6fd410f64">shouldSplitOnNewline</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Ark::internal::Node</a> &amp;node)</td></tr>
 <tr class="memdesc:a05984227397d145da78b0ab6fd410f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decide if a node should be split on a newline or not.  <br /></td></tr>
 <tr class="separator:a05984227397d145da78b0ab6fd410f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a714bbfb030d0445b6158abdbe6b139f2" id="r_a714bbfb030d0445b6158abdbe6b139f2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a714bbfb030d0445b6158abdbe6b139f2">shouldAddNewLineBetweenNodes</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Ark::internal::Node</a> &amp;node, std::size_t at)</td></tr>
+<tr class="memdesc:a714bbfb030d0445b6158abdbe6b139f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decide if we should add a newline after a node in a block.  <br /></td></tr>
+<tr class="separator:a714bbfb030d0445b6158abdbe6b139f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae95cac6b97ed445bea8addd1a4cb941a" id="r_ae95cac6b97ed445bea8addd1a4cb941a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae95cac6b97ed445bea8addd1a4cb941a">format</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Ark::internal::Node</a> &amp;node, std::size_t indent, bool after_newline)</td></tr>
 <tr class="memdesc:ae95cac6b97ed445bea8addd1a4cb941a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles all node formatting.  <br /></td></tr>
 <tr class="separator:ae95cac6b97ed445bea8addd1a4cb941a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,8 +165,6 @@ Static Private Member Functions</h2></td></tr>
 <tr class="memitem:a6e4fd4f023121d736c2aa2208364e208" id="r_a6e4fd4f023121d736c2aa2208364e208"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e4fd4f023121d736c2aa2208364e208">isFuncCall</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Ark::internal::Node</a> &amp;node)</td></tr>
 <tr class="memdesc:a6e4fd4f023121d736c2aa2208364e208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a node is a function call (foo bar egg)  <br /></td></tr>
 <tr class="separator:a6e4fd4f023121d736c2aa2208364e208"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c4ecff80a8ed33d9654ef8a547e042f" id="r_a8c4ecff80a8ed33d9654ef8a547e042f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c4ecff80a8ed33d9654ef8a547e042f">isPlainValue</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Ark::internal::Node</a> &amp;node)</td></tr>
-<tr class="separator:a8c4ecff80a8ed33d9654ef8a547e042f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8381afeb6fa8eef18a75336623af342" id="r_ae8381afeb6fa8eef18a75336623af342"><td class="memItemLeft" align="right" valign="top">static std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8381afeb6fa8eef18a75336623af342">lineOfLastNodeIn</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Ark::internal::Node</a> &amp;node)</td></tr>
 <tr class="memdesc:ae8381afeb6fa8eef18a75336623af342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the line on which the deepest right most node of node is at.  <br /></td></tr>
 <tr class="separator:ae8381afeb6fa8eef18a75336623af342"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -316,11 +317,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00161">161</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00168">168</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00125">Ark::internal::Node::comment()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00130">Ark::internal::Node::commentAfter()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00058">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00161">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00229">formatBlock()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00216">formatComment()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00479">formatMacro()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00043">Ark::internal::Node::keyword()</a>, <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00071">Ark::internal::keywords</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00063">Ark::internal::Node::nodeType()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00038">Ark::internal::Node::number()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00055">output()</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00110">prefix()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00033">Ark::internal::Node::string()</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00150">Ark::internal::Node::comment()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00155">Ark::internal::Node::commentAfter()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00168">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00239">formatBlock()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00226">formatComment()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00510">formatMacro()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00047">Ark::internal::Node::keyword()</a>, <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00073">Ark::internal::keywords</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00077">Ark::internal::Node::nodeType()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00042">Ark::internal::Node::number()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00055">output()</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00111">prefix()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00037">Ark::internal::Node::string()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00161">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00376">formatBegin()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00446">formatCall()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00320">formatCondition()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00438">formatDel()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00264">formatFunction()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00354">formatLoop()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00479">formatMacro()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00305">formatVariable()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00065">processAst()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00148">shouldSplitOnNewline()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00168">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00386">formatBegin()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00477">formatCall()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00330">formatCondition()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00469">formatDel()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00274">formatFunction()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00364">formatLoop()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00510">formatMacro()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00315">formatVariable()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00065">processAst()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00132">shouldSplitOnNewline()</a>.</p>
 
 </div>
 </div>
@@ -356,11 +357,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00376">376</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00386">386</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00058">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00161">format()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00110">Ark::internal::Node::line()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00136">lineOfLastNodeIn()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00055">output()</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00168">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00055">output()</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00111">prefix()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00145">shouldAddNewLineBetweenNodes()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00229">formatBlock()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00239">formatBlock()</a>.</p>
 
 </div>
 </div>
@@ -396,11 +397,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00229">229</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00239">239</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00058">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00376">formatBegin()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00446">formatCall()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00320">formatCondition()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00438">formatDel()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00264">formatFunction()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00402">formatImport()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00354">formatLoop()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00305">formatVariable()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00043">Ark::internal::Node::keyword()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00063">Ark::internal::Node::nodeType()</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00386">formatBegin()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00477">formatCall()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00330">formatCondition()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00469">formatDel()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00274">formatFunction()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00419">formatImport()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00364">formatLoop()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00315">formatVariable()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00047">Ark::internal::Node::keyword()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00077">Ark::internal::Node::nodeType()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00161">format()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00168">format()</a>.</p>
 
 </div>
 </div>
@@ -431,11 +432,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00446">446</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00477">477</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00058">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00161">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00055">output()</a>, and <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00110">prefix()</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00168">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00055">output()</a>, and <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00111">prefix()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00229">formatBlock()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00239">formatBlock()</a>.</p>
 
 </div>
 </div>
@@ -466,11 +467,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00216">216</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00226">226</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00055">output()</a>, and <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00110">prefix()</a>.</p>
+<p class="reference">References <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00055">output()</a>, and <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00111">prefix()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00161">format()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00264">formatFunction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00168">format()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00274">formatFunction()</a>.</p>
 
 </div>
 </div>
@@ -506,11 +507,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00320">320</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00330">330</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00058">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00161">format()</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00110">prefix()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00148">shouldSplitOnNewline()</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00168">format()</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00111">prefix()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00132">shouldSplitOnNewline()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00229">formatBlock()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00479">formatMacro()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00239">formatBlock()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00510">formatMacro()</a>.</p>
 
 </div>
 </div>
@@ -541,11 +542,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00438">438</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00469">469</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00058">Ark::internal::Node::constList()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00161">format()</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00168">format()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00229">formatBlock()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00239">formatBlock()</a>.</p>
 
 </div>
 </div>
@@ -576,11 +577,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00264">264</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00274">274</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00125">Ark::internal::Node::comment()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00058">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00161">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00216">formatComment()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00068">Ark::internal::Node::isListLike()</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00110">prefix()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00148">shouldSplitOnNewline()</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00150">Ark::internal::Node::comment()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00168">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00226">formatComment()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00082">Ark::internal::Node::isListLike()</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00111">prefix()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00132">shouldSplitOnNewline()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00229">formatBlock()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00239">formatBlock()</a>.</p>
 
 </div>
 </div>
@@ -611,11 +612,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00402">402</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00419">419</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00125">Ark::internal::Node::comment()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00058">Ark::internal::Node::constList()</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00150">Ark::internal::Node::comment()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00229">formatBlock()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00239">formatBlock()</a>.</p>
 
 </div>
 </div>
@@ -646,11 +647,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00354">354</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00364">364</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00058">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00161">format()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00148">shouldSplitOnNewline()</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00168">format()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00132">shouldSplitOnNewline()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00229">formatBlock()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00239">formatBlock()</a>.</p>
 
 </div>
 </div>
@@ -681,11 +682,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00479">479</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00510">510</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00058">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00161">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00320">formatCondition()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00102">isListStartingWithKeyword()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00055">output()</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00168">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00330">formatCondition()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00100">isListStartingWithKeyword()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00055">output()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00161">format()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00168">format()</a>.</p>
 
 </div>
 </div>
@@ -716,11 +717,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00305">305</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00315">315</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00058">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00161">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00112">isFuncDef()</a>, <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00071">Ark::internal::keywords</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00148">shouldSplitOnNewline()</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00168">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00110">isFuncDef()</a>, <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00073">Ark::internal::keywords</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00132">shouldSplitOnNewline()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00229">formatBlock()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00239">formatBlock()</a>.</p>
 
 </div>
 </div>
@@ -756,11 +757,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00107">107</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00105">105</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00102">isListStartingWithKeyword()</a>.</p>
+<p class="reference">References <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00100">isListStartingWithKeyword()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00065">processAst()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00148">shouldSplitOnNewline()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00065">processAst()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00132">shouldSplitOnNewline()</a>.</p>
 
 </div>
 </div>
@@ -796,11 +797,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00117">117</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00115">115</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00058">Ark::internal::Node::constList()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00068">Ark::internal::Node::isListLike()</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00082">Ark::internal::Node::isListLike()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00148">shouldSplitOnNewline()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00132">shouldSplitOnNewline()</a>.</p>
 
 </div>
 </div>
@@ -836,11 +837,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00112">112</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00110">110</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00102">isListStartingWithKeyword()</a>.</p>
+<p class="reference">References <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00100">isListStartingWithKeyword()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00305">formatVariable()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00315">formatVariable()</a>.</p>
 
 </div>
 </div>
@@ -881,49 +882,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00102">102</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00100">100</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00058">Ark::internal::Node::constList()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00068">Ark::internal::Node::isListLike()</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00082">Ark::internal::Node::isListLike()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00479">formatMacro()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00107">isBeginBlock()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00112">isFuncDef()</a>.</p>
-
-</div>
-</div>
-<a id="a8c4ecff80a8ed33d9654ef8a547e042f" name="a8c4ecff80a8ed33d9654ef8a547e042f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c4ecff80a8ed33d9654ef8a547e042f">&#9670;&#160;</a></span>isPlainValue()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Formatter::isPlainValue </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Ark::internal::Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">node</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the node is a String|Number|Symbol|Field </dd>
-<dd>
-false </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00122">122</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00063">Ark::internal::Node::nodeType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00510">formatMacro()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00105">isBeginBlock()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00110">isFuncDef()</a>.</p>
 
 </div>
 </div>
@@ -959,11 +922,11 @@ false </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00136">136</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00120">120</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00058">Ark::internal::Node::constList()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00068">Ark::internal::Node::isListLike()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00110">Ark::internal::Node::line()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00136">lineOfLastNodeIn()</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00082">Ark::internal::Node::isListLike()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00135">Ark::internal::Node::line()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00120">lineOfLastNodeIn()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00376">formatBegin()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00136">lineOfLastNodeIn()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00065">processAst()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00120">lineOfLastNodeIn()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00145">shouldAddNewLineBetweenNodes()</a>.</p>
 
 </div>
 </div>
@@ -994,7 +957,7 @@ false </dd></dl>
 
 <p class="reference">References <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00043">m_output</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00161">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00376">formatBegin()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00446">formatCall()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00216">formatComment()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00479">formatMacro()</a>, and <a class="el" href="../../df/d0a/main_8cpp_source.html#l00017">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00168">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00386">formatBegin()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00477">formatCall()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00226">formatComment()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00510">formatMacro()</a>, and <a class="el" href="../../df/d0a/main_8cpp_source.html#l00017">main()</a>.</p>
 
 </div>
 </div>
@@ -1030,11 +993,11 @@ false </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00110">110</a> of file <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html">Formatter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00111">111</a> of file <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html">Formatter.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00010">FormatterConfig::SpacePerIndent</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00161">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00446">formatCall()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00216">formatComment()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00320">formatCondition()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00264">formatFunction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00168">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00386">formatBegin()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00477">formatCall()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00226">formatComment()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00330">formatCondition()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00274">formatFunction()</a>.</p>
 
 </div>
 </div>
@@ -1063,7 +1026,7 @@ false </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00065">65</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00058">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00161">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00107">isBeginBlock()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00110">Ark::internal::Node::line()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00136">lineOfLastNodeIn()</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00041">m_dry_run</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00040">m_filename</a>, and <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00043">m_output</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00168">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00105">isBeginBlock()</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00041">m_dry_run</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00040">m_filename</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00043">m_output</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00145">shouldAddNewLineBetweenNodes()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00022">run()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00039">runWithString()</a>.</p>
 
@@ -1088,7 +1051,7 @@ false </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00022">22</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00027">ARK_NO_NAME_FILE</a>, <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00045">Ark::internal::Parser::ast()</a>, <a class="el" href="../../d6/dd1/Exceptions_8cpp_source.html#l00167">Ark::Diagnostics::generate()</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00040">m_filename</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00043">m_output</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00042">m_parser</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00044">m_updated</a>, <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00014">Ark::internal::Parser::process()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00065">processAst()</a>, <a class="el" href="../../d4/dc0/Files_8hpp_source.html#l00048">Ark::Utils::readFile()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00090">warnIfCommentsWereRemoved()</a>.</p>
+<p class="reference">References <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00027">ARK_NO_NAME_FILE</a>, <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00048">Ark::internal::Parser::ast()</a>, <a class="el" href="../../d6/dd1/Exceptions_8cpp_source.html#l00170">Ark::Diagnostics::generate()</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00040">m_filename</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00043">m_output</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00042">m_parser</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00044">m_updated</a>, <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00014">Ark::internal::Parser::process()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00065">processAst()</a>, <a class="el" href="../../d4/dc0/Files_8hpp_source.html#l00048">Ark::Utils::readFile()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00088">warnIfCommentsWereRemoved()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../df/d0a/main_8cpp_source.html#l00017">main()</a>.</p>
 
@@ -1117,7 +1080,52 @@ false </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00039">39</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00027">ARK_NO_NAME_FILE</a>, <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00045">Ark::internal::Parser::ast()</a>, <a class="el" href="../../d6/dd1/Exceptions_8cpp_source.html#l00167">Ark::Diagnostics::generate()</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00043">m_output</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00042">m_parser</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00044">m_updated</a>, <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00014">Ark::internal::Parser::process()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00065">processAst()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00090">warnIfCommentsWereRemoved()</a>.</p>
+<p class="reference">References <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00027">ARK_NO_NAME_FILE</a>, <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00048">Ark::internal::Parser::ast()</a>, <a class="el" href="../../d6/dd1/Exceptions_8cpp_source.html#l00170">Ark::Diagnostics::generate()</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00043">m_output</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00042">m_parser</a>, <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00044">m_updated</a>, <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00014">Ark::internal::Parser::process()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00065">processAst()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00088">warnIfCommentsWereRemoved()</a>.</p>
+
+</div>
+</div>
+<a id="a714bbfb030d0445b6158abdbe6b139f2" name="a714bbfb030d0445b6158abdbe6b139f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a714bbfb030d0445b6158abdbe6b139f2">&#9670;&#160;</a></span>shouldAddNewLineBetweenNodes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Formatter::shouldAddNewLineBetweenNodes </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Ark::internal::Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>at</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decide if we should add a newline after a node in a block. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>a List node </td></tr>
+    <tr><td class="paramname">at</td><td>the node we are currently formatting </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00145">145</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00120">lineOfLastNodeIn()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00386">formatBegin()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00065">processAst()</a>.</p>
 
 </div>
 </div>
@@ -1153,11 +1161,11 @@ false </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00148">148</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00132">132</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00125">Ark::internal::Node::comment()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00058">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00161">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00107">isBeginBlock()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00117">isFuncCall()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00068">Ark::internal::Node::isListLike()</a>, and <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00011">FormatterConfig::LongLineLength</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00150">Ark::internal::Node::comment()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00168">format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00105">isBeginBlock()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00115">isFuncCall()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00082">Ark::internal::Node::isListLike()</a>, and <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00011">FormatterConfig::LongLineLength</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00320">formatCondition()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00264">formatFunction()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00354">formatLoop()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00305">formatVariable()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00330">formatCondition()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00274">formatFunction()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00364">formatLoop()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00315">formatVariable()</a>.</p>
 
 </div>
 </div>
@@ -1197,7 +1205,7 @@ false </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00090">90</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00088">88</a> of file <a class="el" href="../../d2/d56/Formatter_8cpp_source.html">Formatter.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00027">ARK_NO_NAME_FILE</a>, and <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00043">m_output</a>.</p>
 
@@ -1282,7 +1290,7 @@ false </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html#l00043">43</a> of file <a class="el" href="../../d9/d2e/Formatter_8hpp_source.html">Formatter.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00055">output()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00065">processAst()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00022">run()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00039">runWithString()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00090">warnIfCommentsWereRemoved()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00055">output()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00065">processAst()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00022">run()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00039">runWithString()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00088">warnIfCommentsWereRemoved()</a>.</p>
 
 </div>
 </div>
@@ -1350,7 +1358,7 @@ false </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/d43/classFormatter.html">Formatter</a></li>
-    <li class="footer">Generated on Sat Oct 12 2024 14:46:45 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Jan 15 2025 19:51:44 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

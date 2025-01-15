@@ -96,56 +96,17 @@ Functions</h2></td></tr>
 <tr class="memitem:a9f569f15da3036cc8f5ec6d1708a4887" id="r_a9f569f15da3036cc8f5ec6d1708a4887"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f569f15da3036cc8f5ec6d1708a4887">readFileAsBytes</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:a9f569f15da3036cc8f5ec6d1708a4887"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to read the bytes of a file.  <br /></td></tr>
 <tr class="separator:a9f569f15da3036cc8f5ec6d1708a4887"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3598d0ca35b3c7afd6183f2093807db3" id="r_a3598d0ca35b3c7afd6183f2093807db3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3598d0ca35b3c7afd6183f2093807db3">canonicalRelPath</a> (const std::string &amp;path)</td></tr>
-<tr class="memdesc:a3598d0ca35b3c7afd6183f2093807db3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the canonical relative path from a path.  <br /></td></tr>
-<tr class="separator:a3598d0ca35b3c7afd6183f2093807db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b6a05559c04cd6f5f5615de28315565" id="r_a5b6a05559c04cd6f5f5615de28315565"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b6a05559c04cd6f5f5615de28315565">splitString</a> (const std::string &amp;source, const char sep)</td></tr>
 <tr class="memdesc:a5b6a05559c04cd6f5f5615de28315565"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cut a string into pieces, given a character separator.  <br /></td></tr>
 <tr class="separator:a5b6a05559c04cd6f5f5615de28315565"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afeaaabff8a0661920f770e2bab8a7eda" id="r_afeaaabff8a0661920f770e2bab8a7eda"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afeaaabff8a0661920f770e2bab8a7eda">isDouble</a> (const std::string &amp;s, double *output=nullptr)</td></tr>
 <tr class="memdesc:afeaaabff8a0661920f770e2bab8a7eda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a string is a valid double.  <br /></td></tr>
 <tr class="separator:afeaaabff8a0661920f770e2bab8a7eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f9326e745dc008df3527a447eeb0788" id="r_a8f9326e745dc008df3527a447eeb0788"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f9326e745dc008df3527a447eeb0788">levenshteinDistance</a> (const std::string &amp;str1, const std::string &amp;str2)</td></tr>
+<tr class="memitem:a8f9326e745dc008df3527a447eeb0788" id="r_a8f9326e745dc008df3527a447eeb0788"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d44/Module_8hpp.html#ac62a8551c675391a8cf01d112e42d755">ARK_API</a> std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f9326e745dc008df3527a447eeb0788">levenshteinDistance</a> (const std::string &amp;str1, const std::string &amp;str2)</td></tr>
 <tr class="memdesc:a8f9326e745dc008df3527a447eeb0788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the Levenshtein distance between two strings.  <br /></td></tr>
 <tr class="separator:a8f9326e745dc008df3527a447eeb0788"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a3598d0ca35b3c7afd6183f2093807db3" name="a3598d0ca35b3c7afd6183f2093807db3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3598d0ca35b3c7afd6183f2093807db3">&#9670;&#160;</a></span>canonicalRelPath()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string Ark::Utils::canonicalRelPath </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the canonical relative path from a path. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">path</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d4/dc0/Files_8hpp_source.html#l00090">90</a> of file <a class="el" href="../../d4/dc0/Files_8hpp_source.html">Files.hpp</a>.</p>
-
-</div>
-</div>
 <a id="a1e2624f09a9e767e1792b69b879aa73f" name="a1e2624f09a9e767e1792b69b879aa73f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1e2624f09a9e767e1792b69b879aa73f">&#9670;&#160;</a></span>fileExists()</h2>
 
@@ -225,7 +186,7 @@ false on failure </dd></dl>
 <dd>
 false on failure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/dcb/Ark_2Utils_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../d4/dcb/Ark_2Utils_8hpp_source.html">Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/dcb/Ark_2Utils_8hpp_source.html#l00056">56</a> of file <a class="el" href="../../d4/dcb/Ark_2Utils_8hpp_source.html">Utils.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d2/d27/VM_8cpp_source.html#l00320">Ark::VM::safeRun()</a>.</p>
 
@@ -262,7 +223,7 @@ false on failure </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d06/arkreactor_2Utils_8cpp_source.html#l00005">5</a> of file <a class="el" href="../../de/d06/arkreactor_2Utils_8cpp_source.html">Utils.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00321">Ark::internal::NameResolutionPass::offerSuggestion()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00378">Ark::internal::NameResolutionPass::offerSuggestion()</a>.</p>
 
 </div>
 </div>
@@ -300,7 +261,7 @@ false on failure </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc0/Files_8hpp_source.html#l00048">48</a> of file <a class="el" href="../../d4/dc0/Files_8hpp_source.html">Files.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00034">Ark::Welder::computeASTFromFile()</a>, <a class="el" href="../../d6/dd1/Exceptions_8cpp_source.html#l00167">Ark::Diagnostics::generate()</a>, <a class="el" href="../../d6/dd1/Exceptions_8cpp_source.html#l00144">Ark::Diagnostics::makeContextWithNode()</a>, <a class="el" href="../../d6/d41/ImportSolver_8cpp_source.html#l00143">Ark::internal::ImportSolver::parseImport()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00022">Formatter::run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00035">Ark::Welder::computeASTFromFile()</a>, <a class="el" href="../../d6/dd1/Exceptions_8cpp_source.html#l00170">Ark::Diagnostics::generate()</a>, <a class="el" href="../../d6/dd1/Exceptions_8cpp_source.html#l00148">Ark::Diagnostics::makeContextWithNode()</a>, <a class="el" href="../../d6/d41/ImportSolver_8cpp_source.html#l00141">Ark::internal::ImportSolver::parseImport()</a>, and <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00022">Formatter::run()</a>.</p>
 
 </div>
 </div>
@@ -379,9 +340,9 @@ false on failure </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;std::string&gt; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/dcb/Ark_2Utils_8hpp_source.html#l00030">30</a> of file <a class="el" href="../../d4/dcb/Ark_2Utils_8hpp_source.html">Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/dcb/Ark_2Utils_8hpp_source.html#l00032">32</a> of file <a class="el" href="../../d4/dcb/Ark_2Utils_8hpp_source.html">Utils.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d6/dd1/Exceptions_8cpp_source.html#l00086">Ark::Diagnostics::makeContext()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00288">Ark::internal::NameResolutionPass::mayBeFromPlugin()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d6/dd1/Exceptions_8cpp_source.html#l00133">Ark::Diagnostics::helper()</a>, <a class="el" href="../../d6/dd1/Exceptions_8cpp_source.html#l00086">Ark::Diagnostics::makeContext()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00300">Ark::internal::NameResolutionPass::mayBeFromPlugin()</a>.</p>
 
 </div>
 </div>
@@ -391,7 +352,7 @@ false on failure </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/de4/namespaceArk.html">Ark</a></li><li class="navelem"><a class="el" href="../../df/d16/namespaceArk_1_1Utils.html">Utils</a></li>
-    <li class="footer">Generated on Sat Oct 12 2024 14:46:45 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Jan 15 2025 19:51:44 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

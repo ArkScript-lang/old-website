@@ -10,6 +10,7 @@ var classArk_1_1Welder =
     [ "generateBytecode", "d7/da8/classArk_1_1Welder.html#abe9391aedbb3a1b2af9199fbded0ce55", null ],
     [ "registerSymbol", "d7/da8/classArk_1_1Welder.html#a285d96d9050f4123ca6cb0079dccc99f", null ],
     [ "saveBytecodeToFile", "d7/da8/classArk_1_1Welder.html#abe215f803d20ae6056dd28cdb06e52f5", null ],
+    [ "textualIR", "d7/da8/classArk_1_1Welder.html#a380075a45e47016222fb9a65050d87cd", null ],
     [ "m_ast_optimizer", "d7/da8/classArk_1_1Welder.html#aca9623c9c6ad7fafaf2a6f05f23ed88f", null ],
     [ "m_bytecode", "d7/da8/classArk_1_1Welder.html#af7e25b21c2e880a9d7d531f109d2fa23", null ],
     [ "m_compiler", "d7/da8/classArk_1_1Welder.html#a8d8dff4bbe395e4bf339f9b557767e32", null ],

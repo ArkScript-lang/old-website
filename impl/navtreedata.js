@@ -74,15 +74,16 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "@ref bitwise_module",
-"d1/daf/structArk_1_1internal_1_1IsChar.html#ad146910ebe68309c59e5440c7895fb2c",
-"d3/d90/classArk_1_1Value.html#ad70885fdf6c2fe12d106d2991393373f",
-"d6/d2f/classArk_1_1internal_1_1Logger.html#a7bf27754b61f116e83a307e344ba84cb",
-"d8/d00/classArk_1_1internal_1_1BaseParser.html#a2cd6008d806adecfc73259fc25055714",
-"d8/ddd/Common_8hpp.html#abad6b061b9b0c47ae5bd12515beb6141",
-"da/d07/structArk_1_1internal_1_1IsEither.html",
-"dc/d0e/namespaceArk_1_1internal.html#a8819886538ddc9eccfbc6183e0d4af9f",
-"dc/d9e/classArk_1_1internal_1_1Node.html#aac5ce6a894036c51c529faede3b1d575",
-"df/d5f/Pass_8hpp.html"
+"d1/d92/structArk_1_1Diagnostics_1_1LineColorContextCounts.html#a97f7e31494d566e35dc360f462fa6132",
+"d3/d90/classArk_1_1Value.html#a3f7d411ed89f6b17df0209cbb3d688f8",
+"d5/db5/classArk_1_1internal_1_1MacroProcessor.html#a7a3940db6c08f4afbb276a8a7d254e50",
+"d7/db8/classArk_1_1internal_1_1NameResolutionPass.html#a6ae59f969507987b4d109f62028e76c0",
+"d8/daa/Instructions_8hpp.html#abcd166377fbe7dcd77e47ef80cee8681ae4911d30f6af4720da1c508316389364",
+"d9/dba/structArk_1_1Symbols.html#a5ed449cc71469d827bab38a8423ec6a5",
+"db/da6/namespaceArk_1_1Diagnostics.html#a6fd9192d9c51f7a2b48fa9e0db9450c2",
+"dc/d35/classArk_1_1internal_1_1IR_1_1Entity.html#a1a51a4f5160117e6b7db09a30d3283b8",
+"dd/de8/namespaceutf8.html#a9b2ece99e394125f5ff6e86cdd1b2f42",
+"functions_func_o.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

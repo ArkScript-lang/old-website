@@ -114,6 +114,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a32032034b56cb76be3be8f28394992ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54ffb74e10da8a6a389328606688fc90" id="r_a54ffb74e10da8a6a389328606688fc90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#abc37a6b5c643ace728c504d90b41a053">PageAddr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54ffb74e10da8a6a389328606688fc90">pageAddr</a> () const</td></tr>
 <tr class="separator:a54ffb74e10da8a6a389328606688fc90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02ab51ed1e65500a21f03bfe97383ac7" id="r_a02ab51ed1e65500a21f03bfe97383ac7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02ab51ed1e65500a21f03bfe97383ac7">hasFieldEndingWith</a> (const std::string &amp;end, <a class="el" href="../../d2/d93/classArk_1_1VM.html">VM</a> &amp;vm) const</td></tr>
+<tr class="memdesc:a02ab51ed1e65500a21f03bfe97383ac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used when generating error messages in the <a class="el" href="../../d2/d93/classArk_1_1VM.html" title="The ArkScript virtual machine, executing ArkScript bytecode.">VM</a>, to see if a symbol might have been wrongly fully qualified.  <br /></td></tr>
+<tr class="separator:a02ab51ed1e65500a21f03bfe97383ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36747fd88809ba8669f3048d2f36e876" id="r_a36747fd88809ba8669f3048d2f36e876"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36747fd88809ba8669f3048d2f36e876">toString</a> (<a class="el" href="../../d2/d93/classArk_1_1VM.html">VM</a> &amp;vm) const noexcept</td></tr>
 <tr class="memdesc:a36747fd88809ba8669f3048d2f36e876"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the closure to a string.  <br /></td></tr>
 <tr class="separator:a36747fd88809ba8669f3048d2f36e876"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,7 +176,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db2/Closure_8cpp_source.html#l00009">9</a> of file <a class="el" href="../../d1/db2/Closure_8cpp_source.html">Closure.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db2/Closure_8cpp_source.html#l00011">11</a> of file <a class="el" href="../../d1/db2/Closure_8cpp_source.html">Closure.cpp</a>.</p>
 
 </div>
 </div>
@@ -213,11 +216,56 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db2/Closure_8cpp_source.html#l00014">14</a> of file <a class="el" href="../../d1/db2/Closure_8cpp_source.html">Closure.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db2/Closure_8cpp_source.html#l00016">16</a> of file <a class="el" href="../../d1/db2/Closure_8cpp_source.html">Closure.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a02ab51ed1e65500a21f03bfe97383ac7" name="a02ab51ed1e65500a21f03bfe97383ac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02ab51ed1e65500a21f03bfe97383ac7">&#9670;&#160;</a></span>hasFieldEndingWith()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ark::internal::Closure::hasFieldEndingWith </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>end</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d93/classArk_1_1VM.html">VM</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>vm</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Used when generating error messages in the <a class="el" href="../../d2/d93/classArk_1_1VM.html" title="The ArkScript virtual machine, executing ArkScript bytecode.">VM</a>, to see if a symbol might have been wrongly fully qualified. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">end</td><td></td></tr>
+    <tr><td class="paramname">vm</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the closure has a field which is the end of 'end' </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db2/Closure_8cpp_source.html#l00021">21</a> of file <a class="el" href="../../d1/db2/Closure_8cpp_source.html">Closure.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00084">m_scope</a>, <a class="el" href="../../d1/d91/VM_8hpp_source.html#l00157">Ark::VM::m_state</a>, and <a class="el" href="../../d0/db5/State_8hpp_source.html#l00149">Ark::State::m_symbols</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/d27/VM_8cpp_source.html#l00320">Ark::VM::safeRun()</a>.</p>
+
+</div>
+</div>
 <a id="a54ffb74e10da8a6a389328606688fc90" name="a54ffb74e10da8a6a389328606688fc90"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a54ffb74e10da8a6a389328606688fc90">&#9670;&#160;</a></span>pageAddr()</h2>
 
@@ -244,7 +292,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00062">62</a> of file <a class="el" href="../../dc/dd5/Closure_8hpp_source.html">Closure.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00077">m_page_addr</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00086">m_page_addr</a>.</p>
 
 </div>
 </div>
@@ -273,7 +321,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00055">55</a> of file <a class="el" href="../../dc/dd5/Closure_8hpp_source.html">Closure.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00075">m_scope</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00084">m_scope</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d2/d27/VM_8cpp_source.html#l00320">Ark::VM::safeRun()</a>.</p>
 
@@ -304,7 +352,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../dc/dd5/Closure_8hpp_source.html">Closure.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00075">m_scope</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00084">m_scope</a>.</p>
 
 </div>
 </div>
@@ -333,7 +381,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00056">56</a> of file <a class="el" href="../../dc/dd5/Closure_8hpp_source.html">Closure.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00075">m_scope</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00084">m_scope</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d2/d27/VM_8cpp_source.html#l00320">Ark::VM::safeRun()</a>.</p>
 
@@ -370,7 +418,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db2/Closure_8cpp_source.html#l00019">19</a> of file <a class="el" href="../../d1/db2/Closure_8cpp_source.html">Closure.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db2/Closure_8cpp_source.html#l00031">31</a> of file <a class="el" href="../../d1/db2/Closure_8cpp_source.html">Closure.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d2/d27/VM_8cpp_source.html#l00320">Ark::VM::safeRun()</a>.</p>
 
@@ -404,7 +452,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00080">80</a> of file <a class="el" href="../../dc/dd5/Closure_8hpp_source.html">Closure.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00089">89</a> of file <a class="el" href="../../dc/dd5/Closure_8hpp_source.html">Closure.hpp</a>.</p>
 
 </div>
 </div>
@@ -435,7 +483,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db2/Closure_8cpp_source.html#l00033">33</a> of file <a class="el" href="../../d1/db2/Closure_8cpp_source.html">Closure.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db2/Closure_8cpp_source.html#l00045">45</a> of file <a class="el" href="../../d1/db2/Closure_8cpp_source.html">Closure.cpp</a>.</p>
 
 </div>
 </div>
@@ -460,7 +508,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00077">77</a> of file <a class="el" href="../../dc/dd5/Closure_8hpp_source.html">Closure.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00086">86</a> of file <a class="el" href="../../dc/dd5/Closure_8hpp_source.html">Closure.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00062">pageAddr()</a>.</p>
 
@@ -486,9 +534,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00075">75</a> of file <a class="el" href="../../dc/dd5/Closure_8hpp_source.html">Closure.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00084">84</a> of file <a class="el" href="../../dc/dd5/Closure_8hpp_source.html">Closure.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00055">refScope()</a>, <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00054">scope()</a>, and <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00056">scopePtr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/db2/Closure_8cpp_source.html#l00021">hasFieldEndingWith()</a>, <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00055">refScope()</a>, <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00054">scope()</a>, and <a class="el" href="../../dc/dd5/Closure_8hpp_source.html#l00056">scopePtr()</a>.</p>
 
 </div>
 </div>
@@ -502,7 +550,7 @@ Friends</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/de4/namespaceArk.html">Ark</a></li><li class="navelem"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html">internal</a></li><li class="navelem"><a class="el" href="../../d9/d4e/classArk_1_1internal_1_1Closure.html">Closure</a></li>
-    <li class="footer">Generated on Sat Oct 12 2024 14:46:45 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Jan 15 2025 19:51:44 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

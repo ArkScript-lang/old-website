@@ -82,6 +82,7 @@ $(function(){initNavTree('d5/d8f/classArk_1_1internal_1_1MacroExecutor.html','..
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="../../de/d3c/classArk_1_1internal_1_1MacroExecutor-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Ark::internal::MacroExecutor Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
@@ -120,33 +121,27 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a72b8ff7c52087311b47b810730486159" id="r_a72b8ff7c52087311b47b810730486159"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72b8ff7c52087311b47b810730486159">setWithFileAttributes</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> origin, <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;output, const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;macro)</td></tr>
-<tr class="memdesc:a72b8ff7c52087311b47b810730486159"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the file attributes of the output node based on the original node.  <br /></td></tr>
-<tr class="separator:a72b8ff7c52087311b47b810730486159"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2cd6c3bbbe7d0ff4faf989895ca6788" id="r_af2cd6c3bbbe7d0ff4faf989895ca6788"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2cd6c3bbbe7d0ff4faf989895ca6788">findNearestMacro</a> (const std::string &amp;name) const</td></tr>
 <tr class="memdesc:af2cd6c3bbbe7d0ff4faf989895ca6788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the nearest macro matching a giving name.  <br /></td></tr>
 <tr class="separator:af2cd6c3bbbe7d0ff4faf989895ca6788"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb47a358f8963f15e72a5acad0a1d881" id="r_acb47a358f8963f15e72a5acad0a1d881"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb47a358f8963f15e72a5acad0a1d881">registerMacro</a> (<a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;node) const</td></tr>
-<tr class="memdesc:acb47a358f8963f15e72a5acad0a1d881"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers macros based on their type.  <br /></td></tr>
-<tr class="separator:acb47a358f8963f15e72a5acad0a1d881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a071a35b77e5cd4a74d432a228b9258ab" id="r_a071a35b77e5cd4a74d432a228b9258ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a071a35b77e5cd4a74d432a228b9258ab">applyMacroProxy</a> (<a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;node, unsigned depth)</td></tr>
+<tr class="memdesc:a071a35b77e5cd4a74d432a228b9258ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a macro on a given node.  <br /></td></tr>
+<tr class="separator:a071a35b77e5cd4a74d432a228b9258ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adac40ddb6ab24d0a8bc0c2d15675d575" id="r_adac40ddb6ab24d0a8bc0c2d15675d575"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adac40ddb6ab24d0a8bc0c2d15675d575">handleMacroNode</a> (<a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;node) const</td></tr>
+<tr class="memdesc:adac40ddb6ab24d0a8bc0c2d15675d575"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers macros based on their type, expand conditional macros.  <br /></td></tr>
+<tr class="separator:adac40ddb6ab24d0a8bc0c2d15675d575"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad51abed28cd00cd088147741462b95e5" id="r_ad51abed28cd00cd088147741462b95e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad51abed28cd00cd088147741462b95e5">isTruthy</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;node) const</td></tr>
 <tr class="memdesc:ad51abed28cd00cd088147741462b95e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a node can be evaluated to true.  <br /></td></tr>
 <tr class="separator:ad51abed28cd00cd088147741462b95e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb39f585d56d952bd560cd07399c1630" id="r_acb39f585d56d952bd560cd07399c1630"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb39f585d56d952bd560cd07399c1630">evaluate</a> (<a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;node, unsigned depth, bool is_not_body) const</td></tr>
 <tr class="memdesc:acb39f585d56d952bd560cd07399c1630"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate only the macros.  <br /></td></tr>
 <tr class="separator:acb39f585d56d952bd560cd07399c1630"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99a73f4dff495b89e3b1aaee41909e14" id="r_a99a73f4dff495b89e3b1aaee41909e14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99a73f4dff495b89e3b1aaee41909e14">unify</a> (const std::unordered_map&lt; std::string, <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &gt; &amp;, <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;, <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> *) const</td></tr>
-<tr class="memdesc:a99a73f4dff495b89e3b1aaee41909e14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the spread operator.  <br /></td></tr>
-<tr class="separator:a99a73f4dff495b89e3b1aaee41909e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d68f8e8c3f0d553732fb94dd085e539" id="r_a5d68f8e8c3f0d553732fb94dd085e539"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d68f8e8c3f0d553732fb94dd085e539">throwMacroProcessingError</a> (const std::string &amp;message, const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;node) const</td></tr>
-<tr class="memdesc:a5d68f8e8c3f0d553732fb94dd085e539"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throw a macro processing error.  <br /></td></tr>
-<tr class="separator:a5d68f8e8c3f0d553732fb94dd085e539"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb842a840f6cf8790fc9dd14152a29dc" id="r_acb842a840f6cf8790fc9dd14152a29dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb842a840f6cf8790fc9dd14152a29dc">applyMacroProxy</a> (<a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;node, unsigned depth) const</td></tr>
-<tr class="memdesc:acb842a840f6cf8790fc9dd14152a29dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a node, trying to emplace macros calls.  <br /></td></tr>
-<tr class="separator:acb842a840f6cf8790fc9dd14152a29dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0515e3fe0e23d73218df2fdb3ff2389" id="r_af0515e3fe0e23d73218df2fdb3ff2389"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0515e3fe0e23d73218df2fdb3ff2389">isPredefined</a> (const std::string &amp;symbol) const</td></tr>
-<tr class="memdesc:af0515e3fe0e23d73218df2fdb3ff2389"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a given symbol is a predefined macro.  <br /></td></tr>
-<tr class="separator:af0515e3fe0e23d73218df2fdb3ff2389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a8d482429d4abd29c3ea405bf506a92c5" id="r_a8d482429d4abd29c3ea405bf506a92c5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d482429d4abd29c3ea405bf506a92c5">throwMacroProcessingError</a> (const std::string &amp;message, const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;node)</td></tr>
+<tr class="memdesc:a8d482429d4abd29c3ea405bf506a92c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throw a macro processing error.  <br /></td></tr>
+<tr class="separator:a8d482429d4abd29c3ea405bf506a92c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -159,7 +154,7 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class that applies macros in a <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html" title="A node of an Abstract Syntax Tree for ArkScript.">Node</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d1a/Executor_8hpp_source.html#l00027">27</a> of file <a class="el" href="../../d4/d1a/Executor_8hpp_source.html">Executor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d1a/Executor_8hpp_source.html#l00028">28</a> of file <a class="el" href="../../d4/d1a/Executor_8hpp_source.html">Executor.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7e1c39fd9423634d191fb38088f44141" name="a7e1c39fd9423634d191fb38088f44141"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7e1c39fd9423634d191fb38088f44141">&#9670;&#160;</a></span>MacroExecutor()</h2>
@@ -272,8 +267,8 @@ false </dd></dl>
 
 </div>
 </div>
-<a id="acb842a840f6cf8790fc9dd14152a29dc" name="acb842a840f6cf8790fc9dd14152a29dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb842a840f6cf8790fc9dd14152a29dc">&#9670;&#160;</a></span>applyMacroProxy()</h2>
+<a id="a071a35b77e5cd4a74d432a228b9258ab" name="a071a35b77e5cd4a74d432a228b9258ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a071a35b77e5cd4a74d432a228b9258ab">&#9670;&#160;</a></span>applyMacroProxy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -282,14 +277,14 @@ false </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Ark::internal::MacroExecutor::applyMacroProxy </td>
+          <td class="memname">void Ark::internal::MacroExecutor::applyMacroProxy </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned</td>          <td class="paramname"><span class="paramname"><em>depth</em></span>&#160;) const</td>
+          <td class="paramtype">unsigned</td>          <td class="paramname"><span class="paramname"><em>depth</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -299,8 +294,8 @@ false </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Execute a node, trying to emplace macros calls. </p>
-<p>Proxy function for <a class="el" href="../../d5/db5/classArk_1_1internal_1_1MacroProcessor.html#a550b614f0d4ccd7604c889b08088fdd2" title="Apply a macro on a given node.">MacroProcessor::applyMacro</a></p>
+<p>Apply a macro on a given node. </p>
+<p>Proxy function for <a class="el" href="../../d5/db5/classArk_1_1internal_1_1MacroProcessor.html#a5208a2780f557a41d25c66cf55e17107" title="Apply a macro on a given node.">MacroProcessor::applyMacro</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">node</td><td></td></tr>
@@ -308,15 +303,12 @@ false </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true </dd>
-<dd>
-false </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00049">49</a> of file <a class="el" href="../../d1/da9/Executor_8cpp_source.html">Executor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00017">17</a> of file <a class="el" href="../../d1/da9/Executor_8cpp_source.html">Executor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00189">Ark::internal::MacroProcessor::applyMacro()</a>, and <a class="el" href="../../d4/d1a/Executor_8hpp_source.html#l00063">m_processor</a>.</p>
+<p class="reference">References <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00187">Ark::internal::MacroProcessor::applyMacro()</a>, and <a class="el" href="../../d4/d1a/Executor_8hpp_source.html#l00064">m_processor</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../dc/dd4/Function_8cpp_source.html#l00012">Ark::internal::FunctionExecutor::applyMacro()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/d04/Conditional_8cpp_source.html#l00005">Ark::internal::ConditionalExecutor::applyMacro()</a>, <a class="el" href="../../dc/dd4/Function_8cpp_source.html#l00016">Ark::internal::FunctionExecutor::applyMacro()</a>, and <a class="el" href="../../d8/d0b/Symbol_8cpp_source.html#l00010">Ark::internal::SymbolExecutor::applyMacro()</a>.</p>
 
 </div>
 </div>
@@ -399,9 +391,11 @@ false </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html" title="A node of an Abstract Syntax Tree for ArkScript.">Node</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00034">34</a> of file <a class="el" href="../../d1/da9/Executor_8cpp_source.html">Executor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00032">32</a> of file <a class="el" href="../../d1/da9/Executor_8cpp_source.html">Executor.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/d04/Conditional_8cpp_source.html#l00005">Ark::internal::ConditionalExecutor::applyMacro()</a>, <a class="el" href="../../dc/dd4/Function_8cpp_source.html#l00012">Ark::internal::FunctionExecutor::applyMacro()</a>, and <a class="el" href="../../d8/d0b/Symbol_8cpp_source.html#l00010">Ark::internal::SymbolExecutor::applyMacro()</a>.</p>
+<p class="reference">References <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00235">Ark::internal::MacroProcessor::evaluate()</a>, and <a class="el" href="../../d4/d1a/Executor_8hpp_source.html#l00064">m_processor</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d04/Conditional_8cpp_source.html#l00005">Ark::internal::ConditionalExecutor::applyMacro()</a>, <a class="el" href="../../dc/dd4/Function_8cpp_source.html#l00016">Ark::internal::FunctionExecutor::applyMacro()</a>, and <a class="el" href="../../d8/d0b/Symbol_8cpp_source.html#l00010">Ark::internal::SymbolExecutor::applyMacro()</a>.</p>
 
 </div>
 </div>
@@ -438,16 +432,16 @@ false </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>const Node* nullptr if no macro was found </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00019">19</a> of file <a class="el" href="../../d1/da9/Executor_8cpp_source.html">Executor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00012">12</a> of file <a class="el" href="../../d1/da9/Executor_8cpp_source.html">Executor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00592">Ark::internal::MacroProcessor::findNearestMacro()</a>, and <a class="el" href="../../d4/d1a/Executor_8hpp_source.html#l00063">m_processor</a>.</p>
+<p class="reference">References <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00633">Ark::internal::MacroProcessor::findNearestMacro()</a>, and <a class="el" href="../../d4/d1a/Executor_8hpp_source.html#l00064">m_processor</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../dc/dd4/Function_8cpp_source.html#l00012">Ark::internal::FunctionExecutor::applyMacro()</a>, and <a class="el" href="../../d8/d0b/Symbol_8cpp_source.html#l00010">Ark::internal::SymbolExecutor::applyMacro()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dc/dd4/Function_8cpp_source.html#l00016">Ark::internal::FunctionExecutor::applyMacro()</a>, and <a class="el" href="../../d8/d0b/Symbol_8cpp_source.html#l00010">Ark::internal::SymbolExecutor::applyMacro()</a>.</p>
 
 </div>
 </div>
-<a id="af0515e3fe0e23d73218df2fdb3ff2389" name="af0515e3fe0e23d73218df2fdb3ff2389"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0515e3fe0e23d73218df2fdb3ff2389">&#9670;&#160;</a></span>isPredefined()</h2>
+<a id="adac40ddb6ab24d0a8bc0c2d15675d575" name="adac40ddb6ab24d0a8bc0c2d15675d575"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adac40ddb6ab24d0a8bc0c2d15675d575">&#9670;&#160;</a></span>handleMacroNode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -456,36 +450,33 @@ false </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Ark::internal::MacroExecutor::isPredefined </td>
+          <td class="memname">void Ark::internal::MacroExecutor::handleMacroNode </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>symbol</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">nodiscard</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Check if a given symbol is a predefined macro. </p>
-<p>Proxy function for <a class="el" href="../../d5/db5/classArk_1_1internal_1_1MacroProcessor.html#abdc1384681bb70e9e53ea66b1f325063" title="Check if a given symbol is a predefined macro or not.">MacroProcessor::isPredefined</a></p>
+<p>Registers macros based on their type, expand conditional macros. </p>
+<p>Validate macros and register them by their name Proxy function for <a class="el" href="../../d5/db5/classArk_1_1internal_1_1MacroProcessor.html#ae78c74daa9f26af7322cb34a7c4ae528" title="Registers macros based on their type, expand conditional macros.">MacroProcessor::handleMacroNode</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">symbol</td><td></td></tr>
+    <tr><td class="paramname">node</td><td>A node of type Macro </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true </dd>
-<dd>
-false </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00054">54</a> of file <a class="el" href="../../d1/da9/Executor_8cpp_source.html">Executor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00022">22</a> of file <a class="el" href="../../d1/da9/Executor_8cpp_source.html">Executor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00620">Ark::internal::MacroProcessor::isPredefined()</a>, and <a class="el" href="../../d4/d1a/Executor_8hpp_source.html#l00063">m_processor</a>.</p>
+<p class="reference">References <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00050">Ark::internal::MacroProcessor::handleMacroNode()</a>, and <a class="el" href="../../d4/d1a/Executor_8hpp_source.html#l00064">m_processor</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../dc/dd4/Function_8cpp_source.html#l00012">Ark::internal::FunctionExecutor::applyMacro()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/d04/Conditional_8cpp_source.html#l00005">Ark::internal::ConditionalExecutor::applyMacro()</a>.</p>
 
 </div>
 </div>
@@ -524,106 +515,16 @@ false </dd></dl>
 <dd>
 false </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00029">29</a> of file <a class="el" href="../../d1/da9/Executor_8cpp_source.html">Executor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00027">27</a> of file <a class="el" href="../../d1/da9/Executor_8cpp_source.html">Executor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00576">Ark::internal::MacroProcessor::isTruthy()</a>, and <a class="el" href="../../d4/d1a/Executor_8hpp_source.html#l00063">m_processor</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../de/d04/Conditional_8cpp_source.html#l00005">Ark::internal::ConditionalExecutor::applyMacro()</a>.</p>
-
-</div>
-</div>
-<a id="acb47a358f8963f15e72a5acad0a1d881" name="acb47a358f8963f15e72a5acad0a1d881"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb47a358f8963f15e72a5acad0a1d881">&#9670;&#160;</a></span>registerMacro()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Ark::internal::MacroExecutor::registerMacro </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Registers macros based on their type. </p>
-<p>Validate macros and register them by their name Proxy function for <a class="el" href="../../d5/db5/classArk_1_1internal_1_1MacroProcessor.html#a5aecfdc38cf109dc22bb13f1fcc3bee4" title="Registers macros based on their type.">MacroProcessor::registerMacro</a></p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">node</td><td>A node of type Macro </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00024">24</a> of file <a class="el" href="../../d1/da9/Executor_8cpp_source.html">Executor.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="../../d4/d1a/Executor_8hpp_source.html#l00063">m_processor</a>, and <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00046">Ark::internal::MacroProcessor::registerMacro()</a>.</p>
+<p class="reference">References <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00610">Ark::internal::MacroProcessor::isTruthy()</a>, and <a class="el" href="../../d4/d1a/Executor_8hpp_source.html#l00064">m_processor</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../de/d04/Conditional_8cpp_source.html#l00005">Ark::internal::ConditionalExecutor::applyMacro()</a>.</p>
 
 </div>
 </div>
-<a id="a72b8ff7c52087311b47b810730486159" name="a72b8ff7c52087311b47b810730486159"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72b8ff7c52087311b47b810730486159">&#9670;&#160;</a></span>setWithFileAttributes()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Ark::internal::MacroExecutor::setWithFileAttributes </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a></td>          <td class="paramname"><span class="paramname"><em>origin</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>output</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>macro</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the file attributes of the output node based on the original node. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">origin</td><td>original node </td></tr>
-    <tr><td class="paramname">output</td><td>output node which will be modified </td></tr>
-    <tr><td class="paramname">macro</td><td>modified node, macro applied </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00012">12</a> of file <a class="el" href="../../d1/da9/Executor_8cpp_source.html">Executor.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00115">Ark::internal::Node::col()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00120">Ark::internal::Node::filename()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00110">Ark::internal::Node::line()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00089">Ark::internal::Node::setFilename()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00083">Ark::internal::Node::setPos()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../de/d04/Conditional_8cpp_source.html#l00005">Ark::internal::ConditionalExecutor::applyMacro()</a>, <a class="el" href="../../dc/dd4/Function_8cpp_source.html#l00012">Ark::internal::FunctionExecutor::applyMacro()</a>, and <a class="el" href="../../d8/d0b/Symbol_8cpp_source.html#l00010">Ark::internal::SymbolExecutor::applyMacro()</a>.</p>
-
-</div>
-</div>
-<a id="a5d68f8e8c3f0d553732fb94dd085e539" name="a5d68f8e8c3f0d553732fb94dd085e539"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d68f8e8c3f0d553732fb94dd085e539">&#9670;&#160;</a></span>throwMacroProcessingError()</h2>
+<a id="a8d482429d4abd29c3ea405bf506a92c5" name="a8d482429d4abd29c3ea405bf506a92c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d482429d4abd29c3ea405bf506a92c5">&#9670;&#160;</a></span>throwMacroProcessingError()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -639,12 +540,12 @@ false </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;) const</td>
+          <td class="paramtype">const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -659,54 +560,9 @@ false </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00044">44</a> of file <a class="el" href="../../d1/da9/Executor_8cpp_source.html">Executor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00037">37</a> of file <a class="el" href="../../d1/da9/Executor_8cpp_source.html">Executor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d4/d1a/Executor_8hpp_source.html#l00063">m_processor</a>, and <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00703">Ark::internal::MacroProcessor::throwMacroProcessingError()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../dc/dd4/Function_8cpp_source.html#l00012">Ark::internal::FunctionExecutor::applyMacro()</a>.</p>
-
-</div>
-</div>
-<a id="a99a73f4dff495b89e3b1aaee41909e14" name="a99a73f4dff495b89e3b1aaee41909e14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99a73f4dff495b89e3b1aaee41909e14">&#9670;&#160;</a></span>unify()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Ark::internal::MacroExecutor::unify </td>
-          <td>(</td>
-          <td class="paramtype">const std::unordered_map&lt; std::string, <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>map</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span>&#160;) const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Applies the spread operator. </p>
-<p>Proxy function for <a class="el" href="../../d5/db5/classArk_1_1internal_1_1MacroProcessor.html#a4a28e0940b0b14425709a706b08677af" title="Unify a target node with a given map symbol =&gt; replacement node, recursively.">MacroProcessor::unify</a> </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00039">39</a> of file <a class="el" href="../../d1/da9/Executor_8cpp_source.html">Executor.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="../../d4/d1a/Executor_8hpp_source.html#l00063">m_processor</a>, and <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00209">Ark::internal::MacroProcessor::unify()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../dc/dd4/Function_8cpp_source.html#l00012">Ark::internal::FunctionExecutor::applyMacro()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dc/dd4/Function_8cpp_source.html#l00016">Ark::internal::FunctionExecutor::applyMacro()</a>, and <a class="el" href="../../dc/dd4/Function_8cpp_source.html#l00090">Ark::internal::FunctionExecutor::unify()</a>.</p>
 
 </div>
 </div>
@@ -731,7 +587,7 @@ false </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d1a/Executor_8hpp_source.html#l00062">62</a> of file <a class="el" href="../../d4/d1a/Executor_8hpp_source.html">Executor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d1a/Executor_8hpp_source.html#l00063">63</a> of file <a class="el" href="../../d4/d1a/Executor_8hpp_source.html">Executor.hpp</a>.</p>
 
 </div>
 </div>
@@ -757,9 +613,9 @@ false </dd></dl>
 
 <p>This is a non-owned pointer. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d1a/Executor_8hpp_source.html#l00063">63</a> of file <a class="el" href="../../d4/d1a/Executor_8hpp_source.html">Executor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d1a/Executor_8hpp_source.html#l00064">64</a> of file <a class="el" href="../../d4/d1a/Executor_8hpp_source.html">Executor.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00049">applyMacroProxy()</a>, <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00019">findNearestMacro()</a>, <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00054">isPredefined()</a>, <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00029">isTruthy()</a>, <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00024">registerMacro()</a>, <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00044">throwMacroProcessingError()</a>, and <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00039">unify()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00017">applyMacroProxy()</a>, <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00032">evaluate()</a>, <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00012">findNearestMacro()</a>, <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00022">handleMacroNode()</a>, and <a class="el" href="../../d1/da9/Executor_8cpp_source.html#l00027">isTruthy()</a>.</p>
 
 </div>
 </div>
@@ -773,7 +629,7 @@ false </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/de4/namespaceArk.html">Ark</a></li><li class="navelem"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html">internal</a></li><li class="navelem"><a class="el" href="../../d5/d8f/classArk_1_1internal_1_1MacroExecutor.html">MacroExecutor</a></li>
-    <li class="footer">Generated on Sat Oct 12 2024 14:46:45 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Jan 15 2025 19:51:44 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

@@ -97,7 +97,7 @@ Inheritance diagram for Ark::internal::NameResolutionPass:</div>
 <div class="dynheader">
 Collaboration diagram for Ark::internal::NameResolutionPass:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/df9/classArk_1_1internal_1_1NameResolutionPass__coll__graph.svg" width="100%" height="587"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/df9/classArk_1_1internal_1_1NameResolutionPass__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -111,9 +111,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a37b34e2084f4a43bda571808f319e7cd" id="r_a37b34e2084f4a43bda571808f319e7cd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37b34e2084f4a43bda571808f319e7cd">ast</a> () const noexcept override</td></tr>
 <tr class="memdesc:a37b34e2084f4a43bda571808f319e7cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unused overload that return the input AST (untouched as this pass only generates errors)  <br /></td></tr>
 <tr class="separator:a37b34e2084f4a43bda571808f319e7cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a909833d33d0a4f14ab76bef34b0f335e" id="r_a909833d33d0a4f14ab76bef34b0f335e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a909833d33d0a4f14ab76bef34b0f335e">addDefinedSymbol</a> (const std::string &amp;sym, bool is_mutable)</td></tr>
-<tr class="memdesc:a909833d33d0a4f14ab76bef34b0f335e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a symbol as defined, so that later we can throw errors on undefined symbols.  <br /></td></tr>
-<tr class="separator:a909833d33d0a4f14ab76bef34b0f335e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bf897c83b5e670e429577592ea55bc8" id="r_a9bf897c83b5e670e429577592ea55bc8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bf897c83b5e670e429577592ea55bc8">addDefinedSymbol</a> (const std::string &amp;sym, bool is_mutable)</td></tr>
+<tr class="memdesc:a9bf897c83b5e670e429577592ea55bc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a symbol as defined, so that later we can throw errors on undefined symbols.  <br /></td></tr>
+<tr class="separator:a9bf897c83b5e670e429577592ea55bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classArk_1_1internal_1_1Pass"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classArk_1_1internal_1_1Pass')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../da/d7b/classArk_1_1internal_1_1Pass.html">Ark::internal::Pass</a></td></tr>
 <tr class="memitem:aaf554f793bb547b4ac4e9105287b9bdb inherit pub_methods_classArk_1_1internal_1_1Pass" id="r_aaf554f793bb547b4ac4e9105287b9bdb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d7b/classArk_1_1internal_1_1Pass.html#aaf554f793bb547b4ac4e9105287b9bdb">Pass</a> (std::string name, unsigned debug_level)</td></tr>
 <tr class="memdesc:aaf554f793bb547b4ac4e9105287b9bdb inherit pub_methods_classArk_1_1internal_1_1Pass"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="../../da/d7b/classArk_1_1internal_1_1Pass.html" title="An interface to describe compiler passes.">Pass</a> object.  <br /></td></tr>
@@ -123,17 +123,19 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a598ca6b99fb7606b166776093f6340e1" id="r_a598ca6b99fb7606b166776093f6340e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a598ca6b99fb7606b166776093f6340e1">visit</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;node)</td></tr>
-<tr class="memdesc:a598ca6b99fb7606b166776093f6340e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursively visit nodes.  <br /></td></tr>
-<tr class="separator:a598ca6b99fb7606b166776093f6340e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2a466843b21852e0d41381eb91e6755" id="r_ac2a466843b21852e0d41381eb91e6755"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2a466843b21852e0d41381eb91e6755">visitKeyword</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;node, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">Keyword</a> keyword)</td></tr>
-<tr class="separator:ac2a466843b21852e0d41381eb91e6755"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ae04eca53405d08f0f2c6557685d9d9" id="r_a4ae04eca53405d08f0f2c6557685d9d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ae04eca53405d08f0f2c6557685d9d9">addSymbolNode</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;symbol)</td></tr>
-<tr class="memdesc:a4ae04eca53405d08f0f2c6557685d9d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a given node in the symbol table.  <br /></td></tr>
-<tr class="separator:a4ae04eca53405d08f0f2c6557685d9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2092ff15dc024387274ee55d9ff25145" id="r_a2092ff15dc024387274ee55d9ff25145"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2092ff15dc024387274ee55d9ff25145">visit</a> (<a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;node, bool register_declarations)</td></tr>
+<tr class="memdesc:a2092ff15dc024387274ee55d9ff25145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursively visit nodes.  <br /></td></tr>
+<tr class="separator:a2092ff15dc024387274ee55d9ff25145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a232c6fead2d1d60607ecf32619dbd2ce" id="r_a232c6fead2d1d60607ecf32619dbd2ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a232c6fead2d1d60607ecf32619dbd2ce">visitKeyword</a> (<a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;node, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">Keyword</a> keyword, bool register_declarations)</td></tr>
+<tr class="separator:a232c6fead2d1d60607ecf32619dbd2ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaea71773109b3e4ef791c34a4cdcb43" id="r_aaaea71773109b3e4ef791c34a4cdcb43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaaea71773109b3e4ef791c34a4cdcb43">addSymbolNode</a> (const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;symbol, const std::string &amp;old_name=&quot;&quot;)</td></tr>
+<tr class="memdesc:aaaea71773109b3e4ef791c34a4cdcb43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a given node in the symbol table.  <br /></td></tr>
+<tr class="separator:aaaea71773109b3e4ef791c34a4cdcb43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a710a21c08dd6f283f9940454048f2ed5" id="r_a710a21c08dd6f283f9940454048f2ed5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a710a21c08dd6f283f9940454048f2ed5">mayBeFromPlugin</a> (const std::string &amp;name) const noexcept</td></tr>
 <tr class="memdesc:a710a21c08dd6f283f9940454048f2ed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checking if a symbol may be coming from a plugin.  <br /></td></tr>
 <tr class="separator:a710a21c08dd6f283f9940454048f2ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fc9655297f6b86c08e5eb1343a9671c" id="r_a9fc9655297f6b86c08e5eb1343a9671c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fc9655297f6b86c08e5eb1343a9671c">updateSymbolWithFullyQualifiedName</a> (<a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;symbol)</td></tr>
+<tr class="separator:a9fc9655297f6b86c08e5eb1343a9671c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40853fbd3fb1a701ebcdf45c8279961b" id="r_a40853fbd3fb1a701ebcdf45c8279961b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40853fbd3fb1a701ebcdf45c8279961b">checkForUndefinedSymbol</a> () const</td></tr>
 <tr class="memdesc:a40853fbd3fb1a701ebcdf45c8279961b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for undefined symbols, not present in the defined symbols table.  <br /></td></tr>
 <tr class="separator:a40853fbd3fb1a701ebcdf45c8279961b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,7 +167,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00121">121</a> of file <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html">NameResolutionPass.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00024">24</a> of file <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html">NameResolutionPass.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad4775b13a6a3e2b168d5bc44930d6d6e" name="ad4775b13a6a3e2b168d5bc44930d6d6e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4775b13a6a3e2b168d5bc44930d6d6e">&#9670;&#160;</a></span>NameResolutionPass()</h2>
@@ -198,21 +200,21 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00074">74</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00009">9</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00108">Ark::internal::Language::And</a>, <a class="el" href="../../df/dda/namespaceArk_1_1internal_1_1Builtins.html#ae99a104c484192543989515d4eda8a5a">Ark::internal::Builtins::builtins</a>, <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00095">Ark::internal::Language::listInstructions</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00152">m_language_symbols</a>, <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00126">Ark::internal::Language::operators</a>, <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00109">Ark::internal::Language::Or</a>, and <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00105">Ark::internal::Language::SysArgs</a>.</p>
+<p class="reference">References <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00115">Ark::internal::Language::And</a>, <a class="el" href="../../df/dda/namespaceArk_1_1internal_1_1Builtins.html#ae99a104c484192543989515d4eda8a5a">Ark::internal::Builtins::builtins</a>, <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00100">Ark::internal::Language::listInstructions</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00055">m_language_symbols</a>, <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00135">Ark::internal::Language::operators</a>, <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00116">Ark::internal::Language::Or</a>, and <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00112">Ark::internal::Language::SysArgs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a909833d33d0a4f14ab76bef34b0f335e" name="a909833d33d0a4f14ab76bef34b0f335e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a909833d33d0a4f14ab76bef34b0f335e">&#9670;&#160;</a></span>addDefinedSymbol()</h2>
+<a id="a9bf897c83b5e670e429577592ea55bc8" name="a9bf897c83b5e670e429577592ea55bc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bf897c83b5e670e429577592ea55bc8">&#9670;&#160;</a></span>addDefinedSymbol()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Ark::internal::NameResolutionPass::addDefinedSymbol </td>
+          <td class="memname">std::string Ark::internal::NameResolutionPass::addDefinedSymbol </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>sym</em></span>, </td>
         </tr>
@@ -233,16 +235,16 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00102">102</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00048">48</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00154">m_defined_symbols</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00156">m_scope_resolver</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00044">Ark::internal::ScopeResolver::registerInCurrent()</a>.</p>
+<p class="reference">References <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00057">m_defined_symbols</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00059">m_scope_resolver</a>, and <a class="el" href="../../da/d79/ScopeResolver_8cpp_source.html#l00027">Ark::internal::ScopeResolver::registerInCurrent()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00029">Ark::Welder::registerSymbol()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00172">visitKeyword()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00030">Ark::Welder::registerSymbol()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00160">visitKeyword()</a>.</p>
 
 </div>
 </div>
-<a id="a4ae04eca53405d08f0f2c6557685d9d9" name="a4ae04eca53405d08f0f2c6557685d9d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ae04eca53405d08f0f2c6557685d9d9">&#9670;&#160;</a></span>addSymbolNode()</h2>
+<a id="aaaea71773109b3e4ef791c34a4cdcb43" name="aaaea71773109b3e4ef791c34a4cdcb43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaea71773109b3e4ef791c34a4cdcb43">&#9670;&#160;</a></span>addSymbolNode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -253,8 +255,12 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void Ark::internal::NameResolutionPass::addSymbolNode </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>symbol</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>symbol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>old_name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -268,15 +274,16 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">symbol</td><td></td></tr>
+    <tr><td class="paramname">old_name</td><td>old name for symbol, to replace it with the new one if it was renamed </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00273">273</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00269">269</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00152">m_language_symbols</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00153">m_symbol_nodes</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00033">Ark::internal::Node::string()</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00140">Ark::internal::Node::col()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00145">Ark::internal::Node::filename()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00135">Ark::internal::Node::line()</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00055">m_language_symbols</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00056">m_symbol_nodes</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00037">Ark::internal::Node::string()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00108">visit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00055">visit()</a>.</p>
 
 </div>
 </div>
@@ -308,11 +315,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="../../da/d7b/classArk_1_1internal_1_1Pass.html#a2bb95ea669311d4f75353f73a7590bb3">Ark::internal::Pass</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00097">97</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00043">43</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00151">m_ast</a>.</p>
+<p class="reference">References <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00054">m_ast</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00090">process()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00126">Ark::Welder::computeAST()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00025">process()</a>.</p>
 
 </div>
 </div>
@@ -341,11 +348,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Checks for undefined symbols, not present in the defined symbols table. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00299">299</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00348">348</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00154">m_defined_symbols</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00153">m_symbol_nodes</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00288">mayBeFromPlugin()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00321">offerSuggestion()</a>.</p>
+<p class="reference">References <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00057">m_defined_symbols</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00056">m_symbol_nodes</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00300">mayBeFromPlugin()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00378">offerSuggestion()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00090">process()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00025">process()</a>.</p>
 
 </div>
 </div>
@@ -383,11 +390,11 @@ Additional Inherited Members</h2></td></tr>
 <dd>
 false </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00288">288</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00300">300</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d4/dcb/Ark_2Utils_8hpp_source.html#l00030">Ark::Utils::splitString()</a>.</p>
+<p class="reference">References <a class="el" href="../../d4/dcb/Ark_2Utils_8hpp_source.html#l00032">Ark::Utils::splitString()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00299">checkForUndefinedSymbol()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00348">checkForUndefinedSymbol()</a>.</p>
 
 </div>
 </div>
@@ -423,11 +430,11 @@ false </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00321">321</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00378">378</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../de/d06/arkreactor_2Utils_8cpp_source.html#l00005">Ark::Utils::levenshteinDistance()</a>, and <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00154">m_defined_symbols</a>.</p>
+<p class="reference">References <a class="el" href="../../de/d06/arkreactor_2Utils_8cpp_source.html#l00005">Ark::Utils::levenshteinDistance()</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00057">m_defined_symbols</a>, and <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00055">m_language_symbols</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00299">checkForUndefinedSymbol()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00348">checkForUndefinedSymbol()</a>.</p>
 
 </div>
 </div>
@@ -464,16 +471,47 @@ false </dd></dl>
 
 <p>Implements <a class="el" href="../../da/d7b/classArk_1_1internal_1_1Pass.html#a60550f5c0a18b0ec8cadd8d1f116c2c6">Ark::internal::Pass</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00090">90</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00025">25</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00097">ast()</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00299">checkForUndefinedSymbol()</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00151">m_ast</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00108">visit()</a>.</p>
+<p class="reference">References <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00043">ast()</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00348">checkForUndefinedSymbol()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00233">Ark::internal::Node::debugPrint()</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00054">m_ast</a>, <a class="el" href="../../df/d5f/Pass_8hpp_source.html#l00049">Ark::internal::Pass::m_logger</a>, <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00039">Ark::internal::Logger::shouldTrace()</a>, <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00098">Ark::internal::Logger::trace()</a>, <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00081">Ark::internal::Logger::traceEnd()</a>, <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00075">Ark::internal::Logger::traceStart()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00055">visit()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00156">Ark::Welder::computeAST()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00126">Ark::Welder::computeAST()</a>.</p>
 
 </div>
 </div>
-<a id="a598ca6b99fb7606b166776093f6340e1" name="a598ca6b99fb7606b166776093f6340e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a598ca6b99fb7606b166776093f6340e1">&#9670;&#160;</a></span>visit()</h2>
+<a id="a9fc9655297f6b86c08e5eb1343a9671c" name="a9fc9655297f6b86c08e5eb1343a9671c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fc9655297f6b86c08e5eb1343a9671c">&#9670;&#160;</a></span>updateSymbolWithFullyQualifiedName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Ark::internal::NameResolutionPass::updateSymbolWithFullyQualifiedName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>symbol</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00311">311</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="../../da/d79/ScopeResolver_8cpp_source.html#l00078">Ark::internal::ScopeResolver::canFullyQualifyName()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00140">Ark::internal::Node::col()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00145">Ark::internal::Node::filename()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00135">Ark::internal::Node::line()</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00055">m_language_symbols</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00059">m_scope_resolver</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00160">Ark::internal::Node::repr()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00103">Ark::internal::Node::setString()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00037">Ark::internal::Node::string()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00055">visit()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00160">visitKeyword()</a>.</p>
+
+</div>
+</div>
+<a id="a2092ff15dc024387274ee55d9ff25145" name="a2092ff15dc024387274ee55d9ff25145"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2092ff15dc024387274ee55d9ff25145">&#9670;&#160;</a></span>visit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -484,8 +522,12 @@ false </dd></dl>
         <tr>
           <td class="memname">void Ark::internal::NameResolutionPass::visit </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>register_declarations</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -499,20 +541,21 @@ false </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">node</td><td>node to visit </td></tr>
+    <tr><td class="paramname">register_declarations</td><td>whether or not the visit should register declarations </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00108">108</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00055">55</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00273">addSymbolNode()</a>, <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00085">Ark::internal::Language::AppendInPlace</a>, <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00086">Ark::internal::Language::ConcatInPlace</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00058">Ark::internal::Node::constList()</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca6f16a5f8ff5d75ab84c018adacdfcbb7">Ark::internal::Field</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00120">Ark::internal::Node::filename()</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00049">Ark::internal::ScopeResolver::isImmutable()</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca220f3d3750583b9db48568a0b5b9a5f1">Ark::internal::Keyword</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca4ee29ca12c7d126654bd0e5275de6135">Ark::internal::List</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00156">m_scope_resolver</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00063">Ark::internal::Node::nodeType()</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca02c86eb2792f3262c21d030a87e19793">Ark::internal::Symbol</a>, <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00089">Ark::internal::Language::UpdateRef</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00108">visit()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00172">visitKeyword()</a>.</p>
+<p class="reference">References <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00269">addSymbolNode()</a>, <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00087">Ark::internal::Language::AppendInPlace</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00052">Ark::internal::Node::arkNamespace()</a>, <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00088">Ark::internal::Language::ConcatInPlace</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>, <a class="el" href="../../da/d79/ScopeResolver_8cpp_source.html#l00022">Ark::internal::ScopeResolver::createNewNamespace()</a>, <a class="el" href="../../da/d79/ScopeResolver_8cpp_source.html#l00114">Ark::internal::ScopeResolver::currentScope()</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca6f16a5f8ff5d75ab84c018adacdfcbb7">Ark::internal::Field</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00145">Ark::internal::Node::filename()</a>, <a class="el" href="../../d2/d11/StaticScope_8cpp_source.html#l00014">Ark::internal::StaticScope::get()</a>, <a class="el" href="../../da/d79/ScopeResolver_8cpp_source.html#l00068">Ark::internal::ScopeResolver::getFullyQualifiedNameInNearestScope()</a>, <a class="el" href="../../da/d79/ScopeResolver_8cpp_source.html#l00043">Ark::internal::ScopeResolver::isImmutable()</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca220f3d3750583b9db48568a0b5b9a5f1">Ark::internal::Keyword</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca4ee29ca12c7d126654bd0e5275de6135">Ark::internal::List</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00067">Ark::internal::Node::list()</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00059">m_scope_resolver</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4cab3ba0fe968ce39dcfc6fe8cc0f1b02da">Ark::internal::Namespace</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00077">Ark::internal::Node::nodeType()</a>, <a class="el" href="../../da/d79/ScopeResolver_8cpp_source.html#l00032">Ark::internal::ScopeResolver::saveNamespaceAndRemove()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00037">Ark::internal::Node::string()</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca02c86eb2792f3262c21d030a87e19793">Ark::internal::Symbol</a>, <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00093">Ark::internal::Language::UpdateRef</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00311">updateSymbolWithFullyQualifiedName()</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00055">visit()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00160">visitKeyword()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00090">process()</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00108">visit()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00172">visitKeyword()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00025">process()</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00055">visit()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00160">visitKeyword()</a>.</p>
 
 </div>
 </div>
-<a id="ac2a466843b21852e0d41381eb91e6755" name="ac2a466843b21852e0d41381eb91e6755"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2a466843b21852e0d41381eb91e6755">&#9670;&#160;</a></span>visitKeyword()</h2>
+<a id="a232c6fead2d1d60607ecf32619dbd2ce" name="a232c6fead2d1d60607ecf32619dbd2ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a232c6fead2d1d60607ecf32619dbd2ce">&#9670;&#160;</a></span>visitKeyword()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -523,12 +566,17 @@ false </dd></dl>
         <tr>
           <td class="memname">void Ark::internal::NameResolutionPass::visitKeyword </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">Keyword</a></td>          <td class="paramname"><span class="paramname"><em>keyword</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1">Keyword</a></td>          <td class="paramname"><span class="paramname"><em>keyword</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>register_declarations</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -541,15 +589,16 @@ false </dd></dl>
   <table class="params">
     <tr><td class="paramname">node</td><td>a list node whose first child is a keyword </td></tr>
     <tr><td class="paramname">keyword</td><td></td></tr>
+    <tr><td class="paramname">register_declarations</td><td>whether or not the visit should register declarations </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00172">172</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00160">160</a> of file <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00102">addDefinedSymbol()</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca44a50f07b4bdc57740901280f9eddaf5">Ark::internal::Capture</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00058">Ark::internal::Node::constList()</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00034">Ark::internal::ScopeResolver::createNew()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00120">Ark::internal::Node::filename()</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a46d6d315bea88efbf048125d2ec444b4">Ark::internal::Fun</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a72d6d7a1885885bb55a565fd1070581a">Ark::internal::Import</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00049">Ark::internal::ScopeResolver::isImmutable()</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00069">Ark::internal::ScopeResolver::isInScope()</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00059">Ark::internal::ScopeResolver::isRegistered()</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1acae6404c4aecf46684930fe2a86676a6">Ark::internal::Let</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca4ee29ca12c7d126654bd0e5275de6135">Ark::internal::List</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00154">m_defined_symbols</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00152">m_language_symbols</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00155">m_plugin_names</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00156">m_scope_resolver</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1aebb87a770abac0e394d963d20ed574b7">Ark::internal::Mut</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00039">Ark::internal::ScopeResolver::removeLocalScope()</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a5d5b78699e57104f2fa03bbdf7b9197b">Ark::internal::Set</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca02c86eb2792f3262c21d030a87e19793">Ark::internal::Symbol</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00108">visit()</a>.</p>
+<p class="reference">References <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00048">addDefinedSymbol()</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca44a50f07b4bdc57740901280f9eddaf5">Ark::internal::Capture</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00072">Ark::internal::Node::constList()</a>, <a class="el" href="../../da/d79/ScopeResolver_8cpp_source.html#l00012">Ark::internal::ScopeResolver::createNew()</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00145">Ark::internal::Node::filename()</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a46d6d315bea88efbf048125d2ec444b4">Ark::internal::Fun</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a72d6d7a1885885bb55a565fd1070581a">Ark::internal::Import</a>, <a class="el" href="../../da/d79/ScopeResolver_8cpp_source.html#l00043">Ark::internal::ScopeResolver::isImmutable()</a>, <a class="el" href="../../da/d79/ScopeResolver_8cpp_source.html#l00063">Ark::internal::ScopeResolver::isInScope()</a>, <a class="el" href="../../da/d79/ScopeResolver_8cpp_source.html#l00053">Ark::internal::ScopeResolver::isRegistered()</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1acae6404c4aecf46684930fe2a86676a6">Ark::internal::Let</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca4ee29ca12c7d126654bd0e5275de6135">Ark::internal::List</a>, <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00067">Ark::internal::Node::list()</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00055">m_language_symbols</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00058">m_plugin_names</a>, <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00059">m_scope_resolver</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1aebb87a770abac0e394d963d20ed574b7">Ark::internal::Mut</a>, <a class="el" href="../../da/d79/ScopeResolver_8cpp_source.html#l00017">Ark::internal::ScopeResolver::removeLastScope()</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a5d5b78699e57104f2fa03bbdf7b9197b">Ark::internal::Set</a>, <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a5300c6c0596db0a5a8f5b62d4d42ce4ca02c86eb2792f3262c21d030a87e19793">Ark::internal::Symbol</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00311">updateSymbolWithFullyQualifiedName()</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00055">visit()</a>, and <a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html#a9a844cdbff6d30f493cb3044c72128f1a3cddbb8f43a4e074e2c2ce3e8622f43e">Ark::internal::While</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00108">visit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00055">visit()</a>.</p>
 
 </div>
 </div>
@@ -574,9 +623,9 @@ false </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00151">151</a> of file <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html">NameResolutionPass.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html">NameResolutionPass.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00097">ast()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00090">process()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00043">ast()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00025">process()</a>.</p>
 
 </div>
 </div>
@@ -600,9 +649,9 @@ false </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html">NameResolutionPass.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00057">57</a> of file <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html">NameResolutionPass.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00102">addDefinedSymbol()</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00299">checkForUndefinedSymbol()</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00321">offerSuggestion()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00172">visitKeyword()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00048">addDefinedSymbol()</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00348">checkForUndefinedSymbol()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00378">offerSuggestion()</a>.</p>
 
 </div>
 </div>
@@ -628,9 +677,9 @@ false </dd></dl>
 
 <p>Precomputed set of language symbols that can't be used to define variables. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00152">152</a> of file <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html">NameResolutionPass.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00055">55</a> of file <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html">NameResolutionPass.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00273">addSymbolNode()</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00074">NameResolutionPass()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00172">visitKeyword()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00269">addSymbolNode()</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00009">NameResolutionPass()</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00378">offerSuggestion()</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00311">updateSymbolWithFullyQualifiedName()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00160">visitKeyword()</a>.</p>
 
 </div>
 </div>
@@ -654,9 +703,9 @@ false </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html">NameResolutionPass.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00058">58</a> of file <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html">NameResolutionPass.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00172">visitKeyword()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00160">visitKeyword()</a>.</p>
 
 </div>
 </div>
@@ -680,9 +729,9 @@ false </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00156">156</a> of file <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html">NameResolutionPass.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00059">59</a> of file <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html">NameResolutionPass.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00102">addDefinedSymbol()</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00108">visit()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00172">visitKeyword()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00048">addDefinedSymbol()</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00311">updateSymbolWithFullyQualifiedName()</a>, <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00055">visit()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00160">visitKeyword()</a>.</p>
 
 </div>
 </div>
@@ -706,15 +755,15 @@ false </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00153">153</a> of file <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html">NameResolutionPass.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html#l00056">56</a> of file <a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html">NameResolutionPass.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00273">addSymbolNode()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00299">checkForUndefinedSymbol()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00269">addSymbolNode()</a>, and <a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html#l00348">checkForUndefinedSymbol()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/fola/Documents/ArkScript/Ark/include/Ark/Compiler/<a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html">NameResolutionPass.hpp</a></li>
-<li>/Users/fola/Documents/ArkScript/Ark/src/arkreactor/Compiler/<a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a></li>
+<li>/Users/fola/Documents/ArkScript/Ark/include/Ark/Compiler/NameResolution/<a class="el" href="../../d4/de8/NameResolutionPass_8hpp_source.html">NameResolutionPass.hpp</a></li>
+<li>/Users/fola/Documents/ArkScript/Ark/src/arkreactor/Compiler/NameResolution/<a class="el" href="../../de/dd7/NameResolutionPass_8cpp_source.html">NameResolutionPass.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -722,7 +771,7 @@ false </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/de4/namespaceArk.html">Ark</a></li><li class="navelem"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html">internal</a></li><li class="navelem"><a class="el" href="../../d7/db8/classArk_1_1internal_1_1NameResolutionPass.html">NameResolutionPass</a></li>
-    <li class="footer">Generated on Sat Oct 12 2024 14:46:45 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Jan 15 2025 19:51:44 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

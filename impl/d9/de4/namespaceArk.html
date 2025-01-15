@@ -214,9 +214,12 @@ Variables</h2></td></tr>
 <tr class="memitem:a5aa16adc97211d2f076390efbc996f63" id="r_a5aa16adc97211d2f076390efbc996f63"><td class="memItemLeft" align="right" valign="top">constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5aa16adc97211d2f076390efbc996f63">FeatureMacroProcessor</a> = 1 &lt;&lt; 1</td></tr>
 <tr class="separator:a5aa16adc97211d2f076390efbc996f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3db2ac8dce7f6dc63d01048eaaea2cc" id="r_ac3db2ac8dce7f6dc63d01048eaaea2cc"><td class="memItemLeft" align="right" valign="top">constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3db2ac8dce7f6dc63d01048eaaea2cc">FeatureASTOptimizer</a> = 1 &lt;&lt; 2</td></tr>
+<tr class="memdesc:ac3db2ac8dce7f6dc63d01048eaaea2cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is disabled so that embedding ArkScript does not prune nodes from the AST ; it is active in the <code>arkscript</code> executable.  <br /></td></tr>
 <tr class="separator:ac3db2ac8dce7f6dc63d01048eaaea2cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19addc1833d2f8b7f039660b23482d8e" id="r_a19addc1833d2f8b7f039660b23482d8e"><td class="memItemLeft" align="right" valign="top">constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19addc1833d2f8b7f039660b23482d8e">FeatureIROptimizer</a> = 1 &lt;&lt; 3</td></tr>
 <tr class="separator:a19addc1833d2f8b7f039660b23482d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb889bdcb25a5cd5baa7f8316fccb49" id="r_afeb889bdcb25a5cd5baa7f8316fccb49"><td class="memItemLeft" align="right" valign="top">constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afeb889bdcb25a5cd5baa7f8316fccb49">FeatureNameResolver</a> = 1 &lt;&lt; 4</td></tr>
+<tr class="separator:afeb889bdcb25a5cd5baa7f8316fccb49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca8e167cdb15794066ffc3254580fa5a" id="r_aca8e167cdb15794066ffc3254580fa5a"><td class="memItemLeft" align="right" valign="top">constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca8e167cdb15794066ffc3254580fa5a">FeatureDumpIR</a> = 1 &lt;&lt; 14</td></tr>
 <tr class="separator:aca8e167cdb15794066ffc3254580fa5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69c882fe0668cb21166e4616104c0480" id="r_a69c882fe0668cb21166e4616104c0480"><td class="memItemLeft" align="right" valign="top">constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69c882fe0668cb21166e4616104c0480">FeatureTestFailOnException</a> = 1 &lt;&lt; 15</td></tr>
@@ -225,15 +228,15 @@ Variables</h2></td></tr>
 <tr class="memitem:a01bf99e888f59670c0508d83cc23ffd4" id="r_a01bf99e888f59670c0508d83cc23ffd4"><td class="memItemLeft" align="right" valign="top">constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01bf99e888f59670c0508d83cc23ffd4">DefaultFeatures</a></td></tr>
 <tr class="separator:a01bf99e888f59670c0508d83cc23ffd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a601127fdf466d46ddcc7d061bd4f7a34" id="r_a601127fdf466d46ddcc7d061bd4f7a34"><td class="memItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a601127fdf466d46ddcc7d061bd4f7a34">MaxMacroProcessingDepth</a> = 256</td></tr>
-<tr class="memdesc:a601127fdf466d46ddcc7d061bd4f7a34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls the number of recursive calls to <a class="el" href="../../d5/db5/classArk_1_1internal_1_1MacroProcessor.html#adfa3ae2198b8bd7f4fde270950c47f46" title="Register macros in scopes and apply them as needed.">MacroProcessor::processNode</a>.  <br /></td></tr>
+<tr class="memdesc:a601127fdf466d46ddcc7d061bd4f7a34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls the number of recursive calls to <a class="el" href="../../d5/db5/classArk_1_1internal_1_1MacroProcessor.html#acf95237e17a351565acd9034b50631db" title="Register macros in scopes and apply them as needed.">MacroProcessor::processNode</a>.  <br /></td></tr>
 <tr class="separator:a601127fdf466d46ddcc7d061bd4f7a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bfec7edeabdb42ddee1327daa3ee186" id="r_a9bfec7edeabdb42ddee1327daa3ee186"><td class="memItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bfec7edeabdb42ddee1327daa3ee186">MaxMacroUnificationDepth</a> = 256</td></tr>
-<tr class="memdesc:a9bfec7edeabdb42ddee1327daa3ee186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls the number of recursive calls to <a class="el" href="../../d5/db5/classArk_1_1internal_1_1MacroProcessor.html#a4a28e0940b0b14425709a706b08677af" title="Unify a target node with a given map symbol =&gt; replacement node, recursively.">MacroProcessor::unify</a>.  <br /></td></tr>
+<tr class="memdesc:a9bfec7edeabdb42ddee1327daa3ee186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls the number of recursive calls to MacroProcessor::unify.  <br /></td></tr>
 <tr class="separator:a9bfec7edeabdb42ddee1327daa3ee186"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10c147f2df9516277811af7da43a250f" id="r_a10c147f2df9516277811af7da43a250f"><td class="memItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10c147f2df9516277811af7da43a250f">VMStackSize</a> = 8192</td></tr>
 <tr class="separator:a10c147f2df9516277811af7da43a250f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acda85568e0ab829ec4c303f1ac053759" id="r_acda85568e0ab829ec4c303f1ac053759"><td class="memItemLeft" align="right" valign="top">const std::array&lt; std::string, 13 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acda85568e0ab829ec4c303f1ac053759">types_to_str</a></td></tr>
-<tr class="separator:acda85568e0ab829ec4c303f1ac053759"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09c7d272cc09841b4feefc1eea1aad25" id="r_a09c7d272cc09841b4feefc1eea1aad25"><td class="memItemLeft" align="right" valign="top">constexpr std::array&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09c7d272cc09841b4feefc1eea1aad25">types_to_str</a></td></tr>
+<tr class="separator:a09c7d272cc09841b4feefc1eea1aad25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b4d87e9947b24bc4202530daf34c8b3" id="r_a5b4d87e9947b24bc4202530daf34c8b3"><td class="memItemLeft" align="right" valign="top">const auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b4d87e9947b24bc4202530daf34c8b3">Nil</a> = <a class="el" href="../../d3/d90/classArk_1_1Value.html">Value</a>(ValueType::Nil)</td></tr>
 <tr class="memdesc:a5b4d87e9947b24bc4202530daf34c8b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ArkScript Nil value.  <br /></td></tr>
 <tr class="separator:a5b4d87e9947b24bc4202530daf34c8b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -358,7 +361,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfd/Value_8hpp_source.html#l00190">190</a> of file <a class="el" href="../../de/dfd/Value_8hpp_source.html">Value.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfd/Value_8hpp_source.html#l00193">193</a> of file <a class="el" href="../../de/dfd/Value_8hpp_source.html">Value.hpp</a>.</p>
 
 </div>
 </div>
@@ -389,7 +392,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfd/Value_8hpp_source.html#l00185">185</a> of file <a class="el" href="../../de/dfd/Value_8hpp_source.html">Value.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfd/Value_8hpp_source.html#l00188">188</a> of file <a class="el" href="../../de/dfd/Value_8hpp_source.html">Value.hpp</a>.</p>
 
 </div>
 </div>
@@ -451,7 +454,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfd/Value_8hpp_source.html#l00178">178</a> of file <a class="el" href="../../de/dfd/Value_8hpp_source.html">Value.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfd/Value_8hpp_source.html#l00181">181</a> of file <a class="el" href="../../de/dfd/Value_8hpp_source.html">Value.hpp</a>.</p>
 
 </div>
 </div>
@@ -544,7 +547,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dfd/Value_8hpp_source.html#l00166">166</a> of file <a class="el" href="../../de/dfd/Value_8hpp_source.html">Value.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dfd/Value_8hpp_source.html#l00169">169</a> of file <a class="el" href="../../de/dfd/Value_8hpp_source.html">Value.hpp</a>.</p>
 
 </div>
 </div>
@@ -571,14 +574,14 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">        <a class="code hl_variable" href="#a0dd1d59c1673ce87c62416819b5604b4">FeatureImportSolver</a></div>
 <div class="line">        | <a class="code hl_variable" href="#a5aa16adc97211d2f076390efbc996f63">FeatureMacroProcessor</a></div>
-<div class="line">        | <a class="code hl_variable" href="#ac3db2ac8dce7f6dc63d01048eaaea2cc">FeatureASTOptimizer</a></div>
 <div class="line">        | <a class="code hl_variable" href="#a19addc1833d2f8b7f039660b23482d8e">FeatureIROptimizer</a></div>
+<div class="line">        | <a class="code hl_variable" href="#afeb889bdcb25a5cd5baa7f8316fccb49">FeatureNameResolver</a></div>
 <div class="ttc" id="anamespaceArk_html_a0dd1d59c1673ce87c62416819b5604b4"><div class="ttname"><a href="#a0dd1d59c1673ce87c62416819b5604b4">Ark::FeatureImportSolver</a></div><div class="ttdeci">constexpr uint16_t FeatureImportSolver</div><div class="ttdef"><b>Definition</b> <a href="../../d6/de9/Constants_8hpp_source.html#l00049">Constants.hpp:49</a></div></div>
 <div class="ttc" id="anamespaceArk_html_a19addc1833d2f8b7f039660b23482d8e"><div class="ttname"><a href="#a19addc1833d2f8b7f039660b23482d8e">Ark::FeatureIROptimizer</a></div><div class="ttdeci">constexpr uint16_t FeatureIROptimizer</div><div class="ttdef"><b>Definition</b> <a href="../../d6/de9/Constants_8hpp_source.html#l00052">Constants.hpp:52</a></div></div>
 <div class="ttc" id="anamespaceArk_html_a5aa16adc97211d2f076390efbc996f63"><div class="ttname"><a href="#a5aa16adc97211d2f076390efbc996f63">Ark::FeatureMacroProcessor</a></div><div class="ttdeci">constexpr uint16_t FeatureMacroProcessor</div><div class="ttdef"><b>Definition</b> <a href="../../d6/de9/Constants_8hpp_source.html#l00050">Constants.hpp:50</a></div></div>
-<div class="ttc" id="anamespaceArk_html_ac3db2ac8dce7f6dc63d01048eaaea2cc"><div class="ttname"><a href="#ac3db2ac8dce7f6dc63d01048eaaea2cc">Ark::FeatureASTOptimizer</a></div><div class="ttdeci">constexpr uint16_t FeatureASTOptimizer</div><div class="ttdef"><b>Definition</b> <a href="../../d6/de9/Constants_8hpp_source.html#l00051">Constants.hpp:51</a></div></div>
+<div class="ttc" id="anamespaceArk_html_afeb889bdcb25a5cd5baa7f8316fccb49"><div class="ttname"><a href="#afeb889bdcb25a5cd5baa7f8316fccb49">Ark::FeatureNameResolver</a></div><div class="ttdeci">constexpr uint16_t FeatureNameResolver</div><div class="ttdef"><b>Definition</b> <a href="../../d6/de9/Constants_8hpp_source.html#l00053">Constants.hpp:53</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00059">59</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00060">60</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../df/d0a/main_8cpp_source.html#l00017">main()</a>.</p>
 
@@ -598,7 +601,7 @@ Variables</h2></td></tr>
 
 <p>ArkScript False value. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d91/VM_8hpp_source.html#l00323">323</a> of file <a class="el" href="../../d1/d91/VM_8hpp_source.html">VM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d91/VM_8hpp_source.html#l00333">333</a> of file <a class="el" href="../../d1/d91/VM_8hpp_source.html">VM.hpp</a>.</p>
 
 </div>
 </div>
@@ -622,9 +625,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>This is disabled so that embedding ArkScript does not prune nodes from the AST ; it is active in the <code>arkscript</code> executable. </p>
+
 <p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00051">51</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00156">Ark::Welder::computeAST()</a>, and <a class="el" href="../../df/d0a/main_8cpp_source.html#l00017">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00126">Ark::Welder::computeAST()</a>, and <a class="el" href="../../df/d0a/main_8cpp_source.html#l00017">main()</a>.</p>
 
 </div>
 </div>
@@ -648,9 +653,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00055">55</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00049">Ark::Welder::generateBytecode()</a>, and <a class="el" href="../../df/d0a/main_8cpp_source.html#l00017">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00050">Ark::Welder::generateBytecode()</a>, and <a class="el" href="../../df/d0a/main_8cpp_source.html#l00017">main()</a>.</p>
 
 </div>
 </div>
@@ -676,7 +681,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00049">49</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00156">Ark::Welder::computeAST()</a>, and <a class="el" href="../../df/d0a/main_8cpp_source.html#l00017">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00126">Ark::Welder::computeAST()</a>, and <a class="el" href="../../df/d0a/main_8cpp_source.html#l00017">main()</a>.</p>
 
 </div>
 </div>
@@ -702,7 +707,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00052">52</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00049">Ark::Welder::generateBytecode()</a>, and <a class="el" href="../../df/d0a/main_8cpp_source.html#l00017">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00050">Ark::Welder::generateBytecode()</a>, and <a class="el" href="../../df/d0a/main_8cpp_source.html#l00017">main()</a>.</p>
 
 </div>
 </div>
@@ -728,7 +733,33 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00050">50</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00156">Ark::Welder::computeAST()</a>, and <a class="el" href="../../df/d0a/main_8cpp_source.html#l00017">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00126">Ark::Welder::computeAST()</a>, and <a class="el" href="../../df/d0a/main_8cpp_source.html#l00017">main()</a>.</p>
+
+</div>
+</div>
+<a id="afeb889bdcb25a5cd5baa7f8316fccb49" name="afeb889bdcb25a5cd5baa7f8316fccb49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeb889bdcb25a5cd5baa7f8316fccb49">&#9670;&#160;</a></span>FeatureNameResolver</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Ark::FeatureNameResolver = 1 &lt;&lt; 4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00053">53</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00126">Ark::Welder::computeAST()</a>.</p>
 
 </div>
 </div>
@@ -754,9 +785,9 @@ Variables</h2></td></tr>
 
 <p>This feature should only be used in tests, to disable diagnostics generation and enable exceptions to be thrown. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00056">56</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00057">57</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00156">Ark::Welder::computeAST()</a>, and <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00049">Ark::Welder::generateBytecode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00126">Ark::Welder::computeAST()</a>, and <a class="el" href="../../d3/df1/Welder_8cpp_source.html#l00050">Ark::Welder::generateBytecode()</a>.</p>
 
 </div>
 </div>
@@ -780,11 +811,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Controls the number of recursive calls to <a class="el" href="../../d5/db5/classArk_1_1internal_1_1MacroProcessor.html#adfa3ae2198b8bd7f4fde270950c47f46" title="Register macros in scopes and apply them as needed.">MacroProcessor::processNode</a>. </p>
+<p>Controls the number of recursive calls to <a class="el" href="../../d5/db5/classArk_1_1internal_1_1MacroProcessor.html#acf95237e17a351565acd9034b50631db" title="Register macros in scopes and apply them as needed.">MacroProcessor::processNode</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00065">65</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00066">66</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00189">Ark::internal::MacroProcessor::applyMacro()</a>, and <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00117">Ark::internal::MacroProcessor::processNode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00187">Ark::internal::MacroProcessor::applyMacro()</a>, and <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00102">Ark::internal::MacroProcessor::processNode()</a>.</p>
 
 </div>
 </div>
@@ -808,11 +839,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Controls the number of recursive calls to <a class="el" href="../../d5/db5/classArk_1_1internal_1_1MacroProcessor.html#a4a28e0940b0b14425709a706b08677af" title="Unify a target node with a given map symbol =&gt; replacement node, recursively.">MacroProcessor::unify</a>. </p>
+<p>Controls the number of recursive calls to MacroProcessor::unify. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00066">66</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00067">67</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00209">Ark::internal::MacroProcessor::unify()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dc/dd4/Function_8cpp_source.html#l00090">Ark::internal::FunctionExecutor::unify()</a>.</p>
 
 </div>
 </div>
@@ -830,7 +861,7 @@ Variables</h2></td></tr>
 
 <p>ArkScript Nil value. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d91/VM_8hpp_source.html#l00321">321</a> of file <a class="el" href="../../d1/d91/VM_8hpp_source.html">VM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d91/VM_8hpp_source.html#l00331">331</a> of file <a class="el" href="../../d1/d91/VM_8hpp_source.html">VM.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d4/dc9/Future_8cpp_source.html#l00013">Ark::internal::Future::resolve()</a>.</p>
 
@@ -850,20 +881,28 @@ Variables</h2></td></tr>
 
 <p>ArkScript True value. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d91/VM_8hpp_source.html#l00325">325</a> of file <a class="el" href="../../d1/d91/VM_8hpp_source.html">VM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d91/VM_8hpp_source.html#l00335">335</a> of file <a class="el" href="../../d1/d91/VM_8hpp_source.html">VM.hpp</a>.</p>
 
 </div>
 </div>
-<a id="acda85568e0ab829ec4c303f1ac053759" name="acda85568e0ab829ec4c303f1ac053759"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acda85568e0ab829ec4c303f1ac053759">&#9670;&#160;</a></span>types_to_str</h2>
+<a id="a09c7d272cc09841b4feefc1eea1aad25" name="a09c7d272cc09841b4feefc1eea1aad25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09c7d272cc09841b4feefc1eea1aad25">&#9670;&#160;</a></span>types_to_str</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::array&lt;std::string, 13&gt; Ark::types_to_str</td>
+          <td class="memname">std::array Ark::types_to_str</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">        <span class="stringliteral">&quot;List&quot;</span>, <span class="stringliteral">&quot;Number&quot;</span>, <span class="stringliteral">&quot;String&quot;</span>, <span class="stringliteral">&quot;Function&quot;</span>,</div>
@@ -898,7 +937,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00067">67</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de9/Constants_8hpp_source.html#l00068">68</a> of file <a class="el" href="../../d6/de9/Constants_8hpp_source.html">Constants.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d2/d27/VM_8cpp_source.html#l00320">Ark::VM::safeRun()</a>.</p>
 
@@ -910,7 +949,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/de4/namespaceArk.html">Ark</a></li>
-    <li class="footer">Generated on Sat Oct 12 2024 14:46:45 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Jan 15 2025 19:51:44 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

@@ -15,6 +15,7 @@ var Constants_8hpp =
     [ "FeatureImportSolver", "d6/de9/Constants_8hpp.html#a0dd1d59c1673ce87c62416819b5604b4", null ],
     [ "FeatureIROptimizer", "d6/de9/Constants_8hpp.html#a19addc1833d2f8b7f039660b23482d8e", null ],
     [ "FeatureMacroProcessor", "d6/de9/Constants_8hpp.html#a5aa16adc97211d2f076390efbc996f63", null ],
+    [ "FeatureNameResolver", "d6/de9/Constants_8hpp.html#afeb889bdcb25a5cd5baa7f8316fccb49", null ],
     [ "FeatureTestFailOnException", "d6/de9/Constants_8hpp.html#a69c882fe0668cb21166e4616104c0480", null ],
     [ "MaxMacroProcessingDepth", "d6/de9/Constants_8hpp.html#a601127fdf466d46ddcc7d061bd4f7a34", null ],
     [ "MaxMacroUnificationDepth", "d6/de9/Constants_8hpp.html#a9bfec7edeabdb42ddee1327daa3ee186", null ],

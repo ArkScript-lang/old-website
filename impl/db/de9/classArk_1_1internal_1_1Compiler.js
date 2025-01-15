@@ -19,6 +19,7 @@ var classArk_1_1internal_1_1Compiler =
     [ "getOperator", "db/de9/classArk_1_1internal_1_1Compiler.html#abb6448e5dc462f2c58aaa8ab8ac1ecf5", null ],
     [ "handleCalls", "db/de9/classArk_1_1internal_1_1Compiler.html#a3ed1a10d2f1cc213d39ab8361342ef6f", null ],
     [ "intermediateRepresentation", "db/de9/classArk_1_1internal_1_1Compiler.html#ae6d2dd283e851262585d85f46e8d9bcd", null ],
+    [ "isTernaryInst", "db/de9/classArk_1_1internal_1_1Compiler.html#a4e7e794d8f651da5dc01bc1b42132946", null ],
     [ "isUnaryInst", "db/de9/classArk_1_1internal_1_1Compiler.html#a4efbe4f1055af673684ea629fd8de535", null ],
     [ "nodeProducesOutput", "db/de9/classArk_1_1internal_1_1Compiler.html#a5a8cf584725e45c9bed0d351e2237a82", null ],
     [ "page", "db/de9/classArk_1_1internal_1_1Compiler.html#a794c0de0342c9dee352a4b21f98c3fdd", null ],
@@ -27,7 +28,9 @@ var classArk_1_1internal_1_1Compiler =
     [ "throwCompilerError", "db/de9/classArk_1_1internal_1_1Compiler.html#a37575593faa7e837d43a139daf853269", null ],
     [ "values", "db/de9/classArk_1_1internal_1_1Compiler.html#a53c8a474f9d2f2ef7d5e602552420c79", null ],
     [ "m_code_pages", "db/de9/classArk_1_1internal_1_1Compiler.html#a157ece1bb0a3af0f48a71a34d91e0b8f", null ],
+    [ "m_current_label", "db/de9/classArk_1_1internal_1_1Compiler.html#abc8836f3579a22aa1da07378ef40b0ce", null ],
     [ "m_debug", "db/de9/classArk_1_1internal_1_1Compiler.html#a0daa04e98f2f4b8e7f7ed5cabf31f1de", null ],
+    [ "m_logger", "db/de9/classArk_1_1internal_1_1Compiler.html#a948c880f1c0b0a1e0c68ca74f24fb582", null ],
     [ "m_symbols", "db/de9/classArk_1_1internal_1_1Compiler.html#a920dffa72e3286cd12fc5a4c111219a8", null ],
     [ "m_temp_pages", "db/de9/classArk_1_1internal_1_1Compiler.html#a223e939c8ad00fe537af2b085de35b5c", null ],
     [ "m_values", "db/de9/classArk_1_1internal_1_1Compiler.html#a5ced151a2863c68791bf0607f68a36c9", null ]
