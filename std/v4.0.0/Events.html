@@ -51,7 +51,7 @@
                 <a href="#">Table of contents</a>
                 <ul class="nav">
                     <li class="nav-item">
-    <a href="#events:manager:make">events:manager:make</a>
+    <a href="#manager:make">manager:make</a>
 </li><li class="nav-item">
     <a href="#_check_valid">_check_valid</a>
 </li><li class="nav-item">
@@ -77,11 +77,11 @@
 
             <!-- Actual content of the page-->
             <div class="col-8" id="content">
-                <section id="events:manager:make">
-    <h2>events:manager:make</h2>
+                <section id="manager:make">
+    <h2>manager:make</h2>
 
     <div class="inner-section">
-        <div><code>(let events:manager:make (fun () (...)))</code>
+        <div><code>(let manager:make (fun () (...)))</code>
 <br>
 <div>Allows to register events listeners and emit events</div>
 <div><b>Note</b>
@@ -92,7 +92,7 @@
 <a href="https://github.com/fabien-zoccola">@fabien-zoccola</a></div></div><div><h4>Example</h4>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
-(let em (events:manager:make))
+(let em (manager:make))
 (em.on "myType" (fun (value) (print "This is a callback")))
 (em.emit "myType")  # => prints "This is a callback" thanks to the registered listener
 </code>
@@ -212,7 +212,7 @@ Returns if at least one listener has been removed</div>
     <footer id="page-footer">
         <p class="text-center">
             Copyright &copy; 2020-2024 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.<br>
-            <i>Last generation at 2025-02-01 01:45:50.542290</i>
+            <i>Last generation at 2025-03-01 01:52:35.072528</i>
         </p>
     </footer>
 

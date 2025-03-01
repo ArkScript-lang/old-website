@@ -53,13 +53,13 @@
                     <li class="nav-item">
     <a href="#range">range</a>
 </li><li class="nav-item">
-    <a href="#range:foreach">range:forEach</a>
+    <a href="#foreach">forEach</a>
 </li><li class="nav-item">
-    <a href="#range:filter">range:filter</a>
+    <a href="#filter">filter</a>
 </li><li class="nav-item">
-    <a href="#range:map">range:map</a>
+    <a href="#map">map</a>
 </li><li class="nav-item">
-    <a href="#range:reduce">range:reduce</a>
+    <a href="#reduce">reduce</a>
 </li>
                 </ul>
             </li>
@@ -101,11 +101,11 @@ Has a field `asList` to compute a list from the current state of the range, and 
 </code>
 </pre></div>
     </div>
-</section><section id="range:foreach">
-    <h2>range:forEach</h2>
+</section><section id="foreach">
+    <h2>forEach</h2>
 
     <div class="inner-section">
-        <div><code>(let range:forEach (fun (_r _f) (...)))</code>
+        <div><code>(let forEach (fun (_r _f) (...)))</code>
 <br>
 <div>Run a function on each element of the range</div>
 <div><b>Note</b>
@@ -118,15 +118,15 @@ The range is unmodified.</div>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
 (let obj (range 1 10))
-(range:forEach obj (fun (e) (print e)))
+(forEach obj (fun (e) (print e)))
 </code>
 </pre></div>
     </div>
-</section><section id="range:filter">
-    <h2>range:filter</h2>
+</section><section id="filter">
+    <h2>filter</h2>
 
     <div class="inner-section">
-        <div><code>(let range:filter (fun (_range _fun) (...)))</code>
+        <div><code>(let filter (fun (_range _fun) (...)))</code>
 <br>
 <div>Create a list based on a range and a filter function</div>
 <div><b>Note</b>
@@ -139,15 +139,15 @@ The range is unmodified.</div>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
 (let obj (range 1 10))
-(print (range:filter obj math:even))  # [2 4 6 8]
+(print (filter obj math:even))  # [2 4 6 8]
 </code>
 </pre></div>
     </div>
-</section><section id="range:map">
-    <h2>range:map</h2>
+</section><section id="map">
+    <h2>map</h2>
 
     <div class="inner-section">
-        <div><code>(let range:map (fun (_range _fun) (...)))</code>
+        <div><code>(let map (fun (_range _fun) (...)))</code>
 <br>
 <div>Create a list based on a range and a function to apply to each elements</div>
 <div><b>Note</b>
@@ -160,15 +160,15 @@ The range is unmodified.</div>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
 (let obj (range 1 10))
-(print (range:map obj (fun (e) (* e e))))  # [1 4 9 16 25 36 49 64 81]
+(print (map obj (fun (e) (* e e))))  # [1 4 9 16 25 36 49 64 81]
 </code>
 </pre></div>
     </div>
-</section><section id="range:reduce">
-    <h2>range:reduce</h2>
+</section><section id="reduce">
+    <h2>reduce</h2>
 
     <div class="inner-section">
-        <div><code>(let range:reduce (fun (_range _fun) (...)))</code>
+        <div><code>(let reduce (fun (_range _fun) (...)))</code>
 <br>
 <div>Create a reduced list based on a range and a reduction function</div>
 <div><b>Note</b>
@@ -181,7 +181,7 @@ The range is unmodified.</div>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
 (let obj (range 1 10))
-(print (range:reduce obj (fun (e) (+ e e))))  # 45
+(print (reduce obj (fun (e) (+ e e))))  # 45
 </code>
 </pre></div>
     </div>
@@ -197,7 +197,7 @@ The range is unmodified.</div>
     <footer id="page-footer">
         <p class="text-center">
             Copyright &copy; 2020-2024 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.<br>
-            <i>Last generation at 2025-02-01 01:45:50.542290</i>
+            <i>Last generation at 2025-03-01 01:52:35.072528</i>
         </p>
     </footer>
 

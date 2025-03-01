@@ -51,41 +51,43 @@
                 <a href="#">Table of contents</a>
                 <ul class="nav">
                     <li class="nav-item">
-    <a href="#list:foreach">list:forEach</a>
+    <a href="#foreach">forEach</a>
 </li><li class="nav-item">
-    <a href="#list:product">list:product</a>
+    <a href="#product">product</a>
 </li><li class="nav-item">
-    <a href="#list:sum">list:sum</a>
+    <a href="#sum">sum</a>
 </li><li class="nav-item">
-    <a href="#list:drop">list:drop</a>
+    <a href="#drop">drop</a>
 </li><li class="nav-item">
-    <a href="#list:dropwhile">list:dropWhile</a>
+    <a href="#dropwhile">dropWhile</a>
 </li><li class="nav-item">
-    <a href="#list:filter">list:filter</a>
+    <a href="#filter">filter</a>
 </li><li class="nav-item">
-    <a href="#list:map">list:map</a>
+    <a href="#map">map</a>
 </li><li class="nav-item">
-    <a href="#list:reduce">list:reduce</a>
+    <a href="#reduce">reduce</a>
 </li><li class="nav-item">
-    <a href="#list:flatten">list:flatten</a>
+    <a href="#flatten">flatten</a>
 </li><li class="nav-item">
-    <a href="#list:flatmap">list:flatMap</a>
+    <a href="#flatmap">flatMap</a>
 </li><li class="nav-item">
-    <a href="#list:take">list:take</a>
+    <a href="#take">take</a>
 </li><li class="nav-item">
-    <a href="#list:takewhile">list:takeWhile</a>
+    <a href="#takewhile">takeWhile</a>
 </li><li class="nav-item">
-    <a href="#list:unzip">list:unzip</a>
+    <a href="#unzip">unzip</a>
 </li><li class="nav-item">
-    <a href="#list:zip">list:zip</a>
+    <a href="#zip">zip</a>
 </li><li class="nav-item">
-    <a href="#list:foldleft">list:foldLeft</a>
+    <a href="#zipwithindex">zipWithIndex</a>
 </li><li class="nav-item">
-    <a href="#list:forall">list:forAll</a>
+    <a href="#foldleft">foldLeft</a>
 </li><li class="nav-item">
-    <a href="#list:any">list:any</a>
+    <a href="#forall">forAll</a>
 </li><li class="nav-item">
-    <a href="#list:countif">list:countIf</a>
+    <a href="#any">any</a>
+</li><li class="nav-item">
+    <a href="#countif">countIf</a>
 </li><li class="nav-item">
     <a href="#list:reverse">list:reverse</a>
 </li><li class="nav-item">
@@ -113,11 +115,11 @@
 
             <!-- Actual content of the page-->
             <div class="col-8" id="content">
-                <section id="list:foreach">
-    <h2>list:forEach</h2>
+                <section id="foreach">
+    <h2>forEach</h2>
 
     <div class="inner-section">
-        <div><code>(let list:forEach (fun (_L _func) (...)))</code>
+        <div><code>(let forEach (fun (_L _func) (...)))</code>
 <br>
 <div>Iterate over a given list and run a given function on every element.</div>
 <div><b>Note</b>
@@ -131,17 +133,17 @@ The original list is left unmodified.</div>
 <code class="rainbowjs" data-language="arkscript">
 (import std.List)
 (let collection [1 2 5 12])
-(list:forEach collection (fun (element) {
+(forEach collection (fun (element) {
     (print element)
 }))
 </code>
 </pre></div>
     </div>
-</section><section id="list:product">
-    <h2>list:product</h2>
+</section><section id="product">
+    <h2>product</h2>
 
     <div class="inner-section">
-        <div><code>(let list:product (fun (_L) (...)))</code>
+        <div><code>(let product (fun (_L) (...)))</code>
 <br>
 <div>Iterate over a given list and multiply all the elements with the others.</div>
 <div><b>Note</b>
@@ -150,20 +152,20 @@ The original list is left unmodified.</div>
 <div><h4>Parameter</h4>
 <ul><li><code>_L</code>: the list to iterate over</li></ul></div>
 <div><h4>Author</h4>
-<a href="https://github.com/FrenchMasterSword">@FrenchMasterSword</a></div></div><div><h4>Example</h4>
+<a href="https://github.com/Unactived">@Unactived</a></div></div><div><h4>Example</h4>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
 (import std.List)
 (let collection [1 2 5 12])
-(let p (list:product collection))  # => 120
+(let p (product collection))  # => 120
 </code>
 </pre></div>
     </div>
-</section><section id="list:sum">
-    <h2>list:sum</h2>
+</section><section id="sum">
+    <h2>sum</h2>
 
     <div class="inner-section">
-        <div><code>(let list:sum (fun (_L) (...)))</code>
+        <div><code>(let sum (fun (_L) (...)))</code>
 <br>
 <div>Iterate over a given list and sum all the elements.</div>
 <div><b>Note</b>
@@ -172,20 +174,20 @@ The original list is left unmodified.</div>
 <div><h4>Parameter</h4>
 <ul><li><code>_L</code>: the list to iterate over</li></ul></div>
 <div><h4>Author</h4>
-<a href="https://github.com/FrenchMasterSword">@FrenchMasterSword</a></div></div><div><h4>Example</h4>
+<a href="https://github.com/Unactived">@Unactived</a></div></div><div><h4>Example</h4>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
 (import std.List)
 (let collection [1 2 5 12])
-(let p (list:sum collection))  # => 20
+(let p (sum collection))  # => 20
 </code>
 </pre></div>
     </div>
-</section><section id="list:drop">
-    <h2>list:drop</h2>
+</section><section id="drop">
+    <h2>drop</h2>
 
     <div class="inner-section">
-        <div><code>(let list:drop (fun (_L _n) (...)))</code>
+        <div><code>(let drop (fun (_L _n) (...)))</code>
 <br>
 <div>Drop the first n elements of a list</div>
 <div><b>Note</b>
@@ -198,15 +200,15 @@ The original list is left unmodified.</div>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
 (let cool-stuff [1 2 3 4 5 6 7 8 9])
-(print (list:drop cool-stuff 4))  # [5 6 7 8 9]
+(print (drop cool-stuff 4))  # [5 6 7 8 9]
 </code>
 </pre></div>
     </div>
-</section><section id="list:dropwhile">
-    <h2>list:dropWhile</h2>
+</section><section id="dropwhile">
+    <h2>dropWhile</h2>
 
     <div class="inner-section">
-        <div><code>(let list:dropWhile (fun (_L _f) (...)))</code>
+        <div><code>(let dropWhile (fun (_L _f) (...)))</code>
 <br>
 <div>Drop the first elements of a list, while they match a given predicate</div>
 <div><b>Note</b>
@@ -219,15 +221,15 @@ The original list is left unmodified.</div>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
 (let cool-stuff [1 2 3 4 5 6 7 8 9])
-(print (list:dropWhile cool-stuff (fun (a) (< a 4))))  # [4 5 6 7 8 9]
+(print (dropWhile cool-stuff (fun (a) (< a 4))))  # [4 5 6 7 8 9]
 </code>
 </pre></div>
     </div>
-</section><section id="list:filter">
-    <h2>list:filter</h2>
+</section><section id="filter">
+    <h2>filter</h2>
 
     <div class="inner-section">
-        <div><code>(let list:filter (fun (_L _f) (...)))</code>
+        <div><code>(let filter (fun (_L _f) (...)))</code>
 <br>
 <div>Keep elements in a given list if they follow a predicate</div>
 <div><b>Note</b>
@@ -240,15 +242,15 @@ The original list is left unmodified.</div>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
 (import std.Math)
-(print (list:filter [1 2 3 4 5 6 7 8 9] math:even))  # [2 4 6 8]
+(print (filter [1 2 3 4 5 6 7 8 9] math:even))  # [2 4 6 8]
 </code>
 </pre></div>
     </div>
-</section><section id="list:map">
-    <h2>list:map</h2>
+</section><section id="map">
+    <h2>map</h2>
 
     <div class="inner-section">
-        <div><code>(let list:map (fun (_L _f) (...)))</code>
+        <div><code>(let map (fun (_L _f) (...)))</code>
 <br>
 <div>Apply a given function to each element of a list</div>
 <div><b>Note</b>
@@ -260,15 +262,15 @@ The original list is left unmodified.</div>
 <a href="https://github.com/rstefanic">@rstefanic</a></div></div><div><h4>Example</h4>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
-(print (list:map [1 2 3 4 5 6 7 8 9] (fun (e) (* e e))))  # [1 4 9 25 36 49 64 81]
+(print (map [1 2 3 4 5 6 7 8 9] (fun (e) (* e e))))  # [1 4 9 25 36 49 64 81]
 </code>
 </pre></div>
     </div>
-</section><section id="list:reduce">
-    <h2>list:reduce</h2>
+</section><section id="reduce">
+    <h2>reduce</h2>
 
     <div class="inner-section">
-        <div><code>(let list:reduce (fun (_L _f) (...)))</code>
+        <div><code>(let reduce (fun (_L _f) (...)))</code>
 <br>
 <div>Apply a function to the elements of a list to reduce it</div>
 <div><b>Note</b>
@@ -277,19 +279,19 @@ The original list is left unmodified.</div>
 <div><h4>Parameters</h4>
 <ul><li><code>_L</code>: the list to work on</li><li><code>_f</code>: the function to apply</li></ul></div>
 <div><h4>Author</h4>
-<a href="https://github.com/FrenchMasterSword">@FrenchMasterSword</a></div></div><div><h4>Example</h4>
+<a href="https://github.com/Unactived">@Unactived</a></div></div><div><h4>Example</h4>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
 (let cool [1 2 3 4 5 6 7 8 9])
-(print (list:reduce cool (fun (a b) (+ a b))))  # 45
+(print (reduce cool (fun (a b) (+ a b))))  # 45
 </code>
 </pre></div>
     </div>
-</section><section id="list:flatten">
-    <h2>list:flatten</h2>
+</section><section id="flatten">
+    <h2>flatten</h2>
 
     <div class="inner-section">
-        <div><code>(let list:flatten (fun (_L) (...)))</code>
+        <div><code>(let flatten (fun (_L) (...)))</code>
 <br>
 <div>Flatten a list</div>
 <div><b>Note</b>
@@ -302,15 +304,15 @@ The original list is left unmodified.</div>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
 (let cool [[1 2 3] [4] 5 6 [7 8] 9])
-(print (list:flatten cool))  # [1 2 3 4 5 6 7 8 9]
+(print (flatten cool))  # [1 2 3 4 5 6 7 8 9]
 </code>
 </pre></div>
     </div>
-</section><section id="list:flatmap">
-    <h2>list:flatMap</h2>
+</section><section id="flatmap">
+    <h2>flatMap</h2>
 
     <div class="inner-section">
-        <div><code>(let list:flatMap (fun (_L _f) (...)))</code>
+        <div><code>(let flatMap (fun (_L _f) (...)))</code>
 <br>
 <div>Apply a given function to each element of a list and then flatten it</div>
 <div><b>Note</b>
@@ -323,15 +325,15 @@ The original list is left unmodified.</div>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
 (let cool [1 2 3 4])
-(print (list:flatMap cool (fun (a) [a a])))  # [1 1 2 2 3 3 4 4]
+(print (flatMap cool (fun (a) [a a])))  # [1 1 2 2 3 3 4 4]
 </code>
 </pre></div>
     </div>
-</section><section id="list:take">
-    <h2>list:take</h2>
+</section><section id="take">
+    <h2>take</h2>
 
     <div class="inner-section">
-        <div><code>(let list:take (fun (_L _n) (...)))</code>
+        <div><code>(let take (fun (_L _n) (...)))</code>
 <br>
 <div>Take the first n elements of</div>
 <div><b>Note</b>
@@ -343,15 +345,15 @@ The original list is left unmodified.</div>
 <a href="https://github.com/rstefanic">@rstefanic</a></div></div><div><h4>Example</h4>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
-(print (list:take [1 2 3 4 5 6 7 8 9] 4))  # [1 2 3 4]
+(print (take [1 2 3 4 5 6 7 8 9] 4))  # [1 2 3 4]
 </code>
 </pre></div>
     </div>
-</section><section id="list:takewhile">
-    <h2>list:takeWhile</h2>
+</section><section id="takewhile">
+    <h2>takeWhile</h2>
 
     <div class="inner-section">
-        <div><code>(let list:takeWhile (fun (_L _f) (...)))</code>
+        <div><code>(let takeWhile (fun (_L _f) (...)))</code>
 <br>
 <div>Take the first n elements of a list, given a predicate</div>
 <div><b>Note</b>
@@ -367,11 +369,11 @@ The original list is left unmodified.</div>
 </code>
 </pre></div>
     </div>
-</section><section id="list:unzip">
-    <h2>list:unzip</h2>
+</section><section id="unzip">
+    <h2>unzip</h2>
 
     <div class="inner-section">
-        <div><code>(let list:unzip (fun (_L) (...)))</code>
+        <div><code>(let unzip (fun (_L) (...)))</code>
 <br>
 <div>Unzip a list of [[a b] [c d]...] into [[a c ...] [b d ...]]</div>
 <div><b>Note</b>
@@ -380,19 +382,19 @@ The original list is left unmodified.</div>
 <div><h4>Parameter</h4>
 <ul><li><code>_L</code>: the list to work on</li></ul></div>
 <div><h4>Author</h4>
-<a href="https://github.com/FrenchMasterSword">@FrenchMasterSword</a></div></div><div><h4>Example</h4>
+<a href="https://github.com/Unactived">@Unactived</a></div></div><div><h4>Example</h4>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
 (let zipped [[1 5] [2 6] [3 7] [4 8]])
-(print (list:unzip zipped))  # [[1 2 3 4] [5 6 7 8]]
+(print (unzip zipped))  # [[1 2 3 4] [5 6 7 8]]
 </code>
 </pre></div>
     </div>
-</section><section id="list:zip">
-    <h2>list:zip</h2>
+</section><section id="zip">
+    <h2>zip</h2>
 
     <div class="inner-section">
-        <div><code>(let list:zip (fun (_a _b) (...)))</code>
+        <div><code>(let zip (fun (_a _b) (...)))</code>
 <br>
 <div>Zip two lists into one: [1 2 3 4] and [5 6 7 8] will give [[1 5] [2 6] [3 7] [4 8]]</div>
 <div><b>Note</b>
@@ -401,20 +403,41 @@ The original lists are left unmodified.</div>
 <div><h4>Parameters</h4>
 <ul><li><code>_a</code>: the first list to work on</li><li><code>_b</code>: the second list to work on</li></ul></div>
 <div><h4>Author</h4>
-<a href="https://github.com/FrenchMasterSword">@FrenchMasterSword</a></div></div><div><h4>Example</h4>
+<a href="https://github.com/Unactived">@Unactived</a></div></div><div><h4>Example</h4>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
 (let a [1 2 3 4])
 (let b [5 6 7 8])
-(print (list:zip a b))  # [[1 5] [2 6] [3 7] [4 8]]
+(print (zip a b))  # [[1 5] [2 6] [3 7] [4 8]]
 </code>
 </pre></div>
     </div>
-</section><section id="list:foldleft">
-    <h2>list:foldLeft</h2>
+</section><section id="zipwithindex">
+    <h2>zipWithIndex</h2>
 
     <div class="inner-section">
-        <div><code>(let list:foldLeft (fun (_L _init _f) (...)))</code>
+        <div><code>(let zipWithIndex (fun (_L) (...)))</code>
+<br>
+<div>Zip a list elements with their index. [5 6 7 8] will give [[0 5] [1 6] [2 7] [3 8]]</div>
+<div><b>Note</b>
+: 
+The original list is left unmodified.</div>
+<div><h4>Parameter</h4>
+<ul><li><code>_L</code>: the list to iterate over</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(let a [5 6 7 8])
+(print (zipWithIndex a))  # [[0 5] [1 6] [2 7] [3 8]]
+</code>
+</pre></div>
+    </div>
+</section><section id="foldleft">
+    <h2>foldLeft</h2>
+
+    <div class="inner-section">
+        <div><code>(let foldLeft (fun (_L _init _f) (...)))</code>
 <br>
 <div>Fold a given list, starting from the left side</div>
 <div><b>Note</b>
@@ -427,15 +450,15 @@ The original list is left unmodified.</div>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
 (let a [1 2 3 4])
-(print (list:foldLeft a 0 (fun (a b) (+ a b))))  # 10
+(print (foldLeft a 0 (fun (a b) (+ a b))))  # 10
 </code>
 </pre></div>
     </div>
-</section><section id="list:forall">
-    <h2>list:forAll</h2>
+</section><section id="forall">
+    <h2>forAll</h2>
 
     <div class="inner-section">
-        <div><code>(let list:forAll (fun (_L _f) (...)))</code>
+        <div><code>(let forAll (fun (_L _f) (...)))</code>
 <br>
 <div>Check if a condition is verified for all elements of a list</div>
 <div><b>Note</b>
@@ -449,15 +472,15 @@ The original list is left unmodified.</div>
 <code class="rainbowjs" data-language="arkscript">
 (let a [1 2 3 4])
 (let f (fun (e) (< e 5)))
-(print (list:forAll a f))  # true
+(print (forAll a f))  # true
 </code>
 </pre></div>
     </div>
-</section><section id="list:any">
-    <h2>list:any</h2>
+</section><section id="any">
+    <h2>any</h2>
 
     <div class="inner-section">
-        <div><code>(let list:any (fun (_L _f) (...)))</code>
+        <div><code>(let any (fun (_L _f) (...)))</code>
 <br>
 <div>Check if a condition if verified for one or more elements of a list</div>
 <div><b>Note</b>
@@ -471,15 +494,15 @@ The original list is left unmodified.</div>
 <code class="rainbowjs" data-language="arkscript">
 (let a [1 2 3 4])
 (let f (fun (e) (< e 3)))
-(print (list:any a f))  # true
+(print (any a f))  # true
 </code>
 </pre></div>
     </div>
-</section><section id="list:countif">
-    <h2>list:countIf</h2>
+</section><section id="countif">
+    <h2>countIf</h2>
 
     <div class="inner-section">
-        <div><code>(let list:countIf (fun (_L _f) (...)))</code>
+        <div><code>(let countIf (fun (_L _f) (...)))</code>
 <br>
 <div>Count the number of elements in a list that match a condition</div>
 <div><b>Note</b>
@@ -630,7 +653,7 @@ The original list is not modified</div>
     <footer id="page-footer">
         <p class="text-center">
             Copyright &copy; 2020-2024 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.<br>
-            <i>Last generation at 2025-02-01 01:45:50.542290</i>
+            <i>Last generation at 2025-03-01 01:52:35.072528</i>
         </p>
     </footer>
 

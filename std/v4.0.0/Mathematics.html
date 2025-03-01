@@ -88,6 +88,8 @@
     <a href="#math:asinh">math:asinh</a>
 </li><li class="nav-item">
     <a href="#math:atanh">math:atanh</a>
+</li><li class="nav-item">
+    <a href="#random">random</a>
 </li>
                 </ul>
             </li>
@@ -459,6 +461,27 @@
 <div><h4>Author</h4>
 <a href="https://github.com/Gryfenfer97">@Gryfenfer97</a></div></div>
     </div>
+</section><section id="random">
+    <h2>random</h2>
+
+    <div class="inner-section">
+        <div><code>Builtin (random min max)</code>
+<br>
+<div>Compute a random number in [-2147483648, 2147483647] or in a custom range passed to the function</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameters</h4>
+<ul><li><code>min</code>: optional inclusive lower bound</li><li><code>max</code>: optional inclusive upper bound. Must be present if `min` is passed</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(print (random))  # a number in [-2147483648, 2147483647]
+(print (random 0 10))  # a number between 0 and 10
+</code>
+</pre></div>
+    </div>
 </section>
             </div>
             <!-- end of content -->
@@ -471,7 +494,7 @@
     <footer id="page-footer">
         <p class="text-center">
             Copyright &copy; 2020-2024 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.<br>
-            <i>Last generation at 2025-02-01 01:45:50.542290</i>
+            <i>Last generation at 2025-03-01 01:52:35.072528</i>
         </p>
     </footer>
 

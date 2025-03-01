@@ -51,7 +51,7 @@
                 <a href="#">Table of contents</a>
                 <ul class="nav">
                     <li class="nav-item">
-    <a href="#lazy:eval">lazy:eval</a>
+    <a href="#eval">eval</a>
 </li>
                 </ul>
             </li>
@@ -67,11 +67,11 @@
 
             <!-- Actual content of the page-->
             <div class="col-8" id="content">
-                <section id="lazy:eval">
-    <h2>lazy:eval</h2>
+                <section id="eval">
+    <h2>eval</h2>
 
     <div class="inner-section">
-        <div><code>(let lazy:eval (fun (f) (...)))</code>
+        <div><code>(let eval (fun (f) (...)))</code>
 <br>
 <div>Take a function, and return a closure to lazy evaluate it</div>
 <div><b>Note</b>
@@ -86,7 +86,7 @@
 (let complex_stuff (fun () {
     # do complex work in the function
     42 }))
-(let lazy (lazy:eval complex_stuff))
+(let lazy (eval complex_stuff))
 (print (lazy))
 </code>
 </pre></div>
@@ -103,7 +103,7 @@
     <footer id="page-footer">
         <p class="text-center">
             Copyright &copy; 2020-2024 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.<br>
-            <i>Last generation at 2025-02-01 01:45:50.542290</i>
+            <i>Last generation at 2025-03-01 01:52:35.072528</i>
         </p>
     </footer>
 
