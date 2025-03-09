@@ -20,13 +20,16 @@ block inner_content
                     | In a perfect world, the graphs should always go down, or at least not up. An upward trend can mean that a performance
                     | regression was introduced.
 
-                label(for="data-quantity") Data quantity
+                label(for="data-quantity") Data quantity&nbsp;
                 select(name="data-quantity", id="data-quantity")
                     option(value="all") All
                     option(value="100elem") Last 100 results
                     option(value="30elem") Last 30 results
                     option(value="10elem") Last 10 results
                 canvas#linechart
+
+                label Bar charts
+                div#barcharts
 
 append scripts
     script(src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js")

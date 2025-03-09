@@ -1,4 +1,5 @@
 let lineChart = null
+let barCharts = {}
 let languages = {}
 
 async function fetchLanguage(language, transform) {
@@ -12,15 +13,18 @@ async function fetchLanguage(language, transform) {
     return output
 }
 
-function computeDatasets(quantity) {
+function getQuantity(arr, quantity) {
+    return quantity !== null ? arr.slice(-quantity) : arr
+}
+
+function computeRelativeDatasets(quantity) {
     let competing = Object.keys(languages)
     competing.splice(competing.indexOf("arkscript"), 1)
 
-    let relative_datasets = []
+    let output_datasets = []
     for (let lang of competing) {
         // deepcopy to avoid modifying the original data
         let dataset = JSON.parse(JSON.stringify(languages["arkscript"]))
-
         let competing_dataset = languages[lang]
 
         dataset = Object.fromEntries(
@@ -47,8 +51,8 @@ function computeDatasets(quantity) {
         )
 
         for (let test in dataset) {
-            let data = quantity !== null ? dataset[test].slice(-quantity) : dataset[test]
-            relative_datasets.push({
+            let data = getQuantity(dataset[test], quantity)
+            output_datasets.push({
                 label: `ArkScript / ${lang} - ${test.split("-")[0]}`,
                 data: data,
                 showLine: true,
@@ -56,7 +60,63 @@ function computeDatasets(quantity) {
         }
     }
 
-    return relative_datasets
+    return output_datasets
+}
+
+function computeDatasetsWithMostRecent() {
+    let competing = Object.keys(languages)
+    competing.splice(competing.indexOf("arkscript"), 1)
+
+    let dataset = JSON.parse(JSON.stringify(languages["arkscript"]))
+    // test_name => {lang -> [...]}
+    let tests_to_lang = Object.fromEntries(
+        Object.entries(dataset).map(
+            ([k, v], _) => {
+                let prefix = k.split("-")[0]
+                return [prefix, {arkscript: v.at(-1).mean}]
+            }
+        )
+    )
+
+    for (let lang of competing) {
+        let competing_dataset = languages[lang]
+        for (let test in competing_dataset) {
+            let test_name = test.split("-")[0]
+            if (tests_to_lang.hasOwnProperty(test_name)) {
+                tests_to_lang[test_name][lang] = competing_dataset[test].at(-1).mean
+            }
+        }
+    }
+
+    let output = {}
+    for (let test_name in tests_to_lang) {
+        let res = []
+
+        let test_data = tests_to_lang[test_name]
+        for (let lang in test_data) {
+            res.push({
+                name: lang,
+                value: test_data[lang],
+            })
+        }
+        res.sort((a, b) => a.value < b.value)
+
+        let labels = res.map(x => x.name)
+        let values = res.map(x => x.value)
+
+        let colors = Array(labels.length).fill('rgba(54, 162, 235)')
+        colors[labels.indexOf("arkscript")] = 'rgba(75, 192, 192)'
+
+        output[test_name] = {
+            labels: labels,
+            datasets: [{
+                label: test_name,
+                data: values,
+                backgroundColor: colors,
+            }],
+        }
+    }
+    return output
 }
 
 async function showGraph(quantity = null) {
@@ -66,7 +126,7 @@ async function showGraph(quantity = null) {
     lineChart = new Chart("linechart", {
         type: "line",
         data: {
-            datasets: computeDatasets(quantity),
+            datasets: computeRelativeDatasets(quantity),
         },
         options: {
             responsive: true,
@@ -90,16 +150,54 @@ async function showGraph(quantity = null) {
     })
 }
 
-window.onload =  async () => {
+async function showBarGraph() {
+    let div = document.getElementById("barcharts")
+    div.innerHTML = null
+
+    let datasets = computeDatasetsWithMostRecent()
+
+    for (let test in datasets) {
+        let canvas = document.createElement("canvas")
+        let key = `barchart-${test}`
+        canvas.setAttribute("id", key)
+        div.appendChild(canvas)
+
+        if (barCharts.hasOwnProperty(key) && barCharts[key] !== null)
+            barCharts[key].destroy()
+
+        barCharts[key] = new Chart(key, {
+            type: "bar",
+            data: datasets[test],
+            options: {
+                indexAxis: 'y',
+                legend: {
+                    display: false,
+                },
+                tooltips: {
+                    mode: "index",
+                    intersect: false,
+                },
+                parsing: {
+                    yAxisKey: 'name',
+                    xAxisKey: 'value',
+                },
+            },
+        })
+    }
+}
+
+window.onload = async () => {
     languages["arkscript"] = await fetchLanguage("arkscript", x => x)
     languages["python"] = await fetchLanguage("python", x => x)
     languages["lua"] = await fetchLanguage("lua", x => x)
     languages["node"] = await fetchLanguage("node", x => x)
     languages["ruby"] = await fetchLanguage("ruby", x => x)
     languages["wren"] = await fetchLanguage("wren", x => x)
-    showGraph()
 
-    document.getElementById("data-quantity").addEventListener('change', function() {
+    showGraph()
+    showBarGraph()
+
+    document.getElementById("data-quantity").addEventListener('change', function () {
         if (this.value === 'all') {
             showGraph()
         } else if (this.value === '100elem') {
