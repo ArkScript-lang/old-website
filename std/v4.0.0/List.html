@@ -89,6 +89,12 @@
 </li><li class="nav-item">
     <a href="#countif">countIf</a>
 </li><li class="nav-item">
+    <a href="#iterate">iterate</a>
+</li><li class="nav-item">
+    <a href="#iota">iota</a>
+</li><li class="nav-item">
+    <a href="#chunkby">chunkBy</a>
+</li><li class="nav-item">
     <a href="#list:reverse">list:reverse</a>
 </li><li class="nav-item">
     <a href="#list:find">list:find</a>
@@ -516,7 +522,69 @@ The original list is left unmodified.</div>
 <code class="rainbowjs" data-language="arkscript">
 (let lst [1 2 3 4 5 6 7 8 9])
 (let is_even (fun (e) (= 0 (mod e 2))))
-(print (count_if lst is_even))  # 4
+(print (countIf lst is_even))  # 4
+</code>
+</pre></div>
+    </div>
+</section><section id="iterate">
+    <h2>iterate</h2>
+
+    <div class="inner-section">
+        <div><code>(let iterate (fun (_init _f _length) (...)))</code>
+<br>
+<div>Generate a sequence based on a unary function, initial value and length</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameters</h4>
+<ul><li><code>_init</code>: initial value of the sequence</li><li><code>_f</code>: unary function to generate values</li><li><code>_length</code>: the sequence length</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(let f (fun (x) (+ 7 x)))
+(print (iterate 0 f 10))  # [0 7 14 21 28 35 42 49 56 63]
+</code>
+</pre></div>
+    </div>
+</section><section id="iota">
+    <h2>iota</h2>
+
+    <div class="inner-section">
+        <div><code>(let iota (fun (_init _length) (...)))</code>
+<br>
+<div>Generate a sequence of numbers</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameters</h4>
+<ul><li><code>_init</code>: initial value of the sequence</li><li><code>_length</code>: the sequence length</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(print (iota 0 10))  # [0 1 2 3 4 5 6 7 8 9]
+</code>
+</pre></div>
+    </div>
+</section><section id="chunkby">
+    <h2>chunkBy</h2>
+
+    <div class="inner-section">
+        <div><code>(let chunkBy (fun (_L _length) (...)))</code>
+<br>
+<div>Chunk a list in sub-lists of size n</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameters</h4>
+<ul><li><code>_L</code>: list to chunk</li><li><code>_length</code>: size of the chunks</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(let indices (list:iota 1 9))  # [1 2 3 4 5 6 7 8 9]
+(print (list:chunkBy indices 3))  # [[1 2 3] [4 5 6] [7 8 9]]
 </code>
 </pre></div>
     </div>
@@ -652,8 +720,8 @@ The original list is not modified</div>
 
     <footer id="page-footer">
         <p class="text-center">
-            Copyright &copy; 2020-2024 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.<br>
-            <i>Last generation at 2025-03-01 01:52:35.072528</i>
+            Copyright &copy; 2020-2025 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.<br>
+            <i>Last generation at 2025-04-01 02:03:32.971888</i>
         </p>
     </footer>
 
