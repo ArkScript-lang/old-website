@@ -77,6 +77,38 @@ block inner_content
                         td 2 bytes
                         td Big endian layout
 
+                    tr: td.text-center(colspan="3") Filenames table
+                    tr
+                        td Filenames.count
+                        td 2 bytes
+                        td Big endian layout
+                    tr
+                        td Filename.value
+                        td Variable
+                        td Null-terminated string
+
+                    tr: td.text-center(colspan="3") Instruction location table
+                    tr
+                        td InstLocs.count
+                        td 2 bytes
+                        td Big endian layout
+                    tr
+                        td InstLoc.page_pointer
+                        td 2 bytes
+                        td Big endian layout
+                    tr
+                        td InstLoc.instruction_pointer
+                        td 2 bytes
+                        td Big endian layout
+                    tr
+                        td InstLoc.filename_id (refer to the Filenames table)
+                        td 2 bytes
+                        td Big endian layout
+                    tr
+                        td InstLoc.source_line (line in the source file, starting at 0)
+                        td 4 bytes
+                        td Big endian layout
+
                     tr: td.text-center(colspan="3") Code segments
                     tr
                         td Instruction count
@@ -172,7 +204,7 @@ block inner_content
                         tr
                             td #[code LOAD_SYMBOL_BY_INDEX] (0x02)
                             td stack index
-                            td Load a symbol from the locals stack by its index
+                            td Load a symbol from the locals stack by its index (starting from the end of the current scope)
                         tr
                             td #[code LOAD_CONST] (0x03)
                             td symbol id
@@ -282,166 +314,186 @@ block inner_content
                             td
                             td Create a new local scope
                         tr
-                            td #[code POP_SCOPE] (0x1e)
+                            td #[code RESET_SCOPE] (0x1e)
+                            td
+                            td Reset the current scope so that it is empty
+                        tr
+                            td #[code POP_SCOPE] (0x1f)
                             td
                             td Destroy the last local scope
                         tr
-                            td #[code ADD] (0x1f)
+                            td #[code ADD] (0x20)
                             td
                             td Push #[code TS1 + TS]
                         tr
-                            td #[code SUB] (0x20)
+                            td #[code SUB] (0x21)
                             td
                             td Push #[code TS1 - TS]
                         tr
-                            td #[code MUL] (0x21)
+                            td #[code MUL] (0x22)
                             td
                             td Push #[code TS1 * TS]
                         tr
-                            td #[code DIV] (0x22)
+                            td #[code DIV] (0x23)
                             td
                             td Push #[code TS1 / TS]
                         tr
-                            td #[code GT] (0x23)
+                            td #[code GT] (0x24)
                             td
                             td Push #[code TS1 > TS]
                         tr
-                            td #[code LT] (0x24)
+                            td #[code LT] (0x25)
                             td
                             td Push #[code TS1 < TS]
                         tr
-                            td #[code LE] (0x25)
+                            td #[code LE] (0x26)
                             td
                             td Push #[code TS1 <= TS]
                         tr
-                            td #[code GE] (0x26)
+                            td #[code GE] (0x27)
                             td
                             td Push #[code TS1 >= TS]
                         tr
-                            td #[code NEQ] (0x27)
+                            td #[code NEQ] (0x28)
                             td
                             td Push #[code TS1 != TS]
                         tr
-                            td #[code EQ] (0x28)
+                            td #[code EQ] (0x29)
                             td
                             td Push #[code TS1 == TS]
                         tr
-                            td #[code LEN] (0x29)
+                            td #[code LEN] (0x2a)
                             td
                             td Push #[code len(TS)], TS must be a list
                         tr
-                            td #[code EMPTY] (0x2a)
+                            td #[code EMPTY] (0x2b)
                             td
                             td Push #[code empty?(TS)], TS must be a list or string
                         tr
-                            td #[code TAIL] (0x2b)
+                            td #[code TAIL] (0x2c)
                             td
                             td Push #[code tail(TS)], all the elements of TS except the first one. TS must be a list or string
                         tr
-                            td #[code HEAD] (0x2c)
+                            td #[code HEAD] (0x2d)
                             td
                             td Push #[code head(TS)], the first element of TS or nil if empty. TS must be a list or string
                         tr
-                            td #[code ISNIL] (0x2d)
+                            td #[code ISNIL] (0x2e)
                             td
                             td Push true if TS is nil, false otherwise
                         tr
-                            td #[code ASSERT] (0x2e)
+                            td #[code ASSERT] (0x2f)
                             td
                             td Throw an exception if TS1 is false, and display TS (must be a string). Do not push anything on the stack
                         tr
-                            td #[code TO_NUM] (0x2f)
+                            td #[code TO_NUM] (0x30)
                             td
                             td Convert TS to number (must be a string)
                         tr
-                            td #[code TO_STR] (0x30)
+                            td #[code TO_STR] (0x31)
                             td
                             td Convert TS to string
                         tr
-                            td #[code AT] (0x31)
+                            td #[code AT] (0x32)
                             td
                             td Push the value at index TS (must be a number) in TS1, which must be a list or string
                         tr
-                            td #[code AT_AT] (0x32)
+                            td #[code AT_AT] (0x33)
                             td
                             td Push the value at index TS (must be a number), inside the list or string at index TS1 (must be a number) in the list at TS2
                         tr
-                            td #[code MOD] (0x33)
+                            td #[code MOD] (0x34)
                             td
                             td Push #[code TS1 % TS]
                         tr
-                            td #[code TYPE] (0x34)
+                            td #[code TYPE] (0x35)
                             td
                             td Push the type of TS as a string
                         tr
-                            td #[code HASFIELD] (0x35)
+                            td #[code HASFIELD] (0x36)
                             td
                             td Check if TS1 is a closure field of TS. TS must be a Closure, TS1 a String
                         tr
-                            td #[code NOT] (0x36)
+                            td #[code NOT] (0x37)
                             td
                             td Push #[code !TS]
                         tr
-                            td #[code LOAD_CONST_LOAD_CONST] (0x37)
+                            td #[code LOAD_CONST_LOAD_CONST] (0x38)
                             td constant id, constant id
                             td Load two consts (#[code primary] then #[code secondary]) on the stack in one instruction
                         tr
-                            td #[code LOAD_CONST_STORE] (0x38)
+                            td #[code LOAD_CONST_STORE] (0x39)
                             td constant id, symbol id
                             td Load const #[code primary] into the symbol #[code secondary] (create a variable)
                         tr
-                            td #[code LOAD_CONST_SET_VAL] (0x39)
+                            td #[code LOAD_CONST_SET_VAL] (0x3a)
                             td constant id, symbol id
                             td Load const #[code primary] into the symbol #[code secondary] (search for the variable with the given symbol id)
                         tr
-                            td #[code STORE_FROM] (0x3a)
+                            td #[code STORE_FROM] (0x3b)
                             td symbol id, symbol id
                             td Store the value of the symbol #[code primary] into a new variable #[code secondary]
                         tr
-                            td #[code STORE_FROM_INDEX] (0x3b)
+                            td #[code STORE_FROM_INDEX] (0x3c)
                             td symbol index, symbol id
                             td Store the value of the symbol #[code primary] into a new variable #[code secondary]
                         tr
-                            td #[code SET_VAL_FROM] (0x3c)
+                            td #[code SET_VAL_FROM] (0x3d)
                             td symbol id, symbol id
                             td Store the value of the symbol #[code primary] into an existing variable #[code secondary]
                         tr
-                            td #[code SET_VAL_FROM_INDEX] (0x3d)
+                            td #[code SET_VAL_FROM_INDEX] (0x3e)
                             td symbol index, symbol id
                             td Store the value of the symbol #[code primary] into an existing variable #[code secondary]
                         tr
-                            td #[code INCREMENT] (0x3e)
+                            td #[code INCREMENT] (0x3f)
                             td symbol id, count
                             td Increment the variable #[code primary] by #[code count] and push its value on the stack
                         tr
-                            td #[code INCREMENT_BY_INDEX] (0x3f)
+                            td #[code INCREMENT_BY_INDEX] (0x40)
                             td symbol index, count
                             td Increment the variable #[code primary] by #[code count] and push its value on the stack
                         tr
-                            td #[code DECREMENT] (0x40)
+                            td #[code DECREMENT] (0x41)
                             td symbol id, count
                             td Decrement the variable #[code primary] by #[code count] and push its value on the stack
                         tr
-                            td #[code DECREMENT_BY_INDEX] (0x41)
+                            td #[code DECREMENT_BY_INDEX] (0x42)
                             td symbol index, count
                             td Decrement the variable #[code primary] by #[code count] and push its value on the stack
                         tr
-                            td #[code STORE_TAIL] (0x42)
+                            td #[code STORE_TAIL] (0x43)
                             td symbol id, symbol id
                             td Load the symbol #[code primary], compute its tail, store it in a new variable #[code secondary]
                         tr
-                            td #[code STORE_HEAD] (0x43)
+                            td #[code STORE_TAIL_BY_INDEX] (0x44)
+                            td symbol index, symbol id
+                            td Load the symbol #[code primary], compute its tail, store it in a new variable #[code secondary]
+                        tr
+                            td #[code STORE_HEAD] (0x45)
                             td symbol id, symbol id
                             td Load the symbol #[code primary], compute its head, store it in a new variable #[code secondary]
                         tr
-                            td #[code SET_VAL_TAIL] (0x44)
+                            td #[code STORE_HEAD_BY_INDEX] (0x46)
+                            td symbol index, symbol id
+                            td Load the symbol #[code primary], compute its head, store it in a new variable #[code secondary]
+                        tr
+                            td #[code SET_VAL_TAIL] (0x47)
                             td symbol id, symbol id
                             td Load the symbol #[code primary], compute its tail, store it in an existing variable #[code secondary]
                         tr
-                            td #[code SET_VAL_HEAD] (0x45)
+                            td #[code SET_VAL_TAIL_BY_INDEX] (0x48)
+                            td symbol index, symbol id
+                            td Load the symbol #[code primary], compute its tail, store it in an existing variable #[code secondary]
+                        tr
+                            td #[code SET_VAL_HEAD] (0x49)
                             td symbol id, symbol id
                             td Load the symbol #[code primary], compute its head, store it in an existing variable #[code secondary]
                         tr
-                            td #[code CALL_BUILTIN] (0x46)
+                            td #[code SET_VAL_HEAD_BY_INDEX] (0x4a)
+                            td symbol index, symbol id
+                            td Load the symbol #[code primary], compute its head, store it in an existing variable #[code secondary]
+                        tr
+                            td #[code CALL_BUILTIN] (0x4b)
                             td builtin id, argument count
                             td Call a builtin by its id in #[code primary], with #[code secondary] arguments. Bypass the stack size check because we do not push IP/PP since builtins calls do not alter the stack

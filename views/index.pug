@@ -77,34 +77,38 @@ block inner_content
         div.panel-body
             pre: code.rainbowjs(data-language="arkscript-bytecode")
                 | Version:   4.0.0
-                | Timestamp: 1716661603
-                | SHA256:    dac188c0b6e985817da6b61f2df6f95603b3b8fbdb7f4bdd6862534f1a3e52
+                | Timestamp: 1745512684
+                | SHA256:    6311b3eb87739fac8751dc8147fb6d29e66230ea8a726e5115515735b8709148
                 |
                 | Symbols table (length: 3)
                 | 0) foo
                 | 1) a
                 | 2) b
                 |
-                | Constants table (length: 2)
+                | Constants table (length: 3)
                 | 0) (PageAddr) 1
-                | 1) (Number) 3.000000
+                | 1) (Number) 1
+                | 2) (Number) 2
                 |
-                | Code segment 0 (length: 8)
-                | 0 00 02 00 00 LOAD_CONST (PageAddr) 1
-                | 1 00 05 00 00 LET foo
-                | 2 00 02 00 01 LOAD_CONST (Number) 3.000000
-                | 3 00 01 00 00 LOAD_SYMBOL foo
-                | 4 00 0a 00 01 CALL (1)
-                | 5 00 0c 00 09 BUILTIN print
-                | 6 00 0a 00 01 CALL (1)
-                | 7 00 09 00 00 HALT
+                | Instruction locations table (length: 2)
+                |  PP, IP
+                |   0,  0 -> a.ark:2
+                |   0,  3 -> a.ark:4
                 |
-                | Code segment 1 (length: 5)
-                | 0 00 0d 00 01 MUT a
-                | 1 00 0d 00 02 MUT b
-                | 2 00 0c 00 02 BUILTIN nil
-                | 3 00 08 00 00 RET
-                | 4 00 09 00 00 HALT
+                | Code segment 0 (length: 24)
+                |    0 39 00 00 00 LOAD_CONST_STORE
+                |    1 38 00 20 01 LOAD_CONST_LOAD_CONST
+                |    2 02 00 00 00 LOAD_SYMBOL_BY_INDEX (0)
+                |    3 0b 00 00 02 CALL (2)
+                |    4 4b 00 10 09 CALL_BUILTIN (4105)
+                |    5 0a 00 00 00 HALT
+                |
+                | Code segment 1 (length: 20)
+                |    0 05 00 00 01 STORE a
+                |    1 05 00 00 02 STORE b
+                |    2 0d 00 00 02 BUILTIN nil
+                |    3 09 00 00 00 RET
+                |    4 0a 00 00 00 HALT
 
     //- Straightforward embedding
     div.panel.col-5.col-lg-6.col-sm-11

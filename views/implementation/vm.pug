@@ -35,4 +35,4 @@ block inner_content
                 h3 Backtrace generation
                 p.
                     This is done by #[code VM::backtrace] when an exception was thrown while the VM was running. It will display at most the
-                    last 7 elements in the call stack, with the function name (if any) and the arguments with their value.
+                    last 7 (distinct) elements in the call stack, with the function name (if any) and the source line.
