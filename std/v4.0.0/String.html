@@ -65,6 +65,8 @@
 </li><li class="nav-item">
     <a href="#join">join</a>
 </li><li class="nav-item">
+    <a href="#stripmargin">stripMargin</a>
+</li><li class="nav-item">
     <a href="#string:format">string:format</a>
 </li><li class="nav-item">
     <a href="#string:find">string:find</a>
@@ -243,6 +245,28 @@ The original list isn't modified</div>
 </code>
 </pre></div>
     </div>
+</section><section id="stripmargin">
+    <h2>stripMargin</h2>
+
+    <div class="inner-section">
+        <div><code>(let stripMargin (fun (_str) (...)))</code>
+<br>
+<div>Strip the margin of a multiline string</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameter</h4>
+<ul><li><code>_str</code>: multiline string, margin is (space)*(|)</li></ul></div>
+</div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(let s "hello
+       |abc
+       |def")
+(string:stripMargin s)
+</code>
+</pre></div>
+    </div>
 </section><section id="string:format">
     <h2>string:format</h2>
 
@@ -380,7 +404,7 @@ The original string is not modified</div>
     <footer id="page-footer">
         <p class="text-center">
             Copyright &copy; 2020-2025 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.<br>
-            <i>Last generation at 2025-04-01 02:03:32.971888</i>
+            <i>Last generation at 2025-05-01 02:05:37.011352</i>
         </p>
     </footer>
 
