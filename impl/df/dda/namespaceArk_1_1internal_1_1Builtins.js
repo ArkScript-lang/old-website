@@ -40,6 +40,7 @@ var namespaceArk_1_1internal_1_1Builtins =
       [ "isinf_", "d0/d04/namespaceArk_1_1internal_1_1Builtins_1_1Mathematics.html#a4d8c9aae724e80765fbe8649748f9236", null ],
       [ "isnan_", "d0/d04/namespaceArk_1_1internal_1_1Builtins_1_1Mathematics.html#ae4126f07b704960f3470103d14da5493", null ],
       [ "logarithm", "d0/d04/namespaceArk_1_1internal_1_1Builtins_1_1Mathematics.html#a722a4dbd2a563205661b90da05f2dfe2", null ],
+      [ "random", "d0/d04/namespaceArk_1_1internal_1_1Builtins_1_1Mathematics.html#a58d045b58126e2c68b6893521e2cd783", null ],
       [ "round_", "d0/d04/namespaceArk_1_1internal_1_1Builtins_1_1Mathematics.html#af23f9708b373b5bead1058f84e65d5fe", null ],
       [ "sin_", "d0/d04/namespaceArk_1_1internal_1_1Builtins_1_1Mathematics.html#af33a69e64116b6d92468930f30264b00", null ],
       [ "sinh_", "d0/d04/namespaceArk_1_1internal_1_1Builtins_1_1Mathematics.html#ae3f52af87b45a4dd8b3f15a4cb2f013e", null ],

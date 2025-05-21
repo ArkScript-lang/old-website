@@ -5,13 +5,17 @@ var annotated_dup =
         [ "LineColorContextCounts", "d1/d92/structArk_1_1Diagnostics_1_1LineColorContextCounts.html", "d1/d92/structArk_1_1Diagnostics_1_1LineColorContextCounts" ]
       ] ],
       [ "internal", "dc/d0e/namespaceArk_1_1internal.html", [
+        [ "ieee754", "d6/dbf/namespaceArk_1_1internal_1_1ieee754.html", [
+          [ "DecomposedDouble", "d3/dc3/structArk_1_1internal_1_1ieee754_1_1DecomposedDouble.html", "d3/dc3/structArk_1_1internal_1_1ieee754_1_1DecomposedDouble" ]
+        ] ],
         [ "IR", "dc/d02/namespaceArk_1_1internal_1_1IR.html", [
           [ "Entity", "dc/d35/classArk_1_1internal_1_1IR_1_1Entity.html", "dc/d35/classArk_1_1internal_1_1IR_1_1Entity" ]
         ] ],
+        [ "ASTLowerer", "d3/d57/classArk_1_1internal_1_1ASTLowerer.html", "d3/d57/classArk_1_1internal_1_1ASTLowerer" ],
         [ "BaseParser", "d8/d00/classArk_1_1internal_1_1BaseParser.html", "d8/d00/classArk_1_1internal_1_1BaseParser" ],
         [ "CharPred", "d0/d86/structArk_1_1internal_1_1CharPred.html", "d0/d86/structArk_1_1internal_1_1CharPred" ],
         [ "Closure", "d9/d4e/classArk_1_1internal_1_1Closure.html", "d9/d4e/classArk_1_1internal_1_1Closure" ],
-        [ "Compiler", "db/de9/classArk_1_1internal_1_1Compiler.html", "db/de9/classArk_1_1internal_1_1Compiler" ],
+        [ "ClosureScope", "d9/d6c/classArk_1_1internal_1_1ClosureScope.html", "d9/d6c/classArk_1_1internal_1_1ClosureScope" ],
         [ "ConditionalExecutor", "d1/dd3/classArk_1_1internal_1_1ConditionalExecutor.html", "d1/dd3/classArk_1_1internal_1_1ConditionalExecutor" ],
         [ "Declaration", "d1/dcf/structArk_1_1internal_1_1Declaration.html", "d1/dcf/structArk_1_1internal_1_1Declaration" ],
         [ "EntityWithOffset", "d9/dd9/structArk_1_1internal_1_1EntityWithOffset.html", "d9/dd9/structArk_1_1internal_1_1EntityWithOffset" ],
@@ -21,6 +25,7 @@ var annotated_dup =
         [ "Future", "d4/d6d/classArk_1_1internal_1_1Future.html", "d4/d6d/classArk_1_1internal_1_1Future" ],
         [ "Import", "da/d03/structArk_1_1internal_1_1Import.html", "da/d03/structArk_1_1internal_1_1Import" ],
         [ "ImportSolver", "d2/d90/classArk_1_1internal_1_1ImportSolver.html", "d2/d90/classArk_1_1internal_1_1ImportSolver" ],
+        [ "InstLoc", "d5/d64/structArk_1_1internal_1_1InstLoc.html", "d5/d64/structArk_1_1internal_1_1InstLoc" ],
         [ "IRCompiler", "d0/da1/classArk_1_1internal_1_1IRCompiler.html", "d0/da1/classArk_1_1internal_1_1IRCompiler" ],
         [ "IROptimizer", "da/d85/classArk_1_1internal_1_1IROptimizer.html", "da/d85/classArk_1_1internal_1_1IROptimizer" ],
         [ "IsAlnum", "d6/dd4/structArk_1_1internal_1_1IsAlnum.html", "d6/dd4/structArk_1_1internal_1_1IsAlnum" ],
@@ -33,6 +38,7 @@ var annotated_dup =
         [ "IsNot", "dd/d27/structArk_1_1internal_1_1IsNot.html", "dd/d27/structArk_1_1internal_1_1IsNot" ],
         [ "IsSpace", "dc/df7/structArk_1_1internal_1_1IsSpace.html", "dc/df7/structArk_1_1internal_1_1IsSpace" ],
         [ "IsSymbol", "de/d0c/structArk_1_1internal_1_1IsSymbol.html", "de/d0c/structArk_1_1internal_1_1IsSymbol" ],
+        [ "LocalsLocator", "de/d21/classArk_1_1internal_1_1LocalsLocator.html", "de/d21/classArk_1_1internal_1_1LocalsLocator" ],
         [ "Logger", "d6/d2f/classArk_1_1internal_1_1Logger.html", "d6/d2f/classArk_1_1internal_1_1Logger" ],
         [ "MacroExecutor", "d5/d8f/classArk_1_1internal_1_1MacroExecutor.html", "d5/d8f/classArk_1_1internal_1_1MacroExecutor" ],
         [ "MacroProcessor", "d5/db5/classArk_1_1internal_1_1MacroProcessor.html", "d5/db5/classArk_1_1internal_1_1MacroProcessor" ],
@@ -45,8 +51,8 @@ var annotated_dup =
         [ "Package", "dd/d76/structArk_1_1internal_1_1Package.html", "dd/d76/structArk_1_1internal_1_1Package" ],
         [ "Parser", "d9/d0c/classArk_1_1internal_1_1Parser.html", "d9/d0c/classArk_1_1internal_1_1Parser" ],
         [ "Pass", "da/d7b/classArk_1_1internal_1_1Pass.html", "da/d7b/classArk_1_1internal_1_1Pass" ],
-        [ "Scope", "d5/d74/classArk_1_1internal_1_1Scope.html", "d5/d74/classArk_1_1internal_1_1Scope" ],
         [ "ScopeResolver", "dd/d92/classArk_1_1internal_1_1ScopeResolver.html", "dd/d92/classArk_1_1internal_1_1ScopeResolver" ],
+        [ "ScopeView", "d2/ddd/classArk_1_1internal_1_1ScopeView.html", "d2/ddd/classArk_1_1internal_1_1ScopeView" ],
         [ "SharedLibrary", "d0/d8a/classArk_1_1internal_1_1SharedLibrary.html", "d0/d8a/classArk_1_1internal_1_1SharedLibrary" ],
         [ "StaticScope", "d3/d8e/classArk_1_1internal_1_1StaticScope.html", "d3/d8e/classArk_1_1internal_1_1StaticScope" ],
         [ "SymbolExecutor", "d5/dae/classArk_1_1internal_1_1SymbolExecutor.html", "d5/dae/classArk_1_1internal_1_1SymbolExecutor" ],
@@ -58,14 +64,19 @@ var annotated_dup =
       ] ],
       [ "types", "d4/d7c/namespaceArk_1_1types.html", [
         [ "Contract", "d3/dfb/structArk_1_1types_1_1Contract.html", "d3/dfb/structArk_1_1types_1_1Contract" ],
+        [ "TypeCheckingError", "dd/d29/classArk_1_1types_1_1TypeCheckingError.html", "dd/d29/classArk_1_1types_1_1TypeCheckingError" ],
         [ "Typedef", "d9/dbf/structArk_1_1types_1_1Typedef.html", "d9/dbf/structArk_1_1types_1_1Typedef" ]
       ] ],
       [ "AssertionFailed", "d3/df9/classArk_1_1AssertionFailed.html", "d3/df9/classArk_1_1AssertionFailed" ],
       [ "BytecodeReader", "d8/d08/classArk_1_1BytecodeReader.html", "d8/d08/classArk_1_1BytecodeReader" ],
       [ "Code", "d4/dd5/structArk_1_1Code.html", "d4/dd5/structArk_1_1Code" ],
       [ "CodeError", "d4/d0b/structArk_1_1CodeError.html", "d4/d0b/structArk_1_1CodeError" ],
+      [ "CodeErrorContext", "db/d27/structArk_1_1CodeErrorContext.html", "db/d27/structArk_1_1CodeErrorContext" ],
       [ "Error", "d6/d43/classArk_1_1Error.html", "d6/d43/classArk_1_1Error" ],
+      [ "Filenames", "d4/de7/structArk_1_1Filenames.html", "d4/de7/structArk_1_1Filenames" ],
+      [ "InstLocations", "d3/df5/structArk_1_1InstLocations.html", "d3/df5/structArk_1_1InstLocations" ],
       [ "mapping", "d4/dd8/structArk_1_1mapping.html", "d4/dd8/structArk_1_1mapping" ],
+      [ "NestedError", "db/ddb/classArk_1_1NestedError.html", "db/ddb/classArk_1_1NestedError" ],
       [ "Repl", "de/d60/classArk_1_1Repl.html", "de/d60/classArk_1_1Repl" ],
       [ "State", "d1/d37/classArk_1_1State.html", "d1/d37/classArk_1_1State" ],
       [ "Symbols", "d9/dba/structArk_1_1Symbols.html", "d9/dba/structArk_1_1Symbols" ],
@@ -75,8 +86,7 @@ var annotated_dup =
       [ "Values", "d0/d56/structArk_1_1Values.html", "d0/d56/structArk_1_1Values" ],
       [ "Version", "d6/dab/structArk_1_1Version.html", "d6/dab/structArk_1_1Version" ],
       [ "VM", "d2/d93/classArk_1_1VM.html", "d2/d93/classArk_1_1VM" ],
-      [ "Welder", "d7/da8/classArk_1_1Welder.html", "d7/da8/classArk_1_1Welder" ],
-      [ "ZeroDivisionError", "da/d18/classArk_1_1ZeroDivisionError.html", "da/d18/classArk_1_1ZeroDivisionError" ]
+      [ "Welder", "d7/da8/classArk_1_1Welder.html", "d7/da8/classArk_1_1Welder" ]
     ] ],
     [ "std", null, [
       [ "hash< Ark::internal::Declaration >", "d5/d2b/structstd_1_1hash_3_01Ark_1_1internal_1_1Declaration_01_4.html", "d5/d2b/structstd_1_1hash_3_01Ark_1_1internal_1_1Declaration_01_4" ]

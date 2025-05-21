@@ -23,7 +23,7 @@ digraph "/Users/fola/Documents/ArkScript/Ark/include/Ark/VM/ExecutionContext.hpp
   Node6 -> Node9 [id="edge8_Node000006_Node000009",color="steelblue1",style="solid",tooltip=" "];
   Node9 [id="Node000009",label="cstddef",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node1 -> Node10 [id="edge9_Node000001_Node000010",color="steelblue1",style="solid",tooltip=" "];
-  Node10 [id="Node000010",label="Ark/VM/Value.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$de/dfd/Value_8hpp.html",tooltip=" "];
+  Node10 [id="Node000010",label="Ark/VM/Value.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$de/dfd/Value_8hpp.html",tooltip="Default value type handled by the virtual machine."];
   Node10 -> Node11 [id="edge10_Node000010_Node000011",color="steelblue1",style="solid",tooltip=" "];
   Node11 [id="Node000011",label="vector",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node10 -> Node12 [id="edge11_Node000010_Node000012",color="steelblue1",style="solid",tooltip=" "];
@@ -47,9 +47,17 @@ digraph "/Users/fola/Documents/ArkScript/Ark/include/Ark/VM/ExecutionContext.hpp
   Node17 -> Node16 [id="edge23_Node000017_Node000016",color="steelblue1",style="solid",tooltip=" "];
   Node10 -> Node16 [id="edge24_Node000010_Node000016",color="steelblue1",style="solid",tooltip=" "];
   Node1 -> Node18 [id="edge25_Node000001_Node000018",color="steelblue1",style="solid",tooltip=" "];
-  Node18 [id="Node000018",label="Ark/VM/Scope.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d8/dcd/Scope_8hpp.html",tooltip="The virtual machine scope system."];
-  Node18 -> Node11 [id="edge26_Node000018_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node18 [id="Node000018",label="Ark/VM/ScopeView.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d8/d45/ScopeView_8hpp.html",tooltip=" "];
+  Node18 -> Node2 [id="edge26_Node000018_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node18 -> Node8 [id="edge27_Node000018_Node000008",color="steelblue1",style="solid",tooltip=" "];
   Node18 -> Node16 [id="edge28_Node000018_Node000016",color="steelblue1",style="solid",tooltip=" "];
   Node18 -> Node10 [id="edge29_Node000018_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node19 [id="edge30_Node000001_Node000019",color="steelblue1",style="solid",tooltip=" "];
+  Node19 [id="Node000019",label="Ark/VM/Value/ClosureScope.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d1/d71/ClosureScope_8hpp.html",tooltip="Subtype of the value type, handling closures."];
+  Node19 -> Node11 [id="edge31_Node000019_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node19 -> Node20 [id="edge32_Node000019_Node000020",color="steelblue1",style="solid",tooltip=" "];
+  Node20 [id="Node000020",label="utility",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node19 -> Node8 [id="edge33_Node000019_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node19 -> Node16 [id="edge34_Node000019_Node000016",color="steelblue1",style="solid",tooltip=" "];
+  Node19 -> Node10 [id="edge35_Node000019_Node000010",color="steelblue1",style="solid",tooltip=" "];
 }

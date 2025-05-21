@@ -35,4 +35,5 @@ digraph "Ark::internal::IRCompiler"
   Node12 [id="Node000012",label="std::vector\< IR::Block \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
   Node10 -> Node12 [id="edge16_Node000012_Node000010",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" elements",fontcolor="grey" ];
   Node10 -> Node12 [id="edge17_Node000012_Node000010",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< IR::Block \>",fontcolor="grey" ];
+  Node9 -> Node1 [id="edge18_Node000001_Node000009",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_filenames",fontcolor="grey" ];
 }

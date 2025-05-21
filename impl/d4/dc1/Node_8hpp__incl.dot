@@ -29,6 +29,12 @@ digraph "/Users/fola/Documents/ArkScript/Ark/include/Ark/Compiler/AST/Node.hpp"
   Node8 -> Node5 [id="edge12_Node000008_Node000005",color="steelblue1",style="solid",tooltip=" "];
   Node8 -> Node11 [id="edge13_Node000008_Node000011",color="steelblue1",style="solid",tooltip=" "];
   Node11 [id="Node000011",label="cinttypes",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
-  Node1 -> Node12 [id="edge14_Node000001_Node000012",color="steelblue1",style="solid",tooltip=" "];
-  Node12 [id="Node000012",label="Ark/Platform.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d5/d40/Platform_8hpp.html",tooltip="ArkScript configuration macros."];
+  Node8 -> Node12 [id="edge14_Node000008_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="Ark/Constants.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d6/de9/Constants_8hpp.html",tooltip="Constants used by ArkScript."];
+  Node12 -> Node10 [id="edge15_Node000012_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node12 -> Node11 [id="edge16_Node000012_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node12 -> Node13 [id="edge17_Node000012_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="cstddef",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node1 -> Node14 [id="edge18_Node000001_Node000014",color="steelblue1",style="solid",tooltip=" "];
+  Node14 [id="Node000014",label="Ark/Platform.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d5/d40/Platform_8hpp.html",tooltip="ArkScript configuration macros."];
 }

@@ -1,61 +1,68 @@
 <map id="/Users/fola/Documents/ArkScript/Ark/include/Ark/Compiler/IntermediateRepresentation/IRCompiler.hpp" name="/Users/fola/Documents/ArkScript/Ark/include/Ark/Compiler/IntermediateRepresentation/IRCompiler.hpp">
-<area shape="rect" id="Node000001" title="Compile the intermediate representation to bytecode." alt="" coords="722,5,987,76"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="1044,360,1102,386"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="917,74,971,111,1028,159,1080,217,1101,250,1118,286,1121,303,1117,320,1098,350,1094,347,1112,318,1115,303,1113,287,1097,253,1076,220,1024,163,968,115,914,79"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="542,360,596,386"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="722,74,634,104,542,148,498,176,458,209,422,246,393,288,388,299,392,310,442,329,528,357,527,362,440,334,388,314,383,299,388,285,418,242,454,205,495,172,539,144,632,99,720,69"/>
-<area shape="rect" id="Node000004" href="$d5/d40/Platform_8hpp.html" title="ArkScript configuration macros." alt="" coords="402,286,522,312"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="803,79,495,280,492,275,800,74"/>
-<area shape="rect" id="Node000005" href="$d9/d11/Logger_8hpp.html" title="Internal logger." alt="" coords="219,286,327,312"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="722,52,616,61,507,76,411,97,374,111,348,126,319,158,299,197,286,237,279,271,273,270,281,236,294,195,314,155,344,122,372,106,410,92,506,71,615,56,721,46"/>
-<area shape="rect" id="Node000011" href="$d8/ddd/Common_8hpp.html" title="Common code for the compiler." alt="" coords="1228,286,1408,312"/>
-<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="988,58,1076,83,1120,100,1161,122,1207,156,1248,197,1305,272,1301,275,1244,201,1204,160,1158,126,1117,105,1074,88,987,63"/>
-<area shape="rect" id="Node000015" href="$dd/de7/ValTableElem_8hpp.html" title="The basic value type handled by the compiler." alt="" coords="752,124,957,150"/>
-<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="857,76,857,108,852,108,852,76"/>
-<area shape="rect" id="Node000021" href="$de/da6/Entity_8hpp.html" title="An entity in the IR is a bundle of information." alt="" coords="1358,198,1532,238"/>
-<area shape="poly" id="edge31_Node000001_Node000021" title=" " alt="" coords="988,55,1128,80,1203,99,1275,122,1345,153,1404,187,1402,192,1342,157,1273,126,1201,104,1127,85,987,60"/>
-<area shape="poly" id="edge9_Node000005_Node000002" title=" " alt="" coords="327,303,390,309,1029,365,1028,370,390,315,327,309"/>
-<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="328,309,528,357,526,362,327,315"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="330,360,402,386"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="290,310,340,348,337,353,287,315"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="425,360,518,386"/>
-<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="307,310,424,352,423,357,306,315"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="5,360,66,386"/>
-<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="233,315,81,361,80,355,232,310"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="90,360,200,386"/>
-<area shape="poly" id="edge10_Node000005_Node000009" title=" " alt="" coords="252,315,181,354,179,350,250,310"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="224,360,306,386"/>
-<area shape="poly" id="edge11_Node000005_Node000010" title=" " alt="" coords="274,313,271,345,265,344,269,312"/>
-<area shape="poly" id="edge15_Node000011_Node000002" title=" " alt="" coords="1277,315,1117,361,1116,356,1276,310"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="1616,360,1666,386"/>
-<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="1374,310,1601,360,1600,365,1373,315"/>
-<area shape="rect" id="Node000013" title=" " alt="" coords="1274,360,1362,386"/>
-<area shape="poly" id="edge14_Node000011_Node000013" title=" " alt="" coords="1321,312,1321,344,1316,344,1316,312"/>
-<area shape="rect" id="Node000014" title=" " alt="" coords="1397,360,1471,386"/>
-<area shape="poly" id="edge16_Node000011_Node000014" title=" " alt="" coords="1339,310,1403,349,1400,354,1336,315"/>
-<area shape="poly" id="edge19_Node000015_Node000003" title=" " alt="" coords="820,153,773,173,715,202,657,240,606,288,588,316,577,346,572,344,583,314,601,285,653,236,712,197,770,168,818,148"/>
-<area shape="rect" id="Node000016" title=" " alt="" coords="1043,286,1103,312"/>
-<area shape="poly" id="edge18_Node000015_Node000016" title=" " alt="" coords="880,148,919,169,961,195,1011,235,1052,273,1048,277,1007,239,958,200,916,173,878,153"/>
-<area shape="rect" id="Node000017" href="$d7/dc6/Node_8hpp.html" title="AST node used by the parser, optimizer and compiler." alt="" coords="760,205,948,231"/>
-<area shape="poly" id="edge20_Node000015_Node000017" title=" " alt="" coords="857,150,857,189,852,189,852,150"/>
-<area shape="poly" id="edge24_Node000017_Node000002" title=" " alt="" coords="882,229,930,253,981,284,1020,316,1053,347,1049,351,1017,320,978,289,927,257,880,234"/>
-<area shape="poly" id="edge23_Node000017_Node000003" title=" " alt="" coords="776,234,705,254,670,269,637,288,607,317,585,348,580,345,603,313,634,284,667,265,704,249,774,229"/>
-<area shape="poly" id="edge30_Node000017_Node000004" title=" " alt="" coords="794,234,537,285,536,280,793,229"/>
-<area shape="poly" id="edge29_Node000017_Node000011" title=" " alt="" coords="926,229,1232,281,1231,286,925,234"/>
-<area shape="poly" id="edge21_Node000017_Node000016" title=" " alt="" coords="889,229,1029,279,1027,284,887,234"/>
-<area shape="rect" id="Node000018" title=" " alt="" coords="648,286,716,312"/>
-<area shape="poly" id="edge22_Node000017_Node000018" title=" " alt="" coords="829,234,723,282,721,277,827,229"/>
-<area shape="rect" id="Node000019" href="$da/d33/Namespace_8hpp.html" title=" " alt="" coords="741,286,967,312"/>
-<area shape="poly" id="edge25_Node000017_Node000019" title=" " alt="" coords="857,231,857,270,852,270,852,231"/>
-<area shape="poly" id="edge27_Node000019_Node000002" title=" " alt="" coords="892,310,1030,355,1029,360,890,315"/>
-<area shape="poly" id="edge26_Node000019_Node000003" title=" " alt="" coords="806,315,611,364,610,358,805,310"/>
-<area shape="rect" id="Node000020" title=" " alt="" coords="820,360,888,386"/>
-<area shape="poly" id="edge28_Node000019_Node000020" title=" " alt="" coords="857,312,857,344,852,344,852,312"/>
-<area shape="poly" id="edge33_Node000021_Node000002" title=" " alt="" coords="1360,242,1290,262,1218,289,1156,321,1104,353,1101,349,1153,316,1216,284,1288,257,1359,236"/>
-<area shape="poly" id="edge32_Node000021_Node000014" title=" " alt="" coords="1446,239,1439,344,1433,344,1441,238"/>
-<area shape="rect" id="Node000022" href="$db/d53/Word_8hpp.html" title="Describe an instruction and its immediate argument." alt="" coords="1483,286,1639,312"/>
-<area shape="poly" id="edge34_Node000021_Node000022" title=" " alt="" coords="1475,237,1532,275,1529,280,1472,241"/>
-<area shape="rect" id="Node000023" href="$d8/daa/Instructions_8hpp.html" title="The different instructions used by the compiler and virtual machine." alt="" coords="1664,286,1858,312"/>
-<area shape="poly" id="edge35_Node000021_Node000023" title=" " alt="" coords="1524,236,1698,279,1696,285,1523,242"/>
-<area shape="poly" id="edge36_Node000023_Node000012" title=" " alt="" coords="1742,315,1676,354,1673,349,1739,310"/>
+<area shape="rect" id="Node000001" title="Compile the intermediate representation to bytecode." alt="" coords="646,5,911,76"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="848,368,906,393"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="755,78,725,127,699,188,692,220,690,252,695,282,708,310,724,320,756,334,835,362,833,367,754,339,721,325,704,314,690,284,684,252,686,219,694,186,720,125,750,75"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="1150,368,1204,393"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="911,51,1123,79,1219,98,1258,110,1288,122,1312,137,1329,154,1360,196,1387,226,1409,253,1417,267,1419,282,1417,297,1407,314,1386,335,1364,347,1341,352,1318,353,1268,351,1241,354,1211,363,1210,363,1208,358,1209,357,1240,349,1268,346,1318,347,1341,347,1362,342,1383,331,1403,310,1412,296,1414,282,1412,269,1405,256,1383,229,1356,199,1325,157,1309,141,1285,126,1256,115,1218,104,1122,84,911,57"/>
+<area shape="rect" id="Node000004" href="$d5/d40/Platform_8hpp.html" title="ArkScript configuration macros." alt="" coords="719,279,838,304"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="781,77,781,264,776,264,776,77"/>
+<area shape="rect" id="Node000005" href="$d9/d11/Logger_8hpp.html" title="Internal logger." alt="" coords="318,279,426,304"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="719,79,638,126,404,273,401,268,636,122,716,74"/>
+<area shape="rect" id="Node000011" href="$d8/ddd/Common_8hpp.html" title="Common code for the compiler." alt="" coords="465,279,644,304"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="722,79,692,101,664,126,634,161,608,199,569,266,565,264,603,197,630,158,660,122,689,97,719,74"/>
+<area shape="rect" id="Node000017" href="$dd/de7/ValTableElem_8hpp.html" title="The basic value type handled by the compiler." alt="" coords="1069,124,1274,150"/>
+<area shape="poly" id="edge21_Node000001_Node000017" title=" " alt="" coords="912,71,1107,117,1106,123,911,76"/>
+<area shape="rect" id="Node000023" href="$de/da6/Entity_8hpp.html" title="An entity in the IR is a bundle of information." alt="" coords="1493,271,1666,312"/>
+<area shape="poly" id="edge35_Node000001_Node000023" title=" " alt="" coords="911,42,1061,48,1225,62,1303,72,1373,86,1432,102,1476,122,1510,150,1536,186,1557,223,1571,256,1566,258,1552,225,1532,189,1506,154,1473,126,1430,107,1372,91,1302,78,1224,67,1060,54,911,47"/>
+<area shape="poly" id="edge9_Node000005_Node000002" title=" " alt="" coords="422,303,454,309,666,346,833,370,833,376,665,351,452,315,420,308"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="418,302,453,309,627,330,763,336,899,341,1073,357,1135,368,1134,373,1073,363,899,346,763,341,626,335,453,315,417,308"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,368,77,393"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="318,306,211,329,88,363,83,364,81,359,87,357,210,324,317,301"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="100,368,192,393"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="341,308,193,364,191,359,339,303"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="216,368,276,393"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="356,307,278,361,275,356,353,303"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="300,368,411,393"/>
+<area shape="poly" id="edge10_Node000005_Node000009" title=" " alt="" coords="372,305,363,353,358,352,367,304"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="434,368,517,393"/>
+<area shape="poly" id="edge11_Node000005_Node000010" title=" " alt="" coords="388,303,452,356,448,360,384,307"/>
+<area shape="poly" id="edge15_Node000011_Node000002" title=" " alt="" coords="615,302,716,326,830,357,835,359,834,364,828,363,714,331,613,308"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="1085,449,1136,474"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="601,303,678,326,763,358,801,379,838,398,900,418,963,433,1070,452,1069,458,962,439,899,423,836,403,798,383,761,362,676,331,599,308"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="512,449,599,474"/>
+<area shape="poly" id="edge14_Node000011_Node000013" title=" " alt="" coords="557,305,558,433,553,433,552,305"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="722,449,797,474"/>
+<area shape="poly" id="edge16_Node000011_Node000014" title=" " alt="" coords="634,303,688,323,714,338,736,358,748,376,756,395,762,433,757,434,750,396,743,378,732,362,711,343,686,328,632,308"/>
+<area shape="rect" id="Node000015" href="$d6/de9/Constants_8hpp.html" title="Constants used by ArkScript." alt="" coords="592,368,722,393"/>
+<area shape="poly" id="edge17_Node000011_Node000015" title=" " alt="" coords="570,303,633,356,630,360,567,307"/>
+<area shape="poly" id="edge18_Node000015_Node000013" title=" " alt="" coords="643,396,585,441,582,437,640,391"/>
+<area shape="poly" id="edge19_Node000015_Node000014" title=" " alt="" coords="674,391,733,437,730,441,671,396"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="625,449,689,474"/>
+<area shape="poly" id="edge20_Node000015_Node000016" title=" " alt="" coords="660,394,660,433,654,433,654,394"/>
+<area shape="poly" id="edge23_Node000017_Node000003" title=" " alt="" coords="1211,148,1276,173,1312,191,1345,211,1372,233,1389,258,1394,285,1390,299,1382,314,1363,333,1344,344,1325,349,1304,351,1261,351,1237,354,1211,363,1211,363,1209,358,1209,357,1236,349,1260,346,1304,345,1324,344,1342,339,1360,329,1378,310,1385,297,1389,285,1385,260,1368,237,1342,215,1309,196,1274,178,1209,153"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="1307,279,1367,304"/>
+<area shape="poly" id="edge22_Node000017_Node000018" title=" " alt="" coords="1186,148,1315,266,1311,270,1183,152"/>
+<area shape="rect" id="Node000019" href="$d7/dc6/Node_8hpp.html" title="AST node used by the parser, optimizer and compiler." alt="" coords="981,198,1168,223"/>
+<area shape="poly" id="edge24_Node000017_Node000019" title=" " alt="" coords="1157,152,1104,191,1101,186,1154,148"/>
+<area shape="poly" id="edge28_Node000019_Node000002" title=" " alt="" coords="987,226,942,244,921,257,903,273,891,291,884,311,879,352,873,351,879,310,887,289,899,270,918,253,939,239,986,221"/>
+<area shape="poly" id="edge27_Node000019_Node000003" title=" " alt="" coords="1099,222,1128,242,1154,270,1171,311,1178,352,1173,352,1166,313,1149,273,1124,246,1096,226"/>
+<area shape="poly" id="edge34_Node000019_Node000004" title=" " alt="" coords="1029,227,839,277,838,272,1028,221"/>
+<area shape="poly" id="edge33_Node000019_Node000011" title=" " alt="" coords="995,227,650,279,649,273,994,221"/>
+<area shape="poly" id="edge25_Node000019_Node000018" title=" " alt="" coords="1130,221,1210,242,1297,269,1299,270,1297,275,1295,274,1208,247,1129,227"/>
+<area shape="rect" id="Node000020" title=" " alt="" coords="1215,279,1283,304"/>
+<area shape="poly" id="edge26_Node000019_Node000020" title=" " alt="" coords="1102,221,1210,270,1208,275,1100,226"/>
+<area shape="rect" id="Node000021" href="$da/d33/Namespace_8hpp.html" title=" " alt="" coords="913,279,1140,304"/>
+<area shape="poly" id="edge29_Node000019_Node000021" title=" " alt="" coords="1069,225,1044,267,1039,264,1065,222"/>
+<area shape="poly" id="edge31_Node000021_Node000002" title=" " alt="" coords="1007,307,913,362,910,357,1004,303"/>
+<area shape="poly" id="edge30_Node000021_Node000003" title=" " alt="" coords="1049,303,1144,357,1141,362,1046,307"/>
+<area shape="rect" id="Node000022" title=" " alt="" coords="992,368,1060,393"/>
+<area shape="poly" id="edge32_Node000021_Node000022" title=" " alt="" coords="1029,305,1029,352,1024,352,1024,305"/>
+<area shape="poly" id="edge37_Node000023_Node000002" title=" " alt="" coords="1493,305,1219,334,980,363,922,373,921,367,979,357,1219,328,1492,299"/>
+<area shape="poly" id="edge38_Node000023_Node000003" title=" " alt="" coords="1493,312,1223,363,1218,364,1216,359,1222,357,1492,306"/>
+<area shape="poly" id="edge36_Node000023_Node000014" title=" " alt="" coords="1493,312,1356,340,1267,362,1253,372,1243,383,1233,393,1217,403,1183,414,1138,424,1026,440,813,460,812,454,1026,435,1137,419,1181,409,1215,398,1229,389,1239,379,1249,368,1265,358,1354,335,1492,307"/>
+<area shape="rect" id="Node000024" href="$db/d53/Word_8hpp.html" title="Describe an instruction and its immediate argument." alt="" coords="1497,360,1670,401"/>
+<area shape="poly" id="edge39_Node000023_Node000024" title=" " alt="" coords="1583,312,1585,344,1579,345,1578,313"/>
+<area shape="rect" id="Node000025" href="$d8/daa/Instructions_8hpp.html" title="The different instructions used by the compiler and virtual machine." alt="" coords="1278,368,1473,393"/>
+<area shape="poly" id="edge40_Node000023_Node000025" title=" " alt="" coords="1534,315,1419,364,1417,359,1532,310"/>
+<area shape="poly" id="edge41_Node000025_Node000012" title=" " alt="" coords="1336,396,1151,451,1150,446,1334,391"/>
 </map>

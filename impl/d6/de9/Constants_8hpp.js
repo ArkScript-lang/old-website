@@ -19,5 +19,7 @@ var Constants_8hpp =
     [ "FeatureTestFailOnException", "d6/de9/Constants_8hpp.html#a69c882fe0668cb21166e4616104c0480", null ],
     [ "MaxMacroProcessingDepth", "d6/de9/Constants_8hpp.html#a601127fdf466d46ddcc7d061bd4f7a34", null ],
     [ "MaxMacroUnificationDepth", "d6/de9/Constants_8hpp.html#a9bfec7edeabdb42ddee1327daa3ee186", null ],
+    [ "MaxNestedNodes", "d6/de9/Constants_8hpp.html#a47ecd80bc50fcb29add2f0692a97b28b", null ],
+    [ "ScopeStackSize", "d6/de9/Constants_8hpp.html#a64b1067761d4dc1a5eb1f07d0b8ceb7a", null ],
     [ "VMStackSize", "d6/de9/Constants_8hpp.html#a10c147f2df9516277811af7da43a250f", null ]
 ];

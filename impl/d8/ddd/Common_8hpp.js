@@ -28,14 +28,16 @@ var Common_8hpp =
     [ "And", "d8/ddd/Common_8hpp.html#ac2099221eb58924b2d0beaf69c6b3b0c", null ],
     [ "AppendInPlace", "d8/ddd/Common_8hpp.html#a261f7519f76556d78c0cfd7d68a5f15d", null ],
     [ "Argcount", "d8/ddd/Common_8hpp.html#a47632dc40a1524d59c1c93523fe99ca1", null ],
+    [ "AsIs", "d8/ddd/Common_8hpp.html#a2ad3cb6b00a01357091d19021f326edb", null ],
     [ "ConcatInPlace", "d8/ddd/Common_8hpp.html#a53541dc64aaadfdf194a564ef444012b", null ],
+    [ "HeaderSize", "d8/ddd/Common_8hpp.html#ad754717b345dd62c984b6f978a8a0268", null ],
     [ "keywords", "d8/ddd/Common_8hpp.html#af04674c421b375325c6ef8261578b7b8", null ],
     [ "listInstructions", "d8/ddd/Common_8hpp.html#a1bb898b4293824c8045031eb33682e09", null ],
     [ "macros", "d8/ddd/Common_8hpp.html#a64e92df774e5d9cc529b334c0b3ccad6", null ],
+    [ "Magic", "d8/ddd/Common_8hpp.html#a7854a9cd618e02997b747ddd289ee9f9", null ],
     [ "nodeTypes", "d8/ddd/Common_8hpp.html#a1a137bdfc549299532813ba2c74d6a46", null ],
     [ "operators", "d8/ddd/Common_8hpp.html#a51a24f918bfd893110de521e7856ecf3", null ],
     [ "Or", "d8/ddd/Common_8hpp.html#adc099a6d7e2ea25553535012c6fd235d", null ],
-    [ "Paste", "d8/ddd/Common_8hpp.html#a8252d8ef28672e44e520cfd3d22aa942", null ],
     [ "PopInPlace", "d8/ddd/Common_8hpp.html#a625a21cf63c0bd98ddbd9dc0f5cb41d3", null ],
     [ "Repr", "d8/ddd/Common_8hpp.html#ac7e0fe3f47cbfcbfd8c9f9c7122c57b3", null ],
     [ "SetAt2InPlace", "d8/ddd/Common_8hpp.html#a9e5916e7c960fc1dc7463a9c06d6ffcc", null ],
@@ -43,6 +45,8 @@ var Common_8hpp =
     [ "Symcat", "d8/ddd/Common_8hpp.html#adec1abdb389d377b54021dfc0504f27d", null ],
     [ "SysArgs", "d8/ddd/Common_8hpp.html#abad6b061b9b0c47ae5bd12515beb6141", null ],
     [ "SysPlatform", "d8/ddd/Common_8hpp.html#a6151f85a34bd00a79841da5e93283d23", null ],
+    [ "TimestampLength", "d8/ddd/Common_8hpp.html#af2f8dfeb4faae2061a1ea2c2076c4751", null ],
     [ "Undef", "d8/ddd/Common_8hpp.html#ae0a1dc3b5cd5752af1cc44a9018679a6", null ],
-    [ "UpdateRef", "d8/ddd/Common_8hpp.html#adb20c20c3929d45340f09a05550d3a9d", null ]
+    [ "UpdateRef", "d8/ddd/Common_8hpp.html#adb20c20c3929d45340f09a05550d3a9d", null ],
+    [ "Version", "d8/ddd/Common_8hpp.html#aad3fe00f58447575461f544c1a2d4ffe", null ]
 ];

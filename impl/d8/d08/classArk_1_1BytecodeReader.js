@@ -1,12 +1,13 @@
 var classArk_1_1BytecodeReader =
 [
     [ "BytecodeReader", "d8/d08/classArk_1_1BytecodeReader.html#aa435a2b60ec4b61ca400603a1f0f1f7d", null ],
-    [ "bytecode", "d8/d08/classArk_1_1BytecodeReader.html#a31a65350d5a2e59a797df2441f0e74cf", null ],
     [ "checkMagic", "d8/d08/classArk_1_1BytecodeReader.html#afbc7fc0f7346f868b0ad71fb223d96ee", null ],
-    [ "code", "d8/d08/classArk_1_1BytecodeReader.html#ae6533f443967c9506420139ebc386fb8", null ],
+    [ "code", "d8/d08/classArk_1_1BytecodeReader.html#a8cd34b22dd92adb1d361fea055768324", null ],
     [ "display", "d8/d08/classArk_1_1BytecodeReader.html#ac1e9aafe4b310b2e56e04d6d635b5e45", null ],
     [ "feed", "d8/d08/classArk_1_1BytecodeReader.html#a47b838f67089b5e35bd57120d0a4e5ab", null ],
     [ "feed", "d8/d08/classArk_1_1BytecodeReader.html#afa24b92283b27f5e67e32ee80669027a", null ],
+    [ "filenames", "d8/d08/classArk_1_1BytecodeReader.html#a6deba4d1b8b22054c89f847133caaccd", null ],
+    [ "instLocations", "d8/d08/classArk_1_1BytecodeReader.html#a80b0801d54a1a2992194e886cf006966", null ],
     [ "readNumber", "d8/d08/classArk_1_1BytecodeReader.html#a6577aa8823b13bef02d07f2f69ba5afa", null ],
     [ "sha256", "d8/d08/classArk_1_1BytecodeReader.html#ad100bd7030ea8228e18ed89d98df09b1", null ],
     [ "symbols", "d8/d08/classArk_1_1BytecodeReader.html#a118b9ed083252c5d9a806f1f0dee9074", null ],

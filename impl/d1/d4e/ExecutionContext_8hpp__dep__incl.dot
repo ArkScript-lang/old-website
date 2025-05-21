@@ -7,7 +7,7 @@ digraph "/Users/fola/Documents/ArkScript/Ark/include/Ark/VM/ExecutionContext.hpp
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   Node1 [id="Node000001",label="/Users/fola/Documents\l/ArkScript/Ark/include\l/Ark/VM/ExecutionContext.hpp",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Keeping track of the internal data needed by the VM."];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="/Users/fola/Documents\l/ArkScript/Ark/include\l/Ark/VM/Future.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d0/dda/Future_8hpp.html",tooltip=" "];
+  Node2 [id="Node000002",label="/Users/fola/Documents\l/ArkScript/Ark/include\l/Ark/VM/Future.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d0/dda/Future_8hpp.html",tooltip="Internal object to resolve asynchronously a function call in ArkScript."];
   Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="/Users/fola/Documents\l/ArkScript/Ark/include\l/Ark/VM/VM.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d1/d91/VM_8hpp.html",tooltip="The ArkScript virtual machine."];
   Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];

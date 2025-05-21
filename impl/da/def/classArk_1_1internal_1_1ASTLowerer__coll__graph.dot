@@ -1,0 +1,52 @@
+digraph "Ark::internal::ASTLowerer"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="Ark::internal::ASTLowerer",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="The ArkScript AST to IR compiler."];
+  Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_locals_locator",fontcolor="grey" ];
+  Node2 [id="Node000002",label="Ark::internal::LocalsLocator",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$de/d21/classArk_1_1internal_1_1LocalsLocator.html",tooltip=" "];
+  Node3 -> Node2 [id="edge2_Node000002_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_scopes",fontcolor="grey" ];
+  Node3 [id="Node000003",label="std::vector\< Ark::internal\l::LocalsLocator::Scope \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node3 [id="edge3_Node000003_Node000004",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" elements",fontcolor="grey" ];
+  Node4 [id="Node000004",label="Ark::internal::LocalsLocator\l::Scope",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$da/dde/structArk_1_1internal_1_1LocalsLocator_1_1Scope.html",tooltip=" "];
+  Node5 -> Node4 [id="edge4_Node000004_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" data",fontcolor="grey" ];
+  Node5 [id="Node000005",label="std::vector\< std::string \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node5 [id="edge5_Node000005_Node000006",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" elements",fontcolor="grey" ];
+  Node6 [id="Node000006",label="std::string",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node6 [id="edge6_Node000006_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="std::basic_string\<\l Char \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node8 -> Node5 [id="edge7_Node000005_Node000008",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< std::string \>",fontcolor="grey" ];
+  Node8 [id="Node000008",label="std::vector\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node9 -> Node8 [id="edge8_Node000008_Node000009",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" elements",fontcolor="grey" ];
+  Node9 [id="Node000009",label="T",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node8 -> Node3 [id="edge9_Node000003_Node000008",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< Ark::internal::LocalsLocator\l::Scope \>",fontcolor="grey" ];
+  Node10 -> Node2 [id="edge10_Node000002_Node000010",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_drop_for_conds",fontcolor="grey" ];
+  Node10 [id="Node000010",label="std::vector\< std::size_t \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node8 -> Node10 [id="edge11_Node000010_Node000008",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< std::size_t \>",fontcolor="grey" ];
+  Node5 -> Node1 [id="edge12_Node000001_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_symbols",fontcolor="grey" ];
+  Node11 -> Node1 [id="edge13_Node000001_Node000011",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_values",fontcolor="grey" ];
+  Node11 [id="Node000011",label="std::vector\< Ark::internal\l::ValTableElem \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node12 -> Node11 [id="edge14_Node000011_Node000012",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" elements",fontcolor="grey" ];
+  Node12 [id="Node000012",label="Ark::internal::ValTableElem",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$d8/dc4/structArk_1_1internal_1_1ValTableElem.html",tooltip="A Compiler Value class helper to handle multiple types."];
+  Node8 -> Node11 [id="edge15_Node000011_Node000008",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< Ark::internal::ValTable\lElem \>",fontcolor="grey" ];
+  Node13 -> Node1 [id="edge16_Node000001_Node000013",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_code_pages\nm_temp_pages",fontcolor="grey" ];
+  Node13 [id="Node000013",label="std::vector\< IR::Block \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node8 -> Node13 [id="edge17_Node000013_Node000008",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" elements",fontcolor="grey" ];
+  Node8 -> Node13 [id="edge18_Node000013_Node000008",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< IR::Block \>",fontcolor="grey" ];
+  Node14 -> Node1 [id="edge19_Node000001_Node000014",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_logger",fontcolor="grey" ];
+  Node14 [id="Node000014",label="Ark::internal::Logger",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$d6/d2f/classArk_1_1internal_1_1Logger.html",tooltip=" "];
+  Node6 -> Node14 [id="edge20_Node000014_Node000006",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_name",fontcolor="grey" ];
+  Node15 -> Node14 [id="edge21_Node000014_Node000015",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_trace_starts",fontcolor="grey" ];
+  Node15 [id="Node000015",label="std::unordered_map\l\< std::string, std::\lchrono::time_point\< std\l::chrono::high_resolution\l_clock \> \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node15 [id="edge22_Node000015_Node000006",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" keys",fontcolor="grey" ];
+  Node16 -> Node15 [id="edge23_Node000015_Node000016",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< std::string, std\l::chrono::time_point\l\< std::chrono::high_resolution\l_clock \> \>",fontcolor="grey" ];
+  Node16 [id="Node000016",label="std::unordered_map\l\< K, T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node17 -> Node16 [id="edge24_Node000016_Node000017",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" keys",fontcolor="grey" ];
+  Node17 [id="Node000017",label="K",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node9 -> Node16 [id="edge25_Node000016_Node000009",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" elements",fontcolor="grey" ];
+  Node5 -> Node14 [id="edge26_Node000014_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_active_traces",fontcolor="grey" ];
+}

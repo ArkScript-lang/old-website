@@ -1,26 +1,30 @@
 <map id="/Users/fola/Documents/ArkScript/Ark/include/Ark/Compiler/NameResolution/StaticScope.hpp" name="/Users/fola/Documents/ArkScript/Ark/include/Ark/Compiler/NameResolution/StaticScope.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="748,5,951,76"/>
-<area shape="rect" id="Node000002" href="$db/d5b/ScopeResolver_8hpp.html" title="Handle scope resolution at compile time." alt="" coords="616,124,819,195"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="801,89,759,125,755,121,797,85"/>
-<area shape="rect" id="Node000012" href="$d2/d11/StaticScope_8cpp.html" title=" " alt="" coords="842,132,1121,187"/>
-<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="902,84,953,129,949,133,898,88"/>
-<area shape="rect" id="Node000003" href="$d4/de8/NameResolutionPass_8hpp.html" title=" " alt="" coords="480,243,683,313"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="668,207,624,244,620,240,664,203"/>
-<area shape="rect" id="Node000011" href="$da/d79/ScopeResolver_8cpp.html" title=" " alt="" coords="707,250,1003,306"/>
-<area shape="poly" id="edge11_Node000002_Node000011" title=" " alt="" coords="772,203,825,248,822,252,768,207"/>
-<area shape="rect" id="Node000004" href="$de/d8e/Welder_8hpp.html" title="In charge of welding everything needed to compile code." alt="" coords="352,369,521,424"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="528,325,472,371,468,366,525,321"/>
-<area shape="rect" id="Node000008" href="$d3/df1/Welder_8cpp.html" title=" " alt="" coords="511,480,698,536"/>
-<area shape="poly" id="edge10_Node000003_Node000008" title=" " alt="" coords="589,328,604,479,599,480,584,329"/>
-<area shape="rect" id="Node000010" href="$de/dd7/NameResolutionPass_8cpp.html" title=" " alt="" coords="619,361,899,432"/>
-<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="648,320,708,359,705,363,645,324"/>
-<area shape="rect" id="Node000005" href="$dc/dfd/JsonCompiler_8hpp.html" title=" " alt="" coords="118,480,274,536"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="364,434,257,482,255,477,362,429"/>
-<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="492,431,564,477,561,482,489,435"/>
-<area shape="rect" id="Node000009" href="$d0/da0/State_8cpp.html" title=" " alt="" coords="299,480,486,536"/>
-<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="422,440,406,481,401,479,417,438"/>
-<area shape="rect" id="Node000006" href="$db/d71/JsonCompiler_8cpp.html" title=" " alt="" coords="5,584,185,639"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="160,549,124,585,120,581,157,545"/>
-<area shape="rect" id="Node000007" href="$df/d0a/main_8cpp.html" title=" " alt="" coords="209,584,389,639"/>
-<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="237,545,273,581,270,585,233,549"/>
+<area shape="rect" id="Node000001" title="Static scopes (for functions, loops) and namespace scopes (for packages) definitions,..." alt="" coords="836,5,1039,76"/>
+<area shape="rect" id="Node000002" href="$db/d5b/ScopeResolver_8hpp.html" title="Handle scope resolution at compile time." alt="" coords="704,124,907,195"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="889,89,847,125,843,121,885,85"/>
+<area shape="rect" id="Node000014" href="$d2/d11/StaticScope_8cpp.html" title=" " alt="" coords="930,132,1209,187"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="990,84,1041,129,1037,133,986,88"/>
+<area shape="rect" id="Node000003" href="$d4/de8/NameResolutionPass_8hpp.html" title="Resolves names and fully qualify them in the AST (prefixing them with the package they are from)" alt="" coords="568,243,771,313"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="756,207,712,244,708,240,752,203"/>
+<area shape="rect" id="Node000013" href="$da/d79/ScopeResolver_8cpp.html" title=" " alt="" coords="795,250,1091,306"/>
+<area shape="poly" id="edge13_Node000002_Node000013" title=" " alt="" coords="860,203,913,248,910,252,856,207"/>
+<area shape="rect" id="Node000004" href="$de/d8e/Welder_8hpp.html" title="In charge of welding everything needed to compile code." alt="" coords="418,369,588,424"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="610,324,543,371,540,366,606,320"/>
+<area shape="rect" id="Node000010" href="$d3/df1/Welder_8cpp.html" title=" " alt="" coords="621,480,809,536"/>
+<area shape="poly" id="edge12_Node000003_Node000010" title=" " alt="" coords="679,328,698,431,710,479,704,480,692,433,674,329"/>
+<area shape="rect" id="Node000012" href="$de/dd7/NameResolutionPass_8cpp.html" title=" " alt="" coords="707,361,987,432"/>
+<area shape="poly" id="edge11_Node000003_Node000012" title=" " alt="" coords="736,320,796,359,793,363,733,324"/>
+<area shape="rect" id="Node000005" href="$d3/d7e/Ark_8hpp.html" title="Includes the needed files to start using ArkScript." alt="" coords="36,480,192,536"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="404,428,193,487,192,482,403,423"/>
+<area shape="rect" id="Node000007" href="$dc/dfd/JsonCompiler_8hpp.html" title=" " alt="" coords="229,480,385,536"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="442,435,357,482,355,477,440,430"/>
+<area shape="poly" id="edge9_Node000004_Node000010" title=" " alt="" coords="570,430,663,477,661,482,568,434"/>
+<area shape="rect" id="Node000011" href="$d0/da0/State_8cpp.html" title=" " alt="" coords="409,480,597,536"/>
+<area shape="poly" id="edge10_Node000004_Node000011" title=" " alt="" coords="506,440,506,480,500,480,500,440"/>
+<area shape="rect" id="Node000006" href="$dc/d32/Ark_8cpp.html" title=" " alt="" coords="5,584,193,639"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="110,552,106,583,100,583,105,551"/>
+<area shape="rect" id="Node000008" href="$db/d71/JsonCompiler_8cpp.html" title=" " alt="" coords="217,584,397,639"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="310,551,310,583,304,583,304,551"/>
+<area shape="rect" id="Node000009" href="$df/d0a/main_8cpp.html" title=" " alt="" coords="421,584,601,639"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="376,540,457,581,455,585,374,545"/>
 </map>

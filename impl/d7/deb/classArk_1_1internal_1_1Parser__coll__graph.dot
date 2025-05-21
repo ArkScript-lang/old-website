@@ -64,4 +64,7 @@ digraph "Ark::internal::Parser"
   Node3 -> Node24 [id="edge32_Node000024_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" prefix",fontcolor="grey" ];
   Node21 -> Node24 [id="edge33_Node000024_Node000021",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" package\nsymbols",fontcolor="grey" ];
   Node11 -> Node23 [id="edge34_Node000023_Node000011",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< Ark::internal::Import \>",fontcolor="grey" ];
+  Node25 -> Node1 [id="edge35_Node000001_Node000025",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_parsers",fontcolor="grey" ];
+  Node25 [id="Node000025",label="std::vector\< std::function\l\< std::optional\< Ark::internal\l::Node \>()\> \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node11 -> Node25 [id="edge36_Node000025_Node000011",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< std::function\< std\l::optional\< Ark::internal\l::Node \>()\> \>",fontcolor="grey" ];
 }

@@ -1,34 +1,42 @@
 <map id="Ark::internal::IROptimizer" name="Ark::internal::IROptimizer">
-<area shape="rect" id="Node000001" title=" " alt="" coords="1191,224,1360,250"/>
-<area shape="rect" id="Node000002" href="$d6/d2f/classArk_1_1internal_1_1Logger.html" title=" " alt="" coords="947,113,1086,139"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1068,143,1168,184,1248,221,1246,226,1166,189,1066,148"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="285,20,364,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="379,21,438,14,524,9,610,14,665,22,706,32,800,58,974,110,973,115,799,64,705,37,664,27,610,20,524,14,438,20,380,26"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="635,73,798,158"/>
-<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="380,30,488,37,550,46,611,60,638,70,636,75,609,65,549,51,487,42,380,35"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="634,188,799,214"/>
-<area shape="poly" id="edge10_Node000009_Node000003" title=" " alt="" coords="357,54,387,81,416,113,423,125,427,137,431,146,440,155,472,169,521,180,634,193,633,199,520,185,471,174,436,160,426,149,422,138,418,128,412,116,383,84,353,58"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="5,13,131,53"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="146,30,285,30,285,36,146,36"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="814,116,947,121,947,127,814,122"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="257,126,393,167"/>
-<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="408,137,634,119,635,125,409,142"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="49,133,87,159"/>
-<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="102,144,256,144,256,149,102,149"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="49,203,87,228"/>
-<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="101,204,255,162,257,167,103,209"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="267,247,382,272"/>
-<area shape="poly" id="edge12_Node000010_Node000008" title=" " alt="" coords="102,224,155,239,267,253,266,259,154,244,101,230"/>
-<area shape="poly" id="edge16_Node000001_Node000009" title=" " alt="" coords="815,203,1167,225,1190,227,1190,232,1166,230,815,209"/>
-<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="786,181,961,137,962,142,787,186"/>
-<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="397,246,633,211,634,216,398,251"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="636,255,798,280"/>
-<area shape="poly" id="edge14_Node000011_Node000010" title=" " alt="" coords="398,258,635,263,635,269,398,264"/>
-<area shape="poly" id="edge15_Node000011_Node000010" title=" " alt="" coords="389,274,438,283,524,288,610,283,645,278,646,284,610,288,524,294,438,288,388,279"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="634,346,799,387"/>
-<area shape="poly" id="edge19_Node000012_Node000010" title=" " alt="" coords="357,279,395,303,439,323,488,338,539,348,634,360,634,365,538,353,487,343,437,328,393,308,355,284"/>
-<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="813,261,1086,247,1190,240,1190,245,1086,252,813,266"/>
-<area shape="poly" id="edge17_Node000001_Node000012" title=" " alt="" coords="814,341,1216,248,1217,253,815,347"/>
-<area shape="rect" id="Node000013" href="$d8/dc4/structArk_1_1internal_1_1ValTableElem.html" title="A Compiler Value class helper to handle multiple types." alt="" coords="236,399,414,424"/>
-<area shape="poly" id="edge18_Node000012_Node000013" title=" " alt="" coords="430,418,518,419,609,408,643,398,675,385,677,390,645,403,611,413,518,424,430,424"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="1611,278,1780,304"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="1302,129,1466,170"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1446,174,1666,275,1664,280,1444,179"/>
+<area shape="rect" id="Node000003" href="$da/d1e/structArk_1_1internal_1_1IROptimizer_1_1Rule.html" title=" " alt="" coords="1013,72,1183,113"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1198,110,1302,131,1301,136,1197,115"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="634,81,802,106"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="818,91,1013,90,1013,95,818,96"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="267,137,382,162"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="398,147,1301,147,1301,152,398,152"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="398,137,633,103,634,108,398,142"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="636,278,801,304"/>
+<area shape="poly" id="edge17_Node000013_Node000005" title=" " alt="" coords="382,165,439,181,487,189,526,191,564,196,611,211,665,243,705,276,701,280,662,247,609,216,563,201,525,196,486,194,437,186,381,170"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="637,22,799,48"/>
+<area shape="poly" id="edge19_Node000014_Node000005" title=" " alt="" coords="342,123,382,79,408,58,437,42,487,27,539,19,590,18,637,20,637,26,590,23,540,24,488,32,439,47,411,62,385,83,346,126"/>
+<area shape="poly" id="edge20_Node000014_Node000005" title=" " alt="" coords="358,126,395,105,437,87,485,74,523,70,561,67,609,59,667,46,668,51,611,65,562,72,523,75,486,80,439,92,397,110,361,130"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="636,519,800,559"/>
+<area shape="poly" id="edge24_Node000015_Node000005" title=" " alt="" coords="348,172,387,212,412,231,439,246,464,255,487,256,530,251,550,248,571,249,591,257,612,273,622,292,627,319,627,386,625,453,629,480,636,499,655,516,651,520,632,502,623,481,620,453,621,386,622,320,617,294,608,277,589,261,570,254,551,253,531,256,487,262,463,260,437,251,409,235,384,216,344,176"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="49,258,87,284"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="100,253,294,161,296,165,102,258"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="257,320,393,361"/>
+<area shape="poly" id="edge14_Node000011_Node000006" title=" " alt="" coords="103,277,257,319,255,324,101,282"/>
+<area shape="rect" id="Node000007" href="$d6/d2f/classArk_1_1internal_1_1Logger.html" title=" " alt="" coords="1029,358,1167,384"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="1182,359,1368,337,1587,307,1620,302,1620,307,1587,312,1369,342,1183,364"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="285,414,364,440"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="380,433,462,444,567,454,684,457,802,449,874,436,946,418,1059,382,1061,387,947,423,876,441,803,454,684,462,567,459,461,450,379,439"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="636,339,800,424"/>
+<area shape="poly" id="edge11_Node000010_Node000008" title=" " alt="" coords="380,424,487,420,610,407,636,402,637,407,610,413,487,426,380,430"/>
+<area shape="poly" id="edge16_Node000013_Node000008" title=" " alt="" coords="368,404,391,389,412,371,419,357,422,344,426,331,436,318,471,304,521,295,635,288,635,293,522,300,472,309,440,322,430,333,427,345,424,359,416,374,395,393,371,409"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="5,407,131,447"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="146,424,285,424,285,430,146,430"/>
+<area shape="poly" id="edge10_Node000007_Node000010" title=" " alt="" coords="815,377,989,373,1028,371,1029,376,989,378,815,382"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="389,364,439,378,489,384,541,387,636,386,636,391,541,392,489,389,437,383,387,369"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="49,327,87,353"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="102,338,256,338,256,343,102,343"/>
+<area shape="poly" id="edge21_Node000001_Node000013" title=" " alt="" coords="816,288,1610,288,1610,294,816,294"/>
+<area shape="poly" id="edge15_Node000007_Node000013" title=" " alt="" coords="773,306,827,322,933,344,1029,359,1028,364,932,349,826,327,771,312"/>
+<area shape="poly" id="edge18_Node000001_Node000014" title=" " alt="" coords="815,33,987,40,1183,58,1326,79,1467,115,1530,132,1557,143,1589,162,1621,190,1650,222,1688,276,1684,279,1646,225,1618,194,1585,166,1555,148,1529,137,1465,120,1325,84,1182,63,986,46,815,39"/>
+<area shape="poly" id="edge22_Node000001_Node000015" title=" " alt="" coords="815,516,1157,439,1371,385,1586,326,1658,302,1659,307,1588,331,1373,390,1158,444,816,521"/>
+<area shape="rect" id="Node000016" href="$d8/dc4/structArk_1_1internal_1_1ValTableElem.html" title="A Compiler Value class helper to handle multiple types." alt="" coords="236,526,414,552"/>
+<area shape="poly" id="edge23_Node000015_Node000016" title=" " alt="" coords="429,536,636,536,636,542,429,542"/>
 </map>

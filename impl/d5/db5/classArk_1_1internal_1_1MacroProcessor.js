@@ -17,11 +17,12 @@ var classArk_1_1internal_1_1MacroProcessor =
     [ "processNode", "d5/db5/classArk_1_1internal_1_1MacroProcessor.html#acf95237e17a351565acd9034b50631db", null ],
     [ "registerFuncDef", "d5/db5/classArk_1_1internal_1_1MacroProcessor.html#a24a00ff768258bf0dc478b5fbaa20fec", null ],
     [ "removeBegin", "d5/db5/classArk_1_1internal_1_1MacroProcessor.html#a665af204f583923b19796b0ef991e210", null ],
-    [ "throwMacroProcessingError", "d5/db5/classArk_1_1internal_1_1MacroProcessor.html#aa54ef47d50242ea4ab59a23669dd8399", null ],
+    [ "throwMacroProcessingError", "d5/db5/classArk_1_1internal_1_1MacroProcessor.html#a8f9f4005077eddae5a7f354e7dc024aa", null ],
     [ "MacroExecutor", "d5/db5/classArk_1_1internal_1_1MacroProcessor.html#a51b802bc290e5091d04d5b3afb86fb84", null ],
     [ "m_ast", "d5/db5/classArk_1_1internal_1_1MacroProcessor.html#a8c0b8adcc8fbf9c05b2e489c9f993684", null ],
     [ "m_conditional_executor", "d5/db5/classArk_1_1internal_1_1MacroProcessor.html#a360123de986e70fd27a09583b48d7495", null ],
     [ "m_defined_functions", "d5/db5/classArk_1_1internal_1_1MacroProcessor.html#ab27e36fb2979e08da042a56466d102ac", null ],
     [ "m_executors", "d5/db5/classArk_1_1internal_1_1MacroProcessor.html#ab6ee0aa448c350a3b6a0fd5a3240f47e", null ],
-    [ "m_macros", "d5/db5/classArk_1_1internal_1_1MacroProcessor.html#ae22ffc46ad62546c54fec40d03834e08", null ]
+    [ "m_macros", "d5/db5/classArk_1_1internal_1_1MacroProcessor.html#ae22ffc46ad62546c54fec40d03834e08", null ],
+    [ "m_macros_being_applied", "d5/db5/classArk_1_1internal_1_1MacroProcessor.html#a7babe94d09530f7609b15a7542306c1e", null ]
 ];

@@ -86,155 +86,209 @@ $(function(){initNavTree('d7/d48/arkscript_2REPL_2Utils_8cpp_source.html','../..
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;regex&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d0e/namespaceArk_1_1internal.html">Ark::internal</a></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
-<div class="foldopen" id="foldopen00008" data-start="{" data-end="}">
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceArk_1_1internal.html#a6146cb020fc99ea827febe76168c020f">    8</a></span>    <span class="keywordtype">long</span> <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a6146cb020fc99ea827febe76168c020f">countOpenEnclosures</a>(<span class="keyword">const</span> std::string&amp; line, <span class="keyword">const</span> <span class="keywordtype">char</span> open, <span class="keyword">const</span> <span class="keywordtype">char</span> close)</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keywordflow">return</span> std::ranges::count(line, open) - std::ranges::count(line, close);</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    }</div>
-</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceArk_1_1internal.html#ad95f4c191466c48c5b0d8ef5b6c26a1b">   13</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#ad95f4c191466c48c5b0d8ef5b6c26a1b">trimWhitespace</a>(std::string&amp; line)</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;numeric&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;ranges&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;<a class="code" href="../../da/d84/Builtins_8hpp.html">Ark/Builtins/Builtins.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;<a class="code" href="../../d8/ddd/Common_8hpp.html">Ark/Compiler/Common.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d0e/namespaceArk_1_1internal.html">Ark::internal</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">long</span> <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a6146cb020fc99ea827febe76168c020f">countOpenEnclosures</a>(<span class="keyword">const</span> std::string&amp; line, <span class="keyword">const</span> <span class="keywordtype">char</span> open, <span class="keyword">const</span> <span class="keywordtype">char</span> close)</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">const</span> std::size_t string_begin = line.find_first_not_of(<span class="stringliteral">&quot; \t&quot;</span>);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordflow">if</span> (std::string::npos != string_begin)</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <span class="keyword">const</span> std::size_t string_end = line.find_last_not_of(<span class="stringliteral">&quot; \t&quot;</span>);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            line = line.substr(string_begin, string_end - string_begin + 1);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        }</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
-</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceArk_1_1internal.html#a3bd3b3636182456691fede1fb1604da5">   23</a></span>    std::size_t <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a3bd3b3636182456691fede1fb1604da5">codepointLength</a>(<span class="keyword">const</span> std::string&amp; str)</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        std::size_t len = 0;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> c : str)</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            len += (c &amp; 0xc0) != 0x80;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">return</span> len;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
-</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceArk_1_1internal.html#a4c781b2c862e05711632d9a2df5c355e">   31</a></span>    std::size_t <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a4c781b2c862e05711632d9a2df5c355e">contextLen</a>(<span class="keyword">const</span> std::string&amp; prefix)</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">const</span> std::string word_break = <span class="stringliteral">&quot; \t\n\r\v\f=+*&amp;^%$#@!,./?&lt;&gt;;`~&#39;\&quot;[]{}()\\|&quot;</span>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">long</span> i = <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span><span class="keyword">&gt;</span>(prefix.size()) - 1;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        std::size_t count = 0;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">while</span> (i &gt;= 0)</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordflow">if</span> (word_break.find(prefix[<span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(i)]) != std::string::npos)</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            ++count;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            --i;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordflow">return</span> std::ranges::count(line, open) - std::ranges::count(line, close);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#ad95f4c191466c48c5b0d8ef5b6c26a1b">trimWhitespace</a>(std::string&amp; line)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">const</span> std::size_t string_begin = line.find_first_not_of(<span class="stringliteral">&quot; \t&quot;</span>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">if</span> (std::string::npos != string_begin)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keyword">const</span> std::size_t string_end = line.find_last_not_of(<span class="stringliteral">&quot; \t&quot;</span>);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            line = line.substr(string_begin, string_end - string_begin + 1);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    std::vector&lt;std::string&gt; <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a436b1ac5607da1c3b39dbdaa92ab1293">getAllKeywords</a>()</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        std::vector&lt;std::string&gt; output;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        output.reserve(<a class="code hl_variable" href="../../dc/d0e/namespaceArk_1_1internal.html#af04674c421b375325c6ef8261578b7b8">keywords</a>.size() + <a class="code hl_variable" href="../../de/d35/namespaceArk_1_1internal_1_1Language.html#a1bb898b4293824c8045031eb33682e09">Language::listInstructions</a>.size() + <a class="code hl_variable" href="../../de/d35/namespaceArk_1_1internal_1_1Language.html#a51a24f918bfd893110de521e7856ecf3">Language::operators</a>.size() + <a class="code hl_variable" href="../../df/dda/namespaceArk_1_1internal_1_1Builtins.html#ae99a104c484192543989515d4eda8a5a">Builtins::builtins</a>.size() + 2);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        std::ranges::transform(<a class="code hl_variable" href="../../dc/d0e/namespaceArk_1_1internal.html#af04674c421b375325c6ef8261578b7b8">keywords</a>, std::back_inserter(output), [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; string_view) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordflow">return</span> std::string(string_view);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        });</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        std::ranges::transform(<a class="code hl_variable" href="../../de/d35/namespaceArk_1_1internal_1_1Language.html#a1bb898b4293824c8045031eb33682e09">Language::listInstructions</a>, std::back_inserter(output), [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; string_view) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">return</span> std::string(string_view);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        });</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        std::ranges::transform(<a class="code hl_variable" href="../../de/d35/namespaceArk_1_1internal_1_1Language.html#a51a24f918bfd893110de521e7856ecf3">Language::operators</a>, std::back_inserter(output), [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; string_view) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordflow">return</span> std::string(string_view);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        });</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        std::ranges::transform(std::ranges::views::keys(<a class="code hl_variable" href="../../df/dda/namespaceArk_1_1internal_1_1Builtins.html#ae99a104c484192543989515d4eda8a5a">Builtins::builtins</a>), std::back_inserter(output), [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <span class="keywordtype">string</span>) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordflow">return</span> string;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        });</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">return</span> count;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
-</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        output.emplace_back(<span class="stringliteral">&quot;and&quot;</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        output.emplace_back(<span class="stringliteral">&quot;or&quot;</span>);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceArk_1_1internal.html#a7e86ab6e910dedf371dac09d3c25fa90">   49</a></span>    replxx::Replxx::completions_t <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a7e86ab6e910dedf371dac09d3c25fa90">hookCompletion</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; words, <span class="keyword">const</span> std::string&amp; context, <span class="keywordtype">int</span>&amp; length)</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        replxx::Replxx::completions_t completions;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        std::size_t utf8_context_len = <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a4c781b2c862e05711632d9a2df5c355e">contextLen</a>(context);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        std::size_t prefix_len = context.size() - utf8_context_len;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">if</span> (prefix_len &gt; 0 &amp;&amp; context[prefix_len - 1] == <span class="charliteral">&#39;\\&#39;</span>)</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            --prefix_len;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            ++utf8_context_len;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">return</span> output;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    std::vector&lt;std::pair&lt;std::string, replxx::Replxx::Color&gt;&gt; <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#ab07ef04d2a2f1b71edb4a8f931725eb0">getColorPerKeyword</a>()</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">using namespace </span>replxx;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keyword">using </span>K = std::string;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keyword">using </span>V = Replxx::Color;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        std::vector&lt;std::pair&lt;K, V&gt;&gt; output;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        output.reserve(<a class="code hl_variable" href="../../dc/d0e/namespaceArk_1_1internal.html#af04674c421b375325c6ef8261578b7b8">keywords</a>.size() + <a class="code hl_variable" href="../../de/d35/namespaceArk_1_1internal_1_1Language.html#a1bb898b4293824c8045031eb33682e09">Language::listInstructions</a>.size() + <a class="code hl_variable" href="../../de/d35/namespaceArk_1_1internal_1_1Language.html#a51a24f918bfd893110de521e7856ecf3">Language::operators</a>.size() + <a class="code hl_variable" href="../../df/dda/namespaceArk_1_1internal_1_1Builtins.html#ae99a104c484192543989515d4eda8a5a">Builtins::builtins</a>.size() + 4);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        length = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a3bd3b3636182456691fede1fb1604da5">codepointLength</a>(context.substr(prefix_len, utf8_context_len)));</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">const</span> std::string prefix = context.substr(prefix_len);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : words)</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordflow">if</span> (e.starts_with(prefix) == 0)</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                completions.emplace_back(e.c_str());</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        }</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">return</span> completions;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
-</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceArk_1_1internal.html#a7ce3ab98e01fe218abc001550a1c2feb">   73</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a7ce3ab98e01fe218abc001550a1c2feb">hookColor</a>(<span class="keyword">const</span> std::vector&lt;std::pair&lt;std::string, replxx::Replxx::Color&gt;&gt;&amp; words_colors, <span class="keyword">const</span> std::string&amp; context, replxx::Replxx::colors_t&amp; <a class="code hl_variable" href="../../dc/d0e/namespaceArk_1_1internal.html#a7d005551398e8bf19ed7f2d3d9a8ddbb">colors</a>)</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    {</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="comment">// highlight matching regex sequences</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [regex, color] : words_colors)</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            std::size_t pos = 0;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            std::string str = context;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            std::smatch match;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        std::ranges::transform(<a class="code hl_variable" href="../../dc/d0e/namespaceArk_1_1internal.html#af04674c421b375325c6ef8261578b7b8">keywords</a>, std::back_inserter(output), [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; string_view) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">return</span> std::make_pair(std::string(string_view), Replxx::Color::BRIGHTRED);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        });</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        std::ranges::transform(<a class="code hl_variable" href="../../de/d35/namespaceArk_1_1internal_1_1Language.html#a1bb898b4293824c8045031eb33682e09">Language::listInstructions</a>, std::back_inserter(output), [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; string_view) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">return</span> std::make_pair(std::string(string_view), Replxx::Color::GREEN);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        });</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        std::ranges::transform(<a class="code hl_variable" href="../../de/d35/namespaceArk_1_1internal_1_1Language.html#a51a24f918bfd893110de521e7856ecf3">Language::operators</a>, std::back_inserter(output), [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; string_view) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keyword">auto</span> safe_op = std::string(string_view);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> it = safe_op.find_first_of(R<span class="stringliteral">&quot;(-+=/*&lt;&gt;[]()?&quot;)&quot;); it != std::string::npos)</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="stringliteral">                safe_op.insert(it, </span><span class="stringliteral">&quot;\\&quot;</span>);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">return</span> std::make_pair(safe_op, Replxx::Color::BRIGHTBLUE);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        });</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        std::ranges::transform(std::ranges::views::keys(<a class="code hl_variable" href="../../df/dda/namespaceArk_1_1internal_1_1Builtins.html#ae99a104c484192543989515d4eda8a5a">Builtins::builtins</a>), std::back_inserter(output), [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <span class="keywordtype">string</span>) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordflow">return</span> std::make_pair(<span class="keywordtype">string</span>, Replxx::Color::GREEN);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        });</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        output.emplace_back(<span class="stringliteral">&quot;and&quot;</span>, Replxx::Color::BRIGHTBLUE);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        output.emplace_back(<span class="stringliteral">&quot;or&quot;</span>, Replxx::Color::BRIGHTBLUE);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        output.emplace_back(<span class="stringliteral">&quot;[\\-|+]?[0-9]+(\\.[0-9]+)?&quot;</span>, Replxx::Color::YELLOW);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        output.emplace_back(<span class="stringliteral">&quot;\&quot;.*\&quot;&quot;</span>, Replxx::Color::MAGENTA);</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">while</span> (std::regex_search(str, match, std::regex(regex)))</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                std::string c = match[0];</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                std::string prefix = match.prefix().str();</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                <span class="keyword">const</span> std::size_t len = <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a3bd3b3636182456691fede1fb1604da5">codepointLength</a>(c);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                pos += <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a3bd3b3636182456691fede1fb1604da5">codepointLength</a>(prefix);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; len; ++i)</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                    <a class="code hl_variable" href="../../dc/d0e/namespaceArk_1_1internal.html#a7d005551398e8bf19ed7f2d3d9a8ddbb">colors</a>.at(pos + i) = color;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                pos += len;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                str = match.suffix();</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            }</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        }</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
-</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceArk_1_1internal.html#ac4cd27cb30a3c52fde19e4b98ff80cfd">   98</a></span>    replxx::Replxx::hints_t <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#ac4cd27cb30a3c52fde19e4b98ff80cfd">hookHint</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; words, <span class="keyword">const</span> std::string&amp; context, <span class="keywordtype">int</span>&amp; length, replxx::Replxx::Color&amp; color)</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    {</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        replxx::Replxx::hints_t hints;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="comment">// only show hint if prefix is at least &#39;n&#39; chars long</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="comment">// or if prefix begins with a specific character</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keyword">const</span> std::size_t utf8_context_len = <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a4c781b2c862e05711632d9a2df5c355e">contextLen</a>(context);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keyword">const</span> std::size_t prefix_len = context.size() - utf8_context_len;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        length = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a3bd3b3636182456691fede1fb1604da5">codepointLength</a>(context.substr(prefix_len, utf8_context_len)));</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keyword">const</span> std::string prefix = context.substr(prefix_len);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">return</span> output;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    std::size_t codepointLength(<span class="keyword">const</span> std::string&amp; str)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">return</span> std::accumulate(</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            str.begin(),</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            str.end(),</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            std::size_t { 0 },</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            [](<span class="keyword">const</span> std::size_t acc, <span class="keyword">const</span> <span class="keywordtype">char</span> c) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                return acc + ((c &amp; 0xc0) != 0x80);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            });</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    std::size_t contextLen(<span class="keyword">const</span> std::string&amp; prefix)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keyword">const</span> std::string word_break = <span class="stringliteral">&quot; \t\n\r\v\f=+*&amp;^%$#@!,./?&lt;&gt;;`~&#39;\&quot;[]{}()\\|&quot;</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        std::size_t count = 0;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> c : std::ranges::views::reverse(prefix))</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="keywordflow">if</span> (word_break.find(c) != std::string::npos)</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            ++count;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        }</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">if</span> (prefix.size() &gt;= 2 || (!prefix.empty() &amp;&amp; prefix.at(0) == <span class="charliteral">&#39;.&#39;</span>))</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        {</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : words)</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            {</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                <span class="keywordflow">if</span> (e.compare(0, prefix.size(), prefix) == 0)</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                    hints.emplace_back(e.c_str());</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            }</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">return</span> count;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    replxx::Replxx::completions_t <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a7e86ab6e910dedf371dac09d3c25fa90">hookCompletion</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; words, <span class="keyword">const</span> std::string&amp; context, <span class="keywordtype">int</span>&amp; length)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        replxx::Replxx::completions_t completions;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        std::size_t utf8_context_len = contextLen(context);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        std::size_t prefix_len = context.size() - utf8_context_len;</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">if</span> (hints.size() == 1)</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            color = replxx::Replxx::Color::GREEN;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keywordflow">return</span> hints;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
-</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">if</span> (prefix_len &gt; 0 &amp;&amp; context[prefix_len - 1] == <span class="charliteral">&#39;\\&#39;</span>)</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            --prefix_len;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            ++utf8_context_len;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        length = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(codepointLength(context.substr(prefix_len, utf8_context_len)));</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keyword">const</span> std::string prefix = context.substr(prefix_len);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : words)</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <span class="keywordflow">if</span> (e.starts_with(prefix) == 0)</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                completions.emplace_back(e.c_str());</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordflow">return</span> completions;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#a7ce3ab98e01fe218abc001550a1c2feb">hookColor</a>(<span class="keyword">const</span> std::vector&lt;std::pair&lt;std::string, replxx::Replxx::Color&gt;&gt;&amp; words_colors, <span class="keyword">const</span> std::string&amp; context, replxx::Replxx::colors_t&amp; <a class="code hl_variable" href="../../dc/d0e/namespaceArk_1_1internal.html#a7d005551398e8bf19ed7f2d3d9a8ddbb">colors</a>)</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="comment">// highlight matching regex sequences</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [regex, color] : words_colors)</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            std::size_t pos = 0;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            std::string str = context;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            std::smatch match;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            <span class="keywordflow">while</span> (std::regex_search(str, match, std::regex(regex)))</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                std::string c = match[0];</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                std::string prefix = match.prefix().str();</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                <span class="keyword">const</span> std::size_t len = codepointLength(c);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                pos += codepointLength(prefix);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; len; ++i)</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                    <a class="code hl_variable" href="../../dc/d0e/namespaceArk_1_1internal.html#a7d005551398e8bf19ed7f2d3d9a8ddbb">colors</a>.at(pos + i) = color;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                pos += len;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                str = match.suffix();</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            }</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        }</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    replxx::Replxx::hints_t <a class="code hl_function" href="../../dc/d0e/namespaceArk_1_1internal.html#ac4cd27cb30a3c52fde19e4b98ff80cfd">hookHint</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; words, <span class="keyword">const</span> std::string&amp; context, <span class="keywordtype">int</span>&amp; length, replxx::Replxx::Color&amp; color)</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        replxx::Replxx::hints_t hints;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="comment">// only show hint if prefix is at least &#39;n&#39; chars long</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <span class="comment">// or if prefix begins with a specific character</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keyword">const</span> std::size_t utf8_context_len = contextLen(context);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="keyword">const</span> std::size_t prefix_len = context.size() - utf8_context_len;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        length = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(codepointLength(context.substr(prefix_len, utf8_context_len)));</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="keyword">const</span> std::string prefix = context.substr(prefix_len);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="keywordflow">if</span> (prefix.size() &gt;= 2 || (!prefix.empty() &amp;&amp; prefix.at(0) == <span class="charliteral">&#39;.&#39;</span>))</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : words)</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                <span class="keywordflow">if</span> (e.compare(0, prefix.size(), prefix) == 0)</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                    hints.emplace_back(e.c_str());</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            }</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        }</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <span class="keywordflow">if</span> (hints.size() == 1)</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            color = replxx::Replxx::Color::GREEN;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <span class="keywordflow">return</span> hints;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    }</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>}</div>
+<div class="ttc" id="aBuiltins_8hpp_html"><div class="ttname"><a href="../../da/d84/Builtins_8hpp.html">Builtins.hpp</a></div><div class="ttdoc">Host the declaration of all the ArkScript builtins.</div></div>
 <div class="ttc" id="aCLI_2REPL_2Utils_8hpp_html"><div class="ttname"><a href="../../df/d85/CLI_2REPL_2Utils_8hpp.html">Utils.hpp</a></div><div class="ttdoc">replxx utilities</div></div>
-<div class="ttc" id="anamespaceArk_1_1internal_html"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html">Ark::internal</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/d84/Builtins_8hpp_source.html#l00025">Builtins.hpp:26</a></div></div>
-<div class="ttc" id="anamespaceArk_1_1internal_html_a3bd3b3636182456691fede1fb1604da5"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#a3bd3b3636182456691fede1fb1604da5">Ark::internal::codepointLength</a></div><div class="ttdeci">std::size_t codepointLength(const std::string &amp;str)</div><div class="ttdef"><b>Definition</b> <a href="#l00023">Utils.cpp:23</a></div></div>
-<div class="ttc" id="anamespaceArk_1_1internal_html_a4c781b2c862e05711632d9a2df5c355e"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#a4c781b2c862e05711632d9a2df5c355e">Ark::internal::contextLen</a></div><div class="ttdeci">std::size_t contextLen(const std::string &amp;prefix)</div><div class="ttdef"><b>Definition</b> <a href="#l00031">Utils.cpp:31</a></div></div>
-<div class="ttc" id="anamespaceArk_1_1internal_html_a6146cb020fc99ea827febe76168c020f"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#a6146cb020fc99ea827febe76168c020f">Ark::internal::countOpenEnclosures</a></div><div class="ttdeci">long countOpenEnclosures(const std::string &amp;line, char open, char close)</div><div class="ttdoc">Count the open enclosure and its counterpart: (), {}, [].</div><div class="ttdef"><b>Definition</b> <a href="#l00008">Utils.cpp:8</a></div></div>
-<div class="ttc" id="anamespaceArk_1_1internal_html_a7ce3ab98e01fe218abc001550a1c2feb"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#a7ce3ab98e01fe218abc001550a1c2feb">Ark::internal::hookColor</a></div><div class="ttdeci">void hookColor(const std::vector&lt; std::pair&lt; std::string, replxx::Replxx::Color &gt; &gt; &amp;words_colors, const std::string &amp;context, replxx::Replxx::colors_t &amp;colors)</div><div class="ttdef"><b>Definition</b> <a href="#l00073">Utils.cpp:73</a></div></div>
+<div class="ttc" id="aCommon_8hpp_html"><div class="ttname"><a href="../../d8/ddd/Common_8hpp.html">Common.hpp</a></div><div class="ttdoc">Common code for the compiler.</div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_1_1Builtins_html_ae99a104c484192543989515d4eda8a5a"><div class="ttname"><a href="../../df/dda/namespaceArk_1_1internal_1_1Builtins.html#ae99a104c484192543989515d4eda8a5a">Ark::internal::Builtins::builtins</a></div><div class="ttdeci">ARK_API const std::vector&lt; std::pair&lt; std::string, Value &gt; &gt; builtins</div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_1_1Language_html_a1bb898b4293824c8045031eb33682e09"><div class="ttname"><a href="../../de/d35/namespaceArk_1_1internal_1_1Language.html#a1bb898b4293824c8045031eb33682e09">Ark::internal::Language::listInstructions</a></div><div class="ttdeci">constexpr std::array&lt; std::string_view, 9 &gt; listInstructions</div><div class="ttdef"><b>Definition</b> <a href="../../d8/ddd/Common_8hpp_source.html#l00115">Common.hpp:115</a></div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_1_1Language_html_a51a24f918bfd893110de521e7856ecf3"><div class="ttname"><a href="../../de/d35/namespaceArk_1_1internal_1_1Language.html#a51a24f918bfd893110de521e7856ecf3">Ark::internal::Language::operators</a></div><div class="ttdeci">constexpr std::array&lt; std::string_view, 24 &gt; operators</div><div class="ttdef"><b>Definition</b> <a href="../../d8/ddd/Common_8hpp_source.html#l00150">Common.hpp:150</a></div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_html"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html">Ark::internal</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/d84/Builtins_8hpp_source.html#l00024">Builtins.hpp:25</a></div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_html_a436b1ac5607da1c3b39dbdaa92ab1293"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#a436b1ac5607da1c3b39dbdaa92ab1293">Ark::internal::getAllKeywords</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getAllKeywords()</div><div class="ttdoc">Compute a list of all the language keywords and builtins.</div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_html_a6146cb020fc99ea827febe76168c020f"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#a6146cb020fc99ea827febe76168c020f">Ark::internal::countOpenEnclosures</a></div><div class="ttdeci">long countOpenEnclosures(const std::string &amp;line, char open, char close)</div><div class="ttdoc">Count the open enclosure and its counterpart: (), {}, [].</div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_html_a7ce3ab98e01fe218abc001550a1c2feb"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#a7ce3ab98e01fe218abc001550a1c2feb">Ark::internal::hookColor</a></div><div class="ttdeci">void hookColor(const std::vector&lt; std::pair&lt; std::string, replxx::Replxx::Color &gt; &gt; &amp;words_colors, const std::string &amp;context, replxx::Replxx::colors_t &amp;colors)</div></div>
 <div class="ttc" id="anamespaceArk_1_1internal_html_a7d005551398e8bf19ed7f2d3d9a8ddbb"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#a7d005551398e8bf19ed7f2d3d9a8ddbb">Ark::internal::colors</a></div><div class="ttdeci">constexpr std::array colors</div><div class="ttdef"><b>Definition</b> <a href="../../d9/df5/Logger_8cpp_source.html#l00008">Logger.cpp:8</a></div></div>
-<div class="ttc" id="anamespaceArk_1_1internal_html_a7e86ab6e910dedf371dac09d3c25fa90"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#a7e86ab6e910dedf371dac09d3c25fa90">Ark::internal::hookCompletion</a></div><div class="ttdeci">replxx::Replxx::completions_t hookCompletion(const std::vector&lt; std::string &gt; &amp;words, const std::string &amp;context, int &amp;length)</div><div class="ttdef"><b>Definition</b> <a href="#l00049">Utils.cpp:49</a></div></div>
-<div class="ttc" id="anamespaceArk_1_1internal_html_ac4cd27cb30a3c52fde19e4b98ff80cfd"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#ac4cd27cb30a3c52fde19e4b98ff80cfd">Ark::internal::hookHint</a></div><div class="ttdeci">replxx::Replxx::hints_t hookHint(const std::vector&lt; std::string &gt; &amp;words, const std::string &amp;context, int &amp;length, replxx::Replxx::Color &amp;color)</div><div class="ttdef"><b>Definition</b> <a href="#l00098">Utils.cpp:98</a></div></div>
-<div class="ttc" id="anamespaceArk_1_1internal_html_ad95f4c191466c48c5b0d8ef5b6c26a1b"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#ad95f4c191466c48c5b0d8ef5b6c26a1b">Ark::internal::trimWhitespace</a></div><div class="ttdeci">void trimWhitespace(std::string &amp;line)</div><div class="ttdoc">Remove whitespaces at the start and end of a string.</div><div class="ttdef"><b>Definition</b> <a href="#l00013">Utils.cpp:13</a></div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_html_a7e86ab6e910dedf371dac09d3c25fa90"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#a7e86ab6e910dedf371dac09d3c25fa90">Ark::internal::hookCompletion</a></div><div class="ttdeci">replxx::Replxx::completions_t hookCompletion(const std::vector&lt; std::string &gt; &amp;words, const std::string &amp;context, int &amp;length)</div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_html_ab07ef04d2a2f1b71edb4a8f931725eb0"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#ab07ef04d2a2f1b71edb4a8f931725eb0">Ark::internal::getColorPerKeyword</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; std::string, replxx::Replxx::Color &gt; &gt; getColorPerKeyword()</div><div class="ttdoc">Compute a list of pairs (word -&gt; color) to be used for coloration by the REPL.</div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_html_ac4cd27cb30a3c52fde19e4b98ff80cfd"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#ac4cd27cb30a3c52fde19e4b98ff80cfd">Ark::internal::hookHint</a></div><div class="ttdeci">replxx::Replxx::hints_t hookHint(const std::vector&lt; std::string &gt; &amp;words, const std::string &amp;context, int &amp;length, replxx::Replxx::Color &amp;color)</div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_html_ad95f4c191466c48c5b0d8ef5b6c26a1b"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#ad95f4c191466c48c5b0d8ef5b6c26a1b">Ark::internal::trimWhitespace</a></div><div class="ttdeci">void trimWhitespace(std::string &amp;line)</div><div class="ttdoc">Remove whitespaces at the start and end of a string.</div></div>
+<div class="ttc" id="anamespaceArk_1_1internal_html_af04674c421b375325c6ef8261578b7b8"><div class="ttname"><a href="../../dc/d0e/namespaceArk_1_1internal.html#af04674c421b375325c6ef8261578b7b8">Ark::internal::keywords</a></div><div class="ttdeci">constexpr std::array&lt; std::string_view, 9 &gt; keywords</div><div class="ttdoc">List of available keywords in ArkScript.</div><div class="ttdef"><b>Definition</b> <a href="../../d8/ddd/Common_8hpp_source.html#l00088">Common.hpp:88</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_2f97cbe3d7d7ee3d0a7f34ae796b7c3c.html">arkscript</a></li><li class="navelem"><a class="el" href="../../dir_b137344471615342cb36678e59bedd43.html">REPL</a></li><li class="navelem"><a class="el" href="../../d7/d48/arkscript_2REPL_2Utils_8cpp.html">Utils.cpp</a></li>
-    <li class="footer">Generated on Wed Jan 15 2025 19:51:44 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed May 21 2025 18:40:52 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

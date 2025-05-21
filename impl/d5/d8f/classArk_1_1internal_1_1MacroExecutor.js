@@ -9,6 +9,7 @@ var classArk_1_1internal_1_1MacroExecutor =
     [ "findNearestMacro", "d5/d8f/classArk_1_1internal_1_1MacroExecutor.html#af2cd6c3bbbe7d0ff4faf989895ca6788", null ],
     [ "handleMacroNode", "d5/d8f/classArk_1_1internal_1_1MacroExecutor.html#adac40ddb6ab24d0a8bc0c2d15675d575", null ],
     [ "isTruthy", "d5/d8f/classArk_1_1internal_1_1MacroExecutor.html#ad51abed28cd00cd088147741462b95e5", null ],
+    [ "macroNode", "d5/d8f/classArk_1_1internal_1_1MacroExecutor.html#a51f228238d476713d728f4fecc551e1a", null ],
     [ "throwMacroProcessingError", "d5/d8f/classArk_1_1internal_1_1MacroExecutor.html#a8d482429d4abd29c3ea405bf506a92c5", null ],
     [ "m_debug", "d5/d8f/classArk_1_1internal_1_1MacroExecutor.html#a9e4ba1cef5d2313dde11043c6215793c", null ],
     [ "m_processor", "d5/d8f/classArk_1_1internal_1_1MacroExecutor.html#a8f441dc92214b23e7e2e43769c3273de", null ]

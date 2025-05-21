@@ -1,0 +1,18 @@
+digraph "/Users/fola/Documents/ArkScript/Ark/lib/modules/draft"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_e1dbc8ba94a86723d4c32227b7c46099 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="modules", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_e1dbc8ba94a86723d4c32227b7c46099.html",tooltip=""]
+  subgraph clusterdir_86d6924905eb73bb4f7fef584020fb23 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_86d6924905eb73bb4f7fef584020fb23.html",tooltip=""]
+    dir_86d6924905eb73bb4f7fef584020fb23 [shape=plaintext, label="draft"];
+  dir_92cf627db9c043970bdbe4787ea5be21 [label="database", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_92cf627db9c043970bdbe4787ea5be21.html",tooltip=""];
+  dir_bc382a4924ebd7d50f3f3e11690e1c8c [label="json", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_bc382a4924ebd7d50f3f3e11690e1c8c.html",tooltip=""];
+  }
+  }
+}

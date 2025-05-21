@@ -11,9 +11,9 @@ digraph "Ark::types::Contract"
   Node3 -> Node2 [id="edge2_Node000002_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" elements",fontcolor="grey" ];
   Node3 [id="Node000003",label="Ark::types::Typedef",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$d9/dbf/structArk_1_1types_1_1Typedef.html",tooltip="A type definition within a contract."];
   Node4 -> Node3 [id="edge3_Node000003_Node000004",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" name",fontcolor="grey" ];
-  Node4 [id="Node000004",label="std::string_view",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node4 [id="Node000004",label="std::string",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
   Node5 -> Node4 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node5 [id="Node000005",label="std::basic_string_view\l\< Char \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node5 [id="Node000005",label="std::basic_string\<\l Char \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
   Node6 -> Node3 [id="edge5_Node000003_Node000006",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" types",fontcolor="grey" ];
   Node6 [id="Node000006",label="std::vector\< ValueType \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
   Node7 -> Node6 [id="edge6_Node000006_Node000007",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< ValueType \>",fontcolor="grey" ];

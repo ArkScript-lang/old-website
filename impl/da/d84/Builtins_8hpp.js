@@ -31,6 +31,7 @@ var Builtins_8hpp =
     [ "ord", "da/d84/Builtins_8hpp.html#a31adf8c834c5dd20616bdc4d055324ca", null ],
     [ "print", "da/d84/Builtins_8hpp.html#a83ec7c81fb958b782a4298ef6d06defd", null ],
     [ "puts_", "da/d84/Builtins_8hpp.html#a5f4cc90463dd51cfeb185935326c3d17", null ],
+    [ "random", "da/d84/Builtins_8hpp.html#a58d045b58126e2c68b6893521e2cd783", null ],
     [ "readFile", "da/d84/Builtins_8hpp.html#a42b2f57b800c7c60281b6b0cc59f0067", null ],
     [ "removeAtStr", "da/d84/Builtins_8hpp.html#a5b7072a6c442f24b36d1d833170184b6", null ],
     [ "removeFiles", "da/d84/Builtins_8hpp.html#ae39387ef342532a538ea1536f29f0903", null ],

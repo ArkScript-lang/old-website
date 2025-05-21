@@ -67,4 +67,7 @@ digraph "Formatter"
   Node2 -> Node25 [id="edge34_Node000025_Node000002",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" prefix",fontcolor="grey" ];
   Node22 -> Node25 [id="edge35_Node000025_Node000022",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" package\nsymbols",fontcolor="grey" ];
   Node12 -> Node24 [id="edge36_Node000024_Node000012",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< Ark::internal::Import \>",fontcolor="grey" ];
+  Node26 -> Node4 [id="edge37_Node000004_Node000026",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_parsers",fontcolor="grey" ];
+  Node26 [id="Node000026",label="std::vector\< std::function\l\< std::optional\< Ark::internal\l::Node \>()\> \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node12 -> Node26 [id="edge38_Node000026_Node000012",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< std::function\< std\l::optional\< Ark::internal\l::Node \>()\> \>",fontcolor="grey" ];
 }

@@ -87,6 +87,7 @@ $(function(){initNavTree('d6/dd1/Exceptions_8cpp.html','../../'); initResizable(
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="../../d2/de9/Exceptions_8hpp_source.html">Ark/Exceptions.hpp</a>&gt;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;fmt/core.h&gt;</code><br />
@@ -100,7 +101,7 @@ $(function(){initNavTree('d6/dd1/Exceptions_8cpp.html','../../'); initResizable(
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Exceptions.cpp:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d1/dc3/Exceptions_8cpp__incl.svg" width="100%" height="527"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d1/dc3/Exceptions_8cpp__incl.svg" width="100%" height="582"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="../../d6/dd1/Exceptions_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -123,12 +124,11 @@ Functions</h2></td></tr>
 <tr class="separator:a081ebf7404388182bae64e69b8f8d40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42a11ffcc858a1315b92911e2eb15e22" id="r_a42a11ffcc858a1315b92911e2eb15e22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da6/namespaceArk_1_1Diagnostics.html#a42a11ffcc858a1315b92911e2eb15e22">Ark::Diagnostics::colorizeLine</a> (const std::string &amp;line, <a class="el" href="../../d1/d92/structArk_1_1Diagnostics_1_1LineColorContextCounts.html">LineColorContextCounts</a> &amp;line_color_context_counts, std::ostream &amp;ss)</td></tr>
 <tr class="separator:a42a11ffcc858a1315b92911e2eb15e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3463901cf1adf9b734fd04f13c21b358" id="r_a3463901cf1adf9b734fd04f13c21b358"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d44/Module_8hpp.html#ac62a8551c675391a8cf01d112e42d755">ARK_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da6/namespaceArk_1_1Diagnostics.html#a3463901cf1adf9b734fd04f13c21b358">Ark::Diagnostics::makeContext</a> (std::ostream &amp;os, const std::string &amp;code, std::size_t target_line, std::size_t col_start, std::size_t sym_size, bool colorize)</td></tr>
-<tr class="memdesc:a3463901cf1adf9b734fd04f13c21b358"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to create a colorized context to report errors to the user.  <br /></td></tr>
-<tr class="separator:a3463901cf1adf9b734fd04f13c21b358"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fd9192d9c51f7a2b48fa9e0db9450c2" id="r_a6fd9192d9c51f7a2b48fa9e0db9450c2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a6fd9192d9c51f7a2b48fa9e0db9450c2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/da6/namespaceArk_1_1Diagnostics.html#a6fd9192d9c51f7a2b48fa9e0db9450c2">Ark::Diagnostics::helper</a> (std::ostream &amp;os, const std::string &amp;message, const bool colorize, const std::string &amp;filename, const std::string &amp;code, const T &amp;expr, const std::size_t line, std::size_t column, const std::size_t sym_size)</td></tr>
-<tr class="separator:a6fd9192d9c51f7a2b48fa9e0db9450c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af84e14d8d38c828381b78c586e389a58" id="r_af84e14d8d38c828381b78c586e389a58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d44/Module_8hpp.html#ac62a8551c675391a8cf01d112e42d755">ARK_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da6/namespaceArk_1_1Diagnostics.html#af84e14d8d38c828381b78c586e389a58">Ark::Diagnostics::makeContext</a> (std::ostream &amp;os, const std::string &amp;filename, const std::optional&lt; std::string &gt; &amp;expr, std::size_t sym_size, std::size_t target_line, std::size_t col_start, const std::optional&lt; <a class="el" href="../../db/d27/structArk_1_1CodeErrorContext.html">CodeErrorContext</a> &gt; &amp;maybe_context, bool whole_line, bool colorize)</td></tr>
+<tr class="memdesc:af84e14d8d38c828381b78c586e389a58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to create a colorized context to report errors to the user.  <br /></td></tr>
+<tr class="separator:af84e14d8d38c828381b78c586e389a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30bef493fa87eff947216a63118caa7c" id="r_a30bef493fa87eff947216a63118caa7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da6/namespaceArk_1_1Diagnostics.html#a30bef493fa87eff947216a63118caa7c">Ark::Diagnostics::helper</a> (std::ostream &amp;os, const std::string &amp;message, const bool colorize, const std::string &amp;filename, const std::optional&lt; std::string &gt; &amp;expr, const std::size_t sym_size, const std::size_t line, const std::size_t column, const std::optional&lt; <a class="el" href="../../db/d27/structArk_1_1CodeErrorContext.html">CodeErrorContext</a> &gt; &amp;maybe_context=std::nullopt)</td></tr>
+<tr class="separator:a30bef493fa87eff947216a63118caa7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94bf29cfdd0884c99ddc707cd4b0e4ad" id="r_a94bf29cfdd0884c99ddc707cd4b0e4ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d44/Module_8hpp.html#ac62a8551c675391a8cf01d112e42d755">ARK_API</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da6/namespaceArk_1_1Diagnostics.html#a94bf29cfdd0884c99ddc707cd4b0e4ad">Ark::Diagnostics::makeContextWithNode</a> (const std::string &amp;message, const <a class="el" href="../../dc/d9e/classArk_1_1internal_1_1Node.html">internal::Node</a> &amp;node)</td></tr>
 <tr class="memdesc:a94bf29cfdd0884c99ddc707cd4b0e4ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper used by the compiler to generate a colorized context from a node.  <br /></td></tr>
 <tr class="separator:a94bf29cfdd0884c99ddc707cd4b0e4ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,7 +142,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_e0d450b481c7e7e5abacff9799e54b3d.html">arkreactor</a></li><li class="navelem"><a class="el" href="../../d6/dd1/Exceptions_8cpp.html">Exceptions.cpp</a></li>
-    <li class="footer">Generated on Wed Jan 15 2025 19:51:44 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed May 21 2025 18:40:52 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

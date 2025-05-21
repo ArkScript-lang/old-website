@@ -5,13 +5,13 @@ digraph "/Users/fola/Documents/ArkScript/Ark/include/Ark/VM/Future.hpp"
   bgcolor="transparent";
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
-  Node1 [id="Node000001",label="/Users/fola/Documents\l/ArkScript/Ark/include\l/Ark/VM/Future.hpp",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [id="Node000001",label="/Users/fola/Documents\l/ArkScript/Ark/include\l/Ark/VM/Future.hpp",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Internal object to resolve asynchronously a function call in ArkScript."];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="future",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="vector",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
-  Node4 [id="Node000004",label="Ark/VM/Value.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$de/dfd/Value_8hpp.html",tooltip=" "];
+  Node4 [id="Node000004",label="Ark/VM/Value.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$de/dfd/Value_8hpp.html",tooltip="Default value type handled by the virtual machine."];
   Node4 -> Node3 [id="edge4_Node000004_Node000003",color="steelblue1",style="solid",tooltip=" "];
   Node4 -> Node5 [id="edge5_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
   Node5 [id="Node000005",label="variant",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
@@ -53,9 +53,17 @@ digraph "/Users/fola/Documents/ArkScript/Ark/include/Ark/VM/Future.hpp"
   Node19 [id="Node000019",label="cstddef",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node14 -> Node4 [id="edge28_Node000014_Node000004",color="steelblue1",style="solid",tooltip=" "];
   Node14 -> Node20 [id="edge29_Node000014_Node000020",color="steelblue1",style="solid",tooltip=" "];
-  Node20 [id="Node000020",label="Ark/VM/Scope.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d8/dcd/Scope_8hpp.html",tooltip="The virtual machine scope system."];
-  Node20 -> Node3 [id="edge30_Node000020_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node20 [id="Node000020",label="Ark/VM/ScopeView.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d8/d45/ScopeView_8hpp.html",tooltip=" "];
+  Node20 -> Node8 [id="edge30_Node000020_Node000008",color="steelblue1",style="solid",tooltip=" "];
   Node20 -> Node7 [id="edge31_Node000020_Node000007",color="steelblue1",style="solid",tooltip=" "];
   Node20 -> Node12 [id="edge32_Node000020_Node000012",color="steelblue1",style="solid",tooltip=" "];
   Node20 -> Node4 [id="edge33_Node000020_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node14 -> Node21 [id="edge34_Node000014_Node000021",color="steelblue1",style="solid",tooltip=" "];
+  Node21 [id="Node000021",label="Ark/VM/Value/ClosureScope.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d1/d71/ClosureScope_8hpp.html",tooltip="Subtype of the value type, handling closures."];
+  Node21 -> Node3 [id="edge35_Node000021_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node21 -> Node22 [id="edge36_Node000021_Node000022",color="steelblue1",style="solid",tooltip=" "];
+  Node22 [id="Node000022",label="utility",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node21 -> Node7 [id="edge37_Node000021_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node21 -> Node12 [id="edge38_Node000021_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node21 -> Node4 [id="edge39_Node000021_Node000004",color="steelblue1",style="solid",tooltip=" "];
 }

@@ -21,6 +21,8 @@ var classArk_1_1State =
     [ "m_constants", "d1/d37/classArk_1_1State.html#a4b5df7febb31b23bad6fee46c416f3a5", null ],
     [ "m_debug_level", "d1/d37/classArk_1_1State.html#ac612a46c05c538df07704fbd4edc3607", null ],
     [ "m_filename", "d1/d37/classArk_1_1State.html#a49ff30e9372a01fa115e1d473d78ff7d", null ],
+    [ "m_filenames", "d1/d37/classArk_1_1State.html#a6243d01243f5d4b677b8ecaec123ebb3", null ],
+    [ "m_inst_locations", "d1/d37/classArk_1_1State.html#a543bff7e15fdbc3d6e95af107a08dd40", null ],
     [ "m_libenv", "d1/d37/classArk_1_1State.html#a01ec977344babaa42af918ef8d000c37", null ],
     [ "m_pages", "d1/d37/classArk_1_1State.html#ab30d0ca94fb2543fb073e5f66c074c37", null ],
     [ "m_symbols", "d1/d37/classArk_1_1State.html#a9b47055deafbe7eb0061c0b59fadab8b", null ]

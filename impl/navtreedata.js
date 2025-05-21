@@ -27,14 +27,12 @@ var NAVTREE =
   [ "ArkScript", "index.html", [
     [ "Home", "index.html", null ],
     [ "ArkScript modules", "usergroup0.html", [
-      [ "Bitwise", "@ref bitwise_module", null ],
-      [ "Console", "@ref console_module", null ],
-      [ "Database", "@ref database_module", null ],
-      [ "Hash", "@ref hash_module", null ],
+      [ "Bitwise", "d5/df5/bitwise_module.html", null ],
+      [ "Console", "d8/d74/console_module.html", null ],
+      [ "Database", "d3/d33/database_module.html", null ],
+      [ "Hash", "db/d2b/hash_module.html", null ],
       [ "HTTP", "@ref http_module", null ],
-      [ "JSON", "@ref json_module", null ],
-      [ "MsgPack", "@ref msgpack_module", null ],
-      [ "Random", "@ref random_module", null ]
+      [ "JSON", "d3/d94/json_module.html", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -56,6 +54,7 @@ var NAVTREE =
         [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", "functions_vars" ],
         [ "Typedefs", "functions_type.html", null ],
+        [ "Enumerations", "functions_enum.html", null ],
         [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
@@ -73,17 +72,18 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"@ref bitwise_module",
-"d1/d92/structArk_1_1Diagnostics_1_1LineColorContextCounts.html#a97f7e31494d566e35dc360f462fa6132",
-"d3/d90/classArk_1_1Value.html#a3f7d411ed89f6b17df0209cbb3d688f8",
-"d5/db5/classArk_1_1internal_1_1MacroProcessor.html#a7a3940db6c08f4afbb276a8a7d254e50",
-"d7/db8/classArk_1_1internal_1_1NameResolutionPass.html#a6ae59f969507987b4d109f62028e76c0",
-"d8/daa/Instructions_8hpp.html#abcd166377fbe7dcd77e47ef80cee8681ae4911d30f6af4720da1c508316389364",
-"d9/dba/structArk_1_1Symbols.html#a5ed449cc71469d827bab38a8423ec6a5",
-"db/da6/namespaceArk_1_1Diagnostics.html#a6fd9192d9c51f7a2b48fa9e0db9450c2",
-"dc/d35/classArk_1_1internal_1_1IR_1_1Entity.html#a1a51a4f5160117e6b7db09a30d3283b8",
-"dd/de8/namespaceutf8.html#a9b2ece99e394125f5ff6e86cdd1b2f42",
-"functions_func_o.html"
+"@ref http_module",
+"d1/d85/utf8_8hpp.html#a9659766b9a41ed0e007bb644875beade",
+"d2/ddd/classArk_1_1internal_1_1ScopeView.html#aeedf7933ae5c30972614a363ece1a4ef",
+"d3/dfb/structArk_1_1types_1_1Contract.html#a741db4ca28ec52d9a8b64679cc61a5e5",
+"d6/d42/classArk_1_1internal_1_1MacroScope.html#ab49c5b3dbdeb503d14ad4535b094e0ba",
+"d8/d00/classArk_1_1internal_1_1BaseParser.html#aaf42f6cbec652aba80e89588f167507b",
+"d8/ddd/Common_8hpp.html#adec1abdb389d377b54021dfc0504f27d",
+"d9/ddd/namespaceArk_1_1internal_1_1Builtins_1_1String.html#a31adf8c834c5dd20616bdc4d055324ca",
+"db/d27/structArk_1_1CodeErrorContext.html#a82842a323079ceeceef317098a40d1c4",
+"dc/d35/classArk_1_1internal_1_1IR_1_1Entity.html#a33413f798c59de12800767e8917cc03a",
+"dd/d92/classArk_1_1internal_1_1ScopeResolver.html#afa50502055a33435d583da5de4da1815",
+"dir_1b1d215ac859be8e3351abc97240522b.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

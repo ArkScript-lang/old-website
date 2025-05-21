@@ -1,44 +1,51 @@
 <map id="/Users/fola/Documents/ArkScript/Ark/include/Ark/Compiler/Pass.hpp" name="/Users/fola/Documents/ArkScript/Ark/include/Ark/Compiler/Pass.hpp">
-<area shape="rect" id="Node000001" title="Interface for a compiler pass (take in an AST, output an AST)" alt="" coords="610,5,771,61"/>
-<area shape="rect" id="Node000002" href="$d7/dc6/Node_8hpp.html" title="AST node used by the parser, optimizer and compiler." alt="" coords="532,109,719,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="672,63,646,98,641,95,668,60"/>
-<area shape="rect" id="Node000014" href="$d9/d11/Logger_8hpp.html" title="Internal logger." alt="" coords="880,183,989,208"/>
-<area shape="poly" id="edge16_Node000001_Node000014" title=" " alt="" coords="733,59,905,172,902,176,730,64"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="652,183,713,208"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="637,133,665,169,661,172,633,137"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="736,183,805,208"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="651,133,733,173,731,178,649,138"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="644,256,697,282"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="720,126,748,134,775,145,799,160,819,181,825,195,819,210,779,231,713,256,711,251,777,227,815,207,819,195,815,184,796,164,772,149,746,139,718,132"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="240,256,298,282"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="531,132,463,139,394,150,335,165,312,174,296,185,286,197,279,211,273,242,267,240,274,209,282,194,293,181,310,170,333,160,393,145,463,134,531,127"/>
-<area shape="rect" id="Node000007" href="$da/d33/Namespace_8hpp.html" title=" " alt="" coords="5,183,232,208"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="539,138,221,183,220,177,538,133"/>
-<area shape="rect" id="Node000009" href="$d8/ddd/Common_8hpp.html" title="Common code for the compiler." alt="" coords="306,183,486,208"/>
-<area shape="poly" id="edge10_Node000002_Node000009" title=" " alt="" coords="587,138,450,180,448,175,585,133"/>
-<area shape="rect" id="Node000013" href="$d5/d40/Platform_8hpp.html" title="ArkScript configuration macros." alt="" coords="510,183,629,208"/>
-<area shape="poly" id="edge15_Node000002_Node000013" title=" " alt="" coords="618,137,590,172,586,169,614,133"/>
-<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="222,206,595,254,629,259,628,264,594,259,221,212"/>
-<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="145,206,231,247,229,252,143,211"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="84,256,153,282"/>
-<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="121,209,121,241,116,241,116,209"/>
-<area shape="poly" id="edge13_Node000009_Node000006" title=" " alt="" coords="376,211,305,251,303,246,373,207"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="420,256,470,282"/>
-<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="406,207,431,242,426,245,402,210"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="495,256,582,282"/>
-<area shape="poly" id="edge12_Node000009_Node000011" title=" " alt="" coords="421,206,502,247,499,251,419,211"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="321,256,396,282"/>
-<area shape="poly" id="edge14_Node000009_Node000012" title=" " alt="" coords="392,210,374,244,369,241,387,207"/>
-<area shape="poly" id="edge19_Node000014_Node000005" title=" " alt="" coords="888,212,713,258,711,253,886,206"/>
-<area shape="poly" id="edge21_Node000014_Node000006" title=" " alt="" coords="880,205,817,211,677,222,566,227,455,237,314,259,313,253,454,232,565,222,676,216,817,206,880,200"/>
-<area shape="rect" id="Node000015" title=" " alt="" coords="962,256,1033,282"/>
-<area shape="poly" id="edge17_Node000014_Node000015" title=" " alt="" coords="947,207,978,243,974,246,943,210"/>
-<area shape="rect" id="Node000016" title=" " alt="" coords="1056,256,1149,282"/>
-<area shape="poly" id="edge18_Node000014_Node000016" title=" " alt="" coords="964,206,1061,247,1059,252,962,211"/>
-<area shape="rect" id="Node000017" title=" " alt="" coords="1172,256,1233,282"/>
-<area shape="poly" id="edge20_Node000014_Node000017" title=" " alt="" coords="982,206,1158,253,1157,258,981,212"/>
-<area shape="rect" id="Node000018" title=" " alt="" coords="721,256,831,282"/>
-<area shape="poly" id="edge22_Node000014_Node000018" title=" " alt="" coords="909,211,818,252,815,247,906,206"/>
-<area shape="rect" id="Node000019" title=" " alt="" coords="855,256,937,282"/>
-<area shape="poly" id="edge23_Node000014_Node000019" title=" " alt="" coords="930,210,912,244,907,241,926,207"/>
+<area shape="rect" id="Node000001" title="Interface for a compiler pass (take in an AST, output an AST)" alt="" coords="353,5,513,61"/>
+<area shape="rect" id="Node000002" href="$d5/d40/Platform_8hpp.html" title="ArkScript configuration macros." alt="" coords="5,183,125,208"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="372,64,108,178,106,174,370,59"/>
+<area shape="rect" id="Node000003" href="$d7/dc6/Node_8hpp.html" title="AST node used by the parser, optimizer and compiler." alt="" coords="339,109,527,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="436,61,436,93,430,93,430,61"/>
+<area shape="rect" id="Node000016" href="$d9/d11/Logger_8hpp.html" title="Internal logger." alt="" coords="882,183,990,208"/>
+<area shape="poly" id="edge21_Node000001_Node000016" title=" " alt="" coords="515,58,884,175,882,180,513,63"/>
+<area shape="poly" id="edge20_Node000003_Node000002" title=" " alt="" coords="371,138,140,182,139,177,370,133"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="403,183,463,208"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="436,135,436,167,430,167,430,135"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="487,183,555,208"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="450,133,496,171,493,175,446,137"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="716,256,769,282"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="527,122,611,126,697,136,772,153,801,166,820,181,826,190,827,200,819,219,802,236,781,250,778,246,799,232,815,216,822,200,821,192,816,184,798,170,771,158,697,141,610,131,527,127"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="446,256,503,282"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="422,137,408,151,396,169,389,188,393,207,410,230,434,247,430,251,407,233,388,209,384,188,391,167,404,148,418,133"/>
+<area shape="rect" id="Node000008" href="$da/d33/Namespace_8hpp.html" title=" " alt="" coords="580,183,806,208"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="478,133,635,175,633,181,476,138"/>
+<area shape="rect" id="Node000010" href="$d8/ddd/Common_8hpp.html" title="Common code for the compiler." alt="" coords="149,183,328,208"/>
+<area shape="poly" id="edge11_Node000003_Node000010" title=" " alt="" coords="401,138,287,179,285,174,399,133"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="703,207,728,242,723,245,699,210"/>
+<area shape="poly" id="edge9_Node000008_Node000007" title=" " alt="" coords="657,211,518,256,517,251,655,206"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="623,256,691,282"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="689,210,672,244,667,241,685,207"/>
+<area shape="poly" id="edge14_Node000010_Node000007" title=" " alt="" coords="279,206,432,252,430,257,278,211"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="324,256,374,282"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="259,207,319,245,316,250,256,211"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="39,330,126,356"/>
+<area shape="poly" id="edge13_Node000010_Node000012" title=" " alt="" coords="187,211,145,229,125,242,108,258,93,286,87,315,81,314,88,284,104,255,122,238,142,225,185,206"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="244,330,318,356"/>
+<area shape="poly" id="edge15_Node000010_Node000013" title=" " alt="" coords="246,208,264,256,278,314,273,316,258,257,241,210"/>
+<area shape="rect" id="Node000014" href="$d6/de9/Constants_8hpp.html" title="Constants used by ArkScript." alt="" coords="118,256,249,282"/>
+<area shape="poly" id="edge16_Node000010_Node000014" title=" " alt="" coords="231,210,204,246,200,242,227,207"/>
+<area shape="poly" id="edge17_Node000014_Node000012" title=" " alt="" coords="168,285,114,323,111,318,165,280"/>
+<area shape="poly" id="edge18_Node000014_Node000013" title=" " alt="" coords="202,280,254,319,251,323,199,285"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="152,330,216,356"/>
+<area shape="poly" id="edge19_Node000014_Node000015" title=" " alt="" coords="186,282,186,314,181,314,181,282"/>
+<area shape="poly" id="edge24_Node000016_Node000006" title=" " alt="" coords="904,211,785,255,783,250,902,206"/>
+<area shape="poly" id="edge26_Node000016_Node000007" title=" " alt="" coords="881,208,519,264,518,258,881,203"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="900,256,971,282"/>
+<area shape="poly" id="edge22_Node000016_Node000017" title=" " alt="" coords="938,209,938,241,933,241,933,209"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="995,256,1087,282"/>
+<area shape="poly" id="edge23_Node000016_Node000018" title=" " alt="" coords="955,207,1012,245,1009,250,952,211"/>
+<area shape="rect" id="Node000019" title=" " alt="" coords="1111,256,1171,282"/>
+<area shape="poly" id="edge25_Node000016_Node000019" title=" " alt="" coords="971,206,1097,250,1096,255,970,211"/>
+<area shape="rect" id="Node000020" title=" " alt="" coords="1195,256,1306,282"/>
+<area shape="poly" id="edge27_Node000016_Node000020" title=" " alt="" coords="990,206,1183,250,1181,255,989,212"/>
+<area shape="rect" id="Node000021" title=" " alt="" coords="793,256,876,282"/>
+<area shape="poly" id="edge28_Node000016_Node000021" title=" " alt="" coords="920,211,866,249,863,245,917,207"/>
 </map>

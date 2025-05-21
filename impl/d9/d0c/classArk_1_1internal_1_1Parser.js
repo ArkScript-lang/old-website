@@ -33,5 +33,7 @@ var classArk_1_1internal_1_1Parser =
     [ "m_ast", "d9/d0c/classArk_1_1internal_1_1Parser.html#af3374a8db9c9deb335fa17356de29e12", null ],
     [ "m_imports", "d9/d0c/classArk_1_1internal_1_1Parser.html#ac8541c7bb044ba8ff2056461c206c672", null ],
     [ "m_interpret", "d9/d0c/classArk_1_1internal_1_1Parser.html#a023379e05461a34443c0465d71ff1115", null ],
-    [ "m_logger", "d9/d0c/classArk_1_1internal_1_1Parser.html#ab44309720db51fdee758c351f7c899ef", null ]
+    [ "m_logger", "d9/d0c/classArk_1_1internal_1_1Parser.html#ab44309720db51fdee758c351f7c899ef", null ],
+    [ "m_nested_nodes", "d9/d0c/classArk_1_1internal_1_1Parser.html#ad00d2c06d29b8a9cee8e8931c75c998e", null ],
+    [ "m_parsers", "d9/d0c/classArk_1_1internal_1_1Parser.html#a009a144755bf89f9a3b68cd5398875d7", null ]
 ];

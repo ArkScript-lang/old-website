@@ -7,9 +7,9 @@ digraph "Ark::internal::Closure"
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   Node1 [id="Node000001",label="Ark::internal::Closure",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Closure management."];
   Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_scope",fontcolor="grey" ];
-  Node2 [id="Node000002",label="std::shared_ptr\< Ark\l::internal::Scope \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node2 [id="Node000002",label="std::shared_ptr\< Ark\l::internal::ClosureScope \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
   Node3 -> Node2 [id="edge2_Node000002_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" ptr",fontcolor="grey" ];
-  Node3 [id="Node000003",label="Ark::internal::Scope",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$d5/d74/classArk_1_1internal_1_1Scope.html",tooltip="A class to handle the VM scope more efficiently."];
+  Node3 [id="Node000003",label="Ark::internal::ClosureScope",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$d9/d6c/classArk_1_1internal_1_1ClosureScope.html",tooltip="A class to store fields captured by a closure."];
   Node4 -> Node3 [id="edge3_Node000003_Node000004",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_data",fontcolor="grey" ];
   Node4 [id="Node000004",label="std::vector\< std::pair\l\< uint16_t, Ark::Value \> \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
   Node5 -> Node4 [id="edge4_Node000004_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" elements",fontcolor="grey" ];
@@ -26,7 +26,7 @@ digraph "Ark::internal::Closure"
   Node10 [id="Node000010",label="std::vector\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
   Node11 -> Node10 [id="edge10_Node000010_Node000011",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" elements",fontcolor="grey" ];
   Node11 [id="Node000011",label="T",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
-  Node12 -> Node2 [id="edge11_Node000002_Node000012",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< Ark::internal::Scope \>",fontcolor="grey" ];
+  Node12 -> Node2 [id="edge11_Node000002_Node000012",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< Ark::internal::Closure\lScope \>",fontcolor="grey" ];
   Node12 [id="Node000012",label="std::shared_ptr\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
   Node11 -> Node12 [id="edge12_Node000012_Node000011",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" ptr",fontcolor="grey" ];
 }

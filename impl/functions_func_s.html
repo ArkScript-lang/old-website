@@ -86,10 +86,11 @@ $(function(){initNavTree('functions_func_s.html',''); initResizable(true); });
 <li>saveBytecodeToFile()&#160;:&#160;<a class="el" href="d7/da8/classArk_1_1Welder.html#abe215f803d20ae6056dd28cdb06e52f5">Ark::Welder</a></li>
 <li>saveNamespace()&#160;:&#160;<a class="el" href="d9/d4a/classArk_1_1internal_1_1NamespaceScope.html#a1e7b2087e23629b7333fb5dcf3fcd23f">Ark::internal::NamespaceScope</a>, <a class="el" href="d3/d8e/classArk_1_1internal_1_1StaticScope.html#ac9608c6668e96eb6bb44edf4b6f77458">Ark::internal::StaticScope</a></li>
 <li>saveNamespaceAndRemove()&#160;:&#160;<a class="el" href="dd/d92/classArk_1_1internal_1_1ScopeResolver.html#a5c32e8b9a23b229f1e88f42839320a0e">Ark::internal::ScopeResolver</a></li>
-<li>Scope()&#160;:&#160;<a class="el" href="d5/d74/classArk_1_1internal_1_1Scope.html#ae29d1667b0da6e9749abd541cbd9d65e">Ark::internal::Scope</a></li>
-<li>scope()&#160;:&#160;<a class="el" href="d9/d4e/classArk_1_1internal_1_1Closure.html#af3bfd5a43c3e9bfe9cca2f73ee38c0c2">Ark::internal::Closure</a></li>
-<li>scopePtr()&#160;:&#160;<a class="el" href="d9/d4e/classArk_1_1internal_1_1Closure.html#a32032034b56cb76be3be8f28394992ee">Ark::internal::Closure</a></li>
+<li>saveScopeLengthForBranch()&#160;:&#160;<a class="el" href="de/d21/classArk_1_1internal_1_1LocalsLocator.html#a05718e7e414ba12108c86056d9d9f224">Ark::internal::LocalsLocator</a></li>
+<li>scope()&#160;:&#160;<a class="el" href="d9/d4e/classArk_1_1internal_1_1Closure.html#a6d9442d91acd4a951c12dbf143675458">Ark::internal::Closure</a></li>
+<li>scopePtr()&#160;:&#160;<a class="el" href="d9/d4e/classArk_1_1internal_1_1Closure.html#aaf50e5d8341525ba2a2e7a44514bca94">Ark::internal::Closure</a></li>
 <li>ScopeResolver()&#160;:&#160;<a class="el" href="dd/d92/classArk_1_1internal_1_1ScopeResolver.html#a42ef26b0008cd407c258e5bb8d569e1a">Ark::internal::ScopeResolver</a></li>
+<li>ScopeView()&#160;:&#160;<a class="el" href="d2/ddd/classArk_1_1internal_1_1ScopeView.html#a1dcccfa77a8ab809755a6e45fb26837c">Ark::internal::ScopeView</a></li>
 <li>secondaryArg()&#160;:&#160;<a class="el" href="dc/d35/classArk_1_1internal_1_1IR_1_1Entity.html#a1a51a4f5160117e6b7db09a30d3283b8">Ark::internal::IR::Entity</a></li>
 <li>sequence()&#160;:&#160;<a class="el" href="d8/d00/classArk_1_1internal_1_1BaseParser.html#a063b8f2428d65a1e387604efc8bc4db7">Ark::internal::BaseParser</a></li>
 <li>setArgs()&#160;:&#160;<a class="el" href="d1/d37/classArk_1_1State.html#aa852b784bc447702c336b05ffddcaa98">Ark::State</a></li>
@@ -99,6 +100,7 @@ $(function(){initNavTree('functions_func_s.html',''); initResizable(true); });
 <li>setNodePosAndFilename()&#160;:&#160;<a class="el" href="d9/d0c/classArk_1_1internal_1_1Parser.html#a8299b12ad050e0c54e7222eebe8623f2">Ark::internal::Parser</a></li>
 <li>setNodeType()&#160;:&#160;<a class="el" href="dc/d9e/classArk_1_1internal_1_1Node.html#a20cf4b5aaeaa1e21f6eb681733d7c920">Ark::internal::Node</a></li>
 <li>setPos()&#160;:&#160;<a class="el" href="dc/d9e/classArk_1_1internal_1_1Node.html#a3087344c1f8de8c8753fdcdfa102b4af">Ark::internal::Node</a></li>
+<li>setSourceLocation()&#160;:&#160;<a class="el" href="dc/d35/classArk_1_1internal_1_1IR_1_1Entity.html#ac145cb159160067183794e3eba3a8192">Ark::internal::IR::Entity</a></li>
 <li>setString()&#160;:&#160;<a class="el" href="dc/d9e/classArk_1_1internal_1_1Node.html#abcd8330924778f11ccb5973630a8f54e">Ark::internal::Node</a></li>
 <li>setup()&#160;:&#160;<a class="el" href="d2/d90/classArk_1_1internal_1_1ImportSolver.html#ab40466a0f2336523312a488c153ed42d">Ark::internal::ImportSolver</a></li>
 <li>setVal()&#160;:&#160;<a class="el" href="d2/d93/classArk_1_1VM.html#ac2fa2359a394c44cf286034c67aaec78">Ark::VM</a></li>
@@ -109,26 +111,29 @@ $(function(){initNavTree('functions_func_s.html',''); initResizable(true); });
 <li>shouldInfo()&#160;:&#160;<a class="el" href="d6/d2f/classArk_1_1internal_1_1Logger.html#ad66ba11a4773ce0c546493f725de7123">Ark::internal::Logger</a></li>
 <li>shouldSplitOnNewline()&#160;:&#160;<a class="el" href="d9/d43/classFormatter.html#a05984227397d145da78b0ab6fd410f64">Formatter</a></li>
 <li>shouldTrace()&#160;:&#160;<a class="el" href="d6/d2f/classArk_1_1internal_1_1Logger.html#a1ab2b2000df96d6313ab104457a836ec">Ark::internal::Logger</a></li>
+<li>showBacktraceWithException()&#160;:&#160;<a class="el" href="d2/d93/classArk_1_1VM.html#a0faa5b209c6ed12f1906de4efdfb5b1c">Ark::VM</a></li>
 <li>signedNumber()&#160;:&#160;<a class="el" href="d8/d00/classArk_1_1internal_1_1BaseParser.html#ae50289139dc1fc796b654fa7b904ec08">Ark::internal::BaseParser</a></li>
-<li>size()&#160;:&#160;<a class="el" href="d5/d74/classArk_1_1internal_1_1Scope.html#ad6804c8252c0fb5dab8d30107dbafeb3">Ark::internal::Scope</a>, <a class="el" href="df/d83/classArk_1_1internal_1_1utf8__char__t.html#afc1c7245a46573c0f28002b124cf61ea">Ark::internal::utf8_char_t</a></li>
+<li>size()&#160;:&#160;<a class="el" href="d2/ddd/classArk_1_1internal_1_1ScopeView.html#a1d963acb66b4b8119c58ddd559b9e9eb">Ark::internal::ScopeView</a>, <a class="el" href="df/d83/classArk_1_1internal_1_1utf8__char__t.html#afc1c7245a46573c0f28002b124cf61ea">Ark::internal::utf8_char_t</a></li>
+<li>sourceLine()&#160;:&#160;<a class="el" href="dc/d35/classArk_1_1internal_1_1IR_1_1Entity.html#a75936180d0d2cc71eabd7aea88ad9a18">Ark::internal::IR::Entity</a></li>
 <li>space()&#160;:&#160;<a class="el" href="d8/d00/classArk_1_1internal_1_1BaseParser.html#aa3863a435e4445f6a6ebe3ea3d03047b">Ark::internal::BaseParser</a></li>
 <li>spaceComment()&#160;:&#160;<a class="el" href="d8/d00/classArk_1_1internal_1_1BaseParser.html#a1d611e625a18569831aa202f26ab22af">Ark::internal::BaseParser</a></li>
 <li>spread()&#160;:&#160;<a class="el" href="d9/d0c/classArk_1_1internal_1_1Parser.html#a72075c75e03d30a88dbdfd7c5767c0f1">Ark::internal::Parser</a></li>
 <li>State()&#160;:&#160;<a class="el" href="d1/d37/classArk_1_1State.html#aca884c28e7dab2f893920c63f2c3cf8f">Ark::State</a></li>
+<li>StaticScope()&#160;:&#160;<a class="el" href="d3/d8e/classArk_1_1internal_1_1StaticScope.html#a5f214e1b761df701562d9fa7df2488e5">Ark::internal::StaticScope</a></li>
+<li>storageEnd()&#160;:&#160;<a class="el" href="d2/ddd/classArk_1_1internal_1_1ScopeView.html#a535ab4562e37aedc5daa6e79abc89ffc">Ark::internal::ScopeView</a></li>
 <li>store()&#160;:&#160;<a class="el" href="d2/d93/classArk_1_1VM.html#abefab392a0a09d82f505c79e2898e8c4">Ark::VM</a></li>
 <li>string()&#160;:&#160;<a class="el" href="dc/d9e/classArk_1_1internal_1_1Node.html#a2f4471104ade54106ab85f46fd5e708c">Ark::internal::Node</a>, <a class="el" href="d9/d0c/classArk_1_1internal_1_1Parser.html#a642553e0fa3cd197c69af9b3fdec99ca">Ark::internal::Parser</a>, <a class="el" href="d3/d90/classArk_1_1Value.html#aa86e361cddf385df706723c9a86b54ef">Ark::Value</a></li>
 <li>stringRef()&#160;:&#160;<a class="el" href="d3/d90/classArk_1_1Value.html#afeb000c2d550323bab26e5c496929315">Ark::Value</a></li>
-<li>suffix()&#160;:&#160;<a class="el" href="d8/d00/classArk_1_1internal_1_1BaseParser.html#af67ec6bc336eee6355a966f9c4d664c3">Ark::internal::BaseParser</a></li>
 <li>swapStackForFunCall()&#160;:&#160;<a class="el" href="d2/d93/classArk_1_1VM.html#ac7971b10b7ba473a2d311070dbf45fcf">Ark::VM</a></li>
 <li>symbol()&#160;:&#160;<a class="el" href="d9/d0c/classArk_1_1internal_1_1Parser.html#a363f897aad4152cf215be8c4be79ffcc">Ark::internal::Parser</a></li>
-<li>symbols()&#160;:&#160;<a class="el" href="d8/d08/classArk_1_1BytecodeReader.html#a118b9ed083252c5d9a806f1f0dee9074">Ark::BytecodeReader</a>, <a class="el" href="db/de9/classArk_1_1internal_1_1Compiler.html#a86d2f01fa9b6dd684d05eee5f658aa91">Ark::internal::Compiler</a></li>
+<li>symbols()&#160;:&#160;<a class="el" href="d8/d08/classArk_1_1BytecodeReader.html#a118b9ed083252c5d9a806f1f0dee9074">Ark::BytecodeReader</a>, <a class="el" href="d3/d57/classArk_1_1internal_1_1ASTLowerer.html#aece6ae46ed762287691133106184d0ab">Ark::internal::ASTLowerer</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Jan 15 2025 19:51:44 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed May 21 2025 18:40:52 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

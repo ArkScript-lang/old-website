@@ -24,8 +24,12 @@ var namespaceArk =
     [ "BytecodeReader", "d8/d08/classArk_1_1BytecodeReader.html", "d8/d08/classArk_1_1BytecodeReader" ],
     [ "Code", "d4/dd5/structArk_1_1Code.html", "d4/dd5/structArk_1_1Code" ],
     [ "CodeError", "d4/d0b/structArk_1_1CodeError.html", "d4/d0b/structArk_1_1CodeError" ],
+    [ "CodeErrorContext", "db/d27/structArk_1_1CodeErrorContext.html", "db/d27/structArk_1_1CodeErrorContext" ],
     [ "Error", "d6/d43/classArk_1_1Error.html", "d6/d43/classArk_1_1Error" ],
+    [ "Filenames", "d4/de7/structArk_1_1Filenames.html", "d4/de7/structArk_1_1Filenames" ],
+    [ "InstLocations", "d3/df5/structArk_1_1InstLocations.html", "d3/df5/structArk_1_1InstLocations" ],
     [ "mapping", "d4/dd8/structArk_1_1mapping.html", "d4/dd8/structArk_1_1mapping" ],
+    [ "NestedError", "db/ddb/classArk_1_1NestedError.html", "db/ddb/classArk_1_1NestedError" ],
     [ "Repl", "de/d60/classArk_1_1Repl.html", "de/d60/classArk_1_1Repl" ],
     [ "State", "d1/d37/classArk_1_1State.html", "d1/d37/classArk_1_1State" ],
     [ "Symbols", "d9/dba/structArk_1_1Symbols.html", "d9/dba/structArk_1_1Symbols" ],
@@ -36,14 +40,14 @@ var namespaceArk =
     [ "Version", "d6/dab/structArk_1_1Version.html", "d6/dab/structArk_1_1Version" ],
     [ "VM", "d2/d93/classArk_1_1VM.html", "d2/d93/classArk_1_1VM" ],
     [ "Welder", "d7/da8/classArk_1_1Welder.html", "d7/da8/classArk_1_1Welder" ],
-    [ "ZeroDivisionError", "da/d18/classArk_1_1ZeroDivisionError.html", "da/d18/classArk_1_1ZeroDivisionError" ],
     [ "bytecode_t", "d9/de4/namespaceArk.html#abc8e737d05c4d6d46b653459516be329", null ],
     [ "BytecodeSegment", "d9/de4/namespaceArk.html#afa776c29439b830386e8220ccab402f4", [
       [ "All", "d9/de4/namespaceArk.html#afa776c29439b830386e8220ccab402f4ab1c94ca2fbc3e78fc30069c8d0f01680", null ],
       [ "Symbols", "d9/de4/namespaceArk.html#afa776c29439b830386e8220ccab402f4a5214a8a633c296d1d9d504fc54556692", null ],
       [ "Values", "d9/de4/namespaceArk.html#afa776c29439b830386e8220ccab402f4ac82a6100dace2b41087ba6cf99a5976a", null ],
       [ "Code", "d9/de4/namespaceArk.html#afa776c29439b830386e8220ccab402f4aca0dbad92a874b2f69b549293387925e", null ],
-      [ "HeadersOnly", "d9/de4/namespaceArk.html#afa776c29439b830386e8220ccab402f4a763b156a072fb9d37024c87537552764", null ]
+      [ "HeadersOnly", "d9/de4/namespaceArk.html#afa776c29439b830386e8220ccab402f4a763b156a072fb9d37024c87537552764", null ],
+      [ "InstructionLocation", "d9/de4/namespaceArk.html#afa776c29439b830386e8220ccab402f4af7d363ecb45fd58fab7317b9ded7bfca", null ]
     ] ],
     [ "ValueType", "d9/de4/namespaceArk.html#a794d6cb0fd25e2dbc678c17ff605e159", [
       [ "List", "d9/de4/namespaceArk.html#a794d6cb0fd25e2dbc678c17ff605e159a4ee29ca12c7d126654bd0e5275de6135", null ],
@@ -79,7 +83,9 @@ var namespaceArk =
     [ "FeatureTestFailOnException", "d9/de4/namespaceArk.html#a69c882fe0668cb21166e4616104c0480", null ],
     [ "MaxMacroProcessingDepth", "d9/de4/namespaceArk.html#a601127fdf466d46ddcc7d061bd4f7a34", null ],
     [ "MaxMacroUnificationDepth", "d9/de4/namespaceArk.html#a9bfec7edeabdb42ddee1327daa3ee186", null ],
+    [ "MaxNestedNodes", "d9/de4/namespaceArk.html#a47ecd80bc50fcb29add2f0692a97b28b", null ],
     [ "Nil", "d9/de4/namespaceArk.html#a5b4d87e9947b24bc4202530daf34c8b3", null ],
+    [ "ScopeStackSize", "d9/de4/namespaceArk.html#a64b1067761d4dc1a5eb1f07d0b8ceb7a", null ],
     [ "True", "d9/de4/namespaceArk.html#a7b98e35d4b546b9f5faab289a857051b", null ],
     [ "types_to_str", "d9/de4/namespaceArk.html#a09c7d272cc09841b4feefc1eea1aad25", null ],
     [ "VMStackSize", "d9/de4/namespaceArk.html#a10c147f2df9516277811af7da43a250f", null ]

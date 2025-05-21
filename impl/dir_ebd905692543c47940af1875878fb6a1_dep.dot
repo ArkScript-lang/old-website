@@ -1,0 +1,15 @@
+digraph "/Users/fola/Documents/ArkScript/Ark/src/arkreactor/Compiler/Lowerer"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_548d85becfdd8b4d1d64f6a452aea6ab {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Compiler", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_548d85becfdd8b4d1d64f6a452aea6ab.html",tooltip=""]
+  dir_ebd905692543c47940af1875878fb6a1 [label="Lowerer", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_ebd905692543c47940af1875878fb6a1.html",tooltip=""];
+  }
+  dir_d44c64559bbebec7f509842c48db8b23 [label="include", fillcolor="#edf0f7", color="red", style="filled", URL="dir_d44c64559bbebec7f509842c48db8b23.html",tooltip=""];
+  dir_ebd905692543c47940af1875878fb6a1->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="4", labeldistance=1.5 headhref="dir_000027_000021.html" href="dir_000027_000021.html" color="steelblue1" fontcolor="steelblue1"];
+}

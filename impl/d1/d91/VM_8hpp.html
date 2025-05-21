@@ -82,6 +82,7 @@ $(function(){initNavTree('d1/d91/VM_8hpp.html','../../'); initResizable(true); }
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">VM.hpp File Reference</div></div>
 </div><!--header-->
@@ -98,9 +99,11 @@ $(function(){initNavTree('d1/d91/VM_8hpp.html','../../'); initResizable(true); }
 <code>#include &lt;unordered_map&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;fmt/core.h&gt;</code><br />
+<code>#include &lt;fmt/ranges.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d8/daa/Instructions_8hpp_source.html">Ark/Compiler/Instructions.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../de/dfd/Value_8hpp_source.html">Ark/VM/Value.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d0/db5/State_8hpp_source.html">Ark/VM/State.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d8/d45/ScopeView_8hpp_source.html">Ark/VM/ScopeView.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../de/df9/ErrorKind_8hpp_source.html">Ark/VM/ErrorKind.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../db/df6/ExecutionContext_8hpp_source.html">Ark/VM/ExecutionContext.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../da/d84/Builtins_8hpp_source.html">Ark/Builtins/Builtins.hpp</a>&gt;</code><br />
@@ -132,6 +135,11 @@ Namespaces</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/de4/namespaceArk.html">Ark</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a423480404ccf7c7c21dd739678f42c88" id="r_a423480404ccf7c7c21dd739678f42c88"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a423480404ccf7c7c21dd739678f42c88">ARK_VM_VM_INL</a></td></tr>
+<tr class="separator:a423480404ccf7c7c21dd739678f42c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a5b4d87e9947b24bc4202530daf34c8b3" id="r_a5b4d87e9947b24bc4202530daf34c8b3"><td class="memItemLeft" align="right" valign="top">const auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/de4/namespaceArk.html#a5b4d87e9947b24bc4202530daf34c8b3">Ark::Nil</a> = <a class="el" href="../../d3/d90/classArk_1_1Value.html">Value</a>(ValueType::Nil)</td></tr>
@@ -147,18 +155,34 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The ArkScript virtual machine. </p>
 <dl class="section author"><dt>Author</dt><dd>Alexandre Plateau (<a href="#" onclick="location.href='mai'+'lto:'+'lex'+'pl'+'t.d'+'ev'+'@gm'+'ai'+'l.c'+'om'; return false;">lexpl<span class="obfuscator">.nosp@m.</span>t.de<span class="obfuscator">.nosp@m.</span>v@gma<span class="obfuscator">.nosp@m.</span>il.c<span class="obfuscator">.nosp@m.</span>om</a>) </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>2.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2020-10-27</dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2020-2024 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2020-2025 </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../d1/d91/VM_8hpp_source.html">VM.hpp</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a423480404ccf7c7c21dd739678f42c88" name="a423480404ccf7c7c21dd739678f42c88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a423480404ccf7c7c21dd739678f42c88">&#9670;&#160;</a></span>ARK_VM_VM_INL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARK_VM_VM_INL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d91/VM_8hpp_source.html#l00003">3</a> of file <a class="el" href="../../d1/d91/VM_8hpp_source.html">VM.hpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_a8b6c64285bf9ac60f50770eb2fc48b5.html">Ark</a></li><li class="navelem"><a class="el" href="../../dir_222307dbf92126e8e24c7a501f533901.html">VM</a></li><li class="navelem"><a class="el" href="../../d1/d91/VM_8hpp.html">VM.hpp</a></li>
-    <li class="footer">Generated on Wed Jan 15 2025 19:51:44 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed May 21 2025 18:40:52 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

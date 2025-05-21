@@ -1,26 +1,30 @@
 <map id="/Users/fola/Documents/ArkScript/Ark/src/arkreactor/Compiler/NameResolution/ScopeResolver.cpp" name="/Users/fola/Documents/ArkScript/Ark/src/arkreactor/Compiler/NameResolution/ScopeResolver.cpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="261,5,556,61"/>
-<area shape="rect" id="Node000002" href="$db/d5b/ScopeResolver_8hpp.html" title="Handle scope resolution at compile time." alt="" coords="191,109,389,150"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="376,64,328,101,325,97,373,59"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="497,286,558,312"/>
-<area shape="poly" id="edge14_Node000001_Node000009" title=" " alt="" coords="423,60,518,271,513,274,418,62"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="102,286,155,312"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="191,145,143,165,121,180,104,199,98,216,99,235,114,273,109,275,93,237,92,216,100,196,118,176,140,161,189,140"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="314,286,380,312"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="347,148,378,168,403,196,409,218,403,239,391,260,376,278,372,274,387,257,398,237,404,218,398,199,375,172,344,152"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="405,286,474,312"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="358,148,394,168,424,196,434,214,440,233,444,270,438,271,435,234,429,216,420,199,391,172,355,153"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="482,5,778,61"/>
+<area shape="rect" id="Node000002" href="$db/d5b/ScopeResolver_8hpp.html" title="Handle scope resolution at compile time." alt="" coords="244,109,442,150"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="548,64,418,106,417,101,546,59"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="620,286,680,312"/>
+<area shape="poly" id="edge15_Node000001_Node000009" title=" " alt="" coords="635,61,651,271,645,271,629,61"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="668,116,742,142"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="654,60,688,103,684,106,650,63"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="87,286,141,312"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="245,152,198,171,157,200,144,216,134,234,121,272,116,270,129,232,139,213,154,196,195,166,243,147"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="437,286,503,312"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="396,148,429,168,456,196,465,214,471,234,474,271,469,271,466,235,460,216,452,199,426,172,394,153"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="528,286,596,312"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="397,148,439,168,481,196,520,234,549,272,544,275,516,237,478,200,437,173,394,153"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="5,286,63,312"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="191,151,138,170,90,200,75,216,62,235,45,273,40,271,57,232,71,213,87,196,136,165,189,146"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="114,205,167,231"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="257,152,176,199,173,195,255,148"/>
-<area shape="rect" id="Node000008" href="$df/db8/StaticScope_8hpp.html" title=" " alt="" coords="191,198,389,238"/>
-<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="293,150,293,182,287,182,287,150"/>
-<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="251,241,168,282,166,277,249,237"/>
-<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="306,237,332,272,327,275,302,240"/>
-<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="329,237,404,276,402,281,326,241"/>
-<area shape="poly" id="edge11_Node000008_Node000006" title=" " alt="" coords="227,241,79,287,77,282,225,236"/>
-<area shape="poly" id="edge12_Node000008_Node000009" title=" " alt="" coords="350,236,483,280,482,286,348,241"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="186,286,290,312"/>
-<area shape="poly" id="edge13_Node000008_Node000010" title=" " alt="" coords="279,240,257,274,252,272,275,237"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="245,152,184,171,126,200,84,236,52,275,48,271,80,232,123,195,182,166,243,147"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="168,205,220,231"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="311,152,229,199,227,195,308,148"/>
+<area shape="rect" id="Node000008" href="$df/db8/StaticScope_8hpp.html" title="Static scopes (for functions, loops) and namespace scopes (for packages) definitions,..." alt="" coords="244,198,442,238"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="346,150,346,182,341,182,341,150"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="287,241,156,286,154,281,285,236"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="376,236,439,275,436,280,373,241"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="399,236,515,278,513,283,397,241"/>
+<area shape="poly" id="edge11_Node000008_Node000006" title=" " alt="" coords="264,241,78,288,77,283,262,236"/>
+<area shape="poly" id="edge12_Node000008_Node000009" title=" " alt="" coords="424,236,605,283,604,288,422,242"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="165,286,268,312"/>
+<area shape="poly" id="edge13_Node000008_Node000010" title=" " alt="" coords="313,241,251,280,248,275,311,236"/>
+<area shape="rect" id="Node000011" href="$d5/d40/Platform_8hpp.html" title="ArkScript configuration macros." alt="" coords="293,286,412,312"/>
+<area shape="poly" id="edge14_Node000008_Node000011" title=" " alt="" coords="348,238,352,270,347,271,343,239"/>
 </map>

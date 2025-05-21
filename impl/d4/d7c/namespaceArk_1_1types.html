@@ -97,6 +97,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dfb/structArk_1_1types_1_1Contract.html">Contract</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A contract is a list of typed arguments that a function can follow.  <a href="../../d3/dfb/structArk_1_1types_1_1Contract.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d29/classArk_1_1types_1_1TypeCheckingError.html">TypeCheckingError</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dbf/structArk_1_1types_1_1Typedef.html">Typedef</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A type definition within a contract.  <a href="../../d9/dbf/structArk_1_1types_1_1Typedef.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,13 +109,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a0a72142902488423fc6eef630744bc0a"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0a72142902488423fc6eef630744bc0a">check</a> (const std::vector&lt; <a class="el" href="../../d3/d90/classArk_1_1Value.html">Value</a> &gt; &amp;args, Ts... types)</td></tr>
 <tr class="memdesc:a0a72142902488423fc6eef630744bc0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to see if a builtin has been given a wanted set of types.  <br /></td></tr>
 <tr class="separator:a0a72142902488423fc6eef630744bc0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0031833be77638a715608449e1cc2c90" id="r_a0031833be77638a715608449e1cc2c90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d44/Module_8hpp.html#ac62a8551c675391a8cf01d112e42d755">ARK_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0031833be77638a715608449e1cc2c90">generateError</a> (const std::string_view &amp;funcname, const std::vector&lt; <a class="el" href="../../d3/dfb/structArk_1_1types_1_1Contract.html">Contract</a> &gt; &amp;contracts, const std::vector&lt; <a class="el" href="../../d3/d90/classArk_1_1Value.html">Value</a> &gt; &amp;args)</td></tr>
-<tr class="memdesc:a0031833be77638a715608449e1cc2c90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate an error message based on a given set of types contracts provided argument list.  <br /></td></tr>
-<tr class="separator:a0031833be77638a715608449e1cc2c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc5fa4dd0501c3731af218592f2b4f0b" id="r_abc5fa4dd0501c3731af218592f2b4f0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d44/Module_8hpp.html#ac62a8551c675391a8cf01d112e42d755">ARK_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc5fa4dd0501c3731af218592f2b4f0b">generateError</a> (const std::string_view &amp;funcname, const std::vector&lt; <a class="el" href="../../d3/dfb/structArk_1_1types_1_1Contract.html">Contract</a> &gt; &amp;contracts, const std::vector&lt; <a class="el" href="../../d3/d90/classArk_1_1Value.html">Value</a> &gt; &amp;args, std::ostream &amp;os=std::cout, bool colorize=true)</td></tr>
+<tr class="memdesc:abc5fa4dd0501c3731af218592f2b4f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate an error message based on a given set of types contracts provided argument list.  <br /></td></tr>
+<tr class="separator:abc5fa4dd0501c3731af218592f2b4f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae87394280fabafcd08dfa85a444cacbe" id="r_ae87394280fabafcd08dfa85a444cacbe"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae87394280fabafcd08dfa85a444cacbe">typeListToString</a> (const std::vector&lt; <a class="el" href="../../d9/de4/namespaceArk.html#a794d6cb0fd25e2dbc678c17ff605e159">ValueType</a> &gt; &amp;types)</td></tr>
 <tr class="separator:ae87394280fabafcd08dfa85a444cacbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab94a615e4c8598fdcecd09308fdb389e" id="r_ab94a615e4c8598fdcecd09308fdb389e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab94a615e4c8598fdcecd09308fdb389e">displayContract</a> (const <a class="el" href="../../d3/dfb/structArk_1_1types_1_1Contract.html">Contract</a> &amp;contract, const std::vector&lt; <a class="el" href="../../d3/d90/classArk_1_1Value.html">Value</a> &gt; &amp;args)</td></tr>
-<tr class="separator:ab94a615e4c8598fdcecd09308fdb389e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3dc938c0529f54447d0283d7ae6adc8" id="r_af3dc938c0529f54447d0283d7ae6adc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3dc938c0529f54447d0283d7ae6adc8">displayContract</a> (const <a class="el" href="../../d3/dfb/structArk_1_1types_1_1Contract.html">Contract</a> &amp;contract, const std::vector&lt; <a class="el" href="../../d3/d90/classArk_1_1Value.html">Value</a> &gt; &amp;args, std::ostream &amp;os, const bool colorize)</td></tr>
+<tr class="separator:af3dc938c0529f54447d0283d7ae6adc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a0a72142902488423fc6eef630744bc0a" name="a0a72142902488423fc6eef630744bc0a"></a>
@@ -163,14 +165,14 @@ template&lt;typename... Ts, typename  = details::AllSame&lt;ValueType, Ts...&gt;
 <dd>
 false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d5e/TypeChecker_8hpp_source.html#l00052">52</a> of file <a class="el" href="../../db/d5e/TypeChecker_8hpp_source.html">TypeChecker.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d5e/TypeChecker_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../db/d5e/TypeChecker_8hpp_source.html">TypeChecker.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../db/d5e/TypeChecker_8hpp_source.html#l00028">Ark::types::details::checkN()</a>.</p>
+<p class="reference">References <a class="el" href="../../db/d5e/TypeChecker_8hpp_source.html#l00030">Ark::types::details::checkN()</a>.</p>
 
 </div>
 </div>
-<a id="ab94a615e4c8598fdcecd09308fdb389e" name="ab94a615e4c8598fdcecd09308fdb389e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab94a615e4c8598fdcecd09308fdb389e">&#9670;&#160;</a></span>displayContract()</h2>
+<a id="af3dc938c0529f54447d0283d7ae6adc8" name="af3dc938c0529f54447d0283d7ae6adc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3dc938c0529f54447d0283d7ae6adc8">&#9670;&#160;</a></span>displayContract()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -183,21 +185,31 @@ false otherwise </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="../../d3/d90/classArk_1_1Value.html">Value</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../d3/d90/classArk_1_1Value.html">Value</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>args</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>colorize</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d9a/TypeChecker_8cpp_source.html#l00028">28</a> of file <a class="el" href="../../d6/d9a/TypeChecker_8cpp_source.html">TypeChecker.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d9/de4/namespaceArk.html#a794d6cb0fd25e2dbc678c17ff605e159aed36a1ef76a59ee3f15180e0441188ad">Ark::Any</a>, <a class="el" href="../../db/d5e/TypeChecker_8hpp_source.html#l00084">Ark::types::Contract::arguments</a>, <a class="el" href="../../db/d5e/TypeChecker_8hpp_source.html#l00065">Ark::types::Typedef::name</a>, <a class="el" href="../../d6/d9a/TypeChecker_8cpp_source.html#l00012">typeListToString()</a>, <a class="el" href="../../db/d5e/TypeChecker_8hpp_source.html#l00066">Ark::types::Typedef::types</a>, <a class="el" href="../../de/dfd/Value_8hpp_source.html#l00052">Ark::types_to_str</a>, and <a class="el" href="../../db/d5e/TypeChecker_8hpp_source.html#l00067">Ark::types::Typedef::variadic</a>.</p>
+<p class="reference">References <a class="el" href="../../d9/de4/namespaceArk.html#a794d6cb0fd25e2dbc678c17ff605e159aed36a1ef76a59ee3f15180e0441188ad">Ark::Any</a>, <a class="el" href="../../db/d5e/TypeChecker_8hpp_source.html#l00086">Ark::types::Contract::arguments</a>, <a class="el" href="../../d6/d9a/TypeChecker_8cpp_source.html#l00012">typeListToString()</a>, <a class="el" href="../../db/d5e/TypeChecker_8hpp_source.html#l00068">Ark::types::Typedef::types</a>, <a class="el" href="../../de/dfd/Value_8hpp_source.html#l00051">Ark::types_to_str</a>, and <a class="el" href="../../db/d5e/TypeChecker_8hpp_source.html#l00069">Ark::types::Typedef::variadic</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d6/d9a/TypeChecker_8cpp_source.html#l00087">generateError()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d6/d9a/TypeChecker_8cpp_source.html#l00110">generateError()</a>.</p>
 
 </div>
 </div>
-<a id="a0031833be77638a715608449e1cc2c90" name="a0031833be77638a715608449e1cc2c90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0031833be77638a715608449e1cc2c90">&#9670;&#160;</a></span>generateError()</h2>
+<a id="abc5fa4dd0501c3731af218592f2b4f0b" name="abc5fa4dd0501c3731af218592f2b4f0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc5fa4dd0501c3731af218592f2b4f0b">&#9670;&#160;</a></span>generateError()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -215,7 +227,17 @@ false otherwise </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="../../d3/d90/classArk_1_1Value.html">Value</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../d3/d90/classArk_1_1Value.html">Value</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>args</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::cout</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>colorize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -226,15 +248,17 @@ false otherwise </dd></dl>
     <tr><td class="paramname">funcname</td><td>ArkScript name of the function </td></tr>
     <tr><td class="paramname">contracts</td><td>types contracts the function can follow </td></tr>
     <tr><td class="paramname">args</td><td>provided argument list </td></tr>
+    <tr><td class="paramname">os</td><td>output stream, default to cout </td></tr>
+    <tr><td class="paramname">colorize</td><td>enable output colorizing </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d9a/TypeChecker_8cpp_source.html#l00087">87</a> of file <a class="el" href="../../d6/d9a/TypeChecker_8cpp_source.html">TypeChecker.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d9a/TypeChecker_8cpp_source.html#l00110">110</a> of file <a class="el" href="../../d6/d9a/TypeChecker_8cpp_source.html">TypeChecker.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d6/d9a/TypeChecker_8cpp_source.html#l00028">displayContract()</a>, <a class="el" href="../../d9/de4/namespaceArk.html#a794d6cb0fd25e2dbc678c17ff605e159aec0fc0100c4fc1ce4eea230c3dc10360">Ark::Undefined</a>, and <a class="el" href="../../de/dfd/Value_8hpp_source.html#l00114">Ark::Value::valueType()</a>.</p>
+<p class="reference">References <a class="el" href="../../d6/d9a/TypeChecker_8cpp_source.html#l00028">displayContract()</a>, <a class="el" href="../../d9/de4/namespaceArk.html#a794d6cb0fd25e2dbc678c17ff605e159aec0fc0100c4fc1ce4eea230c3dc10360">Ark::Undefined</a>, and <a class="el" href="../../de/dfd/Value_8hpp_source.html#l00113">Ark::Value::valueType()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d27/VM_8cpp_source.html#l00056">Ark::helper::head()</a>, <a class="el" href="../../d2/d27/VM_8cpp_source.html#l00320">Ark::VM::safeRun()</a>, and <a class="el" href="../../d2/d27/VM_8cpp_source.html#l00027">Ark::helper::tail()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../db/d5e/TypeChecker_8hpp_source.html#l00115">Ark::types::TypeCheckingError::details()</a>.</p>
 
 </div>
 </div>
@@ -255,7 +279,7 @@ false otherwise </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d9a/TypeChecker_8cpp_source.html#l00012">12</a> of file <a class="el" href="../../d6/d9a/TypeChecker_8cpp_source.html">TypeChecker.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d9/de4/namespaceArk.html#a794d6cb0fd25e2dbc678c17ff605e159aed36a1ef76a59ee3f15180e0441188ad">Ark::Any</a>, and <a class="el" href="../../de/dfd/Value_8hpp_source.html#l00052">Ark::types_to_str</a>.</p>
+<p class="reference">References <a class="el" href="../../d9/de4/namespaceArk.html#a794d6cb0fd25e2dbc678c17ff605e159aed36a1ef76a59ee3f15180e0441188ad">Ark::Any</a>, and <a class="el" href="../../de/dfd/Value_8hpp_source.html#l00051">Ark::types_to_str</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d6/d9a/TypeChecker_8cpp_source.html#l00028">displayContract()</a>.</p>
 
@@ -267,7 +291,7 @@ false otherwise </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/de4/namespaceArk.html">Ark</a></li><li class="navelem"><a class="el" href="../../d4/d7c/namespaceArk_1_1types.html">types</a></li>
-    <li class="footer">Generated on Wed Jan 15 2025 19:51:44 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed May 21 2025 18:40:52 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>
