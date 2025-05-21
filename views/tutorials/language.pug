@@ -364,8 +364,8 @@ block content
                     p In ArkScript, there are 3 different types of macros:
                     ul
                         li conditions: #[code ($if condition then else)]
-                        li constants: #[code ($ my_const value)]
-                        li functions: #[code ($ my_function (foo bar) body)]
+                        li constants: #[code (macro my_const value)]
+                        li functions: #[code (macro my_function (foo bar) body)]
                     p
                         | #[strong Constant macros] are just associations #[code identifier to value], the value being whatever you want (even another bloc of code, for example
                         | #[code (let b 12)]). The code is scanned and when such macro is found, it's applied wherever possible.
@@ -373,10 +373,10 @@ block content
                         | #[strong Macros' scopes] are tied to the bloc in which they are defined. At the end of said bloc, the macros defined in it are destroyed. Note that a
                         | macro defined a in bloc, which includes other blocs, will be available in all the other sub-blocs.
                     p Named macros can be undefined by using #[code ($undef name)].
-                    - let ex_macros = "($ a 12)\n\n"
+                    - let ex_macros = "(macro a 12)\n\n"
                     - ex_macros += "{\n"
                     - ex_macros += "    (print a)  # will print 12, it works!\n\n"
-                    - ex_macros += "    ($ a 1)  # we can shadow macros by defining other macros with the\n"
+                    - ex_macros += "    (macro a 1)  # we can shadow macros by defining other macros with the\n"
                     - ex_macros += "             # same name in sub-blocs\n"
                     - ex_macros += "    (print a)  # 1\n\n"
                     - ex_macros += "    ($undef a)\n"
@@ -386,8 +386,8 @@ block content
                     +playground("macros-1", ex_macros)
 
                     p #[strong Condition macros] may only work on compile time expressions, using only other macros. For example:
-                    - let ex_macros_bis = "($ foo 12)\n"
-                    - ex_macros_bis += "($ bar 14)\n"
+                    - let ex_macros_bis = "(macro foo 12)\n"
+                    - ex_macros_bis += "(macro bar 14)\n"
                     - ex_macros_bis += "\n"
                     - ex_macros_bis += "# the condition being true will result in the print being inserted in the program\n"
                     - ex_macros_bis += "# while the (let a) will be deleted\n"
@@ -397,10 +397,10 @@ block content
                     +playground("macros-2", ex_macros_bis)
 
                     p In a #[em condition macro] we can define other macros and use other conditions macros:
-                    - let ex_macros_ter = "($ a 12)\n"
+                    - let ex_macros_ter = "(macro a 12)\n"
                     - ex_macros_ter += "($if (= a 12)\n"
-                    - ex_macros_ter += "    ($ b 14)\n"
-                    - ex_macros_ter += "    ($ c 13))\n\n"
+                    - ex_macros_ter += "    (macro b 14)\n"
+                    - ex_macros_ter += "    (macro c 13))\n\n"
                     - ex_macros_ter += "(print b)  # prints 14\n"
                     - ex_macros_ter += "(print c)  # compilation error: unbound variable c\n"
                     - ex_macros_ter += "           # c is unavailable here because it was never defined\n"
@@ -413,12 +413,12 @@ block content
                     p
                         | Those macros can use a magic pattern #[code ...args] (args being the name of the argument, you can use whatever you want) as the last argument to tell the
                         | compiler that the macros can take any number of arguments. This is called #[em varargs] or #[em variadic arguments].
-                    - let ex_macros_variadic = "($ foo (a b) {\n"
+                    - let ex_macros_variadic = "(macro foo (a b) {\n"
                     - ex_macros_variadic += "    (print a \" \" b)\n"
                     - ex_macros_variadic += "    (let c (+ a b))})\n\n"
                     - ex_macros_variadic += "(foo 1 2)\n"
                     - ex_macros_variadic += "(print c)  # prints 3\n\n"
-                    - ex_macros_variadic += "($ bar (a ...args)\n"
+                    - ex_macros_variadic += "(macro bar (a ...args)\n"
                     - ex_macros_variadic += "    (print a \" \" args))\n\n"
                     - ex_macros_variadic += "(bar 1)  # prints 1\n"
                     - ex_macros_variadic += "(bar 1 2)  # prints 1 [2]\n"
@@ -428,7 +428,7 @@ block content
                     p
                         | Here is a more complex example implementing the #[em thread macro]. The first argument is the data, then each function is applied onto it, one after another.
                         | It allows us to write more readable code, instead of the ugly #[code (read-string (slurp (io:file (io:resource filename))))].
-                    - let ex_macros_recur = "($ -> (arg fn1 ...fn) {\n"
+                    - let ex_macros_recur = "(macro -> (arg fn1 ...fn) {\n"
                     - ex_macros_recur += "    ($if (> (len fn) 0)\n"
                     - ex_macros_recur += "        (-> (fn1 arg) ...fn)\n"
                     - ex_macros_recur += "        (fn1 arg))})\n\n"
