@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Events - ArkScript v4.0.0 documentation</title>
+    <title>Macros - ArkScript v4.0.0 documentation</title>
     <link rel="stylesheet" href="/std/assets/css/spectre.min.css" type="text/css">
     <link rel="stylesheet" href="/std/assets/css/spectre-exp.min.css" type="text/css">
     <link rel="stylesheet" href="/std/assets/css/spectre-icons.min.css" type="text/css">
@@ -51,17 +51,15 @@
                 <a href="#">Table of contents</a>
                 <ul class="nav">
                     <li class="nav-item">
-    <a href="#manager:make">manager:make</a>
+    <a href="#->">-></a>
 </li><li class="nav-item">
-    <a href="#_check_valid">_check_valid</a>
+    <a href="#partial">partial</a>
 </li><li class="nav-item">
-    <a href="#on">on</a>
+    <a href="#partial2">partial2</a>
 </li><li class="nav-item">
-    <a href="#emitwith">emitWith</a>
+    <a href="#unless">unless</a>
 </li><li class="nav-item">
-    <a href="#emit">emit</a>
-</li><li class="nav-item">
-    <a href="#removelistenersoftype">removeListenersOfType</a>
+    <a href="#until">until</a>
 </li>
                 </ul>
             </li>
@@ -77,126 +75,123 @@
 
             <!-- Actual content of the page-->
             <div class="col-8" id="content">
-                <section id="manager:make">
-    <h2>manager:make</h2>
+                <section id="->">
+    <h2>-></h2>
 
     <div class="inner-section">
-        <div><code>(let manager:make (fun () (...)))</code>
+        <div><code>(macro -> (fun (fn1) (...)))</code>
 <br>
-<div>Allows to register events listeners and emit events</div>
+<div>Chain calls on a given value, for a nicer syntax</div>
 <div><b>Note</b>
 : 
 </div>
-
-<div><h4>Author</h4>
-<a href="https://github.com/fabien-zoccola">@fabien-zoccola</a></div></div><div><h4>Example</h4>
-<pre>
-<code class="rainbowjs" data-language="arkscript">
-(let em (manager:make))
-(em.on "myType" (fun (value) (print "This is a callback")))
-(em.emit "myType")  # => prints "This is a callback" thanks to the registered listener
-</code>
-</pre></div>
-    </div>
-</section><section id="_check_valid">
-    <h2>_check_valid</h2>
-
-    <div class="inner-section">
-        <div><code>(let _check_valid (fun (callback) (...)))</code>
-<br>
-<div>Checks if a given callback is valid (is a function or a closure)</div>
-<div><b>Note</b>
-: 
-Returns true if the callback is a function/closure, false otherwise</div>
-<div><h4>Parameter</h4>
-<ul><li><code>callback</code>: the callback to check</li></ul></div>
-<div><h4>Author</h4>
-<a href="https://github.com/fabien-zoccola">@fabien-zoccola</a></div></div><div><h4>Example</h4>
-<pre>
-<code class="rainbowjs" data-language="arkscript">
-(closure._check_valid (fun (param) ()))  # => true
-(closure._check_valid (fun (param) {}))  # => true
-(closure._check_valid 5)  # => false
-</code>
-</pre></div>
-    </div>
-</section><section id="on">
-    <h2>on</h2>
-
-    <div class="inner-section">
-        <div><code>(let on (fun (typ callback) (...)))</code>
-<br>
-<div>Registers an event listener</div>
-<div><b>Note</b>
-: 
-Adds a [type callback] list to the listeners list</div>
 <div><h4>Parameters</h4>
-<ul><li><code>typ</code>: the type of the event to listen for</li><li><code>callback</code>: the function/closure that will be called when an event is emitted</li></ul></div>
+<ul><li><code>arg</code>: value to transform</li><li><code>...fns</code>: series of functions to apply one by one to `arg`</li></ul></div>
 <div><h4>Author</h4>
-<a href="https://github.com/fabien-zoccola">@fabien-zoccola</a></div></div><div><h4>Example</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
-(closure.on "myType" (fun (param) ())
+(import std.Macros)
+(-> "f0" f1)  # equivalent to (f1 "f0")
+(-> "f0" f1 f2 f3) # equivalent to (f3 (f2 (f1 "f0")))
+(-> "f0" f1 (apply _ f2) (apply _ f3))  # equivalent to (apply (apply (f1 "f0") f2) f3)
 </code>
 </pre></div>
     </div>
-</section><section id="emitwith">
-    <h2>emitWith</h2>
+</section><section id="partial">
+    <h2>partial</h2>
 
     <div class="inner-section">
-        <div><code>(let emitWith (fun (val typ) (...)))</code>
+        <div><code>(macro partial (fun (...defargs) (...)))</code>
 <br>
-<div>Emits an event with a value</div>
+<div>Create a partial function with prefilled arguments</div>
 <div><b>Note</b>
 : 
-Makes a forEach on the listeners list, and calls the callback. Returns a boolean of whether we called at least one listener</div>
+</div>
 <div><h4>Parameters</h4>
-<ul><li><code>val</code>: the emitted value</li><li><code>typ</code>: the type of the emitted event</li></ul></div>
+<ul><li><code>func</code>: function to make partial</li><li><code>...defargs</code>: predefined arguments</li></ul></div>
 <div><h4>Author</h4>
-<a href="https://github.com/fabien-zoccola">@fabien-zoccola</a></div></div><div><h4>Example</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
-(closure.emitWith 5 "myType")
+(import std.Macros)
+(let test_func (fun (a b c) (* a b c)))
+(let test_func1 (partial test_func 1))
+(let test_func2 (partial test_func1 2))
+(print (test_func1 2 3))  # 6
+(print (test_func2 3))  # 6
 </code>
 </pre></div>
     </div>
-</section><section id="emit">
-    <h2>emit</h2>
+</section><section id="partial2">
+    <h2>partial2</h2>
 
     <div class="inner-section">
-        <div><code>(let emit (fun (typ) (...)))</code>
+        <div><code>(macro partial2 (fun (...args) (...)))</code>
 <br>
-<div>Emits an event with no value</div>
+<div>Create a partial function with prefilled arguments, allowing some arguments to be skipped</div>
 <div><b>Note</b>
 : 
-Calls emitWith nil <typ></div>
-<div><h4>Parameter</h4>
-<ul><li><code>typ</code>: the type of the emitted event</li></ul></div>
+</div>
+<div><h4>Parameters</h4>
+<ul><li><code>call</code>: function to make partial</li><li><code>...args</code>: predefined arguments</li></ul></div>
 <div><h4>Author</h4>
-<a href="https://github.com/fabien-zoccola">@fabien-zoccola</a></div></div><div><h4>Example</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
-(closure.emit "myType")
+(import std.Macros)
+(let test_func (fun (a b c) (* a b c)))
+(let test_func3 (partial2 test_func 1 _ 3))
+(print (test_func3 2))  # 6
 </code>
 </pre></div>
     </div>
-</section><section id="removelistenersoftype">
-    <h2>removeListenersOfType</h2>
+</section><section id="unless">
+    <h2>unless</h2>
 
     <div class="inner-section">
-        <div><code>(let removeListenersOfType (fun (typ) (...)))</code>
+        <div><code>(macro unless (fun (...body) (...)))</code>
 <br>
-<div>Removes all listeners of a given type</div>
+<div>Create a reversed condition</div>
 <div><b>Note</b>
 : 
-Returns if at least one listener has been removed</div>
-<div><h4>Parameter</h4>
-<ul><li><code>typ</code>: the type of event to remove from the list</li></ul></div>
+</div>
+<div><h4>Parameters</h4>
+<ul><li><code>cond</code>: condition</li><li><code>body</code>: then node (or then/else nodes)</li></ul></div>
 <div><h4>Author</h4>
-<a href="https://github.com/fabien-zoccola">@fabien-zoccola</a></div></div><div><h4>Example</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
 <pre>
 <code class="rainbowjs" data-language="arkscript">
-(closure.remove_listeners_of_type "myType")
+(import std.Macros)
+(unless (canCall? dog)
+  (print "dog can't call")
+  (print "dog can actually call us!"))
+(unless false
+  (print "this will always be executed"))
+</code>
+</pre></div>
+    </div>
+</section><section id="until">
+    <h2>until</h2>
+
+    <div class="inner-section">
+        <div><code>(macro until (fun (body) (...)))</code>
+<br>
+<div>Iterate until the condition is truthy</div>
+<div><b>Note</b>
+: 
+</div>
+<div><h4>Parameters</h4>
+<ul><li><code>cond</code>: condition</li><li><code>body</code>: loop body</li></ul></div>
+<div><h4>Author</h4>
+<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
+<pre>
+<code class="rainbowjs" data-language="arkscript">
+(import std.Macros)
+(mut data [0])
+(until (= 10 (len data))
+  (append! data (+ 1 (@ data -1))))
+(print data)  # [0 1 2 3 4 5 6 7 8 9]
 </code>
 </pre></div>
     </div>

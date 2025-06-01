@@ -79,7 +79,7 @@
     <h2>test:case</h2>
 
     <div class="inner-section">
-        <div><code>($ test:case (fun (_body) (...)))</code>
+        <div><code>(macro test:case (fun (_body) (...)))</code>
 <br>
 <div>Create a test case with a label to help with debugging when one or more tests fail</div>
 <div><b>Note</b>
@@ -103,7 +103,7 @@ Test cases can be nested.</div>
     <h2>test:expect</h2>
 
     <div class="inner-section">
-        <div><code>($ test:expect (fun (..._desc) (...)))</code>
+        <div><code>(macro test:expect (fun (..._desc) (...)))</code>
 <br>
 <div>Given a value or function call returning a boolean, generate a test case</div>
 <div><b>Note</b>
@@ -125,7 +125,7 @@ Test cases can be nested.</div>
     <h2>test:eq</h2>
 
     <div class="inner-section">
-        <div><code>($ test:eq (fun (_expr) (...)))</code>
+        <div><code>(macro test:eq (fun (_expr) (...)))</code>
 <br>
 <div>Compare two values that should be equal and generate a test case</div>
 <div><b>Note</b>
@@ -147,7 +147,7 @@ Test cases can be nested.</div>
     <h2>test:neq</h2>
 
     <div class="inner-section">
-        <div><code>($ test:neq (fun (_value) (...)))</code>
+        <div><code>(macro test:neq (fun (_value) (...)))</code>
 <br>
 <div>Compare two values that should **not** be equal and generate a test case</div>
 <div><b>Note</b>
@@ -168,7 +168,7 @@ Test cases can be nested.</div>
     <h2>test:suite</h2>
 
     <div class="inner-section">
-        <div><code>($ test:suite (fun (_body) (...)))</code>
+        <div><code>(macro test:suite (fun (_body) (...)))</code>
 <br>
 <div>Generate the code for a test suite</div>
 <div><b>Note</b>
@@ -199,7 +199,7 @@ Create two variables: _name-output (a list: [successes, failures]) and _name-sta
     <footer id="page-footer">
         <p class="text-center">
             Copyright &copy; 2020-2025 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.<br>
-            <i>Last generation at 2025-05-01 02:05:37.011352</i>
+            <i>Last generation at 2025-06-01 02:25:30.684721</i>
         </p>
     </footer>
 
