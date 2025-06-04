@@ -137,7 +137,8 @@ block inner_content
                                 | compiling). If it is, we replace the call by a jump to address 0 (relative to the current page), transforming the tail call into a loop.
                                 | If it isn't, we compile the function call to a temporary page.
                                 ul
-                                    li then we compile the arguments on the current page, marking them as "no discard"
+                                    li first we push a #[code PUSH_RETURN_ADDRESS] instruction, using a label that will be placed after the #[code CALL] instruction. This will tell the VM to push the instruction and page pointers
+                                    li then we compile the arguments on the current page in reverse order, marking them as "no discard"
                                     li we push the computed expression for the function call and discard the temporary page
                                     li we add the #[code CALL] instruction, the number of arguments
                             li.

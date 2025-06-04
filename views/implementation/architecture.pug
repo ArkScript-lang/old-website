@@ -74,7 +74,7 @@ block inner_content
                         primitive type of the virtual machine and the language. It provides proxy functions to the underlying #[code variant].
                     li the virtual machine handles:
                         ul
-                            li the stack, a single #[code array<Value, 8192>] (the stack size is a constexpr value, thus it can be changed at compile time only)
+                            li the stack, a single #[code array<Value, 8192>] (the stack size is a constexpr value, thus it can be changed only at compile time)
                             li a reference to the State, to read the tables and code segments
                             li a #[code void*] user_data, retrievable by modules and C++ user functions
                             li the scopes, and their destruction
