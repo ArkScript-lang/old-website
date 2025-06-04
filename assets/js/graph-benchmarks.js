@@ -52,10 +52,12 @@ function computeRelativeDatasets(quantity) {
 
         for (let test in dataset) {
             let data = getQuantity(dataset[test], quantity)
+            let test_name = test.split("-")[0]
             output_datasets.push({
-                label: `ArkScript / ${lang} - ${test.split("-")[0]}`,
+                label: `ArkScript / ${lang} - ${test_name}`,
                 data: data,
                 showLine: true,
+                order: Object.keys(dataset).indexOf(test) * Object.keys(dataset).length + competing.indexOf(lang)
             })
         }
     }
