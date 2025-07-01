@@ -56,22 +56,6 @@
     <a href="#puts">puts</a>
 </li><li class="nav-item">
     <a href="#input">input</a>
-</li><li class="nav-item">
-    <a href="#io:writefile">io:writeFile</a>
-</li><li class="nav-item">
-    <a href="#io:appendtofile">io:appendToFile</a>
-</li><li class="nav-item">
-    <a href="#io:readfile">io:readFile</a>
-</li><li class="nav-item">
-    <a href="#io:fileexists?">io:fileExists?</a>
-</li><li class="nav-item">
-    <a href="#io:listfiles">io:listFiles</a>
-</li><li class="nav-item">
-    <a href="#io:dir?">io:dir?</a>
-</li><li class="nav-item">
-    <a href="#io:makedir">io:makeDir</a>
-</li><li class="nav-item">
-    <a href="#io:removefiles">io:removeFiles</a>
 </li>
                 </ul>
             </li>
@@ -147,166 +131,6 @@ Return the value as a string</div>
 </code>
 </pre></div>
     </div>
-</section><section id="io:writefile">
-    <h2>io:writeFile</h2>
-
-    <div class="inner-section">
-        <div><code>Builtin (io:writeFile filename content)</code>
-<br>
-<div>Write content to a file. Return nil</div>
-<div><b>Note</b>
-: 
-</div>
-<div><h4>Parameters</h4>
-<ul><li><code>filename</code>: path to the file to write to (will be overwritten if it exists)</li><li><code>content</code>: can be any valid ArkScript value</li></ul></div>
-<div><h4>Author</h4>
-<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
-<pre>
-<code class="rainbowjs" data-language="arkscript">
-(io:writeFile "hello.json" "{\"key\": 12}")
-</code>
-</pre></div>
-    </div>
-</section><section id="io:appendtofile">
-    <h2>io:appendToFile</h2>
-
-    <div class="inner-section">
-        <div><code>Builtin (io:appendToFile filename content)</code>
-<br>
-<div>Append content to a file. Return nil</div>
-<div><b>Note</b>
-: 
-</div>
-<div><h4>Parameters</h4>
-<ul><li><code>filename</code>: path to the file to append to</li><li><code>content</code>: can be any valid ArkScript value</li></ul></div>
-<div><h4>Author</h4>
-<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
-<pre>
-<code class="rainbowjs" data-language="arkscript">
-(io:writeFile "hello.json" "{\"key\": 12}")
-</code>
-</pre></div>
-    </div>
-</section><section id="io:readfile">
-    <h2>io:readFile</h2>
-
-    <div class="inner-section">
-        <div><code>Builtin (io:readFile filename)</code>
-<br>
-<div>Read the content from a file as a String</div>
-<div><b>Note</b>
-: 
-</div>
-<div><h4>Parameter</h4>
-<ul><li><code>filename</code>: the path of the file to read</li></ul></div>
-<div><h4>Author</h4>
-<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
-<pre>
-<code class="rainbowjs" data-language="arkscript">
-(io:readFile "hello.json")
-</code>
-</pre></div>
-    </div>
-</section><section id="io:fileexists?">
-    <h2>io:fileExists?</h2>
-
-    <div class="inner-section">
-        <div><code>Builtin (io:fileExists? filename)</code>
-<br>
-<div>Check if a file exists, return True or False</div>
-<div><b>Note</b>
-: 
-</div>
-<div><h4>Parameter</h4>
-<ul><li><code>filename</code>: the path of the file</li></ul></div>
-<div><h4>Author</h4>
-<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
-<pre>
-<code class="rainbowjs" data-language="arkscript">
-(io:fileExists? "hello.json")
-</code>
-</pre></div>
-    </div>
-</section><section id="io:listfiles">
-    <h2>io:listFiles</h2>
-
-    <div class="inner-section">
-        <div><code>Builtin (io:listFiles path)</code>
-<br>
-<div>List files in a folder, as a List of String</div>
-<div><b>Note</b>
-: 
-</div>
-<div><h4>Parameter</h4>
-<ul><li><code>path</code>: A directory</li></ul></div>
-<div><h4>Author</h4>
-<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
-<pre>
-<code class="rainbowjs" data-language="arkscript">
-(io:listFiles "/tmp/hello")
-</code>
-</pre></div>
-    </div>
-</section><section id="io:dir?">
-    <h2>io:dir?</h2>
-
-    <div class="inner-section">
-        <div><code>Builtin (io:dir? path)</code>
-<br>
-<div>Check if a path represents a directory</div>
-<div><b>Note</b>
-: 
-</div>
-<div><h4>Parameter</h4>
-<ul><li><code>path</code>: A directory</li></ul></div>
-<div><h4>Author</h4>
-<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
-<pre>
-<code class="rainbowjs" data-language="arkscript">
-(io:dir? "/tmp/hello")
-</code>
-</pre></div>
-    </div>
-</section><section id="io:makedir">
-    <h2>io:makeDir</h2>
-
-    <div class="inner-section">
-        <div><code>Builtin (io:makeDir path)</code>
-<br>
-<div>Create a directory</div>
-<div><b>Note</b>
-: 
-</div>
-<div><h4>Parameter</h4>
-<ul><li><code>path</code>: A directory</li></ul></div>
-<div><h4>Author</h4>
-<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
-<pre>
-<code class="rainbowjs" data-language="arkscript">
-(io:makeDir "/tmp/myDir")
-</code>
-</pre></div>
-    </div>
-</section><section id="io:removefiles">
-    <h2>io:removeFiles</h2>
-
-    <div class="inner-section">
-        <div><code>Builtin (io:removeFiles filenames)</code>
-<br>
-<div>Delete files</div>
-<div><b>Note</b>
-: 
-Take multiple arguments, all String, each one representing a path to a file</div>
-<div><h4>Parameter</h4>
-<ul><li><code>filenames</code>: path to file</li></ul></div>
-<div><h4>Author</h4>
-<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
-<pre>
-<code class="rainbowjs" data-language="arkscript">
-(io:removeFiles "/tmp/test.ark" "hello.json")
-</code>
-</pre></div>
-    </div>
 </section>
             </div>
             <!-- end of content -->
@@ -319,7 +143,7 @@ Take multiple arguments, all String, each one representing a path to a file</div
     <footer id="page-footer">
         <p class="text-center">
             Copyright &copy; 2020-2025 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.<br>
-            <i>Last generation at 2025-06-01 02:25:30.684721</i>
+            <i>Last generation at 2025-07-01 02:21:49.674759</i>
         </p>
     </footer>
 

@@ -98,18 +98,6 @@
     <a href="#chunkby">chunkBy</a>
 </li><li class="nav-item">
     <a href="#insert">insert</a>
-</li><li class="nav-item">
-    <a href="#list:reverse">list:reverse</a>
-</li><li class="nav-item">
-    <a href="#list:find">list:find</a>
-</li><li class="nav-item">
-    <a href="#list:slice">list:slice</a>
-</li><li class="nav-item">
-    <a href="#list:sort">list:sort</a>
-</li><li class="nav-item">
-    <a href="#list:fill">list:fill</a>
-</li><li class="nav-item">
-    <a href="#list:setat">list:setAt</a>
 </li>
                 </ul>
             </li>
@@ -638,127 +626,6 @@ Original list is left unmodified</div>
 </code>
 </pre></div>
     </div>
-</section><section id="list:reverse">
-    <h2>list:reverse</h2>
-
-    <div class="inner-section">
-        <div><code>Builtin (list:reverse list)</code>
-<br>
-<div>Reverse a given list and return a new one</div>
-<div><b>Note</b>
-: 
-The original list is not modified</div>
-<div><h4>Parameter</h4>
-<ul><li><code>list</code>: the list to reverse</li></ul></div>
-<div><h4>Author</h4>
-<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
-<pre>
-<code class="rainbowjs" data-language="arkscript">
-(list:reverse [1 2 3])  # [3 2 1]
-</code>
-</pre></div>
-    </div>
-</section><section id="list:find">
-    <h2>list:find</h2>
-
-    <div class="inner-section">
-        <div><code>Builtin (list:find list value)</code>
-<br>
-<div>Search an element in a List</div>
-<div><b>Note</b>
-: 
-The original list is not modified</div>
-<div><h4>Parameters</h4>
-<ul><li><code>list</code>: the List to search in</li><li><code>value</code>: the element to search</li></ul></div>
-<div><h4>Author</h4>
-<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
-<pre>
-<code class="rainbowjs" data-language="arkscript">
-(list:find [1 2 3] 1)  # 0
-(list:find [1 2 3] 0)  # -1
-</code>
-</pre></div>
-    </div>
-</section><section id="list:slice">
-    <h2>list:slice</h2>
-
-    <div class="inner-section">
-        <div><code>Builtin (list:slice list start end step)</code>
-<br>
-<div>Get a slice from a List</div>
-<div><b>Note</b>
-: 
-The original list is not modified</div>
-<div><h4>Parameters</h4>
-<ul><li><code>list</code>: the list to reverse</li><li><code>start</code>: included, must be positive</li><li><code>end</code>: not included, must be positive and smaller than the list</li><li><code>step</code>: must be greater than 0</li></ul></div>
-<div><h4>Author</h4>
-<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
-<pre>
-<code class="rainbowjs" data-language="arkscript">
-(list:slice [1 2 3 4 5] 1 4 2)  # [2 4]
-</code>
-</pre></div>
-    </div>
-</section><section id="list:sort">
-    <h2>list:sort</h2>
-
-    <div class="inner-section">
-        <div><code>Builtin (list:sort list)</code>
-<br>
-<div>Sort a List and return a new one</div>
-<div><b>Note</b>
-: 
-The original list is not modified</div>
-<div><h4>Parameter</h4>
-<ul><li><code>list</code>: the list to sort</li></ul></div>
-<div><h4>Author</h4>
-<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
-<pre>
-<code class="rainbowjs" data-language="arkscript">
-(list:sort [4 2 3])  # [1 2 4]
-</code>
-</pre></div>
-    </div>
-</section><section id="list:fill">
-    <h2>list:fill</h2>
-
-    <div class="inner-section">
-        <div><code>Builtin (list:fill count value)</code>
-<br>
-<div>Generate a List of n copies of an element</div>
-<div><b>Note</b>
-: 
-</div>
-<div><h4>Parameters</h4>
-<ul><li><code>count</code>: the number of copies</li><li><code>value</code>: the element to copy</li></ul></div>
-<div><h4>Author</h4>
-<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
-<pre>
-<code class="rainbowjs" data-language="arkscript">
-(list:fill 4 nil)  # [nil nil nil nil]
-</code>
-</pre></div>
-    </div>
-</section><section id="list:setat">
-    <h2>list:setAt</h2>
-
-    <div class="inner-section">
-        <div><code>Builtin (list:setAt list index value)</code>
-<br>
-<div>Modify a given list and return a new one</div>
-<div><b>Note</b>
-: 
-The original list is not modified</div>
-<div><h4>Parameters</h4>
-<ul><li><code>list</code>: the list to modify</li><li><code>index</code>: the index of the element to modify</li><li><code>value</code>: the new element</li></ul></div>
-<div><h4>Author</h4>
-<a href="https://github.com/SuperFola">@SuperFola</a></div></div><div><h4>Example</h4>
-<pre>
-<code class="rainbowjs" data-language="arkscript">
-(list:setAt [1 2 3] 0 5)  # [5 2 3]
-</code>
-</pre></div>
-    </div>
 </section>
             </div>
             <!-- end of content -->
@@ -771,7 +638,7 @@ The original list is not modified</div>
     <footer id="page-footer">
         <p class="text-center">
             Copyright &copy; 2020-2025 Alexandre Plateau & Fabien Zoccola.<br> All rights reserved.<br>
-            <i>Last generation at 2025-06-01 02:25:30.684721</i>
+            <i>Last generation at 2025-07-01 02:21:49.674759</i>
         </p>
     </footer>
 
