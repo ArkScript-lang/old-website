@@ -7,7 +7,7 @@ digraph "Ark::State"
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
   Node1 [id="Node000001",label="Ark::State",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Ark state to handle the dirty job of loading and compiling ArkScript code."];
-  Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_bytecode",fontcolor="grey" ];
+  Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_bytecode\nm_code",fontcolor="grey" ];
   Node2 [id="Node000002",label="std::vector\< uint8_t \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
   Node3 -> Node2 [id="edge2_Node000002_Node000003",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< uint8_t \>",fontcolor="grey" ];
   Node3 [id="Node000003",label="std::vector\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
@@ -34,17 +34,13 @@ digraph "Ark::State"
   Node12 -> Node11 [id="edge15_Node000011_Node000012",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" elements",fontcolor="grey" ];
   Node12 [id="Node000012",label="Ark::internal::InstLoc",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$d5/d64/structArk_1_1internal_1_1InstLoc.html",tooltip=" "];
   Node3 -> Node11 [id="edge16_Node000011_Node000003",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< Ark::internal::InstLoc \>",fontcolor="grey" ];
-  Node13 -> Node1 [id="edge17_Node000001_Node000013",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_pages",fontcolor="grey" ];
-  Node13 [id="Node000013",label="std::vector\< bytecode_t \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
-  Node2 -> Node13 [id="edge18_Node000013_Node000002",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" elements",fontcolor="grey" ];
-  Node3 -> Node13 [id="edge19_Node000013_Node000003",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< bytecode_t \>",fontcolor="grey" ];
-  Node14 -> Node1 [id="edge20_Node000001_Node000014",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_binded",fontcolor="grey" ];
-  Node14 [id="Node000014",label="std::unordered_map\l\< std::string, Ark::\lValue \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
-  Node6 -> Node14 [id="edge21_Node000014_Node000006",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" keys",fontcolor="grey" ];
-  Node10 -> Node14 [id="edge22_Node000014_Node000010",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" elements",fontcolor="grey" ];
-  Node15 -> Node14 [id="edge23_Node000014_Node000015",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< std::string, Ark\l::Value \>",fontcolor="grey" ];
-  Node15 [id="Node000015",label="std::unordered_map\l\< K, T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
-  Node16 -> Node15 [id="edge24_Node000015_Node000016",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" keys",fontcolor="grey" ];
-  Node16 [id="Node000016",label="K",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
-  Node4 -> Node15 [id="edge25_Node000015_Node000004",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" elements",fontcolor="grey" ];
+  Node13 -> Node1 [id="edge17_Node000001_Node000013",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_binded",fontcolor="grey" ];
+  Node13 [id="Node000013",label="std::unordered_map\l\< std::string, Ark::\lValue \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node13 [id="edge18_Node000013_Node000006",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" keys",fontcolor="grey" ];
+  Node10 -> Node13 [id="edge19_Node000013_Node000010",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" elements",fontcolor="grey" ];
+  Node14 -> Node13 [id="edge20_Node000013_Node000014",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< std::string, Ark\l::Value \>",fontcolor="grey" ];
+  Node14 [id="Node000014",label="std::unordered_map\l\< K, T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node15 -> Node14 [id="edge21_Node000014_Node000015",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" keys",fontcolor="grey" ];
+  Node15 [id="Node000015",label="K",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node14 [id="edge22_Node000014_Node000004",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" elements",fontcolor="grey" ];
 }

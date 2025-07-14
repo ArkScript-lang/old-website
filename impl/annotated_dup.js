@@ -77,6 +77,7 @@ var annotated_dup =
       [ "InstLocations", "d3/df5/structArk_1_1InstLocations.html", "d3/df5/structArk_1_1InstLocations" ],
       [ "mapping", "d4/dd8/structArk_1_1mapping.html", "d4/dd8/structArk_1_1mapping" ],
       [ "NestedError", "db/ddb/classArk_1_1NestedError.html", "db/ddb/classArk_1_1NestedError" ],
+      [ "Procedure", "d4/d04/classArk_1_1Procedure.html", "d4/d04/classArk_1_1Procedure" ],
       [ "Repl", "de/d60/classArk_1_1Repl.html", "de/d60/classArk_1_1Repl" ],
       [ "State", "d1/d37/classArk_1_1State.html", "d1/d37/classArk_1_1State" ],
       [ "Symbols", "d9/dba/structArk_1_1Symbols.html", "d9/dba/structArk_1_1Symbols" ],

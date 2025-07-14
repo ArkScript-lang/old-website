@@ -39,11 +39,16 @@ digraph "/Users/fola/Documents/ArkScript/Ark/src/arkreactor/VM/Value/ClosureScop
   Node14 -> Node13 [id="edge18_Node000014_Node000013",color="steelblue1",style="solid",tooltip=" "];
   Node14 -> Node5 [id="edge19_Node000014_Node000005",color="steelblue1",style="solid",tooltip=" "];
   Node14 -> Node6 [id="edge20_Node000014_Node000006",color="steelblue1",style="solid",tooltip=" "];
-  Node7 -> Node6 [id="edge21_Node000007_Node000006",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node15 [id="edge22_Node000001_Node000015",color="steelblue1",style="solid",tooltip=" "];
-  Node15 [id="Node000015",label="Ark/VM/ScopeView.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d8/d45/ScopeView_8hpp.html",tooltip=" "];
-  Node15 -> Node10 [id="edge23_Node000015_Node000010",color="steelblue1",style="solid",tooltip=" "];
-  Node15 -> Node5 [id="edge24_Node000015_Node000005",color="steelblue1",style="solid",tooltip=" "];
-  Node15 -> Node6 [id="edge25_Node000015_Node000006",color="steelblue1",style="solid",tooltip=" "];
-  Node15 -> Node7 [id="edge26_Node000015_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 -> Node15 [id="edge21_Node000007_Node000015",color="steelblue1",style="solid",tooltip=" "];
+  Node15 [id="Node000015",label="Ark/VM/Value/Procedure.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$da/dcf/Procedure_8hpp.html",tooltip="Wrapper object for user-defined functions."];
+  Node15 -> Node16 [id="edge22_Node000015_Node000016",color="steelblue1",style="solid",tooltip=" "];
+  Node16 [id="Node000016",label="functional",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node15 -> Node3 [id="edge23_Node000015_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node7 -> Node6 [id="edge24_Node000007_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node17 [id="edge25_Node000001_Node000017",color="steelblue1",style="solid",tooltip=" "];
+  Node17 [id="Node000017",label="Ark/VM/ScopeView.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d8/d45/ScopeView_8hpp.html",tooltip=" "];
+  Node17 -> Node10 [id="edge26_Node000017_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node17 -> Node5 [id="edge27_Node000017_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node17 -> Node6 [id="edge28_Node000017_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node17 -> Node7 [id="edge29_Node000017_Node000007",color="steelblue1",style="solid",tooltip=" "];
 }

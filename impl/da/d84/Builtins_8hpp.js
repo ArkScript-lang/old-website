@@ -34,7 +34,7 @@ var Builtins_8hpp =
     [ "random", "da/d84/Builtins_8hpp.html#a58d045b58126e2c68b6893521e2cd783", null ],
     [ "readFile", "da/d84/Builtins_8hpp.html#a42b2f57b800c7c60281b6b0cc59f0067", null ],
     [ "removeAtStr", "da/d84/Builtins_8hpp.html#a5b7072a6c442f24b36d1d833170184b6", null ],
-    [ "removeFiles", "da/d84/Builtins_8hpp.html#ae39387ef342532a538ea1536f29f0903", null ],
+    [ "removeFile", "da/d84/Builtins_8hpp.html#a5af62b64848bd6c7cce3067ad5f77060", null ],
     [ "reverseList", "da/d84/Builtins_8hpp.html#a9c95b27ac4ea35c3334bf8eab3ac2c53", null ],
     [ "round_", "da/d84/Builtins_8hpp.html#af23f9708b373b5bead1058f84e65d5fe", null ],
     [ "setListAt", "da/d84/Builtins_8hpp.html#acc5f6d22a17a9be1a4266bffd6687b69", null ],
@@ -56,6 +56,7 @@ var Builtins_8hpp =
     [ "nan_", "da/d84/Builtins_8hpp.html#a8a4385091c82692252ceab0f97c72a1e", null ],
     [ "nil", "da/d84/Builtins_8hpp.html#a0541c7c43175f68aca89a4c3a61fca12", null ],
     [ "pi_", "da/d84/Builtins_8hpp.html#aa80ff6fe9f7412c94798c61688caf6a2", null ],
+    [ "platform", "da/d84/Builtins_8hpp.html#a004c3cfeeac058afd414cb5c8017574c", null ],
     [ "tau_", "da/d84/Builtins_8hpp.html#a8ce8e0ebded8592d52db484cdff7a0f9", null ],
     [ "trueSym", "da/d84/Builtins_8hpp.html#ac42d5de362d48803ef2a49f7f1e21e98", null ]
 ];

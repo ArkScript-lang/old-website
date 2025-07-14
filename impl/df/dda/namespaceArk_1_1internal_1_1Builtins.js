@@ -14,7 +14,7 @@ var namespaceArk_1_1internal_1_1Builtins =
       [ "print", "dc/d9d/namespaceArk_1_1internal_1_1Builtins_1_1IO.html#a83ec7c81fb958b782a4298ef6d06defd", null ],
       [ "puts_", "dc/d9d/namespaceArk_1_1internal_1_1Builtins_1_1IO.html#a5f4cc90463dd51cfeb185935326c3d17", null ],
       [ "readFile", "dc/d9d/namespaceArk_1_1internal_1_1Builtins_1_1IO.html#a42b2f57b800c7c60281b6b0cc59f0067", null ],
-      [ "removeFiles", "dc/d9d/namespaceArk_1_1internal_1_1Builtins_1_1IO.html#ae39387ef342532a538ea1536f29f0903", null ],
+      [ "removeFile", "dc/d9d/namespaceArk_1_1internal_1_1Builtins_1_1IO.html#a5af62b64848bd6c7cce3067ad5f77060", null ],
       [ "writeFile", "dc/d9d/namespaceArk_1_1internal_1_1Builtins_1_1IO.html#a9683992f0c1efdb5a2eab4d93469a5ba", null ]
     ] ],
     [ "List", "d0/d7b/namespaceArk_1_1internal_1_1Builtins_1_1List.html", [
@@ -71,5 +71,6 @@ var namespaceArk_1_1internal_1_1Builtins =
     [ "builtins", "df/dda/namespaceArk_1_1internal_1_1Builtins.html#ae99a104c484192543989515d4eda8a5a", null ],
     [ "falseSym", "df/dda/namespaceArk_1_1internal_1_1Builtins.html#a50c50c475a29822fe85e5c16b91c9015", null ],
     [ "nil", "df/dda/namespaceArk_1_1internal_1_1Builtins.html#a0541c7c43175f68aca89a4c3a61fca12", null ],
+    [ "platform", "df/dda/namespaceArk_1_1internal_1_1Builtins.html#a004c3cfeeac058afd414cb5c8017574c", null ],
     [ "trueSym", "df/dda/namespaceArk_1_1internal_1_1Builtins.html#ac42d5de362d48803ef2a49f7f1e21e98", null ]
 ];

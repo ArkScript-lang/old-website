@@ -59,9 +59,11 @@ digraph "/Users/fola/Documents/ArkScript/Ark/src/arkreactor/Compiler/AST/Optimiz
   Node20 -> Node5 [id="edge30_Node000020_Node000005",color="steelblue1",style="solid",tooltip=" "];
   Node20 -> Node23 [id="edge31_Node000020_Node000023",color="steelblue1",style="solid",tooltip=" "];
   Node23 [id="Node000023",label="chrono",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
-  Node20 -> Node11 [id="edge32_Node000020_Node000011",color="steelblue1",style="solid",tooltip=" "];
-  Node20 -> Node4 [id="edge33_Node000020_Node000004",color="steelblue1",style="solid",tooltip=" "];
-  Node20 -> Node24 [id="edge34_Node000020_Node000024",color="steelblue1",style="solid",tooltip=" "];
-  Node24 [id="Node000024",label="fmt/color.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
-  Node2 -> Node8 [id="edge35_Node000002_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node20 -> Node24 [id="edge32_Node000020_Node000024",color="steelblue1",style="solid",tooltip=" "];
+  Node24 [id="Node000024",label="source_location",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node20 -> Node11 [id="edge33_Node000020_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node20 -> Node4 [id="edge34_Node000020_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node20 -> Node25 [id="edge35_Node000020_Node000025",color="steelblue1",style="solid",tooltip=" "];
+  Node25 [id="Node000025",label="fmt/color.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node2 -> Node8 [id="edge36_Node000002_Node000008",color="steelblue1",style="solid",tooltip=" "];
 }

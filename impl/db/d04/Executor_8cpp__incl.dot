@@ -67,11 +67,13 @@ digraph "/Users/fola/Documents/ArkScript/Ark/src/arkreactor/Compiler/Macros/Exec
   Node22 -> Node8 [id="edge36_Node000022_Node000008",color="steelblue1",style="solid",tooltip=" "];
   Node22 -> Node25 [id="edge37_Node000022_Node000025",color="steelblue1",style="solid",tooltip=" "];
   Node25 [id="Node000025",label="chrono",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
-  Node22 -> Node9 [id="edge38_Node000022_Node000009",color="steelblue1",style="solid",tooltip=" "];
-  Node22 -> Node4 [id="edge39_Node000022_Node000004",color="steelblue1",style="solid",tooltip=" "];
-  Node22 -> Node26 [id="edge40_Node000022_Node000026",color="steelblue1",style="solid",tooltip=" "];
-  Node26 [id="Node000026",label="fmt/color.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
-  Node19 -> Node4 [id="edge41_Node000019_Node000004",color="steelblue1",style="solid",tooltip=" "];
-  Node19 -> Node3 [id="edge42_Node000019_Node000003",color="steelblue1",style="solid",tooltip=" "];
-  Node19 -> Node8 [id="edge43_Node000019_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node22 -> Node26 [id="edge38_Node000022_Node000026",color="steelblue1",style="solid",tooltip=" "];
+  Node26 [id="Node000026",label="source_location",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node22 -> Node9 [id="edge39_Node000022_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node22 -> Node4 [id="edge40_Node000022_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node22 -> Node27 [id="edge41_Node000022_Node000027",color="steelblue1",style="solid",tooltip=" "];
+  Node27 [id="Node000027",label="fmt/color.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node19 -> Node4 [id="edge42_Node000019_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node19 -> Node3 [id="edge43_Node000019_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node19 -> Node8 [id="edge44_Node000019_Node000008",color="steelblue1",style="solid",tooltip=" "];
 }

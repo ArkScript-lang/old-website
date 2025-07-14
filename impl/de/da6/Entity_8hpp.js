@@ -6,8 +6,7 @@ var Entity_8hpp =
     [ "Kind", "de/da6/Entity_8hpp.html#a3ff6aca07d6f0bf01495d0325ceb428d", [
       [ "Label", "de/da6/Entity_8hpp.html#a3ff6aca07d6f0bf01495d0325ceb428dab021df6aac4654c454f46c77646e745f", null ],
       [ "Goto", "de/da6/Entity_8hpp.html#a3ff6aca07d6f0bf01495d0325ceb428daae8fae3d74fdc80ef40995c3c6ca152e", null ],
-      [ "GotoIfTrue", "de/da6/Entity_8hpp.html#a3ff6aca07d6f0bf01495d0325ceb428da0852a04e1ab34a1608cd8d67049256fb", null ],
-      [ "GotoIfFalse", "de/da6/Entity_8hpp.html#a3ff6aca07d6f0bf01495d0325ceb428dac721a5338f2233539d0ad1974dc6d60a", null ],
+      [ "GotoWithArg", "de/da6/Entity_8hpp.html#a3ff6aca07d6f0bf01495d0325ceb428da54774d4470d23414243e54f6a2bb32e1", null ],
       [ "Opcode", "de/da6/Entity_8hpp.html#a3ff6aca07d6f0bf01495d0325ceb428da5782f6bdd633ac305e1e625779f96a77", null ],
       [ "Opcode2Args", "de/da6/Entity_8hpp.html#a3ff6aca07d6f0bf01495d0325ceb428dae41e6561ce156ae3f69d536110106750", null ]
     ] ],

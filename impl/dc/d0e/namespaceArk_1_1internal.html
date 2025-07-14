@@ -286,90 +286,124 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681ab00ade023344f58b3b50407a99501530">JUMP</a> = 0x08
 , <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681aef302a6c551c3fbf8ff509fb935532a1">RET</a> = 0x09
 , <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a254f8f6960d573d47acdc037946d8a48">HALT</a> = 0x0a
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a0d19547973896db46706527300ba630d">CALL</a> = 0x0b
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a4da2820fbcf0df640191bdc10237d72c">PUSH_RETURN_ADDRESS</a> = 0x0b
 , <br />
-&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a68f8b0b3e523eb4ebcdb6057fd618ae4">CAPTURE</a> = 0x0c
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a32493ca580dc36eb98a8999fa065202c">BUILTIN</a> = 0x0d
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681aa2b29c169d008e65c9589eed1cb37fa2">DEL</a> = 0x0e
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a74ffaa4dfcdce922e86e218d364b3a1a">MAKE_CLOSURE</a> = 0x0f
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a0d19547973896db46706527300ba630d">CALL</a> = 0x0c
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a68f8b0b3e523eb4ebcdb6057fd618ae4">CAPTURE</a> = 0x0d
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a32493ca580dc36eb98a8999fa065202c">BUILTIN</a> = 0x0e
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681aa2b29c169d008e65c9589eed1cb37fa2">DEL</a> = 0x0f
 , <br />
-&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a923e5dd44bd23ed438b9bed2d26915ad">GET_FIELD</a> = 0x10
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681afc29a3aa6e94ad8c002dfbd6859412e1">PLUGIN</a> = 0x11
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a132677dc55f09b1301e8222091fda0cb">LIST</a> = 0x12
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a2ab6f0eef84c58a4afa1584e608f2354">APPEND</a> = 0x13
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a74ffaa4dfcdce922e86e218d364b3a1a">MAKE_CLOSURE</a> = 0x10
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a923e5dd44bd23ed438b9bed2d26915ad">GET_FIELD</a> = 0x11
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681afc29a3aa6e94ad8c002dfbd6859412e1">PLUGIN</a> = 0x12
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a132677dc55f09b1301e8222091fda0cb">LIST</a> = 0x13
 , <br />
-&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a84d95297ef6a04732ed50731d6564c0c">CONCAT</a> = 0x14
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a7f1bcb6491da251b1c3836d7630926ef">APPEND_IN_PLACE</a> = 0x15
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681aae0da9c8979cf536840021f73c610d09">CONCAT_IN_PLACE</a> = 0x16
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a231ed0c85ace21289c93ce2987ccc262">POP_LIST</a> = 0x17
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a2ab6f0eef84c58a4afa1584e608f2354">APPEND</a> = 0x14
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a84d95297ef6a04732ed50731d6564c0c">CONCAT</a> = 0x15
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a7f1bcb6491da251b1c3836d7630926ef">APPEND_IN_PLACE</a> = 0x16
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681aae0da9c8979cf536840021f73c610d09">CONCAT_IN_PLACE</a> = 0x17
 , <br />
-&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681adf1d9749a040a01202f92fc35622bb97">POP_LIST_IN_PLACE</a> = 0x18
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a8e9b18cd45e49d70ddcac828a5a0dc2e">SET_AT_INDEX</a> = 0x19
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681ab315e13623d1c86bac5ddbf50700acc9">SET_AT_2_INDEX</a> = 0x1a
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a07bdaee9ad660de3c24cdcc66988619c">POP</a> = 0x1b
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a231ed0c85ace21289c93ce2987ccc262">POP_LIST</a> = 0x18
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681adf1d9749a040a01202f92fc35622bb97">POP_LIST_IN_PLACE</a> = 0x19
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a8e9b18cd45e49d70ddcac828a5a0dc2e">SET_AT_INDEX</a> = 0x1a
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681ab315e13623d1c86bac5ddbf50700acc9">SET_AT_2_INDEX</a> = 0x1b
 , <br />
-&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a076551d54881ee668a3639e16266aaf5">DUP</a> = 0x1c
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681affc8c33876fb8b6157ac819b420e4ac6">CREATE_SCOPE</a> = 0x1d
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681abc0ca81c0ef61ce67a84da323368a119">RESET_SCOPE</a> = 0x1e
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a87f31d88f2a4994b0344dcf25466d517">POP_SCOPE</a> = 0x1f
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a07bdaee9ad660de3c24cdcc66988619c">POP</a> = 0x1c
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681ae5420b8a7fe6ef3715d000c484d9b4f7">SHORTCIRCUIT_AND</a> = 0x1d
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681ad4e3b526638bd6c655e5b16ec44054d2">SHORTCIRCUIT_OR</a> = 0x1e
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681affc8c33876fb8b6157ac819b420e4ac6">CREATE_SCOPE</a> = 0x1f
 , <br />
-&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681ae4911d30f6af4720da1c508316389364">FIRST_OPERATOR</a> = 0x20
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a4c82ca0d18822806e36b58e49784eeb7">ADD</a> = 0x20
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a875b3b00ea3dca787fa1d457a7b04a4e">SUB</a> = 0x21
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a7de399f2b3d06857f17ec899b2b79bc5">MUL</a> = 0x22
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a1789ddba24e6e98d488a70e9f6763633">RESET_SCOPE_JUMP</a> = 0x20
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a87f31d88f2a4994b0344dcf25466d517">POP_SCOPE</a> = 0x21
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a707b650bea7bca664b1701e1398b6906">GET_CURRENT_PAGE_ADDR</a> = 0x22
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681ae4911d30f6af4720da1c508316389364">FIRST_OPERATOR</a> = 0x23
 , <br />
-&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a8f5fa19f71eccbad90e50c1c09cf6d02">DIV</a> = 0x23
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a399244553d6b9528184b26186af53b65">GT</a> = 0x24
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681aa2d82ff6f76f2e85de6173283129cebd">LT</a> = 0x25
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a61f2ef3fae556eb742a4d384d2e1cd29">LE</a> = 0x26
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a4c82ca0d18822806e36b58e49784eeb7">ADD</a> = 0x23
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a875b3b00ea3dca787fa1d457a7b04a4e">SUB</a> = 0x24
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a7de399f2b3d06857f17ec899b2b79bc5">MUL</a> = 0x25
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a8f5fa19f71eccbad90e50c1c09cf6d02">DIV</a> = 0x26
 , <br />
-&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681add290418ff5144fe9abaf9192dfe45cb">GE</a> = 0x27
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a3ebb92de7acdd11ba5d26f753e7aa0c5">NEQ</a> = 0x28
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a1fe4d21856a954682e3f17393503e9f7">EQ</a> = 0x29
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681af4cacd2f72c74b6e5d6c555b2aad323b">LEN</a> = 0x2a
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a399244553d6b9528184b26186af53b65">GT</a> = 0x27
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681aa2d82ff6f76f2e85de6173283129cebd">LT</a> = 0x28
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a61f2ef3fae556eb742a4d384d2e1cd29">LE</a> = 0x29
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681add290418ff5144fe9abaf9192dfe45cb">GE</a> = 0x2a
 , <br />
-&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a32d2237c0469bcdfd68f3baf5a4dab5d">EMPTY</a> = 0x2b
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681aba6b55e08dff6039159ac458b4ef458c">TAIL</a> = 0x2c
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681aa9a089e793f52b5e5421ee3f1558be5e">HEAD</a> = 0x2d
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a47216d8ba3f558c69fa591de825321d4">ISNIL</a> = 0x2e
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a3ebb92de7acdd11ba5d26f753e7aa0c5">NEQ</a> = 0x2b
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a1fe4d21856a954682e3f17393503e9f7">EQ</a> = 0x2c
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681af4cacd2f72c74b6e5d6c555b2aad323b">LEN</a> = 0x2d
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a32d2237c0469bcdfd68f3baf5a4dab5d">EMPTY</a> = 0x2e
 , <br />
-&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a93d2be6a263e75b58af07e95b3f144dd">ASSERT</a> = 0x2f
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a58510b4fd7d67a04b4b4b367ea095530">TO_NUM</a> = 0x30
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681ac5b48140324365f43e9cea1365a133c7">TO_STR</a> = 0x31
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a93e267bca42261b1fbe76253840a662b">AT</a> = 0x32
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681aba6b55e08dff6039159ac458b4ef458c">TAIL</a> = 0x2f
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681aa9a089e793f52b5e5421ee3f1558be5e">HEAD</a> = 0x30
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a47216d8ba3f558c69fa591de825321d4">ISNIL</a> = 0x31
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a93d2be6a263e75b58af07e95b3f144dd">ASSERT</a> = 0x32
 , <br />
-&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681aa4db6f6e2fa869fb9e0b278f156d5aae">AT_AT</a> = 0x33
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681ad4e723e3676eda408b721f23ddf28424">MOD</a> = 0x34
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a0abc5673fb17135485f15875ac434137">TYPE</a> = 0x35
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681ae77165cee499382d5098751b304e7cac">HASFIELD</a> = 0x36
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a58510b4fd7d67a04b4b4b367ea095530">TO_NUM</a> = 0x33
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681ac5b48140324365f43e9cea1365a133c7">TO_STR</a> = 0x34
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a93e267bca42261b1fbe76253840a662b">AT</a> = 0x35
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681aa4db6f6e2fa869fb9e0b278f156d5aae">AT_AT</a> = 0x36
 , <br />
-&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a570dcd2373c0beb0f911c1fee99218a5">NOT</a> = 0x37
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a7df813d40f81f18688736d9a2d099d48">LOAD_CONST_LOAD_CONST</a> = 0x38
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a0e0b28378eb24863917aeb6872e5bdad">LOAD_CONST_STORE</a> = 0x39
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a27f7c47b188a72b07b510836519d857f">LOAD_CONST_SET_VAL</a> = 0x3a
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681ad4e723e3676eda408b721f23ddf28424">MOD</a> = 0x37
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a0abc5673fb17135485f15875ac434137">TYPE</a> = 0x38
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681ae77165cee499382d5098751b304e7cac">HASFIELD</a> = 0x39
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a570dcd2373c0beb0f911c1fee99218a5">NOT</a> = 0x3a
 , <br />
-&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a3ec986696f68e1a8608827139f5dbdf2">STORE_FROM</a> = 0x3b
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681ae11d9bbcd3ccfe8c5e39a9acbff8f582">STORE_FROM_INDEX</a> = 0x3c
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a4829b2f313cf0f76fa2541702879a7be">SET_VAL_FROM</a> = 0x3d
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681aa6c0dc723057ac578db3750753c23ddd">SET_VAL_FROM_INDEX</a> = 0x3e
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a7df813d40f81f18688736d9a2d099d48">LOAD_CONST_LOAD_CONST</a> = 0x3b
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a0e0b28378eb24863917aeb6872e5bdad">LOAD_CONST_STORE</a> = 0x3c
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a27f7c47b188a72b07b510836519d857f">LOAD_CONST_SET_VAL</a> = 0x3d
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a3ec986696f68e1a8608827139f5dbdf2">STORE_FROM</a> = 0x3e
 , <br />
-&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a8fa31b3092ca628e49de995668c6d1ab">INCREMENT</a> = 0x3f
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a3814bdb447553ab6bf9a031ae21356ac">INCREMENT_BY_INDEX</a> = 0x40
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a44c1e9a50ba6cb8bc1717fa02ad7b016">DECREMENT</a> = 0x41
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681aec84c49802c84f7c432428fd4d01b37d">DECREMENT_BY_INDEX</a> = 0x42
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681ae11d9bbcd3ccfe8c5e39a9acbff8f582">STORE_FROM_INDEX</a> = 0x3f
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a4829b2f313cf0f76fa2541702879a7be">SET_VAL_FROM</a> = 0x40
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681aa6c0dc723057ac578db3750753c23ddd">SET_VAL_FROM_INDEX</a> = 0x41
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a8fa31b3092ca628e49de995668c6d1ab">INCREMENT</a> = 0x42
 , <br />
-&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a0ccc78a7b0f25889b91136d19ba56305">STORE_TAIL</a> = 0x43
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a7711db916155cd2e93381c7ee8097d32">STORE_TAIL_BY_INDEX</a> = 0x44
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a7503c0436265d5b31ef4c3908e95890b">STORE_HEAD</a> = 0x45
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681af2f7f9d6059a80c800b669bdf125ecd5">STORE_HEAD_BY_INDEX</a> = 0x46
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a3814bdb447553ab6bf9a031ae21356ac">INCREMENT_BY_INDEX</a> = 0x43
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a9ba0f8fde07c422cec2d7ee5baedb3d9">INCREMENT_STORE</a> = 0x44
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a44c1e9a50ba6cb8bc1717fa02ad7b016">DECREMENT</a> = 0x45
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681aec84c49802c84f7c432428fd4d01b37d">DECREMENT_BY_INDEX</a> = 0x46
 , <br />
-&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a8b3e01a762cc1fa3af0290fe7f5695e6">SET_VAL_TAIL</a> = 0x47
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681aa00b77b58d1ab8a07817f9c70ca0deb0">SET_VAL_TAIL_BY_INDEX</a> = 0x48
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a52ad249784e7120b740d0e91d83d2756">SET_VAL_HEAD</a> = 0x49
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681af5209467ac0d23e457f2a666635bfe87">SET_VAL_HEAD_BY_INDEX</a> = 0x4a
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a552bee07a2ee950e9840611e54993690">DECREMENT_STORE</a> = 0x47
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a0ccc78a7b0f25889b91136d19ba56305">STORE_TAIL</a> = 0x48
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a7711db916155cd2e93381c7ee8097d32">STORE_TAIL_BY_INDEX</a> = 0x49
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a7503c0436265d5b31ef4c3908e95890b">STORE_HEAD</a> = 0x4a
 , <br />
-&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681abb8dee47f405641910739e39caf02d6d">CALL_BUILTIN</a> = 0x4b
-, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a0be56fe6a02043ce359f925d6bc0c47c">InstructionsCount</a>
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681af2f7f9d6059a80c800b669bdf125ecd5">STORE_HEAD_BY_INDEX</a> = 0x4b
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a57497d52c7e36df74e566850eae024b0">STORE_LIST</a> = 0x4c
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a8b3e01a762cc1fa3af0290fe7f5695e6">SET_VAL_TAIL</a> = 0x4d
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681aa00b77b58d1ab8a07817f9c70ca0deb0">SET_VAL_TAIL_BY_INDEX</a> = 0x4e
+, <br />
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a52ad249784e7120b740d0e91d83d2756">SET_VAL_HEAD</a> = 0x4f
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681af5209467ac0d23e457f2a666635bfe87">SET_VAL_HEAD_BY_INDEX</a> = 0x50
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681abb8dee47f405641910739e39caf02d6d">CALL_BUILTIN</a> = 0x51
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681ad96c421d6b6242414b331ea714b764ac">CALL_BUILTIN_WITHOUT_RETURN_ADDRESS</a> = 0x52
+, <br />
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a9b2ea09315a73d6ba7146db70002dff3">LT_CONST_JUMP_IF_FALSE</a> = 0x53
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681aa39d5ec0320770a2ef594a5ec127d798">LT_CONST_JUMP_IF_TRUE</a> = 0x54
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681abbc2de0c6cb788e74f79877f9a3701f7">LT_SYM_JUMP_IF_FALSE</a> = 0x55
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681af53cf8763f6050b5acf60ebfea86cc22">GT_CONST_JUMP_IF_TRUE</a> = 0x56
+, <br />
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a97c97e67ea5535d8396063c9933da42e">GT_CONST_JUMP_IF_FALSE</a> = 0x57
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a0b24da1920109afd5f2a72556ad229cf">GT_SYM_JUMP_IF_FALSE</a> = 0x58
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a3999f58503c8f68615d13e38174b359c">EQ_CONST_JUMP_IF_TRUE</a> = 0x59
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a46606827749f7dd13d665bb41881be99">EQ_SYM_INDEX_JUMP_IF_TRUE</a> = 0x5a
+, <br />
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a4d08e84668900d019d128342f14ea2fe">NEQ_CONST_JUMP_IF_TRUE</a> = 0x5b
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a0b11f196fc05a0c9c2e33a76e743b76f">NEQ_SYM_JUMP_IF_FALSE</a> = 0x5c
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a25c7197e344681e4372f8b36f8cb9e89">CALL_SYMBOL</a> = 0x5d
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a9cf4fd2d51070e0e722f382fe83aedc1">CALL_CURRENT_PAGE</a> = 0x5e
+, <br />
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681af8858959f5c0227efe19610af6b2aaf0">GET_FIELD_FROM_SYMBOL</a> = 0x5f
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a1b3c88c11067a986fffe063e83c5eae7">GET_FIELD_FROM_SYMBOL_INDEX</a> = 0x60
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a4042c42e6d29eef8f8877f91334b7b82">AT_SYM_SYM</a> = 0x61
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a215668a6b9ee4ff031f6f1cbe939feac">AT_SYM_INDEX_SYM_INDEX</a> = 0x62
+, <br />
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a6a88f96ef4b65852757f0a8233fb1a1c">CHECK_TYPE_OF</a> = 0x63
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a939362207f483bcd5169dcca0e11e96c">CHECK_TYPE_OF_BY_INDEX</a> = 0x64
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a367fa615133d34c2265261990a4b450a">APPEND_IN_PLACE_SYM</a> = 0x65
+, <a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a1d4a055637abd0203e44aad4b9fd259c">APPEND_IN_PLACE_SYM_INDEX</a> = 0x66
+, <br />
+&#160;&#160;<a class="el" href="#abcd166377fbe7dcd77e47ef80cee8681a0be56fe6a02043ce359f925d6bc0c47c">InstructionsCount</a>
 <br />
  }</td></tr>
 <tr class="memdesc:abcd166377fbe7dcd77e47ef80cee8681"><td class="mdescLeft">&#160;</td><td class="mdescRight">The different bytecodes are stored here.  <a href="#abcd166377fbe7dcd77e47ef80cee8681">More...</a><br /></td></tr>
@@ -572,6 +606,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681ab00ade023344f58b3b50407a99501530" name="abcd166377fbe7dcd77e47ef80cee8681ab00ade023344f58b3b50407a99501530"></a>JUMP&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681aef302a6c551c3fbf8ff509fb935532a1" name="abcd166377fbe7dcd77e47ef80cee8681aef302a6c551c3fbf8ff509fb935532a1"></a>RET&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a254f8f6960d573d47acdc037946d8a48" name="abcd166377fbe7dcd77e47ef80cee8681a254f8f6960d573d47acdc037946d8a48"></a>HALT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a4da2820fbcf0df640191bdc10237d72c" name="abcd166377fbe7dcd77e47ef80cee8681a4da2820fbcf0df640191bdc10237d72c"></a>PUSH_RETURN_ADDRESS&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a0d19547973896db46706527300ba630d" name="abcd166377fbe7dcd77e47ef80cee8681a0d19547973896db46706527300ba630d"></a>CALL&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a68f8b0b3e523eb4ebcdb6057fd618ae4" name="abcd166377fbe7dcd77e47ef80cee8681a68f8b0b3e523eb4ebcdb6057fd618ae4"></a>CAPTURE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a32493ca580dc36eb98a8999fa065202c" name="abcd166377fbe7dcd77e47ef80cee8681a32493ca580dc36eb98a8999fa065202c"></a>BUILTIN&#160;</td><td class="fielddoc"></td></tr>
@@ -589,10 +624,12 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a8e9b18cd45e49d70ddcac828a5a0dc2e" name="abcd166377fbe7dcd77e47ef80cee8681a8e9b18cd45e49d70ddcac828a5a0dc2e"></a>SET_AT_INDEX&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681ab315e13623d1c86bac5ddbf50700acc9" name="abcd166377fbe7dcd77e47ef80cee8681ab315e13623d1c86bac5ddbf50700acc9"></a>SET_AT_2_INDEX&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a07bdaee9ad660de3c24cdcc66988619c" name="abcd166377fbe7dcd77e47ef80cee8681a07bdaee9ad660de3c24cdcc66988619c"></a>POP&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a076551d54881ee668a3639e16266aaf5" name="abcd166377fbe7dcd77e47ef80cee8681a076551d54881ee668a3639e16266aaf5"></a>DUP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681ae5420b8a7fe6ef3715d000c484d9b4f7" name="abcd166377fbe7dcd77e47ef80cee8681ae5420b8a7fe6ef3715d000c484d9b4f7"></a>SHORTCIRCUIT_AND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681ad4e3b526638bd6c655e5b16ec44054d2" name="abcd166377fbe7dcd77e47ef80cee8681ad4e3b526638bd6c655e5b16ec44054d2"></a>SHORTCIRCUIT_OR&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681affc8c33876fb8b6157ac819b420e4ac6" name="abcd166377fbe7dcd77e47ef80cee8681affc8c33876fb8b6157ac819b420e4ac6"></a>CREATE_SCOPE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681abc0ca81c0ef61ce67a84da323368a119" name="abcd166377fbe7dcd77e47ef80cee8681abc0ca81c0ef61ce67a84da323368a119"></a>RESET_SCOPE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a1789ddba24e6e98d488a70e9f6763633" name="abcd166377fbe7dcd77e47ef80cee8681a1789ddba24e6e98d488a70e9f6763633"></a>RESET_SCOPE_JUMP&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a87f31d88f2a4994b0344dcf25466d517" name="abcd166377fbe7dcd77e47ef80cee8681a87f31d88f2a4994b0344dcf25466d517"></a>POP_SCOPE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a707b650bea7bca664b1701e1398b6906" name="abcd166377fbe7dcd77e47ef80cee8681a707b650bea7bca664b1701e1398b6906"></a>GET_CURRENT_PAGE_ADDR&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681ae4911d30f6af4720da1c508316389364" name="abcd166377fbe7dcd77e47ef80cee8681ae4911d30f6af4720da1c508316389364"></a>FIRST_OPERATOR&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a4c82ca0d18822806e36b58e49784eeb7" name="abcd166377fbe7dcd77e47ef80cee8681a4c82ca0d18822806e36b58e49784eeb7"></a>ADD&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a875b3b00ea3dca787fa1d457a7b04a4e" name="abcd166377fbe7dcd77e47ef80cee8681a875b3b00ea3dca787fa1d457a7b04a4e"></a>SUB&#160;</td><td class="fielddoc"></td></tr>
@@ -627,17 +664,41 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681aa6c0dc723057ac578db3750753c23ddd" name="abcd166377fbe7dcd77e47ef80cee8681aa6c0dc723057ac578db3750753c23ddd"></a>SET_VAL_FROM_INDEX&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a8fa31b3092ca628e49de995668c6d1ab" name="abcd166377fbe7dcd77e47ef80cee8681a8fa31b3092ca628e49de995668c6d1ab"></a>INCREMENT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a3814bdb447553ab6bf9a031ae21356ac" name="abcd166377fbe7dcd77e47ef80cee8681a3814bdb447553ab6bf9a031ae21356ac"></a>INCREMENT_BY_INDEX&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a9ba0f8fde07c422cec2d7ee5baedb3d9" name="abcd166377fbe7dcd77e47ef80cee8681a9ba0f8fde07c422cec2d7ee5baedb3d9"></a>INCREMENT_STORE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a44c1e9a50ba6cb8bc1717fa02ad7b016" name="abcd166377fbe7dcd77e47ef80cee8681a44c1e9a50ba6cb8bc1717fa02ad7b016"></a>DECREMENT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681aec84c49802c84f7c432428fd4d01b37d" name="abcd166377fbe7dcd77e47ef80cee8681aec84c49802c84f7c432428fd4d01b37d"></a>DECREMENT_BY_INDEX&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a552bee07a2ee950e9840611e54993690" name="abcd166377fbe7dcd77e47ef80cee8681a552bee07a2ee950e9840611e54993690"></a>DECREMENT_STORE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a0ccc78a7b0f25889b91136d19ba56305" name="abcd166377fbe7dcd77e47ef80cee8681a0ccc78a7b0f25889b91136d19ba56305"></a>STORE_TAIL&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a7711db916155cd2e93381c7ee8097d32" name="abcd166377fbe7dcd77e47ef80cee8681a7711db916155cd2e93381c7ee8097d32"></a>STORE_TAIL_BY_INDEX&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a7503c0436265d5b31ef4c3908e95890b" name="abcd166377fbe7dcd77e47ef80cee8681a7503c0436265d5b31ef4c3908e95890b"></a>STORE_HEAD&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681af2f7f9d6059a80c800b669bdf125ecd5" name="abcd166377fbe7dcd77e47ef80cee8681af2f7f9d6059a80c800b669bdf125ecd5"></a>STORE_HEAD_BY_INDEX&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a57497d52c7e36df74e566850eae024b0" name="abcd166377fbe7dcd77e47ef80cee8681a57497d52c7e36df74e566850eae024b0"></a>STORE_LIST&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a8b3e01a762cc1fa3af0290fe7f5695e6" name="abcd166377fbe7dcd77e47ef80cee8681a8b3e01a762cc1fa3af0290fe7f5695e6"></a>SET_VAL_TAIL&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681aa00b77b58d1ab8a07817f9c70ca0deb0" name="abcd166377fbe7dcd77e47ef80cee8681aa00b77b58d1ab8a07817f9c70ca0deb0"></a>SET_VAL_TAIL_BY_INDEX&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a52ad249784e7120b740d0e91d83d2756" name="abcd166377fbe7dcd77e47ef80cee8681a52ad249784e7120b740d0e91d83d2756"></a>SET_VAL_HEAD&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681af5209467ac0d23e457f2a666635bfe87" name="abcd166377fbe7dcd77e47ef80cee8681af5209467ac0d23e457f2a666635bfe87"></a>SET_VAL_HEAD_BY_INDEX&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681abb8dee47f405641910739e39caf02d6d" name="abcd166377fbe7dcd77e47ef80cee8681abb8dee47f405641910739e39caf02d6d"></a>CALL_BUILTIN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681ad96c421d6b6242414b331ea714b764ac" name="abcd166377fbe7dcd77e47ef80cee8681ad96c421d6b6242414b331ea714b764ac"></a>CALL_BUILTIN_WITHOUT_RETURN_ADDRESS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a9b2ea09315a73d6ba7146db70002dff3" name="abcd166377fbe7dcd77e47ef80cee8681a9b2ea09315a73d6ba7146db70002dff3"></a>LT_CONST_JUMP_IF_FALSE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681aa39d5ec0320770a2ef594a5ec127d798" name="abcd166377fbe7dcd77e47ef80cee8681aa39d5ec0320770a2ef594a5ec127d798"></a>LT_CONST_JUMP_IF_TRUE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681abbc2de0c6cb788e74f79877f9a3701f7" name="abcd166377fbe7dcd77e47ef80cee8681abbc2de0c6cb788e74f79877f9a3701f7"></a>LT_SYM_JUMP_IF_FALSE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681af53cf8763f6050b5acf60ebfea86cc22" name="abcd166377fbe7dcd77e47ef80cee8681af53cf8763f6050b5acf60ebfea86cc22"></a>GT_CONST_JUMP_IF_TRUE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a97c97e67ea5535d8396063c9933da42e" name="abcd166377fbe7dcd77e47ef80cee8681a97c97e67ea5535d8396063c9933da42e"></a>GT_CONST_JUMP_IF_FALSE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a0b24da1920109afd5f2a72556ad229cf" name="abcd166377fbe7dcd77e47ef80cee8681a0b24da1920109afd5f2a72556ad229cf"></a>GT_SYM_JUMP_IF_FALSE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a3999f58503c8f68615d13e38174b359c" name="abcd166377fbe7dcd77e47ef80cee8681a3999f58503c8f68615d13e38174b359c"></a>EQ_CONST_JUMP_IF_TRUE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a46606827749f7dd13d665bb41881be99" name="abcd166377fbe7dcd77e47ef80cee8681a46606827749f7dd13d665bb41881be99"></a>EQ_SYM_INDEX_JUMP_IF_TRUE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a4d08e84668900d019d128342f14ea2fe" name="abcd166377fbe7dcd77e47ef80cee8681a4d08e84668900d019d128342f14ea2fe"></a>NEQ_CONST_JUMP_IF_TRUE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a0b11f196fc05a0c9c2e33a76e743b76f" name="abcd166377fbe7dcd77e47ef80cee8681a0b11f196fc05a0c9c2e33a76e743b76f"></a>NEQ_SYM_JUMP_IF_FALSE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a25c7197e344681e4372f8b36f8cb9e89" name="abcd166377fbe7dcd77e47ef80cee8681a25c7197e344681e4372f8b36f8cb9e89"></a>CALL_SYMBOL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a9cf4fd2d51070e0e722f382fe83aedc1" name="abcd166377fbe7dcd77e47ef80cee8681a9cf4fd2d51070e0e722f382fe83aedc1"></a>CALL_CURRENT_PAGE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681af8858959f5c0227efe19610af6b2aaf0" name="abcd166377fbe7dcd77e47ef80cee8681af8858959f5c0227efe19610af6b2aaf0"></a>GET_FIELD_FROM_SYMBOL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a1b3c88c11067a986fffe063e83c5eae7" name="abcd166377fbe7dcd77e47ef80cee8681a1b3c88c11067a986fffe063e83c5eae7"></a>GET_FIELD_FROM_SYMBOL_INDEX&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a4042c42e6d29eef8f8877f91334b7b82" name="abcd166377fbe7dcd77e47ef80cee8681a4042c42e6d29eef8f8877f91334b7b82"></a>AT_SYM_SYM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a215668a6b9ee4ff031f6f1cbe939feac" name="abcd166377fbe7dcd77e47ef80cee8681a215668a6b9ee4ff031f6f1cbe939feac"></a>AT_SYM_INDEX_SYM_INDEX&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a6a88f96ef4b65852757f0a8233fb1a1c" name="abcd166377fbe7dcd77e47ef80cee8681a6a88f96ef4b65852757f0a8233fb1a1c"></a>CHECK_TYPE_OF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a939362207f483bcd5169dcca0e11e96c" name="abcd166377fbe7dcd77e47ef80cee8681a939362207f483bcd5169dcca0e11e96c"></a>CHECK_TYPE_OF_BY_INDEX&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a367fa615133d34c2265261990a4b450a" name="abcd166377fbe7dcd77e47ef80cee8681a367fa615133d34c2265261990a4b450a"></a>APPEND_IN_PLACE_SYM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a1d4a055637abd0203e44aad4b9fd259c" name="abcd166377fbe7dcd77e47ef80cee8681a1d4a055637abd0203e44aad4b9fd259c"></a>APPEND_IN_PLACE_SYM_INDEX&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abcd166377fbe7dcd77e47ef80cee8681a0be56fe6a02043ce359f925d6bc0c47c" name="abcd166377fbe7dcd77e47ef80cee8681a0be56fe6a02043ce359f925d6bc0c47c"></a>InstructionsCount&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
@@ -901,7 +962,7 @@ template&lt;std::integral T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00314">314</a> of file <a class="el" href="../../dc/d73/Node_8cpp_source.html">Node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00370">370</a> of file <a class="el" href="../../dc/d73/Node_8cpp_source.html">Node.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="#a5300c6c0596db0a5a8f5b62d4d42ce4ca02c86eb2792f3262c21d030a87e19793">Symbol</a>.</p>
 
@@ -924,7 +985,7 @@ template&lt;std::integral T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00326">326</a> of file <a class="el" href="../../dc/d73/Node_8cpp_source.html">Node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00382">382</a> of file <a class="el" href="../../dc/d73/Node_8cpp_source.html">Node.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="#a5300c6c0596db0a5a8f5b62d4d42ce4ca02c86eb2792f3262c21d030a87e19793">Symbol</a>.</p>
 
@@ -947,7 +1008,7 @@ template&lt;std::integral T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00320">320</a> of file <a class="el" href="../../dc/d73/Node_8cpp_source.html">Node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00376">376</a> of file <a class="el" href="../../dc/d73/Node_8cpp_source.html">Node.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="#a5300c6c0596db0a5a8f5b62d4d42ce4ca02c86eb2792f3262c21d030a87e19793">Symbol</a>.</p>
 
@@ -970,7 +1031,7 @@ template&lt;std::integral T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00308">308</a> of file <a class="el" href="../../dc/d73/Node_8cpp_source.html">Node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00364">364</a> of file <a class="el" href="../../dc/d73/Node_8cpp_source.html">Node.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="#a5300c6c0596db0a5a8f5b62d4d42ce4ca02c86eb2792f3262c21d030a87e19793">Symbol</a>.</p>
 
@@ -1148,7 +1209,7 @@ template&lt;std::integral T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00342">342</a> of file <a class="el" href="../../dc/d73/Node_8cpp_source.html">Node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00398">398</a> of file <a class="el" href="../../dc/d73/Node_8cpp_source.html">Node.cpp</a>.</p>
 
 </div>
 </div>
@@ -1266,7 +1327,7 @@ template&lt;std::integral T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00332">332</a> of file <a class="el" href="../../dc/d73/Node_8cpp_source.html">Node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00388">388</a> of file <a class="el" href="../../dc/d73/Node_8cpp_source.html">Node.cpp</a>.</p>
 
 </div>
 </div>
@@ -1322,7 +1383,7 @@ template&lt;std::integral T&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d94/IntegerSerializer_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../d9/d94/IntegerSerializer_8hpp_source.html">IntegerSerializer.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00114">Ark::internal::IRCompiler::compile()</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00187">Ark::internal::IRCompiler::pushFileHeader()</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00283">Ark::internal::IRCompiler::pushFilenameTable()</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00301">Ark::internal::IRCompiler::pushInstLocTable()</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00218">Ark::internal::IRCompiler::pushSymbolTable()</a>, and <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00237">Ark::internal::IRCompiler::pushValueTable()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00110">Ark::internal::IRCompiler::compile()</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00179">Ark::internal::IRCompiler::pushFileHeader()</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00275">Ark::internal::IRCompiler::pushFilenameTable()</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00293">Ark::internal::IRCompiler::pushInstLocTable()</a>, <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00210">Ark::internal::IRCompiler::pushSymbolTable()</a>, and <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00229">Ark::internal::IRCompiler::pushValueTable()</a>.</p>
 
 </div>
 </div>
@@ -1370,7 +1431,7 @@ template&lt;std::integral T&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d94/IntegerSerializer_8hpp_source.html#l00018">18</a> of file <a class="el" href="../../d9/d94/IntegerSerializer_8hpp_source.html">IntegerSerializer.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00301">Ark::internal::IRCompiler::pushInstLocTable()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00293">Ark::internal::IRCompiler::pushInstLocTable()</a>.</p>
 
 </div>
 </div>
@@ -1395,7 +1456,7 @@ template&lt;std::integral T&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d94/IntegerSerializer_8hpp_source.html#l00010">10</a> of file <a class="el" href="../../d9/d94/IntegerSerializer_8hpp_source.html">IntegerSerializer.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00237">Ark::internal::IRCompiler::pushValueTable()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00229">Ark::internal::IRCompiler::pushValueTable()</a>.</p>
 
 </div>
 </div>
@@ -1481,11 +1542,11 @@ template&lt;std::integral T&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::string a string corresponding to the node type </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/dc6/Node_8hpp_source.html#l00240">240</a> of file <a class="el" href="../../d7/dc6/Node_8hpp_source.html">Node.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/dc6/Node_8hpp_source.html#l00274">274</a> of file <a class="el" href="../../d7/dc6/Node_8hpp_source.html">Node.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00059">nodeTypes</a>, and <a class="el" href="#a5300c6c0596db0a5a8f5b62d4d42ce4ca02c86eb2792f3262c21d030a87e19793">Symbol</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d5e/ASTLowerer_8cpp_source.html#l00127">Ark::internal::ASTLowerer::compileExpression()</a>, <a class="el" href="../../d2/d5e/ASTLowerer_8cpp_source.html#l00351">Ark::internal::ASTLowerer::compileFunction()</a>, <a class="el" href="../../d2/d5e/ASTLowerer_8cpp_source.html#l00406">Ark::internal::ASTLowerer::compileLetMutSet()</a>, <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00239">Ark::internal::MacroProcessor::evaluate()</a>, and <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00078">Ark::internal::MacroProcessor::registerFuncDef()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d5e/ASTLowerer_8cpp_source.html#l00138">Ark::internal::ASTLowerer::compileExpression()</a>, <a class="el" href="../../d2/d5e/ASTLowerer_8cpp_source.html#l00362">Ark::internal::ASTLowerer::compileFunction()</a>, <a class="el" href="../../d2/d5e/ASTLowerer_8cpp_source.html#l00425">Ark::internal::ASTLowerer::compileLetMutSet()</a>, <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00239">Ark::internal::MacroProcessor::evaluate()</a>, and <a class="el" href="../../d6/d69/Processor_8cpp_source.html#l00078">Ark::internal::MacroProcessor::registerFuncDef()</a>.</p>
 
 </div>
 </div>
@@ -1567,7 +1628,7 @@ template&lt;std::integral T&gt; </div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="../../de/df9/ErrorKind_8hpp_source.html#l00020">20</a> of file <a class="el" href="../../de/df9/ErrorKind_8hpp_source.html">ErrorKind.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d27/VM_8cpp_source.html#l01599">Ark::VM::throwVMError()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d27/VM_8cpp_source.html#l00438">Ark::VM::throwVMError()</a>.</p>
 
 </div>
 </div>
@@ -1591,7 +1652,7 @@ template&lt;std::integral T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00309">309</a> of file <a class="el" href="../../d8/daa/Instructions_8hpp_source.html">Instructions.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/daa/Instructions_8hpp_source.html#l00415">415</a> of file <a class="el" href="../../d8/daa/Instructions_8hpp_source.html">Instructions.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d5/d36/BytecodeReader_8cpp_source.html#l00274">Ark::BytecodeReader::display()</a>, and <a class="el" href="../../d1/dfa/IRCompiler_8cpp_source.html#l00068">Ark::internal::IRCompiler::dumpToStream()</a>.</p>
 
@@ -1682,7 +1743,7 @@ template&lt;std::integral T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d9/d79/BaseParser_8cpp_source.html#l00277">Ark::internal::BaseParser::signedNumber()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d9/d79/BaseParser_8cpp_source.html#l00280">Ark::internal::BaseParser::signedNumber()</a>.</p>
 
 </div>
 </div>
@@ -1749,7 +1810,7 @@ template&lt;std::integral T&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00088">88</a> of file <a class="el" href="../../d8/ddd/Common_8hpp_source.html">Common.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00168">Formatter::format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00315">Formatter::formatVariable()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00160">Ark::internal::Node::repr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00168">Formatter::format()</a>, <a class="el" href="../../d2/d56/Formatter_8cpp_source.html#l00317">Formatter::formatVariable()</a>, and <a class="el" href="../../dc/d73/Node_8cpp_source.html#l00189">Ark::internal::Node::repr()</a>.</p>
 
 </div>
 </div>
@@ -1790,7 +1851,7 @@ template&lt;std::integral T&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/Common_8hpp_source.html#l00059">59</a> of file <a class="el" href="../../d8/ddd/Common_8hpp_source.html">Common.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00027">JsonCompiler::_compile()</a>, <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00141">Ark::internal::Parser::letMutSet()</a>, and <a class="el" href="../../d7/dc6/Node_8hpp_source.html#l00240">typeToString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../db/d71/JsonCompiler_8cpp_source.html#l00027">JsonCompiler::_compile()</a>, <a class="el" href="../../dc/df5/Parser_8cpp_source.html#l00141">Ark::internal::Parser::letMutSet()</a>, and <a class="el" href="../../d7/dc6/Node_8hpp_source.html#l00274">typeToString()</a>.</p>
 
 </div>
 </div>
@@ -1800,7 +1861,7 @@ template&lt;std::integral T&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/de4/namespaceArk.html">Ark</a></li><li class="navelem"><a class="el" href="../../dc/d0e/namespaceArk_1_1internal.html">internal</a></li>
-    <li class="footer">Generated on Wed May 21 2025 18:40:52 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Mon Jul 14 2025 13:00:27 for ArkScript by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

@@ -59,12 +59,14 @@ digraph "/Users/fola/Documents/ArkScript/Ark/include/Ark/Compiler/Macros/Process
   Node19 -> Node6 [id="edge31_Node000019_Node000006",color="steelblue1",style="solid",tooltip=" "];
   Node19 -> Node22 [id="edge32_Node000019_Node000022",color="steelblue1",style="solid",tooltip=" "];
   Node22 [id="Node000022",label="chrono",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
-  Node19 -> Node7 [id="edge33_Node000019_Node000007",color="steelblue1",style="solid",tooltip=" "];
-  Node19 -> Node17 [id="edge34_Node000019_Node000017",color="steelblue1",style="solid",tooltip=" "];
-  Node19 -> Node23 [id="edge35_Node000019_Node000023",color="steelblue1",style="solid",tooltip=" "];
-  Node23 [id="Node000023",label="fmt/color.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
-  Node1 -> Node17 [id="edge36_Node000001_Node000017",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node24 [id="edge37_Node000001_Node000024",color="steelblue1",style="solid",tooltip=" "];
-  Node24 [id="Node000024",label="optional",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
-  Node1 -> Node6 [id="edge38_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node19 -> Node23 [id="edge33_Node000019_Node000023",color="steelblue1",style="solid",tooltip=" "];
+  Node23 [id="Node000023",label="source_location",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node19 -> Node7 [id="edge34_Node000019_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node19 -> Node17 [id="edge35_Node000019_Node000017",color="steelblue1",style="solid",tooltip=" "];
+  Node19 -> Node24 [id="edge36_Node000019_Node000024",color="steelblue1",style="solid",tooltip=" "];
+  Node24 [id="Node000024",label="fmt/color.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node1 -> Node17 [id="edge37_Node000001_Node000017",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node25 [id="edge38_Node000001_Node000025",color="steelblue1",style="solid",tooltip=" "];
+  Node25 [id="Node000025",label="optional",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node1 -> Node6 [id="edge39_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
 }

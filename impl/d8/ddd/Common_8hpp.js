@@ -44,7 +44,6 @@ var Common_8hpp =
     [ "SetAtInPlace", "d8/ddd/Common_8hpp.html#af46b2188d12266a4768440ee1e5fdb31", null ],
     [ "Symcat", "d8/ddd/Common_8hpp.html#adec1abdb389d377b54021dfc0504f27d", null ],
     [ "SysArgs", "d8/ddd/Common_8hpp.html#abad6b061b9b0c47ae5bd12515beb6141", null ],
-    [ "SysPlatform", "d8/ddd/Common_8hpp.html#a6151f85a34bd00a79841da5e93283d23", null ],
     [ "TimestampLength", "d8/ddd/Common_8hpp.html#af2f8dfeb4faae2061a1ea2c2076c4751", null ],
     [ "Undef", "d8/ddd/Common_8hpp.html#ae0a1dc3b5cd5752af1cc44a9018679a6", null ],
     [ "UpdateRef", "d8/ddd/Common_8hpp.html#adb20c20c3929d45340f09a05550d3a9d", null ],

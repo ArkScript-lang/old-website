@@ -63,6 +63,7 @@ var hierarchy =
     [ "Ark::internal::MacroScope", "d6/d42/classArk_1_1internal_1_1MacroScope.html", null ],
     [ "Ark::mapping", "d4/dd8/structArk_1_1mapping.html", null ],
     [ "mapping", "d1/d5a/structmapping.html", null ],
+    [ "Ark::internal::Logger::MessageAndLocation", "d1/d53/structArk_1_1internal_1_1Logger_1_1MessageAndLocation.html", null ],
     [ "Ark::internal::Namespace", "d0/d57/structArk_1_1internal_1_1Namespace.html", null ],
     [ "Ark::internal::Node", "dc/d9e/classArk_1_1internal_1_1Node.html", null ],
     [ "Ark::internal::Package", "dd/d76/structArk_1_1internal_1_1Package.html", null ],
@@ -73,6 +74,7 @@ var hierarchy =
       [ "Ark::internal::NameResolutionPass", "d7/db8/classArk_1_1internal_1_1NameResolutionPass.html", null ],
       [ "Ark::internal::Optimizer", "d7/da8/classArk_1_1internal_1_1Optimizer.html", null ]
     ] ],
+    [ "Ark::Procedure", "d4/d04/classArk_1_1Procedure.html", null ],
     [ "Ark::Repl", "de/d60/classArk_1_1Repl.html", null ],
     [ "Ark::internal::IROptimizer::Rule", "da/d1e/structArk_1_1internal_1_1IROptimizer_1_1Rule.html", null ],
     [ "Ark::internal::LocalsLocator::Scope", "da/dde/structArk_1_1internal_1_1LocalsLocator_1_1Scope.html", null ],

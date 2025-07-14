@@ -2,6 +2,7 @@ var namespaceArk =
 [
     [ "Diagnostics", "db/da6/namespaceArk_1_1Diagnostics.html", "db/da6/namespaceArk_1_1Diagnostics" ],
     [ "helper", "da/da8/namespaceArk_1_1helper.html", [
+      [ "at", "da/da8/namespaceArk_1_1helper.html#a815282cc5bf0d47595a07a1550ca36a8", null ],
       [ "head", "da/da8/namespaceArk_1_1helper.html#a0cb620ec076a6c40140c7d1feee2cb35", null ],
       [ "tail", "da/da8/namespaceArk_1_1helper.html#af046954be636683c75d75735de8c39d2", null ]
     ] ],
@@ -30,6 +31,7 @@ var namespaceArk =
     [ "InstLocations", "d3/df5/structArk_1_1InstLocations.html", "d3/df5/structArk_1_1InstLocations" ],
     [ "mapping", "d4/dd8/structArk_1_1mapping.html", "d4/dd8/structArk_1_1mapping" ],
     [ "NestedError", "db/ddb/classArk_1_1NestedError.html", "db/ddb/classArk_1_1NestedError" ],
+    [ "Procedure", "d4/d04/classArk_1_1Procedure.html", "d4/d04/classArk_1_1Procedure" ],
     [ "Repl", "de/d60/classArk_1_1Repl.html", "de/d60/classArk_1_1Repl" ],
     [ "State", "d1/d37/classArk_1_1State.html", "d1/d37/classArk_1_1State" ],
     [ "Symbols", "d9/dba/structArk_1_1Symbols.html", "d9/dba/structArk_1_1Symbols" ],

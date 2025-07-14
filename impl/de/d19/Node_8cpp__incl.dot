@@ -61,5 +61,7 @@ digraph "/Users/fola/Documents/ArkScript/Ark/src/arkreactor/Compiler/AST/Node.cp
   Node22 [id="Node000022",label="limits",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node16 -> Node15 [id="edge33_Node000016_Node000015",color="steelblue1",style="solid",tooltip=" "];
   Node1 -> Node23 [id="edge34_Node000001_Node000023",color="steelblue1",style="solid",tooltip=" "];
-  Node23 [id="Node000023",label="fmt/core.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node23 [id="Node000023",label="cassert",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node1 -> Node24 [id="edge35_Node000001_Node000024",color="steelblue1",style="solid",tooltip=" "];
+  Node24 [id="Node000024",label="fmt/core.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
 }

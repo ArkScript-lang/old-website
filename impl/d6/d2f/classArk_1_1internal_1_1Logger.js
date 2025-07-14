@@ -1,7 +1,8 @@
 var classArk_1_1internal_1_1Logger =
 [
+    [ "MessageAndLocation", "d1/d53/structArk_1_1internal_1_1Logger_1_1MessageAndLocation.html", "d1/d53/structArk_1_1internal_1_1Logger_1_1MessageAndLocation" ],
     [ "Logger", "d6/d2f/classArk_1_1internal_1_1Logger.html#a9e6f5c2335c829b7abdd2b39caf0a695", null ],
-    [ "debug", "d6/d2f/classArk_1_1internal_1_1Logger.html#aa785b8c5db31e72f0959210031cd9b65", null ],
+    [ "debug", "d6/d2f/classArk_1_1internal_1_1Logger.html#a8dddd154d19c93e8b4871a5ff7d9481d", null ],
     [ "debugLevel", "d6/d2f/classArk_1_1internal_1_1Logger.html#adf9ba58ce82e81b44bcbf3531732c497", null ],
     [ "info", "d6/d2f/classArk_1_1internal_1_1Logger.html#a7bf27754b61f116e83a307e344ba84cb", null ],
     [ "shouldDebug", "d6/d2f/classArk_1_1internal_1_1Logger.html#aa0df89784f07514bf448c3f07e7d376f", null ],

@@ -37,7 +37,12 @@ digraph "/Users/fola/Documents/ArkScript/Ark/src/arkreactor/VM/ScopeView.cpp"
   Node13 -> Node12 [id="edge17_Node000013_Node000012",color="steelblue1",style="solid",tooltip=" "];
   Node13 -> Node4 [id="edge18_Node000013_Node000004",color="steelblue1",style="solid",tooltip=" "];
   Node13 -> Node5 [id="edge19_Node000013_Node000005",color="steelblue1",style="solid",tooltip=" "];
-  Node6 -> Node5 [id="edge20_Node000006_Node000005",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node14 [id="edge21_Node000001_Node000014",color="steelblue1",style="solid",tooltip=" "];
-  Node14 [id="Node000014",label="limits",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node6 -> Node14 [id="edge20_Node000006_Node000014",color="steelblue1",style="solid",tooltip=" "];
+  Node14 [id="Node000014",label="Ark/VM/Value/Procedure.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$da/dcf/Procedure_8hpp.html",tooltip="Wrapper object for user-defined functions."];
+  Node14 -> Node15 [id="edge21_Node000014_Node000015",color="steelblue1",style="solid",tooltip=" "];
+  Node15 [id="Node000015",label="functional",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node14 -> Node7 [id="edge22_Node000014_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node5 [id="edge23_Node000006_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node16 [id="edge24_Node000001_Node000016",color="steelblue1",style="solid",tooltip=" "];
+  Node16 [id="Node000016",label="limits",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
 }
