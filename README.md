@@ -1,6 +1,8 @@
-# ArkScript website ![Latest version](https://img.shields.io/github/v/release/arkscript-lang/ark?include_prereleases&style=for-the-badge)
+# ArkScript old website
 
-This repository is hosting the presentation and documentation of the language.
+This repository is hosting the **old** presentation and documentation of the language.
+
+**The new website can be found at [ArkScript-lang/website](https://github.com/ArkScript-lang/website).**
 
 ## A brief tour
 
